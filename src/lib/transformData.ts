@@ -64,15 +64,16 @@ export function transformPPBData(
       if (!entity) continue;
 
       const action = getActionForEntity(rec, entity);
-      const mentioningParagraphs = rec.entity_mentioning_paragraphs?.[entity];
+      const mentionCount = rec.entity_mention_counts?.[entity] || 0;
+      const mentionIndices = rec.entity_mention_indices?.[entity] || [];
 
       const mandate: Mandate = {
         symbol,
         title,
         link,
         action,
-        paragraphs: rec.paragraphs,
-        mentioningParagraphs,
+        mentionCount,
+        mentionIndices,
         entity,
         entityLong,
         isBackground,

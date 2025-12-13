@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useCallback } from "react";
-import { X, ChevronDown } from "lucide-react";
+import { useState, useCallback, useEffect } from "react";
+import { X, ChevronDown, Loader2 } from "lucide-react";
 import type { Paragraph } from "@/types";
 import { Tooltip } from "./Tooltip";
 
@@ -9,8 +9,8 @@ interface Props {
   symbol: string;
   link: string | null;
   title?: string;
-  paragraphs?: Paragraph[];
-  mentioningParagraphs?: Paragraph[];
+  mentionCount: number;
+  mentionIndices: number[];
   entity?: string;
   entityLong?: string | null;
 }
@@ -80,12 +80,12 @@ function CollapsedGap({
 
 function FilteredParagraphTree({
   paragraphs,
-  mentioningParagraphs,
+  mentionIndices,
   entity,
   entityLong,
 }: {
   paragraphs: Paragraph[];
-  mentioningParagraphs: Paragraph[];
+  mentionIndices: Set<number>;
   entity: string;
   entityLong?: string | null;
 }) {
@@ -93,73 +93,62 @@ function FilteredParagraphTree({
   const [showPreamble, setShowPreamble] = useState(false);
 
   const content = paragraphs.filter((p) => p.type !== "frontmatter" && p.text?.trim());
+  const contentIndices = paragraphs.map((p, i) => ({ p, origIdx: i })).filter(({ p }) => p.type !== "frontmatter" && p.text?.trim());
   
-  // Create set of mentioning paragraph texts for fast lookup
-  const mentioningTexts = new Set(mentioningParagraphs.map((p) => p.text));
-  const isMentioning = (p: Paragraph) => mentioningTexts.has(p.text);
+  const isMentioning = (origIdx: number) => mentionIndices.has(origIdx);
 
-  // Split preambular vs operative
-  const preamble = content.filter((p) => p.paragraph_type === "preambular");
-  const operative = content.filter((p) => p.paragraph_type !== "preambular");
+  const preamble = contentIndices.filter(({ p }) => p.paragraph_type === "preambular");
+  const operative = contentIndices.filter(({ p }) => p.paragraph_type !== "preambular");
 
-  // Group operative paragraphs into segments: mentioning vs gaps
-  // Headings attach to the next mentioning paragraph, otherwise go into gap
-  type Segment = { type: "mentioning" | "gap"; paras: Paragraph[]; gapIndex?: number };
+  type Segment = { type: "mentioning" | "gap"; items: { p: Paragraph; origIdx: number }[]; gapIndex?: number };
   const segments: Segment[] = [];
   let gapIndex = 0;
-  let pendingHeadings: Paragraph[] = [];
+  let pendingHeadings: { p: Paragraph; origIdx: number }[] = [];
 
-  for (const p of operative) {
-    const mentions = isMentioning(p);
+  for (const item of operative) {
+    const mentions = isMentioning(item.origIdx);
 
-    if (p.type === "heading") {
-      pendingHeadings.push(p);
+    if (item.p.type === "heading") {
+      pendingHeadings.push(item);
     } else if (mentions) {
-      // Flush pending headings into mentioning segment
       const lastSeg = segments[segments.length - 1];
       if (lastSeg?.type === "mentioning") {
-        lastSeg.paras.push(...pendingHeadings, p);
+        lastSeg.items.push(...pendingHeadings, item);
       } else {
-        segments.push({ type: "mentioning", paras: [...pendingHeadings, p] });
+        segments.push({ type: "mentioning", items: [...pendingHeadings, item] });
       }
       pendingHeadings = [];
     } else {
-      // Non-mentioning paragraph - flush headings into gap
       const lastSeg = segments[segments.length - 1];
       if (lastSeg?.type === "gap") {
-        lastSeg.paras.push(...pendingHeadings, p);
+        lastSeg.items.push(...pendingHeadings, item);
       } else {
-        segments.push({ type: "gap", paras: [...pendingHeadings, p], gapIndex: gapIndex++ });
+        segments.push({ type: "gap", items: [...pendingHeadings, item], gapIndex: gapIndex++ });
       }
       pendingHeadings = [];
     }
   }
-  // Flush any remaining headings at end
   if (pendingHeadings.length > 0) {
     const lastSeg = segments[segments.length - 1];
     if (lastSeg?.type === "gap") {
-      lastSeg.paras.push(...pendingHeadings);
+      lastSeg.items.push(...pendingHeadings);
     } else {
-      segments.push({ type: "gap", paras: pendingHeadings, gapIndex: gapIndex++ });
+      segments.push({ type: "gap", items: pendingHeadings, gapIndex: gapIndex++ });
     }
   }
 
   const toggleGap = (idx: number) => {
     setExpandedGaps((prev) => {
       const next = new Set(prev);
-      if (next.has(idx)) next.delete(idx);
-      else next.add(idx);
+      next.has(idx) ? next.delete(idx) : next.add(idx);
       return next;
     });
   };
 
-  // Check if any preamble mentions the entity
-  const preambleMentions = preamble.filter(isMentioning);
-  const preambleGaps = preamble.filter((p) => !isMentioning(p));
+  const preambleMentions = preamble.filter(({ origIdx }) => isMentioning(origIdx));
 
   return (
     <div className="space-y-3">
-      {/* Preambular section */}
       {preamble.length > 0 && (
         <>
           <button
@@ -167,34 +156,26 @@ function FilteredParagraphTree({
             className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700 py-2"
           >
             <ChevronDown className={`h-4 w-4 transition-transform ${showPreamble ? "" : "-rotate-90"}`} />
-            {showPreamble ? "Hide" : "Show"} {preamble.length} preambular paragraph
-            {preamble.length !== 1 && "s"}
+            {showPreamble ? "Hide" : "Show"} {preamble.length} preambular paragraph{preamble.length !== 1 && "s"}
             {preambleMentions.length > 0 && (
               <span className="text-un-blue">({preambleMentions.length} mentioning {entity})</span>
             )}
           </button>
           {showPreamble && (
             <div className="space-y-3">
-              {preamble.map((p, i) => <ParaBox key={`pp-${i}`} p={p} indent={getIndent(p)} entity={entity} entityLong={entityLong} />)}
+              {preamble.map(({ p }, i) => <ParaBox key={`pp-${i}`} p={p} indent={getIndent(p)} entity={entity} entityLong={entityLong} />)}
             </div>
           )}
         </>
       )}
 
-      {/* Operative segments */}
       {segments.map((seg, i) => {
         if (seg.type === "mentioning") {
-          return seg.paras.map((p, j) => {
+          return seg.items.map(({ p }, j) => {
             if (p.type === "heading") {
               const indent = p.heading_level && p.heading_level > 1 ? (p.heading_level - 1) * 16 : 0;
               return (
-                <div
-                  key={`seg-${i}-${j}`}
-                  style={{ marginLeft: indent }}
-                  className={`font-semibold text-foreground ${
-                    p.heading_level === 1 ? "text-base mt-4" : "text-sm mt-2"
-                  }`}
-                >
+                <div key={`seg-${i}-${j}`} style={{ marginLeft: indent }} className={`font-semibold text-foreground ${p.heading_level === 1 ? "text-base mt-4" : "text-sm mt-2"}`}>
                   {p.text}
                 </div>
               );
@@ -203,27 +184,17 @@ function FilteredParagraphTree({
           });
         }
 
-        // Gap segment
         const expanded = expandedGaps.has(seg.gapIndex!);
         return (
           <div key={`gap-${seg.gapIndex}`}>
-            <CollapsedGap
-              count={seg.paras.length}
-              entity={entity}
-              expanded={expanded}
-              onToggle={() => toggleGap(seg.gapIndex!)}
-            />
+            <CollapsedGap count={seg.items.length} entity={entity} expanded={expanded} onToggle={() => toggleGap(seg.gapIndex!)} />
             {expanded && (
               <div className="space-y-3">
-                {seg.paras.map((p, j) => {
+                {seg.items.map(({ p }, j) => {
                   if (p.type === "heading") {
                     const indent = p.heading_level && p.heading_level > 1 ? (p.heading_level - 1) * 16 : 0;
                     return (
-                      <div
-                        key={`gap-${seg.gapIndex}-${j}`}
-                        style={{ marginLeft: indent }}
-                        className={`font-semibold text-foreground ${p.heading_level === 1 ? "text-base mt-4" : "text-sm mt-2"}`}
-                      >
+                      <div key={`gap-${seg.gapIndex}-${j}`} style={{ marginLeft: indent }} className={`font-semibold text-foreground ${p.heading_level === 1 ? "text-base mt-4" : "text-sm mt-2"}`}>
                         {p.text}
                       </div>
                     );
@@ -250,10 +221,7 @@ function FullParagraphTree({ paragraphs }: { paragraphs: Paragraph[] }) {
     <div className="space-y-3">
       {preamble.length > 0 && (
         <>
-          <button
-            onClick={() => setShowPreamble(!showPreamble)}
-            className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700 py-2"
-          >
+          <button onClick={() => setShowPreamble(!showPreamble)} className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700 py-2">
             <ChevronDown className={`h-4 w-4 transition-transform ${showPreamble ? "" : "-rotate-90"}`} />
             {showPreamble ? "Hide" : "Show"} {preamble.length} preambular paragraph{preamble.length !== 1 && "s"}
           </button>
@@ -269,11 +237,7 @@ function FullParagraphTree({ paragraphs }: { paragraphs: Paragraph[] }) {
         if (p.type === "heading") {
           const indent = p.heading_level && p.heading_level > 1 ? (p.heading_level - 1) * 16 : 0;
           return (
-            <div
-              key={`op-${i}`}
-              style={{ marginLeft: indent }}
-              className={`font-semibold text-foreground ${p.heading_level === 1 ? "text-base mt-4" : "text-sm mt-2"}`}
-            >
+            <div key={`op-${i}`} style={{ marginLeft: indent }} className={`font-semibold text-foreground ${p.heading_level === 1 ? "text-base mt-4" : "text-sm mt-2"}`}>
               {p.text}
             </div>
           );
@@ -287,27 +251,44 @@ function FullParagraphTree({ paragraphs }: { paragraphs: Paragraph[] }) {
   );
 }
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export function DocumentSymbol({
   symbol,
   link,
   title,
-  paragraphs,
-  mentioningParagraphs,
+  mentionCount,
+  mentionIndices,
   entity,
   entityLong,
 }: Props) {
   const [open, setOpen] = useState(false);
   const [viewMode, setViewMode] = useState<"entity" | "all">("entity");
+  const [paragraphs, setParagraphs] = useState<Paragraph[] | null>(null);
+  const [loading, setLoading] = useState(false);
 
-  const handleClick = useCallback(
-    (e: React.MouseEvent) => {
-      if (paragraphs?.length) {
-        e.preventDefault();
-        setOpen(true);
-      }
-    },
-    [paragraphs]
-  );
+  // Fetch paragraphs when sidebar opens
+  useEffect(() => {
+    if (open && !paragraphs && !loading) {
+      setLoading(true);
+      const safeSymbol = symbol.replace(/\//g, "_").replace(/ /g, "_");
+      fetch(`${basePath}/data/paragraphs/${safeSymbol}.json`)
+        .then((res) => (res.ok ? res.json() : null))
+        .then((data) => {
+          setParagraphs(data || []);
+          setLoading(false);
+        })
+        .catch(() => {
+          setParagraphs([]);
+          setLoading(false);
+        });
+    }
+  }, [open, paragraphs, loading, symbol]);
+
+  const handleClick = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    setOpen(true);
+  }, []);
 
   const isTruncated = symbol.length > 18;
   const displaySymbol = isTruncated ? symbol.slice(0, 18) + "…" : symbol;
@@ -320,6 +301,8 @@ export function DocumentSymbol({
       {displaySymbol}
     </button>
   );
+
+  const mentionIndicesSet = new Set(mentionIndices);
 
   return (
     <>
@@ -341,49 +324,38 @@ export function DocumentSymbol({
                 </button>
               </div>
               {link && (
-                <a
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-2 text-sm text-un-blue hover:underline"
-                >
+                <a href={link} target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-sm text-un-blue hover:underline">
                   View PDF →
                 </a>
               )}
             </div>
 
             <div className="flex-1 overflow-y-auto p-4">
-              {/* View mode toggle */}
-              {entity && paragraphs?.length && (
-                <div className="flex items-center gap-3 mb-4">
-                  <button
-                    onClick={() => setViewMode(viewMode === "entity" ? "all" : "entity")}
-                    className={`relative flex-shrink-0 w-9 h-5 rounded-full transition-colors ${
-                      viewMode === "entity" ? "bg-un-blue" : "bg-gray-300"
-                    }`}
-                  >
-                    <span
-                      className={`absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform ${
-                        viewMode === "entity" ? "right-0.5" : "left-0.5"
-                      }`}
-                    />
-                  </button>
-                  <span className="text-sm text-gray-600">
-                    {viewMode === "entity" ? `Filtered for ${entity}` : "Showing all paragraphs"}
-                  </span>
+              {loading ? (
+                <div className="flex items-center justify-center py-8">
+                  <Loader2 className="h-6 w-6 animate-spin text-gray-400" />
                 </div>
-              )}
-              {paragraphs?.length ? (
-                viewMode === "entity" && entity ? (
-                  <FilteredParagraphTree
-                    paragraphs={paragraphs}
-                    mentioningParagraphs={mentioningParagraphs || []}
-                    entity={entity}
-                    entityLong={entityLong}
-                  />
-                ) : (
-                  <FullParagraphTree paragraphs={paragraphs} />
-                )
+              ) : paragraphs && paragraphs.length > 0 ? (
+                <>
+                  {entity && (
+                    <div className="flex items-center gap-3 mb-4">
+                      <button
+                        onClick={() => setViewMode(viewMode === "entity" ? "all" : "entity")}
+                        className={`relative flex-shrink-0 w-9 h-5 rounded-full transition-colors ${viewMode === "entity" ? "bg-un-blue" : "bg-gray-300"}`}
+                      >
+                        <span className={`absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform ${viewMode === "entity" ? "right-0.5" : "left-0.5"}`} />
+                      </button>
+                      <span className="text-sm text-gray-600">
+                        {viewMode === "entity" ? `Filtered for ${entity}` : "Showing all paragraphs"}
+                      </span>
+                    </div>
+                  )}
+                  {viewMode === "entity" && entity ? (
+                    <FilteredParagraphTree paragraphs={paragraphs} mentionIndices={mentionIndicesSet} entity={entity} entityLong={entityLong} />
+                  ) : (
+                    <FullParagraphTree paragraphs={paragraphs} />
+                  )}
+                </>
               ) : (
                 <div className="text-gray-400 text-sm">No paragraph data available</div>
               )}

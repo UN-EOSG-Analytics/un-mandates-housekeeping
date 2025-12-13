@@ -44,9 +44,9 @@ export interface PPBRecord {
   citation_info: CitationInfo[];
   document_symbol: string | null;
   uniform_title: string | null;
-  paragraphs?: Paragraph[];
   recurrence_actions?: RecurrenceAction[];
-  entity_mentioning_paragraphs?: Record<string, Paragraph[]>;
+  entity_mention_counts?: Record<string, number>;
+  entity_mention_indices?: Record<string, number[]>;
 }
 
 // Hierarchical structure for UI
@@ -60,8 +60,8 @@ export interface Mandate {
   title: string;
   link: string | null;
   action: MandateAction | null;
-  paragraphs?: Paragraph[];
-  mentioningParagraphs?: Paragraph[];
+  mentionCount: number;
+  mentionIndices: number[];
   entity?: string;
   entityLong?: string | null;
   isBackground?: boolean;

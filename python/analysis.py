@@ -1,5 +1,6 @@
 import json
 import re
+from pathlib import Path
 
 import pandas as pd
 
@@ -23,12 +24,14 @@ with open("data/input/ppb2026_unique_mandates_with_metadata.json") as f:
 rows = []
 for r in ppb:
     for ci in r.get("citation_info", []):
-        rows.append({
-            "Entity": ci.get("entity") or "N/A",
-            "Entity-Long": ci.get("entity_long"),
-            "Full Document Symbol": r["full_document_symbol"],
-            "Description": r.get("description"),
-        })
+        rows.append(
+            {
+                "Entity": ci.get("entity") or "N/A",
+                "Entity-Long": ci.get("entity_long"),
+                "Full Document Symbol": r["full_document_symbol"],
+                "Description": r.get("description"),
+            }
+        )
 
 df = pd.DataFrame(rows)
 
@@ -175,28 +178,48 @@ for _, row in export.iterrows():
 entity_long_lookup = dict(zip(df["Entity"], df["Entity-Long"]))
 
 
-def find_mentioning_paragraphs(paras, entity_short, entity_long):
-    """Find paragraphs mentioning entity using word boundary matching."""
+def find_mentioning_paragraph_indices(paras, entity_short, entity_long):
+    """Find indices of paragraphs mentioning entity."""
     if not paras:
-        return None
+        return []
     patterns = []
     if entity_short:
-        patterns.append(re.compile(r"\b" + re.escape(entity_short) + r"\b", re.IGNORECASE))
+        patterns.append(
+            re.compile(r"\b" + re.escape(entity_short) + r"\b", re.IGNORECASE)
+        )
     if entity_long:
-        patterns.append(re.compile(r"\b" + re.escape(entity_long) + r"\b", re.IGNORECASE))
+        patterns.append(
+            re.compile(r"\b" + re.escape(entity_long) + r"\b", re.IGNORECASE)
+        )
     if not patterns:
-        return None
-    matches = [p for p in paras if p.get("text") and any(pat.search(p["text"]) for pat in patterns)]
-    return matches or None
+        return []
+    return [
+        i
+        for i, p in enumerate(paras)
+        if p.get("text") and any(pat.search(p["text"]) for pat in patterns)
+    ]
 
 
-# Augment ppb records with recurrence_actions and entity_mentioning_paragraphs
+# Create paragraphs directory
+paras_dir = Path("public/data/paragraphs")
+paras_dir.mkdir(parents=True, exist_ok=True)
+
+# Augment ppb records
 action_count = 0
 mentions_count = 0
+docs_with_paras = 0
+
 for record in ppb:
     symbol = record.get("full_document_symbol")
     entities = record.get("entities") or []
     paras = record.get("paragraphs") or []
+
+    # Save paragraphs to separate file if they exist
+    if paras:
+        safe_symbol = symbol.replace("/", "_").replace(" ", "_")
+        with open(paras_dir / f"{safe_symbol}.json", "w") as f:
+            json.dump(paras, f, ensure_ascii=False)
+        docs_with_paras += 1
 
     # Recurrence actions
     recurrence_actions = []
@@ -208,19 +231,27 @@ for record in ppb:
         record["recurrence_actions"] = recurrence_actions
         action_count += 1
 
-    # Entity mentioning paragraphs
-    entity_mentions = {}
+    # Entity mention counts (not full paragraphs)
+    entity_mention_counts = {}
+    entity_mention_indices = {}
     for entity in entities:
         entity_long = entity_long_lookup.get(entity, "")
-        mentioning = find_mentioning_paragraphs(paras, entity, entity_long)
-        if mentioning:
-            entity_mentions[entity] = mentioning
-    if entity_mentions:
-        record["entity_mentioning_paragraphs"] = entity_mentions
+        indices = find_mentioning_paragraph_indices(paras, entity, entity_long)
+        if indices:
+            entity_mention_counts[entity] = len(indices)
+            entity_mention_indices[entity] = indices
+    if entity_mention_counts:
+        record["entity_mention_counts"] = entity_mention_counts
+        record["entity_mention_indices"] = entity_mention_indices
         mentions_count += 1
+
+    # Remove paragraphs from main data (they're now in separate files)
+    if "paragraphs" in record:
+        del record["paragraphs"]
 
 print(f"Records with recurrence actions: {action_count}")
 print(f"Records with entity mentions: {mentions_count}")
+print(f"Documents with paragraphs saved: {docs_with_paras}")
 
 with open("public/data/ppb2026_augmented.json", "w") as f:
     json.dump(ppb, f, indent=2, ensure_ascii=False)

@@ -13,29 +13,27 @@ interface Props {
 function MandateGrid({ mandates }: { mandates: Mandate[] }) {
   return (
     <div className="grid grid-cols-[130px_1fr_50px_60px_140px] gap-x-3 gap-y-1.5 text-sm items-center">
-      {mandates.map((m) => {
-        const mentions = m.mentioningParagraphs?.length || 0;
-        return (
+      {mandates.map((m) => (
           <div key={m.symbol} className="contents">
             <DocumentSymbol
               symbol={m.symbol}
               link={m.link}
               title={m.title}
-              paragraphs={m.paragraphs}
-              mentioningParagraphs={m.mentioningParagraphs}
+              mentionCount={m.mentionCount}
+              mentionIndices={m.mentionIndices}
               entity={m.entity}
               entityLong={m.entityLong}
             />
             <div className="text-gray-600 truncate">{m.title}</div>
             <Tooltip
               content={
-                mentions > 0
-                  ? `${mentions} mention${mentions !== 1 ? "s" : ""} of ${m.entity} in ${m.symbol}`
+                m.mentionCount > 0
+                  ? `${m.mentionCount} mention${m.mentionCount !== 1 ? "s" : ""} of ${m.entity} in ${m.symbol}`
                   : `No mentions of ${m.entity} in ${m.symbol}`
               }
             >
               <span className="text-gray-400 text-xs text-center cursor-help">
-                {mentions > 0 ? `${mentions}×` : "—"}
+                {m.mentionCount > 0 ? `${m.mentionCount}×` : "—"}
               </span>
             </Tooltip>
             {m.action ? (
@@ -68,8 +66,7 @@ function MandateGrid({ mandates }: { mandates: Mandate[] }) {
               </>
             )}
           </div>
-        );
-      })}
+        ))}
     </div>
   );
 }
