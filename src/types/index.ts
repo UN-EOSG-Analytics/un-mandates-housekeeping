@@ -46,6 +46,7 @@ export interface PPBRecord {
   uniform_title: string | null;
   paragraphs?: Paragraph[];
   recurrence_actions?: RecurrenceAction[];
+  entity_mentioning_paragraphs?: Record<string, Paragraph[]>;
 }
 
 // Hierarchical structure for UI
@@ -60,16 +61,28 @@ export interface Mandate {
   link: string | null;
   action: MandateAction | null;
   paragraphs?: Paragraph[];
+  mentioningParagraphs?: Paragraph[];
+  entity?: string;
+  entityLong?: string | null;
+  isBackground?: boolean;
 }
 
 export interface EntityData {
   entity: string;
   entityLong: string | null;
-  subprogrammes: Record<string, Mandate[]>;
+  backgroundMandates: Mandate[];
+  legislativeMandates: Record<string, Mandate[]>;
 }
 
-export interface SectionData {
-  section: string;
-  sectionTitle: string;
+export interface BudgetPartMeta {
+  numeral: string;
+  order: number;
+  name: string;
+}
+
+export interface PartData {
+  part: string;
+  numeral: string;
+  order: number;
   entities: EntityData[];
 }

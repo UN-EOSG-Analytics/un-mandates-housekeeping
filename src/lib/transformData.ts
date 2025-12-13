@@ -1,26 +1,10 @@
 import type {
   PPBRecord,
-  SectionData,
+  PartData,
   Mandate,
   MandateAction,
+  BudgetPartMeta,
 } from "@/types";
-
-function cleanSectionTitle(title: string): string {
-  return title
-    .replace(/^Financing of the /i, "")
-    .replace(/^Financing of /i, "")
-    .replace(/^The /i, "");
-}
-
-function sectionSortKey(section: string): [number, number, string] {
-  const match = section.match(/^(\d+)(?:\s*\(Add\.?(\d+)\))?/i);
-  if (match) {
-    const base = parseInt(match[1], 10);
-    const isAddendum = !!match[2];
-    return [isAddendum ? 1 : 0, base, section];
-  }
-  return [2, 999, section];
-}
 
 function getActionForEntity(
   rec: PPBRecord,
@@ -35,14 +19,31 @@ function getActionForEntity(
   return { type: "UPDATE", newerSymbol: action.latest_symbol };
 }
 
-export function transformPPBData(records: PPBRecord[]): SectionData[] {
+function isBackgroundPart(part: string | null): boolean {
+  return part === "Mandates and background";
+}
+
+export function transformPPBData(
+  records: PPBRecord[],
+  budgetPartsMeta: BudgetPartMeta[]
+): PartData[] {
+  // Build lookup from name to meta
+  const metaByName: Record<string, BudgetPartMeta> = {};
+  for (const meta of budgetPartsMeta) {
+    metaByName[meta.name.toLowerCase()] = meta;
+  }
+
   const structure: Record<
     string,
     {
-      sectionTitle: string;
+      meta: BudgetPartMeta | null;
       entities: Record<
         string,
-        { entityLong: string | null; subprogrammes: Record<string, Mandate[]> }
+        {
+          entityLong: string | null;
+          backgroundMandates: Mandate[];
+          legislativeMandates: Record<string, Mandate[]>;
+        }
       >;
     }
   > = {};
@@ -53,60 +54,82 @@ export function transformPPBData(records: PPBRecord[]): SectionData[] {
     const link = rec.link;
 
     for (const ci of rec.citation_info) {
-      const section = ci.section;
-      const sectionTitle = ci.section_title;
+      const budgetPart = ci.budget_part || "Other";
       const entity = ci.entity;
       const entityLong = ci.entity_long;
-      const subprog = ci["sub-programme"] || ci.component || "General";
+      const partInDoc = ci.part_in_document;
+      const isBackground = isBackgroundPart(partInDoc);
+      const subprog = ci["sub-programme"] || ci.component || null;
 
-      if (!section || !entity) continue;
+      if (!entity) continue;
 
       const action = getActionForEntity(rec, entity);
+      const mentioningParagraphs = rec.entity_mentioning_paragraphs?.[entity];
 
-      if (!structure[section]) {
-        structure[section] = {
-          sectionTitle: cleanSectionTitle(sectionTitle || ""),
-          entities: {},
+      const mandate: Mandate = {
+        symbol,
+        title,
+        link,
+        action,
+        paragraphs: rec.paragraphs,
+        mentioningParagraphs,
+        entity,
+        entityLong,
+        isBackground,
+      };
+
+      const meta = metaByName[budgetPart.toLowerCase()] || null;
+
+      if (!structure[budgetPart]) {
+        structure[budgetPart] = { meta, entities: {} };
+      }
+
+      if (!structure[budgetPart].entities[entity]) {
+        structure[budgetPart].entities[entity] = {
+          entityLong,
+          backgroundMandates: [],
+          legislativeMandates: {},
         };
       }
 
-      if (!structure[section].entities[entity]) {
-        structure[section].entities[entity] = { entityLong, subprogrammes: {} };
-      }
+      const entityData = structure[budgetPart].entities[entity];
 
-      if (!structure[section].entities[entity].subprogrammes[subprog]) {
-        structure[section].entities[entity].subprogrammes[subprog] = [];
-      }
-
-      const existing =
-        structure[section].entities[entity].subprogrammes[subprog];
-      if (!existing.some((m) => m.symbol === symbol)) {
-        existing.push({ symbol, title, link, action, paragraphs: rec.paragraphs });
+      if (isBackground) {
+        if (!entityData.backgroundMandates.some((m) => m.symbol === symbol)) {
+          entityData.backgroundMandates.push(mandate);
+        }
+      } else {
+        const key = subprog || "Legislative mandates";
+        if (!entityData.legislativeMandates[key]) {
+          entityData.legislativeMandates[key] = [];
+        }
+        if (!entityData.legislativeMandates[key].some((m) => m.symbol === symbol)) {
+          entityData.legislativeMandates[key].push(mandate);
+        }
       }
     }
   }
 
-  // Sort: regular sections first, then addendum sections
-  const sections: SectionData[] = Object.entries(structure)
-    .sort(([a], [b]) => {
-      const [aType, aBase, aStr] = sectionSortKey(a);
-      const [bType, bBase, bStr] = sectionSortKey(b);
-      if (aType !== bType) return aType - bType;
-      if (aBase !== bBase) return aBase - bBase;
-      return aStr.localeCompare(bStr);
+  // Sort by order (roman numeral order), unknown parts at end
+  const parts: PartData[] = Object.entries(structure)
+    .sort(([, a], [, b]) => {
+      const aOrder = a.meta?.order ?? 999;
+      const bOrder = b.meta?.order ?? 999;
+      return aOrder - bOrder;
     })
-    .map(([section, data]) => ({
-      section,
-      sectionTitle: data.sectionTitle,
+    .map(([part, data]) => ({
+      part,
+      numeral: data.meta?.numeral || "",
+      order: data.meta?.order ?? 999,
       entities: Object.entries(data.entities)
         .sort(([a], [b]) => a.localeCompare(b))
         .map(([entity, entityData]) => ({
           entity,
           entityLong: entityData.entityLong,
-          subprogrammes: entityData.subprogrammes,
+          backgroundMandates: entityData.backgroundMandates,
+          legislativeMandates: entityData.legislativeMandates,
         })),
     }));
 
-  return sections;
+  return parts;
 }
-

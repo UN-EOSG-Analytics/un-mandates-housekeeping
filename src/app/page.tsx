@@ -3,22 +3,22 @@ import path from "path";
 import Image from "next/image";
 import { EntityOverview } from "@/components/EntityOverview";
 import { transformPPBData } from "@/lib/transformData";
-import type { PPBRecord } from "@/types";
+import type { PPBRecord, BudgetPartMeta } from "@/types";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 async function getData() {
-  const filePath = path.join(
-    process.cwd(),
-    "public/data/ppb2026_augmented.json"
-  );
-  const raw = fs.readFileSync(filePath, "utf-8");
-  const records: PPBRecord[] = JSON.parse(raw);
-  return transformPPBData(records);
+  const dataPath = path.join(process.cwd(), "public/data/ppb2026_augmented.json");
+  const metaPath = path.join(process.cwd(), "public/data/budget_parts.json");
+  
+  const records: PPBRecord[] = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
+  const budgetPartsMeta: BudgetPartMeta[] = JSON.parse(fs.readFileSync(metaPath, "utf-8"));
+  
+  return transformPPBData(records, budgetPartsMeta);
 }
 
 export default async function Home() {
-  const sections = await getData();
+  const parts = await getData();
 
   return (
     <div className="min-h-screen bg-background">
@@ -35,32 +35,16 @@ export default async function Home() {
           />
           <div>
             <h1 className="text-2xl font-bold text-foreground">
-              PPB 2026 Mandate Overview
+              PPB 2026 Mandate Housekeeping
             </h1>
             <p className="text-sm text-gray-500">
-              Legislative mandates by section and entity
+              Overview of mandates and suggestions for updates
             </p>
           </div>
         </div>
 
-        {/* Legend */}
-        <div className="flex items-center gap-6 text-xs mb-6">
-          <span className="flex items-center gap-2">
-            <span className="inline-block w-14 text-center py-0.5 rounded font-medium bg-red-50 text-red-600">
-              DROP
-            </span>
-            <span className="text-gray-500">newer version already cited</span>
-          </span>
-          <span className="flex items-center gap-2">
-            <span className="inline-block w-14 text-center py-0.5 rounded font-medium bg-amber-50 text-amber-600">
-              UPDATE
-            </span>
-            <span className="text-gray-500">newer version available</span>
-          </span>
-        </div>
-
         {/* Entity Overview */}
-        <EntityOverview sections={sections} />
+        <EntityOverview parts={parts} />
       </main>
     </div>
   );

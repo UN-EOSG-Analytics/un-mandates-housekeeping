@@ -171,11 +171,34 @@ for _, row in export.iterrows():
         "group_title": row["group_title"],
     }
 
-# Add recurrence_actions to ppb records
+# Entity long lookup
+entity_long_lookup = dict(zip(df["Entity"], df["Entity-Long"]))
+
+
+def find_mentioning_paragraphs(paras, entity_short, entity_long):
+    """Find paragraphs mentioning entity using word boundary matching."""
+    if not paras:
+        return None
+    patterns = []
+    if entity_short:
+        patterns.append(re.compile(r"\b" + re.escape(entity_short) + r"\b", re.IGNORECASE))
+    if entity_long:
+        patterns.append(re.compile(r"\b" + re.escape(entity_long) + r"\b", re.IGNORECASE))
+    if not patterns:
+        return None
+    matches = [p for p in paras if p.get("text") and any(pat.search(p["text"]) for pat in patterns)]
+    return matches or None
+
+
+# Augment ppb records with recurrence_actions and entity_mentioning_paragraphs
 action_count = 0
+mentions_count = 0
 for record in ppb:
     symbol = record.get("full_document_symbol")
     entities = record.get("entities") or []
+    paras = record.get("paragraphs") or []
+
+    # Recurrence actions
     recurrence_actions = []
     for entity in entities:
         key = (symbol, entity)
@@ -185,7 +208,19 @@ for record in ppb:
         record["recurrence_actions"] = recurrence_actions
         action_count += 1
 
-print(f"Records with recurrence actions: {action_count}")
+    # Entity mentioning paragraphs
+    entity_mentions = {}
+    for entity in entities:
+        entity_long = entity_long_lookup.get(entity, "")
+        mentioning = find_mentioning_paragraphs(paras, entity, entity_long)
+        if mentioning:
+            entity_mentions[entity] = mentioning
+    if entity_mentions:
+        record["entity_mentioning_paragraphs"] = entity_mentions
+        mentions_count += 1
 
-with open("public/ppb2026_augmented.json", "w") as f:
+print(f"Records with recurrence actions: {action_count}")
+print(f"Records with entity mentions: {mentions_count}")
+
+with open("public/data/ppb2026_augmented.json", "w") as f:
     json.dump(ppb, f, indent=2, ensure_ascii=False)
