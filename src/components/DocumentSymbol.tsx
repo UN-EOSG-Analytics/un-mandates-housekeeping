@@ -13,6 +13,8 @@ interface Props {
   mentionIndices: number[];
   entity?: string;
   entityLong?: string | null;
+  allEntities?: string[];
+  entityLongMap?: Record<string, string>;
 }
 
 function cleanPrefix(prefix: string) {
@@ -108,9 +110,11 @@ function FilteredParagraphTree({
   for (const item of operative) {
     const mentions = isMentioning(item.origIdx);
 
-    if (item.p.type === "heading") {
+    if (item.p.type === "heading" && !mentions) {
+      // Non-mentioning heading: hold for attachment to next segment
       pendingHeadings.push(item);
     } else if (mentions) {
+      // Mentioning item (paragraph or heading)
       const lastSeg = segments[segments.length - 1];
       if (lastSeg?.type === "mentioning") {
         lastSeg.items.push(...pendingHeadings, item);
@@ -119,6 +123,7 @@ function FilteredParagraphTree({
       }
       pendingHeadings = [];
     } else {
+      // Non-mentioning paragraph
       const lastSeg = segments[segments.length - 1];
       if (lastSeg?.type === "gap") {
         lastSeg.items.push(...pendingHeadings, item);
@@ -261,9 +266,11 @@ export function DocumentSymbol({
   mentionIndices,
   entity,
   entityLong,
+  allEntities,
+  entityLongMap,
 }: Props) {
   const [open, setOpen] = useState(false);
-  const [viewMode, setViewMode] = useState<"entity" | "all">("entity");
+  const [selectedEntity, setSelectedEntity] = useState<string | null>(entity || null);
   const [paragraphs, setParagraphs] = useState<Paragraph[] | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -302,7 +309,31 @@ export function DocumentSymbol({
     </button>
   );
 
-  const mentionIndicesSet = new Set(mentionIndices);
+  // Compute mention indices for an entity (using both short and long name)
+  const computeMentionIndices = (paras: Paragraph[], ent: string, entLong?: string): Set<number> => {
+    const terms = [ent];
+    if (entLong) terms.push(entLong);
+    const pattern = new RegExp(`\\b(${terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`, 'i');
+    const indices = new Set<number>();
+    paras.forEach((p, i) => {
+      if (p.text && p.type !== "heading" && pattern.test(p.text)) indices.add(i);
+    });
+    return indices;
+  };
+
+  // Compute mention counts for all entities
+  const entityMentionCounts: Record<string, number> = {};
+  if (paragraphs && allEntities) {
+    for (const ent of allEntities) {
+      const entLong = entityLongMap?.[ent];
+      entityMentionCounts[ent] = computeMentionIndices(paragraphs, ent, entLong).size;
+    }
+  }
+
+  const selectedEntityLong = selectedEntity ? entityLongMap?.[selectedEntity] : undefined;
+  const mentionIndicesSet = paragraphs && selectedEntity
+    ? computeMentionIndices(paragraphs, selectedEntity, selectedEntityLong)
+    : new Set<number>();
 
   return (
     <>
@@ -331,31 +362,45 @@ export function DocumentSymbol({
             </div>
 
             <div className="flex-1 overflow-y-auto p-4">
+              {allEntities && allEntities.length > 0 && (
+                <div className="mb-4">
+                  <div className="text-xs text-gray-500 mb-1.5">Entities citing this document</div>
+                  <div className="flex flex-wrap items-center gap-1.5">
+                    {allEntities.map((e) => {
+                      const count = entityMentionCounts[e] || 0;
+                      return (
+                        <button
+                          key={e}
+                          onClick={() => setSelectedEntity(e)}
+                          className={`text-xs px-2 py-0.5 rounded transition-colors ${
+                            selectedEntity === e ? "bg-un-blue text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                          }`}
+                        >
+                          {e} <span className={selectedEntity === e ? "text-white/70" : "text-gray-400"}>({count})</span>
+                        </button>
+                      );
+                    })}
+                    <button
+                      onClick={() => setSelectedEntity(null)}
+                      className={`text-xs px-2 py-0.5 rounded transition-colors ml-1 ${
+                        !selectedEntity ? "bg-gray-600 text-white" : "bg-gray-200 text-gray-500 hover:bg-gray-300"
+                      }`}
+                    >
+                      show all paragraphs
+                    </button>
+                  </div>
+                </div>
+              )}
               {loading ? (
                 <div className="flex items-center justify-center py-8">
                   <Loader2 className="h-6 w-6 animate-spin text-gray-400" />
                 </div>
               ) : paragraphs && paragraphs.length > 0 ? (
-                <>
-                  {entity && (
-                    <div className="flex items-center gap-3 mb-4">
-                      <button
-                        onClick={() => setViewMode(viewMode === "entity" ? "all" : "entity")}
-                        className={`relative flex-shrink-0 w-9 h-5 rounded-full transition-colors ${viewMode === "entity" ? "bg-un-blue" : "bg-gray-300"}`}
-                      >
-                        <span className={`absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform ${viewMode === "entity" ? "right-0.5" : "left-0.5"}`} />
-                      </button>
-                      <span className="text-sm text-gray-600">
-                        {viewMode === "entity" ? `Filtered for ${entity}` : "Showing all paragraphs"}
-                      </span>
-                    </div>
-                  )}
-                  {viewMode === "entity" && entity ? (
-                    <FilteredParagraphTree paragraphs={paragraphs} mentionIndices={mentionIndicesSet} entity={entity} entityLong={entityLong} />
-                  ) : (
-                    <FullParagraphTree paragraphs={paragraphs} />
-                  )}
-                </>
+                selectedEntity ? (
+                  <FilteredParagraphTree paragraphs={paragraphs} mentionIndices={mentionIndicesSet} entity={selectedEntity} entityLong={selectedEntityLong || null} />
+                ) : (
+                  <FullParagraphTree paragraphs={paragraphs} />
+                )
               ) : (
                 <div className="text-gray-400 text-sm">No paragraph data available</div>
               )}

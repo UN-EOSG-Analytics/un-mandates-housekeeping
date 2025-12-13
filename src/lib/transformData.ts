@@ -53,6 +53,14 @@ export function transformPPBData(
     const title = rec.description || rec.uniform_title || "";
     const link = rec.link;
 
+    // Build entity -> entityLong map from all citation_info
+    const entityLongMap: Record<string, string> = {};
+    for (const ci of rec.citation_info) {
+      if (ci.entity && ci.entity_long) {
+        entityLongMap[ci.entity] = ci.entity_long;
+      }
+    }
+
     for (const ci of rec.citation_info) {
       const budgetPart = ci.budget_part || "Other";
       const entity = ci.entity;
@@ -77,6 +85,9 @@ export function transformPPBData(
         entity,
         entityLong,
         isBackground,
+        otherEntitiesCount: Math.max(0, rec.num_entities - 1),
+        allEntities: (rec.entities || []).filter((e): e is string => e !== null),
+        entityLongMap,
       };
 
       const meta = metaByName[budgetPart.toLowerCase()] || null;

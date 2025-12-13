@@ -65,6 +65,9 @@ export interface Mandate {
   entity?: string;
   entityLong?: string | null;
   isBackground?: boolean;
+  otherEntitiesCount: number;
+  allEntities: string[];
+  entityLongMap: Record<string, string>;
 }
 
 export interface EntityData {

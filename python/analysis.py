@@ -196,7 +196,7 @@ def find_mentioning_paragraph_indices(paras, entity_short, entity_long):
     return [
         i
         for i, p in enumerate(paras)
-        if p.get("text") and any(pat.search(p["text"]) for pat in patterns)
+        if p.get("text") and p.get("type") != "heading" and any(pat.search(p["text"]) for pat in patterns)
     ]
 
 
