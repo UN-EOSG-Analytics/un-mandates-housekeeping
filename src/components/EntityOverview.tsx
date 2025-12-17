@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, Fragment } from "react";
-import { X } from "lucide-react";
+import { X, GitCompareArrows } from "lucide-react";
 import type { PartData, Mandate } from "@/types";
 import { DocumentSymbol } from "./DocumentSymbol";
 import { Tooltip } from "./Tooltip";
@@ -12,7 +12,7 @@ interface Props {
 
 function MandateGrid({ mandates }: { mandates: Mandate[] }) {
   return (
-    <div className="grid grid-cols-[130px_1fr_50px_50px_60px_140px] gap-x-3 gap-y-1.5 text-sm items-center">
+    <div className="grid grid-cols-[130px_1fr_50px_50px_60px_140px_24px] gap-x-3 gap-y-1.5 text-sm items-center">
       {mandates.map((m) => (
           <div key={m.symbol} className="contents">
             <DocumentSymbol
@@ -71,9 +71,20 @@ function MandateGrid({ mandates }: { mandates: Mandate[] }) {
                 <div className="text-gray-400 truncate text-xs">
                   → {m.action.newerSymbol}
                 </div>
+                <Tooltip content="Compare documents">
+                  <a
+                    href={`https://mandates.un.org/diff?symbol1=${encodeURIComponent(m.symbol)}&symbol2=${encodeURIComponent(m.action.newerSymbol)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-un-blue transition-colors"
+                  >
+                    <GitCompareArrows className="h-3.5 w-3.5" />
+                  </a>
+                </Tooltip>
               </>
             ) : (
               <>
+                <div />
                 <div />
                 <div />
               </>
