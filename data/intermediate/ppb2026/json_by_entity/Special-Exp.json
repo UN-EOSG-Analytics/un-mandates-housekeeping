@@ -1,0 +1,1728 @@
+{
+  "entity": "Special expenses",
+  "entity_abbrev": "Special-Exp",
+  "entity_raw_name": "Special expenses",
+  "section_title": "Special expenses",
+  "source_file": "A_80_6_SECT.32.json",
+  "content": [
+    {
+      "block_type": "a/b",
+      "text": "A.\tContributions to after-service health insurance",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "paragraph-1",
+          "text": "32.7\tThe after-service health insurance programme extends health-care benefits under the United Nations insurance schemes to eligible retirees and their eligible dependants. Coverage is provided on a shared-contribution basis in accordance with a decision taken by the General Assembly at its twenty-first session. Coverage is also provided to staff members whose appointments are terminated as a result of disability. In all cases, coverage is available only to those who are eligible to receive a periodic benefit from the United Nations Joint Staff Pension Fund or under the rules governing compensation for service-incurred death, injury or illness. In accordance with Assembly resolution 38/235, the maximum cost-sharing ratio is 2 to 1 between the Organization and the participant.",
+          "table_content": null,
+          "hyperlinks": [
+            [
+              "38/235",
+              "https://docs.un.org/en/A/RES/38/235"
+            ]
+          ],
+          "children": []
+        },
+        {
+          "block_type": "paragraph-1",
+          "text": "32.8\tBy its resolution 40/258 A, the General Assembly decided to extend after-service health insurance coverage to former locally recruited staff who had participated in the medical expense assistance plan under appendix E to the Staff Rules of the United Nations.",
+          "table_content": null,
+          "hyperlinks": [
+            [
+              "40/258",
+              "https://docs.un.org/en/A/RES/40/258"
+            ]
+          ],
+          "children": []
+        },
+        {
+          "block_type": "paragraph-1",
+          "text": "32.9\tBy its resolution 61/264, the General Assembly approved changes to the after-service health insurance provisions for new staff members recruited on or after 1 July 2007. Under the terms of that resolution, following retirement, staff members are eligible for cost-sharing of after-service coverage if they have participated in a United Nations-system contributory health insurance plan for a minimum of 10 years at the time of retirement. Staff members recruited before 1 July 2007 who have participated in a United Nations contributory plan for at least 5 years are also eligible, provided that they pay the full premium for the period for which their participation falls short of the 10-year requirement for cost-shared participation.",
+          "table_content": null,
+          "hyperlinks": [
+            [
+              "61/264",
+              "https://docs.un.org/en/A/RES/61/264"
+            ]
+          ],
+          "children": []
+        },
+        {
+          "block_type": "paragraph-1",
+          "text": "32.10\tThe General Assembly, in its resolution 64/241, requested the Secretary-General to submit to it at its sixty-seventh session a report on managing after-service health insurance liabilities, bearing in mind that the pay-as-you-go principle was one of the viable options. The Assembly also requested the Secretary-General to continue to validate the accrued liabilities with the figures audited by the Board of Auditors and to include that information and the outcome of the validation in the requested report. The report of the Secretary-General on managing after-service health insurance liabilities (A/68/353) was submitted to the Assembly at its sixty-eighth session. The Assembly, in its resolution 68/244, endorsed the recommendation of the Advisory Committee on Administrative and Budgetary Questions on the continuation of the pay-as-you-go approach to the funding of the after-service health insurance liabilities. It also requested the Secretary-General to examine the option of broadening the mandate of the United Nations Joint Staff Pension Fund, to include the cost-effective, efficient and sustainable administration of after-service health insurance benefits, taking into account the advantages and disadvantages of that option, including its financial and legal implications, and to report thereon at the seventieth session of the Assembly, as well as to undertake a survey of current health-care plans for active and retired staff within the United Nations system, to explore options to increase efficiency and contain costs and to report thereon at its seventieth session. In his report on managing after-service health insurance (A/73/662), informed in large part by the work of the inter-agency Working Group on After-Service Health Insurance, the Secretary-General continued to apprise the Assembly of the work undertaken in response to its request. In its resolution on managing after-service health insurance (resolution 73/279 B), the Assembly endorsed the recommendations contained in the report of the Advisory Committee (A/73/792), including that the Secretary-General further explore options for the improvement of efficiency and the containment of costs, including liabilities associated with current and future staff, with a view to reducing the Organization’s expenditure on health insurance plans and its after-service health insurance obligations.",
+          "table_content": null,
+          "hyperlinks": [
+            [
+              "64/241",
+              "https://docs.un.org/en/A/RES/64/241"
+            ],
+            [
+              "A/68/353",
+              "https://docs.un.org/en/A/68/353"
+            ],
+            [
+              "68/244",
+              "https://docs.un.org/en/A/RES/68/244"
+            ],
+            [
+              "A/73/662",
+              "https://docs.un.org/en/A/73/662"
+            ],
+            [
+              "73/279",
+              "https://docs.un.org/en/A/RES/73/279B"
+            ],
+            [
+              "A/73/792",
+              "https://docs.un.org/en/A/73/792"
+            ]
+          ],
+          "children": []
+        },
+        {
+          "block_type": "paragraph-1",
+          "text": "32.11\tThe report of the Secretary-General on managing after-service health insurance liabilities (A/76/373) was submitted to the General Assembly at its seventy-sixth session. In the report, the Secretary-General responded to the Assembly’s request and set out a comprehensive proposal on after-service health insurance funding.",
+          "table_content": null,
+          "hyperlinks": [
+            [
+              "A/76/373",
+              "https://docs.un.org/en/A/76/373"
+            ]
+          ],
+          "children": []
+        },
+        {
+          "block_type": "paragraph-1",
+          "text": "32.12\tThe proposed regular budget resources for 2026 amount to $92,542,200, reflecting an increase of $1,809,200 (or 2 per cent) compared with the approved budget for 2025. The proposed change is explained in paragraph 32.4 (a) above. Additional details on the distribution of the proposed resources for 2026 are reflected in table 32.4 and figure 32.II.",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "table",
+          "text": "Table 32.4",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Contributions to after-service health insurance: evolution of financial resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 \nestimate",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/ expanded mandates",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Percentage ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 \nestimate",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Posts",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "55.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Non-post",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "84 815.7 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "90 733.0 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 809.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 809.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "92 542.2",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "84 948.0 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "90 733.0 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 809.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 809.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "92 542.2",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "figure",
+              "text": "Figure 32.II",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Contributions to after-service health insurance: distribution of proposed resources for 2026",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "image",
+              "text": "",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tCompensatory payments",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "paragraph-1",
+          "text": "32.13\tThe requirements under compensatory payments provide for compensation to members of commissions, committees or similar United Nations bodies in the event of death, injury or illness attributable to service with the United Nations. The responsibilities of the United Nations in this area, as well as the rules governing compensatory payments, are detailed in Secretary-General’s bulletin ST/SGB/103/Rev.1.",
+          "table_content": null,
+          "hyperlinks": [
+            [
+              "ST/SGB/103/Rev.1",
+              "https://docs.un.org/en/ST/SGB/103/Rev.1"
+            ]
+          ],
+          "children": []
+        },
+        {
+          "block_type": "paragraph-1",
+          "text": "32.14\tCompensation is also provided to staff members or their dependants in the event of death, injury or illness attributable to the performance by the staff member of official duties on behalf of the United Nations. The compensation is governed by the specific rules under appendix D to the Staff Regulations and Rules of the United Nations (ST/SGB/2018/1).",
+          "table_content": null,
+          "hyperlinks": [
+            [
+              "ST/SGB/2018/1",
+              "https://docs.un.org/en/ST/SGB/2018/1"
+            ]
+          ],
+          "children": []
+        },
+        {
+          "block_type": "paragraph-1",
+          "text": "32.15\tThe costs incurred on both those accounts may include monthly survivor benefits for life, monthly disability benefits for life, lump-sum indemnities for permanent disabilities, funeral expenses, sick leave credit and medical expenses.",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "paragraph-1",
+          "text": "32.16\tThe proposed regular budget resources for 2026 amount to $2,290,800, reflecting an increase of $376,900 (or 19.7 per cent) compared with the approved budget for 2025. The proposed change is explained in paragraph 32.4 (b) above. Additional details on the distribution of proposed resources for 2026 are reflected in table 32.5.",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "table",
+          "text": "Table 32.5",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Compensatory payments: evolution of financial resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024\nexpenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 \nestimate",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024\nexpenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/ expanded mandates",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Percentage ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 \nestimate",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Non-post",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tOther staff costs",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 584.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 913.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "376.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "376.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "19.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 290.8",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 584.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 913.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "376.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "376.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "19.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 290.8",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "C.\tGeneral insurance",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "paragraph-1",
+          "text": "32.17\tThe provisions under general insurance relate mainly to insurance on the buildings and property at Headquarters, as well as in Addis Ababa (Economic Commission for Africa), Santiago (Economic Commission for Latin America and the Caribbean) and Beirut (Economic and Social Commission for Western Asia). The United Nations Offices at Geneva, Vienna and Nairobi, as well as the Economic and Social Commission for Asia and the Pacific in Bangkok, separately maintain property and liability coverage for their offices locally. General insurance also covers automobile liability insurance at Headquarters, liability insurance for aircraft used for travel by the Secretary-General but not owned by the United Nations, and insurance for other air travel of staff. In addition, in accordance with General Assembly resolution 41/210, the United Nations has established a self-insurance plan for general liability risk in respect of acts occurring in the Headquarters district in New York. The provisions also cover a stand-alone insurance policy for acts of terrorism, which, following the events of 11 September 2001, was established effective 2003 as a result of limitations in the scope of insurance coverage for risks, such as acts of terrorism that would normally have been covered under the general policies.",
+          "table_content": null,
+          "hyperlinks": [
+            [
+              "41/210",
+              "https://docs.un.org/en/A/RES/41/210"
+            ]
+          ],
+          "children": []
+        },
+        {
+          "block_type": "paragraph-1",
+          "text": "32.18\tThe outreach initiatives continued to encourage additional markets to bid for coverage of risks to the United Nations. Some limitations in the scope of insurance coverage, however, continue to be prevalent. Two such examples are the flood coverage restrictions introduced in the wake of storm Sandy in New York and the continued requirement for specific insurance for acts of terrorism. Actual premiums will be driven by the United Nations claims experience for previous years, and by the general state of insurance markets at the time of the renewal of the policy. The damages sustained by the Economic and Social Commission for Western Asia (currently estimated at $6 million) to its building and the contents thereof as a result of the explosion in Beirut on 4 August 2020 and other property losses continue to have an impact on the property insurance renewal premium. In addition to loss history, insurance premiums are also affected by market conditions and capacity, that is, the number of underwriters in the marketplace willing to insure the risk at the time of renewal, inflation and reinsurance costs. The insurance marketplace is constantly evolving on the basis of global economic conditions, natural and human-made disasters or regulatory requirements, and insurers’ perception of specific risks relating to the United Nations.",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "paragraph-1",
+          "text": "32.19\tThe proposed regular budget resources for 2026 amount to $4,350,500 and reflect an increase of $399,500 (or 10.1 per cent) compared with the approved budget for 2025. The proposed change is explained in paragraph 32.4 (c) above. Additional details on the distribution of the proposed resources for 2026 are reflected in table 32.6 and figure 32.III.",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "table",
+          "text": "Table 32.6",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "General insurance: evolution of financial resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 \nestimate",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/ expanded mandates",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Percentage ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 \nestimate",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Non-post",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 964.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 951.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "399.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "399.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "10.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4 350.5",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 964.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 951.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "399.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "399.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "10.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4 350.5",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "figure",
+              "text": "Figure 32.III",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "General insurance: distribution of proposed resources for 2026",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "image",
+              "text": "",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "D.\tBank charges",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "paragraph-1",
+          "text": "32.20\tThe bank charges include fees for account maintenance, electronic fund transfers and other banking services used by the United Nations.",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "paragraph-1",
+          "text": "32.21\tThe proposed regular budget resources for 2026 amount to $195,100 and reflect a decrease of $9,500 (or 4.6 per cent) compared with the approved budget for 2025. The proposed change is explained in paragraph 32.4 (d) above. Additional details on the distribution of the proposed resources for 2026 are reflected in table 32.7.",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "table",
+          "text": "Table 32.7",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Bank charges: evolution of financial resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 \nestimate",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/ expanded mandates",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Percentage ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 \nestimate",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Non-post",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tGeneral operating expenses",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "191.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "204.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(9.5)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(9.5)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4.6)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "195.1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "191.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "204.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(9.5)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(9.5)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4.6)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "195.1",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "E.\tPension payments to former Secretaries-General",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "paragraph-1",
+          "text": "32.22\tThis component covers the retirement allowances for a former Secretary-General and for the widows of two former Secretaries-General at the half rate on the basis of the maximum retirement benefit payable as from 1 January 2025.",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "paragraph-1",
+          "text": "32.23\tThe proposed regular budget resources for 2026 amount to $356,800 and reflect a net decrease of $99,400 (or 21.8 per cent) compared with the approved budget for 2025. The proposed change is explained in paragraph 32.4 (e) above. Additional details on the distribution of the proposed resources for 2026 are reflected in table 32.8.",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "table",
+          "text": "Table 32.8",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Pension payments to former Secretaries-General: evolution of financial resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/ expanded mandates",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Percentage ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Non-post",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tNon-staff compensation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "460.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "456.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(99.4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(99.4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(21.8)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "356.8",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "460.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "456.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(99.4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(99.4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(21.8)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "356.8",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

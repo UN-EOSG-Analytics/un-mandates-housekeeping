@@ -1,0 +1,4314 @@
+{
+  "entity": "Office of the United Nations Special Coordinator on Improving the United Nations Response to Sexual Exploitation and Abuse",
+  "entity_abbrev": "OSC-SEA",
+  "entity_raw_name": "VIII.\tOffice of the United Nations Special Coordinator on Improving the United Nations Response to Sexual Exploitation and Abuse",
+  "source_file": "A_80_6_SECT.1.PART AB_CONSOLIDATED_FASCICLE_ADVANCED COPY TO ACABQ_22 MAY 2025.json",
+  "content": [
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Office was established in February 2016, when the Secretary-General appointed the Special Coordinator with a reporting line through the Chef de Cabinet to the Secretary-General to work across the United Nations system’s offices, departments and agencies to strengthen the United Nations response to sexual exploitation and abuse, wherever it might occur, from Headquarters locations to the most remote field bases. The General Assembly, in its resolution 70/286, and the Security Council, by its resolution 2272 (2016), welcomed the appointment of the Special Coordinator and the Secretary-General’s continued efforts to implement and reinforce the United Nations zero-tolerance policy on sexual exploitation and abuse, in particular to strengthen the Organization’s prevention, reporting, enforcement and remedial action in order to promote greater accountability. In its resolution 71/278, the Assembly welcomed the continued efforts of the Secretary-General to combat sexual exploitation and abuse, including the appointment of a Special Coordinator on improving the United Nations response to sexual exploitation and abuse and the establishment of a high-level task force to develop, as a matter of urgency, a clear, game-changing strategy to achieve visible and measurable improvements in the Organization’s approach to preventing and responding to sexual exploitation and abuse. The Assembly also expressed its support to the Secretary-General, the Office and all relevant departments in their efforts to implement the zero-tolerance policy and, in particular, to strengthen the Organization’s prevention, reporting, enforcement and response mechanisms in order to promote greater accountability, and in that regard requested the Secretary-General to continue to work in close consultation with Member States for the effective implementation of the policy.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "70/286",
+                      "https://undocs.org/en/A/RES/70/286"
+                    ],
+                    [
+                      "2272 (2016)",
+                      "https://undocs.org/en/S/RES/2272(2016)"
+                    ],
+                    [
+                      "71/278",
+                      "https://undocs.org/en/A/RES/71/278"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Special Coordinator drives and oversees the United Nations efforts to prevent and respond to sexual exploitation and abuse across the United Nations system. Through the development of procedures, protocols, standardized tools and support for United Nations entities and the field, the Special Coordinator continues efforts to align approaches and enhance coordination, cooperation and system-wide coherence.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The objective, to which this programme contributes, is to advance the United Nations response to sexual exploitation and abuse and to ensure a continuous focus on and sustained high-level attention to the prevention and response to sexual exploitation and abuse through a victim-centred approach.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "To contribute to the objective, the Office will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tCoordinate with United Nations entities, departments and offices to ensure the alignment and institutionalization of strategies to prevent and respond to sexual exploitation and abuse by developing initiatives to mitigate the risks of sexual exploitation and abuse across the United Nations system;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tPromote the implementation of the Secretary-General’s strategy to combat sexual exploitation and abuse across the system’s more than 30 affiliated funds, programmes and specialized agencies and act as the secretariat of the Secretary-General’s institutionalized standing bodies for protection against sexual exploitation and abuse, such as the High-level Steering Group on preventing sexual exploitation and abuse, convened by the Chef de Cabinet, which oversees the implementation of the Secretary-General’s strategy;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tReview and address the policy and operational gaps in the United Nations handling of sexual exploitation and abuse by all categories of United Nations personnel, both uniformed and civilian, and by non-United Nations actors;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tConsult with international, regional and subregional organizations, Member States, United Nations independent human rights experts, civil society organizations, national human rights institutions, academic institutions and think tanks, as appropriate, to ensure that policies and operational efforts across the United Nations system reflect best practice;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tMonitor and enhance the Secretary-General’s public reporting mechanism for allegations of sexual exploitation and abuse;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(f)\tPromote enhanced accountability efforts through a multi-faceted approach which engages both leaders, Member States, and the United Nations system. Strengthen commitment, processes and engagement at national level, foster collaboration with Member States, increase investigative capacity, strengthen legislative frameworks and ensure a victim-centred, trauma-informed approach;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(g)\tWork closely with leadership across the United Nations system to provide strategic support and guidance to assist in designing and developing comprehensive strategies, system-wide policies and initiatives to combat sexual exploitation and abuse and strengthen joint United Nations programming on prevention initiatives.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tStrengthened prevention of and responses to sexual exploitation and abuse in a cohesive and coordinated manner, including improved data collection, evidence-based programming, monitoring and analysis of performance by the United Nations system;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tInstitutionalization of an organizational culture of zero tolerance for inaction for sexual exploitation and abuse, with a robust and consistent understanding among United Nations personnel of standards of conduct and the purpose of mission of the United Nations, to advance cultural change and address the underpinnings of sexual exploitation and abuse, including gender imbalances and the abuse of authority due to power differentials.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tPersonnel, at all levels, prioritize combating sexual exploitation and abuse within United Nations operations;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b) \tAdequate, qualified, victim-centred investigation capacity and appropriate organizational structures are in place to respond;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tThe United Nations system supports the alignment and institutionalization of measures to prevent and respond to sexual exploitation and abuse, including through sustained, predictable funding.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to inter-agency coordination, the Office will continue to seek cooperation with all United Nations partners, including agencies, funds and programmes, and the Inter-Agency Standing Committee and its Champion on protection from sexual exploitation and abuse and sexual harassment, to ensure coordination with relevant mandates and a coherent and consistent response. The Office will also continue to collaborate with the Office of the Victims’ Rights Advocate, the Department of Management Strategy, Policy and Compliance and the Department of Global Communications, among other entities within the Organization, to ensure alignment of messages relating to the prevention of and response to sexual exploitation and abuse in internal and external communications. Furthermore, the Office will work closely with the Development Coordination Office and resident coordinators, globally, to support their roles and responsibilities in accordance with the management and accountability framework of the United Nations development and resident coordinator system. The Office continues to serve as the secretariat of the Secretary-General’s circle of leadership on the prevention of and response to sexual exploitation and abuse in United Nations operations, which comprises global leaders who actively support the agenda of combating sexual exploitation and abuse.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Office integrates a gender perspective into its operational activities, deliverables, and results, as appropriate. The Special Coordinator will advocate for comprehensive reforms in policy, culture and systems to mitigate discrimination, rectify power imbalances, alleviate disparities and promote equality. Addressing the foundational factors contributing to sexual exploitation and abuse is paramount, with a specific emphasis on promoting equality, respect and dignity. Recognizing that these issues affect all individuals, the Office remains committed to fostering a safe and rights-based environment that focuses its work on impact which best serves the core purposes for which the UN was founded.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In line with the United Nations Disability Inclusion Strategy, the Office will identify ways to ensure the integration of disability inclusion across all projects. This involves mainstreaming disability inclusion through training and outreach material on preventing and responding to sexual exploitation and abuse, including on victim support, that is tailored to address the distinct needs and challenges of individuals with disabilities.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Strengthened system-wide approach to protection from sexual exploitation and abuse at both strategic and operational levels",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "The Office remained steadfast in  driving  a strengthened and coordinated system-wide approach to the prevention of and response to sexual exploitation and abuse at both the strategic and operational level. The Special Coordinator and the Office coordinated and advocated for the operationalization of the United Nations framework for the prevention of and response to sexual exploitation and abuse across the United Nations system. This included providing strategic and operational guidance and support, strengthening monitoring and risk assessment processes and renewing the focus on enhancing partnerships and communication.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Visits were conducted by the Special Coordinator to United Nations offices and field locations, including development, humanitarian, and peace operations. These official visits helped to raise awareness of the necessary standards of conduct, the need to have robust mechanisms in place to detect and respond to allegations, and the importance of visible leadership and dedicated PSEA capacity in-country.   Moreover, the Office continuously engaged in global dialogues at both the leadership, operational and technical levels to enhance the effectiveness of mechanisms for preventing and responding to sexual exploitation and abuse, including data collection and resourcing for PSEA efforts.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective is presented in the performance measure below (see figure 1.XXI).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Performance measure: number of heads of entities and resident coordinators with strategic and action plans on the prevention of and response to sexual exploitation and abuse (annual)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "image",
+                      "text": "",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned results for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 1: a reduction in operational and policy and procedural gaps in the United Nations handling of sexual exploitation and abuse perpetrated by all categories of United Nations personnel system-wide – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "The Office’s work contributed to policy and operational gaps being addressed, including through the initiation of workstreams for the update of the Secretary-General's Bulletin 2003/13 on special measures for protection from sexual exploitation and sexual abuse and the organization of efforts to strengthen protection from sexual exploitation and abuse in mission transitions and a post mission environment; and through facilitating critical feedback from United Nations system entities for the development of revised guidance and tools, which met the planned target of an increased number of entities address policy and operational gaps. However, while progress has been made, the target of an increased number of United Nations system organizations systematically sharing data to fulfil reporting requirements was not met mainly because organizations guard their independence and fear the ‘transparency penalty’.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective and the target for 2026 are presented in the performance measure below (see table 1.109).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Entities address policy and operational gaps, including alignment of the minimum standards on protection from and the response to sexual exploitation and abuse, and entities improve data-sharing and reporting\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "An increased number of entities address policy and operational gaps, including alignment of the minimum standards on protection from and the response to sexual exploitation and abuse \n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "An increased number of entities address and align policies and operational gaps, with a focus on the amalgamation of existing policies and best practices\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "An increased number of entities address and align policies and operational gaps, including alignment of the minimum standards on protection from and the response to sexual exploitation and abuse   ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " Senior leaders in the United Nations system have access to a tailored toolkit for the prevention of sexual exploitation and abuse\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Senior leaders have access to additional resources and communications, which lead to the adoption and use of a toolkit to fulfil their protection from sexual exploitation and abuse roles and responsibilities\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Senior leaders across all pillars of the UN system and NGOs have access to streamlined, practical resources,  which empowers leaders to effectively fulfill their protection from sexual exploitation and abuse obligations",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": " –",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Increased coordination, policy alignment, and more systematic implementation of PSEA at both HQ and country-level",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Coordination, policy alignment, and more systematic implementation of PSEA   at both HQ and country-level",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 2: One UN coordinated approach to more effectively address sexual exploitation and abuse – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "The Office’s work contributed to senior leaders in the United Nations system having access to a tailored toolkit for the prevention of sexual exploitation and abuse, ‘Protection from Sexual Exploitation and Abuse: A Practical Toolkit for United Nations Senior Leaders in-Country’, which met the planned target.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective and the target for 2026 are presented in the performance measure below (see table 1.110).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Entities address policy and operational gaps, including alignment of the minimum standards on protection from and the response to sexual exploitation and abuse, and entities improve data-sharing and reporting\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "An increased number of entities address policy and operational gaps, including alignment of the minimum standards on protection from and the response to sexual exploitation and abuse \n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "An increased number of entities address and align policies and operational gaps, with a focus on the amalgamation of existing policies and best practices\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "An increased number of entities address and align policies and operational gaps, including alignment of the minimum standards on protection from and the response to sexual exploitation and abuse   ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " Senior leaders in the United Nations system have access to a tailored toolkit for the prevention of sexual exploitation and abuse\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Senior leaders have access to additional resources and communications, which lead to the adoption and use of a toolkit to fulfil their protection from sexual exploitation and abuse roles and responsibilities\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Senior leaders across all pillars of the UN system and NGOs have access to streamlined, practical resources,  which empowers leaders to effectively fulfill their protection from sexual exploitation and abuse obligations",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": " –",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Increased coordination, policy alignment, and more systematic implementation of PSEA at both HQ and country-level",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Coordination, policy alignment, and more systematic implementation of PSEA   at both HQ and country-level",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 3:  Effective prevention and response efforts through the institutionalization of the protection from sexual exploitation and abuse across the UN system – Proposed programme plan for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "The Office continues to advance the institutionalization of measures to prevent and respond to sexual exploitation and abuse by ensuring the operationalization of PSEA through strengthened coordination, policy alignment, and systematic implementation at the field level. Given the complexity of the United Nations system—which includes over 30 affiliated programmes, funds, and specialized agencies with distinct leadership, membership, and budgetary structures—achieving a unified and coordinated approach remains a priority.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "italic",
+                      "text": "Lessons learned and planned change",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "The lesson for the Office was that the institutionalization of PSEA requires predictable and sustained resources. Field visits and stakeholder engagement have consistently highlighted that funding gaps and high turnover among coordinators, particularly in high-risk locations, hinders consistent implementation and effective victim support. In applying the lesson, the Office will prioritize strategic resource planning and advocate for sustained financial commitments and mechanisms. Efforts will also focus on embedding protection from sexual exploitation and abuse into governance structures, leadership frameworks, and accountability mechanisms, moving beyond the current ad hoc programming and initiatives. Strengthening coordination, policy alignment, committed leadership and systematic implementation will be central to this shift.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Expected progress towards the objective is presented in the performance measure below (see table 1.111).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Entities address policy and operational gaps, including alignment of the minimum standards on protection from and the response to sexual exploitation and abuse, and entities improve data-sharing and reporting\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "An increased number of entities address policy and operational gaps, including alignment of the minimum standards on protection from and the response to sexual exploitation and abuse \n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "An increased number of entities address and align policies and operational gaps, with a focus on the amalgamation of existing policies and best practices\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "An increased number of entities address and align policies and operational gaps, including alignment of the minimum standards on protection from and the response to sexual exploitation and abuse   ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " Senior leaders in the United Nations system have access to a tailored toolkit for the prevention of sexual exploitation and abuse\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Senior leaders have access to additional resources and communications, which lead to the adoption and use of a toolkit to fulfil their protection from sexual exploitation and abuse roles and responsibilities\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Senior leaders across all pillars of the UN system and NGOs have access to streamlined, practical resources,  which empowers leaders to effectively fulfill their protection from sexual exploitation and abuse obligations",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": " –",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Increased coordination, policy alignment, and more systematic implementation of PSEA at both HQ and country-level",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Coordination, policy alignment, and more systematic implementation of PSEA   at both HQ and country-level",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Legislative mandates",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The list below, which was reviewed in the preparation of the proposed programme budget, provides all mandates entrusted to the programme.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "italic",
+                  "text": "General Assembly resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "59/300; 61/267 B",
+                            "hyperlinks": [
+                              [
+                                "59/300",
+                                "https://undocs.org/en/A/RES/59/300"
+                              ],
+                              [
+                                "61/267",
+                                "https://undocs.org/en/A/RES/61/267B"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Comprehensive review of a strategy to eliminate future sexual exploitation and abuse in United Nations peacekeeping operations",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "62/63;79/116",
+                            "hyperlinks": [
+                              [
+                                "62/63",
+                                "https://undocs.org/en/A/RES/62/63"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Criminal accountability of United Nations officials and experts on mission",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "62/214",
+                            "hyperlinks": [
+                              [
+                                "62/214",
+                                "https://unitednations.sharepoint.com/:b:/r/sites/UNDSS/Shared%20Documents/Gender%20Documents/PSEA%20Resources/SG%20Reports/A%20RES%2062%20214.pdf?csf=1&web=1&e=07psxI"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "United Nations Comprehensive Strategy on Assistance and Support to Victims of Sexual Exploitation and Abuse by United Nations Staff and Related Personnel",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "70/286;76/274",
+                            "hyperlinks": [
+                              [
+                                "70/286",
+                                "https://unitednations.sharepoint.com/:b:/r/sites/SCIUNRSEA-FO/OSC%20Shared%20Drive%20%20Legacy/15.%20FOUNDATIONAL%20DOCUMENTS%20(UN)/A%20RES%2070%20286%20Crosscutting%20resolution.pdf?csf=1&web=1&e=Plg7TX"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Cross-cutting issues",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "71/278; 72/312; 73/302; 75/321; 76/303; 77/333; 78/331",
+                            "hyperlinks": [
+                              [
+                                "71/278",
+                                "https://undocs.org/en/A/RES/71/278"
+                              ],
+                              [
+                                "72/312",
+                                "https://undocs.org/en/A/RES/72/312"
+                              ],
+                              [
+                                "73/302",
+                                "https://undocs.org/en/A/RES/73/302"
+                              ],
+                              [
+                                "75/321",
+                                "https://undocs.org/en/A/RES/75/321"
+                              ],
+                              [
+                                "76/303",
+                                "https://undocs.org/en/A/RES/76/303"
+                              ],
+                              [
+                                "77/333",
+                                "https://undocs.org/en/A/RES/77/333"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "United Nations action on sexual exploitation and abuse",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "71/297",
+                            "hyperlinks": [
+                              [
+                                "71/297",
+                                "https://undocs.org/en/A/RES/71/297"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Special measures for protection from sexual exploitation and abuse\n",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "59/300",
+                          "https://undocs.org/en/A/RES/59/300"
+                        ],
+                        [
+                          "61/267",
+                          "https://undocs.org/en/A/RES/61/267B"
+                        ],
+                        [
+                          "62/63",
+                          "https://undocs.org/en/A/RES/62/63"
+                        ],
+                        [
+                          "62/214",
+                          "https://unitednations.sharepoint.com/:b:/r/sites/UNDSS/Shared%20Documents/Gender%20Documents/PSEA%20Resources/SG%20Reports/A%20RES%2062%20214.pdf?csf=1&web=1&e=07psxI"
+                        ],
+                        [
+                          "70/286",
+                          "https://unitednations.sharepoint.com/:b:/r/sites/SCIUNRSEA-FO/OSC%20Shared%20Drive%20%20Legacy/15.%20FOUNDATIONAL%20DOCUMENTS%20(UN)/A%20RES%2070%20286%20Crosscutting%20resolution.pdf?csf=1&web=1&e=Plg7TX"
+                        ],
+                        [
+                          "71/278",
+                          "https://undocs.org/en/A/RES/71/278"
+                        ],
+                        [
+                          "72/312",
+                          "https://undocs.org/en/A/RES/72/312"
+                        ],
+                        [
+                          "73/302",
+                          "https://undocs.org/en/A/RES/73/302"
+                        ],
+                        [
+                          "75/321",
+                          "https://undocs.org/en/A/RES/75/321"
+                        ],
+                        [
+                          "76/303",
+                          "https://undocs.org/en/A/RES/76/303"
+                        ],
+                        [
+                          "77/333",
+                          "https://undocs.org/en/A/RES/77/333"
+                        ],
+                        [
+                          "71/297",
+                          "https://undocs.org/en/A/RES/71/297"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "italic",
+                  "text": "Security Council resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2272 (2016)",
+                            "hyperlinks": [
+                              [
+                                "2272 (2016)",
+                                "https://undocs.org/en/S/RES/2272(2016)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2436 (2018)",
+                            "hyperlinks": [
+                              [
+                                "2436 (2018)",
+                                "https://undocs.org/en/S/RES/2436(2018)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "2272 (2016)",
+                          "https://undocs.org/en/S/RES/2272(2016)"
+                        ],
+                        [
+                          "2436 (2018)",
+                          "https://undocs.org/en/S/RES/2436(2018)"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Table 1.112 lists all deliverables of the programme.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Office of the United Nations Special Coordinator on Improving the United Nations Response to Sexual Exploitation and Abuse: deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tReport of the Secretary-General on special measures for protection from sexual exploitation and abuse",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tMeetings of:",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tThe Advisory Committee on Administrative and Budgetary Questions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3.\tThe Fifth Committee",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSeminars, workshops and training events (number of days)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "40",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "30",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "30",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4.\tTraining events with international and regional organizations and regional and national coordinators for protection from sexual exploitation and abuse ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "40",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "30",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "30",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTechnical materials (number of materials)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5.\tTools/manual on protection against sexual exploitation and abuse ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConsultation, advice and advocacy: briefings to Members States; webinars with universities and academic institutions, think tanks; and discussions with civil society organizations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: briefings to Members States; webinars with universities and academic institutions, think tanks; and discussions with civil society organizations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: briefings to Members States; webinars with universities and academic institutions, think tanks; and discussions with civil society organizations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: briefings to Members States; webinars with universities and academic institutions, think tanks; and discussions with civil society organizations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: briefings to Members States; webinars with universities and academic institutions, think tanks; and discussions with civil society organizations.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: outreach and awareness-raising campaigns; educational materials, including system-wide fact sheets on the Secretary-General’s initiatives to prevent and respond to sexual exploitation and abuse; and outreach initiatives.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: outreach and awareness-raising campaigns; educational materials, including system-wide fact sheets on the Secretary-General’s initiatives to prevent and respond to sexual exploitation and abuse; and outreach initiatives.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: outreach and awareness-raising campaigns; educational materials, including system-wide fact sheets on the Secretary-General’s initiatives to prevent and respond to sexual exploitation and abuse; and outreach initiatives.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: outreach and awareness-raising campaigns; educational materials, including system-wide fact sheets on the Secretary-General’s initiatives to prevent and respond to sexual exploitation and abuse; and outreach initiatives.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: outreach and awareness-raising campaigns; educational materials, including system-wide fact sheets on the Secretary-General’s initiatives to prevent and respond to sexual exploitation and abuse; and outreach initiatives.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tExternal and media relations: media interviews, opinion pieces, press releases and expert articles. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: media interviews, opinion pieces, press releases and expert articles. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: media interviews, opinion pieces, press releases and expert articles. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: media interviews, opinion pieces, press releases and expert articles. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: media interviews, opinion pieces, press releases and expert articles. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDigital platforms and multimedia content: content of the Secretary-General’s website on preventing sexual exploitation and abuse and social media posts on areas of work.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: content of the Secretary-General’s website on preventing sexual exploitation and abuse and social media posts on areas of work.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: content of the Secretary-General’s website on preventing sexual exploitation and abuse and social media posts on areas of work.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: content of the Secretary-General’s website on preventing sexual exploitation and abuse and social media posts on areas of work.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: content of the Secretary-General’s website on preventing sexual exploitation and abuse and social media posts on areas of work.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "E. \tEnabling deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "E. \tEnabling deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "E. \tEnabling deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "E. \tEnabling deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "E. \tEnabling deliverables",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tInternal justice and oversight: annual or biannual High-level Steering Group meetings on sexual exploitation and abuse; bimonthly sexual exploitation and abuse working group meetings that include more than 30 entities/departments/offices within the United Nations system; and annual system-wide survey on facts and perceptions of United Nations personnel (civilian, police and military) to gain information on their awareness of the standards of conduct and behaviour to prevent and respond to sexual exploitation and abuse.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tInternal justice and oversight: annual or biannual High-level Steering Group meetings on sexual exploitation and abuse; bimonthly sexual exploitation and abuse working group meetings that include more than 30 entities/departments/offices within the United Nations system; and annual system-wide survey on facts and perceptions of United Nations personnel (civilian, police and military) to gain information on their awareness of the standards of conduct and behaviour to prevent and respond to sexual exploitation and abuse.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tInternal justice and oversight: annual or biannual High-level Steering Group meetings on sexual exploitation and abuse; bimonthly sexual exploitation and abuse working group meetings that include more than 30 entities/departments/offices within the United Nations system; and annual system-wide survey on facts and perceptions of United Nations personnel (civilian, police and military) to gain information on their awareness of the standards of conduct and behaviour to prevent and respond to sexual exploitation and abuse.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tInternal justice and oversight: annual or biannual High-level Steering Group meetings on sexual exploitation and abuse; bimonthly sexual exploitation and abuse working group meetings that include more than 30 entities/departments/offices within the United Nations system; and annual system-wide survey on facts and perceptions of United Nations personnel (civilian, police and military) to gain information on their awareness of the standards of conduct and behaviour to prevent and respond to sexual exploitation and abuse.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tInternal justice and oversight: annual or biannual High-level Steering Group meetings on sexual exploitation and abuse; bimonthly sexual exploitation and abuse working group meetings that include more than 30 entities/departments/offices within the United Nations system; and annual system-wide survey on facts and perceptions of United Nations personnel (civilian, police and military) to gain information on their awareness of the standards of conduct and behaviour to prevent and respond to sexual exploitation and abuse.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\t\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Overview",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "The proposed regular budget resources for 2026, including the breakdown of resource changes, as applicable, are reflected in tables 1.113 to 1.115.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Evolution of financial resources by object of expenditure",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate  ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Object of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/expanded mandates ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Percentage",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate  ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Posts",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "931.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "956.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "956.3",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Consultants",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "13.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Travel of staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "87.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "92.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "92.8",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Contractual services",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "29.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15.6",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "General operating expenses",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4.8",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Supplies and materials",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "0.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1.1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Furniture and equipment",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5.3",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 065.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 075.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 075.9",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Proposed posts and post changes for 2026",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Number",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Details",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Approved for 2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 USG, 1 P-5, 1 P-4, 1 GS (OL)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Proposed for 2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 USG, 1 P-5, 1 P-4, 1 GS (OL)",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Proposed posts by category and grade",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Category and grade",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/expanded mandates ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 proposed",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Professional and higher",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "USG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "P-5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "P-4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tSubtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "General Service and related",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "GS (OL)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tSubtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "Additional details on the distribution of the proposed resources for 2026 are reflected in tables 1.116 to 1.118 and figure 1. XXII.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "As reflected in table 1.116 (1), the overall resources proposed for 2026 amount to $1,075,900, reflecting no change compared with the approved budget for 2025. The proposed level of resources provides for the full, efficient and effective implementation of mandates.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Evolution of financial resources by source of funding and component",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "list-2",
+              "text": "(1)\tRegular budget",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate  ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Component",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 \napproved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate  ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Programme of work",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 065.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 075.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 075.9",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 065.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 075.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 075.9",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "list-2",
+              "text": "(2)\tOther assessed",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Component",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 estimate",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Change",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 \nestimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Programme of work",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "56.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "53.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "53.3",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "56.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "53.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "53.3",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "list-2",
+              "text": "(3)\tExtrabudgetary",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Component",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 estimate",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Change",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 \nestimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Programme of work",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 412.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 650.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(150.0)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(9.1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 500.0",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 412.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 650.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(150.0)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(9.1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 500.0",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal (1+2+3)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 534.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 779.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(150.0)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(5.4)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 629.2",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Proposed posts for 2026 by source of funding and component",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "list-2",
+              "text": "(1)\tRegular budget",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Component",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical \nadjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 proposed",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Programme of work",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "list-2",
+              "text": "(2)\tExtrabudgetary",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Component",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 \nestimate",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Change",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Programme of work",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal (1+2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "8",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Evolution of financial and post resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars/number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate  ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/expanded mandates",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Percentage ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate  ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Posts",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "931.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "956.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "956.3",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Non-post",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "134.8 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "119.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "119.6",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 065.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 075.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 075.9",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Professional and higher",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "General Service and related",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Distribution of proposed resources for 2026",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Number of posts/thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "image",
+              "text": "",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Other assessed resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "As reflected in table 1.116 (2), other assessed resources amount to $53,300. The resources would complement regular budget resources and provide for the requirements indicated in the report of the Secretary-General on the budget for the support account for peacekeeping operations for the period from 1 July 2025 to 30 June 2026 (A/79/783).",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Extrabudgetary resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "As reflected in table 1.116 (3), extrabudgetary resources amount to $1,500,000. The resources would complement the regular budget resources and would be used mainly to provide for four posts (1 P-4, 2 P-3 and 1 General Service (Other level)) and non-post resources to support the delivery of the Office mandate, including specific activities such as communication and technical support on the protection against sexual exploitation and abuse, travel of staff (i.e., to the field operations) and contractual services and general operating costs for gratis personnel.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The extrabudgetary resources under the present section are subject to the oversight of the Office, which has delegated authority from the Secretary-General.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "Information on the timely submission of documentation and advance booking for air travel is reflected in table 1.119. While the Office makes every effort to follow the advance booking of air travel policy, it is not always possible to comply owing to unforeseen circumstances, including the need to travel to the field on short notice. The Office will continue to strive to improve the planning of its travel to improve its compliance with the advance booking of air travel policy.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Compliance rate",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Percentage)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2022 \nactual",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2023 actual",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 \nactual",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 \nplanned",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 \nplanned",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Timely submission of documentation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Air tickets purchased at least two weeks before the commencement of travel",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "14",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "59",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

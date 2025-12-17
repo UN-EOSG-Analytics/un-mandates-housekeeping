@@ -1,0 +1,2287 @@
+{
+  "entity": "Independent Institution on Missing Persons in the Syrian Arab Republic",
+  "entity_abbrev": "IIMP",
+  "entity_raw_name": "III.\tIndependent Institution on Missing Persons in the Syrian Arab Republic",
+  "source_file": "A_80_6_SECT.24.json",
+  "content": [
+    {
+      "block_type": "heading-sub",
+      "text": "Mandate and background",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "paragraph-1",
+          "text": "24.130\tOn 29 June 2023, the General Assembly adopted resolution 77/301, in which it established the Independent Institution on Missing Persons in the Syrian Arab Republic.",
+          "table_content": null,
+          "hyperlinks": [
+            [
+              "77/301",
+              "https://docs.un.org/en/A/RES/77/301"
+            ]
+          ],
+          "children": []
+        },
+        {
+          "block_type": "paragraph-1",
+          "text": "24.131\tThe Independent Institution is mandated to clarify the fate and whereabouts of all missing persons in the Syrian Arab Republic and to provide adequate support to victims, survivors and the families of those missing, in close cooperation and complementarity with all relevant actors.",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "paragraph-1",
+          "text": "24.132\tPursuant to resolution 77/301, on 1 December 2023, the Secretary-General submitted a report on the implementation of the resolution (A/78/627), which outlined the steps taken and those further envisaged towards the full functioning of the Independent Institution. The Independent Institution is headquartered in Geneva, selected based on the criteria outlined in the Secretary-General’s report, ensuring accessibility, operational feasibility, and strategic engagement with relevant stakeholders.",
+          "table_content": null,
+          "hyperlinks": [
+            [
+              "77/301",
+              "https://docs.un.org/en/A/RES/77/301"
+            ],
+            [
+              "A/78/627",
+              "https://docs.un.org/en/A/78/627"
+            ]
+          ],
+          "children": []
+        },
+        {
+          "block_type": "paragraph-1",
+          "text": "24.133\tGiven that the Independent Institution was not included in the proposed programme budget for 2024, a report of the Secretary-General on revised estimates relating to the Independent Institution (A/78/706) was submitted to the General Assembly to request approval of the Institution’s estimated resource requirements for 2024. This included an initial staffing structure and necessary operational costs to ensure the Institution could commence its activities on 1 April 2024. The General Assembly subsequently approved the request, which provided for 28 posts and additional operational costs to support the Institution’s launch.",
+          "table_content": null,
+          "hyperlinks": [
+            [
+              "A/78/706",
+              "https://docs.un.org/en/A/78/706"
+            ]
+          ],
+          "children": []
+        },
+        {
+          "block_type": "paragraph-1",
+          "text": "24.134\tFollowing the initial set-up phase in 2024, a comprehensive budget proposal was submitted for 2025 (A/79/6 (Sect. 24)), reflecting the staffing and resource needs for the Institution’s full operationalization. This included an expansion of the staffing structure beyond the 28 posts approved for 2024, and non-post requirements for 2025 to support operational growth while maintaining cost-effectiveness. The Head of the Institution assumed her functions in January 2025, marking a key step in affirming the Institution’s leadership and governance.",
+          "table_content": null,
+          "hyperlinks": [
+            [
+              "A/79/6 (Sect. 24)",
+              "https://docs.un.org/en/A/79/6(Sect.24)"
+            ]
+          ],
+          "children": []
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Strategy for 2026",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "24.135\tIn 2026, the Institution will build on its initial operational phase completed in 2024 and the expansion of its capabilities in 2025, continuing to advance the core pillars of its mandate: clarifying the fate and whereabouts of missing persons and providing support to victims, survivors and their families, in close cooperation and complementarity with all relevant actors. The Institution will enhance its search, data analysis and family support mechanisms while strengthening its operational presence and cooperation with relevant actors. The shifting landscape in the Syrian Arab Republic, particularly the need to be in the field working with different stakeholders, and the emergence of new evidence and documentation regarding mass graves and other potential burial sites, underscores the urgency of scaling up search and identification efforts. As part of its strategic response, the Institution will work to strengthen its investigative methodologies, enhance cooperation with relevant stakeholders and refine its forensic and contextual analysis capabilities to address these evolving challenges. The identification, documentation and preservation of grave sites and related information are essential to the Institution’s mandate, ensuring that families of the missing receive credible information while upholding international best practices for data integrity and protection and the dignified treatment of remains.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "24.136\tEnsuring responsible and effective data and information management will remain a key operational priority in 2026. The Institution will continue to strengthen its protocols for handling and protecting sensitive information, in line with international standards and ethical best practices. It will also refine its internal review mechanisms to ensure its methodologies remain effective, adaptive and responsive to emerging challenges.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "24.137\tThe Institution will continue strengthening partnerships with United Nations entities, forensic institutions, civil society organizations, families and national and international stakeholders, thus ensuring a collaborative and complementary approach as it continues working towards the fulfilment of its mandate while adapting to the evolving context.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "24.138\tIn line with the evolving operational environment in the Syrian Arab Republic and the strategic vision for 2026, revisions to the entity’s organizational structure to optimize resource allocation and enhance efficiency are proposed. The former Search and Data Analysis Section has been divided into two specialized sections, the Data and Digital Analysis Section and the Search and Identification Section, to better align with their distinct operational functions. The Administrative Services Section has been expanded into the Operations Support Section, consolidating key support services and redeploying existing resources under a unified framework. In addition, the Participation and Family Support Section (formerly Victim Participation and Support Section) and the Executive Office have been adjusted in composition to complement this refined structure, ensuring a balanced distribution of responsibilities across the Institution. This results in the following revised organizational units:",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(a)\tExecutive Office. The Executive Office, under the leadership of the Head of the Independent Institution, provides overall strategic direction, management and oversight. It is responsible for ensuring institutional coherence, policy coordination and the implementation of the Institution’s mandate. The Executive Office plays a central role in engagement with Member States, United Nations entities, civil society organizations, families and other relevant national and international stakeholders. In addition to facilitating institutional partnerships and ensuring adherence to human rights principles, the Executive Office is responsible for negotiating and concluding agreements with national and international actors to enhance cooperation, facilitate information-sharing and leverage existing mechanisms and expertise. It maintains close coordination with the Independent Institution’s Advisory Board and oversees the development and application of family-centred policies, compliance with legal frameworks and advocacy efforts related to missing persons;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(b)\tData and Digital Analysis Section (referred to as the Search and Data Analysis Section in 2025, now split into two specialized sections). The Data and Digital Analysis Section is responsible for collecting, managing and analysing large datasets, incorporating geospatial mapping, open-source intelligence and digital investigations to support the Institution’s mandate. In addition, it manages the registry and ensures the interconnection of multiple databases, facilitating seamless information integration across institutional functions. This section ensures the structuring, preservation and secure handling of information, in line with international best practices in data protection and confidentiality. Human Rights Officers within this section apply a multidisciplinary investigative and analytical lens to assess the credibility and contextual relevance of digital and documentary sources, ensuring the ethical and effective use of information in search efforts. The section works in close coordination with the Search and Identification Section, ensuring search operations are guided by well-verified and strategically analysed information. Beyond its core analytical functions, the section contributes across the Institution, supporting various operational needs, including facilitating information management processes essential to the Participation and Family Support Section, such as the case registration system. As the custodian of all institutional data, it oversees secure storage, preservation and structured access to critical information across the Institution;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(c)\tSearch and Identification Section (referred to as the Search and Data Analysis Section in 2025, now split into two specialized sections). The Search and Identification Section is responsible for the field-based operational aspects of locating and identifying missing persons. It integrates forensic, investigative and analytical methodologies to strengthen search efforts and support affected families. The section conducts witness interviews, gathers information from families, works on contextual analysis and truth-telling initiatives and collaborates with forensic experts to ensure that search and identification processes follow international best practices and ethical standards. The section works closely with forensic institutions, family groups and other relevant actors to advance search efforts and enhance coordination among those engaged in identifying missing persons. It also provides technical guidance on search methodologies, supports the development of standardized procedures, and ensures that information collected contributes to a more comprehensive understanding of missing persons cases. Through a multidisciplinary approach, the section ensures that search efforts are methodical, well-documented and incorporate the needs of affected families;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(d)\tParticipation and Family Support Section (referred to as the Victim Participation and Support Section in 2025). The Participation and Family Support Section is at the core of the Independent Institution’s victim-centred mandate, ensuring meaningful engagement with victims, survivors and families of missing persons. It is responsible for direct interaction with families and facilitating their access to information regarding search efforts. The section provides psychosocial and mental health support, integrates gender-sensitive approaches into its work and ensures that families receive legal and administrative guidance. It maintains a referral network for victim support services, coordinates with family associations and civil society organizations and ensures cultural and linguistic accessibility in all engagement processes. In addition, it works closely with the Executive Office to integrate victims’ perspectives into institutional policies and decision-making;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(e)\tOperations Support Section (referred to as the Administrative Services Section in 2025). The Operations Support Section oversees all administrative, financial, procurement, logistical, human resources and information technology functions necessary for the Institution’s effective functioning, ensuring compliance with United Nations regulations and best practices. The section also manages internal control mechanisms, risk management and audit coordination to ensure operational integrity. In addition, it is responsible for the Institution’s security framework, coordinating with the Department of Safety and Security to ensure personnel safety, risk assessments and operational security measures. By ensuring robust operational support and institutional resilience, the section enhances the Institution’s ability to function effectively while maintaining transparency, efficiency and accountability;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(f)\tAdvisory Board (pro bono). The Independent Institution includes a pro bono Advisory Board composed of nine Syrian and international independent experts, sitting in their personal capacities, including representatives of victims, survivors and families, who meet regularly to provide confidential views and advice to the Head of the Independent Institution on the Institution’s programmes and operations.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Results for 2024",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "24.139\tIn its first year of operations, which commenced in April 2024, the Independent Institution focused on establishing its core structure, engaging with families and stakeholders and developing its search and data analysis capabilities. The Institution implemented foundational activities to advance its mandate while ensuring a phased and strategic approach, including:",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(a)\tLaunching its initial engagement with families of missing persons, by holding its first in-person consultation with families and civil society organizations to provide information on its operational strategy. A case registration system was designed, and initial referral pathways for psychosocial and legal support were developed. Outreach efforts also included trust-building measures to foster confidence in the Institution’s work and ensure meaningful participation from affected communities;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(b)\tStrengthening its search and identification capacity, by mapping key actors holding data on missing persons, including forensic institutions, United Nations entities, and civil society organizations. The foundations of a search strategy were developed, incorporating investigative methodologies and structured data analysis. The Institution also began designing a centralized case management system to integrate and analyse data collected, ensuring ethical handling of sensitive information;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(c)\tEnhancing cooperation with Member States, United Nations entities and other key partners, thus ensuring effective coordination and information-sharing. The Institution initiated the process of formal cooperation agreements with relevant actors, which will be critical for expanding its search efforts and improving access to existing information;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(d)\tEstablishing its headquarters in Geneva and setting up administrative, financial, and operational frameworks necessary for its functioning. A multidisciplinary team was recruited and onboarded, and internal policies and procedures were developed to ensure compliance with United Nations regulations and rules.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Planned activities for 2026",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "24.140\tIn 2026, the Independent Institution will operationalize its strategic priorities by further developing its core functions and expanding its on-the-ground presence. With a focus on enhancing search and identification efforts, strengthening family engagement and deepening cooperation with national and international actors, the Institution will implement a series of targeted activities to ensure the effective delivery of its mandate. These activities will be structured around key operational priorities, including:",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(a)\tStrengthening search and identification efforts by expanding investigative, contextual and forensic methodologies, integrating structured data collection, analysis and field-based assessments. The Institution will further map key sources of information, including governmental and non-governmental actors, documentation and forensic institutions, and civil society organizations, to enhance data consolidation on missing persons;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(b)\tEnhancing data management and analytical capabilities through the further development and implementation of a centralized case management system to incorporate information from multiple sources securely and efficiently. The Institution will introduce enhanced data governance protocols, ensuring the ethical handling of sensitive case information while improving accessibility for authorized stakeholders;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(c)\tExpanding family engagement and support services by strengthening outreach and engagement mechanisms to ensure meaningful participation of families of missing persons. Structured participation mechanisms for families and civil society groups will be reinforced, thereby ensuring that they are actively involved in shaping the Institution’s approaches. A refined referral system will be operationalized to facilitate psychosocial, legal and administrative support, enabling affected families to access available services efficiently. The Institution will also strengthen protection mechanisms for families and individuals engaging with its work, thus ensuring their safety and confidentiality;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(d)\tStrengthening operational presence and field-based engagement by enhancing the Institution’s ability to engage directly with affected communities and relevant actors on the ground. Increased deployment of field missions will support direct information-gathering, interviews, and verification efforts. Operational expansion will ensure a more sustained presence for investigative and support functions, thereby enhancing both search efforts and family support;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(e)\tDeepening institutional partnerships and cooperation mechanisms to maximize efficiency and avoid duplication. The Independent Institution will strengthen its cooperation agreements with Member States, United Nations entities and international forensic and investigative bodies to facilitate information-sharing, technical assistance and capacity-building efforts. The Institution will continue establishing protocols for inter-agency referrals and cooperation with actors already working on missing persons issues;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(f)\tReinforcing engagement with national stakeholders, including government entities, forensic institutions and civil society organizations, to facilitate information-sharing, coordination and technical collaboration. The Institution will enhance structured dialogue with national actors to foster cooperation in search and identification efforts;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(g)\tEnsuring institutional sustainability and operational efficiency by refining internal processes, optimizing resource allocation and ensuring cost-effective programme delivery.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "24.141\tThis set of activities will ensure that the Independent Institution continues to advance its mandate effectively, thus further consolidating its role in searching for missing persons and supporting their families while operating within a structured and efficient framework.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Reporting",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "24.142\tA report of the Secretary-General on the activities of the Independent Institution shall be presented annually to the General Assembly, as it requested in its resolution 77/301. This reporting shall be led by the Head of the Independent Institution.",
+              "table_content": null,
+              "hyperlinks": [
+                [
+                  "77/301",
+                  "https://docs.un.org/en/A/RES/77/301"
+                ]
+              ],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "24.143\tThe Head of the Institution shall ensure that its outreach strategy includes regular reporting, communication and updates on the activities of the Institution, in particular for families.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "24.144\tThe proposed regular budget resources for 2026, including the breakdown of resource changes, as applicable, are reflected in tables 24.39 to 24.41.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table",
+              "text": "Table 24.39",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Overall: evolution of financial resources by object of expenditure",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "Object of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " \n2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Object of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " \n2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/ expanded mandates",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Percentage",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Posts",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 121.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7 925.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 409.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "341.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "34.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 785.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "22.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9 710.9",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Other staff costs ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "513.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(25.9)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(25.9)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5.0)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 487.2",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Consultants ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "30.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "130.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1.1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1.1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(0.8)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "129.6",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Travel of staff ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "102.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "268.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "209.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "209.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "78.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "478.0",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Contractual services ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "181.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 030.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(135.6)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(135.6)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(13.2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "894.4",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "General operating expenses ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "117.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "613.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(66.2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(66.2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(10.8)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "547.3",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Supplies and materials ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "11.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "11.4",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Furniture and equipment ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "85.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "199.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(55.1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "112.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "56.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "28.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "255.9",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Grants and contributions ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "67.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "366.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(46.5)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(46.5)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(12.7)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "319.5",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 708.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "11 057.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 354.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "341.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "81.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 776.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "16.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "12 834.2",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table",
+              "text": "Table 24.40",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Overall: proposed posts and post changes for 2026",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Number",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Details",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Approved for 2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "45",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 ASG, 1 D-1, 3 P-5, 9 P-4, 16 P-3, 8 P-2/1, 1 GS (PL), 6 GS (OL)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tRedeployment",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Twelve redeployment across sections of 1 Human Rights Officer P-4; 1 Information Management Officer P-4; 1 Information Systems Officer P-4; 1 Information Management Officer P-3; 1 Data Analyst P-3; 1 Human Rights Officer P-3; 1 Field Interpreter P-3; 2 Associate Human Rights Officers, P-2; 1 Associate Translator, Arabic P-2; 1 Administrative Assistant GS (OL); 1 Information Systems Assistant GS (OL)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tReassignment",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 Senior Information Management Officer P-5 to 1 Senior Investigator P-5",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 Human Rights Officers P-3 to 2 Forensic Experts P-3",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 Associate Information Management Officer P-2 to 1 Associate Investigator P-2",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tReclassification",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 Legal Officer P-3 to P-4 with a reassignment to Forensic Pathologist P-4",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tEstablishment",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 Security Coordination Officer P-3 ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 Data Scientist P-3",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 Information Management Officer P-3",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Proposed for 2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "48",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 ASG, 1 D-1, 3 P-5, 10 P-4, 18 P-3, 8 P-2/1, 1 GS (PL), 6 GS (OL)",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table",
+              "text": "Table 24.41",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Overall: proposed posts by category and grade",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "Category and grade",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 proposed",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Category and grade",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/expanded mandates ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 proposed",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Professional and higher",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "ASG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "D-1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "P-5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "P-4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "10",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "P-3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "16",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "18",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "P-2/1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tSubtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "38",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "41",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "General Service and related",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "GS (PL)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "GS (OL)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tSubtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "45",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "48",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "24.145\tAdditional details on the distribution of the proposed resources for 2026 are reflected in table 24.42 and figure 24.XX.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "24.146\tAs shown in table 24.42, the overall resources proposed for 2026 amount to $12,834,200, reflecting a net increase of $1,776,700 (or 16.1 per cent) compared with the approved budget for 2025. Resource changes result from technical adjustments, new and expanded mandates, and other changes. The proposed level of resources provides for the full, efficient and effective implementation of mandates.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table",
+              "text": "Table 24.42",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Overall: evolution of financial and post resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars/number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditurea",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 \nestimate ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditurea",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/ expanded mandates",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Percentage ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 \nestimate ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Posts",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 121.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7 925.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 409.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "341.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "34.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 785.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "22.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9 710.9",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Non-post",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "586.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 131.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(55.1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "46.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(8.6)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(0.3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 123.3",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 708.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "11 057.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 354.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "341.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "81.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 776.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "16.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "12 834.2",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Professional and higher",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "38",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "41",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "General Service and related",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "45",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "48",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "a\tThe Independent Institution began its work in April 2024.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "figure",
+              "text": "Figure 24.XX",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Distribution of proposed resources for 2026",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Number of posts/thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "image",
+              "text": "",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "heading-sub",
+      "text": "Explanation of variances by factor – Overall resource changes",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Technical adjustments",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "25.147\tAs shown in table 24.42, resource changes reflect a net increase of $1,354,100. The increase of $1,409,200 under posts relates to the higher provision at continuing vacancy rates for the 17 posts (2 P-4, 7 P-3, 4 P-2, and 4 General Service (Other level)) established in 2025 pursuant to General Assembly resolution 79/257, which were subject to a 50 per cent vacancy rate in accordance with the established practice for newly established posts. The decrease of $55,100 under non-post resources relates to the removal of non-recurrent provisions under furniture and equipment that were approved for 2025 and are not required in 2026.",
+              "table_content": null,
+              "hyperlinks": [
+                [
+                  "79/257",
+                  "https://docs.un.org/en/A/RES/79/257"
+                ]
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "New and expanded mandates",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "24.148\tAs shown in table 24.42, resource changes reflect an increase of $341,400 under posts for the establishment of 3 posts (3 P-3), subject to a 50 per cent vacancy rate in accordance with the established practice for newly established posts. The posts were initially requested in the budget proposal for 2025 but were not approved for 2025, and are now proposed for 2026 in line with the view of the Advisory Committee on Administrative and Budgetary Questions that a phased approach should be applied, as contained in paragraph VI.55 of report A/79/7, which was approved by the General Assembly in its resolution 79/257, and in accordance with the evolving operational requirements of the Institution. Of these three proposed posts, one post is proposed at a lower grade, at the P-3 level rather than the P-4 level; the 3 P-3 posts are needed from 2026 to ensure the full implementation of the mandate of the Institution.",
+              "table_content": null,
+              "hyperlinks": [
+                [
+                  "A/79/7",
+                  "https://docs.un.org/en/A/79/7"
+                ],
+                [
+                  "79/257",
+                  "https://docs.un.org/en/A/RES/79/257"
+                ]
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Other changes",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "24.149\tAs shown in table 24.42, resource changes reflect a net increase of $81,200, which affect mainly the operational requirements projected for 2026, as follows:",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(a)\tAn increase of $34,700 under posts for the upward reclassification and reassignment of a P-3 Legal Officer to P-4 Forensic Pathologist, in line with the efforts to optimize resources by rearranging the organizational structure to create a dedicated forensic capacity within the Search and Identification Section, in order to strengthen the Institution’s interdisciplinary search methodologies, thereby ensuring that forensic data is effectively analysed, integrated and applied to operational strategies while optimizing resource allocation;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(b)\tA decrease of $25,900 under other staff costs, reflecting reduced requirements in the light of prior expenditure and projected needs;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(c)\tA decrease of $1,100 under consultants due to removal of the provision for specialized skills required for the creation of the digital engagement strategy, as the Institution matures into its fully operational stage and streamlines the related required functions within its existing workforce capacity;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(d)\tAn increase of $209,800 under travel of staff in response to evolving operational requirements, particularly the need to strengthen on-the-ground engagement in the Syrian Arab Republic. Should a more permanent presence be established in the country, travel needs may be adjusted accordingly. Until then, increased travel remains necessary to advance search and identification efforts, including direct interactions with affected families, data collection with key stakeholders and field-based investigative activities essential to fulfilling the Institution’s mandate;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(e)\tA decrease of $135,600 under contractual services made possible by enhanced efficiencies in the data management structure of the Institution, which have reduced costs while sophisticating search and forensic capacities;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(f)\tA decrease of $66,200 under general operating expenses, reflecting the restructuring of the Administrative Services Section into a broader Operations Support Section through the redeployment of posts and consolidation of administrative, logistical, security and information technology functions. As a result, the Institution established a more streamlined and efficient support framework, while maintaining fiduciary responsibility and segregation of duties in accordance with the Financial Regulations and Rules of the United Nations;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(g)\tAn increase of $112,000 under furniture and equipment that responds to evolving operational requirements and would provide for the purchase of specialized technological infrastructure to support forensic investigations and digital evidence management;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(h)\tA decrease of $46,500 under grants and contributions due to an anticipated increase in the on-the-ground staff presence in the Syrian Arab Republic that is expected to lead to direct engagement with communities there and therefore decrease the need to transport families and victims to other destinations.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "heading-sub",
+      "text": "Other information",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "paragraph-1",
+          "text": "24.150\tIn accordance with the 2030 Agenda for Sustainable Development, in particular target 12.6 of the Sustainable Development Goals, in which organizations are encouraged to integrate sustainability information into their reporting cycles, and in compliance with the cross-cutting mandate set out in paragraph 19 of General Assembly resolution 72/219, the Independent Institution will integrate environmental sustainability practices into its operations. The Independent Institution will continue to prioritize environmentally sustainable practices, particularly in collaboration with service providers for its premises and logistical infrastructure. While the Institution does not directly manage its office facilities, it will collaborate with the service provider to explore opportunities for integrating energy-efficient systems, sustainable waste management practices and environmentally responsible procurement processes. Given the operational necessity of travel, including to the Syrian Arab Republic, the Institution will seek to minimize its carbon footprint through mission consolidation and remote collaboration tools. Through these efforts, the Institution remains committed to minimizing its environmental impact and contributing to broader United Nations sustainability goals.",
+          "table_content": null,
+          "hyperlinks": [
+            [
+              "72/219",
+              "https://docs.un.org/en/A/RES/72/219"
+            ]
+          ],
+          "children": []
+        },
+        {
+          "block_type": "paragraph-1",
+          "text": "24.151\tInformation on the timely submission of documentation and advance booking for air travel is reflected in table 24.43. The Independent Institution will ensure that all missions and official travel are planned well in advance to comply with the advance booking policy and target rate. To achieve this, the Institution will implement a structured mission planning framework, consolidating travel requests for quarterly approval, except in critical, unforeseen cases. Quarterly reviews will monitor adherence and inform necessary adjustments. Improved internal coordination, including early identification of travel needs and close collaboration with administrative staff, will help ensure timely processing. Regular awareness sessions will reinforce policy compliance among staff. These proactive measures will ensure that the Institution maximizes cost efficiencies and adheres to United Nations travel management best practices.",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "table",
+          "text": "Table 24.43",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Compliance rate",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Percentage)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 actual",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 planned",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 planned",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Timely submission of documentation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Air tickets purchased at least two weeks before the commencement of travel",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "72",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

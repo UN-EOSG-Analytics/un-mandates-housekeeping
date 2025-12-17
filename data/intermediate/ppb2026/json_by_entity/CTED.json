@@ -1,0 +1,1762 @@
+{
+  "entity": "Counter-Terrorism Committee Executive Directorate",
+  "entity_abbrev": "CTED",
+  "entity_raw_name": "14.\tCounter-Terrorism Committee Executive Directorate",
+  "source_file": "A_80_6 (SECT. 3)_ADD.3_CLUSTER II_FASCICLE ADVANCE UNEDITED COPY FOR ACABQ.json",
+  "content": [
+    {
+      "block_type": "italic",
+      "text": "($12,660,100)",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": []
+    },
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Counter-Terrorism Committee Executive Directorate is mandated to support the Counter-Terrorism Committee in its work to monitor, promote and facilitate the implementation by Member States of the relevant Security Council resolutions on terrorism. The mandate derives from Council resolution 1373 (2001) and was renewed in its subsequent resolutions, including, most recently, 2617 (2021), which extended the mandate until 31 December 2025. In addition, the United Nations Global Counter-Terrorism Strategy and the 2022 Delhi Declaration on countering the use of new and emerging technologies for terrorist purposes set forth several tasks for the Executive Directorate with respect to facilitating the delivery of technical assistance, assessing the capacities of Member States to counter the use of new and emerging technologies for terrorist purposes, including by developing a set of non-binding guiding principles, compiling good practices,  producing a gaps analysis, and promoting good counter-terrorism practices.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "1373 (2001)",
+                      "https://undocs.org/en/S/RES/1373(2001)"
+                    ],
+                    [
+                      "2617 (2021)",
+                      "https://undocs.org/en/S/RES/2617(2021)"
+                    ]
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The objective, to which this mission contributes, is to enhance and consolidate Member States’ counter-terrorism legislation and policies, institutions and operations by ensuring the full and effective implementation by Member States of Security Council resolution 1373 (2001) and other relevant Council resolutions, to inform the efforts of United Nations entities and other implementing agencies to provide related capacity-building and technical assistance and to analyse new and emerging terrorism threats, trends and challenges.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "1373 (2001)",
+                      "https://undocs.org/en/S/RES/1373(2001)"
+                    ]
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "To contribute to the objective, the Executive Directorate will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tAssist Member States in identifying and addressing implementation and capacity gaps in accordance with the requirements of resolution 1373 (2001) and subsequent Security Council resolutions on terrorism, through assessment visits and stocktaking assessment tools such as the electronic detailed implementation survey (e-DIS) and the overview of implementation assessment (OIA), and make technical recommendations to Member States on ways to strengthen their implementation of the relevant resolutions;",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "1373 (2001)",
+                          "https://undocs.org/en/S/RES/1373(2001)"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tStrengthen effectiveness, timeliness and impact, as well as transparency and inclusivity of  assessments conducted by CTED on behalf of the Committee, including relating to countering the financing of terrorism (CFT) through targeted and focused follow-up visits as complements to its comprehensive assessments, as well as to annual assessments of gaps and areas requiring more action to implement key provisions of  Security Council resolutions relating to CFT  for the purpose of designing targeted technical assistance  by relevant partners;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tOrganize follow-up meetings at the Committee level and in other bilateral and multilateral settings to highlight priority technical assistance needs of visited Member States, and to facilitate the delivery of technical assistance;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tContribute to identifying and assessing emerging issues, trends and developments relating to relevant resolutions and in support of ACTION 23 of the Pact for the Future, Global Digital Compact and Declaration on Future Generations. In this respect, it will prepare and publish analytical materials, reference tools and guidelines and promote Security Council and Committee policy papers, international standards, codes, and effective practices;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tIntegrate and promote in CTED’s work the non-binding guiding principles on “Threats posed by the use of unmanned aircraft systems (UAS) for terrorist purposes”; “Preventing, detecting and disrupting the use of new and emerging financial technologies for terrorist purposes”; and Countering the Use of Information and Communications Technologies (ICT) for Terrorist Purposes prepared in accordance with the “Delhi Declaration”.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The above-mentioned work is expected to result in the strengthening of Member States’ capacities to:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tCombat terrorism and violent extremism conducive to terrorism, and achieve the full and effective implementation of resolution 1373 (2001) and other relevant resolutions;",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "1373 (2001)",
+                          "https://undocs.org/en/S/RES/1373(2001)"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tTake action on recommendations in Committee visit reports and other assessments and provide technical assistance and/or share effective practices with other Member States, as appropriate;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tOperationalize their obligations pursuant to resolution 1373 (2001) and other relevant resolutions by facilitating acceptance and understanding of the international effective practices, techniques and tools available to combat terrorism.",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "1373 (2001)",
+                          "https://undocs.org/en/S/RES/1373(2001)"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With respect to cooperation with other entities, the Executive Directorate cooperates with a wide range of international, regional and subregional organizations such as the Financial Action Task Force (FATF) and  its regional bodies,)  Organization of Islamic Cooperation, the Council of Europe, the European Union, and the Regional Anti-Terrorist Structure of the Shanghai Cooperation Organization  to raise awareness of international requirements on counter-terrorism at the national and regional levels. It leverages and diversifies its Global Counter-Terrorism Research Network to convene policymakers and researchers, and engages and enhances its partnerships with civil society organizations, think tanks, academic organizations and the private sector to assist the Committee in identifying national, regional and thematic challenges, and developments.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With respect to inter-agency coordination and liaison, the Executive Directorate works closely with other United Nations entities, within the framework of the United Nations Global Counter-Terrorism Coordination Compact. CTED enhanced its efficiency by chairing or co-chairing Global Compact working groups and by sharing the Committee’s recommendations and consented reports with the Compact.  The Executive Directorate will continue to collaborate with the Office of Counter-Terrorism and UNODC on relevant issues. It works closely with other subsidiary bodies of the Security Council and their expert groups to enhance information-sharing. It maintains strong cooperation with OHCHR and the Special Rapporteur on the promotion and protection of human rights and fundamental freedoms while countering terrorism.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to the external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tConsent of Member States to receive assessment visits and subsequently brief the Committee on progress made in implementing Committee recommendations:",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tAbility to organize and conduct visits in accordance with United Nations safety and security measures;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tParticipation of technical experts from international and regional organizations in country visit assessments conducted by CTED on behalf of the Committee;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tCommitment of implementing partners to deliver technical assistance pursuant to Committee findings;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tThe Counter-Terrorism Committee adopts the Non-Binding Guiding Principles for Countering the Use of ICTs for Terrorist Purpose.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Executive Directorate integrates a gender perspective into its operational activities, deliverables and results, as appropriate, and works with the   Counter-Terrorism Coordination Compact Working Group on Adopting a Gender-Sensitive Approach to Preventing and Countering Terrorism.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-x",
+                  "text": "Roadmaps to improve the capacity of Member States to counter terrorism and violent extremism conducive to terrorism",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2024, the Committee adopted reports on visits to seven States (Chile, the Democratic Republic of the Congo, Latvia, the Republic of Korea, Spain, Thailand and Uzbekistan). CTED completed eight OIAs and e-DISs, and 26 capacity-building workshops, meetings, consultations and activities. CTED also facilitated technical assistance and developed 11 roadmaps for select beneficiaries (Benin, Cote d'Ivoire, Kyrgyzstan, Mauritania, Senegal, Cambodia, Costa Rica, Gabon and Guatemala) as part of several capacity-building programs spearheaded by UNOCT to enhance Member States’ compliance with relevant Security Council resolutions and international standards. Based on the roadmaps, beneficiaries developed legislative, operational, and technological measures to operationalize API and PNR systems. Authorities in Senegal utilized a roadmap developed by CTED to better address the threat posed by UAS for terrorist purposes, including through enhanced data gathering on the threat, amended legislative and regulatory frameworks relevant to UAS, and enhanced information exchange mechanisms. These roadmaps also served as blueprints for other partners to tailor future capacity-building assistance.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective is presented in the performance measure below (see figure V).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Figure V – Performance measure: number of Member States adopting national roadmaps to counter terrorism and violent extremism conducive to terrorism",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "image",
+                      "text": "",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned results for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 1: Member States utilize CTED assessments and analysis to identify and respond to terrorism threats, trends and challenges to better implement resolution 1373 (2001) and subsequent Security Council resolutions – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "1373 (2001)",
+                      "https://undocs.org/en/S/RES/1373(2001)"
+                    ]
+                  ],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "CTED contributed to the identification of counter-terrorism trends including through the production of 5 publications. The planned target of 10 publications was missed due to a combination of factors including inadequate staffing. The Executive Directorate did, however, provide advice on several thematic areas such as border control and law enforcement, human rights and CFT, including promotion of the non-binding guiding principles on threats posed by UAS for terrorist purposes.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2026, the Executive Directorate aims to develop 10 publications to promote international standards and good practices. CTED will further enhance use of its OIA and e-DIS data to identify emerging trends and issue technical guidance.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Expected progress towards the objective and the target for 2026 are presented in the performance measure below (see figure VI).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Figure VI – Performance measure: Member States examine their own national counter-terrorism measures in light of updated technical materials and guidance on the implementation of relevant Security Council resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "image",
+                      "text": "",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "heading-x",
+                      "text": "Result 2: Member States have access to strengthened assessment reports with action-orientated recommendations – Proposed programme plan for 2026",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "The Committee agreed in August 2024 on actions to strengthen the assessment process regarding effectiveness, timeliness, inclusivity and transparency.  Since then, a greater number of Member States have: (I) provided written feedback on steps taken to implement the Committee’s recommendations; (II) attended that portion of the Committee session at which its PAO is presented; and (III) provided oral briefings to the Committee at its plenaries.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "heading-x",
+                      "text": "Lessons learned and planned change",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "The lesson for CTED was the need to further improve its methodology to enhance the effectiveness, timeliness and impact of its assessments.  In applying the lesson, CTED will, inter alia, frame recommendations in assessments to make them more actionable: share a matrix of technical assistance needs with potential donors and implementing agencies, upon approval by the visited Member State; and request Member State’s feedback on steps taken to implement recommendations within 12 months of receiving the final report.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "Expected progress towards the objective is presented in the performance measure below (see figure VII)",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Figure VII",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "heading-x",
+                      "text": "Performance measure: number of Member States assessment reports adopted by the Counter-Terrorism Committee",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "image",
+                          "text": "",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Table 65 below lists all deliverables of the mission.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 65 – Deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings) ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "18",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "18",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "18",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tMeetings of the Counter-Terrorism Committee ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "11",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "11",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "11",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tBriefings to Member States ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTechnical materials (number of materials) ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3.\tReports on trends and developments relating to the implementation of Security Council resolutions on counter-terrorism ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4.\tGuidance, compendiums and good practice documents",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tFact-finding, monitoring and investigation missions (number of missions)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "5.\tAssessment visits relating to the implementation of Security Council resolutions on counter-terrorism",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Consultation, advice and advocacy: facilitation of technical assistance delivery and capacity-building activities (approximately 25 per year) relating to the implementation of all relevant United Nations counter-terrorism resolutions and development of guidelines for Member States to assist them in responding to new and emerging challenges. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Consultation, advice and advocacy: facilitation of technical assistance delivery and capacity-building activities (approximately 25 per year) relating to the implementation of all relevant United Nations counter-terrorism resolutions and development of guidelines for Member States to assist them in responding to new and emerging challenges. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Consultation, advice and advocacy: facilitation of technical assistance delivery and capacity-building activities (approximately 25 per year) relating to the implementation of all relevant United Nations counter-terrorism resolutions and development of guidelines for Member States to assist them in responding to new and emerging challenges. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Consultation, advice and advocacy: facilitation of technical assistance delivery and capacity-building activities (approximately 25 per year) relating to the implementation of all relevant United Nations counter-terrorism resolutions and development of guidelines for Member States to assist them in responding to new and emerging challenges. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Consultation, advice and advocacy: facilitation of technical assistance delivery and capacity-building activities (approximately 25 per year) relating to the implementation of all relevant United Nations counter-terrorism resolutions and development of guidelines for Member States to assist them in responding to new and emerging challenges. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Databases and substantive digital materials: database on stocktaking of Member States’ implementation of Security Council resolutions on counter-terrorism.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Databases and substantive digital materials: database on stocktaking of Member States’ implementation of Security Council resolutions on counter-terrorism.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Databases and substantive digital materials: database on stocktaking of Member States’ implementation of Security Council resolutions on counter-terrorism.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Databases and substantive digital materials: database on stocktaking of Member States’ implementation of Security Council resolutions on counter-terrorism.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Databases and substantive digital materials: database on stocktaking of Member States’ implementation of Security Council resolutions on counter-terrorism.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "External and media relations: fact sheets, folders, publications and flash drives to be distributed to Member States, the media, civil society and non-governmental organizations to promote the work of the Committee and the Executive Directorate. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: fact sheets, folders, publications and flash drives to be distributed to Member States, the media, civil society and non-governmental organizations to promote the work of the Committee and the Executive Directorate. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: fact sheets, folders, publications and flash drives to be distributed to Member States, the media, civil society and non-governmental organizations to promote the work of the Committee and the Executive Directorate. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: fact sheets, folders, publications and flash drives to be distributed to Member States, the media, civil society and non-governmental organizations to promote the work of the Committee and the Executive Directorate. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: fact sheets, folders, publications and flash drives to be distributed to Member States, the media, civil society and non-governmental organizations to promote the work of the Committee and the Executive Directorate. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Digital platforms and multimedia content: maintenance and updating of the Committee’s website, newsletter and all social media platforms.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: maintenance and updating of the Committee’s website, newsletter and all social media platforms.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: maintenance and updating of the Committee’s website, newsletter and all social media platforms.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: maintenance and updating of the Committee’s website, newsletter and all social media platforms.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: maintenance and updating of the Committee’s website, newsletter and all social media platforms.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Resource requirements (regular budget) – Table 66 – Financial resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Variance",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 vs. 2025 Increase/(decrease)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 vs. 2025 Increase/(decrease)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Military and police personnel  ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Civilian personnel ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9 613.1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9 983.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "11 041.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "11 041.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "10 886.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "10 886.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(155.4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(155.4)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Operational costs ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 811.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 189.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 774.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 774.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 773.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 773.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(0.2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(0.2)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal (net of staff assessment) ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "11 424.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "11 173.3 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "12 815.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "12 815.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "12 660.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "12 660.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(155.6)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(155.6)",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Table 67 – Human resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "USG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "ASG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "FS",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "NPO",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "GS",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "LL",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Approved 2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "20",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "10",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "46",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8a",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "54",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "54",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Proposed 2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "20",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "10",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "46",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8a",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "54",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "54",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tChange ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "a\tComprising one Principal level and seven Other level.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The proposed resource requirements for the Executive Directorate for 2026 amount to $12,660,100 (net of staff assessment) and would provide for salaries and common staff costs ($10,886,200) for the continuation of 54 posts (1 Assistant Secretary-General, 1 D-2, 2 D-1, 9 P-5, 20 P-4, 10 P-3, 3 P-2 and 8 General Service) and operational costs ($1,773,900) comprising official travel of mission staff ($742,400), facilities and infrastructure ($830,600), communication and information technology ($189,900) and other supplies, services and equipment ($11,000).",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "For 2026, no change is proposed to the number and levels of the posts for the Executive Directorate.  Vacancy rate of 14.0 per cent and 8.3 per cent have been applied to the staff costs for international staff and national staff respectively on the basis of the average vacancy rate in 2024.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The decrease in the requirements proposed for 2026 compared with the appropriation for 2025 is attributable primarily to lower requirements for civilian personnel due to the application of a higher vacancy rate for international staff compared with the rate of 9.6 per cent applied for 2025 and the application of latest ICT standard rates.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Extrabudgetary resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "In 2025, extrabudgetary resources in the amount of $719,900 are projected to be used to support the activities and relevant initiatives aimed at promoting the implementation of resolutions 1373 (2001), 1624 (2005), 2178 (2014), 2396 (2017), 2462 (2019), 2482 (2019), 2617 (2021), and 2713 (2023) including projects in the areas of Countering Terrorist Use of ICT; Security Sector Oversight in Asia; AI and Human Rights in Counter-Terrorism, and Legal Cooperation and Data Protection.",
+              "table_content": null,
+              "hyperlinks": [
+                [
+                  "1373 (2001)",
+                  "https://undocs.org/en/S/RES/1373(2001)"
+                ],
+                [
+                  "1624 (2005)",
+                  "https://undocs.org/en/S/RES/1624(2005)"
+                ],
+                [
+                  "2178 (2014)",
+                  "https://undocs.org/en/S/RES/2178(2014)"
+                ],
+                [
+                  "2396 (2017)",
+                  "https://undocs.org/en/S/RES/2396(2017)"
+                ],
+                [
+                  "2462 (2019)",
+                  "https://undocs.org/en/S/RES/2462(2019)"
+                ],
+                [
+                  "2482 (2019)",
+                  "https://undocs.org/en/S/RES/2482(2019)"
+                ],
+                [
+                  "2617 (2021)",
+                  "https://undocs.org/en/S/RES/2617(2021)"
+                ]
+              ],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "In 2026, extrabudgetary resources in the amount of $1,000,000 are projected to be used to organize meetings in accordance with the programme of work approved by the Committee and support international cooperation in counter-terrorism; particularly a project in the area of Forensics and Biometrics in Africa.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The increase in the estimates projected for 2026 compared with the estimates for 2025 is attributable primarily to the anticipated implementation of a new project.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

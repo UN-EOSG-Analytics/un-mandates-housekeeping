@@ -1,0 +1,3548 @@
+{
+  "entity": "Office of Digital and Emerging Technologies",
+  "entity_abbrev": "ODET",
+  "entity_raw_name": "XVI.\tOffice of Digital and Emerging Technologies",
+  "source_file": "A_80_6_SECT.1.PART AB_CONSOLIDATED_FASCICLE_ADVANCED COPY TO ACABQ_22 MAY 2025.json",
+  "content": [
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In an age of increasing digital interdependence, the General Assembly has long recognised that effective cooperation on technology issues is an indispensable component of addressing new challenges and opportunities of an increasing digitalised world, inter alia in resolutions 56/183, 70/1, 70/125, 75/1, 78/132 and 78/160 including as a key driver for the 2030 Agenda. The position of Envoy on Technology was established in 2021 to advise the senior leadership of the United Nations on key trends in technology, so as to guide the strategic approach taken by the Organization on such issues, to serve as an advocate and focal point for digital cooperation so that Member States, the technology industry, civil society and other stakeholders would have a first port of call for the broader United Nations system, and to facilitate multi-stakeholder policy dialogue on emerging technologies (see A/74/821). The establishment of the Office of the Secretary-General’s Envoy on Technology was noted by the General Assembly in its resolution 75/316.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "56/183",
+                      "https://docs.un.org/en/A/RES/56/183"
+                    ],
+                    [
+                      "70/1",
+                      "https://docs.un.org/en/A/RES/70/1"
+                    ],
+                    [
+                      "70/125",
+                      "https://docs.un.org/en/A/RES/70/125"
+                    ],
+                    [
+                      "75/1",
+                      "https://docs.un.org/en/A/RES/75/1"
+                    ],
+                    [
+                      "78/132",
+                      "https://docs.un.org/en/A/RES/78/132"
+                    ],
+                    [
+                      "78/160",
+                      "https://docs.un.org/en/A/RES/78/160"
+                    ],
+                    [
+                      "A/74/821",
+                      "https://docs.un.org/en/A/74/821"
+                    ],
+                    [
+                      "75/316",
+                      "https://docs.un.org/en/A/RES/75/316"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Through the adoption of resolution 79/1 annex I “Global Digital Compact”, the General Assembly requested the Secretary-General, following consultations with Member States, to submit a proposal to the General Assembly for the establishment of an office, building on and incorporating the existing activities and resources of the existing Office of the Secretary-General’s Envoy on Technology, to facilitate system-wide coordination, working closely with existing mechanisms. Through its resolution 79/258, the General Assembly approved the establishment of the Office for Digital and Emerging Technologies and its operational functions.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "79/1",
+                      "https://docs.un.org/en/A/RES/79/1"
+                    ],
+                    [
+                      "79/258",
+                      "https://docs.un.org/en/A/RES/79/258"
+                    ]
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The objective, to which the Office contributes, is to ensure that cooperation on technology governance is advanced for a better future.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "To contribute to the objective, the Office will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tAdvise the senior leadership of the United Nations on key trends in technology, so as to guide the strategic approach taken by the Organization on such issues;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tServe as advocate and focal point for digital cooperation, through engagement with Member States, the technology industry, civil society and other stakeholders;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tFacilitate multi-stakeholder policy dialogue on digital and emerging technology issues;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tStrengthen system-wide coordination within and across the United Nations system on digital and emerging technology issues;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tSupport the follow-up and implementation of the Global Digital Compact.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tMore inclusive and effective cooperation at all levels on digital and emerging technology issues;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tStrengthened coherence within and across the United Nations system on digital and emerging technology issues;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tEnhanced implementation of the Global Digital Compact.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to the external factors, the overall plan for 2026 is based on the following assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tMember States continue to engage in constructive dialogue and cooperation on digital and emerging technology issues at the global and regional levels;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tAdequate extrabudgetary resources are available to ensure meaningful engagement across the United Nations system, as well as national, regional and global institutions and organizations.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to cooperation with other entities at the global, regional, national and local levels, the Office will collaborate with global and regional organizations such as the World Bank, African Union, European Union and OECD. The Office will also prioritize the forging of new relationships and the strengthening of existing ones with relevant civil society organizations, academia and the private sector.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to inter-agency coordination and liaison, the Office will strengthen system-wide coordination within and across the United Nations system on digital and emerging technology issues, serving to promote collective synergies and messaging on such issues and more effective use of resources across the United Nations system.  This includes serving as Co-Chair of the Working Group on Digital Technologies with ITU, facilitating more frequent, intensive engagement and systematic follow-up on joint efforts and strengthening coordination within and between the implementation of the Global Digital Compact and WSIS+20, as well as other United Nations processes, such as the Multistakeholder Forum on Science, Technology and Innovation for the SDGs, as well as with the UN Technology Bank for the Least Developed Countries. The Office will continue to partner with and connect other UN System and non-UN entities through joint programming in service of the Office’s objective. The Office will also step up engagement with Regional Economic Commissions, the Development Coordination Office and the resident coordinator system to provide guidance on best practices regarding digital transformation for use by Member States, and for connecting to regional, national and local networks in support of implementation of the Global Digital Compact.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Office integrates a gender perspective into its operational activities, deliverables and results, as appropriate, including by advocating for the meaningful participation of girls and young women in relevant United Nations processes, and by incorporating a gender perspective on digital and emerging technology issues in multi-stakeholder policy dialogues facilitated by the Office.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In line with the United Nations Disability Inclusion Strategy, the Office will advocate for the meaningful participation of persons with disabilities in relevant United Nations processes, and by incorporating perspectives of persons with disabilities on digital and emerging technology issues in multi-stakeholder policy dialogues facilitated by the Office. The Office will aim to ensure accessibility for persons with disabilities to information and events produced by the Office, to the greatest extent possible.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Result 1: strengthened multistakeholder commitment to the Global Digital Compact – Proposed programme plan for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2024, at the Summit of the Future, the General Assembly adopted the Global Digital Compact, which serves as a comprehensive global framework for digital cooperation with the goal of an inclusive, open, sustainable, fair, safe and secure digital future for all. The Office has encouraged and enabled international and regional organizations, the private sector, academia, the technical community and civil society groups to engage actively in the Compact’s implementation. These actions will broaden and deepen efforts to realize the Compact’s objectives, with voluntary endorsements serving as an indicator of the extent of stakeholder alignment with the Compact’s vision and commitments through the High-level review of the Global Digital Compact during the 82nd session of the General Assembly.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Lessons learned and planned change",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "The lesson for the Office was that endorsement modalities require continuous stakeholder engagement and thorough vetting, which can be resource intensive. Following the Summit of the Future and the adoption of the Global Digital Compact, the Office swiftly established an endorsement modality in accordance with paragraph 66 of the Global Digital Compact. Through open calls to international and regional organizations, the private sector, academia, the technical community and civil society groups, the platform quickly generated significant traction. However, due to the open nature, each submission requires careful vetting, placing a considerable demand on available resources. In applying the lesson, the Office will adapt the endorsement modality to generate less burden, such as through semi-automated filtering and improved internal processes and workflows.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Expected progress towards the objective is presented in the performance measure below (see figure 1.XLI)",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Performance measure: number of endorsements of the Global Digital Compact (cumulative)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "image",
+                      "text": "",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Legislative mandates",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The list below, which was reviewed in the preparation of the proposed programme budget, provides all mandates entrusted to the programme.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "italic",
+                  "text": "General Assembly resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "75/316; 77/320",
+                            "hyperlinks": [
+                              [
+                                "75/316",
+                                "https://docs.un.org/en/A/RES/75/316"
+                              ],
+                              [
+                                "77/320",
+                                "https://docs.un.org/en/A/RES/77/320"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Impact of rapid technological change on the achievement of the Sustainable Development Goals and targets",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "78/311",
+                            "hyperlinks": [
+                              [
+                                "78/311",
+                                "https://docs.un.org/en/a/res/78/311"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Enhancing international cooperation on capacity-building of artificial intelligence",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "79/1 Annex I",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Global Digital Compact",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "79/258",
+                            "hyperlinks": [
+                              [
+                                "79/258",
+                                "https://docs.un.org/en/a/res/79/258"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Special subjects relating to the proposed programme budget for 2025",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "75/316",
+                          "https://docs.un.org/en/A/RES/75/316"
+                        ],
+                        [
+                          "77/320",
+                          "https://docs.un.org/en/A/RES/77/320"
+                        ],
+                        [
+                          "78/311",
+                          "https://docs.un.org/en/a/res/78/311"
+                        ],
+                        [
+                          "79/258",
+                          "https://docs.un.org/en/a/res/79/258"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Table 1.189 lists all deliverables of the programme.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Office for Digital and Emerging Technologies: deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tReport of the Secretary-General to the General Assembly on unique challenges faced by developing countries in artificial intelligence capacity-building, with recommendations that address those challenges.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tReport of the Secretary-General to the General Assembly develop innovative voluntary financing options for artificial intelligence capacity-building that take into account the recommendations of the High-level Advisory Body on Artificial Intelligence.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3.\tReport of the Secretary-General to the General Assembly on the Impact of Rapid Technological change on the achievement of the Sustainable Development Goals and Targets.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tMeetings of the: ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4.\tMeetings of the Advisory Committee on Administrative and Budgetary Questions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5.\tMeetings of the Fifth Committee",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": " 6.\tMeetings of the General Assembly regarding digital and emerging technology issues",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSeminars, workshops and training events (number of days)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t8.\tDiplomatic capacity building events and multistakeholder consultation in support of United Nations intergovernmental and multistakeholder processes on digital and emerging technologies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tPublications (number of publications)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t9.\tUpdate of the DPI Safeguards Framework",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t10.\tPublication on the implications of emerging technologies, such as in the areas of energy, labour markets, or interface with digital public infrastructure",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTechnical materials (number of materials)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t12.\tGuidance on digital transformation for United Nations senior leadership, including resident coordinators and regional economic commissions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t13.\tImplementation mapping of the Global Digital Compact",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "14. Technical materials required as part of support to United Nations intergovernmental and multistakeholder processes on digital and emerging technologies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConsultation, advice and advocacy: 50 substantive meetings with UN senior leadership to provide advice on key trends in technology; 3 briefings for all Member States on topics related to digital and emerging technology issues; 5 country visits and bilateral meetings with ministers responsible for information technology and digital cooperation; 40 substantive meetings with technology industry and industry leaders; 20 substantive meetings with civil society; 20 substantive meetings with academia; DPI Safeguards working groups; co-chairing Working Group on Digital Technologies; advice to United Nations intergovernmental and multistakeholder processes on digital and emerging technologies, as required. \n\n\tDatabases and substantive digital materials: Endorsement modality for the Global Digital Compact; interactive knowledge resource on DPI Safeguards Framework.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: 50 substantive meetings with UN senior leadership to provide advice on key trends in technology; 3 briefings for all Member States on topics related to digital and emerging technology issues; 5 country visits and bilateral meetings with ministers responsible for information technology and digital cooperation; 40 substantive meetings with technology industry and industry leaders; 20 substantive meetings with civil society; 20 substantive meetings with academia; DPI Safeguards working groups; co-chairing Working Group on Digital Technologies; advice to United Nations intergovernmental and multistakeholder processes on digital and emerging technologies, as required. \n\n\tDatabases and substantive digital materials: Endorsement modality for the Global Digital Compact; interactive knowledge resource on DPI Safeguards Framework.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: 50 substantive meetings with UN senior leadership to provide advice on key trends in technology; 3 briefings for all Member States on topics related to digital and emerging technology issues; 5 country visits and bilateral meetings with ministers responsible for information technology and digital cooperation; 40 substantive meetings with technology industry and industry leaders; 20 substantive meetings with civil society; 20 substantive meetings with academia; DPI Safeguards working groups; co-chairing Working Group on Digital Technologies; advice to United Nations intergovernmental and multistakeholder processes on digital and emerging technologies, as required. \n\n\tDatabases and substantive digital materials: Endorsement modality for the Global Digital Compact; interactive knowledge resource on DPI Safeguards Framework.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: 50 substantive meetings with UN senior leadership to provide advice on key trends in technology; 3 briefings for all Member States on topics related to digital and emerging technology issues; 5 country visits and bilateral meetings with ministers responsible for information technology and digital cooperation; 40 substantive meetings with technology industry and industry leaders; 20 substantive meetings with civil society; 20 substantive meetings with academia; DPI Safeguards working groups; co-chairing Working Group on Digital Technologies; advice to United Nations intergovernmental and multistakeholder processes on digital and emerging technologies, as required. \n\n\tDatabases and substantive digital materials: Endorsement modality for the Global Digital Compact; interactive knowledge resource on DPI Safeguards Framework.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: 50 substantive meetings with UN senior leadership to provide advice on key trends in technology; 3 briefings for all Member States on topics related to digital and emerging technology issues; 5 country visits and bilateral meetings with ministers responsible for information technology and digital cooperation; 40 substantive meetings with technology industry and industry leaders; 20 substantive meetings with civil society; 20 substantive meetings with academia; DPI Safeguards working groups; co-chairing Working Group on Digital Technologies; advice to United Nations intergovernmental and multistakeholder processes on digital and emerging technologies, as required. \n\n\tDatabases and substantive digital materials: Endorsement modality for the Global Digital Compact; interactive knowledge resource on DPI Safeguards Framework.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: Open Source Programme Offices for Good Conference; special events on topics related to digital and emerging technology issues at the Multi-stakeholder Forum on Science, Technology and Innovation for the SDGs and the Internet Governance Forum and at the High-level Political Forum and General Assembly High-level Week. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: Open Source Programme Offices for Good Conference; special events on topics related to digital and emerging technology issues at the Multi-stakeholder Forum on Science, Technology and Innovation for the SDGs and the Internet Governance Forum and at the High-level Political Forum and General Assembly High-level Week. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: Open Source Programme Offices for Good Conference; special events on topics related to digital and emerging technology issues at the Multi-stakeholder Forum on Science, Technology and Innovation for the SDGs and the Internet Governance Forum and at the High-level Political Forum and General Assembly High-level Week. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: Open Source Programme Offices for Good Conference; special events on topics related to digital and emerging technology issues at the Multi-stakeholder Forum on Science, Technology and Innovation for the SDGs and the Internet Governance Forum and at the High-level Political Forum and General Assembly High-level Week. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: Open Source Programme Offices for Good Conference; special events on topics related to digital and emerging technology issues at the Multi-stakeholder Forum on Science, Technology and Innovation for the SDGs and the Internet Governance Forum and at the High-level Political Forum and General Assembly High-level Week. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Digital platforms and multimedia content: websites and social media accounts of and maintained by the Office.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: websites and social media accounts of and maintained by the Office.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: websites and social media accounts of and maintained by the Office.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: websites and social media accounts of and maintained by the Office.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: websites and social media accounts of and maintained by the Office.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\t\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Overview",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "The proposed regular budget resources for 2026, including the breakdown of resource changes, as applicable, are reflected in tables 1.190 to 1.192.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Evolution of financial resources by object of expenditure",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate  ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Object of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/ expanded mandates",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Percentage",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate  ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Posts ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 290.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "326.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "326.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "25.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 617.8",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Other staff costs",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "37.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "37.2",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Hospitality",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5.3",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Consultants ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "105.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(65.7)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(65.7)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(62.0)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "40.2",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Travel of staff ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "133.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "133.1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Contractual services ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "44.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "13.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "50.7",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "General operating expenses ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "48.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3.7",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Supplies and materials ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "0.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "0.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "56.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2.5",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Furniture and equipment ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "321.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8.0",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 623.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(65.7)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "341.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "275.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "17.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 898.5",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Proposed posts and post changes for 2026",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Number",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Details",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Approved for 2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 USG, 1 P-5, 1 P-4, 2 P-2/1, 1 GS (OL)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Establishment",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 P-4, 1 P-3",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Proposed for 2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 USG, 1 P-5, 3 P-4, 1 P-3, 2 P-2/1, 1 GS (OL)",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Proposed posts by category and grade",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Category and grade",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/expanded mandates ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 proposed",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Professional and higher",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "USG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "P-5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "P-4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "P-3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "P-2/1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tSubtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "General Service and related",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "GS (OL)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "Additional details on the distribution of the proposed resources for 2026 are reflected in tables 1.193 to 1.195 and figure 1.XLII.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "As reflected in tables 1.193 and 1.194, the overall resources proposed for 2026 amount to $1,898,500, reflecting an increase of $275,300 (or 17.0 per cent) compared with the approved budget for 2025. Resource changes result from technical adjustments and expanded and new mandates. The proposed level of resources provides for the full, efficient and effective implementation of mandates.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Evolution of financial resources by source of funding and component",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "list-2",
+              "text": "(1)\tRegular budget",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate  ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Component",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 \napproved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/ expanded mandates ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate  ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Programme of work",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 623.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(65.7)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "341.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "275.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "17.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 898.5",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 623.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(65.7)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "341.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "275.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "17.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 898.5",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "list-2",
+              "text": "(2)\tExtrabudgetary",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Component/subprogramme",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025\nestimate",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Change",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026\nestimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "666",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Programme of work ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "499.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "27.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "526.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "499.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "27.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "526.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Total (1+2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "-",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 122.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "302.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "14.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 424.6",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Proposed posts for 2026 by source of funding and component",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "list-2",
+              "text": "(1)\tRegular budget",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 proposed",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Component",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 \napproved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 proposed",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Programme of work",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "list-2",
+              "text": "(2)\tExtrabudgetary",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Component/subprogramme",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 estimate",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Change",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "C.\tProgramme of work ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Total (1+2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "11",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Evolution of financial and post resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars/number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 \nestimate  ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/ expanded mandates",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/ expanded mandates",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Percentage ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 \nestimate  ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Posts",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 290.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 290.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "326.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "326.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "326.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "25.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 617.8",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Non-post",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "332.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "332.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(65.7)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "14.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "14.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(51.6)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(15.5)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "280.7",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 623.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 623.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(65.7)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "341.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "341.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "275.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "17.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 898.5",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Professional and higher",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Distribution of proposed resources for 2026",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Number of posts/thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "image",
+              "text": "",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub",
+          "text": "Explanation of variances by factor – Overall resource changes",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Technical adjustments",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "As reflected in table 1.193 (1), resource changes reflect a decrease of $65,700, relating to the removal of non-recurrent provisions under consultants associated with time-bound specialized projects in 2025.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "New and expanded mandates",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "As shown in tables 1.193 (1) and 1.194 (1), resource changes reflect an increase of $341,000, owing to the proposed establishment of three posts of Programme Management Officer (2 P-4 and 1 P-3), in accordance with General Assembly resolutions 79/1 and 79/258 (see annex II to the present report).",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub",
+          "text": "Extrabudgetary resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "As reflected in tables 1.193 (2) and 1.193 (2), extrabudgetary resources amount to $526,100. The resources would complement regular budget resources and would be used mainly to provide for two posts (1 P-4 and 1 P-2/1) and non-post resources that would be used to support the delivery of its mandates, including advancing cooperation on technology governance.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The extrabudgetary resources under the present section are subject to the oversight of the Office, which has delegated authority from the Secretary-General.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "Information on the timely submission of documentation and advance booking for air travel is reflected in table 1.196.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Compliance rate",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Percentage)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2022 \nactual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2023 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 \nactual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 \nplanned",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 \nplanned",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Timely submission of documentation",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Air tickets purchased at least two weeks before the commencement of travel",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

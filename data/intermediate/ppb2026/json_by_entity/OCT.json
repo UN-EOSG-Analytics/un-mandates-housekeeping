@@ -1,0 +1,4181 @@
+{
+  "entity": "Office of Counter-Terrorism",
+  "entity_abbrev": "OCT",
+  "entity_raw_name": "V.\tOffice of Counter-Terrorism",
+  "source_file": "A_80_6_SECT.3.json",
+  "content": [
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.1\tPursuant to General Assembly resolution 71/291, and as reaffirmed by the Assembly in its resolution 77/298, on the eighth review of the United Nations Global Counter-Terrorism Strategy, the Office of Counter-Terrorism is responsible for five main functions: providing leadership on the General Assembly counter-terrorism mandates entrusted to the Secretary-General; enhancing coordination and coherence across the United Nations system to ensure the balanced implementation of the four pillars of the United Nations Global Counter-Terrorism Strategy; strengthening delivery of United Nations counter-terrorism capacity-building assistance to Member States; improving the visibility of, and advocacy and resource mobilization for, United Nations counter-terrorism efforts; and ensuring that due priority is given to counter-terrorism across the United Nations system and that work on preventing violent extremism as and when conducive to terrorism is firmly rooted in the Strategy.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "71/291",
+                      "https://undocs.org/en/A/RES/71/291"
+                    ],
+                    [
+                      "77/298",
+                      "https://undocs.org/en/A/RES/77/298"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.2\tUnited Nations Global Counter-Terrorism Strategy (General Assembly resolution 60/288) is composed of four pillars, in the form of measures to: address the conditions conducive to the spread of terrorism; prevent and combat terrorism; build States’ capacity to prevent and combat terrorism and to strengthen the role of the United Nations system in this regard; and ensure respect for human rights for all and the rule of law as the fundamental basis of the fight against terrorism. The mandate of the Office derives from the priorities established in the Strategy and subsequent review resolutions adopted by the General Assembly, including resolution 75/291, and other relevant General Assembly and Security Council resolutions, including Security Council resolution 2617 (2021).",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "60/288",
+                      "https://undocs.org/en/A/RES/60/288"
+                    ],
+                    [
+                      "75/291",
+                      "https://undocs.org/en/A/RES/75/291"
+                    ],
+                    [
+                      "2617 (2021)",
+                      "https://undocs.org/en/S/RES/2617(2021)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.3\tThe Office acts as secretariat for the United Nations Global Counter-Terrorism Coordination Compact, which promotes action-oriented collaboration within the United Nations system and serves as a platform for joint programming, coherent monitoring and evaluation, and facilitation of joint resource mobilization and outreach to donors.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.4\tThe objective, to which the Office contributes, is to prevent and counter terrorism in all its forms and manifestations, as well as violent extremism as and when conducive to terrorism, in compliance with international law.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.5\tTo contribute to the objective, the Office, will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tProvide leadership for the General Assembly counter-terrorism mandates entrusted to the Secretary-General and convene high-level international and regional conferences and outreach events for Member States, international and regional organizations, and civil society to exchange information, expertise and resources, develop partnerships and collectively address a range of counter-terrorism issues;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tEnhance coordination and coherence across the Compact entities to support the counter-terrorism efforts of Member States, including by strengthening the response to technical assistance needs identified by the Counter-Terrorism Committee Executive Directorate and to requests from various Member States;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tProvide technical and capacity-building assistance to requesting Member States, including through its presences away from Headquarters, in a focused, integrated and coordinated manner, and reinforce resource mobilization activities with donors;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tConduct research, identify and disseminate new and innovative programme management methodologies, best practices and lessons learned, and embed evidence-informed delivery as a foundation for its technical assistance work;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tStrengthen the capacity of Member States to ensure respect for human rights and the rule of law while countering terrorism, in accordance with the fourth pillar of the United Nations Global Counter-Terrorism Strategy;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(f)\tSupport parliamentarians and strengthen outreach to civil society organizations, including youth and women’s organizations, in preventing and countering terrorism and violent extremism conducive to terrorism.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.6\tThe above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tMultilateral cooperation against terrorism, and strengthened partnerships with and among Member States, international and regional organizations, civil society, the private sector and academia for a whole-of-society approach to counter-terrorism and the prevention of violent extremism conducive to terrorism;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tImplementation by Member States of relevant General Assembly and Security Council resolutions related to countering terrorism and preventing violent extremism conducive to terrorism, including by building greater resilience and reinforcing responses to terrorist threats and attacks;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tEnriched international and multisectoral policy discourse in support of greater prioritization and coherence on counter-terrorism and the prevention of violent extremism conducive to terrorism;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tIntegration of human rights norms and standards in relevant measures taken in the context of preventing and countering terrorism and violent extremism conducive to terrorism, in requesting Member States.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.7\tWith regard to the external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tMember States will continue to request support from the United Nations in preventing and countering terrorism and violent extremism conducive to terrorism;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tExtrabudgetary resources for capacity-building support for Member States will be available;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tMember States will grant the necessary official approvals and access to enable implementation and delivery of this support.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.8\tWith regard to cooperation with other entities at the global, regional, national and local levels, the Office will continue to cooperate with the Global Counterterrorism Forum and specialized international and regional organizations, such as the African Union, the Association of Southeast Asian Nations, the Caribbean Community, the Collective Security Treaty Organization, the Anti Terrorism Centre of the Commonwealth of Independent States, the European Union, the League of Arab States, the North Atlantic Treaty Organization, the Organization of American States, the Organization for Security and Cooperation in Europe, the Organization of Islamic Cooperation and the Regional Anti-Terrorist Structure of the Shanghai Cooperation Organization. The Office will continue to implement existing and develop new partnership frameworks to support joint approaches to promote the implementation of the United Nations Global Counter-Terrorism Strategy and regional counter-terrorism strategies.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.9\tWith regard to inter-agency coordination and liaison, the Office leads the United Nations Global Counter-Terrorism Coordination Compact, which includes 46 entities, including 42 United Nations entities and the International Criminal Police Organization, the Financial Action Task Force, the Inter-Parliamentary Union and the World Customs Organization, as member or observer entities. The Compact comprises eight thematic working groups specialized in priority areas relating to preventing and countering terrorism and violent extremism conducive to terrorism, aligned with the four pillars of the United Nations Global Counter-Terrorism Strategy. The Office will continue to strengthen the coordination of counter-terrorism efforts through consultative inter-agency efforts with the United Nations country teams and resident coordinators, in cooperation with respective host countries, and use its coordination role to strengthen existing partnerships and initiate new ones for multi-stakeholder collaboration at the national, regional and global levels. The Office will continue to advocate an approach that prioritizes joint programming with other United Nations partners to maximize the use of resources and deliver more coherent and expert capacity-building activities.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.10\tThe Office integrates a gender perspective in its operational activities, deliverables and results, as appropriate, through the implementation of its policy and action plan for gender mainstreaming. The Office will provide technical assistance in line with the women and peace and security agenda and the United Nations Global Counter-Terrorism Strategy and its reviews, and informed by gender analysis.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.11\tIn line with the United Nations Disability Inclusion Strategy, the Office will integrate disability inclusion within its programmatic and policy functions, including modalities to reflect disability considerations in programme design and the implementation of evaluations.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Evaluation activities",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.12\tThe following evaluations conducted by the Office and completed in 2024 have guided the proposed programme plan in 2026:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tThree evaluations conducted on programmes related to prosecution, rehabilitation and reintegration; border security and management; and security of major sporting events and promotion of sport values to prevent violent extremism conducive to terrorism;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tFour evaluations conducted on projects related to the reintegration of men and women formerly associated with non-State armed groups in Somalia (jointly with the International Organization for Migration (IOM)); building the capacities of young leaders for the prevention of violent extremism conducive to terrorism in South-East Asia; the prevention of radicalization to violence in prisons (jointly with the United Nations Office on Drugs and Crime (UNODC)); and the Counter-Terrorism Early Warning Network for Central Asia.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.13\tIn response to the results of the above evaluations, the Office will enhance its focus on incorporating robust monitoring and evaluation approaches and systems, and will further integrate considerations related to human rights, gender equality, disability inclusion and leaving no one behind in the design and delivery of its programmes and projects.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.14\tFinal evaluations of three projects in the Africa and Central Asia regions and one global programme on parliamentary engagement in preventing and countering terrorism, to be conducted by the Office, are planned for 2026.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-x",
+                  "text": "Member States strengthen coordination to enhance border security",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.V.15\tIn accordance with the United Nations Global Counter-Terrorism Strategy and relevant Security Council resolutions, including 2178 (2014), 2309 (2016), 2396 (2017) and 2482 (2019), the Office supports strengthened counter-terrorism efforts through enhanced cooperation and advanced border management measures. In 2023 and 2024, the Office, in coordination with IOM and UNODC, supported the establishment of the Integrated Border Stability Mechanism in Dakar. During 2024, the Mechanism conducted technical consultations in its seven focus countries – Benin, Burkina Faso, Côte d’Ivoire, Ghana, Mali, Niger and Togo – engaging national stakeholders to assess border security and governance gaps, needs and priorities. The Office also held technical trainings and workshops at the global and regional levels throughout 2024. This helped to shape the development of the Global Counterterrorism Forum training-of-trainers curriculum, set to be rolled out through regional and national trainings in 2025. The Office also co-led the production of a good practices addendum on border security and management, complemented by a practical train-the-trainer manual, with a view to equipping border officials with the knowledge and skills to operationalize these good practices globally.",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "2178 (2014)",
+                          "https://undocs.org/en/S/RES/2178(2014)"
+                        ],
+                        [
+                          "2309 (2016)",
+                          "https://undocs.org/en/S/RES/2309(2016)"
+                        ],
+                        [
+                          "2396 (2017)",
+                          "https://undocs.org/en/S/RES/2396(2017)"
+                        ],
+                        [
+                          "2482 (2019)",
+                          "https://undocs.org/en/S/RES/2482(2019)"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.V.16\tProgress towards the objective is presented in the performance measure below (see table 3.V.1).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Table 3.V.1 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Member States reached a political agreement to launch an Integrated Border Stability Mechanism to enhance coordination among West African Governments, donors, regional organizations and implementing partners, for strengthened integrated border governance and security",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "National stakeholders in seven countries utilize the Mechanism to strengthen integrated border governance and security, and assess gaps, needs and priorities",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned results for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-x",
+                  "text": "Result 1: enhanced coordination and coherence among United Nations Global Counter-Terrorism Coordination Compact entities, regional organizations and other partners to support the counter-terrorism efforts of Member States – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.V.17\tThe Office’s work contributed to strengthened engagement by civil society organizations and regional organizations in the eight United Nations Global Counter-Terrorism Coordination Compact working groups, with the participation of representatives from 23 civil society organizations and nine regional organizations in meetings of the working groups, which met the planned target.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.V.18\tProgress towards the objective and the target for 2026 are presented in the performance measure below (see table 3.V.2).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Table 3.V.2 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Enhanced engagement between United Nations Global Counter-Terrorism Coordination Compact entities and Member States, with information exchange between over 1,000 focal points from 45 Compact entities, 136 Member States and 13 regional organizations",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Strengthened cooperation between the Global Counterterrorism Forum and the Compact, as evidenced by direct interaction between respective working groups",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Strengthened engagement by civil society organizations and regional organizations in the eight United Nations Global Counter-Terrorism Coordination Compact working groups",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Strengthened engagement by regional and subregional organizations on issues covered by the Compact working groups",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Strengthened engagement by Member States, as well as partners in the field, on issues covered by the Compact working groups",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Result 2: Member States advance their efforts in countering terrorist use of weapons – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.V.19\tThe Office’s work contributed to 40 Member States reporting increased capacities to prevent, prepare for and respond to terrorist use of conventional and non-conventional weapons, which exceeded the planned target of 25 Member States.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.V.20\tProgress towards the objective and the target for 2026 are presented in the performance measure below (see figure 3.V.I).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Figure 3.V.I – Performance measure: number of Member States reporting increased capacities to prevent, prepare for and respond to terrorist use of conventional and non-conventional weapons (annual)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "image",
+                      "text": "",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Result 3: enhanced national counterterrorism capabilities through strengthened interagency coordination and intelligence analyst skills to prevent and counter terrorism – Proposed programme plan for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.V.21\tThe Office supports counter-terrorism capabilities across Africa, strengthening national inter-agency coordination and intelligence-sharing mechanisms to address evolving security threats. In 2020, in line with relevant Security Council resolutions, including 2462 (2019) and 2482 (2019), and responding to Member States’ requests, the Office launched a multi-year global programme to support intra- and inter-agency coordination mechanisms on intelligence, analysis and investigations. In 2023, the programme developed a compendium of good practices and related guidelines on establishing and operating a national inter-agency coordination mechanism, including seven study guides, and a 13-week modular training portfolio offering 12 courses to Member State analysts. Since 2020, the programme has trained over 1,400 participants from 32 African intelligence and law enforcement agencies. On the basis of post-training assessments, 100 per cent of trainees’ managers indicated that their trained staff were performing better as a direct result of the programme.",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "2462 (2019)",
+                          "https://undocs.org/en/S/RES/2462(2019)"
+                        ],
+                        [
+                          "2482 (2019)",
+                          "https://undocs.org/en/S/RES/2482(2019)"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Lessons learned and planned change",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.V.22\tThe lesson for the Office was the need to expand its reach to meet the high demand for assistance from Member States. In applying the lesson, the Office will prioritize a train-the-trainer model, equipping academy instructors with advanced skills to institutionalize analytical training within national academies. Furthermore, the Office will pursue formal accreditation to integrate its training methodologies into national law enforcement frameworks, ensuring long-term sustainability and impact. These efforts will contribute to strengthening the capacities of intelligence and law enforcement agencies, with a view to establishing national coordination mechanisms to counter terrorism.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.V.23\tExpected progress towards the objective is presented in the performance measure below (see figure 3.V.II).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Figure 3.V.II – Performance measure: number of Member States with enhanced national inter-agency coordination mechanisms in support of counter-terrorism (cumulative)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "image",
+                      "text": "",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Legislative mandates",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.24\tThe list below, which was reviewed in the preparation of the proposed programme budget, provides all mandates entrusted to the Office.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "italic",
+                  "text": "General Assembly resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "60/288; 62/272; 64/297",
+                            "hyperlinks": [
+                              [
+                                "60/288",
+                                "https://undocs.org/en/A/RES/60/288"
+                              ],
+                              [
+                                "62/272",
+                                "https://undocs.org/en/A/RES/62/272"
+                              ],
+                              [
+                                "64/297",
+                                "https://undocs.org/en/A/RES/64/297"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "United Nations Global Counter-Terrorism Strategy ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "66/10",
+                            "hyperlinks": [
+                              [
+                                "66/10",
+                                "https://undocs.org/en/A/RES/66/10"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "United Nations Counter-Terrorism Centre",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "66/282; 68/276; 70/291; 72/284",
+                            "hyperlinks": [
+                              [
+                                "66/282",
+                                "https://undocs.org/en/A/RES/66/282"
+                              ],
+                              [
+                                "68/276",
+                                "https://undocs.org/en/A/RES/68/276"
+                              ],
+                              [
+                                "70/291",
+                                "https://undocs.org/en/A/RES/70/291"
+                              ],
+                              [
+                                "72/284",
+                                "https://undocs.org/en/A/RES/72/284"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "The United Nations Global Counter-Terrorism Strategy Review",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "70/254",
+                            "hyperlinks": [
+                              [
+                                "70/254",
+                                "https://undocs.org/en/A/RES/70/254"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Secretary-General’s Plan of Action to Prevent Violent Extremism",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "71/291",
+                            "hyperlinks": [
+                              [
+                                "71/291",
+                                "https://undocs.org/en/A/RES/71/291"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Strengthening the capability of the United Nations system to assist Member States in implementing the United Nations Global Counter-Terrorism Strategy",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "72/165",
+                            "hyperlinks": [
+                              [
+                                "72/165",
+                                "https://undocs.org/en/A/RES/72/165"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "International Day of Remembrance of and Tribute to the Victims of Terrorism",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "73/305",
+                            "hyperlinks": [
+                              [
+                                "73/305",
+                                "https://undocs.org/en/A/RES/73/305"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Enhancement of international cooperation to assist victims of terrorism",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "75/291",
+                            "hyperlinks": [
+                              [
+                                "75/291",
+                                "https://undocs.org/en/A/RES/75/291"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "The United Nations Global Counter-Terrorism Strategy: seventh review",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "77/243",
+                            "hyperlinks": [
+                              [
+                                "77/243",
+                                "https://undocs.org/en/A/RES/77/243"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "International Day for the Prevention of Violent Extremism as and when Conducive to Terrorism ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "77/298",
+                            "hyperlinks": [
+                              [
+                                "77/298",
+                                "https://undocs.org/en/A/RES/77/298"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "The United Nations Global Counter-Terrorism Strategy: eighth review",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "79/1",
+                            "hyperlinks": [
+                              [
+                                "79/1",
+                                "https://undocs.org/en/A/RES/79/1"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "The Pact for the Future",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "79/53",
+                            "hyperlinks": [
+                              [
+                                "79/53",
+                                "https://undocs.org/en/A/RES/79/53"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Countering the threat posed by improvised explosive devices",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "79/129",
+                            "hyperlinks": [
+                              [
+                                "79/129",
+                                "https://undocs.org/en/A/RES/79/129"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Measures to eliminate international terrorism",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "60/288",
+                          "https://undocs.org/en/A/RES/60/288"
+                        ],
+                        [
+                          "62/272",
+                          "https://undocs.org/en/A/RES/62/272"
+                        ],
+                        [
+                          "64/297",
+                          "https://undocs.org/en/A/RES/64/297"
+                        ],
+                        [
+                          "66/10",
+                          "https://undocs.org/en/A/RES/66/10"
+                        ],
+                        [
+                          "66/282",
+                          "https://undocs.org/en/A/RES/66/282"
+                        ],
+                        [
+                          "68/276",
+                          "https://undocs.org/en/A/RES/68/276"
+                        ],
+                        [
+                          "70/291",
+                          "https://undocs.org/en/A/RES/70/291"
+                        ],
+                        [
+                          "72/284",
+                          "https://undocs.org/en/A/RES/72/284"
+                        ],
+                        [
+                          "70/254",
+                          "https://undocs.org/en/A/RES/70/254"
+                        ],
+                        [
+                          "71/291",
+                          "https://undocs.org/en/A/RES/71/291"
+                        ],
+                        [
+                          "72/165",
+                          "https://undocs.org/en/A/RES/72/165"
+                        ],
+                        [
+                          "73/305",
+                          "https://undocs.org/en/A/RES/73/305"
+                        ],
+                        [
+                          "75/291",
+                          "https://undocs.org/en/A/RES/75/291"
+                        ],
+                        [
+                          "77/243",
+                          "https://undocs.org/en/A/RES/77/243"
+                        ],
+                        [
+                          "77/298",
+                          "https://undocs.org/en/A/RES/77/298"
+                        ],
+                        [
+                          "79/1",
+                          "https://undocs.org/en/A/RES/79/1"
+                        ],
+                        [
+                          "79/53",
+                          "https://undocs.org/en/A/RES/79/53"
+                        ],
+                        [
+                          "79/129",
+                          "https://undocs.org/en/A/RES/79/129"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "italic",
+                  "text": "Security Council resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "1373 (2001)",
+                            "hyperlinks": [
+                              [
+                                "1373 (2001)",
+                                "https://undocs.org/en/S/RES/1373(2001)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "1540 (2004)",
+                            "hyperlinks": [
+                              [
+                                "1540 (2004)",
+                                "https://undocs.org/en/S/RES/1540(2004)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2322 (2016)",
+                            "hyperlinks": [
+                              [
+                                "2322 (2016)",
+                                "https://undocs.org/en/S/RES/2322(2016)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2341 (2017)",
+                            "hyperlinks": [
+                              [
+                                "2341 (2017)",
+                                "https://undocs.org/en/S/RES/2341(2017)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2368 (2017)",
+                            "hyperlinks": [
+                              [
+                                "2368 (2017)",
+                                "https://undocs.org/en/S/RES/2368(2017)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2370 (2017)",
+                            "hyperlinks": [
+                              [
+                                "2370 (2017)",
+                                "https://undocs.org/en/S/RES/2370(2017)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2395 (2017)",
+                            "hyperlinks": [
+                              [
+                                "2395 (2017)",
+                                "https://undocs.org/en/S/RES/2395(2017)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2396 (2017)",
+                            "hyperlinks": [
+                              [
+                                "2396 (2017)",
+                                "https://undocs.org/en/S/RES/2396(2017)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2462 (2019)",
+                            "hyperlinks": [
+                              [
+                                "2462 (2019)",
+                                "https://undocs.org/en/S/RES/2462(2019)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2482 (2019)",
+                            "hyperlinks": [
+                              [
+                                "2482 (2019)",
+                                "https://undocs.org/en/S/RES/2482(2019)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2617 (2021)",
+                            "hyperlinks": [
+                              [
+                                "2617 (2021)",
+                                "https://undocs.org/en/S/RES/2617(2021)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "1373 (2001)",
+                          "https://undocs.org/en/S/RES/1373(2001)"
+                        ],
+                        [
+                          "1540 (2004)",
+                          "https://undocs.org/en/S/RES/1540(2004)"
+                        ],
+                        [
+                          "2322 (2016)",
+                          "https://undocs.org/en/S/RES/2322(2016)"
+                        ],
+                        [
+                          "2341 (2017)",
+                          "https://undocs.org/en/S/RES/2341(2017)"
+                        ],
+                        [
+                          "2368 (2017)",
+                          "https://undocs.org/en/S/RES/2368(2017)"
+                        ],
+                        [
+                          "2370 (2017)",
+                          "https://undocs.org/en/S/RES/2370(2017)"
+                        ],
+                        [
+                          "2395 (2017)",
+                          "https://undocs.org/en/S/RES/2395(2017)"
+                        ],
+                        [
+                          "2396 (2017)",
+                          "https://undocs.org/en/S/RES/2396(2017)"
+                        ],
+                        [
+                          "2462 (2019)",
+                          "https://undocs.org/en/S/RES/2462(2019)"
+                        ],
+                        [
+                          "2482 (2019)",
+                          "https://undocs.org/en/S/RES/2482(2019)"
+                        ],
+                        [
+                          "2617 (2021)",
+                          "https://undocs.org/en/S/RES/2617(2021)"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.25\tTable 3.V.3 lists all deliverables of the Office.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Table 3.V.3 – Office of Counter-Terrorism: deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tReport of the Secretary-General to: ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tThe General Assembly on the implementation of the United Nations Global Counter-Terrorism Strategy by the United Nations system ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tThe Security Council on the threat posed by Islamic State in Iraq and the Levant (ISIL, also known as Da’esh) ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "17",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " 17",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "42",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3.\tMeeting of the General Assembly on the review of the United Nations Global Counter-Terrorism Strategy",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "26",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4.\tBriefings to the General Assembly on the work of the Office of Counter-Terrorism",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5.\tBriefings to the Security Council ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t6.\tBriefings to the Security Council Committee established pursuant to resolution 1373 (2001) concerning counter-terrorism (Counter-Terrorism Committee)",
+                            "hyperlinks": [
+                              [
+                                "1373 (2001)",
+                                "https://undocs.org/en/S/RES/1373(2001)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t7.\tBriefings to the Advisory Board of the United Nations Counter-Terrorism Centre ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t8.\tMeetings of the Fifth Committee",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t9.\tMeetings of the Committee for Programme and Coordination",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t10.\tMeetings of the Advisory Committee on Administrative and Budgetary Questions ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSeminars, workshops and training events (number of days)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "833",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "464",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "520",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "463",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t11.\tHigh-level conference on issues relating to counter-terrorism ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "18",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "18",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t12.\tRegional conferences on technical issues relating to counter-terrorism ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "23",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "20",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "20",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t13.\tCapacity-building training and workshops on technical thematic issues ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "801",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "426",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "502",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "425",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTechnical materials (number of materials)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "34",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t14.\tOn lessons learned, best practices and thematic topics in implementing the United Nations Global Counter-Terrorism Strategy ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "34",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConsultation, advice and advocacy: advocacy initiatives; consultations with an estimated 110 Member States on global, regional and national priorities and strategies; quarterly briefings to Member States; Counter-Terrorism Week. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advocacy initiatives; consultations with an estimated 110 Member States on global, regional and national priorities and strategies; quarterly briefings to Member States; Counter-Terrorism Week. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advocacy initiatives; consultations with an estimated 110 Member States on global, regional and national priorities and strategies; quarterly briefings to Member States; Counter-Terrorism Week. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advocacy initiatives; consultations with an estimated 110 Member States on global, regional and national priorities and strategies; quarterly briefings to Member States; Counter-Terrorism Week. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advocacy initiatives; consultations with an estimated 110 Member States on global, regional and national priorities and strategies; quarterly briefings to Member States; Counter-Terrorism Week. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDatabases and substantive digital materials: United Nations Global Counter-Terrorism Coordination Platform, connecting focal points of 46 United Nations Global Counter-Terrorism Coordination Compact entities (United Nations and non-United Nations entities), 137 Member States and 14 regional organizations; “Connect & Learn” platform, with online training and communities of practice for approximately 4,300 members.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: United Nations Global Counter-Terrorism Coordination Platform, connecting focal points of 46 United Nations Global Counter-Terrorism Coordination Compact entities (United Nations and non-United Nations entities), 137 Member States and 14 regional organizations; “Connect & Learn” platform, with online training and communities of practice for approximately 4,300 members.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: United Nations Global Counter-Terrorism Coordination Platform, connecting focal points of 46 United Nations Global Counter-Terrorism Coordination Compact entities (United Nations and non-United Nations entities), 137 Member States and 14 regional organizations; “Connect & Learn” platform, with online training and communities of practice for approximately 4,300 members.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: United Nations Global Counter-Terrorism Coordination Platform, connecting focal points of 46 United Nations Global Counter-Terrorism Coordination Compact entities (United Nations and non-United Nations entities), 137 Member States and 14 regional organizations; “Connect & Learn” platform, with online training and communities of practice for approximately 4,300 members.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: United Nations Global Counter-Terrorism Coordination Platform, connecting focal points of 46 United Nations Global Counter-Terrorism Coordination Compact entities (United Nations and non-United Nations entities), 137 Member States and 14 regional organizations; “Connect & Learn” platform, with online training and communities of practice for approximately 4,300 members.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: three regional conferences, as well as special commemorative events including international days, launch events, side events and exhibitions; monthly newsletters on the work of the Office, bimonthly newsletters and annual newsletter and report on the United Nations Global Counter-Terrorism Coordination Compact, and other promotional materials and reports. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: three regional conferences, as well as special commemorative events including international days, launch events, side events and exhibitions; monthly newsletters on the work of the Office, bimonthly newsletters and annual newsletter and report on the United Nations Global Counter-Terrorism Coordination Compact, and other promotional materials and reports. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: three regional conferences, as well as special commemorative events including international days, launch events, side events and exhibitions; monthly newsletters on the work of the Office, bimonthly newsletters and annual newsletter and report on the United Nations Global Counter-Terrorism Coordination Compact, and other promotional materials and reports. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: three regional conferences, as well as special commemorative events including international days, launch events, side events and exhibitions; monthly newsletters on the work of the Office, bimonthly newsletters and annual newsletter and report on the United Nations Global Counter-Terrorism Coordination Compact, and other promotional materials and reports. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: three regional conferences, as well as special commemorative events including international days, launch events, side events and exhibitions; monthly newsletters on the work of the Office, bimonthly newsletters and annual newsletter and report on the United Nations Global Counter-Terrorism Coordination Compact, and other promotional materials and reports. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tExternal and media relations: approximately 50 press releases, media interviews and other engagement with media.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: approximately 50 press releases, media interviews and other engagement with media.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: approximately 50 press releases, media interviews and other engagement with media.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: approximately 50 press releases, media interviews and other engagement with media.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: approximately 50 press releases, media interviews and other engagement with media.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDigital platforms and multimedia content: content for the Office’s website and social media accounts, including approximately 80 web stories and 10 videos.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: content for the Office’s website and social media accounts, including approximately 80 web stories and 10 videos.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: content for the Office’s website and social media accounts, including approximately 80 web stories and 10 videos.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: content for the Office’s website and social media accounts, including approximately 80 web stories and 10 videos.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: content for the Office’s website and social media accounts, including approximately 80 web stories and 10 videos.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "1373 (2001)",
+                          "https://undocs.org/en/S/RES/1373(2001)"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub",
+          "text": "Overview",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "3.V.26\tThe proposed regular budget resources for 2026, including the breakdown of resource changes, as applicable, are reflected in tables 3.V.4 to 3.V.6.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table",
+              "text": "Table 3.V.4",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial resources by object of expenditure – (Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Object of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": " \n2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Object of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": " \n2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Posts",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9 515.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "11 337.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "11 337.2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Other staff costs ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "14.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Travel of staff ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "234.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "501.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "501.9",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Contractual services ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "131.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "53.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "53.6",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General operating expenses ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "53.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "77.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "77.6",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Supplies and materials ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "16.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "16.6",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Furniture and equipment ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "26.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "53.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "53.9",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9 975.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "12 040.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "12 040.8",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 3.V.5",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed posts and post changes for 2026 – (Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Number",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Details",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Approved for 2025",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "60",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 USG, 2 D-2, 3 D-1, 7 P-5, 20 P-4, 12 P-3, 13 GS (OL), 2 LL",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Proposed for 2026",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "60",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 USG, 2 D-2, 3 D-1, 7 P-5, 20 P-4, 12 P-3, 13 GS (OL), 2 LL",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 3.V.6",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed posts by category and grade – (Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Category and grade",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 proposed",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Category and grade",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 proposed",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Professional and higher",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "USG",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "D-2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "D-1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "7",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "20",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "20",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "12",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "12",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "45",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "45",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General Service and related",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "GS (OL)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "13",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "13",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "LL",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "60",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "60",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.27\tAdditional details on the distribution of the proposed resources for 2026 are reflected in tables 3.V.7 to 3.V.9 and figure 3.V.III.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.28\tAs shown in tables 3.V.7 (1) and 3.V.8 (1), the overall resources proposed for 2026 amount to $12,040,800, reflecting an increase of $400 compared with the approved budget for 2025. Resource changes result from other changes. The proposed level of resources provides for the full, efficient and effective implementation of mandates.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 3.V.7",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial resources by source of funding, component and subprogramme – (Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "list-2",
+                  "text": "(1)\tRegular budget",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 estimate ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Component/subprogramme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 expenditure",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 approved",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Technical adjustments",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "New/expanded mandates ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Other ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Total ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Percentage",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 estimate ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Programme of work",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9 975.5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12 040.4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0.4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0.4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0.0",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12 040.8",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubtotal, 1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9 975.5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12 040.4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0.4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0.4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0.0",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12 040.8",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "list-2",
+                  "text": "(2)\tExtrabudgetary",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Component/subprogramme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 expenditure",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 estimate",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Change",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Percentage",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 estimate",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Programme of work ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "40 166.0",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "37 190.9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(2 503.3)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(6.7)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "34 687.6",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubtotal, 2 ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "40 166.0",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "37 190.9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(2 503.3)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(6.7)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "34 687.6",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTotal (1+2) ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "50 141.5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "49 231.3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(2 502.9)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(5.1)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "46 728.4",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 3.V.8",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed posts for 2026 by source of funding, component and subprogramme – (Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "list-2",
+                  "text": "(1)\tRegular budget",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Component/subprogramme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 approved",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Technical adjustments",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "New/expanded mandates ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Other ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Total ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 proposed",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Programme of work",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "60",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "60",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubtotal, 1 ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "60",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "60",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "list-2",
+                  "text": "(2)\tExtrabudgetary",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Component/subprogramme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 estimate",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Change",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 estimate",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Programme of work ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "137",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "137",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubtotal, 2 ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "137",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "137",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTotal (1+2) ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "197",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "197",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 3.V.9",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial and post resources – (Thousands of United States dollars/number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 \nestimate ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 \nestimate ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Posts",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9 515.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "11 337.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "11 337.2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Non-post",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "460.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "703.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "703.6",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9 975.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "12 040.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "12 040.8",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Professional and higher",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "45",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "45",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General Service and related",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "60",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "60",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "figure",
+                  "text": "Figure 3.V.III",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Programme support: distribution of proposed resources for 2026 – (Number of posts/thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "image",
+                  "text": "",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub",
+          "text": "Explanation of variances by factor – Overall resource changes",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Other changes",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.29\tAs shown in table 3.V.7, resource changes reflect an increase of $400 under contractual services due to the adjustment of standard ICT rates for non-field personnel outside of Headquarters for 2026.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Extrabudgetary resources",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.30\tAs reflected in table 3.V.7 (2), extrabudgetary resources amount to $34,687,600. The resources would complement regular budget resources and would provide for 137 posts (1 D-1, 13 P-5, 39 P-4, 40 P-3, 8 P-2/1, 6 National Professional Officer, and 30 General Service (Other level)), mainly to perform the functions of supporting Member States, strengthen field capacities and develop innovative ways to deliver capacity-building assistance to Member States. Non-post resources would be used cover operational requirements and activities in support of the Office’s mandate.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.31\tThe Office also receives in-kind voluntary contributions, including for office space, furniture and equipment, parking and operational services, with an approximate value of $520,500.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.V.32\tThe authority to oversee the use of extrabudgetary resources rests with the Office, in accordance with the delegation of authority from the Secretary-General.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "VI.\tSpecial political missions",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "italic",
+              "text": "Resource requirements: $639 831,500",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.VI.1\tThe proposed resource requirements for the 37 special political missions for 2026 amount to $639,831,500, which would be supplemented by extrabudgetary resources, estimated at $37,700,100. These resources would provide for the full, efficient and effective implementation of the mandates for the special political missions. Further details on the proposed resources for 2026 are contained in the relevant reports of the Secretary-General on the special political missions (A/80/6 (Sect. 3)/Add.1-6).",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "A/80/6 (Sect. 3)/Add.1",
+                      "https://docs.un.org/en/A/80/6(Sect.3)/Add.1"
+                    ]
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

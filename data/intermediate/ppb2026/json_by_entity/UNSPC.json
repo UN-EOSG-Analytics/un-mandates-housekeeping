@@ -1,0 +1,877 @@
+{
+  "entity": "Secretariat of the United Nations Staff Pension Committee (including reimbursement from the United Nations for services provided by the United Nation Joint Staff Pension Fund)",
+  "entity_abbrev": "UNSPC",
+  "entity_raw_name": "5.\t\tSecretariat of the United Nations Staff Pension Committee (including reimbursement from the United Nations for services provided by the United Nation Joint Staff Pension Fund)",
+  "source_file": "A_80_6_SECT.1.PART AB_CONSOLIDATED_FASCICLE_ADVANCED COPY TO ACABQ_22 MAY 2025.json",
+  "content": [
+    {
+      "block_type": "a/b",
+      "text": "B.\t\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Overview",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "The United Nations Joint Staff Pension Fund was established by the General Assembly in 1949 to provide retirement, death, disability and related benefits to the staff of the United Nations and such other organizations as might be admitted to its membership. In accordance with the regulations adopted by the Assembly, the Pension Fund is administered by the United Nations Joint Staff Pension Board, a staff pension committee for each member organization and a secretariat of the Pension Board and each such committee.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The expenses incurred by the staff pension committee in the administration of the regulations of a member organization are met by the general budget of that organization. However, given that the central secretariat of the Pension Fund grew out of the secretariat of the United Nations Staff Pension Committee, it continued to handle pension administration for the United Nations by special arrangement with the Pension Board. For those services, the United Nations reimburses the Pension Fund in accordance with the cost-sharing arrangement, as approved by the General Assembly in its resolution 75/246.",
+              "table_content": null,
+              "hyperlinks": [
+                [
+                  "75/246",
+                  "https://undocs.org/en/A/RES/75/246"
+                ]
+              ],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "At the time that the present report was being prepared, the proposed budget of the Pension Fund for 2026 had not been finalized. The estimates will be subject to further revision in accordance with the administrative budget of the Pension Fund for 2026 and action taken by the General Assembly at its eightieth session on the basis of the recommendations the Pension Board may make in 2025 with respect to that budget. A statement of administrative and budgetary implications will be submitted to the Assembly at its eightieth session should the Pension Board’s recommendations involve resources different from those estimated in the present report.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The proposed regular budget resources for 2026, including the breakdown of resource changes, as applicable, are reflected in table 1.27.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Evolution of financial resources by object of expenditure",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate  ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Object of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/ expanded mandates ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Percentage",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate  ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Travel of representatives",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "53.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "72.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "72.6",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Travel of staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "51.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "46.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "46.2",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Grants and contributions",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5 188.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 342.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 342.7",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 5 293.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 461.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 461.5",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "Additional details on the distribution of the proposed resources for 2026 are reflected in table 1.28 and figure 1.IV.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "As reflected in table 1.28 (1), the overall resources proposed for 2026 amount to $3,461,500, reflecting no change compared with the approved budget for 2025.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Evolution of financial resources by source of funding and component",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "list-2",
+              "text": "(1)\tRegular budget",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate  ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Component",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/ expanded mandates ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate  ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Secretariat of the United Nations Staff Pension Committee (including reimbursement from the United Nations for services provided by the United Nations Joint Staff Pension Fund)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5 293.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 461.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 461.5",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5 293.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 461.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 461.5",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "list-2",
+              "text": "(2)\tExtrabudgetary",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Component",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 \nestimate",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Change",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Secretariat of the United Nations Staff Pension Committee (including reimbursement from the United Nations for services provided by the United Nations Joint Staff Pension Fund)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 234.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 146.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 146.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 234.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 146.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 146.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal (1+2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "8 528.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5 607.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5 607.6",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Distribution of proposed resources for 2026",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "image",
+              "text": "",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "Information on the advance booking for air travel is reflected in table 1.29. The office will strive to maintain a 100 per cent compliance rate with the advance booking of air travel policy by continuing to improve the planning of travel arrangements.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Compliance rate",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Percentage)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2022 actual",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2023 actual",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 actual",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 planned",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 planned",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Air tickets purchased at least  two weeks before the commencement of travel",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "80",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "94",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

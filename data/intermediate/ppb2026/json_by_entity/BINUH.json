@@ -1,0 +1,2644 @@
+{
+  "entity": "United Nations Integrated Office in Haiti",
+  "entity_abbrev": "BINUH",
+  "entity_raw_name": "10.\tUnited Nations Integrated Office in Haiti",
+  "source_file": "A_80_6 (SECT. 3)_ADD.4_CLUSTER_III_FASCICLE ADVANCE UNEDITED COPY FOR ACABQ.json",
+  "content": [
+    {
+      "block_type": "italic",
+      "text": "($36,804,900)",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": []
+    },
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The United Nations Integrated Office in Haiti (BINUH) is responsible for advising the Government of Haiti in promoting and strengthening political stability and good governance, including the rule of law; preserving and advancing a peaceful and stable environment, including through supporting an inclusive inter-Haitian national dialogue; and protecting and promoting human rights. The mandate derives from Security Council resolution 2476 (2019) and subsequent resolutions, including most recently resolution 2743 (2024), which extended the mandate of the Mission until 15 July 2025.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "2476 (2019)",
+                      "https://undocs.org/en/S/RES/2476(2019)"
+                    ],
+                    [
+                      "2743 (2024),",
+                      "http://undocs.org/en/S/RES/2743(2024)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Security Council, in its resolution 2743 (2024) called on BINUH to develop a strategy in consultation with the government of Haiti on how it will continue to support a Haitian-led and Haitian-owned political process, and to support the Haitian Government to develop and implement a strategic communications plan including to counter misinformation and disinformation regarding the work of state institutions and the political process. BINUH developed a political strategy addressing six areas of support: (a) facilitating an inclusive national dialogue; (b) supporting electoral and constitutional reforms; (c) enhancing public security; (d) strengthening the rule of law; (e) improving governance and institutional capacity; and (f) fostering United Nations system integration and regional partnerships. Implementation of the strategy and support on strategic communications is reported to the Security Council through the reports of the Secretary-General on a quarterly basis. In a series of public statements issued in January 2025, the transitional authorities reaffirmed their commitment to finalize the ongoing constitutional reform process and hold credible elections before the end of 2025.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "BINUH redoubled its advisory efforts to mitigate possible disruptions to the political transition caused by the succession of three Prime Ministers between March and November 2024. These repeated changes in Haitian leadership coincided with a marked escalation in gang violence, which in November 2024 led to the closing of the international airport, the suspension of all commercial flights and a flight ban imposed by the United States Federal Aviation Administration over Haitian airspace. The United Nations Department of Safety and Security subsequently authorised the evacuation of Programme Criticality 2 (PC 2) personnel from the capital and the relocation of PC 1 and PC 2 personnel to the regions outside Port-au-Prince. The Designated Official, in consultation with the Security Management Team, decided to retain a ceiling of 133 UN personnel in the capital based on the assessed extraction capacity by air and road. Under this ceiling, BINUH maintains a skeleton team of 17 personnel headed by the Special Representative. Skeleton Team personnel are replaced by a pool of 51 international staff rotating on the rest and recuperation cycle every four weeks while the remaining international staff work remotely. Following this second evacuation in November 2024, the Secretary-General launched a strategic assessment and advised the Security Council on the full range of options for continued United Nations efforts in Haiti, which include increasing the robustness of BINUH to stay and deliver and establishing a UN logistic support office for the multinational security support Mission that would operate separately from BINUH.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The prevailing hostile operating environment is expected to persist, ruling out the return to Haiti of all the international personnel evacuated since November 2024. This situation triggered a review by the Secretariat of BINUH’s Mission Concept in April 2025 to update the planning assumptions and risks, notably the security considerations. The updated Mission Concept will prioritise BINUH’s mandated tasks and resources to be cost-effective in the prevailing operating environment. It will include recommendations to rationalize the mission’s structure, size and activities to ensure safe and effective mandate implementation. The Mission Concept review is expected to be largely completed in June 2025, prior to the Security Council’s consultations on the mission’s mandate extension in mid-July 2025. The Mission Concept will be finalized within three weeks after the issuance of the new mandate. The implications of the Mission Concept review and the new mandate, as approved by the Security Council, will be assessed and presented in the context of revised estimates.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The objective, to which the mission contributes, is to strengthen political stability and good governance, including accountability and the rule of law; restore a peaceful and stable environment; protect and promote human rights; and strengthen gender equality in Haiti.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "To contribute to the objective, the Mission will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Update its political strategy in support of the national authorities to advance and facilitate a Haitian-led, Haitian-owned political process aimed at reaching an urgent agreement on a road map for constitutional reform and general elections;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Assist the Government in developing a communications plan to counter misinformation;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Reinforce the capacity of the Haitian National Police, including through training on human rights and crowd control, to respond to gang violence and sexual and gender-based violence and to maintain public order;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Improve the Directorate of Penitentiary Administration management and oversight of prison facilities to ensure proper treatment of inmates in accordance with international standards;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Develop an inclusive and comprehensive approach with all sectors of society to reduce community violence, in particular gang violence;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Address human rights abuses and violations with dedicated capacity to address sexual and gender-based violence and comply with international human rights obligations;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Work with UNODC and relevant United Nations agencies to support Haitian efforts in combating illicit financial flows, the trafficking in arms and enhancing the management and control of borders and ports;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Strengthen the criminal justice sector, including by promoting key reforms; support government efforts to improve internal oversight and accountability as they relate to corruption; address prolonged pre-trial detention; and ensure merit-based judicial appointments and the timely renewal of judicial mandates;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Include available information on cases of gang violence, criminal activities and human rights abuses in Haiti, collected in carrying out the BINUH mandate, as an annex to the report of the Secretary-General to the Security Council; and",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Cooperate with the Security Council Committee established pursuant to resolution 2653 (2022) concerning Haiti and its Panel of Experts and use the good offices of the Secretary-General to encourage the Government to implement resolution 2653 (2022).",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "2653 (2022)",
+                      "https://undocs.org/en/S/RES/2653(2022)"
+                    ],
+                    [
+                      "2653 (2022)",
+                      "https://undocs.org/en/S/RES/2653(2022)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "An operational Provisional Electoral Council able to manage and handle multiple electoral functions across all 10 departments of the country;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Adoption of a revised constitution after the holding of a national referendum;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The holding of inclusive and credible general elections and the peaceful transfer of power at all levels; and",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Installation of all elected officials and appointment of the government.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to cooperation with other entities, BINUH collaborates with the Organization of American States, the Caribbean Community, and planners on the ground for the Multinational Security Support Mission in Haiti. The mission also engages closely with the diplomatic community, as appropriate.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to inter-agency coordination and liaison, BINUH works with the United Nations country team, the Office for the Coordination of Humanitarian Affairs, UNODC, UNDP and the Office of the United Nations High Commissioner for Human Rights through the United Nations Sustainable Development Cooperation Framework for the period 2023–2027. The Office also supports the in-country requirements of the Panel of Experts on Haiti.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to the external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Political polarization continues to undermine the parties’ ability to achieve the consensus required to advance tangible initiatives to implement political, legal and economic reforms;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The fragile security situation continues to seriously affect both the pace and the sustainability of political, legal and economic reforms;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Government of Haiti further develops the capacities of the Haitian National Police and its Directorate of Prison Administration, including through the ongoing provision of sufficient budget allocation, complemented by external contributions through a multi-donor basket fund managed by UNDP;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Challenges in the operational capacity of the Multinational Security Support Mission in Haiti curtail political gains significantly;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The impact of hurricanes and earthquakes are not discounted; and",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The international donor community and national authorities are unable to agree on stronger coordination arrangements to advance the 2030 Agenda.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The mission integrates a gender perspective into its planning, operations, deliverables and results, as appropriate, and encourages the meaningful participation of women in political processes, dialogues and negotiations, as well as their representation in decision-making positions. Its reporting includes disaggregated data on the impact of human rights violations and abuses on women, and on accountability and justice for crimes of violence against women and girls. In addition, the mission works with civil society actors focusing on gender and human rights in the context of the implementation of recommendations issued by the Committee on the Elimination of Discrimination against Women in 2016 and the second universal periodic review cycle for Haiti, in 2016, on the human rights situation.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "National police authorities improved police performance and enhanced security in Haiti",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2024, crimes in Haiti, including homicide, kidnapping and rape, rose to unprecedented levels. The number of intentional homicides surged from 4,847 in 2023 to over 7,000 in 2024. BINUH continued to mentor and advise senior national police commanders on effectively addressing criminal networks and gangs, especially on anti-gang operations and intelligence gathering. The mission supported the Haitian National Police in developing a roadmap for the elaboration of a multi-year strategic development plan aimed at strengthening institutional and operational capacities, promoting the rule of law, and enhancing security. The international community has also been actively engaged in efforts to professionalize the Haitian National Police. Advocacy supported by BINUH, for a UNDP-managed multi-donor basket fund has disbursed $14.1 million as of 31 December 2024, including commitments and advances, out of the initial allocated budget of $25.5 million, corresponding to an implementation rate of 54.4 per cent. In addition, a two-year extension (2024-2026) has been granted to the basket fund to allow for the achievement of expected outcomes and the full disbursement of remaining funds. However, the implementation of the planned activities in 2024 has faced delays, primarily due to operational constraints resulting from the worsening security situation and the closure of the international airport.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective is presented in the performance measure below (see table 56).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 56 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Low satisfaction among the population with public services offered by national institutions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Disruptions in governance due to a political crisis and a lack of responsive, inclusive, participatory and representative decision-making",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The basket fund received $25.5 million from donors, and adjustments were devised and implemented to optimally align with the HNP priorities",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned results for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 1: Increased non-partisans buy-in and constructive engagement towards the implementation of a revised constitution – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Over the course of 2024, BINUH engaged with key stakeholders, underscoring the importance of holding an inclusive and participative constitutional reform process as a critical step to the holding of general elections. BINUH guided stakeholders through a transition of three successive Prime Ministers within the year accompanying the reshuffling of three ministerial cabinets underscoring the need to maintain focus on the transitional process to complete the constitutional reform process and advance to the holding of general elections. BINUH’s daily advocacy and accompaniment of key players, albeit difficult, has proved an important factor in moving the political process forward.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Expected progress towards the objective is presented in the performance measure below (see table 57).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 57 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Significant civil unrest and increased gang violence led to heightened international concern about the situation in Haiti, a recommendation by the Secretary-General for the deployment of a non-United Nations rapid action force in response to a request from the Government of Haiti for assistance through an armed international specialized force, and the imposition of sanctions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "High Transitional Council was established and launched a national dialogue on electoral and political reforms\nContinued divergences among stakeholders and escalating gang violence hamper wider progress in the political process",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Advocacy for a sustained and inclusive Haitian-led dialogue on constitutional reforms and elections",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Holding a national referendum on constitutional reform and general elections.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Installation of all elected officials at the local, parliamentary and presidential levels.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "heading-x",
+                      "text": "Result 2: General elections held, and elected officials installed following a transparent adjudication of electoral contentions – Proposed programme plan for 2026",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "These will be the first elections since the 2016 electoral process and will re-establish all elected positions in government, allowing a return of functioning, democratic institutions. Key to holding general elections is the restoration of sufficient levels of security and stability, a transparent and efficient Provisional Electoral Council (CEP) and the holding of a constitutional reform referendum. The nine CEP councillors, representing nine sectors of society, have been appointed and in coordination with the Executive Director have initiated a reactivation of the CEP regional and municipal offices.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "heading-x",
+                      "text": "Lessons learned and planned change",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "The lesson for the Mission was that the 2015-2017 cycle of elections supported by a peacekeeping operation in the process of withdrawing devolved much of the logistic coordination and transport tasks to the United Nations country team (UNDP and UNOPS). In applying the lesson, BINUH will provide technical advice and guidance and accompany the Haitian leadership and CEP through the electoral process, while coordinating closely with United Nations country team partners to provide the required programmatic support to the government through the joint programme of technical electoral assistance",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "Expected progress towards the objective is presented in the performance measure below (see figure 58)",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "heading-x",
+                      "text": "Table 58",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "other",
+                          "text": "Performance measure:",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "table-content",
+                          "text": null,
+                          "table_content": [
+                            [
+                              {
+                                "text": "2022 (actual)",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "2023 (actual)",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "2024 (actual)",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "2025 (planned)",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "2026 (planned)",
+                                "hyperlinks": []
+                              }
+                            ],
+                            [
+                              {
+                                "text": "",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "",
+                                "hyperlinks": []
+                              }
+                            ],
+                            [
+                              {
+                                "text": "    –",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "    –",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "Establishment of a new Provisional Electoral Council (CEP)",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "Reactivation of the CEP across 10 departments and 145 municipalities",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "Constitutional referendum and general elections held",
+                                "hyperlinks": []
+                              }
+                            ]
+                          ],
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Table 57 lists all deliverables of the mission.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 57 – Deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tReports of the Secretary-General to the Security Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tMeetings of the Security Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSeminars, workshops and training events (number of days)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "150",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "112",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "150",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "150",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3.\tSeminars, workshops and training events on four main areas of work: (a) implementation of and resource mobilization for the strategic plan to further develop and equip the Haitian National Police, sustain police service capable of maintaining public security, reduce gang violence, enhance police oversight and protect human rights; (b) implementation by national authorities and the United Nations country team of programmes on disarmament, demobilization and reintegration, community violence reduction and weapons and ammunition management; (c) management and oversight of prisons and detention centres according to international standards; and (d) promotion of human rights and participation of women as decision-makers in State institutions, political parties and initiatives of dialogue and consensus-building",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "150",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "112",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "150",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "150",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tField and technical cooperation projects (number of projects)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "13",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4.\tProjects in support of operationalizing the Haitian National Police basket fund, including on strategic planning, vetting, intelligence-led operations, anti-gang activities, efforts against illicit financial flows and support for the development of the national police legal framework",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5.\tProjects to support strengthened air, land and sea border controls, including the Container Control Programme, the Airport Communication Programme and the Global Maritime Crime Programme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tPublications (number of publications)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t6.\tThematic public reports on human rights, as well as quarterly global horizontal notes on child rights violation",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTechnical materials (number of materials)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t7.\tMaterials conveying advisory support to national interlocutors ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tFact-finding, monitoring and investigation missions (number of missions)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "50",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "42",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "50",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "50",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t8.\tFact-finding, monitoring and investigation missions to assess prison facilities, the condition of detainees and administration and security arrangements; to conduct police inspections to assess the status of police stations and police services in each department, as well as the internal administration and quality of police services; to conduct an assessment of police stations and police services to assess the implementation of the basket fund in support of the Haitian National Police; to assess human rights and allegations of violations; to assess implementation of the human rights due diligence policy; and to carry out joint monitoring missions to assess gang violence in seven gang-controlled neighbourhoods of Port-au-Prince and other communities across Haiti",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "50",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "42",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "50 ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "50",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tGood offices: good offices to: (a) foster cooperation and dialogue among the main political and social actors, build consensus and strengthen political stability and good governance; (b) support the efforts of national authorities and international partners to facilitate local peace initiatives, reduce gang and community violence and advance a peaceful and stable environment; and (c) raise awareness of human rights abuses and violations, sexual and gender-based violence and gender discrimination, and strengthen institutional accountability to address these problems and end impunity for perpetrators. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: good offices to: (a) foster cooperation and dialogue among the main political and social actors, build consensus and strengthen political stability and good governance; (b) support the efforts of national authorities and international partners to facilitate local peace initiatives, reduce gang and community violence and advance a peaceful and stable environment; and (c) raise awareness of human rights abuses and violations, sexual and gender-based violence and gender discrimination, and strengthen institutional accountability to address these problems and end impunity for perpetrators. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: good offices to: (a) foster cooperation and dialogue among the main political and social actors, build consensus and strengthen political stability and good governance; (b) support the efforts of national authorities and international partners to facilitate local peace initiatives, reduce gang and community violence and advance a peaceful and stable environment; and (c) raise awareness of human rights abuses and violations, sexual and gender-based violence and gender discrimination, and strengthen institutional accountability to address these problems and end impunity for perpetrators. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: good offices to: (a) foster cooperation and dialogue among the main political and social actors, build consensus and strengthen political stability and good governance; (b) support the efforts of national authorities and international partners to facilitate local peace initiatives, reduce gang and community violence and advance a peaceful and stable environment; and (c) raise awareness of human rights abuses and violations, sexual and gender-based violence and gender discrimination, and strengthen institutional accountability to address these problems and end impunity for perpetrators. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: good offices to: (a) foster cooperation and dialogue among the main political and social actors, build consensus and strengthen political stability and good governance; (b) support the efforts of national authorities and international partners to facilitate local peace initiatives, reduce gang and community violence and advance a peaceful and stable environment; and (c) raise awareness of human rights abuses and violations, sexual and gender-based violence and gender discrimination, and strengthen institutional accountability to address these problems and end impunity for perpetrators. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConsultation, advice and advocacy: developing initiatives that promote dialogue and consensus-building; advising on the development of effective, accountable and transparent institutions and advancing political, legal and economic reforms; developing the institutional framework and the electoral calendar; providing the Haitian National Police and the Directorate of Prison Administration with expert advice to strengthen the capacity and oversight of the police and corrections service; advising State institutions and agencies on the implementation of action plans to promote and protect human rights and gender equality; and advising on the development of a regulatory arms control framework, including the effective implementation of a holistic weapons and ammunition interinstitutional mechanism. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: developing initiatives that promote dialogue and consensus-building; advising on the development of effective, accountable and transparent institutions and advancing political, legal and economic reforms; developing the institutional framework and the electoral calendar; providing the Haitian National Police and the Directorate of Prison Administration with expert advice to strengthen the capacity and oversight of the police and corrections service; advising State institutions and agencies on the implementation of action plans to promote and protect human rights and gender equality; and advising on the development of a regulatory arms control framework, including the effective implementation of a holistic weapons and ammunition interinstitutional mechanism. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: developing initiatives that promote dialogue and consensus-building; advising on the development of effective, accountable and transparent institutions and advancing political, legal and economic reforms; developing the institutional framework and the electoral calendar; providing the Haitian National Police and the Directorate of Prison Administration with expert advice to strengthen the capacity and oversight of the police and corrections service; advising State institutions and agencies on the implementation of action plans to promote and protect human rights and gender equality; and advising on the development of a regulatory arms control framework, including the effective implementation of a holistic weapons and ammunition interinstitutional mechanism. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: developing initiatives that promote dialogue and consensus-building; advising on the development of effective, accountable and transparent institutions and advancing political, legal and economic reforms; developing the institutional framework and the electoral calendar; providing the Haitian National Police and the Directorate of Prison Administration with expert advice to strengthen the capacity and oversight of the police and corrections service; advising State institutions and agencies on the implementation of action plans to promote and protect human rights and gender equality; and advising on the development of a regulatory arms control framework, including the effective implementation of a holistic weapons and ammunition interinstitutional mechanism. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: developing initiatives that promote dialogue and consensus-building; advising on the development of effective, accountable and transparent institutions and advancing political, legal and economic reforms; developing the institutional framework and the electoral calendar; providing the Haitian National Police and the Directorate of Prison Administration with expert advice to strengthen the capacity and oversight of the police and corrections service; advising State institutions and agencies on the implementation of action plans to promote and protect human rights and gender equality; and advising on the development of a regulatory arms control framework, including the effective implementation of a holistic weapons and ammunition interinstitutional mechanism. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: field outreach and advocacy materials (brochures, flyers, flipcharts, infographics and banners) explaining thematic objectives in the mission’s mandate; outreach events on key priorities of the mission; traditional and digital media campaigns, inclusive of print, radio and social platforms, to support United Nations electoral, disarmament, demobilization and reintegration/community violence reduction, police, corrections, justice and human rights initiatives and joint programmes. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: field outreach and advocacy materials (brochures, flyers, flipcharts, infographics and banners) explaining thematic objectives in the mission’s mandate; outreach events on key priorities of the mission; traditional and digital media campaigns, inclusive of print, radio and social platforms, to support United Nations electoral, disarmament, demobilization and reintegration/community violence reduction, police, corrections, justice and human rights initiatives and joint programmes. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: field outreach and advocacy materials (brochures, flyers, flipcharts, infographics and banners) explaining thematic objectives in the mission’s mandate; outreach events on key priorities of the mission; traditional and digital media campaigns, inclusive of print, radio and social platforms, to support United Nations electoral, disarmament, demobilization and reintegration/community violence reduction, police, corrections, justice and human rights initiatives and joint programmes. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: field outreach and advocacy materials (brochures, flyers, flipcharts, infographics and banners) explaining thematic objectives in the mission’s mandate; outreach events on key priorities of the mission; traditional and digital media campaigns, inclusive of print, radio and social platforms, to support United Nations electoral, disarmament, demobilization and reintegration/community violence reduction, police, corrections, justice and human rights initiatives and joint programmes. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: field outreach and advocacy materials (brochures, flyers, flipcharts, infographics and banners) explaining thematic objectives in the mission’s mandate; outreach events on key priorities of the mission; traditional and digital media campaigns, inclusive of print, radio and social platforms, to support United Nations electoral, disarmament, demobilization and reintegration/community violence reduction, police, corrections, justice and human rights initiatives and joint programmes. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tExternal and media relations: strategic plan to ensure coverage of key activities of the mission, inclusive of press conferences, editorials on key issues, press briefings, press releases, targeted interviews and publications with target audiences and networks; daily media and social platform monitoring providing strategic analysis of media and social platform trends, risks and opportunities to provide guidance for crisis communication management. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: strategic plan to ensure coverage of key activities of the mission, inclusive of press conferences, editorials on key issues, press briefings, press releases, targeted interviews and publications with target audiences and networks; daily media and social platform monitoring providing strategic analysis of media and social platform trends, risks and opportunities to provide guidance for crisis communication management. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: strategic plan to ensure coverage of key activities of the mission, inclusive of press conferences, editorials on key issues, press briefings, press releases, targeted interviews and publications with target audiences and networks; daily media and social platform monitoring providing strategic analysis of media and social platform trends, risks and opportunities to provide guidance for crisis communication management. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: strategic plan to ensure coverage of key activities of the mission, inclusive of press conferences, editorials on key issues, press briefings, press releases, targeted interviews and publications with target audiences and networks; daily media and social platform monitoring providing strategic analysis of media and social platform trends, risks and opportunities to provide guidance for crisis communication management. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: strategic plan to ensure coverage of key activities of the mission, inclusive of press conferences, editorials on key issues, press briefings, press releases, targeted interviews and publications with target audiences and networks; daily media and social platform monitoring providing strategic analysis of media and social platform trends, risks and opportunities to provide guidance for crisis communication management. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDigital platforms and multimedia content: creation and management of website and social media; production and dissemination of content for multimedia products and campaigns (with a focus on digital radio) able to engage key actors on mission priorities and promoting transparency and accountability; and campaigns and products for social media platforms showing the impact of the mission’s work.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: creation and management of website and social media; production and dissemination of content for multimedia products and campaigns (with a focus on digital radio) able to engage key actors on mission priorities and promoting transparency and accountability; and campaigns and products for social media platforms showing the impact of the mission’s work.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: creation and management of website and social media; production and dissemination of content for multimedia products and campaigns (with a focus on digital radio) able to engage key actors on mission priorities and promoting transparency and accountability; and campaigns and products for social media platforms showing the impact of the mission’s work.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: creation and management of website and social media; production and dissemination of content for multimedia products and campaigns (with a focus on digital radio) able to engage key actors on mission priorities and promoting transparency and accountability; and campaigns and products for social media platforms showing the impact of the mission’s work.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: creation and management of website and social media; production and dissemination of content for multimedia products and campaigns (with a focus on digital radio) able to engage key actors on mission priorities and promoting transparency and accountability; and campaigns and products for social media platforms showing the impact of the mission’s work.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Resource requirements (regular budget) – Table 59 – Financial resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Variance",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 vs. 2024 Increase/(decrease)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Military and police personnel costs",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 1 826.6 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 017.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 968.4 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 968.4 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 139.1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 139.1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "     (829.3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "     (829.3)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Civilian personnel costs",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 24 239.1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "25 036.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "25 869.0 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "25 869.0 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "26 695.9 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "26 695.9 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "826.9 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "826.9 ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Operational costs",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 10 474.4 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7 664.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7 867.6 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7 867.6 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8 969.9 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8 969.9 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 102.3 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 102.3 ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal (net of staff assessment)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 36 540.1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "33 718.2 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "35 705.0 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "35 705.0 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "36 804.9 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "36 804.9 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 099.9 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 099.9 ",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Table 60 – Human resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "USG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "ASG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-1b",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-5b",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-4b",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "FS",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "NPOc",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "GSab",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "LLd",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Approved 2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1c",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "10",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "28",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "44",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "107",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "24",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "47",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "73",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "184",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "184",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Proposed 2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1c",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "10",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "27",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "44",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "106",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "24",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "47",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "73",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "183",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "183",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tChange ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1)",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "a\tOther level, unless otherwise stated.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "b\tIncludes one D-1, one P-5, one P-4 and two General Service positions approved as general temporary assistance positions.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "c\tPosition is funded at 50 per cent and cost-shared with the Development Coordination Office.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "d\tProposed abolishment of 2 posts deployed to the Kuwait Joint Support Office from BINUH, effective 1 October 2026.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The proposed resources for 2026 for BINUH amount to $36,804,900 (net of staff assessment) and would provide for the deployment of 48 United Nations police personnel ($1,139,100), salaries, common staff costs and danger pay ($26,695,900) for 106 international posts and positions (1 Assistant Secretary-General, 1 D-2, 5 D-1, 10 P-5, 27 P-4, 15 P-3, 3 P-2, 44 Field Service) and 73 national posts (24 National Professional Officer, 2 General Service, and 47 Local level, including 2 Local level up to 30 September 2026), 4 international United Nations Volunteers and 3 government-provided personnel, and operational costs ($8,969,900), comprising costs for consultants and consulting services ($94,300), official travel ($336,500), facilities and infrastructure ($4,387,300), ground transportation ($592,700), communications and information technology ($1,738,700), medical ($595,000) and other supplies, services and equipment ($1,204,400).",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "A vacancy rate of 17.8 per cent has been applied to the estimates for international posts on the basis of the actual vacancy rate in March 2025. A vacancy rate of 33.3 per cent has been applied to the estimates for National Professional Officer posts and a vacancy rate of 12.2 per cent has been applied to the estimates for Local level posts based on the actual vacancy rates in March 2025. A vacancy rate of 50 per cent has been applied to international United Nations Volunteers, and 60.4 per cent to the estimates for United Nations police personnel have been applied based on the actual vacancy rates in March 2025. A vacancy rate of 27.8 per cent has been applied to government-provided personnel on the basis of the average actual vacancy rate during 2024.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The following staffing changes are proposed for 2026:",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-x",
+              "text": "Police and Corrections Service",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Abolishment of one Engineer (P-4) post under the Police and Corrections Service which will no longer be required since UNDP has been employing locally recruited engineers for the Basket Fund’s construction initiatives for the Haitian National Police.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-x",
+              "text": "Kuwait Joint Support Office",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Transitioning of client missions of Kuwait Joint Support Office (KJSO) to the Regional Service Centre in Entebbe, Uganda: In view of the termination of the mandate of UNAMI on 31 December 2025, it is the intention of the Secretariat to transition the peace operations supported by the KJSO to the RSCE by the end of the UNAMI liquidation process which will end in September 2026. In line with this plan, the current budget contains the proposed abolishment of 2 KJSO posts funded from BINUH, effective 1 October 2026.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The approved 2025 staffing table for BINUH includes five general temporary assistance positions. It is proposed that the positions be continued in 2026, comprising the following:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "One Principal Human Rights Officer (D-1) in the Human Rights Service to respond to and address the human rights requirements set by the Security Council as reflected in the BINUH mandate, adopted in resolution 2476 (2019). Such a dedicated position, with specific human rights expertise, is important to facilitate trusted engagement at a high level with senior Haitian authorities, allowing for the provision of technical assistance and advice to the country’s national human rights institutions;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-x",
+              "text": "Backstopping support – Department of Political and Peacebuilding Affairs",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Three backstopping positions in the Haiti team of the Americas Division of the Department of Political and Peacebuilding Affairs, comprising one Senior Political Affairs Officer (P-5), one Political Affairs Officer (P-4) and one Team Assistant (General Service), who have been providing backstopping support to BINUH since 2019 and will remain critical to ensuring ongoing support and strategic advice and analysis to principals at Headquarters for decision-making with regard to BINUH. The core functions that they undertake are required throughout the lifespan of the mission, including its start-up, the duration of the implementation of its mandate and its closing;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-x",
+              "text": "Department of Management Strategy, Policy and Compliance",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "One Finance and Budget Assistant (General Service) backstopping position in the Field Operations Finance Division, where the need remains high for the continued delivery of high-intensity and high-quality support to legislative bodies in their review of the budgets of special political missions. The continuation of this position will also ensure sufficient capacities for budget preparation, budget administration and performance monitoring of all continuing special political missions.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The increase in requirements for 2026 compared with the appropriation for 2025 is attributable mainly to: (a) increased requirements for international staff due to application of a lower vacancy rate of 17.8 per cent compared to the vacancy rate of 20.7 per cent applied during 2025, revised salary scales for international staff; (b) increased requirements for National Professional Officers and Local level staff due to the revised salary scale, and lower vacancy rate for Local level posts of 12.2 per cent compared to the vacancy rate of 13.7 per cent applied in 2025; (c) increased requirements for facilities and infrastructure due to increased demand for security services; (d) increased requirements for medical services due to increased costs of medical evacuation due to degradation of security environment; (e) increased requirements under other supplies, services and equipment reflecting higher demand for the United Nations Humanitarian Air Services flights due to logistical challenges and cancelation of civil aviation flights, increased freight due to expected receipt of assets from the United Nations reserve. The increased requirements were partially offset by application of a higher vacancy rates for United Nations Police Officers, government-provided personnel and international United Nations Volunteers.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Extrabudgetary resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "In 2025, extrabudgetary resources in the amount of $263,000 are projected to be used to provide resources for two main initiatives: (a) promoting women-led social community dialogues and local conflict prevention initiatives in vulnerable neighbourhoods of Port-au-Prince; (b) enhancing inclusive political participation in Haiti while creating safe and peaceful space for dialogue; and (c) school support to children born as a result of sexual exploitation and abuse by UN personnel in Haiti.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "In 2026, extrabudgetary resources in the amount of $238,000 are projected to be used to support the continuation of the above-mentioned projects.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "11.\t     United Nations Integrated Transition Assistance Mission in Sudan",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub",
+          "text": "Liquidation activities",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "The mandate of the United Nations Integrated Transition Assistance Mission in Sudan (UNITAMS) was outlined in successive Security Council resolutions 2524 (2020), 2579 (2021) and 2636 (2022) and terminated through resolution 2715 (2023). By that resolution, the Council requested the Mission to immediately start on 4 December 2023 the cessation of its operations and the transfer of its tasks, where appropriate and to the extent feasible, to United Nations agencies, funds and programmes, with the objective of completing this by 29 February 2024. The Council decided that the liquidation of UNITAMS should commence on 1 March 2024.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The administrative liquidation of UNITAMS, including the disposal of assets, was carried out from 1 March to 31 December 2024.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The General Assembly, by its resolution 78/274, appropriated the amount of $22.2 million for 2024.  UNITAMS incurred $17.8 million in expenditure for the period, representing a resource utilization rate of 80.5 per cent owing to the pace of liquidation and lower-than-estimated common staff costs for the separation of staff members, including in connection with termination indemnities.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Table 61 – Financial resources",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "(Thousands of United States dollars)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Appropriation",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Variance Surplus/(deficit)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(4)=(2)-(1)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Military and police personnel  ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "52.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "64.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(12.5)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Civilian personnel ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "20 145.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15 729.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4 415.8",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Operational costs ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 964.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 040.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(75.4)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal (net of staff assessment) ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "22 162.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "17 834.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4 327.9",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The process for the drawdown and liquidation of property of UNITAMS was guided by the principles of and policies contained in Financial Rule 105.23. Given the unique circumstances surrounding the closure of UNITAMS, which included the rapidly deteriorating security situation in Sudan and the challenges posed by an active conflict, the process of property disposal within UNITAMS had to be adapted to address the region’s complex operational realities. The mission collaborated extensively with the United Nations Headquarters throughout this period. The mission also engaged with the Government of Sudan on key issues such as adherence to the Status of Mission Agreement, security concerns across various locations across Sudan, and the inability to guarantee environmental cleanup in some operational areas due to the ongoing instability. These challenges significantly influenced the approach adopted for the disposal of property.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Shipping of the United Nations-owned equipment to the United Nations Logistics Base at Brindisi, Italy, or other missions was hindered due to the difficulties in obtaining export clearances, the prohibitive costs associated with shipment for certain items, and the lengthy export procedure, which did not commensurate with the mission’s drawdown timeline. In areas where physical access for verification was blocked due to conflict, or where property had been looted, items were written off as losses due to hostile action.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The assets of UNITAMS, with a total capitalized value/acquisition value of $13,602,100 (corresponding net book value/operational value of $6,634,400), were disposed of as at 31 December 2024, of which 37.4 per cent have been transferred to UN Reserves, with the remaining to recipients including RSCE, UNISFA, UNSOS and others, while 57.7 per cent were written off.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "A summary of the final disposition of all assets is reflected in table 62 below.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Table 62",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Summary of the final disposition of the assets",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "(Thousands of United States dollars)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Disposal method",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Capitalized value / Acquisition value",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Net book value / Operational value",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Commercial sale",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "145.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "22.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Transfer ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5 083.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 298.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "37.4",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Sale at fair market value ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "439.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "197.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3.2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Destruction ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "83.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "36.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.6",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Gifted to government",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.0",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5 754.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 556.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "42.3",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Written-off (includes inventory)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "7 847.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4 077.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "57.7",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Total ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "13 602.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6 634.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100.0",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

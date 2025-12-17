@@ -1,0 +1,4272 @@
+{
+  "entity": "Office of the Special Representative of the Secretary-General on Sexual Violence in Conflict",
+  "entity_abbrev": "OSRSG-SVC",
+  "entity_raw_name": "V.\t\tOffice of the Special Representative of the Secretary-General on Sexual Violence in Conflict",
+  "source_file": "A_80_6_SECT.1.PART AB_CONSOLIDATED_FASCICLE_ADVANCED COPY TO ACABQ_22 MAY 2025.json",
+  "content": [
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Office of the Special Representative of the Secretary-General on Sexual Violence in Conflict is responsible, in line with Security Council resolution 1888 (2009), for providing coherent and strategic leadership and promoting the coordination of efforts among relevant stakeholders, through primarily the United Nations Action against Sexual Violence in Conflict, on preventing and addressing sexual violence as a weapon of war and tactic of terrorism and for engaging with justice and security sectors, all parties to armed conflict, civil society and the survivors of such crimes.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "1888 (2009)",
+                      "https://undocs.org/en/S/RES/1888(2009)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The mandate derives from the priorities established in relevant General Assembly resolutions and/or decisions, including resolution 65/259, by which the Assembly established the Office, following the establishment of the mandate of the Special Representative pursuant to Security Council resolution 1888 (2009). In accordance with resolution 1888 (2009) and subsequent related resolutions and recognizing that conflict-related sexual violence remains underreported and insufficiently addressed, the role of the Special Representative and that of the Office is, among others: (a) to give victims and affected communities a voice; (b) to mobilize the political will and action of the international community, in particular to address the impunity of perpetrators of violations; (c) to foster collaboration and partnerships and broaden the circle of stakeholders on the issue; (d) to coordinate advocacy and programmatic responses, in particular in the United Nations system; (e) to ensure more reliable and comprehensive data on sexual violence in conflict as a basis for action at all levels; and (f) to disseminate information/knowledge on approaches and best practices to address sexual violence in conflict.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "65/259",
+                      "https://undocs.org/en/A/RES/65/259"
+                    ],
+                    [
+                      "1888 (2009)",
+                      "https://undocs.org/en/S/RES/1888(2009)"
+                    ],
+                    [
+                      "1888 (2009)",
+                      "https://undocs.org/en/S/RES/1888(2009)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The mandate derives from the priorities established in relevant Security Council resolutions, including 1820 (2008), 1888 (2009), 1960 (2010), 2106 (2013) and 2467 (2019), as well as relevant country-specific and sanctions resolutions that make explicit reference to sexual violence in conflict and the mandate of the Special Representative. Furthermore, the adoption of Council resolutions 2331 (2016) and 2388 (2017) extends the scope of work of the Office to the areas of counter-terrorism, anti-trafficking efforts and related security and justice sector engagement.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "1820 (2008)",
+                      "https://undocs.org/en/S/RES/1820(2008)"
+                    ],
+                    [
+                      "1888 (2009)",
+                      "https://undocs.org/en/S/RES/1888(2009)"
+                    ],
+                    [
+                      "1960 (2010)",
+                      "https://undocs.org/en/S/RES/1960(2010)"
+                    ],
+                    [
+                      "2106 (2013)",
+                      "https://undocs.org/en/S/RES/2106(2013)"
+                    ],
+                    [
+                      "2467 (2019)",
+                      "https://undocs.org/en/S/RES/2467(2019)"
+                    ],
+                    [
+                      "2331 (2016)",
+                      "https://undocs.org/en/S/RES/2331(2016)"
+                    ],
+                    [
+                      "2388 (2017)",
+                      "https://undocs.org/en/S/RES/2388(2017)"
+                    ]
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The objective, to which the Office contributes, is to prevent and eradicate sexual violence as a tactic of war and terrorism and improve the provision of multisectoral services for survivors, as well as the delivery of justice and accountability for such crimes.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "To contribute to the objective, the Office will continue to:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tEngage with parties to conflict and other relevant stakeholders on addressing conflict-related sexual violence, with a priority focus on justice and accountability for such crimes as a key element of deterrence and prevention, including through engagement with justice and security actors in countries of concern;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tEngage with Member States at the global level, including in the Security Council and the General Assembly, and foster national ownership, leadership and responsibility in addressing conflict-related sexual violence in situations of concern;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tAdopt a survivor-centred approach in the implementation of all aspects of the mandate, in line with Security Council resolution 2467 (2019) and in coordination with survivors of sexual violence, survivors’ networks, civil society, regional organizations and relevant United Nations entities, in particular at the country level;",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "2467 (2019)",
+                          "https://undocs.org/en/S/RES/2467(2019)"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tStrive to expand the circle of stakeholders and encourage concerted and coordinated action among a broad range of actors at the international, regional and national levels, including through the United Nations Action against Sexual Violence in Conflict network consisting of 26 United Nations entities and the Team of Experts on the Rule of Law and Sexual Violence, which work under the strategic direction of the Special Representative;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tFocus its advocacy efforts on advancing the achievement of Sustainable Development Goals 5 and 16 and on ensuring the implementation of prevention strategies, multisectoral services for survivors, reparations and redress measures.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tAdoption of concrete and time-bound commitments to prevent and address incidents, patterns and trends of conflict-related sexual violence, and accelerated implementation of existing political and operational agreements with affected States, to ensure an enhanced security and justice sector response;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tImproved access to appropriate and good-quality services, including health care, psychosocial support, legal services, reparations and livelihood support for all survivors, as well as children born of conflict-related sexual violence.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to the external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tContinued high level of political will on the part of all stakeholders, in particular Member States, to work towards preventing sexual violence and ending the impunity of persistent perpetrators in situations of armed conflict and other situations of concern;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tMember States and other key stakeholders see a convergence between their strategic interests and priorities and upholding the international protection framework that has been established to prevent conflict-related sexual violence.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to cooperation with other entities at the global, regional, national and local levels, the Office will deepen its engagement with regional and subregional actors and multilateral institutions, including the African Union, the League of Arab States, the European Union, the Economic Community of West African States, the International Conference on the Great Lakes Region, the International Organization of la Francophonie, the Inter-Parliamentary Union and the African Development Bank, including through formal frameworks of cooperation, to outline advocacy and operational prevention and response strategies to conflict-related sexual violence.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to inter-agency coordination and liaison, the Office will continue to work through the United Nations Action against Sexual Violence in Conflict inter-agency network, which is chaired by the Special Representative. The network will continue to provide strategic advocacy, knowledge generation, coordination, and catalytic country-level support. This will include the finalization of the review of the monitoring, analysis and reporting arrangements through system-wide strategic reflections; the formulation and dissemination of joint advocacy products to call on the international community for political and financial support for survivors in situations of conflict; and the development of new resources and technical guidance on emerging issues. Coordination on justice and accountability dimensions of the mandate will be conducted through the Team of Experts on the Rule of Law and Sexual Violence in Conflict, which operates under the strategic direction of the Special Representative, and comprises the Office, OHCHR, UNDP and the Department of Peace Operations as the co-lead entities. In addition, the Office will continue to strengthen its cooperation with the Office of the Special Representative of the Secretary-General on Children and Armed Conflict and the Office of the Special Representative of the Secretary-General on Violence against Children, through periodic coordination and information sharing, to inform joint advocacy and operational strategies related to the prevention and response to conflict-related sexual violence against civilians, and in particular girls and boys.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Office integrates a gender perspective into its operational activities, deliverables and results, as appropriate. Given the nature of the Office's mandate, which is closely interlinked with the women, peace and security agenda, all activities ultimately aim at promoting gender equality and women’s empowerment, as well as addressing discrimination and harmful social norms that constitute invisible drivers of conflict-related sexual violence in times of war and peace. For example, political commitments negotiated with parties to conflict (e.g., joint communiqués, frameworks of cooperation and implementation plans) will continue to integrate the views of women’s civil society organizations and will continue to promote the meaningful participation of women and girls in countries where they are often absent in political and decision-making processes, including peace processes. Prevention strategies and response programming will reflect a tailored approach to address sexual violence against all survivors. Information, including on incidents of conflict-related sexual violence, continue to be systematically disaggregated by sex in order to offer a gender-sensitive analysis for the Security Council.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In line with the United Nations Disability Inclusion Strategy, the Office will continue to incorporate issues relating to disability inclusion into policy, advocacy and key substantive aspects of its work, including programming and monitoring and reporting in priority situations. The NGO-civil society advisory group of the Office includes entities representing individuals with disabilities and, through this modality, the Office will continue to engage with individuals with disabilities and with relevant organizations during the course of field missions in priority countries. The Office, in its staffing, includes those with explicit human rights expertise relating to the rights of persons with disabilities and their targeting with sexual violence in situations of armed conflict.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Strengthened national ownership to prevent conflict-related sexual violence and deliver justice of survivors: the case of South Sudan",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In a context marked by marginal progress in the implementation of the Revitalized Agreement on the Resolution of the Conflict in the Republic of South Sudan (2018), abductions of women and girls for the purposes of sexual slavery persisted in 2024 as a feature of intercommunal incidents, and those committed by parties to the conflict, including armed groups. Survivors often opt not to lodge official complaints due to fear of reprisals, and the remoteness of their locations, which limits their access to health facilities and justice. The United Nations Mission in South Sudan (UNMISS), the United Nations Country Team and the Office of the Special Representative have provided sustained support to the authorities to hold perpetrators of sexual violence accountable and deliver justice to survivors. For instance, the United Nations supported the deployment of mobile courts to address criminal cases, including on sexual and gender-based violence, and conducted training sessions for legal professionals to strengthen the capacity of the administration of justice, access to legal support by women and protection of human rights. In addition, the Team of Experts on the Rule of Law and Sexual Violence in Conflict trained police investigators and prosecutors to strengthen their capacity to effectively investigate and prosecute sexual and gender-based violence offences, aiming to promote accountability, combat impunity and deter potential perpetrators from committing further crimes. Furthermore, the South Sudan People's Defense Forces’ Military Justice Department received support to deploy 13 general court-martials to nine locations across South Sudan to adjudicate serious cases, including sexual violence crimes, committed by members of the armed forces against civilians.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective is presented in the performance measure below (see table 1.75).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "National authorities establish a team focused on investigating and prosecuting conflict-related sexual violence within the South Sudan People’s Defence Forces ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Action plans for the National Police and the armed forces to prevent and address conflict-related sexual violence are extended by the national authorities until 2025 and 2026, respectively",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "National authorities ensure accountability for conflict-related sexual violence crimes through mobile courts and general courts as a deterrence strategy.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned results for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 1: enhanced compliance with international norms on preventing and addressing conflict-related sexual violence by parties to conflict – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "The Office’s work contributed to the Security Council’s extension of the mandate of the Analytical Support and Sanctions Monitoring Team for a period of 36 months, as outlined in its resolution 2734 (2024), which met the planned target. For the first time, the resolution explicitly referred to sexual and gender-based violence as sanctionable acts under the regime.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective and the target for 2026 are presented in the performance measure below (see table 1.76).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Increased engagement by United Nations sanctions regimes on trends and patterns of conflict-related sexual violence",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Unilateral communiqué issued by a non-State armed group outlining commitments to addressing conflict-related sexual violence\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced monitoring and reporting of patterns and trends of conflict-related sexual violence through Security Council extension of the mandate of the Analytical Support and Sanctions Monitoring Team (resolution 2734 (2024))\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Member States, United Nations entities, civil society and academia exchange lessons and best practices for strengthening engagement of non-State armed groups in addressing conflict-related sexual violence\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced capacities of United Nations Panels of Experts to monitor, investigate and report on conflict-related sexual violence",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Increased understanding of regional dimensions of conflict-related sexual violence in 1 subregion (Horn of Africa)\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Strengthened response in 1 country to meet the needs of survivors of conflict-related sexual violence and to deliver justice and accountability",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Member States in 1 subregion develop justice and security sector strategies aimed at addressing conflict-related sexual violence\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "National authorities develop a plan to prevent and address conflict-related sexual violence in 1 country",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "– ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Strengthened capacity for investigation and prosecution of conflict-related sexual violence in 2 countries",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Implementation of technical guidance on investigations of conflict-related sexual violence in 1 country",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "National specialized investigation units conduct investigations on conflict-related sexual violence in 2 countries",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 2: strengthened service provision and justice response on conflict-related sexual violence by national authorities – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "The Office’s work contributed to addressing critical protection risks, enhancing access to essential services, including emergency medical relief and safe shelter, for displaced civilians and survivors of conflict-related sexual violence in Darfur, Sudan, which met the planned target.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective and the target for 2026 are presented in the performance measure below (see table 1.77).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Increased engagement by United Nations sanctions regimes on trends and patterns of conflict-related sexual violence",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Unilateral communiqué issued by a non-State armed group outlining commitments to addressing conflict-related sexual violence\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced monitoring and reporting of patterns and trends of conflict-related sexual violence through Security Council extension of the mandate of the Analytical Support and Sanctions Monitoring Team (resolution 2734 (2024))\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Member States, United Nations entities, civil society and academia exchange lessons and best practices for strengthening engagement of non-State armed groups in addressing conflict-related sexual violence\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced capacities of United Nations Panels of Experts to monitor, investigate and report on conflict-related sexual violence",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Increased understanding of regional dimensions of conflict-related sexual violence in 1 subregion (Horn of Africa)\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Strengthened response in 1 country to meet the needs of survivors of conflict-related sexual violence and to deliver justice and accountability",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Member States in 1 subregion develop justice and security sector strategies aimed at addressing conflict-related sexual violence\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "National authorities develop a plan to prevent and address conflict-related sexual violence in 1 country",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "– ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Strengthened capacity for investigation and prosecution of conflict-related sexual violence in 2 countries",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Implementation of technical guidance on investigations of conflict-related sexual violence in 1 country",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "National specialized investigation units conduct investigations on conflict-related sexual violence in 2 countries",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 3: strengthened judicial response from national authorities to bolster survivor-centered justice and accountability for conflict-related sexual violence – Proposed programme plan for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "The absence of political will to promote accountability for conflict-related sexual violence crimes at the national and international levels undermines survivors’ prospects for justice and redress and perpetuates cycles of violence and impunity. Moreover, gaps in technical and operational capacities of national rule of law institutions hampers the delivery of justice for conflict-related sexual violence crimes.  The Office has supported justice efforts in priority settings for survivors of conflict-related sexual violence by supporting legal reform through technical legal advice, and through tailored support to relevant authorities to enhance the investigation and prosecution of conflict-related sexual violence cases.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "italic",
+                      "text": "Lessons learned and planned change",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "The lesson for the Office was that limited political will to advance accountability for conflict-related sexual violence crimes by relevant institutions in priority settings has a direct impact on their efforts to provide holistic responses to survivors, and to investigate and prosecute such crimes in line with international standards, thereby reducing the prospects of justice and redress for survivors. In applying the lesson, the Office will enhance its advocacy and operational impact at the national, regional and international levels to garner stronger political and financial support from national budgets, and international partners, to strengthen justice and accountability for sexual violence crimes, build on the progress achieved and to ensure its sustainability.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Expected progress towards the objective is presented in the performance measure below (see table 1.78).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Increased engagement by United Nations sanctions regimes on trends and patterns of conflict-related sexual violence",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Unilateral communiqué issued by a non-State armed group outlining commitments to addressing conflict-related sexual violence\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced monitoring and reporting of patterns and trends of conflict-related sexual violence through Security Council extension of the mandate of the Analytical Support and Sanctions Monitoring Team (resolution 2734 (2024))\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Member States, United Nations entities, civil society and academia exchange lessons and best practices for strengthening engagement of non-State armed groups in addressing conflict-related sexual violence\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced capacities of United Nations Panels of Experts to monitor, investigate and report on conflict-related sexual violence",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Increased understanding of regional dimensions of conflict-related sexual violence in 1 subregion (Horn of Africa)\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Strengthened response in 1 country to meet the needs of survivors of conflict-related sexual violence and to deliver justice and accountability",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Member States in 1 subregion develop justice and security sector strategies aimed at addressing conflict-related sexual violence\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "National authorities develop a plan to prevent and address conflict-related sexual violence in 1 country",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "– ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Strengthened capacity for investigation and prosecution of conflict-related sexual violence in 2 countries",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Implementation of technical guidance on investigations of conflict-related sexual violence in 1 country",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "National specialized investigation units conduct investigations on conflict-related sexual violence in 2 countries",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Legislative mandates",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The list below, which was reviewed in the preparation of the proposed programme budget, provides all mandates entrusted to the programme.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "italic",
+                  "text": "General Assembly resolution",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "65/259",
+                            "hyperlinks": [
+                              [
+                                "65/259",
+                                "https://undocs.org/en/A/RES/65/259"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Questions relating to the programme budget for the biennium 2010–2011 (sect. V)",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "65/259",
+                          "https://undocs.org/en/A/RES/65/259"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "italic",
+                  "text": "Security Council resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "1820 (2008)",
+                            "hyperlinks": [
+                              [
+                                "1820 (2008)",
+                                "https://undocs.org/en/S/RES/1820(2008)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "1888 (2009)",
+                            "hyperlinks": [
+                              [
+                                "1888 (2009)",
+                                "https://undocs.org/en/S/RES/1888(2009)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "1960 (2010)",
+                            "hyperlinks": [
+                              [
+                                "1960 (2010)",
+                                "https://undocs.org/en/S/RES/1960(2010)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2106 (2013)",
+                            "hyperlinks": [
+                              [
+                                "2106 (2013)",
+                                "https://undocs.org/en/S/RES/2106(2013)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2331 (2016)",
+                            "hyperlinks": [
+                              [
+                                "2331 (2016)",
+                                "https://undocs.org/en/S/RES/2331(2016)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2388 (2017)",
+                            "hyperlinks": [
+                              [
+                                "2388 (2017)",
+                                "https://undocs.org/en/S/RES/2388(2017)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2467 (2019)",
+                            "hyperlinks": [
+                              [
+                                "2467 (2019)",
+                                "https://undocs.org/en/S/RES/2467(2019)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "1820 (2008)",
+                          "https://undocs.org/en/S/RES/1820(2008)"
+                        ],
+                        [
+                          "1888 (2009)",
+                          "https://undocs.org/en/S/RES/1888(2009)"
+                        ],
+                        [
+                          "1960 (2010)",
+                          "https://undocs.org/en/S/RES/1960(2010)"
+                        ],
+                        [
+                          "2106 (2013)",
+                          "https://undocs.org/en/S/RES/2106(2013)"
+                        ],
+                        [
+                          "2331 (2016)",
+                          "https://undocs.org/en/S/RES/2331(2016)"
+                        ],
+                        [
+                          "2388 (2017)",
+                          "https://undocs.org/en/S/RES/2388(2017)"
+                        ],
+                        [
+                          "2467 (2019)",
+                          "https://undocs.org/en/S/RES/2467(2019)"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Table 1.79 lists all deliverables of the programme.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Office of the Special Representative of the Secretary-General on Sexual Violence in Conflict: deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tReport of the Secretary-General on conflict-related sexual violence to the Security Council, including listing of parties to the conflict ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tCountry-specific and/or thematic report on conflict-related sexual violence",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3.\tMeetings of the Advisory Committee on Administrative and Budgetary Questions ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4.\tMeetings of the Fifth Committee",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5.\tBriefings to the Security Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t6.\tBriefings to human rights treaty bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t7.\tBriefings to the Special Committee on Peacekeeping Operations",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSeminars, workshops and training events (number of days)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "31",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "26",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "16",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "25",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t8.\tTraining of national police and/or military forces on prevention of and response to conflict-related sexual violence",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t9.\tTraining of national justice sector (prosecutors and judges) on investigation into and prosecution of conflict-related sexual violence",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "13",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t10.\tWorkshop with women’s protection advisers on emerging threats and challenges of conflict-related sexual violence",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Good offices: engagement and dialogue with parties to conflict listed in the annex to the report of the Secretary-General, including as it relates to the adoption and implementation of prevention and response measures.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Good offices: engagement and dialogue with parties to conflict listed in the annex to the report of the Secretary-General, including as it relates to the adoption and implementation of prevention and response measures.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Good offices: engagement and dialogue with parties to conflict listed in the annex to the report of the Secretary-General, including as it relates to the adoption and implementation of prevention and response measures.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Good offices: engagement and dialogue with parties to conflict listed in the annex to the report of the Secretary-General, including as it relates to the adoption and implementation of prevention and response measures.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Good offices: engagement and dialogue with parties to conflict listed in the annex to the report of the Secretary-General, including as it relates to the adoption and implementation of prevention and response measures.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Consultation, advice and advocacy: consultations and reporting on conflict-related sexual violence trends and patterns in 21 countries.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Consultation, advice and advocacy: consultations and reporting on conflict-related sexual violence trends and patterns in 21 countries.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Consultation, advice and advocacy: consultations and reporting on conflict-related sexual violence trends and patterns in 21 countries.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Consultation, advice and advocacy: consultations and reporting on conflict-related sexual violence trends and patterns in 21 countries.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Consultation, advice and advocacy: consultations and reporting on conflict-related sexual violence trends and patterns in 21 countries.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Databases and substantive digital materials: digital library serving as a knowledge hub of academic, think tank and civil society publications on conflict-related sexual violence (over 400 publications)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Databases and substantive digital materials: digital library serving as a knowledge hub of academic, think tank and civil society publications on conflict-related sexual violence (over 400 publications)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Databases and substantive digital materials: digital library serving as a knowledge hub of academic, think tank and civil society publications on conflict-related sexual violence (over 400 publications)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Databases and substantive digital materials: digital library serving as a knowledge hub of academic, think tank and civil society publications on conflict-related sexual violence (over 400 publications)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Databases and substantive digital materials: digital library serving as a knowledge hub of academic, think tank and civil society publications on conflict-related sexual violence (over 400 publications)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Outreach programmes, special events and information materials: 20 online and in-person events on conflict-related sexual violence that include survivors, Member States, activists, academia, experts and practitioners; and outreach activities  in coordination with the United Nations Action against Sexual Violence in Conflict  and its “Stop Rape Now” campaign and the United Nations Team of Experts on the Rule of Law/Sexual Violence in Conflict.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Outreach programmes, special events and information materials: 20 online and in-person events on conflict-related sexual violence that include survivors, Member States, activists, academia, experts and practitioners; and outreach activities  in coordination with the United Nations Action against Sexual Violence in Conflict  and its “Stop Rape Now” campaign and the United Nations Team of Experts on the Rule of Law/Sexual Violence in Conflict.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Outreach programmes, special events and information materials: 20 online and in-person events on conflict-related sexual violence that include survivors, Member States, activists, academia, experts and practitioners; and outreach activities  in coordination with the United Nations Action against Sexual Violence in Conflict  and its “Stop Rape Now” campaign and the United Nations Team of Experts on the Rule of Law/Sexual Violence in Conflict.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Outreach programmes, special events and information materials: 20 online and in-person events on conflict-related sexual violence that include survivors, Member States, activists, academia, experts and practitioners; and outreach activities  in coordination with the United Nations Action against Sexual Violence in Conflict  and its “Stop Rape Now” campaign and the United Nations Team of Experts on the Rule of Law/Sexual Violence in Conflict.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Outreach programmes, special events and information materials: 20 online and in-person events on conflict-related sexual violence that include survivors, Member States, activists, academia, experts and practitioners; and outreach activities  in coordination with the United Nations Action against Sexual Violence in Conflict  and its “Stop Rape Now” campaign and the United Nations Team of Experts on the Rule of Law/Sexual Violence in Conflict.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "External and media relations: annual press statement and news media content, including approximately 10 press statements/releases and 10 television and newspaper interviews.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: annual press statement and news media content, including approximately 10 press statements/releases and 10 television and newspaper interviews.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: annual press statement and news media content, including approximately 10 press statements/releases and 10 television and newspaper interviews.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: annual press statement and news media content, including approximately 10 press statements/releases and 10 television and newspaper interviews.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: annual press statement and news media content, including approximately 10 press statements/releases and 10 television and newspaper interviews.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Digital platforms and multimedia content: timely website updates; social media content to advocate for political commitment and behavioral change in the priority countries; amplify victims and survivors’ voices, their needs and perspectives; and mobilize resources for the elimination of conflict-related sexual violence.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: timely website updates; social media content to advocate for political commitment and behavioral change in the priority countries; amplify victims and survivors’ voices, their needs and perspectives; and mobilize resources for the elimination of conflict-related sexual violence.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: timely website updates; social media content to advocate for political commitment and behavioral change in the priority countries; amplify victims and survivors’ voices, their needs and perspectives; and mobilize resources for the elimination of conflict-related sexual violence.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: timely website updates; social media content to advocate for political commitment and behavioral change in the priority countries; amplify victims and survivors’ voices, their needs and perspectives; and mobilize resources for the elimination of conflict-related sexual violence.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: timely website updates; social media content to advocate for political commitment and behavioral change in the priority countries; amplify victims and survivors’ voices, their needs and perspectives; and mobilize resources for the elimination of conflict-related sexual violence.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\t\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Overview",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "The proposed regular budget resources for 2026, including the breakdown of resource changes, as applicable, are reflected in tables 1.80 to 1.82.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Evolution of financial resources by object of expenditure – (Thousands of United States dollars)",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate  ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Object of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/expanded mandates ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Percentage",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate  ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Posts",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 870.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 846.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 846.2",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Other staff costs",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "47.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "42.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "42.9",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Hospitality",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1.3",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Travel of staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "129.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "101.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "101.5",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Contractual services",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "34.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "13.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "10.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "10.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "72.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "23.8",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "General operating expenses",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "33.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "42.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(10.0)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(10.0)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(23.7)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "32.2",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Supplies and materials",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2.4",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Furniture and equipment",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3.4",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 121.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 053.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 053.7",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Proposed posts and post changes for 2026 – (Number of posts)",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Number",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Details",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Approved for 2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 USG, 1 D-1, 1 P-5, 1 P-4, 2 P-3, 2 GS (OL)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Proposed for 2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 USG, 1 D-1, 1 P-5, 1 P-4, 2 P-3, 2 GS (OL)",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Proposed posts by category and grade – (Number of posts)",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Category and grade",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/expanded mandates ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 proposed",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Professional and higher",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "USG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "D-1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "P-5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "P-4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "P-3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tSubtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "General Service and related",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "GS (OL)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tSubtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "Additional details on the distribution of the proposed resources for 2026 are reflected in tables 1.83 to 1.85 and figure 1.XVI.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "As reflected in tables 1.83 (1) and 1.84 (1), the overall resources proposed for 2026 amount to $2,053,700, reflecting no change compared with the approved budget for 2025. The proposed level of resources provides for the full, efficient and effective implementation of mandates.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Evolution of financial resources by source of funding and component – (Thousands of United States dollars)",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "list-2",
+              "text": "(1)\tRegular budget",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate  ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Component",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate  ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Programme of work",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 121.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 053.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 053.7",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 121.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 053.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 053.7",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "list-2",
+              "text": "(2)\tExtrabudgetary",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Component",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 estimate",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Change",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Programme of work",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5 702.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6 518.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6 518.2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5 702.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6 518.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6 518.2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal (1+2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "7 824.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "8 571.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "8 571.9",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Proposed posts for 2026 by source of funding and component – (Number of posts)",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "list-2",
+              "text": "(1)\tRegular budget",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 proposed",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Component",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 proposed",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Programme of work",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "8",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "8",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "list-2",
+              "text": "(2)\tExtrabudgetary",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Component",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 estimate",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Change",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Programme of work",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "19",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "19",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "19",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "19",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal (1+2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "27",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "27",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Evolution of financial and post resources – (Thousands of United States dollars/number of posts)",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate  ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/expanded mandates",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Percentage ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate  ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Posts",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 870.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 846.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 846.2",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Non-post",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "250.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "207.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "207.5",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 121.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 053.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 053.7",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Professional and higher",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "General Service and related",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Distribution of proposed resources for 2026 – (Number of posts/thousands of United States dollars)",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "image",
+              "text": "",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Extrabudgetary resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "As reflected in tables 1.83 (2) and 1.84 (2), extrabudgetary resources amount to $6,518,200. The resources would complement regular budget resources and would be used mainly to provide for 19 posts (1 D-1, 1 P-5, 6 P-4, 5 P-3, 2 P-2/1 and 4 General Service (Other level)) and non-post resources that would be used to support the delivery of its mandates, including the engagement of the Team of Experts on the Rule of Law and Sexual Violence in Conflict, mandated pursuant to Security Council resolution 2467 (2019), and support for the secretariat of the United Nations Action against Sexual Violence in Conflict network chaired by the Special Representative.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The extrabudgetary resources under the present section are subject to the oversight of the Office, which has delegated authority from the Secretary-General.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "Information on the timely submission of documentation and advance booking for air travel is reflected in table 1.86. The majority of travel for the Office is related to the high-level engagements of the Special Representative with priority countries and technical missions to follow up on the formal agreements reached between the Special Representative and national authorities. While every effort is made to ensure advance planning for all official travel, the finalization of travel requests for such missions depends on visa approvals and confirmations of missions and meetings with government interlocutors by the national authorities.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Compliance rate",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Percentage)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2022 actual",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2023 actual",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 actual",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 planned",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 planned",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Timely submission of documentation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Air tickets purchased at least two weeks before the commencement of travel",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "29",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "64",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

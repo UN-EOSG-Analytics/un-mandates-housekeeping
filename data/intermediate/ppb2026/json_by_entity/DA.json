@@ -1,0 +1,928 @@
+{
+  "entity": "Development Account",
+  "entity_abbrev": "DA",
+  "entity_raw_name": "Development Account",
+  "section_title": "Development Account",
+  "source_file": "A_80_6_SECT.35.json",
+  "content": [
+    {
+      "block_type": "a/b",
+      "text": "A.\tOverall orientation",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub",
+          "text": "Mandates and background",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "35.1\tThe Development Account was established in 1997 by the General Assembly in its resolution 52/12 B as a mechanism to fund capacity development projects of the economic and social entities of the United Nations, namely, the Department of Economic and Social Affairs of the Secretariat, the Economic Commission for Africa (ECA), the Economic Commission for Europe (ECE), the Economic and Social Commission for Asia and the Pacific (ESCAP), the Economic and Social Commission for Western Asia (ESCWA), the Economic Commission for Latin America and the Caribbean (ECLAC), the United Nations Conference on Trade and Development (UNCTAD), the United Nations Environment Programme (UNEP), the United Nations Human Settlements Programme (UN-Habitat) and the United Nations Office on Drugs and Crime. All projects funded through the Account build on the mandates and the comparative advantages of the implementing entities, including their normative and analytical capacities.",
+              "table_content": null,
+              "hyperlinks": [
+                [
+                  "52/12",
+                  "https://docs.un.org/en/A/RES/52/12B"
+                ]
+              ],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "35.2\tThe Development Account supports developing countries in their implementation of priority areas of the United Nations development agenda, in response to expressed needs and demands from Member States, and supports the recommendations and decisions made during intergovernmental processes and by the relevant governing bodies of the implementing entities.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub",
+          "text": "Strategy",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "35.3\tThe Development Account provides its 10 non-resident implementing entities with predictable funds to assist developing countries in the economic and social priority areas of the United Nations development agenda. Projects are carried out over a four-year period, with an average budget of around $675,000, and involve multiple target countries, encouraging South-South learning and experience-sharing and later feeding findings into intergovernmental processes and analytics. Projects are based on demand received from the target countries. Under the overarching theme of the eighteenth tranche, “Supporting Member States to catalyse digital transformation and an enabling policy environment for a sustainable, responsible and inclusive digital society that leaves no one behind, with a focus on gender equality and the empowerment of women and girls”, 27 proposed projects (see annex I) are spread across all regions (see figure 35.II), supporting all Sustainable Development Goals (see figure 35.III) and often supporting countries with special needs (see figure 35.I). Several of the projects are aimed at enhancing countries’ capacities to support entrepreneurship among women and to harness data and statistics (see para. 35.6 for additional details). In total, the eighteenth tranche includes eight projects that will be jointly executed by two or more Development Account entities. Furthermore, partnerships continue to be essential to all projects, including collaboration within and outside the United Nations system.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "35.4\tOver 95 per cent of the proposed projects of the eighteenth tranche support countries with special needs, namely, the least developed countries, landlocked developing countries and small island developing States. Figure 35.I shows the number of projects supporting countries with special needs. These numbers are likely to increase as implementing entities finalize the target countries of their projects. Some projects are focused exclusively on these groups of countries, such as the following projects: promoting a socially inclusive creative economy to support the digital transformation needs of small island developing States and the least developed countries (project D); digitalization of urban mobility in small island developing States and landlocked developing countries in Latin America and the Caribbean to address gender inequities and leave no one behind (project I); and power grid governance policies in support of inclusive digital transformation in countries with special needs (project R).",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "figure",
+              "text": "Figure 35.I",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Projects supporting countries with special needsa",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "image",
+                  "text": "",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "other",
+                  "text": "a\tProjects can have beneficiary countries from multiple groups, and some countries with special needs can belong to two groups.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "35.5\tFigure 35.II illustrates how the proposed projects of the eighteenth tranche are spread across different regions. While projects are proposed for all regions of the world, Africa continues to have the highest number of proposed projects, as in previous tranches.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "figure",
+                  "text": "Figure 35.II",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Number of projects by geographical areaa",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "image",
+                  "text": "",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "other",
+                  "text": "a\tOne project can contribute to more than one region.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "35.6\tAs the theme of the tranche includes elements of digital transformation – in line with Member States’ goal of achieving an inclusive, open, sustainable, fair, safe and secure digital future for all, as outlined in the Global Digital Compact, adopted in 2024 – and gender equality, as a cross-cutting goal underpinning all the Sustainable Development Goals, projects are generally focused on one of these two areas or the intersections between them. As mentioned above, entrepreneurship among women has emerged as an area in which multiple projects will be providing support. Specifically, six of the proposed projects focus on this topic, including by building the capacity of selected countries to: foster digital entrepreneurship among women in Africa (project M); implement inclusive trade strategies with a focus on vulnerable economic actors, especially for informal women-owned businesses (project N); design and implement digital policies that empower women-owned micro-, small and medium-sized enterprises (project O); implement policy measures and strategies that enable women entrepreneurs to harness digital technologies in Asia and the Pacific (project V); enable gender-responsive digital urban transformation, which includes work on e-commerce and economic opportunities for women-led small and medium-sized enterprises (project X); and drive digital transformation to improve the market access and growth of women-led small and medium-sized enterprises in the Arab region (project Y). Other common areas of work that have emerged among the proposed projects include data, statistics and the economy. Six projects are focused on enhancing selected countries’ capacities in data and statistics, in the areas of: data governance and innovation for digital transformation (project A); monitoring and sharing forest-related data using innovative and digital technologies (project C); measuring digital services trade (project F); data-driven policies and services for women and marginalized groups experiencing homelessness (project K); digital transformation in the production of social and demographic statistics in Latin America and the Caribbean (project S); and the design, implementation and evaluation of data-driven digital transformation strategies for the digital economy (project AA). In addition to the aforementioned projects focused on entrepreneurship, six projects focus on other economy-related themes, including economic growth (projects M and Y), the digital economy (projects E, Y and AA), the care economy (project U) and economic opportunity in the creative economy (project D).",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "35.7\tThe proposed projects also contribute to all of the Sustainable Development Goals, as outlined in figure 35.III, with 26 projects contributing to Goal 5 on gender equality, in line with the theme of the tranche, and a notable number of projects contributing to Goal 17 on partnerships; Goal 8 on decent work and economic growth; Goal 9 on industry, innovation and infrastructure; and Goal 10 on reducing inequalities.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "figure",
+                  "text": "Figure 35.III",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Contribution of projects of the eighteenth tranche to the Sustainable Development Goalsa",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "image",
+                  "text": "",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "other",
+                  "text": "a\tOne project can contribute to more than one goal.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "35.8\tPartnerships are essential to the implementation of Development Account projects. The proposed projects will be implemented with partners from the United Nations Secretariat and the wider United Nations system, including United Nations country teams as relevant, as well as governments and national, regional and international organizations. Resident coordinators will also be informed about the national project activities and engaged to support the projects at various levels. This helps to ensure that Development Account projects leverage the comparative strengths of both national and international partners to better achieve transformational change, respond to identified national needs while avoiding duplication of work, and work alongside national and local governments and organizations to strengthen their capacity throughout project implementation, which also strengthens the sustainability of project results.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "35.9\tAll of the proposed projects will be implemented in partnership with other entities, including 24 of the projects working in partnership with other Development Account entities, 24 projects working in partnership with the broader United Nations system and 22 of the projects working in partnership with other regional or international organizations, as illustrated in figure 35.IV. The number of partnerships is likely to further increase as projects are finalized following the General Assembly’s consideration and approval of the present budget fascicle and the projects proposed therein.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "figure",
+                  "text": "Figure 35.IV",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Partnerships in Development Account projectsa",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "image",
+                  "text": "",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "other",
+                  "text": "a\tOne project can partner with multiple partners.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "35.10\tThe involvement of resident coordinator offices in Development Account projects takes different forms. Since resident coordinator offices coordinate United Nations operational activities for development within a country, they will be informed about the projects and their national activities. In addition, the implementing entities consult the resident coordinator offices in the target countries during the design phase of the projects. During project implementation, resident coordinator offices provide support for projects by, for example, identifying workshop participants, partners and government counterparts; identifying synergies with other projects; and mobilizing supplementary resources. Depending on the project, more in-depth engagement with the United Nations country team can exist through membership of the implementing entity in the country team, its participation in the common country analysis and the United Nations Sustainable Development Cooperation Framework, and partnerships with members of the country team.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "35.11\tIn addition to the partnership arrangements described above, eight of the proposed projects of the eighteenth tranche will be led jointly by multiple Development Account entities. Joint projects build on natural areas of synergy and cooperation between Development Account entities and involve more extensive collaboration between entities, whereby each of the jointly implementing entities is responsible for the delivery of specific deliverables and receives a part of the total project budget. Entities work jointly throughout the project cycle, from the design of the project to its implementation, as well as throughout the reporting, monitoring and evaluation phases. These projects also include the formation of a steering committee, comprising representatives from all entities, that meets throughout the project’s life cycle to facilitate dialogue and cooperation, resolve any issues that arise, facilitate monitoring of the project’s performance and ensure that the projects are efficient and effective in achieving results at the country level. Since joint projects require a more work-intensive governance structure and coordination, they are only undertaken in areas where there is a clear advantage to doing so. The table in annex I provides further details on which projects will be jointly implemented.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub",
+          "text": "Evaluation activities",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "35.12\tLessons learned from programme- and project-level evaluations regularly feed into the planning, implementation, monitoring and evaluation of projects. At the programme level, a new guidance document, entitled “Working with the Development Account: a guide for implementing entities”, was developed as a follow-up to the evaluation of the tenth tranche Programme on Statistics and Data. It provides implementing entities and other stakeholders with an overview of the Development Account, including its principles, key requirements and project management processes. Furthermore, a series of recommendations to guide the development of all joint projects was formulated based on the lessons learned and good practices identified through the evaluations of joint projects related to the coronavirus disease (COVID-19) pandemic. Evaluation findings have also contributed to the refinement of progress and final report templates in order to help to strengthen the ongoing monitoring of project results and enhance the availability of data to support evaluations.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "35.13\tIn 2025, approximately half (11) of the 21 thirteenth tranche projects are being evaluated, guided by the Development Account project evaluation guidelines, a supplementary guidance note and an updated report template. Guidance notes have also been issued to support the planning of 12 fourteenth tranche project evaluations to be undertaken in 2026, as well as the selection of fifteenth tranche projects to be evaluated. In addition, the planning of a new programme-level evaluation is under way, in consultation with the evaluation units of all 10 implementing entities and other stakeholders, with the aim of launching it in late 2025.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "paragraph-1",
+          "text": "35.14\tAs reflected in table 35.1, the overall resources proposed for 2026 amount to $19,011,900, reflecting no change compared with the approved budget for 2025. The proposed level of resources provides for the full, efficient and effective implementation of mandates. Four Development Account-related management posts (1 P-5, 2 P-4 and 1 P-2) are funded under section 9, Economic and social affairs.",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "table",
+          "text": "Table 35.1",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Evolution of financial resources by object of expenditure",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "italic",
+              "text": "Regular budget",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Object of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 appropriation",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Grants and contributions",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "18 502.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "19 011.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "19 011.9 ",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub",
+          "text": "Multi-year account",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "35.15\tThe General Assembly, in its resolution 54/15, decided to establish a multi-year account for the Development Account. The resources proposed for the Account for 2026 are for the implementation of the projects over a four-year period (2026–2029). Within the multi-year account, the breakdown of resource requirements by object of expenditure for the eighteenth tranche of projects is presented in table 35.2.",
+              "table_content": null,
+              "hyperlinks": [
+                [
+                  "54/15",
+                  "https://docs.un.org/en/A/RES/54/15"
+                ]
+              ],
+              "children": []
+            },
+            {
+              "block_type": "table",
+              "text": "Table 35.2",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Summary of resource requirements by object of expenditure",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Thousands of United States dollars)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Object of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Amount",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Other staff costs",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "924.9",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Consultants",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6 358.4",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Travel of staff",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 580.8",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Contractual services",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 790.3",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General operating expenses",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 841.2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Grants and contributions",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4 516.3",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "19 011.9",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "35.16\tDevelopment Account projects are designed to provide the efficient and effective use of resources. The resource requirements set forth in the present document are based on concept notes, which provide project descriptions and initial plans for project implementation. From April to December 2025, the implementing entities will work with their partners, including resident coordinators, in their region or thematic area to prepare project documents that include additional details on the theory of change, country demand, outputs, indicators, partner arrangements and a more detailed budget. They will continue to engage the potential target countries to ensure that the projects are designed to address their needs and achieve tangible results, taking into account the evolving contexts. Such engagement is often based on prior activities that have been done in this area. Following the General Assembly’s decision on the proposed budget by the end of 2025, the implementing entities will launch the projects.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "35.17\tThe distribution of resources by lead entity for the proposed projects is outlined in figure 35.V. In general, there is an equal distribution between global and regional entities. On average, entities have three projects, with the Department of Economic and Social Affairs and the United Nations Conference on Trade and Development having an additional one, and the funds and programmes with more limited regular budget funding have two projects each. It should be noted that proposed resources for jointly implemented projects, which represent eight of the proposed projects, are counted towards the lead entities’ shares at the present stage. For jointly implemented projects, multiple entities receive a portion of the project budget. The final distribution is therefore only known at a later stage, after the project documents have been drafted.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "figure",
+                  "text": "Figure 35.V",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Distribution of resource requirements by lead entity",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Thousands of United States dollars)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "image",
+                  "text": "",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "other",
+                  "text": "Abbreviations: DESA, Department of Economic and Social Affairs; ECA, Economic Commission for Africa; ECE, Economic Commission for Europe; ECLAC, Economic Commission for Latin America and the Caribbean; ESCAP, Economic and Social Commission for Asia and the Pacific; ESCWA, Economic and Social Commission for Western Asia; UNCTAD, United Nations Conference on Trade and Development; UNEP, United Nations Environment Programme; UN-Habitat, United Nations Human Settlements Programme.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "35.18\tOther staff costs (general temporary assistance) represent 5 per cent of the total budget and are used for short-term needs to carry out the activities of the projects, such as organizing workshops and data collection and engaging with resident coordinator offices in all target countries throughout project planning and implementation, as well as enhancing monitoring and improving information-sharing, coordination and collaboration with other Development Account and non-Development Account entities.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "35.19\tGiven that the implementing entities are mostly non-resident in project target countries and that all projects have country-level activities, travel of staff is essential. Required resources for staff travel represent an average of 14 per cent of the total resources, similar to the previous two tranches. While projects typically include e-learning components, and incorporating such elements is useful for maximizing efficiencies and broadening outreach, these tools cannot replace all face to-face delivery modalities in their effectiveness, as has been found in project evaluations.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "35.20\tThe projects typically utilize national consultants to support project implementation at the country level, as well as for collating and exchanging national best practices. International consultants, including regional consultants, are often required for projects involved in new subject areas, which require expertise that may not be available within the country or the implementing entity. International and regional consultants are also used for external programme and project evaluations, knowledge management, project review, monitoring and related activities, representing 4 per cent of the total tranche budget. International consultants comprise approximately 18 per cent of the total number of consultants and 17 per cent of the total work-months, while 82 per cent of the consultants for the eighteenth tranche projects are national or regional. In terms of cost, international consultants represent 26 per cent of the total.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 35.3",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Summary of consultancy requirementsa",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Type of consultant",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Number of consultants",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Number of work-months",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Cost \n(thousands of United States dollars)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Internationalb",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "131",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "658",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4 180.2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "National",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "131",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "528",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 178.2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "262",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 186",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6 358.4",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "other",
+                  "text": "a\tThis table does not include the cost of consultant travel.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "other",
+                  "text": "b\tThe requirements under international consultants include 85 regional consultants (457 work-months) at a total cost of $2,518,300.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "35.21\tContractual services are used to engage national, regional or international institutions, companies or non-governmental organizations to assist with the implementation of national components of the projects, including studies, local pilots, technical work, consultations and workshops. Use of local and regional institutions and non-governmental organizations is preferred and encouraged, as it contributes to the strengthening of national capacities. Venue rentals, conference service costs and communications costs associated with workshops, training events, seminars or expert group meetings typically fall under the general operating expenses category. In the proposed projects, contractual services are budgeted for services that include the development of an online platform, the piloting of a digital system at the country level, the preparation of communications and outreach materials, the printing of materials, event organization, web design and development services, editing and design services, interpretation and translation, artificial intelligence and machine learning development services, country-level data collection, e-learning course development, technology support services and the production of video tutorials. More specifically, projects may have the following costs in this category: interpretation and translation services; editing and printing of documents for workshops; web development; reserving venues for workshops; development of online courses; customization of an online platform that uses artificial intelligence; and other technical areas of work.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "35.22\tThe costs of workshop participants (travel and allowances), under grants and contributions, represent on average 24 per cent of the project budgets. Projects typically use national workshops for training, coordination and consensus-building. Most projects also include a smaller number of regional workshops, which are typically used for South-South cooperation and the sharing of lessons learned between the target countries. Regional and interregional workshops are often used to share the findings with larger audiences and are often organized in connection with other intergovernmental meetings or events to reduce costs.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "35.23\tProject deliverables fall under four general categories, as detailed in table 35.4. These deliverables are expected to have a strong focus on the national level, to help to ensure national ownership and prioritization of national processes and institutions. They are also expected to focus on different capacity development aspects (e.g. skills, institutions and an enabling environment) for increased and sustainable impact.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 35.4",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Summary of deliverables (2026–2029 plan)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Quantified deliverables: B. Generation and transfer of knowledge",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Quantified deliverables: B. Generation and transfer of knowledge",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Non-quantified deliverables: C. Substantive deliverables",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Non-quantified deliverables: C. Substantive deliverables",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Seminars, workshops and training events (number of days for all projects)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical materials (number of materials for all projects)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Consultation, advice and advocacy (number of projects including these deliverables)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Consultation, advice and advocacy (number of projects including these deliverables)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Databases and substantive digital materials (number of projects including these deliverables)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "838",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "207",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "27",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "27",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "26",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

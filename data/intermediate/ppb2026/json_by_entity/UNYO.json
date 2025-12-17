@@ -1,0 +1,4043 @@
+{
+  "entity": "United Nations Youth Office",
+  "entity_abbrev": "UNYO",
+  "entity_raw_name": "XIV.\tUnited Nations Youth Office",
+  "source_file": "A_80_6_SECT.1.PART AB_CONSOLIDATED_FASCICLE_ADVANCED COPY TO ACABQ_22 MAY 2025.json",
+  "content": [
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The United Nations has long recognized that the imagination, ideals and energy of young people are vital for the continuing development of the societies in which they live. In 1965, in its resolution 2037 (XX), the General Assembly acknowledged the Declaration on the Promotion among Youth of the Ideals of Peace, Mutual Respect and Understanding between Peoples. In 1995, the Assembly adopted the World Programme of Action for Youth to the Year 2000 and Beyond in its resolution 50/81, which provided a policy framework and practical guidelines to improve the situation of young people. In 2007, the Assembly adopted the Supplement to the Word Programme of Action for Youth to the Year 2000 and Beyond in its resolution 62/126, which provided further guidance on promoting the participation of young people in social and economic development. Since 2015, the Security Council, in its resolutions 2250 (2015), 2419 (2018) and 2535 (2020), has called upon all relevant actors to increase the inclusive representation of young people in the prevention and resolution of conflict, including when negotiating and implementing peace agreements.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "2037 (XX)",
+                      "https://undocs.org/en/A/RES/2037(XX)"
+                    ],
+                    [
+                      "50/81",
+                      "https://undocs.org/en/A/RES/50/81"
+                    ],
+                    [
+                      "62/126",
+                      "https://undocs.org/en/A/RES/62/126"
+                    ],
+                    [
+                      "2250 (2015)",
+                      "https://undocs.org/en/S/RES/2250(2015)"
+                    ],
+                    [
+                      "2419 (2018)",
+                      "https://undocs.org/en/S/RES/2419(2018)"
+                    ],
+                    [
+                      "2535 (2020)",
+                      "https://undocs.org/en/S/RES/2535(2020)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In 2013, the Secretary-General appointed the first Envoy on Youth. In 2018, to strengthen the coordination and accountability of the United Nations system with regard to its work on young people, the Secretary-General launched the United Nations Youth Strategy. The General Assembly, in its resolution 76/306, decided to establish the United Nations Youth Office as a dedicated office for youth affairs in the Secretariat, integrating the Office of the Secretary-General’s Envoy on Youth. On 27 October 2023, the Secretary-General appointed the first-ever Assistant Secretary-General for Youth Affairs to lead the Office, representing the youngest serving Assistant Secretary-General in the history of the Organization. The mandate derives from the priorities established in relevant resolutions and decisions of the Assembly and the Security Council, including Assembly resolutions 50/81, 62/126, 76/306, 77/336 and 78/179 and Council resolutions 2250 (2015), 2419 (2018) and 2535 (2020).",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "76/306",
+                      "https://undocs.org/en/A/RES/76/306"
+                    ],
+                    [
+                      "50/81",
+                      "https://undocs.org/en/A/RES/50/81"
+                    ],
+                    [
+                      "62/126",
+                      "https://undocs.org/en/A/RES/62/126"
+                    ],
+                    [
+                      "76/306",
+                      "https://undocs.org/en/A/RES/76/306"
+                    ],
+                    [
+                      "77/336",
+                      "https://undocs.org/en/A/RES/77/336"
+                    ],
+                    [
+                      "78/179",
+                      "https://undocs.org/en/A/RES/78/179"
+                    ],
+                    [
+                      "2250 (2015)",
+                      "https://undocs.org/en/S/RES/2250(2015)"
+                    ],
+                    [
+                      "2419 (2018)",
+                      "https://undocs.org/en/S/RES/2419(2018)"
+                    ],
+                    [
+                      "2535 (2020)",
+                      "https://undocs.org/en/S/RES/2535(2020)"
+                    ]
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The objective, to which this programme contributes, is to ensure the meaningful engagement and leadership of young people in the work of the United Nations and accelerated action at the global, regional and country levels to empower young people, to promote their rights and address their needs.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "To contribute to the objective, the Office will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tLead engagement and advocacy for the advancement of youth issues across the United Nations in the areas of peace and security, sustainable development and human rights, through engagement with Member State representatives, principals of United Nations organs and senior management of United Nations entities, and in close consultation with young people;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tPromote meaningful, inclusive and effective engagement of young people and of youth-led and youth-focused organizations in the work of the United Nations, in close collaboration with United Nations system entities;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tEncourage greater United Nations system-wide collaboration, coordination and accountability on the advancement of youth issues, including United Nations support to Member States, as appropriate and upon request, in promoting the effective and meaningful engagement, participation and empowerment of young people;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tEngage with youth-focused envoys, representatives and offices of regional organizations on advancing youth issues;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tPropose innovative approaches to advance multi-stakeholder initiatives on the engagement and empowerment of young people, for the consideration of Member States, including on quality and inclusive education, decent jobs, skills development, digital transformation and youth-led innovation and solutions;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(f)\tPromote and facilitate intergenerational and intercultural dialogue, collaboration and solidarity by creating opportunities for young people to not only share and collaborate among one other, but also engage with Member States, the private sector, academia and the United Nations, including through intergovernmental policy forums;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(g)\tSupport efforts to enhance youth representation at the United Nations, including through increasing and improving the conditions of internships and employment opportunities for young people, especially for those from developing countries and with due regard to gender balance;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(h)\tSupport efforts towards the mobilization of financial and technical support and investment to promote and upscale quality and inclusive education and training, skills development, capacity-building and bridging the digital divide, in tandem with job creation, for young people and creating an enabling environment for harnessing their talents and abilities to contribute to their societies;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-3",
+                          "text": "(i)\tConduct outreach to young people and to youth-led and youth-focused organizations, through innovative means, including the use of social media, narrative storytelling and audiovisual content, with an emphasis on the creation of multilingual assets and templates, where possible, for global dissemination through United Nations country teams and United Nations information centres.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a) \tMeaningful youth engagement systematically integrated into governance structures, policymaking, and decision-making processes at intergovernmental, regional, national, levels;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tStrengthened coherence, accountability and collaboration on youth issues across the UN system;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tEnhanced mechanisms and increased investments made available to support socio-economic opportunities for youth, across social, economic, and environmental priorities at global, regional, and national levels.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to the external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tMember States continue to support the advancement of the situation of young people, including in the implementation of relevant international frameworks and agreements;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tSustained recognition by the global community of the important role that young people play in the promotion of peace and security, sustainable development and human rights;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tThere is adequate allocation of resources for action on young people and meaningful youth engagement across the United Nations system, national, regional and global institutions.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to cooperation with other entities at the global, regional, national and local levels, the Office will collaborate with regional and national youth envoys and regional organizations. It will also prioritize the forging of new relationships and the strengthening of existing ones with relevant youth organizations, civil society organizations, academia and the private sector.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to inter-agency coordination and liaison, the Office will continue to mobilize United Nations entities and United Nations country teams for improved coordination, collaboration and accountability on youth work across the United Nations system. It will collaborate with the Department of Global Communications and other United Nations entities through management of a dedicated youth-focused communications group. It will also work with the Department of Management Strategy, Policy and Compliance, the Department of Operational Support and other members of the Strategy task team to improve internships and employment opportunities across the United Nations system. It will partner with relevant UN entities, as mandated, on meaningful youth participation in major intergovernmental meetings, and other UN agencies, funds and programmes to promote socio-economic opportunities for young people and reduce the digital divide. As part of the efforts to strengthen the youth, peace and security agenda, the Office will continue its collaboration with the Department of Political and Peacebuilding Affairs and the United Nations Population Fund, as well as with OHCHR and other relevant entities on young people’s political participation and protection issues. The Office will also contribute regularly to the work of various inter-agency working groups and will provide secretariat support to the inter-agency high-level steering committee and joint working group responsible for advancing coherent action by the United Nations system on youth-related matters.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Office integrates a gender perspective into its operational activities, deliverables and results, as appropriate, by ensuring the meaningful participation of girls and young women in United Nations processes and intergovernmental decision-making, facilitating intergenerational discussions on women’s leadership, promoting the integration of a gender perspective into youth inclusion and youth-led action and by promoting discussions on sexual and reproductive health and rights as an integral part of the youth agenda.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In line with the United Nations Disability Inclusion Strategy and guided by Office’s research findings and recommendations on young people with disabilities, the Office will advocate for meaningful participation of young persons with disabilities in the work of the United Nations and beyond. In consultation with young people with disabilities and their networks and organizations, the Office will mainstream disability inclusion into all aspects of its work, with the aim of ensuring accessibility to opportunities, information and events, to the greatest extent possible.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Evaluation activities",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The following evaluation conducted by the Office and completed in 2024 has guided the proposed programme plan for 2026:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "(a) \tFirst interim review of Youth2030, the United Nation Youth Strategy",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In response to the results of the evaluation referenced above, the Office coordinated the envisioning of the second phase of the youth strategy, together with the Youth2030 Joint Working Group towards establishing strategic priorities for the second phase of implementation of the Strategy (2025-2030).",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-x",
+                  "text": "Youth engagement advanced at the Summit of the Future",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "On 20 September 2024, the Youth Action Day at the Summit of the Future highlighted young people’s leadership in driving global commitments and translating the Pact for the Future into action. Convened by the Office in collaboration with UN entities, civil society, and youth networks, the event engaged 2,447 registered participants under the age of 30, making it the largest youth gathering in United Nations history. Anchored in Chapter IV of the Pact for the Future, and the Declaration on Future Generations, the event amplified youth voices, fostered intergenerational dialogue, and strengthened accountability for commitments. It culminated in a Youth Action Day Outcome Document outlining over 20 recommendations across three principles: inclusion, equity, and trust; and six key themes: gender equality, technology and digital infrastructure, intergenerational solidarity and equity; climate and environmental sustainability, governance and humanitarian action. These efforts positioned young people as co-creators in shaping global policy and the future.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective is presented in the performance measure below (see table 1.167).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Significant advancement towards mainstreaming meaningful youth participation in policymaking and decision-making spaces at all levels reflected in the Pact for the Future",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned results for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 1: strengthened system-wide action for and with young people to address their needs, amplify their voices and advance their meaningful engagement – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "The Office’s work contributed to 41 per cent of United Nations country teams and 59 per cent of United Nations entities achieving a “green” performance rating for at least 80 per cent of all key performance indicators in the United Nations Youth Strategy scorecard in 2024, which did not meet the planned target of 80 per cent for 2024. The targets were not met owing to gaps in integrating the youth agenda into United Nations strategic frameworks and a lack of institutional mechanisms for tracking youth-related investments.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective and the target for 2026 are presented in the performance measure below (see figure 1.XXXVIII).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Performance measure: percentage of United Nations country teams and United Nations entities that achieved a “green” performance rating for at least 80 per cent of all key performance indicators in the United Nations Youth Strategy scorecarda",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "other",
+                  "text": "a\tThe scorecard covers 18 key performance indicators for United Nations entities and 19 for United Nations country teams relating to United Nations Youth Strategy priority areas. A “green” performance rating for a key performance indicator indicates achievement of the established milestone.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 2: youth engagement at all levels: moving from quantity to quality",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "heading-x",
+                      "text": "Programme performance in 2024 and target for 2026",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Office’s work contributed to young people, United Nations entities and Member States participating in consultations on key principles for meaningful youth engagement in the context of the Summit of the Future, which met the planned target.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Progress towards the objective and the target for 2026 are presented in the performance measure below (see table 1.168).",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "United Nations entities and country teams track indicators on meaningful youth engagement in their accountability scorecards on an annual basis \n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Young people, Member States and United Nations system entities participated in consultations on the key principles for meaningful youth engagement \n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Member States consider global standard for meaningful youth engagement \n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Principles for meaningful youth participation widely adopted by Member States, UN entities and other stakeholders when engaging young people in intergovernmental processes",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Result 3: towards a Global Youth Investment Platform to scale up youth-related programming – Proposed programme plan for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Member States, in the Pact for the Future (RES/79/1), stressed the importance of investing in, and ensuring equitable access to, essential services for all children and young people to advance their social and economic development. To fulfil their full potential and secure decent, productive work and quality employment, young people must have access to safe, inclusive, equitable and quality education opportunities, including in emergencies, throughout their lives that equip them with the knowledge, skills and capabilities they need to thrive in a rapidly changing world.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Lessons learned and planned change",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "The lesson for the Office was the need to strengthen access to sustainable and coordinated financing for youth-focused and youth-led initiatives. In applying the lesson, the Office will work towards the establishment of a Global Youth Investment Platform to attract and better finance youth-related programming at the country-level, in line with paragraph 60 (a) of the Pact for the Future. The Platform will aim to address funding gaps, strengthen coordination, and ensure investments are inclusive, equitable, and aligned with youth needs. The Office will engage in system-wide consultations to develop the concept for the Platform, and options for its operationalization, for the consideration of Member States.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Expected progress towards the objective is presented in the performance measure below (see table 1.169)",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": " –",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The Pact for the Future highlights the need to invest in social and economic development of children and young people (Action 34).",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Youth networks and United Nations Entities collaborate to develop a proposal for a Global Youth Investment Platform",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Member States consider the Secretary General’s proposal for the establishment of a Global Youth Investment Platform ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Legislative mandates",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The list below, which was reviewed in the preparation of the proposed programme budget, provides all mandates entrusted to the programme.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "italic",
+                  "text": "General Assembly resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "50/81",
+                            "hyperlinks": [
+                              [
+                                "50/81",
+                                "https://undocs.org/en/A/RES/50/81"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "World Programme of Action for Youth to the Year 2000 and Beyond",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "62/126",
+                            "hyperlinks": [
+                              [
+                                "62/126",
+                                "https://undocs.org/en/A/RES/62/126"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Policies and programmes involving youth: youth in the global economy – promoting youth participation in social and economic development",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "76/306",
+                            "hyperlinks": [
+                              [
+                                "76/306",
+                                "https://undocs.org/en/A/RES/76/306"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Establishment of the United Nations Youth Office ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "77/336",
+                            "hyperlinks": [
+                              [
+                                "77/336",
+                                "https://undocs.org/en/A/RES/77/336"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Model United Nations",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "78/179",
+                            "hyperlinks": [
+                              [
+                                "78/179",
+                                "https://undocs.org/en/A/RES/78/179"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Policies and programmes involving youth",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "79/1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Pact for the Future",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "50/81",
+                          "https://undocs.org/en/A/RES/50/81"
+                        ],
+                        [
+                          "62/126",
+                          "https://undocs.org/en/A/RES/62/126"
+                        ],
+                        [
+                          "76/306",
+                          "https://undocs.org/en/A/RES/76/306"
+                        ],
+                        [
+                          "77/336",
+                          "https://undocs.org/en/A/RES/77/336"
+                        ],
+                        [
+                          "78/179",
+                          "https://undocs.org/en/A/RES/78/179"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "italic",
+                  "text": "Security Council resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2250 (2015)",
+                            "hyperlinks": [
+                              [
+                                "2250 (2015)",
+                                "https://undocs.org/en/S/RES/2250(2015)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2419 (2018)",
+                            "hyperlinks": [
+                              [
+                                "2419 (2018)",
+                                "https://undocs.org/en/S/RES/2419(2018)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2535 (2020)",
+                            "hyperlinks": [
+                              [
+                                "2535 (2020)",
+                                "https://undocs.org/en/S/RES/2535(2020)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "2250 (2015)",
+                          "https://undocs.org/en/S/RES/2250(2015)"
+                        ],
+                        [
+                          "2419 (2018)",
+                          "https://undocs.org/en/S/RES/2419(2018)"
+                        ],
+                        [
+                          "2535 (2020)",
+                          "https://undocs.org/en/S/RES/2535(2020)"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Table 1.170 lists all deliverables of the programme.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "United Nations Youth Office: deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tReport of the Secretary-General to the General Assembly on the activities of the United Nations Youth Office",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tReport of the Secretary-General to the Security Council on youth, peace and security ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "11",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "11",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3.\tEconomic and Social Council youth forum",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4.\tMeetings of the Security Council ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5.\tMeetings of the Conference of State Parties to the Convention on the Rights of Persons with Disabilities",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t6.\tMeetings of the Advisory Committee on Administrative and Budgetary Questions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t7.\tMeetings of the Fifth Committee",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t8.\tPeacebuilding Commission",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSeminars, workshops and training events (number of days)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "16",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "18",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "21",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t9.\tTraining events for young people (including the Young Leaders for the Sustainable Development Goals)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t10.\tTraining events and workshops for United Nations entities on the United Nations Youth Strategy",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t11.\tTraining sessions for youth on meaningful youth participation in peace & security-related processes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "12.\tTraining sessions for youth on meaningful youth engagement in United Nations intergovernmental processes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tPublications (number of publications)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2 ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t13.\tProgress report on the implementation of the United Nations Youth Strategy ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t14.\tResearch report on young people with disabilities ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "-",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t15.\tResearch report on meaningful participation of young people",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTechnical materials (number of materials)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t16.\tGuidance on scorecards for United Nations country teams and United Nations entities on the United Nations Youth Strategy",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t17.\tAction guide for implementation of the United Nations Youth Strategy",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t18.\tGuidance for monitoring system-wide efforts on young people ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t19.\tToolkit for young people briefers on engagement with United Nations bodies and mechanisms on peace and security ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConsultation, advice and advocacy: Regular briefings with Member States; including country visits and bilateral meetings with ministers responsible for young people and other high-level government officials; consultations with national and regional youth envoys; annual strategic meeting of the high-level steering committee of the United Nations Youth Strategy; and advocacy and policy round tables on enhancing youth representation at the United Nations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: Regular briefings with Member States; including country visits and bilateral meetings with ministers responsible for young people and other high-level government officials; consultations with national and regional youth envoys; annual strategic meeting of the high-level steering committee of the United Nations Youth Strategy; and advocacy and policy round tables on enhancing youth representation at the United Nations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: Regular briefings with Member States; including country visits and bilateral meetings with ministers responsible for young people and other high-level government officials; consultations with national and regional youth envoys; annual strategic meeting of the high-level steering committee of the United Nations Youth Strategy; and advocacy and policy round tables on enhancing youth representation at the United Nations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: Regular briefings with Member States; including country visits and bilateral meetings with ministers responsible for young people and other high-level government officials; consultations with national and regional youth envoys; annual strategic meeting of the high-level steering committee of the United Nations Youth Strategy; and advocacy and policy round tables on enhancing youth representation at the United Nations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: Regular briefings with Member States; including country visits and bilateral meetings with ministers responsible for young people and other high-level government officials; consultations with national and regional youth envoys; annual strategic meeting of the high-level steering committee of the United Nations Youth Strategy; and advocacy and policy round tables on enhancing youth representation at the United Nations.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDatabases and substantive digital materials: United Nations Youth Strategy scorecard reporting system and dashboard; and United Nations Youth Strategy online toolkit platform.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: United Nations Youth Strategy scorecard reporting system and dashboard; and United Nations Youth Strategy online toolkit platform.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: United Nations Youth Strategy scorecard reporting system and dashboard; and United Nations Youth Strategy online toolkit platform.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: United Nations Youth Strategy scorecard reporting system and dashboard; and United Nations Youth Strategy online toolkit platform.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: United Nations Youth Strategy scorecard reporting system and dashboard; and United Nations Youth Strategy online toolkit platform.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: Commemoration of International Youth Day, including support for partner advocacy campaigns, World Youth Skills Day and other relevant international days and observances; communications surrounding the Young Leaders for the Sustainable Development Goals and for publications and reports of the United Nations Youth Office, and the advocacy and communications campaigns on meaningful youth engagement, system-wide coordination and accountability, socio-economic opportunities for youth, as well as other flagship initiatives of the UN Youth Office.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: Commemoration of International Youth Day, including support for partner advocacy campaigns, World Youth Skills Day and other relevant international days and observances; communications surrounding the Young Leaders for the Sustainable Development Goals and for publications and reports of the United Nations Youth Office, and the advocacy and communications campaigns on meaningful youth engagement, system-wide coordination and accountability, socio-economic opportunities for youth, as well as other flagship initiatives of the UN Youth Office.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: Commemoration of International Youth Day, including support for partner advocacy campaigns, World Youth Skills Day and other relevant international days and observances; communications surrounding the Young Leaders for the Sustainable Development Goals and for publications and reports of the United Nations Youth Office, and the advocacy and communications campaigns on meaningful youth engagement, system-wide coordination and accountability, socio-economic opportunities for youth, as well as other flagship initiatives of the UN Youth Office.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: Commemoration of International Youth Day, including support for partner advocacy campaigns, World Youth Skills Day and other relevant international days and observances; communications surrounding the Young Leaders for the Sustainable Development Goals and for publications and reports of the United Nations Youth Office, and the advocacy and communications campaigns on meaningful youth engagement, system-wide coordination and accountability, socio-economic opportunities for youth, as well as other flagship initiatives of the UN Youth Office.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: Commemoration of International Youth Day, including support for partner advocacy campaigns, World Youth Skills Day and other relevant international days and observances; communications surrounding the Young Leaders for the Sustainable Development Goals and for publications and reports of the United Nations Youth Office, and the advocacy and communications campaigns on meaningful youth engagement, system-wide coordination and accountability, socio-economic opportunities for youth, as well as other flagship initiatives of the UN Youth Office.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDigital platforms and multimedia content: United Nations Youth Office website, social media accounts and the Youth2030 Pulse newsletter with regular updates on issues relevant to young people; and social media takeover campaigns and collaborative campaigns with youth and youth-led networks.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: United Nations Youth Office website, social media accounts and the Youth2030 Pulse newsletter with regular updates on issues relevant to young people; and social media takeover campaigns and collaborative campaigns with youth and youth-led networks.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: United Nations Youth Office website, social media accounts and the Youth2030 Pulse newsletter with regular updates on issues relevant to young people; and social media takeover campaigns and collaborative campaigns with youth and youth-led networks.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: United Nations Youth Office website, social media accounts and the Youth2030 Pulse newsletter with regular updates on issues relevant to young people; and social media takeover campaigns and collaborative campaigns with youth and youth-led networks.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: United Nations Youth Office website, social media accounts and the Youth2030 Pulse newsletter with regular updates on issues relevant to young people; and social media takeover campaigns and collaborative campaigns with youth and youth-led networks.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\t\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Overview",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "The proposed regular budget resources for 2026, including the breakdown of resource changes, as applicable, are reflected in tables 1.171 to 1.173.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Evolution of financial resources by object of expenditure",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate  ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Object of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/expanded mandates ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Percentage",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate  ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Posts",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 119.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 183.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 183.0",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Other staff costs",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "78.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "94.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "94.5",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Hospitality",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5.7",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Consultants",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "64.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "117.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "117.0",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Travel of staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "91.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "81.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "81.0",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Contractual services",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "160.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "277.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "277.6",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "General operating expenses",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "65.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "35.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "35.9",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Supplies and materials",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6.5",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Furniture and equipment",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "16.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "16.7",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Grants and contributions",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "124.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "141.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "141.7",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 713.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 959.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 959.6",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Proposed posts and post changes for 2026",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Number",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Details",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Approved for 2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "16",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 ASG, 1 D-1, 2 P-5, 5 P-3, 6 P-2/1, 1 GS (OL)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Proposed for 2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "16",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 ASG, 1 D-1, 2 P-5, 5 P-3, 6 P-2/1, 1 GS (OL)",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Proposed posts by category and grade",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Category and grade",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/expanded mandates ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 proposed",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Professional and higher",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "ASG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "D-1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "P-5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "P-3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "P-2/1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tSubtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "General Service and related",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "GS (OL)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tSubtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "16",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "16",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "1.385\tAdditional details on the distribution of the proposed resources for 2026 are reflected in tables 1.174 to 1.176 and figure 1.XXXIX.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "1.386\tAs reflected in tables 1.174 (1) and 1.175 (1), the overall resources proposed for 2026 amount to $3,959,600, reflecting no change compared with the approved budget for 2025. The proposed level of resources provides for the full, efficient and effective implementation of mandates.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Evolution of financial resources by source of funding and component",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "list-2",
+              "text": "(1)\tRegular budget",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate  ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Component",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 \napproved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate  ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Programme of work",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 713.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 959.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 959.6",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 713.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 959.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 959.6",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "list-2",
+              "text": "(2)\tExtrabudgetary",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Component",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 \nestimate",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Change",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Programme of work",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 546.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 161.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(585.1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(50.4)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "576.3",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 546.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 161.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(585.1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(50.4)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "576.3",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal (1+2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4 259.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5 121.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(585.1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(11.4)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4 535.9",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Proposed posts for 2026 by source of funding and component",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "list-2",
+              "text": "(1)\tRegular budget",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Component",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 proposed",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Programme of work",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "16",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "16",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "16",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "16",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "list-2",
+              "text": "(2)\tExtrabudgetary",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Component",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 estimate",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Change",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Programme of work",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal, 2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal (1+2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "17",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "16",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Evolution of financial and post resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars/number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Changes",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate  ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 approved",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Technical adjustments",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "New/expanded mandates",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Other ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Percentage ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 estimate  ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Financial resources by main category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Posts",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 119.5 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 183.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 183.0",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Non-post",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "593.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "776.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " – ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "776.6",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 713.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 959.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 959.6",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Post resources by category",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Professional and higher",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "General Service and related",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "16",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "16",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Distribution of proposed resources for 2026",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Number of posts/thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "image",
+              "text": "",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Extrabudgetary resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "As reflected in tables 1.174 (2) and 1.174 (2), extrabudgetary resources amount to $576,300. The non-post resources would complement regular budget resources and support the delivery of its mandates, including supporting meaningful youth engagement and enhancing meaningful youth participation in decision making processes.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The extrabudgetary resources under the present section are subject to the oversight of the Office, which has delegated authority from the Secretary-General.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "Information on the timely submission of documentation and advance booking of air travel is reflected in table 1.177. The Office will strengthen its efforts to ensure the advance booking of tickets in line with the air travel policy and improve its compliance rate.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Compliance rate",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Percentage)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2022 \nactual",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2023 actual",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024 \nactual",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 \nplanned",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 \nplanned",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Timely submission of documentation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Air tickets purchased at least two weeks before the commencement of travel",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "46",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "29",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "100",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

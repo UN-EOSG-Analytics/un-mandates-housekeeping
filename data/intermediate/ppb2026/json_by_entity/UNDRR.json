@@ -1,0 +1,3758 @@
+{
+  "entity": "United Nations Office for Disaster Risk Reduction",
+  "entity_abbrev": "UNDRR",
+  "entity_raw_name": "II.\tUnited Nations Office for Disaster Risk Reduction",
+  "source_file": "A_80_6_SECT.27.json",
+  "content": [
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "27.II.1\tThe United Nations Office for Disaster Risk Reduction is the focal point for the coordination of disaster reduction, ensuring synergies among the disaster reduction activities of the United Nations system and regional organizations and activities in socioeconomic and humanitarian fields. It provides a data-driven and people-centred approach to supporting Governments and stakeholders in identifying, reporting on and reducing existing and emerging disaster risks, with the aim of ensuring that no one is left behind in implementing the Sendai Framework for Disaster Risk Reduction 2015–2030. The mandate derives from the priorities established in General Assembly resolutions and decisions, including resolutions 42/169, 54/219, 56/195 and 77/164, as well as the Sendai Declaration and the Sendai Framework adopted by the Assembly in its resolution 69/283.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "42/169",
+                      "https://docs.un.org/en/A/RES/42/169"
+                    ],
+                    [
+                      "54/219",
+                      "https://docs.un.org/en/A/RES/54/219"
+                    ],
+                    [
+                      "56/195",
+                      "https://docs.un.org/en/A/RES/56/195"
+                    ],
+                    [
+                      "77/164",
+                      "https://docs.un.org/en/A/RES/77/164"
+                    ],
+                    [
+                      "69/283",
+                      "https://docs.un.org/en/A/RES/69/283"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "27.II.2\tThe General Assembly, in its resolution 69/283, tasked the Office with supporting the implementation, follow-up and review of the Sendai Framework. The Assembly, in its resolution 77/289, adopted the political declaration of the high-level meeting on the midterm review of the Sendai Framework for Disaster Risk Reduction 2015–2030, which reaffirmed the importance of effective implementation of the Sendai Framework. The Office’s programme plan aligns with the outcomes of the midterm review of the implementation of the Sendai Framework. To implement its mandate, in line with its strategic framework, the Office supports regional, national and local implementation of the Sendai Framework, strengthens global monitoring and analysis of disaster risk, catalyses action for risk reduction and resilience by countries and stakeholders, and promotes effective risk communication, advocacy and knowledge management.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "69/283",
+                      "https://docs.un.org/en/A/RES/69/283"
+                    ],
+                    [
+                      "77/289",
+                      "https://docs.un.org/en/A/RES/77/289"
+                    ]
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "27.II.3\tThe objective, to which this programme contributes, is to substantially reduce disaster risk and losses in lives, livelihoods and health and in the economic, physical, social, cultural and environmental assets of persons, businesses, communities and countries.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "27.II.4\tTo contribute to the objective, the Office will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tCo-lead the Early Warnings for All initiative, together with the World Meteorological Organization, and lead on the planning and implementation of the initiative’s pillar 1 focusing on risk knowledge and management, in line with target (g) of the Sendai Framework and General Assembly resolution 77/289;",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "77/289",
+                          "https://docs.un.org/en/A/RES/77/289"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tProvide guidance to Member States and stakeholders on implementing the Sendai Framework and accelerating the implementation of disaster risk reduction action through the production and dissemination of knowledge resources and best practices and the provision of capacity development and assistance at the regional, national and local levels;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tSupport Member States and other development stakeholders in strengthening the integration of climate change and disaster risk reduction into relevant strategies and policies across and within sectors, including by delivering evidence-based advocacy initiatives with clear calls to action to invest in disaster risk reduction and climate change adaptation and raise public awareness on the importance of such initiatives;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tProvide support to Member States for reporting on the global targets of the Sendai Framework and for the related indicators of the Sustainable Development Goals using the Framework monitoring system;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tAdvise Member States in identifying gaps in public spending on disaster risk reduction and ensuring that disaster risk reduction is mainstreamed into public budgeting, financial planning, expenditure, investment and procurement processes in all relevant sectors and at all levels of government, and that integrated national financing frameworks are risk-informed;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(f)\tSupport Member States in strengthening disaster risk reduction policies and programmes in the least developed countries, landlocked developing countries, small island developing States and in humanitarian contexts, through the provision of focused assistance in overcoming the challenges, constraints and gaps that they continue to face, in line with agreed programmes of action;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(g)\tWork closely with Member States and stakeholders to follow up on General Assembly resolution 77/289 on the political declaration of the high-level meeting on the midterm review of the Sendai Framework for Disaster Risk Reduction 2015–2030, with a strengthened focus on the four priority areas identified by Member States, as well as on relevant commitments and decisions contained in the Pact for the Future (Assembly resolution 79/1);",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "77/289",
+                          "https://docs.un.org/en/A/RES/77/289"
+                        ],
+                        [
+                          "79/1",
+                          "https://docs.un.org/en/A/RES/79/1"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(h)\tAs co-host of the secretariat for the Santiago network for averting, minimizing and addressing loss and damage associated with the adverse effects of climate change, catalyse technical assistance for developing countries that are particularly vulnerable to the adverse effects of climate change, in line with General Assembly decision 78/546 and resolutions 78/152 and 78/153;",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "78/152",
+                          "https://docs.un.org/en/A/RES/78/152"
+                        ],
+                        [
+                          "78/153",
+                          "https://docs.un.org/en/A/RES/78/153"
+                        ]
+                      ],
+                      "children": [
+                        {
+                          "block_type": "paragraph-3",
+                          "text": "(i)\tWork with practitioners and experts around the world to strengthen awareness and understanding of existing and emerging disaster risks, including the impacts of climate change, biodiversity loss, environmental degradation and unplanned and rapid urbanization, as well as technological hazards and risks, and assist local and national governments and regional organizations in applying new risk information and analysis in their decision-making.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "27.II.5\tThe above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tImproved management and decision-making at the local, national and regional levels regarding current and future disaster risks through an evidence-based understanding of the multi-hazard risk landscape, enabling risk-informed policies, plans, regulatory frameworks and investment that align with the Sendai Framework and the 2030 Agenda for Sustainable Development;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tIncreased accountability for and commitment to implementing the Sendai Framework;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tMulti-sector and inclusive disaster risk reduction interventions that address the needs of the most vulnerable, thereby contributing to leaving no one behind.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "27.II.6\tWith regard to the external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tDisasters will continue to increase in frequency and magnitude owing to, among other things, the adverse effects of climate change, necessitating the integration of disaster risk reduction, climate action and efforts to build resilience to reduce the impact of disasters;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tSocioeconomic disparities and political tensions have the potential to deepen vulnerabilities of people living in the most disaster-prone countries, necessitating policies, plans, regulatory frameworks and investment decisions based on an accessible and evidence-based understanding of risks;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tThe risk of damage and losses from disasters will remain high for the least developed countries, landlocked developing countries and small island developing States, necessitating an increase in early warning coverage and support to adequately prepare for and respond to disasters.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "27.II.7\tWith regard to cooperation with other entities at the global, regional, national and local levels, it is recognized in the Sendai Framework that, while States have the overall responsibility for reducing disaster risk, it is a shared responsibility between Governments and relevant stakeholders. Therefore, cooperation with stakeholders, including science and academia, the media, the private sector and civil society, will support an all-of-society approach to disaster risk reduction. The Office will support private sector coordination efforts with national and local governments and strengthening micro-, small and medium-sized enterprises’ resilience to disasters. The Office will continue to work through its stakeholder engagement mechanism and other region-specific mechanisms to promote inclusive and coherent implementation of the Sendai Framework and risk-informed development that leaves no one behind. The Office will also emphasize cooperation at the local level by promoting disaster resilience-building in cities.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "27.II.8\tWith regard to inter-agency coordination and liaison, as Chair of the Senior Leadership Group on Disaster Risk Reduction for Resilience and as co-lead of the Early Warnings for All initiative, the Office will align efforts and promote synergies within the United Nations system on interventions relating to disaster risk reduction and early warning systems, resulting in increased availability of people-centred, end-to-end multi-hazard early warning systems. At the technical level, the Office will strengthen coordination within the United Nations system by convening the United Nations Disaster Risk Reduction Focal Points’ Group and leading the risk knowledge and management pillar of the Early Warnings for All executive action plan for the period 2023–2027. The Office will further contribute to the Climate Risk and Early Warning Systems initiative, a mechanism that funds the least developed countries and small island developing States for risk-informed early warning services, implemented jointly with the World Meteorological Organization and the World Bank.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "27.II.9\tThe Office integrates a gender perspective into its operational activities, deliverables and results, as appropriate. In line with the Sendai Framework, the Office will work to promote the full, equal and effective participation and leadership of women in the design, management, resourcing and implementation of gender-sensitive disaster risk reduction policies, plans and programmes, and enable Governments to better incorporate a gender perspective into national risk reduction strategies, early warning systems, climate adaptation and resilience-building.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "27.II.10\tNoting the United Nations Disability Inclusion Strategy and recognizing that disasters and the consequent disruption to physical, social, economic and environmental networks and support systems disproportionately affect persons living with disabilities and their families, the Office will increase advocacy on disability-inclusive disaster risk reduction and ensure the participation of persons with disability stakeholder groups in processes that set the global and regional disaster risk reduction agendas, with the active involvement of its regional offices. The Office will support States Parties’ efforts to implement the Convention on the Rights of Persons with Disabilities. Emphasis will be placed on supporting Member States in ensuring that persons living with disabilities and their needs are included in the implementation of the Sendai Framework and its expected results, goal and targets, including through the availability of disaggregated data.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Evaluation activities",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "27.II.11\tAn internal evaluation of the alignment of the Office’s strategic goals with its ability to be catalytic in programme delivery through collaboration and partnerships is planned for 2026.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Enhanced risk communication capacity of the media",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "27.II.12\tIn the Sendai Framework, the media are called upon to take an active and inclusive role at the local, national, regional and global levels in contributing to the raising of public awareness and to disseminate accurate disaster risk, hazard and disaster information. In 2024, through the “Media saving lives” initiative, which was developed to enhance the role of media in disaster risk reduction and emergency response, the Office fostered greater collaboration between communities and official emergency communicators by expanding its global media capacity-building efforts to include national disaster management authorities for the first time. This expansion enabled the creation of stronger, more integrated communication networks. This collaboration enabled the issuance of early warning systems when necessary and facilitated effective responses to those warnings.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "27.II.13\tProgress towards the objective is presented in the performance measure below (see table 27.II.1).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table",
+                      "text": "Table 27.II.1",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "The Disaster Risk Reduction Media Hub was launched, enhancing media engagement and awareness around disaster risk reduction and climate change adaptation",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The global media sector enhanced its capacity to raise awareness, guide preparedness and facilitate effective disaster response and recovery efforts",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The inclusion of national disaster management authorities in disaster risk reduction training sessions resulted in the creation of more integrated communication networks and enhanced the capacity of media channels to strengthen preparedness and disseminate critical information in emergency situations ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned results for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 1: accelerated achievement of the Sendai Framework with countries using relevant information and analysis to reduce risks and inform development decisions – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "27.II.14\tThe programme’s work contributed to 11 additional countries developing multi-hazard risk profiles, for a total of 18 countries, which exceeded the planned target of 12 countries.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "27.II.15\tProgress towards the objective and the target for 2026 are presented in the performance measure below (see figure 27.II.I).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "figure",
+                      "text": "Figure 27.II.I",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure: number of countries having developed multi-hazard risk profiles (cumulative)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "image",
+                      "text": "",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 2: strengthened inclusive multi-hazard early warning systems that reach the most vulnerable – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "27.II.16\tThe programme’s work contributed to three additional small island developing States, least developed countries or landlocked developing countries having accessible, understandable, usable and relevant disaster risk information and assessment available to the public at the national and local levels, for a total of 23 countries, which exceeded the planned target of 22 countries.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "27.II.17\tProgress towards the objective and the target for 2026 are presented in the performance measure below (see figure 27.II.II).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "figure",
+                      "text": "Figure 27.II.II",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure: number of small island developing States, least developed countries and landlocked developing countries that have accessible, understandable, usable and relevant disaster risk information and assessment available to the people at the national and local levelsa",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "image",
+                      "text": "",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "other",
+                      "text": "a\tBased on national reporting against target G5 of the Sendai Framework monitor.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 3: national strategies in place to finance disaster risk reduction – Proposed programme plan for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "27.II.18\tThe General Assembly, in its resolution 77/289, adopted the political declaration of the high-level meeting on the midterm review of the Sendai Framework, in which Heads of State and Government, Ministers and High Representatives expressed deep concern that public and private investments to anticipate, plan for, reduce and prevent disaster risk remained insufficient and did not match the scale of existing and future risk. In the same resolution, the Assembly called upon States to invest in disaster risk reduction, including by developing comprehensive national and local disaster risk reduction financing strategies that leveraged the full spectrum of pre- and post-disaster financial resources from public, private, domestic and international sources.",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "77/289",
+                          "https://docs.un.org/en/A/RES/77/289"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "italic",
+                      "text": "Lessons learned and planned change",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "27.II.19\tThe lesson for the programme was the importance of supporting Member States in developing more comprehensive financing strategies for disaster risk reduction. In disaster-related financing strategies, disproportionate emphasis is often placed on post-disaster financing needs and instruments, while the financing of preventive measures is sometimes overlooked. In applying the lesson, the programme will support activities aimed at ensuring the integration of disaster risk reduction into future financing strategies by assisting countries in identifying policy reforms, institutional arrangements and approaches that serve to unlock financing for risk reduction and complement post-disaster financing instruments.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "27.II.20\tExpected progress towards the objective is presented in the performance measure below (see figure 27.II.III).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "figure",
+                      "text": "Figure 27.II.III",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure: number of countries with disaster risk reduction financing strategies or integrated national financing frameworks with a disaster risk reduction lens (cumulative)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "image",
+                      "text": "",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Legislative mandates",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "27.II.21\tThe list below, which was reviewed in the preparation of the proposed programme budget, provides all mandates entrusted to the programme.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "italic",
+                  "text": "General Assembly resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "54/219",
+                            "hyperlinks": [
+                              [
+                                "54/219",
+                                "https://docs.un.org/en/A/RES/54/219"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "International Decade for Natural Disaster Reduction: successor arrangements",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "56/195; 64/200",
+                            "hyperlinks": [
+                              [
+                                "56/195",
+                                "https://docs.un.org/en/A/RES/56/195"
+                              ],
+                              [
+                                "64/200",
+                                "https://docs.un.org/en/A/RES/64/200"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "International Strategy for Disaster Reduction",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "69/283",
+                            "hyperlinks": [
+                              [
+                                "69/283",
+                                "https://docs.un.org/en/A/RES/69/283"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Sendai Framework for Disaster Risk Reduction 2015–2030",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "70/203",
+                            "hyperlinks": [
+                              [
+                                "70/203",
+                                "https://docs.un.org/en/A/RES/70/203"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "World Tsunami Awareness Day",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "72/218; 73/231; 74/218; 75/216; 76/204; 77/164; 78/152; 79/205",
+                            "hyperlinks": [
+                              [
+                                "72/218",
+                                "https://docs.un.org/en/A/RES/72/218"
+                              ],
+                              [
+                                "73/231",
+                                "https://docs.un.org/en/A/RES/73/231"
+                              ],
+                              [
+                                "74/218",
+                                "https://docs.un.org/en/A/RES/74/218"
+                              ],
+                              [
+                                "75/216",
+                                "https://docs.un.org/en/A/RES/75/216"
+                              ],
+                              [
+                                "76/204",
+                                "https://docs.un.org/en/A/RES/76/204"
+                              ],
+                              [
+                                "77/164",
+                                "https://docs.un.org/en/A/RES/77/164"
+                              ],
+                              [
+                                "78/152",
+                                "https://docs.un.org/en/A/RES/78/152"
+                              ],
+                              [
+                                "79/205",
+                                "https://docs.un.org/en/A/RES/79/205"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Disaster risk reduction",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "74/3",
+                            "hyperlinks": [
+                              [
+                                "74/3",
+                                "https://docs.un.org/en/A/RES/74/3"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Political declaration of the high-level meeting to review progress made in addressing the priorities of small island developing States through the implementation of the SIDS Accelerated Modalities of Action (SAMOA) Pathway",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "74/4; 78/1",
+                            "hyperlinks": [
+                              [
+                                "74/4",
+                                "https://docs.un.org/en/A/RES/74/4"
+                              ],
+                              [
+                                "78/1",
+                                "https://docs.un.org/en/A/RES/78/1"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Political declaration of the high-level political forum on sustainable development convened under the auspices of the General Assembly",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "76/258",
+                            "hyperlinks": [
+                              [
+                                "76/258",
+                                "https://docs.un.org/en/A/RES/76/258"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Doha Programme of Action for Least Developed Countries",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "77/29; 78/120; 79/139",
+                            "hyperlinks": [
+                              [
+                                "77/29",
+                                "https://docs.un.org/en/A/RES/77/29"
+                              ],
+                              [
+                                "78/120",
+                                "https://docs.un.org/en/A/RES/78/120"
+                              ],
+                              [
+                                "79/139",
+                                "https://docs.un.org/en/A/RES/79/139"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "International cooperation on humanitarian assistance in the field of natural disasters, from relief to development ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "77/289",
+                            "hyperlinks": [
+                              [
+                                "77/289",
+                                "https://docs.un.org/en/A/RES/77/289"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Political declaration of the high-level meeting on the midterm review of the Sendai Framework for Disaster Risk Reduction 2015–2030",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "78/3",
+                            "hyperlinks": [
+                              [
+                                "78/3",
+                                "https://docs.un.org/en/A/RES/78/3"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Political declaration of the General Assembly high-level Meeting on pandemic prevention, preparedness and response",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "78/153",
+                            "hyperlinks": [
+                              [
+                                "78/153",
+                                "https://docs.un.org/en/A/RES/78/153"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Protection of global climate for present and future generations of humankind",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "78/317",
+                            "hyperlinks": [
+                              [
+                                "78/317",
+                                "https://docs.un.org/en/A/RES/78/317"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "The Antigua and Barbuda Agenda for Small Island Developing States: A Renewed Declaration for Resilient Prosperity",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "79/1",
+                            "hyperlinks": [
+                              [
+                                "79/1",
+                                "https://docs.un.org/en/A/RES/79/1"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "The Pact for the Future ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "79/128",
+                            "hyperlinks": [
+                              [
+                                "79/128",
+                                "https://docs.un.org/en/A/RES/79/128"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Protection of persons in the event of disasters",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "79/233",
+                            "hyperlinks": [
+                              [
+                                "79/233",
+                                "https://docs.un.org/en/A/RES/79/233"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Programme of Action for Landlocked Developing Countries for the Decade 2024–2034",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "54/219",
+                          "https://docs.un.org/en/A/RES/54/219"
+                        ],
+                        [
+                          "56/195",
+                          "https://docs.un.org/en/A/RES/56/195"
+                        ],
+                        [
+                          "64/200",
+                          "https://docs.un.org/en/A/RES/64/200"
+                        ],
+                        [
+                          "69/283",
+                          "https://docs.un.org/en/A/RES/69/283"
+                        ],
+                        [
+                          "70/203",
+                          "https://docs.un.org/en/A/RES/70/203"
+                        ],
+                        [
+                          "72/218",
+                          "https://docs.un.org/en/A/RES/72/218"
+                        ],
+                        [
+                          "73/231",
+                          "https://docs.un.org/en/A/RES/73/231"
+                        ],
+                        [
+                          "74/218",
+                          "https://docs.un.org/en/A/RES/74/218"
+                        ],
+                        [
+                          "75/216",
+                          "https://docs.un.org/en/A/RES/75/216"
+                        ],
+                        [
+                          "76/204",
+                          "https://docs.un.org/en/A/RES/76/204"
+                        ],
+                        [
+                          "77/164",
+                          "https://docs.un.org/en/A/RES/77/164"
+                        ],
+                        [
+                          "78/152",
+                          "https://docs.un.org/en/A/RES/78/152"
+                        ],
+                        [
+                          "79/205",
+                          "https://docs.un.org/en/A/RES/79/205"
+                        ],
+                        [
+                          "74/3",
+                          "https://docs.un.org/en/A/RES/74/3"
+                        ],
+                        [
+                          "74/4",
+                          "https://docs.un.org/en/A/RES/74/4"
+                        ],
+                        [
+                          "78/1",
+                          "https://docs.un.org/en/A/RES/78/1"
+                        ],
+                        [
+                          "76/258",
+                          "https://docs.un.org/en/A/RES/76/258"
+                        ],
+                        [
+                          "77/29",
+                          "https://docs.un.org/en/A/RES/77/29"
+                        ],
+                        [
+                          "78/120",
+                          "https://docs.un.org/en/A/RES/78/120"
+                        ],
+                        [
+                          "79/139",
+                          "https://docs.un.org/en/A/RES/79/139"
+                        ],
+                        [
+                          "77/289",
+                          "https://docs.un.org/en/A/RES/77/289"
+                        ],
+                        [
+                          "78/3",
+                          "https://docs.un.org/en/A/RES/78/3"
+                        ],
+                        [
+                          "78/153",
+                          "https://docs.un.org/en/A/RES/78/153"
+                        ],
+                        [
+                          "78/317",
+                          "https://docs.un.org/en/A/RES/78/317"
+                        ],
+                        [
+                          "79/1",
+                          "https://docs.un.org/en/A/RES/79/1"
+                        ],
+                        [
+                          "79/128",
+                          "https://docs.un.org/en/A/RES/79/128"
+                        ],
+                        [
+                          "79/233",
+                          "https://docs.un.org/en/A/RES/79/233"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "italic",
+                  "text": "Economic and Social Council resolutions and intergovernmental agreed conclusions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2018/14",
+                            "hyperlinks": [
+                              [
+                                "2018/14",
+                                "https://docs.un.org/en/E/RES/2018/14"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Strategic Framework on Geospatial Information and Services for Disasters",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2022/8",
+                            "hyperlinks": [
+                              [
+                                "2022/8",
+                                "https://docs.un.org/en/E/RES/2022/8"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Report of the Committee for Development Policy on its twenty-fourth session",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "E/2022/27-E/CN.6/2022/16",
+                            "hyperlinks": [
+                              [
+                                "E/2022/27-E/CN.6/2022/16",
+                                "https://docs.un.org/en/E/2022/27"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Report of the Commission on the Status of Women on its sixty-sixth session, on the priority theme “Achieving gender equality and the empowerment of all women and girls in the context of climate change, environmental and disaster risk reduction policies and programmes”",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "E/FFDF/2020/3; E/FFDF/2021/3; E/FFDF/2022/3; E/FFDF/2023/3; E/HLS/2024/1",
+                            "hyperlinks": [
+                              [
+                                "E/FFDF/2020/3",
+                                "https://docs.un.org/en/E/FFDF/2020/3"
+                              ],
+                              [
+                                "E/FFDF/2021/3",
+                                "https://docs.un.org/en/E/FFDF/2021/3"
+                              ],
+                              [
+                                "E/FFDF/2022/3",
+                                "https://docs.un.org/en/E/FFDF/2022/3"
+                              ],
+                              [
+                                "E/FFDF/2023/3",
+                                "https://docs.un.org/en/E/FFDF/2023/3"
+                              ],
+                              [
+                                "E/HLS/2024/1",
+                                "https://docs.un.org/en/E/HLS/2024/1"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Follow-up and review of the financing for development outcomes and the means of implementation of the 2030 Agenda for Sustainable Development",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "2018/14",
+                          "https://docs.un.org/en/E/RES/2018/14"
+                        ],
+                        [
+                          "2022/8",
+                          "https://docs.un.org/en/E/RES/2022/8"
+                        ],
+                        [
+                          "E/2022/27-E/CN.6/2022/16",
+                          "https://docs.un.org/en/E/2022/27"
+                        ],
+                        [
+                          "E/FFDF/2020/3",
+                          "https://docs.un.org/en/E/FFDF/2020/3"
+                        ],
+                        [
+                          "E/FFDF/2021/3",
+                          "https://docs.un.org/en/E/FFDF/2021/3"
+                        ],
+                        [
+                          "E/FFDF/2022/3",
+                          "https://docs.un.org/en/E/FFDF/2022/3"
+                        ],
+                        [
+                          "E/FFDF/2023/3",
+                          "https://docs.un.org/en/E/FFDF/2023/3"
+                        ],
+                        [
+                          "E/HLS/2024/1",
+                          "https://docs.un.org/en/E/HLS/2024/1"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "E/HLS/2022/1",
+                            "hyperlinks": [
+                              [
+                                "E/HLS/2022/1",
+                                "https://docs.un.org/en/E/HLS/2022/1"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Ministerial declaration of the high-level segment of the 2022 session of the Economic and Social Council and the 2022 high-level political forum on sustainable development, convened under the auspices of the Council, on the theme “Building back better from the coronavirus disease (COVID-19) while advancing the full implementation of the 2030 Agenda for Sustainable Development”",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "E/HLS/2024/1",
+                            "hyperlinks": [
+                              [
+                                "E/HLS/2024/1",
+                                "https://docs.un.org/en/E/HLS/2024/1"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Ministerial declaration of the high-level segment of the 2024 session of the Economic and Social Council and the 2024 high-level political forum on sustainable development convened under the auspices of the Council on the theme “Reinforcing the 2030 Agenda for Sustainable Development and eradicating poverty in times of multiple crises: the effective delivery of sustainable, resilient and innovative solutions”",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "E/HLS/2022/1",
+                          "https://docs.un.org/en/E/HLS/2022/1"
+                        ],
+                        [
+                          "E/HLS/2024/1",
+                          "https://docs.un.org/en/E/HLS/2024/1"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "27.II.22\tTable 27.II.2 lists all deliverables of the programme.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 27.II.2",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tReport to the General Assembly on the implementation of the Sendai Framework for Disaster Risk Reduction 2015–2030",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tMeetings of the General Assembly (Second Committee), resolution negotiations on disaster risk reduction (annual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3.\tMeetings of the General Assembly (Second Committee), agenda item on sustainable development: disaster risk reduction",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tField and technical cooperation projects (number of projects)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "35",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "43",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "30",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "35",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4.\tNational, regional and interregional projects related to the implementation of the Sendai Framework",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "35",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "43",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "30",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "35",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSeminars, workshops and training events (number of days)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "330",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "338",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "150",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "150",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5.\tTraining events on disaster risk reduction planning and implementation and monitoring of the Sendai Framework for regional, national and local capacity development ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "330",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "338",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "150",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "150",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tPublications (number of publications)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t6.\tGlobal Assessment Report on Disaster Risk Reduction and Global Assessment Report special reports",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t7.\tUnited Nations Office for Disaster Risk Reduction annual report",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t8.\tUnited Nations Office for Disaster Risk Reduction strategic framework for the period 2026–2030 and related work programme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t9.\tUnited Nations Plan of Action on Disaster Risk Reduction for Resilience: Towards a Risk-informed and Integrated Approach to Sustainable Development (progress report)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTechnical materials (number of materials)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "23",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "26",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "23",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "23",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t10.\tOn the monitoring and implementation of the Sendai Framework",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t11.\tOn the application of risk knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t12.\tTechnical contributions to outcome documents of the regional and global platforms",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConsultation, advice and advocacy: advocacy through high-level engagement of key audiences and decision makers; advice and support on risk information and analysis to 100 countries; advisory services for risk governance capacities of 18 regional and subregional intergovernmental organizations; and advocacy with and technical advice to Member States to integrate disaster risk reduction into intergovernmental deliberations and policy decisions at the General Assembly and the Economic and Social Council, including the high-level political forum for sustainable development, as well as the Rio Conventions on biological diversity, climate change and desertification.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advocacy through high-level engagement of key audiences and decision makers; advice and support on risk information and analysis to 100 countries; advisory services for risk governance capacities of 18 regional and subregional intergovernmental organizations; and advocacy with and technical advice to Member States to integrate disaster risk reduction into intergovernmental deliberations and policy decisions at the General Assembly and the Economic and Social Council, including the high-level political forum for sustainable development, as well as the Rio Conventions on biological diversity, climate change and desertification.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advocacy through high-level engagement of key audiences and decision makers; advice and support on risk information and analysis to 100 countries; advisory services for risk governance capacities of 18 regional and subregional intergovernmental organizations; and advocacy with and technical advice to Member States to integrate disaster risk reduction into intergovernmental deliberations and policy decisions at the General Assembly and the Economic and Social Council, including the high-level political forum for sustainable development, as well as the Rio Conventions on biological diversity, climate change and desertification.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advocacy through high-level engagement of key audiences and decision makers; advice and support on risk information and analysis to 100 countries; advisory services for risk governance capacities of 18 regional and subregional intergovernmental organizations; and advocacy with and technical advice to Member States to integrate disaster risk reduction into intergovernmental deliberations and policy decisions at the General Assembly and the Economic and Social Council, including the high-level political forum for sustainable development, as well as the Rio Conventions on biological diversity, climate change and desertification.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advocacy through high-level engagement of key audiences and decision makers; advice and support on risk information and analysis to 100 countries; advisory services for risk governance capacities of 18 regional and subregional intergovernmental organizations; and advocacy with and technical advice to Member States to integrate disaster risk reduction into intergovernmental deliberations and policy decisions at the General Assembly and the Economic and Social Council, including the high-level political forum for sustainable development, as well as the Rio Conventions on biological diversity, climate change and desertification.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDatabases and substantive digital materials: the Sendai Framework monitor, used by 175 Member States for monitoring and reporting on progress against Framework targets and related Sustainable Development Goal targets and indicators; the Sendai Framework voluntary commitments online platform, with more than 175 voluntary commitments; and disaster loss databases complying with the Framework requirements, covering 120 countries and territories. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: the Sendai Framework monitor, used by 175 Member States for monitoring and reporting on progress against Framework targets and related Sustainable Development Goal targets and indicators; the Sendai Framework voluntary commitments online platform, with more than 175 voluntary commitments; and disaster loss databases complying with the Framework requirements, covering 120 countries and territories. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: the Sendai Framework monitor, used by 175 Member States for monitoring and reporting on progress against Framework targets and related Sustainable Development Goal targets and indicators; the Sendai Framework voluntary commitments online platform, with more than 175 voluntary commitments; and disaster loss databases complying with the Framework requirements, covering 120 countries and territories. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: the Sendai Framework monitor, used by 175 Member States for monitoring and reporting on progress against Framework targets and related Sustainable Development Goal targets and indicators; the Sendai Framework voluntary commitments online platform, with more than 175 voluntary commitments; and disaster loss databases complying with the Framework requirements, covering 120 countries and territories. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: the Sendai Framework monitor, used by 175 Member States for monitoring and reporting on progress against Framework targets and related Sustainable Development Goal targets and indicators; the Sendai Framework voluntary commitments online platform, with more than 175 voluntary commitments; and disaster loss databases complying with the Framework requirements, covering 120 countries and territories. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tOutreach programmes, special events and informative materials: high-level global and regional meetings on disaster risk reduction; World Tsunami Awareness Day events; International Day for Disaster Reduction events; newsletters and notes verbales on Sendai Framework monitoring; communications campaigns on inclusive disaster risk reduction and the Early Warnings for All initiative; and increased capacity of media, institutional actors and communities to communicate about risk effectively.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and informative materials: high-level global and regional meetings on disaster risk reduction; World Tsunami Awareness Day events; International Day for Disaster Reduction events; newsletters and notes verbales on Sendai Framework monitoring; communications campaigns on inclusive disaster risk reduction and the Early Warnings for All initiative; and increased capacity of media, institutional actors and communities to communicate about risk effectively.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and informative materials: high-level global and regional meetings on disaster risk reduction; World Tsunami Awareness Day events; International Day for Disaster Reduction events; newsletters and notes verbales on Sendai Framework monitoring; communications campaigns on inclusive disaster risk reduction and the Early Warnings for All initiative; and increased capacity of media, institutional actors and communities to communicate about risk effectively.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and informative materials: high-level global and regional meetings on disaster risk reduction; World Tsunami Awareness Day events; International Day for Disaster Reduction events; newsletters and notes verbales on Sendai Framework monitoring; communications campaigns on inclusive disaster risk reduction and the Early Warnings for All initiative; and increased capacity of media, institutional actors and communities to communicate about risk effectively.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and informative materials: high-level global and regional meetings on disaster risk reduction; World Tsunami Awareness Day events; International Day for Disaster Reduction events; newsletters and notes verbales on Sendai Framework monitoring; communications campaigns on inclusive disaster risk reduction and the Early Warnings for All initiative; and increased capacity of media, institutional actors and communities to communicate about risk effectively.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tExternal and media relations: press releases, op-eds and press coverage; and media briefings on community risk and reporting on disaster risk reduction.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: press releases, op-eds and press coverage; and media briefings on community risk and reporting on disaster risk reduction.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: press releases, op-eds and press coverage; and media briefings on community risk and reporting on disaster risk reduction.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: press releases, op-eds and press coverage; and media briefings on community risk and reporting on disaster risk reduction.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: press releases, op-eds and press coverage; and media briefings on community risk and reporting on disaster risk reduction.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDigital platforms and multimedia content: PreventionWeb, the online knowledge platform for disaster risk reduction; and web stories, posts and videos for social media.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: PreventionWeb, the online knowledge platform for disaster risk reduction; and web stories, posts and videos for social media.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: PreventionWeb, the online knowledge platform for disaster risk reduction; and web stories, posts and videos for social media.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: PreventionWeb, the online knowledge platform for disaster risk reduction; and web stories, posts and videos for social media.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: PreventionWeb, the online knowledge platform for disaster risk reduction; and web stories, posts and videos for social media.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub",
+          "text": "Overview",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "27.II.23\tThe proposed regular budget resources for 2026, including the breakdown of resource changes, as applicable, are reflected in tables 27.II.3 to 27.II.5.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table",
+              "text": "Table 27.II.3",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial resources by object of expenditure",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Thousands of United States dollars)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Object of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditurea",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Object of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditurea",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/ expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Posts",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "384.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "308.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "308.2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Contractual services ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2.3",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General operating expenses ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "11",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "17.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "17.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Supplies and materials ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.4",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Grants and contributions",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 277.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 314.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 314.9",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 672.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 642.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 642.9",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "other",
+                  "text": "a\tAt the time of reporting, the expenditures presented in this table and in subsequent tables are not final and may be subject to adjustments that could result in minor differences between the information contained in the present report and the financial statements to be issued by 31 March 2025.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 27.II.4",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed posts and post changes for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Number of posts)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Number",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Details",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Approved for 2025",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "D-1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Proposed for 2026",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "D-1",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 27.II.5",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed posts by category and grade",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Number of posts)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Category and grade",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 \napproved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 proposed",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Category and grade",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 \napproved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 proposed",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Professional and higher",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "D-1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "27.II.24\tAdditional details on the distribution of the proposed resources for 2026 are reflected in tables 27.II.6 to 27.II.8 and figure 27.II.IV.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "27.II.25\tAs shown in tables 27.II.6 (1) and 27.II.7 (1), the overall resources proposed for 2026 amount to $1,642,900, reflecting no change compared with the approved budget for 2025. The proposed level of resources provides for the full, efficient and effective implementation of mandates.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 27.II.6",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial resources by source of funding and component",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Thousands of United States dollars)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "list-2",
+                  "text": "(1)\tRegular budget",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Component/subprogramme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 expenditure",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 \napproved",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Technical adjustments",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "New/ expanded mandates",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Other",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Total",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Percentage",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 estimate ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tProgramme of work",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1 672.7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1 642.9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1 642.9",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubtotal, 1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1 672.7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1 642.9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1 642.9",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "list-2",
+                  "text": "(2)\tExtrabudgetary",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Component/subprogramme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 expenditure",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 estimate",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Change",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Percentage",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 estimate",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tProgramme of work ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "59 755.5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "65 335.2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1 106.2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1.7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "66 441.4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubtotal, 2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "59 755.5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "65 335.2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1 106.2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1.7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "66 441.4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTotal (1+2)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "61 428.2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "66 978.1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1 106.2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1.7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "68 084.3",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 27.II.7",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed posts for 2026 by source of funding and component",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Number of posts)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "list-2",
+                  "text": "(1)\tRegular budget",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Component/subprogramme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 \napproved",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 \nproposed",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Component/subprogramme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 \napproved",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Technical adjustments",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "New/expanded mandates ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "New/expanded mandates ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Other",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Other",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Total ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 \nproposed",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tProgramme of work",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubtotal, 1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "list-2",
+                  "text": "(2)\tExtrabudgetary",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Component/subprogramme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 \nestimate",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Change",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 \nestimate",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tProgramme of work",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "125",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "125",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubtotal, 2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "125",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "125",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTotal (1+2)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "126",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "126",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 27.II.8",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial and post resources",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Thousands of United States dollars/number of posts)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 \nestimate ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/ expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 \nestimate ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Posts",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "384.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "308.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "308.2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Non-post",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 288.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 334.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 334.7",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 672.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 642.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 642.9",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Professional and higher",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "figure",
+                  "text": "Figure 27.II.IV",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Distribution of proposed resources for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Number of posts/thousands of United States dollars)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "image",
+                  "text": "",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Extrabudgetary resources",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "27.II.26\tAs reflected in tables 27.II.6 (2) and 27.II.7 (2), extrabudgetary resources amount to $66,441,400. The resources would complement regular budget resources and would be used mainly to provide for 125 posts (1 Assistant Secretary-General, 1 D-2, 4 D-1, 12 P-5, 29 P-4, 34 P-3, 2 P-2, 9 National Professional Officer, 2 General Service (Principal level) and 31 General Service (Other level)) to perform mainly the functions of supporting Governments and stakeholders in identifying, reporting on and reducing existing and emerging disaster risks. In addition, non-post resources would be used to support the implementation, follow-up and review of the Sendai Framework for Disaster Risk Reduction 2015–2030 at the global, regional, national and local levels.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "27.II.27\tThe extrabudgetary resources under the present section are subject to the oversight of the Special Representative of the Secretary-General for Disaster Risk Reduction, who has delegated authority from the Secretary-General.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

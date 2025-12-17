@@ -1,0 +1,1964 @@
+{
+  "entity": "Office of the Special Adviser to the Secretary-General on Cyprus",
+  "entity_abbrev": "OSASG-CYP",
+  "entity_raw_name": "1.\tOffice of the Special Adviser to the Secretary-General on Cyprus",
+  "source_file": "A_80_6 (SECT. 3)_ADD.2_CLUSTER I_FASCICLE ADVANCE UNEDITED COPY FOR ACABQ.json",
+  "content": [
+    {
+      "block_type": "italic",
+      "text": "($3,198,900)",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": []
+    },
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The mandate of the Mission derives from the priorities established in relevant Security Council resolutions and decisions and an exchange of letters between the Secretary-General and the President of the Security Council (S/2008/456 and S/2008/457). In resolution 1818 (2008), the Council welcomed the intention of the Secretary-General to appoint a Special Adviser and in a letter addressed to the President of the Security Council (S/2008/456), the Secretary-General announced his intention to appoint his Special Adviser on Cyprus as from 14 July 2008. Relevant Security Council resolutions from which the mandate derives include resolution 186 (1964) and various subsequent Council resolutions, the latest being 2771 (2025).",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "S/2008/456",
+                      "https://undocs.org/en/S/2008/456"
+                    ],
+                    [
+                      "S/2008/457",
+                      "https://undocs.org/en/S/2008/457"
+                    ],
+                    [
+                      "1818 (2008)",
+                      "https://undocs.org/en/S/RES/1818(2008)"
+                    ],
+                    [
+                      "S/2008/456",
+                      "https://undocs.org/en/S/2008/456"
+                    ],
+                    [
+                      "186 (1964)",
+                      "https://undocs.org/en/S/RES/186(1964)"
+                    ],
+                    [
+                      "2771 (2025)",
+                      "https://undocs.org/en/S/RES/2771%20(2025)"
+                    ],
+                    [
+                      " ",
+                      "https://undocs.org/en/S/RES/2674(2023)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In its resolution 2771 (2025), the Security Council fully supported the Secretary-General’s ongoing engagement and welcomed the agreed constructive next steps. The Council welcomed the Secretary-General’s plans to convene an informal broader meeting with the two sides and the guarantor powers to discuss the way forward, encouraged further informal talks, emphasized the importance of negotiating a mutually acceptable settlement under United Nations auspices and called urgently on the sides to engage with the Secretary-General and his team to this end.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "2771 (2025)",
+                      "https://undocs.org/en/S/RES/2771%20(2025)"
+                    ]
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The objective, to which this Mission contributes, is to achieve a comprehensive settlement of the Cyprus issue.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "To contribute to the objective, the Mission will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tSupport the two leaders and guarantor powers to promote a peaceful solution and to assist them, should they jointly agree, in the conduct of full-fledged negotiations;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tRegularly conduct bilateral meetings and facilitate joint meetings between the leaders, and their representatives, emphasizing the importance of effective communication for conflict prevention and trust building;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tSupport the implementation of confidence- and trust-building measures/initiatives and the work of the technical committees.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tDialogue among the parties resulting in further rounds of informal talks towards a comprehensive and just settlement in Cyprus;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tMeetings and the expansion of bicommunal contacts;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tEmpowerment and facilitation of the work of the technical committees, resulting in concrete measures and the implementation of confidence-building measures/initiatives.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to cooperation with other entities, the Mission, will coordinate the engagement of international financial institutions in support of the peace process and cooperate with the European Commission as relevant.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to inter-agency coordination and liaison, the Mission, the United Nations Peacekeeping Force in Cyprus and the United Nations country team will maximize synergies and ensure coherent and effective support for peace efforts.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to the external factors, the plan for 2026 is based on the following assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)  Continued and sustained political commitment of the parties to the peace process and the technical committees;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tContinued and sustained international support for the peace process.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Mission integrates a gender perspective in its activities, advocates for gender equality across the work of all technical committees, and supports women’s civil society platforms. It also advocates for greater civic inclusion and the involvement of youth and underrepresented groups.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In line with the United Nations Disability Inclusion Strategy, the Mission will further mainstream disability inclusion in its work, advocate for inclusion of persons with disabilities in engagement with the sides and  the technical committees, andensure accessibility and employment opportunities for qualified candidates with disabilities.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Engagement with the parties, decision to work on crossings, improved dialogue and chances for movement ahead, lowered tensions and raised hope among Cypriots, improving their situation vis-à-vis prospects for peace talks",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "On 5 January 2024, the Secretary-General appointed Ms. María Ángela Holguín Cuéllar as his Personal Envoy on Cyprus for a six-month period. Building on her work that concluded in July 2024, the Secretary-General engaged with the Cypriot leaders on 15 October, which led to an informal meeting in a broader format with the guarantor powers on 17-18 March 2025. There, the parties agreed on the appointment of a Personal Envoy, six trust-building initiatives and another broader format meeting in July 2025. Ms. Holguín was named as a Personal Envoy on 2 May 2025 to follow up on next steps.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "While the number of meetings dropped in 2024, the outputs of the technical committees increased in quality, with project delivery that improved the daily lives of Cypriots. Examples include a vector-borne diseases project that mapped invasive disease-carrying species and increased public awareness on prevention; and the renovation of cultural heritage sites increasing interactions, mutual understanding, and visitors and tourists, thereby benefitting the local economy. Addressing obstacles in intra-island trade benefited businesses, while environmental concerns were addressed across the island, with projects to combat pests and clearing drinking water sources for endangered species. The decision in 2024 to continue dialogue on crossings and to meet with the Secretary-General directly benefited the parties by providing effective communication for risk-mitigation and trust building among them.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective is presented in the performance measure below (see table 3).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 3 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "\t2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Engagement with the two leaders and their teams and support for senior-level engagement, including separate meetings between the Greek Cypriot and Turkish Cypriot leaders with the Secretary-General, three visits of the Assistant Secretary-General for Europe, Central Asia and the Americas to Cyprus and one to each of the guarantor powers, and two meetings of the leaders in Cyprus",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Engagement with the two leaders and their teams, including separate meetings between the Greek Cypriot and Turkish Cypriot leaders, as well as of the guarantor powers with the Secretary-General, the Under-Secretary-General for Political and Peacebuilding Affairs and the Assistant Secretary-General for Europe, Central Asia and the Americas, respectively; and three meetings of the leaders in Cyprus",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Agreement to explore the opening of new crossing points and to hold informal broader format meeting with the guarantor powers\nIncreased activity of civil society organizations and women’s groups \nTechnical committees delivered important projects, improving the daily lives of Cypriots ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned result for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Furthering dialogue as conflict management and an inclusive and sustainable peace process towards a negotiated settlement – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2024, the Mission’s work contributed to the holding of and support to 70 bilateral and joint meetings with the leaders and their representatives and 285 meetings of the technical committees, which did not meet the planned target of 140 and 410, respectively. The target was not met primarily due to the absence of active negotiations, and the shift to planning for the high-level meetings with the two sides and guarantor powers in 2025. As a result, the planned performance target for 2026 reflects this shift.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2026, with the regional landscape expected to remain challenging, the Mission will focus on the support to high-level meetings, trust-building activities, the work of the technical committees and utilising dialogue as an effective early warning and conflict prevention tool.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "italic",
+                      "text": "Lessons learned and planned change",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "The lesson learned was that when meetings are convened at the highest level, focus shifts away from technical-level meetings on the island. At the same time, there is more space for progress in the higher-level dialogue, agreed initiatives and the work of the technical committees, including the new Youth Committee. The planned change would be to focus on delivery of initiatives, including by the technical committees, as they remained critical to building trust and reducing tensions across the island.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Expected progress towards the objective is presented in figure I.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Figure II",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "heading-x",
+                      "text": "Performance measure: Number of bilateral and joint meetings with the leaders and their negotiating teams and number of meetings of working groups and technical committees",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Table 4 lists all deliverables of the mission.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 4 – Deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "1.\tReports of the Secretary-General to the Security Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2.\tMeetings of the Security Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tGood offices: Provision of good offices through the facilitation of bilateral and joint meetings with the leaders, the guarantor powers, and other stakeholders towards a settlement of the Cyprus issue. Facilitation and support to technical committees and trust-building initiatives. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: Provision of good offices through the facilitation of bilateral and joint meetings with the leaders, the guarantor powers, and other stakeholders towards a settlement of the Cyprus issue. Facilitation and support to technical committees and trust-building initiatives. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: Provision of good offices through the facilitation of bilateral and joint meetings with the leaders, the guarantor powers, and other stakeholders towards a settlement of the Cyprus issue. Facilitation and support to technical committees and trust-building initiatives. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: Provision of good offices through the facilitation of bilateral and joint meetings with the leaders, the guarantor powers, and other stakeholders towards a settlement of the Cyprus issue. Facilitation and support to technical committees and trust-building initiatives. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: Provision of good offices through the facilitation of bilateral and joint meetings with the leaders, the guarantor powers, and other stakeholders towards a settlement of the Cyprus issue. Facilitation and support to technical committees and trust-building initiatives. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConsultation, advice and advocacy: provision of advice on procedural, legal  and substantive issues related to the Cyprus issue; coordination and facilitation of advisory meetings, advocacy for gender equality, disability inclusion and participation of youth and public support for the peace process. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: provision of advice on procedural, legal  and substantive issues related to the Cyprus issue; coordination and facilitation of advisory meetings, advocacy for gender equality, disability inclusion and participation of youth and public support for the peace process. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: provision of advice on procedural, legal  and substantive issues related to the Cyprus issue; coordination and facilitation of advisory meetings, advocacy for gender equality, disability inclusion and participation of youth and public support for the peace process. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: provision of advice on procedural, legal  and substantive issues related to the Cyprus issue; coordination and facilitation of advisory meetings, advocacy for gender equality, disability inclusion and participation of youth and public support for the peace process. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: provision of advice on procedural, legal  and substantive issues related to the Cyprus issue; coordination and facilitation of advisory meetings, advocacy for gender equality, disability inclusion and participation of youth and public support for the peace process. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tExternal and media relations: interviews, social media posts and press releases to inform the public about the peace process and the activities of the Mission. \n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: interviews, social media posts and press releases to inform the public about the peace process and the activities of the Mission. \n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: interviews, social media posts and press releases to inform the public about the peace process and the activities of the Mission. \n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: interviews, social media posts and press releases to inform the public about the peace process and the activities of the Mission. \n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: interviews, social media posts and press releases to inform the public about the peace process and the activities of the Mission. \n",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Resource requirements (regular budget) – Table 5 – Financial resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Variance",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 vs. 2025 Increase/(decrease)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 vs. 2025 Increase/(decrease)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Military and police personnel  ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Civilian personnel ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 650.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 662.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 654.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 654.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 919.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 919.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 919.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "264.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "264.7",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Operational costs ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "405.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "238.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "324.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "324.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "279.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "279.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "279.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(45.2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(45.2)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal (net of staff assessment) ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 056.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 901.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 979.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 979.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 198.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 198.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 198.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "219.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "219.5",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Table 6 – Human resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "USG a",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "USG a",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "ASG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "ASG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "FS",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "FS",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "NPO ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "NPO ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "NPO ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "GSb",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "GSb",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "LL",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "LL",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Approved 2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "21",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "21",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Proposed 2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "21",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "21",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tChange ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "a The Under-Secretary-General is on a when-actually-employed contract.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "b Comprising one Other level.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The proposed resource requirements for 2026 for the Office amount to $3,198,900 (net of staff assessment) and would provide for salaries and common staff costs ($2,919,500) for the continuation of 21 posts (1 Under-Secretary-General, 1 D-1, 3 P-5, 5 P-4, 1 P-3, 4 Field Service, 1 General Service (Other level) and 5 Local level), as well as operational costs ($279,400), comprising costs for consulting services ($18,200), official travel ($63,000), facilities and infrastructure ($72,800), transportation ($47,400), information technology ($57,800), medical ($300) and other supplies, services and equipment ($19,900).",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "In 2026, no change is proposed to the number and levels of the posts.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "Vacancy rates of 12.8 per cent and 16.7 per cent have been applied to the estimates for international and national staff costs, respectively, based on the actual average vacancy rates in 2024.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The increase in the requirements proposed for 2026 compared with the appropriation for 2025 is attributable to increased requirements for civilian personnel mainly due to the application of a lower vacancy rate for national staff compared with the rate of 20 per cent applied in 2025 and updated rates for salaries and common staff costs. The increase is offset in part by the reduced requirements for the non-recurring acquisition of engineering supplies, prefabricated facilities, office furniture, printers and notebook computers and the related lower freight costs.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Extrabudgetary resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "In 2025, extrabudgetary resources of $100,000 were obtained for a three-year project to conduct public opinion polling to enhance evidence based political analysis and strategic support to the Cyprus peace process.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "In 2026, no extrabudgetary resources are anticipated.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

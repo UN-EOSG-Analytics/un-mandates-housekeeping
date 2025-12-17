@@ -1,0 +1,2485 @@
+{
+  "entity": "United Nations Mission to Support the Hudaydah Agreement",
+  "entity_abbrev": "UNMHA",
+  "entity_raw_name": "9.\tUnited Nations Mission to Support the Hudaydah Agreement",
+  "source_file": "A_80_6 (SECT. 3)_ADD.4_CLUSTER_III_FASCICLE ADVANCE UNEDITED COPY FOR ACABQ.json",
+  "content": [
+    {
+      "block_type": "italic",
+      "text": "($30,040,500)",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": []
+    },
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The United Nations Mission to support the Hudaydah Agreement is responsible for supporting the parties to the Stockholm Agreement (S/2018/1134, annex) in implementing the provisions of the Agreement on the City of Hudaydah and the Ports of Hudaydah, Salif and Ra’s Isa (Hudaydah Agreement), and their commitments in accordance with the Hudaydah Agreement. The mandate derives from Security Council resolution 2452 (2019) and was extended in subsequent resolutions, most recently in resolution 2742 (2024).",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "S/2018/1134",
+                      "https://undocs.org/en/S/2018/1134"
+                    ],
+                    [
+                      "2452 (2019)",
+                      "https://undocs.org/en/S/RES/2452(2019)"
+                    ],
+                    [
+                      "2742 (2024).",
+                      "https://documents.un.org/doc/undoc/gen/n24/198/92/pdf/n2419892.pdf"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The mandate of the Mission is to: (a) lead, and support the functioning of the Redeployment Coordination Committee, assisted by a secretariat staffed with United Nations personnel, to oversee the Governorate-wide ceasefire, the redeployment of forces and mine action operations; (b) monitor the compliance of the parties with the ceasefire in Hudaydah Governorate and the mutual redeployment of forces from the city of Hudaydah and the ports of Hudaydah, Salif and Ra’s Isa; (c) work with the parties so that local security forces assure the security of the city of Hudaydah and the ports of Hudaydah, Salif and Ra’s Isa in accordance with Yemeni law; and (d) facilitate and coordinate United Nations support to assist the parties to fully implement the Hudaydah Agreement.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme of work – Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The objective, to which the Mission contributes, is to support the parties in the implementation of the Hudaydah Agreement on the City of Hudaydah and the Ports of Hudaydah, Salif and Ra’s Isa, and their commitments in accordance with the Agreement.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "To contribute to the objective, the Mission will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Lead and support the sustained operation of the Redeployment Coordination Committee as the key oversight body of the Hudaydah Agreement, while strengthening and realigning the joint structures previously agreed as part of the framework of the Committee to address shifted realities and conflict-affected areas in the evolved environment, including de-escalation, dialogue and liaison mechanisms in a joint format;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Maintain increased monitoring capacity within the authorized ceiling to expand and strengthen monitoring of the ports with regular patrols to all port installations, with a view to monitoring the redeployment of all military forces from such locations, and the removal of military manifestations, in accordance with the mandate. On-the-ground patrolling will also be expanded in the territories held by the parties on either side of the front lines, including conflict-affected areas;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Adapt to the evolving environment across Hudaydah Governorate to ensure it is best positioned to advance its mandate, which will include establishing and operating a presence in Al-Khawkhah district under the Government of Yemen south of the current front lines, in conjunction with the operation of its base in Hudaydah city, to ensure equitable representation across the territories of both parties;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Provide technical support, incident data management and advocacy to advance mine action efforts in Hudaydah Governorate, in close coordination with the Resident and Humanitarian Coordinator for Yemen and other partners and in accordance with the priorities identified by both sides with a focus on locations posing a high risk to civilians;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Advance assessment and coordination to implement community-focused projects in key locations on either side of the front lines, with a focus on vulnerable groups, including conflict-affected groups, women, youth, and children, and in coordination with and fully complementary to wider development action that supports the local population, de-escalates tensions between communities, strengthens social cohesion and enhances stability; and",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Further strengthen monitoring processes and procedures through enhanced real-time situational awareness, data integration and robust watchkeeping, aligning with United Nations-wide priorities such as UN 2.0 and the Pact for the Future, while reinforcing crisis management and contingency planning.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Enhanced trust, confidence and dialogue between the parties to strengthen the implementation of the Hudaydah Agreement as a key contribution to the broader peace process;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Equal and sustained access on both sides of the frontline in the relevant territories of the parties in Hudaydah Governorate;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Strengthened ceasefire implementation across the Governorate and improved security of the local population, including a reduction in casualties resulting from ceasefire violations;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Maintenance of the security of Hudaydah city and its ports, and assurance that military forces are redeployed from such locations, remaining military manifestations are removed and security responsibilities are assumed by local security forces in accordance with Yemeni law in these locations;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Reduced violence in Hudaydah Governorate due to the de-escalation of tensions between the parties, enhanced stability and strengthened measures to protect the local population;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Advancement of mine action interventions in Hudaydah city, its ports and other priority locations, reducing the risk of civilian casualties caused by mines and explosive remnants of war, including the coordination of mine action efforts, provision of technical advice to stakeholders, risk awareness sessions, and advocacy;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Enhanced process to ensure implementation of the Hudaydah Agreement on the basis of inclusive and strengthened women’s and youth's meaningful participation in efforts towards bringing and sustaining peace.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to cooperation with other entities, the Mission liaises with the parties to ensure the safety and security of mission personnel and premises, and the unhindered movement of mission personnel and equipment, provisions and essential supplies into and within Yemen. The Mission engages, where possible, with local stakeholders, partners and other bodies within Hudaydah Governorate to ensure a unified approach in supporting the Hudaydah Agreement and its implementation and identifying opportunities to enhance stability and confidence in this process while increasing awareness of its mandate. The Mission maintains its engagements with regional actors that can have a positive influence on progress towards mandate implementation.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Regarding inter-agency coordination, the Mission coordinates closely with the Office of the Special Envoy of the Secretary-General for Yemen. The two entities share information and analysis, coordinate movements, cooperate on briefings to the Security Council and align messaging, while sharing a mission support structure and premises in common locations to ensure the prudent use of resources. Operationally, UNMHA continues its partnership with the United Nations country team on matters related to health facilities, security, premises, CASEVAC by air using United Nations Humanitarian Air Service (UNHAS) and UNMHA flights whenever required. The Mission maintains close working relationships with the Resident and Humanitarian Coordinator and members of the United Nations country team, in particular the World Food Programme, United Nations International Children's Emergency Fund, United Nations Development Programme and the Office for the Coordination of Humanitarian Affairs, as well as other development and humanitarian actors operating in Hudaydah Governorate as part of its comprehensive approach to mandate implementation. The Mission also consults and coordinates, as necessary, with the Office of the United Nations High Commissioner for Human Rights and UN Women to this end.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Regarding external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "There is sufficient political will and engagement from domestic, regional and international stakeholders to enable the implementation of the Hudaydah Agreement;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Efforts to attain a nationwide durable ceasefire, led by the Office of the Special Envoy of the Secretary-General for Yemen will progress;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Major combat operations between the parties will not recommence in Hudaydah Governorate, while the impact of the situation in the region will not exacerbate local conditions;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "A political environment exists that facilitates the work of the Redeployment Coordination Committee and its subsidiary joint mechanisms;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The parties resume their full participation in the activities of the Redeployment Coordination Committee and commit themselves to a revived dialogue process and participation in subsidiary joint mechanisms to monitor the ceasefire and foster de-escalation, confidence-building, and collaborative demining efforts;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Government of Yemen continues to support the establishment of a Mission presence in the south of the governorate to ensure the Mission’s equitable access to both parties and its unimpeded functioning;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "A suitably safe, secure and permissive operating environment exists, and sufficient confidence is established between the parties and other partners to generate sustained support for and participation in the activities of the Mission;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The parties facilitate the Mission’s full access and freedom of movement to all areas required for the effective observation and monitoring of the ports of Hudaydah, Ra’s Isa and Salif to enable daily access to all port installations and to conflict-affected areas across the governorate; and",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The parties provide the access and cooperation required to advance mine action interventions in Hudaydah city, the ports, and areas of priority in other districts to enhance the protection of the local population in the Governorate’s shifted context.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "UNMHA integrates gender perspectives and Women, Peace, and Security and Youth, Peace, and Security agenda into its operations and activities in line with the Department of Peacebuilding and Political Affairs’ Policy on Women, Peace, and Security. The Mission continues to advance the role of women and youth in carrying out its mandate and advocate for a gender-inclusive approach to the implementation of the Hudaydah Agreement. It will expand its work in empowering women leaders to meaningfully contribute to peacebuilding in Hudaydah Governorate, while also fostering a grassroots approach to women’s involvement in community-level initiatives in conflict-affected districts. Gender considerations will be mainstreamed across the Mission’s conflict and political analysis, and through the delivery and monitoring of its quick-impact projects.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In line with the United Nations Disability Inclusion Strategy and in furtherance of its Mission-specific Disability Inclusion Strategy, the Mission will continue to promote an inclusive process to implementing the Hudaydah Agreement; amplify the stories of persons with disabilities in Hudaydah, particularly the victims of mine and explosive remnants of war; mainstream disability inclusion into quick impact project design and implementation; build partnerships with local organizations for persons with disabilities, disability centres, and international NGOs; and build upon the progress made in improving physical access to Mission facilities for persons with disabilities.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Enhanced engagement with the parties resulted in strengthened implementation of key elements of the mandate and the Hudaydah Agreement",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2024, local, national and regional developments, including attacks in and around the Red Sea by the Houthis (who call themselves Ansar Allah) since November 2023 and corresponding airstrikes on multiple targets in Hudaydah Governorate and beyond since January 2024, have demonstrated that local dynamics in Hudaydah and parties’ attitudes towards the Hudaydah Agreement are significantly affected by regional dynamics. These developments also continue to impact the Mission’ ability to deliver its mandate and affect the safety and security of its personnel.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Despite the extremely challenging political and security situation, in its efforts to reinvigorate parties’ commitments to the Hudaydah Agreement and the implementation of its mandate, the Mission reinforced its engagement with the parties focusing on achieving systematic patrolling to the Ports of Hudaydah, Ra’s Isa and Salif and expanding areas for collaboration in the south of the governorate with the Government of Yemen, through key leadership engagement and separate but regular meetings with the members of the Redeployment Coordination Committee from both sides and by leveraging quick impact projects. These efforts resulted in enhanced engagement of the parties in strengthened implementation of key elements of the mandate and the Hudaydah Agreement, including a doubling of the frequency of patrols to the Hudaydah Port since March 2024, a 22 per cent increase in overall patrolling compared to 2023 including into other areas in the southern districts of the governorate, and several important breakthroughs between the Mission and the Government of Yemen, particularly on the expansion of Mission's presence in the southern districts of Hudaydah Governorate.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective is presented in the performance measure below (see table 50).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 50 – Performance measure – ",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Improved situational awareness and analytical products supported partner planning and programming in Hudaydah Governorate",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Increased joint monitoring visits with United Nations country team members enhanced coordination in conflict-affected districts",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Strengthened support to the implementation of the Hudaydah Agreement by the parties, demonstrated through increased patrolling and increased collaboration between the Mission and Government of Yemen in support of the mandate",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned results for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 1: establishment of a physical mission presence in Government of Yemen-controlled territory in Hudaydah Governorate to build confidence of the parties towards the Hudaydah Agreement – Proposed programme plan for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2024, the Mission crossed an important milestone in the establishment of a presence in Government of Yemen-controlled territory by securing Governmental approval, identifying the site in the Al-Khawkhah district and signing a lease and contract for construction works at the site in December 2024. The construction of the site will commence in 2025. Once an initial UNMHA presence is established and operational, UNMHA expects to increase the number of monitoring patrols to the frontline and enhanced engagement with the local authorities and communities within the mandate area. Further transition to full operating capability is planned to take place in 2026, which will provide additional opportunities for cooperation with local partners in implementing the Hudaydah Agreement and further strengthen trust towards the Mission.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Expected progress towards the objective is presented in the performance measure below (see table 51).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 51 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Establishment of the Mokha’ hub for operations in southern Hudaydah Governorate",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Regular monitoring visits to southern Hudaydah Governorate",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Site identified, and lease and construction contracts signed ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "UNMHA installation established in Al-Khawkhah district",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Increased confidence and engagement of the parties and local political, military leaders and community towards the Hudaydah Agreement and the Mission following the deployment of core team to Al-Khawkhah",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "heading-x",
+                      "text": "Result 2:re-established dialogue between the parties at the technical level promotes confidence building and de-escalation – Proposed programme plan for 2026",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "Engaging the parties in regular technical and operational-level discussions is crucial for de-escalating hostilities, building confidence, fostering trust, and identifying collaborative opportunities between the parties to mitigate the impact of conflict on civilians in frontline areas of Hudaydah. The engagement will also help prepare the ground for the re-establishment of a joint Redeployment Coordination Committee. The Mission has routinely approached the parties to re-establish a technical-level forum and has identified a range of issues that can be explored as confidence building measures. These efforts have been met with initial positivity by the parties, which will be leveraged to provide space and opportunities for further dialogue in 2025 and 2026.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "heading-x",
+                      "text": "Lessons learned and planned change",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "The lesson for the Mission was that sustained engagement and the identification of varied options for trust-building initiatives could resonate with the parties as the situation on the ground developed, providing windows of opportunity which the Mission must respond to in an agile manner. In applying the lesson, UNMHA will pursue an iterative approach that can bring the parties together on issues of shared concern.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "Expected progress towards the objective is presented in the performance measure below (see table 52)",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "heading-x",
+                      "text": "Table 52 – Performance measure",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "table-content",
+                          "text": null,
+                          "table_content": [
+                            [
+                              {
+                                "text": "2022 (actual)",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "2023 (actual)",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "2024 (actual)",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "2025 (planned)",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "2026 (planned)",
+                                "hyperlinks": []
+                              }
+                            ],
+                            [
+                              {
+                                "text": "",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "",
+                                "hyperlinks": []
+                              }
+                            ],
+                            [
+                              {
+                                "text": "    –",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "    –",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "The parties demonstrate willingness to engage on technical-level discussions on confidence-building measures",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "Confidence between the parties develops and topics for discussion and a suitable location for joint meetings are agreed upon  ",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "Increased levels of trust lead to the parties agreeing to a regular meeting schedule and convening joint meetings ",
+                                "hyperlinks": []
+                              }
+                            ]
+                          ],
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Table 53 lists all deliverables of the Mission.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 53 – Deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tLetters of the Secretary-General to the Security Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tMeetings of the Security Council ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSeminars, workshops and training events (number of days)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5.\tWorkshops with local community representatives on Hudaydah Agreement implementation",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t6.\tWorkshops with political/civil stakeholders on Hudaydah Agreement implementation ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tFact-finding, monitoring and investigation missions (number of missions)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "108",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "108",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "154",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "154",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "108",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "108",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "168",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "168",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t7.\tMonitoring missions and patrols conducted ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "108",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "108",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "154",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "154",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "108",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "108",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "168",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "168",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tGood offices: provision of good offices in the context of the efforts of the parties to fully implement the Hudaydah Agreement, including through convening of  9 meetings with representatives of the Redeployment Coordination Committee from the both parties; 15 meetings with regional and international interlocuters; and other meetings with local political actors in Hudaydah and from both parties in Aden and Sana’a. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: provision of good offices in the context of the efforts of the parties to fully implement the Hudaydah Agreement, including through convening of  9 meetings with representatives of the Redeployment Coordination Committee from the both parties; 15 meetings with regional and international interlocuters; and other meetings with local political actors in Hudaydah and from both parties in Aden and Sana’a. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: provision of good offices in the context of the efforts of the parties to fully implement the Hudaydah Agreement, including through convening of  9 meetings with representatives of the Redeployment Coordination Committee from the both parties; 15 meetings with regional and international interlocuters; and other meetings with local political actors in Hudaydah and from both parties in Aden and Sana’a. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: provision of good offices in the context of the efforts of the parties to fully implement the Hudaydah Agreement, including through convening of  9 meetings with representatives of the Redeployment Coordination Committee from the both parties; 15 meetings with regional and international interlocuters; and other meetings with local political actors in Hudaydah and from both parties in Aden and Sana’a. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: provision of good offices in the context of the efforts of the parties to fully implement the Hudaydah Agreement, including through convening of  9 meetings with representatives of the Redeployment Coordination Committee from the both parties; 15 meetings with regional and international interlocuters; and other meetings with local political actors in Hudaydah and from both parties in Aden and Sana’a. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: provision of good offices in the context of the efforts of the parties to fully implement the Hudaydah Agreement, including through convening of  9 meetings with representatives of the Redeployment Coordination Committee from the both parties; 15 meetings with regional and international interlocuters; and other meetings with local political actors in Hudaydah and from both parties in Aden and Sana’a. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: provision of good offices in the context of the efforts of the parties to fully implement the Hudaydah Agreement, including through convening of  9 meetings with representatives of the Redeployment Coordination Committee from the both parties; 15 meetings with regional and international interlocuters; and other meetings with local political actors in Hudaydah and from both parties in Aden and Sana’a. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: provision of good offices in the context of the efforts of the parties to fully implement the Hudaydah Agreement, including through convening of  9 meetings with representatives of the Redeployment Coordination Committee from the both parties; 15 meetings with regional and international interlocuters; and other meetings with local political actors in Hudaydah and from both parties in Aden and Sana’a. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultations with the relevant Yemeni, regional and international stakeholders to comprehensively understand the challenges at hand and to provide advice to the parties in their efforts to implement the Hudaydah Agreement; advocacy among Yemeni, regional and international stakeholders in support of the implementation of the Agreement and enhancement of the ceasefire in the Governorate; provision of technical advice to the parties on mine action, oversight and coordination of mine action initiatives among partners in Hudaydah; and advocacy for international mine action non-governmental organizations to operate in the Governorate. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultations with the relevant Yemeni, regional and international stakeholders to comprehensively understand the challenges at hand and to provide advice to the parties in their efforts to implement the Hudaydah Agreement; advocacy among Yemeni, regional and international stakeholders in support of the implementation of the Agreement and enhancement of the ceasefire in the Governorate; provision of technical advice to the parties on mine action, oversight and coordination of mine action initiatives among partners in Hudaydah; and advocacy for international mine action non-governmental organizations to operate in the Governorate. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultations with the relevant Yemeni, regional and international stakeholders to comprehensively understand the challenges at hand and to provide advice to the parties in their efforts to implement the Hudaydah Agreement; advocacy among Yemeni, regional and international stakeholders in support of the implementation of the Agreement and enhancement of the ceasefire in the Governorate; provision of technical advice to the parties on mine action, oversight and coordination of mine action initiatives among partners in Hudaydah; and advocacy for international mine action non-governmental organizations to operate in the Governorate. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultations with the relevant Yemeni, regional and international stakeholders to comprehensively understand the challenges at hand and to provide advice to the parties in their efforts to implement the Hudaydah Agreement; advocacy among Yemeni, regional and international stakeholders in support of the implementation of the Agreement and enhancement of the ceasefire in the Governorate; provision of technical advice to the parties on mine action, oversight and coordination of mine action initiatives among partners in Hudaydah; and advocacy for international mine action non-governmental organizations to operate in the Governorate. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultations with the relevant Yemeni, regional and international stakeholders to comprehensively understand the challenges at hand and to provide advice to the parties in their efforts to implement the Hudaydah Agreement; advocacy among Yemeni, regional and international stakeholders in support of the implementation of the Agreement and enhancement of the ceasefire in the Governorate; provision of technical advice to the parties on mine action, oversight and coordination of mine action initiatives among partners in Hudaydah; and advocacy for international mine action non-governmental organizations to operate in the Governorate. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultations with the relevant Yemeni, regional and international stakeholders to comprehensively understand the challenges at hand and to provide advice to the parties in their efforts to implement the Hudaydah Agreement; advocacy among Yemeni, regional and international stakeholders in support of the implementation of the Agreement and enhancement of the ceasefire in the Governorate; provision of technical advice to the parties on mine action, oversight and coordination of mine action initiatives among partners in Hudaydah; and advocacy for international mine action non-governmental organizations to operate in the Governorate. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultations with the relevant Yemeni, regional and international stakeholders to comprehensively understand the challenges at hand and to provide advice to the parties in their efforts to implement the Hudaydah Agreement; advocacy among Yemeni, regional and international stakeholders in support of the implementation of the Agreement and enhancement of the ceasefire in the Governorate; provision of technical advice to the parties on mine action, oversight and coordination of mine action initiatives among partners in Hudaydah; and advocacy for international mine action non-governmental organizations to operate in the Governorate. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultations with the relevant Yemeni, regional and international stakeholders to comprehensively understand the challenges at hand and to provide advice to the parties in their efforts to implement the Hudaydah Agreement; advocacy among Yemeni, regional and international stakeholders in support of the implementation of the Agreement and enhancement of the ceasefire in the Governorate; provision of technical advice to the parties on mine action, oversight and coordination of mine action initiatives among partners in Hudaydah; and advocacy for international mine action non-governmental organizations to operate in the Governorate. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Outreach programmes, special events and information materials: development and maintenance of strategic relationships with partners, including the United Nations Communications Group, to ensure alignment in United Nations common messaging and cooperation across various levels; development and regular updating of the Mission’s key messages transmitted publicly and in response to developments on the ground; and localized sentiment analysis and media monitoring with special attention to misinformation and in areas where the Mission seeks to expand its operations. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Outreach programmes, special events and information materials: development and maintenance of strategic relationships with partners, including the United Nations Communications Group, to ensure alignment in United Nations common messaging and cooperation across various levels; development and regular updating of the Mission’s key messages transmitted publicly and in response to developments on the ground; and localized sentiment analysis and media monitoring with special attention to misinformation and in areas where the Mission seeks to expand its operations. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Outreach programmes, special events and information materials: development and maintenance of strategic relationships with partners, including the United Nations Communications Group, to ensure alignment in United Nations common messaging and cooperation across various levels; development and regular updating of the Mission’s key messages transmitted publicly and in response to developments on the ground; and localized sentiment analysis and media monitoring with special attention to misinformation and in areas where the Mission seeks to expand its operations. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Outreach programmes, special events and information materials: development and maintenance of strategic relationships with partners, including the United Nations Communications Group, to ensure alignment in United Nations common messaging and cooperation across various levels; development and regular updating of the Mission’s key messages transmitted publicly and in response to developments on the ground; and localized sentiment analysis and media monitoring with special attention to misinformation and in areas where the Mission seeks to expand its operations. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Outreach programmes, special events and information materials: development and maintenance of strategic relationships with partners, including the United Nations Communications Group, to ensure alignment in United Nations common messaging and cooperation across various levels; development and regular updating of the Mission’s key messages transmitted publicly and in response to developments on the ground; and localized sentiment analysis and media monitoring with special attention to misinformation and in areas where the Mission seeks to expand its operations. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Outreach programmes, special events and information materials: development and maintenance of strategic relationships with partners, including the United Nations Communications Group, to ensure alignment in United Nations common messaging and cooperation across various levels; development and regular updating of the Mission’s key messages transmitted publicly and in response to developments on the ground; and localized sentiment analysis and media monitoring with special attention to misinformation and in areas where the Mission seeks to expand its operations. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Outreach programmes, special events and information materials: development and maintenance of strategic relationships with partners, including the United Nations Communications Group, to ensure alignment in United Nations common messaging and cooperation across various levels; development and regular updating of the Mission’s key messages transmitted publicly and in response to developments on the ground; and localized sentiment analysis and media monitoring with special attention to misinformation and in areas where the Mission seeks to expand its operations. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Outreach programmes, special events and information materials: development and maintenance of strategic relationships with partners, including the United Nations Communications Group, to ensure alignment in United Nations common messaging and cooperation across various levels; development and regular updating of the Mission’s key messages transmitted publicly and in response to developments on the ground; and localized sentiment analysis and media monitoring with special attention to misinformation and in areas where the Mission seeks to expand its operations. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "External and media relations: press releases, messages and audiovisual material on the Mission’s activities and key messages; relationships developed with media partners to ensure accurate coverage of the Mission’s messaging and activities; timely answers to media enquiries; and strengthened informal interaction and relationships with media partners. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: press releases, messages and audiovisual material on the Mission’s activities and key messages; relationships developed with media partners to ensure accurate coverage of the Mission’s messaging and activities; timely answers to media enquiries; and strengthened informal interaction and relationships with media partners. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: press releases, messages and audiovisual material on the Mission’s activities and key messages; relationships developed with media partners to ensure accurate coverage of the Mission’s messaging and activities; timely answers to media enquiries; and strengthened informal interaction and relationships with media partners. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: press releases, messages and audiovisual material on the Mission’s activities and key messages; relationships developed with media partners to ensure accurate coverage of the Mission’s messaging and activities; timely answers to media enquiries; and strengthened informal interaction and relationships with media partners. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: press releases, messages and audiovisual material on the Mission’s activities and key messages; relationships developed with media partners to ensure accurate coverage of the Mission’s messaging and activities; timely answers to media enquiries; and strengthened informal interaction and relationships with media partners. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: press releases, messages and audiovisual material on the Mission’s activities and key messages; relationships developed with media partners to ensure accurate coverage of the Mission’s messaging and activities; timely answers to media enquiries; and strengthened informal interaction and relationships with media partners. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: press releases, messages and audiovisual material on the Mission’s activities and key messages; relationships developed with media partners to ensure accurate coverage of the Mission’s messaging and activities; timely answers to media enquiries; and strengthened informal interaction and relationships with media partners. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: press releases, messages and audiovisual material on the Mission’s activities and key messages; relationships developed with media partners to ensure accurate coverage of the Mission’s messaging and activities; timely answers to media enquiries; and strengthened informal interaction and relationships with media partners. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Digital platforms and multimedia content: website establishment and frequent updates on the Mission’s activities and public statements; regular updates through social media channels on the Mission’s activities and public statements; and photographs and videos shared promoting the Mission’s activities and key messages on all digital platforms.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: website establishment and frequent updates on the Mission’s activities and public statements; regular updates through social media channels on the Mission’s activities and public statements; and photographs and videos shared promoting the Mission’s activities and key messages on all digital platforms.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: website establishment and frequent updates on the Mission’s activities and public statements; regular updates through social media channels on the Mission’s activities and public statements; and photographs and videos shared promoting the Mission’s activities and key messages on all digital platforms.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: website establishment and frequent updates on the Mission’s activities and public statements; regular updates through social media channels on the Mission’s activities and public statements; and photographs and videos shared promoting the Mission’s activities and key messages on all digital platforms.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: website establishment and frequent updates on the Mission’s activities and public statements; regular updates through social media channels on the Mission’s activities and public statements; and photographs and videos shared promoting the Mission’s activities and key messages on all digital platforms.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: website establishment and frequent updates on the Mission’s activities and public statements; regular updates through social media channels on the Mission’s activities and public statements; and photographs and videos shared promoting the Mission’s activities and key messages on all digital platforms.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: website establishment and frequent updates on the Mission’s activities and public statements; regular updates through social media channels on the Mission’s activities and public statements; and photographs and videos shared promoting the Mission’s activities and key messages on all digital platforms.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: website establishment and frequent updates on the Mission’s activities and public statements; regular updates through social media channels on the Mission’s activities and public statements; and photographs and videos shared promoting the Mission’s activities and key messages on all digital platforms.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Evaluation activities",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "An internal evaluation was completed in 2024 on UNMHA’s logistical and operational support to the Floating Storage and Offloading Vessel Safer (FSO Safer) salvage operation. Based on the findings, conclusions and lessons learned explored in the final evaluation report, the Mission took actions in areas related to operational improvements in crisis preparedness, contingency planning, situational awareness and analysis. These findings also highlighted expanded avenues for cooperation with the United Nations country team that would allow UNMHA to build upon its role as a technical resource for the United Nations family in Hudaydah as appropriate. The application of the findings from the evaluation has supported the Mission’s broader mandate implementation through identifying operational and logistical efficiencies in pursuit of the Mission’s objectives.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The scope for an internal evaluation to be carried out in 2026 is yet to be determined, but its purpose may include informing operational and strategic planning for the Mission’s expanding presence and activities in the south of Hudaydah Governorate.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Resource requirements (regular budget) – Table 54 – Financial resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Variance",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 vs. 2024 Increase/(decrease)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025 vs. 2024 Increase/(decrease)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Military and police personnel costs ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "678.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "515.6 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "584.7 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "584.7 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "651.7 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "651.7 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "67.0 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "67.0 ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Civilian personnel costs",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15 666.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "14 071.2 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15 341.8 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15 341.8 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 14 568.3 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 14 568.3 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "  (773.5)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "  (773.5)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Operational costs ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "17 294.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "14 286.6 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15 075.6 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15 075.6 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "14 820.5 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "14 820.5 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "  (255.1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "  (255.1)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal (net of staff assessment)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "33 640.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "28 873.4 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "31 002.1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "31 002.1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "30 040.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "30 040.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "  (961.6)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "  (961.6)",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Table 55 – Human resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "USG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "ASG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-4a",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-3a",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "FS",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "NPOc",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "GS",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "LL",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Approved 2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "11",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "19",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "31",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "71",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "13",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "79",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "92",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "163",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "163",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Proposed 2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "13 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "18",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "31",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "71",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "11",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "81",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "92",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "163",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "163",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tChange ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "a\tIncludes one P-4 and one P-3 general temporary assistance position.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The proposed resource requirements for 2026 for the Mission amount to $30,040,500 (net of staff assessment) and would provide for the deployment of 75 United Nations monitors ($651,700), salaries and common staff costs ($14,568,300) for 71 international staff posts (1 Assistant Secretary-General, 1 D-2, 1 D-1, 6 P-5, 13 P-4, 18 P-3 and 31 Field Service), 92 national staff posts (11 National Professional Officer and 81 Local level) and 5 government-provided personnel, and operational costs ($14,820,500), comprising the costs for official travel ($508,800), facilities and infrastructure ($5,778,900), ground transportation ($578,200), air operations ($4,346,900), communications and information technology ($1,467,400), medical ($1,107,600), other supplies, services and equipment ($732,700) and quick-impact projects ($300,000).",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "A vacancy rate of 85.3 per cent has been applied to the estimates for United Nations monitors based on the actual average vacancy rates in 2024. A vacancy rate of 27.5 per cent for international staff posts has been applied based on the actual average vacancy rate in 2024. Vacancy rates of 50.0 per cent for National Professional Officers and 20.6 per cent for Local level posts have been applied based on the actual vacancy rates in March 2025. A vacancy rate of 100.0 per cent has been applied to the estimates for government-provided personnel in view of the lack of incumbency. A vacancy rate of 50.0 per cent has been applied for the posts proposed for establishment and reassignment.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "With a view to ensuring the effective delivery of its mandate, the following staffing changes are proposed for 2026, as detailed below:",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-x",
+              "text": "Office of the Chief of Staff",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Reassignment of one post of Coordination Officer (P-3) in the Office of the Chief of Mission Support in Djibouti to Data Specialist (P-3) in the Office of the Chief of Staff in Hudaydah to support the Mission in all aspects of its mandate delivery by providing data-related advice, and in further enhancing a forward-thinking and data-driven Mission while strengthening its information security and data management processes. Due to the sensitive nature of the data to be handled and the level of expertise required in data system design, management and analysis, the post is proposed to be established at the P-3 level.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-x",
+              "text": "Political Affairs Section",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Redeployment of one post of Political Affairs Officer (P-4) from Sana’a to Al-Khawkhah to support political efforts that can bring further stability in the Hudaydah Governorate. Following an internal review of the Mission’s strategic direction and priorities in July 2024, the Mission identified the imperative for a revised political engagement plan, with particular focus on the south of Hudaydah Governorate and those areas that are under the control of the Government of Yemen. Having a dedicated political affairs capacity based in Al-Khawkhah is critical to realising this aim and further strengthening political outreach that is responsive to local dynamics.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Redeployment of one post of Associate Political Affairs Officer (National Professional Officer) from Sana’a to Hudaydah to support political efforts to further stability in the Hudaydah Governorate. The Mission currently does not have a dedicated political affairs capacity at the national level in Hudaydah city, where the Mission headquarters are located. A national Political Affairs Officer in Hudaydah will be integral to the Mission’s efforts to strengthen its liaison with the authorities in Hudaydah in support of the implementation of the Hudaydah Agreement and with local actors in conflict-affected districts.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-x",
+              "text": "Office of the Chief of Mission Support",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Abolishment of one post of Coordination Officer (National Professional Officer) in Riyadh in line with UNMHA efforts to enhance efficiency, optimize resource utilisation and leverage support from the existing capacities of the United Nations Resident Coordinator Office in Saudi Arabia for the liaison functions.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-x",
+              "text": "Operations and Resource Management Section",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Establishment of one post of the Telecommunication Technician (Field Service) in Al-Khawkhah following the Mission’s planned expansion in the southern region of Hudaydah Governorate and to ensure uninterrupted information and communication technology support for UNMHA premises in Al-Khawkhah. The incumbent will oversee information and communication technology infrastructure and ensure a smooth communication channel between Al-Khawkhah and other UNMHA offices;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Abolishment of one post of Finance and Budget Officer (National Professional Officer) in the Finance and Budget Unit, in Hudaydah that was approved in 2023 and has been vacant for 2 years; and establishment of one post of Finance and Budget Assistant (Local level) in Sana’a to support the Finance and Budget Unit in preparation of resource estimates and budget implementation reports, analysis of detailed expenditure reports with other support and substantive sections, review of expenditure patterns, processing of budget transactions, client support and other tasks and data analysis that are currently performed by available staff within the Unit.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Establishment of one post of Procurement Assistant (Local level) post in Sana’a to manage the volume of procurement tasks effectively in the Procurement Unit, which supports both the Office of the Special Envoy for Yemen and the Mission. The proposal to establish the new post in Sana’a is based on the overall number of transactions conducted by the Procurement Unit, which is 85% related to operations in Yemen.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-x",
+              "text": "Supply Chain and Service Delivery Section",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Establishment of one post of Chief of Unit, Engineering and Facilities Management Unit (P-4) given the increased responsibilities of the post in planning, implementation, maintenance, operation and optimisation of facilities of both UNMHA and the Office of the Special Envoy. UNMHA plans to set up a new office in Al-Khawkhah, to enhance its operational and monitoring capabilities, while ensuring equitable representation and access on both sides of the conflict;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Abolishment of one post of Engineering Technician (Field Service) in Hudaydah as its original functions and terms of reference no longer cover the scope and complexity of responsibilities, which have increased since the Mission was established. In addition, the workload of the Engineering and Facilities Management Unit has further increased with the planned establishment of new facilities in the south of the Governorate. Therefore, it is proposed to abolish this Field Service post and establish the above-mentioned Chief of Engineering and Facilities Management Unit (P-4) to enhance the capacity;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Reclassification of post of Supply Officer (P-3), Hudaydah, to Chief of Unit (P-4), Central Warehousing and Supply in Hudaydah due to the increased responsibilities and workload of the post. To facilitate mandate implementation in the challenging operational environment, both missions maintain widely dispersed supply chains and life support routes across all field locations. To ensure uninterrupted services the incumbent is required to supervises supply officers of sub-units in five geographic areas;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Redeployment of one post of Supply Assistant (Local level) in the Central Warehousing and Supply Unit in Hudaydah to Aden to fill the gap in processing goods issuance for both Aden and Mokha offices, stock management, receipt and distribution of supplies, market research for urgent petty cash purchases in support of urgent requirements;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Redeployment of nine posts of Drivers (Local level) in the Transport Unit from Hudaydah, to Sana’a, Aden, and Al-Khawkhah to support regular escorted road convoys between Aden and Mokha, and movements between Sana’a and Hudaydah. In addition, to support UNMHA’s expansion to Al-Khawkhah where the incumbents will be responsible for facilitating movement for ceasefire monitoring teams, supporting mine action activities, and ensuring safe and efficient transport for community engagement and implementation of quick impact projects;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Reassignment of one post of Driver (Local level) in the Transport Unit from Hudaydah as Team Assistant in the Field Technology Unit in Amman, aimed at addressing critical staffing challenges currently faced by the Unit’s staff located in Amman. The Team Assistant will support essential tasks such as telephone billing, ICT asset management and tracking for new and outgoing staff;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Reassignment of one post of Driver (Local level) post in the Transport Unit from Hudaydah to Team Assistant in the Movement Control Unit in Aden to manage movement control including logistics, scheduling and coordination among multiple stakeholders southern Yemen such as liaison with customs, airport, seaport and other local authorities;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Reassignment of one post of Driver (Local level) in Transport Unit from Hudaydah, as Team Assistant in the Central Warehousing and Supply Unit in Amman, to support planning and coordination of life support consumables, write-offs, property disposal, and physical destruction of assets; and",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Reassignment of two posts of Driver (Local level) in the Transport Unit from Hudaydah as Team Assistants (Local level) in the Aviation Unit in Sana’a and Aden respectively, to cover key air operations and aviation safety functions, which are currently performed by the Movement Control Unit. This gap is considered a significant risk for safe aviation operations and may expose the Mission to incidents/accidents.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-x",
+              "text": "Safety and Security Section",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Reassignment of one post of Close Protection Officer (Field Service) in Hudaydah, as Administrative Assistant (Field Service) in the Safety and Security Section in Hudaydah, to manage the significant increase in administrative responsibilities. Currently, the administrative workload is being managed by security personnel whose primary role is security operations, leading to inefficient use of resources and delays in reporting and compliance, affecting timely responses required by United Nations policies and security protocols.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-x",
+              "text": "Backstopping support",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "other",
+                  "text": "Department of Operational Support,",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Abolishment of one post of Associate Human Resource Officer (P-2) in the Division for Special Activities of the Department of Operational Support at the United Nations Headquarters in New York. The functions associated with the post are no longer required. The Mission’s existing capacity will perform human resources-related functions.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Mission’s approved 2024 staffing table includes two general temporary assistance positions. It is proposed that these positions be continued in 2025:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Programme Management Officer (P-4) in the Office of the Deputy Head of Mission in Hudaydah, who would be required to continue to provide advice to the Head of Mission and senior leadership on landmine, explosive remnant of war, improvised explosive device and sea mine contamination, the associated risks to the United Nations and civilians, and preventive measure in place to ensure the safe mandate implementation by mission staff in Hudaydah Governorate;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-x",
+              "text": "Backstopping support – Department of Management Strategy, Policy and Compliance",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Finance and Budget Officer (P-3) in the Field Operations Finance Division, which remains essential to perform backstopping support and continue to be essential in ensuring sufficient capacity at Headquarters for the planning and management of financial resources, the preparation of budgets and the provision of services to the legislative bodies during their review of the proposed budgets for special political missions.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The decrease in requirements for 2026 compared with the appropriation for 2025 is attributable mainly to: (a) decreased requirements for international staff due to the application of a higher vacancy rate of 27.5 per cent for the 2026 budget proposal compared to 25.4 per cent applied during 2025; (b) decreased requirements for National Professional Officers due to the application of a higher vacancy rate of 50.0 per cent for 2026 budget proposal compared to 25.8 per cent applied for 2025, as well as the proposed abolishment of two National Professional Officers posts; (c) decreased requirements for facilities and infrastructure due to reduced rental of premises including for the Mission’s locations in Sana’a and Hudaydah, reduced provision for construction, alteration, renovation and major maintenance as well as fewer acquisitions of spare parts and supplies and reduced requirements for generators fuel due to the discontinuation of the respective reserve; (d) decreased requirements for medical services due to lower estimates for the cost sharing of the medical clinic; (e) decreased requirements under other supplies, services and equipment due lower planned training fees and lower cost-share costs of support operations to UNMHA performed by the Kuwait Joint Support Office. The decreased costs were offset in part by: (a) application of a lower vacancy rate of 85.3 per cent for the United Nations monitors compared to 87.3 per cent in 2025; (b) establishment of the P-4 and P-3 posts lower vacancy rate for the United Nations monitors: (b) the establishment of additional international and Local level posts and revised salary scales in Amman; (c) additional acquisition of prefabricated facilities and accommodation, acquisition of generators and electric equipment, increased maintenance services for Al-Khawkah camp and increase in Security Services; (d) increased repairs and maintenance of ground fleet; (e) increased requirements for aviation fuel and increased air navigation charges.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

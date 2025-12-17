@@ -1,0 +1,248 @@
+[
+  {
+    "block_type": "frontmatter",
+    "text": "[Frontmatter]",
+    "table_content": null,
+    "hyperlinks": null,
+    "children": [
+      {
+        "block_type": "heading-x",
+        "text": "Eightieth session",
+        "table_content": null,
+        "hyperlinks": [],
+        "children": [
+          {
+            "block_type": "other",
+            "text": "Item 137 of the preliminary list*",
+            "table_content": null,
+            "hyperlinks": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "block_type": "heading-x",
+        "text": "Proposed programme budget for 2026 – Proposed programme budget for 2026",
+        "table_content": null,
+        "hyperlinks": [],
+        "children": []
+      },
+      {
+        "block_type": "heading-sub",
+        "text": "Income section 1",
+        "table_content": null,
+        "hyperlinks": [],
+        "children": [
+          {
+            "block_type": "heading-x",
+            "text": "Income from staff assessment",
+            "table_content": null,
+            "hyperlinks": [],
+            "children": [
+              {
+                "block_type": "other",
+                "text": "*\tA/80/50.",
+                "table_content": null,
+                "hyperlinks": [
+                  [
+                    "A/80/50",
+                    "https://docs.un.org/en/A/80/50"
+                  ]
+                ],
+                "children": []
+              },
+              {
+                "block_type": "image",
+                "text": "",
+                "table_content": null,
+                "hyperlinks": [],
+                "children": []
+              }
+            ]
+          },
+          {
+            "block_type": "heading-sub-sub",
+            "text": "Income from staff assessment",
+            "table_content": null,
+            "hyperlinks": [],
+            "children": [
+              {
+                "block_type": "note",
+                "text": "(Thousands of United States dollars)",
+                "table_content": null,
+                "hyperlinks": [],
+                "children": []
+              },
+              {
+                "block_type": "table-content",
+                "text": null,
+                "table_content": [
+                  [
+                    {
+                      "text": "",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "2024 actual",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "2025 approved",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "2026 estimate (before recosting)",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "Increase/ (decrease)",
+                      "hyperlinks": []
+                    }
+                  ],
+                  [
+                    {
+                      "text": "",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "",
+                      "hyperlinks": []
+                    }
+                  ],
+                  [
+                    {
+                      "text": "Staff assessment requirements provisioned under:",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "",
+                      "hyperlinks": []
+                    }
+                  ],
+                  [
+                    {
+                      "text": "\tSection 36, Staff assessment",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "302 705.6",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "328 136.1",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "325 352.9",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "(2 783.2)",
+                      "hyperlinks": []
+                    }
+                  ],
+                  [
+                    {
+                      "text": "\tIncome section 3, Services to the public",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "2 075.7",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "2 141.6",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "2 263.1",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "121.5",
+                      "hyperlinks": []
+                    }
+                  ],
+                  [
+                    {
+                      "text": "\tTotal, income from staff assessment",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "304 781.3",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "330 277.7",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "327 616.0",
+                      "hyperlinks": []
+                    },
+                    {
+                      "text": "(2 661.7)",
+                      "hyperlinks": []
+                    }
+                  ]
+                ],
+                "hyperlinks": [],
+                "children": []
+              },
+              {
+                "block_type": "other",
+                "text": "IS1.1\tThe estimates under income section 1 amount to $327,616,000, comprising the total provision proposed under section 36, Staff assessment ($325,352,900) and the staff assessment portion of the proposed post expenditure under income section 3, Services to the public ($2,263,100).",
+                "table_content": null,
+                "hyperlinks": [],
+                "children": []
+              },
+              {
+                "block_type": "other",
+                "text": "IS1.2\tThe revenue from staff assessment is credited to the Tax Equalization Fund established by the General Assembly in its resolution 973 (X) A. The estimated staff assessment revenue approved by the Assembly is used to offset assessments on Member States in line with the established practice.",
+                "table_content": null,
+                "hyperlinks": [
+                  [
+                    "973 (X)",
+                    "https://docs.un.org/en/A/RES/973(X)"
+                  ]
+                ],
+                "children": []
+              },
+              {
+                "block_type": "image",
+                "text": "",
+                "table_content": null,
+                "hyperlinks": [],
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

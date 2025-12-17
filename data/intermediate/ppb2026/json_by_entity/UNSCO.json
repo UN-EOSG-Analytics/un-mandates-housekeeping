@@ -1,0 +1,3367 @@
+{
+  "entity": "Office of the United Nations Special Coordinator for the Middle East Peace Process",
+  "entity_abbrev": "UNSCO",
+  "entity_raw_name": "II.\tOffice of the United Nations Special Coordinator for the Middle East Peace Process",
+  "source_file": "A_80_6_SECT.3.json",
+  "content": [
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.1\tThe Office of the United Nations Special Coordinator for the Middle East Peace Process is responsible for serving as the Organization’s focal point for the Middle East peace process, for ensuring the coordinated work of the United Nations system to adequately respond to the needs of the Palestinian people and for mobilizing financial, technical and economic assistance. The mandate derives from the priorities established in relevant General Assembly resolutions and decisions, including Assembly resolutions 48/213 and 49/88, as well as Security Council resolutions 1860 (2009) and 2334 (2016). The Israeli-Palestinian conflict remains at the core of the instability prevailing in the Middle East and continues to threaten international peace and security. As violence and tensions persist across the Occupied Palestinian Territory, including East Jerusalem, the Office continues to engage to mitigate and prevent armed conflict, address humanitarian and development challenges, including recovery and reconstruction efforts in Gaza, and engage the parties and the international community with a view to making political progress towards a two-State solution.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "48/213",
+                      "https://undocs.org/en/A/RES/48/213"
+                    ],
+                    [
+                      "49/88",
+                      "https://undocs.org/en/A/RES/49/88"
+                    ],
+                    [
+                      "1860 (2009)",
+                      "https://undocs.org/en/S/RES/1860(2009)"
+                    ],
+                    [
+                      "2334 (2016)",
+                      "https://undocs.org/en/S/RES/2334(2016)"
+                    ]
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.2\tThe objective, to which the Office contributes, is to achieve a comprehensive, just and lasting resolution to the Israeli-Palestinian conflict based on the two-State solution and to improve the socioeconomic conditions of the Palestinian people.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.3\tTo contribute to the objective, the Office will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tIntensify engagement with regional and international actors, including with members of the Middle East Quartet, to work towards ending the occupation and resolving the Israeli-Palestinian conflict;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tIncrease engagement with the parties and relevant partners to reduce violence and tensions in Gaza, the occupied West Bank, including East Jerusalem, and the region;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tStrengthen the Palestinian Authority, including by supporting the parties to update their economic and administrative relationships and to enact policy reforms;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tContinue to work with the parties to uphold their obligations under United Nations resolutions and international law, including reporting to the Security Council on resolution 2334 (2016);",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "2334 (2016)",
+                          "https://undocs.org/en/S/RES/2334(2016)"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tSupport efforts, including as part of the recovery and reconstruction of Gaza, with Gaza and the occupied West Bank, including East Jerusalem, unified politically, economically and administratively, which is critical to achieving the two-State solution;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(f)\tSupport the Palestinian Authority in advancing its State-building agenda and strengthening its institutions, including the preparation and conduct of local council, legislative, presidential and Palestinian National Council elections;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(g)\tIn collaboration with the United Nations country team, continue to coordinate United Nations support to recovery and reconstruction efforts in the Occupied Palestinian Territory, including East Jerusalem.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.4\tThe above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tMovement towards meaningful negotiations aimed at ending the occupation and resolving the Israeli-Palestinian conflict on the basis of the two-State solution and internationally recognized parameters;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tReduced tensions and violence, the cessation of hostilities and the prevention of renewed escalation;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tIncreased institutional stability and governance capacity of the Palestinian Authority and tangible steps towards improving the fiscal situation;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tMobilization of political, financial and technical support for the Occupied Palestinian Territory, including for recovery and reconstruction efforts in Gaza;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tProvision and distribution of assistance to meet the needs of the Palestinian people, across the Occupied Palestinian Territory, including East Jerusalem;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(f)\tAdvancement of a single, democratic, national Palestinian governing authority administering the entire Occupied Palestinian Territory;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(g)\tThe parties identifying tangible steps to improve the situation on the ground, as outlined in the recommendations of the Quartet report of 1 July 2016 (S/2016/595, annex).",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "S/2016/595",
+                          "https://undocs.org/en/S/2016/595"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.5\tWith regard to the external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tThe two-State solution remains viable, in line with relevant United Nations resolutions and bilateral agreements;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tA cessation of hostilities is in place and relevant parties support de-escalation efforts;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tGovernance arrangements, security arrangements and other enabling conditions are in place that allow humanitarian, recovery and reconstruction activities in Gaza;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tThe security situation in the Occupied Palestinian Territory, including East Jerusalem, allows for the implementation of humanitarian and development programmes;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tIsraeli and Palestinian interlocutors and regional and international stakeholders engage in meaningful dialogue and cooperation with the Office and the United Nations country team in the performance of their functions, including on access and movement;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(f)\tThere is adequate political support from Member States and financial support from donors;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.6\tWith regard to cooperation with other entities at the global, regional, national and local levels, the Office will continue its active engagement, including promoting de-escalation, conducting preventive diplomacy, halting and reversing negative trends, including settlement expansion, and enhancing coordination efforts to advance concrete steps towards a two-State solution to the Israeli-Palestinian conflict. The Office will remain an active contributor to the Ad Hoc Liaison Committee for the Coordination of the International Assistance to Palestinians and will continue to coordinate with other Committee members to promote actionable recommendations to both parties. The Office will strengthen engagement with other forums and partners, such as the Development Partners Group, Arab and Gulf donors, and European Union-led support to Palestinian Authority reforms. The Office will advocate with the parties, Member States, humanitarian and development partners, regional actors, the private sector, civil society and other stakeholders to facilitate humanitarian relief, recovery, reconstruction, and economic and social development.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.7\tWith regard to inter-agency coordination and liaison, the Office will continue to lead the coordination of more than 20 United Nations resident and non-resident agencies, funds and programmes in responding to the development and humanitarian needs of the Palestinian people. The Office will promote policies to improve movement and access for people and goods throughout the Occupied Palestinian Territory. The Office will continue to foster inter-agency collaboration by identifying opportunities for improving the socioeconomic conditions in the occupied West Bank, advocating for the necessary conditions for humanitarian, recovery and reconstruction efforts in Gaza, and implementing the United Nations Sustainable Development Cooperation Framework. The Office will also coordinate with regional United Nations entities, such as the regional Development Coordination Office, the regional offices of United Nations agencies, funds and programmes and the Economic and Social Commission for Western Asia, to leverage expertise and identify opportunities. The Office will work with the United Nations Office for Project Services, which will continue to manage the day-to-day operations of the United Nations mechanism established pursuant to Security Council resolution 2720 (2023), reporting directly to the Deputy Special Coordinator/Resident Coordinator/Humanitarian Coordinator, and through them to the Special Coordinator for the Middle East Peace Process.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "2720 (2023)",
+                      "https://undocs.org/en/S/RES/2720(2023)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.8\tThe Office integrates a gender perspective in its operational activities, deliverables and results, as appropriate, including through more systematic engagement with women’s and youth groups in support of the implementation of Security Council resolution 1325 (2000). The Office will continue to promote women’s participation in political processes, conflict prevention and peacebuilding, and participate in high-level dialogues on women and peace and security with civil society organizations, Member States and United Nations agencies. The Office will also encourage and support the increased participation of women in Palestinian institutions and as candidates in elections.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "1325 (2000)",
+                      "https://undocs.org/en/S/RES/1325(2000)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.9\tIn line with the United Nations Disability Inclusion Strategy, the Office will advocate for the full inclusion of individuals with disabilities in all aspects of United Nations programmes in the Occupied Palestinian Territory. Programmatic efforts will prioritize disability inclusion in recovery and reconstruction efforts in Gaza including by advocating for inclusive planning and facilitating access to specialized services.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Evaluation activities",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.10\tAn evaluation conducted by the Office on the effectiveness and relevance of its engagement with the relevant parties to improve Palestinian economic activity in Area C, including associated management controls, was completed in 2024 and has guided the proposed programme plan for 2026.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.11\tIn response to the results of that evaluation, the Office will further enhance and intensify its political engagement in the occupied West Bank as part of its overall efforts to prevent tensions and violence, discourage unilateral steps that undermine the two-State solution and promote the restoration of a political process towards ending the occupation and resolving the conflict.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.12\tAn evaluation of coordination with humanitarian and development partners, regional and international stakeholders and civil society to promote a coherent, effective and inclusive recovery and reconstruction process in Gaza, with the Palestinian Authority at its centre, is planned for 2026.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-x",
+                  "text": "A principled approach for recovery and reconstruction planning for Gaza",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.II.13\tWhile the release of all hostages and ending the armed conflict in Gaza remained a priority, the Office also focused on good offices and programmatic efforts to support preparation and planning for the future of Gaza, in order to improve Palestinian lives, rights and dignity, ensure security for Israelis and Palestinians and advance the two-State solution. The Special Coordinator outlined principles based in United Nations resolutions and international law to guide post-conflict arrangements for Gaza and re-establish the political, economic and administrative linkages between Gaza and the occupied West Bank, including East Jerusalem. The Office facilitated cross-pillar interagency planning exercises, notably through tripartite work between the World Bank, the European Union and the United Nations. These exercises led to the launch of a draft early recovery strategy for Gaza as a report to the Ad Hoc Liaison Committee, which situated early recovery planning and implementation with respect to the ongoing humanitarian response, future humanitarian planning and the joint work for the interim rapid damage and needs assessment and Gaza recovery framework.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.II.14\tProgress towards the objective is presented in the performance measure below (see table 3.II.1).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Table 3.II.1 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Improved coordination and forward planning for recovery and reconstruction efforts in Gaza",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned results for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-x",
+                  "text": "Result 1: improved Palestinian access to and development across the Occupied Palestinian Territory, including in Area C",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.II.15\tThe Office’s work contributed to regular engagement with Member States regarding the importance of Area C, settlement-related activity and dynamics in the occupied West Bank, including East Jerusalem, for the preservation of the two-State solution, which did not meet the planned target of constructive engagement with both parties to address the development needs in the Occupied Palestinian Territory, including Area C. The target was not met because of intensified movement and access restrictions in Area C, as well as settlement expansion.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.II.16\tProgress towards the objective and the target for 2026 are presented in the performance measure below (see table 3.II.2).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Table 3.II.2 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Strengthened engagement to address the development needs in the Occupied Palestinian Territory, including Area C",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Regular engagement with Member States regarding the importance of Area C, settlement-related activity and dynamics in the occupied West Bank for the preservation of the two-State solution",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Stakeholders formulate plans and promote positive steps in Area C, including easing of movement and access restrictions, with a view to improving Palestinian use of productive resources in Area C",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Concrete steps advanced by both parties with a view to improving Palestinian access to and development across the Occupied Palestinian Territory, including in Area C",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Result 2: progress towards a single Palestinian Government administering both Gaza and the occupied West Bank, within the framework of a negotiated two-State solution – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.II.17\tThe Office’s work contributed to establishing broad consensus among key stakeholders, including through advocacy with the parties and within the Security Council, on the criticality of unifying Gaza and the occupied West Bank, including East Jerusalem, politically, economically and administratively, which did not meet the planned target of tangible political and administrative steps taken to ensure that a single Palestinian Government administers the entire Occupied Palestinian Territory. The target was not met because of limited political will to take the necessary concrete measures to advance this process.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.II.18\tProgress towards the objective and the target for 2026 are presented in the performance measure below (see table 3.II.3).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Table 3.II.3 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Broad consensus among key stakeholders on the criticality of unifying Gaza and the occupied West Bank, including East Jerusalem, politically, economically and administratively",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "A single Palestinian Government administers the entire Occupied Palestinian Territory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "A single Palestinian Government takes steps to assume governance authority of the entire Occupied Palestinian Territory politically, administratively and economically",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Result 3: towards a political framework to resolve the Israeli-Palestinian conflict – Proposed programme plan for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.II.19\tThe steadily deteriorating dynamics across the Occupied Palestinian Territory have reinforced the urgency of taking concrete steps towards resolving the Israeli-Palestinian conflict. To reverse the current negative trajectory and build a peaceful future for Palestinians and Israelis, a political framework must be established that will provide a pathway to resolve the conflict, end the occupation and realize a two-State solution based on international law, United Nations resolutions and bilateral agreements.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Lessons learned and planned change",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.II.20\tThe lesson for the Office was the need to strengthen engagement with Palestinians and Israelis to advance the common goal of establishing a political process and expand the Office’s international and regional outreach. In applying the lesson, the Office will focus on expanding its dialogue with the parties to promote concrete steps, including supporting the establishment of governance arrangements that pave the way for the re-unification of the entire Occupied Palestinian Territory under a single Palestinian Government. The Office will also strengthen its role in fostering regional consensus for a political process towards a two-State solution and expand engagement with key partners on the future of Gaza.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.II.21\tExpected progress towards the objective is presented in the performance measure below (see table 3.II.4).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Table 3.II.4 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Stakeholders’ engagement on the establishment of a political framework to resolve the Israeli-Palestinian conflict, end the occupation and achieve a two-State solution",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Concrete steps towards the establishment of a political framework to resolve the Israeli-Palestinian conflict, end the occupation and achieve a two-State solution",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Legislative mandates",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.22\tThe list below, which was reviewed in the preparation of the proposed programme budget, provides all mandates entrusted to the programme.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "italic",
+                  "text": "General Assembly resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "48/213; 79/141",
+                            "hyperlinks": [
+                              [
+                                "48/213",
+                                "https://undocs.org/en/A/RES/48/213"
+                              ],
+                              [
+                                "79/141",
+                                "https://undocs.org/en/A/RES/79/141"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Assistance to the Palestinian people",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "49/88",
+                            "hyperlinks": [
+                              [
+                                "49/88",
+                                "https://undocs.org/en/A/RES/49/88"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Middle East peace process",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "79/81",
+                            "hyperlinks": [
+                              [
+                                "79/81",
+                                "https://undocs.org/en/A/RES/79/81"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Peaceful settlement of the question of Palestine",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "79/83",
+                            "hyperlinks": [
+                              [
+                                "79/83",
+                                "https://undocs.org/en/A/RES/79/83"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "The Syrian Golan ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "79/90",
+                            "hyperlinks": [
+                              [
+                                "79/90",
+                                "https://undocs.org/en/A/RES/79/90"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "The occupied Syrian Golan",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "79/91",
+                            "hyperlinks": [
+                              [
+                                "79/91",
+                                "https://undocs.org/en/A/RES/79/91"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Israeli settlements in the Occupied Palestinian Territory, including East Jerusalem, and the occupied Syrian Golan",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "48/213",
+                          "https://undocs.org/en/A/RES/48/213"
+                        ],
+                        [
+                          "79/141",
+                          "https://undocs.org/en/A/RES/79/141"
+                        ],
+                        [
+                          "49/88",
+                          "https://undocs.org/en/A/RES/49/88"
+                        ],
+                        [
+                          "79/81",
+                          "https://undocs.org/en/A/RES/79/81"
+                        ],
+                        [
+                          "79/83",
+                          "https://undocs.org/en/A/RES/79/83"
+                        ],
+                        [
+                          "79/90",
+                          "https://undocs.org/en/A/RES/79/90"
+                        ],
+                        [
+                          "79/91",
+                          "https://undocs.org/en/A/RES/79/91"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "italic",
+                  "text": "Security Council resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "1860 (2009)",
+                            "hyperlinks": [
+                              [
+                                "1860 (2009)",
+                                "https://undocs.org/en/S/RES/1860(2009)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2334 (2016)",
+                            "hyperlinks": [
+                              [
+                                "2334 (2016)",
+                                "https://undocs.org/en/S/RES/2334(2016)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2720 (2023)",
+                            "hyperlinks": [
+                              [
+                                "2720 (2023)",
+                                "https://undocs.org/en/S/RES/2720(2023)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "1860 (2009)",
+                          "https://undocs.org/en/S/RES/1860(2009)"
+                        ],
+                        [
+                          "2334 (2016)",
+                          "https://undocs.org/en/S/RES/2334(2016)"
+                        ],
+                        [
+                          "2720 (2023)",
+                          "https://undocs.org/en/S/RES/2720(2023)"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.23\tTable 3.II.5 lists all deliverables of the Office.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Table 3.II.5 – Deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tReport of the Secretary-General to the Security Council on the implementation of Security Council resolution 2334 (2016)",
+                            "hyperlinks": [
+                              [
+                                "2334 (2016)",
+                                "https://undocs.org/en/S/RES/2334(2016)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tReport of the Secretary-General to the General Assembly on assistance to the Palestinian people ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "17",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3.\tSecurity Council briefings on the situation in the Middle East, including quarterly reporting on Security Council resolution 2334 (2016)",
+                            "hyperlinks": [
+                              [
+                                "2334 (2016)",
+                                "https://undocs.org/en/S/RES/2334(2016)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4.\tMeeting of the Fifth Committee",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5.\tMeeting of the Committee for Programme and Coordination",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t6.\tMeeting of the Advisory Committee on Administrative and Budgetary Questions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTechnical materials (number of materials)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t7.\tOn recommended actions to bring about positive changes on the ground (reports to the Ad Hoc Liaison Committee)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tGood offices: good offices visits to countries in the region and internationally, as well as regular engagement on regional de-escalation efforts, enabling of provision and distribution of humanitarian assistance, and recovery and reconstruction efforts in Gaza, and renewed political initiatives to find a durable political solution to the conflict.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: good offices visits to countries in the region and internationally, as well as regular engagement on regional de-escalation efforts, enabling of provision and distribution of humanitarian assistance, and recovery and reconstruction efforts in Gaza, and renewed political initiatives to find a durable political solution to the conflict.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: good offices visits to countries in the region and internationally, as well as regular engagement on regional de-escalation efforts, enabling of provision and distribution of humanitarian assistance, and recovery and reconstruction efforts in Gaza, and renewed political initiatives to find a durable political solution to the conflict.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: good offices visits to countries in the region and internationally, as well as regular engagement on regional de-escalation efforts, enabling of provision and distribution of humanitarian assistance, and recovery and reconstruction efforts in Gaza, and renewed political initiatives to find a durable political solution to the conflict.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: good offices visits to countries in the region and internationally, as well as regular engagement on regional de-escalation efforts, enabling of provision and distribution of humanitarian assistance, and recovery and reconstruction efforts in Gaza, and renewed political initiatives to find a durable political solution to the conflict.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultations with and advocacy to Governments, relevant parties, civil society organizations and other stakeholders to identify and implement strategies to address the deteriorating political, security and economic situation in the occupied West Bank, including East Jerusalem; consultations with the parties and other relevant actors to de-escalate tensions and enable humanitarian assistance at scale in Gaza; engagement with the parties and other relevant actors, including key regional actors and members of the Middle East Quartet, to mobilize assistance, advance a political process to return to meaningful negotiations and promote the administration of the entire Occupied Palestinian Territory by a single Palestinian Government and advance a two-State solution; advice to Israeli and Palestinian interlocutors on the easing of movement and access constraints in Gaza and the occupied West Bank, including East Jerusalem; and advice to the Palestinian Central Elections Commission.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultations with and advocacy to Governments, relevant parties, civil society organizations and other stakeholders to identify and implement strategies to address the deteriorating political, security and economic situation in the occupied West Bank, including East Jerusalem; consultations with the parties and other relevant actors to de-escalate tensions and enable humanitarian assistance at scale in Gaza; engagement with the parties and other relevant actors, including key regional actors and members of the Middle East Quartet, to mobilize assistance, advance a political process to return to meaningful negotiations and promote the administration of the entire Occupied Palestinian Territory by a single Palestinian Government and advance a two-State solution; advice to Israeli and Palestinian interlocutors on the easing of movement and access constraints in Gaza and the occupied West Bank, including East Jerusalem; and advice to the Palestinian Central Elections Commission.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultations with and advocacy to Governments, relevant parties, civil society organizations and other stakeholders to identify and implement strategies to address the deteriorating political, security and economic situation in the occupied West Bank, including East Jerusalem; consultations with the parties and other relevant actors to de-escalate tensions and enable humanitarian assistance at scale in Gaza; engagement with the parties and other relevant actors, including key regional actors and members of the Middle East Quartet, to mobilize assistance, advance a political process to return to meaningful negotiations and promote the administration of the entire Occupied Palestinian Territory by a single Palestinian Government and advance a two-State solution; advice to Israeli and Palestinian interlocutors on the easing of movement and access constraints in Gaza and the occupied West Bank, including East Jerusalem; and advice to the Palestinian Central Elections Commission.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultations with and advocacy to Governments, relevant parties, civil society organizations and other stakeholders to identify and implement strategies to address the deteriorating political, security and economic situation in the occupied West Bank, including East Jerusalem; consultations with the parties and other relevant actors to de-escalate tensions and enable humanitarian assistance at scale in Gaza; engagement with the parties and other relevant actors, including key regional actors and members of the Middle East Quartet, to mobilize assistance, advance a political process to return to meaningful negotiations and promote the administration of the entire Occupied Palestinian Territory by a single Palestinian Government and advance a two-State solution; advice to Israeli and Palestinian interlocutors on the easing of movement and access constraints in Gaza and the occupied West Bank, including East Jerusalem; and advice to the Palestinian Central Elections Commission.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultations with and advocacy to Governments, relevant parties, civil society organizations and other stakeholders to identify and implement strategies to address the deteriorating political, security and economic situation in the occupied West Bank, including East Jerusalem; consultations with the parties and other relevant actors to de-escalate tensions and enable humanitarian assistance at scale in Gaza; engagement with the parties and other relevant actors, including key regional actors and members of the Middle East Quartet, to mobilize assistance, advance a political process to return to meaningful negotiations and promote the administration of the entire Occupied Palestinian Territory by a single Palestinian Government and advance a two-State solution; advice to Israeli and Palestinian interlocutors on the easing of movement and access constraints in Gaza and the occupied West Bank, including East Jerusalem; and advice to the Palestinian Central Elections Commission.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: exchange of information and partnerships with some 80 civil society organizations, academic institutions and non-governmental organizations, to promote the activities of the mission as well as to enhance its visibility. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: exchange of information and partnerships with some 80 civil society organizations, academic institutions and non-governmental organizations, to promote the activities of the mission as well as to enhance its visibility. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: exchange of information and partnerships with some 80 civil society organizations, academic institutions and non-governmental organizations, to promote the activities of the mission as well as to enhance its visibility. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: exchange of information and partnerships with some 80 civil society organizations, academic institutions and non-governmental organizations, to promote the activities of the mission as well as to enhance its visibility. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: exchange of information and partnerships with some 80 civil society organizations, academic institutions and non-governmental organizations, to promote the activities of the mission as well as to enhance its visibility. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tExternal and media relations: daily press reviews, press conferences in the presence of some 35 international media outlets (television, radio and print); and interviews and publications with target audiences and networks, as well as public statements and press releases for more than 1,500 stakeholders, including diplomatic missions, civil society organizations, think tanks and media personnel. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: daily press reviews, press conferences in the presence of some 35 international media outlets (television, radio and print); and interviews and publications with target audiences and networks, as well as public statements and press releases for more than 1,500 stakeholders, including diplomatic missions, civil society organizations, think tanks and media personnel. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: daily press reviews, press conferences in the presence of some 35 international media outlets (television, radio and print); and interviews and publications with target audiences and networks, as well as public statements and press releases for more than 1,500 stakeholders, including diplomatic missions, civil society organizations, think tanks and media personnel. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: daily press reviews, press conferences in the presence of some 35 international media outlets (television, radio and print); and interviews and publications with target audiences and networks, as well as public statements and press releases for more than 1,500 stakeholders, including diplomatic missions, civil society organizations, think tanks and media personnel. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: daily press reviews, press conferences in the presence of some 35 international media outlets (television, radio and print); and interviews and publications with target audiences and networks, as well as public statements and press releases for more than 1,500 stakeholders, including diplomatic missions, civil society organizations, think tanks and media personnel. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDigital platforms and multimedia content: the Office’s website and social media accounts. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: the Office’s website and social media accounts. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: the Office’s website and social media accounts. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: the Office’s website and social media accounts. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: the Office’s website and social media accounts. ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "2334 (2016)",
+                          "https://undocs.org/en/S/RES/2334(2016)"
+                        ],
+                        [
+                          "2334 (2016)",
+                          "https://undocs.org/en/S/RES/2334(2016)"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub",
+          "text": "Overview",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "3.II.24\tThe proposed regular budget resources for 2026, including the breakdown of resource changes, as applicable, are reflected in tables 3.II.6 to 3.II.8.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table",
+              "text": "Table 3.II.6",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial resources by object of expenditure – (Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Object of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": " \n2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Object of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": " \n2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Posts",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9 831.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9 932.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "591.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "31.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "622.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "10 554.7",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Other staff costs ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "34.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "46.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "46.6",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Hospitality ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3.2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Travel of staff ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "206.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "251.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "30.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "30.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "12.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "281.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Contractual services ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "121.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "171.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "173.3",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General operating expenses ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "486.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "566.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "78.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "78.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "13.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "644.7",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Supplies and materials ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "90.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "91.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(10.2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(10.2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(11.2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "81.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Furniture and equipment ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "174.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "276.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(54.4)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(54.4)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(19.7)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "222.4",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Improvement of premises",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "30.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "30.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "30.0",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "10 945.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "11 339.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "591.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "106.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "697.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "12 037.1",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 3.II.7",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed posts and post changes for 2026 – (Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Number",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Details",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Approved for 2025",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "78",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 USG, 1 ASG, 1 D-1, 4 P-5, 4 P-4, 9 P-3, 15 FS, 7 NPO, 36 LL",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tReclassification",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "One Security Coordination Officer post from (P-3) to Chief Security Officer (P-4)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Proposed for 2026",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "78",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "USG, 1 ASG, 1 D-1, 4 P-5, 5 P-4, 8 P-3, 15 FS, 7 NPO, 36 LL ",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 3.II.8",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed posts by category and grade – (Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Category and grade",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025\napproved ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026\nproposed",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Category and grade",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025\napproved ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026\nproposed",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Professional and higher",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "USG",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "ASG",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "D-1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "8",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "20",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "20",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General Service and related",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "FS",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "NPO",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "7",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "LL",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "36",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "36",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "58",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "58",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "78",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "78",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.25\tAdditional details on the distribution of the proposed resources for 2026 are reflected in table 3.II.9 and figure 3.II.I.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.26\tAs shown in tables 3.II.9, the overall resources proposed for 2026 amount to $12,037,100, reflecting a net increase of $697,400 compared with the approved budget for 2025. Resource changes result from technical adjustments and other changes. The proposed level of resources provides for the full, efficient and effective implementation of mandates.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 3.II.9",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial and post resources – (Thousands of United States dollars/number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Posts",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9 831.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9 932.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "591.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "31.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "622.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "10 554.7",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Non-post",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 114.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 407.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "75.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "75.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 482.4 ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "10 945.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "11 339.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "591.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "106.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "697.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "12 037.1 ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Professional and higher",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "20",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "20",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General Service and related",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "58",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "58",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "78",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "78",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "figure",
+                  "text": "Figure 3.II.I",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Distribution of proposed resources for 2026 – (Number of posts/thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "image",
+                  "text": "",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub",
+          "text": "Explanation of variances by factor – Overall resource changes",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Technical adjustments",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.27\tAs shown in table 3.II.6, resource changes reflect an increase of $591,000 related to the higher provision, at continuing vacancy rates, for 10 posts (2 P-3, 2 NPO, 2 FS, and 4 LL) established in 2025 pursuant to the General Assembly resolution 79/257, which were subject to a 50 per cent vacancy rate in accordance with the established practice for newly established posts.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "79/257",
+                      "https://docs.un.org/en/A/RES/79/257"
+                    ]
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Other changes",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.28\tAs shown in table 3.II.6, resource changes reflect a net increase of $106,400, as follows:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tAn increase of $31,200 under posts would provide for the proposed upward reclassification of one Security Coordination Officer post (P-3) to a Chief Security Officer post (P-4), as detailed in annex II;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tAn increase of $30,100 under travel of staff would cover increased travel requirements within the region aimed at developing strategic partnerships to support the mandate for the Office;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tThe net increase of $1,600 under contractual services comprises an increase of $4,200 relating mainly to the adjustment of standard ICT rates for non-field personnel outside of Headquarters for 2026, offset in part by a decrease in maintenance costs for Office vehicles as a result of reducing the fleet by nine vehicles ($2,600);",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tThe net increase of $78,100 under general operating expenses comprises an increase of $84,500 relating to the contribution of the Office for services provided by the Department of Safety and Security field office and at Government House through the United Nations Truce Supervision Organization; an increase in the malicious acts insurance policy derived by the situation in Gaza and the West Bank; the planned upgrade of vehicle tracking system; and an increase in freight costs. The increase is offset in part by the discontinuation of the service agreement for network equipment ($6,400);",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tThe decrease of $10,200 under supplies and materials is mainly due to the projected decrease in fuel utilization as a result of the Office’s reduced vehicle fleet;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(f)\tThe net decrease of $54,400 under furniture and equipment mainly reflects the Office’s efforts to prioritize critical requirements and seek more efficient options for the acquisition of equipment from downsizing missions where possible;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(g)\tAn increase of $30,000 under improvement of premises would provide for the replacement of two obsolete and damaged prefabs in the Gaza office during the hostilities.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Other information",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.29\tThe United Nations mechanism that was established in 2024 pursuant to Security Council resolution 2720 (2023) and funded from extrabudgetary resources will continue its operations on accelerating the provision of humanitarian relief consignments to Gaza through States that are not party to the conflict, consulting all relevant parties, with the goal of expediting, streamlining and accelerating the process of providing assistance while continuing to help ensure that aid reaches its civilian destination. The mechanism was initially established by the Office of the Senior Humanitarian and Reconstruction Coordinator through a hybrid model with the United Nations Office for Project Services; following completion of the mandate for the former, the latter would continue to manage the operations of the mechanism, and report to the Deputy Special Coordinator for the Middle East Peace Process, United Nations Resident Coordinator and Humanitarian Coordinator for the Occupied Palestinian Territory and through him to the Special Coordinator for the Middle East Peace Process. The Office of the United Nations Special Coordinator for the Middle East Peace Process would support the work of the mechanism, including engagement at the political level by the Deputy Special Coordinator and the Special Coordinator. The reporting requirements on the operations of the mechanism will form part of the Office’s regular reporting to the Security Council. These functions will be undertaken by the Office within existing resources funded under the regular budget.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "2720 (2023)",
+                      "https://docs.un.org/en/S/RES/2720(2023)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.30\tIn accordance with the 2030 Agenda for Sustainable Development, in particular target 12.6 of the Sustainable Development Goals, in which organizations are encouraged to integrate sustainability information into their reporting cycles, and in compliance with the cross-cutting mandate set out in paragraph 19 of General Assembly resolution 72/219, the Office is integrating environmental management practices into its operations. The Office remains committed to reducing its environmental footprint and integrating environmental management practices into its operations. Once the situation permits, the mission will focus its efforts on utilizing photovoltaic solar energy to reduce dependency on fossil fuel-powered generators, reduce demand on the overburdened local grid and reduce greenhouse gas emissions; improving building efficiency in terms of energy and water usage through the upgrading of wall insulation and installation of environmentally friendly fixtures; and continuing to raise environmental awareness among staff members.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "72/219",
+                      "https://docs.un.org/en/A/RES/72/219"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.II.31\tInformation on advance booking for air travel is reflected in table 3.II.10. The low actual rate in 2024 reflects the need for urgent travel on short notice for meetings with international and regional interlocutors on the rapidly deteriorated situation in Gaza and the West Bank following the outbreak of hostilities. The Office will continue its effort to improve the compliance rate by asking managers to implement preventive measures where possible.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 3.II.10",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Compliance rate – (Percentage)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2022 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2023 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 planned",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 planned",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Air tickets purchased at least two weeks before the commencement of travel",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "68",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "39",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "28",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

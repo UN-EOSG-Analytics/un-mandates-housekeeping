@@ -1,0 +1,1408 @@
+[
+  {
+    "block_type": "frontmatter",
+    "text": "[Frontmatter]",
+    "table_content": null,
+    "hyperlinks": null,
+    "children": [
+      {
+        "block_type": "heading-x",
+        "text": "Eightieth session",
+        "table_content": null,
+        "hyperlinks": [],
+        "children": [
+          {
+            "block_type": "image",
+            "text": "",
+            "table_content": null,
+            "hyperlinks": [],
+            "children": []
+          },
+          {
+            "block_type": "other",
+            "text": "*\tA/80/50.",
+            "table_content": null,
+            "hyperlinks": [
+              [
+                "A/80/50",
+                "https://docs.un.org/en/A/80/50"
+              ]
+            ],
+            "children": []
+          },
+          {
+            "block_type": "other",
+            "text": "Items 137 and 138 of the preliminary list*",
+            "table_content": null,
+            "hyperlinks": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "block_type": "heading-x",
+        "text": "Proposed programme budget for 2026 – Programme planning – Proposed programme budget for 2026",
+        "table_content": null,
+        "hyperlinks": [],
+        "children": []
+      },
+      {
+        "block_type": "heading-sub",
+        "text": "Part VIII – Common support services",
+        "table_content": null,
+        "hyperlinks": [],
+        "children": []
+      },
+      {
+        "block_type": "heading",
+        "text": "Section 29",
+        "table_content": null,
+        "hyperlinks": [],
+        "children": [
+          {
+            "block_type": "heading-x",
+            "text": "Management and support services",
+            "table_content": null,
+            "hyperlinks": [],
+            "children": []
+          },
+          {
+            "block_type": "heading-sub-sub",
+            "text": "Programme 25 – Management and support services",
+            "table_content": null,
+            "hyperlinks": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "block_type": "heading",
+        "text": "Overview",
+        "table_content": null,
+        "hyperlinks": [],
+        "children": [
+          {
+            "block_type": "heading-sub",
+            "text": "Mandates and background",
+            "table_content": null,
+            "hyperlinks": [],
+            "children": [
+              {
+                "block_type": "paragraph-1",
+                "text": "29.1\tThe overall purpose of section 29, Management and support services, the responsibility for which is vested in the Department of Management Strategy, Policy and Compliance, the Department of Operational Support, the Office of Information and Communications Technology and the administrative services of the United Nations Office at Geneva, the United Nations Office at Vienna and the United Nations Office at Nairobi, is to enhance the accountability and efficiency of the Organization in four broad management areas, namely, finance, human resources, information and communications technology and support services, including procurement and infrastructure; to provide support services to the intergovernmental processes of the Organization; to secure financing for the mandated programmes and activities of the Secretariat; and to support the implementation of those programmes and activities.",
+                "table_content": null,
+                "hyperlinks": [],
+                "children": []
+              },
+              {
+                "block_type": "paragraph-1",
+                "text": "29.2\tThe departments and offices under section 29 derive their mandates and guidance from relevant articles of the Charter of the United Nations, specifically Articles 8, 17, 97, 100 and 101, as well as the Financial Regulations and Rules of the United Nations; the Staff Regulations and Rules of the United Nations; the Regulations and Rules Governing Programme Planning, the Programme Aspects of the Budget, the Monitoring of Implementation and the Methods of Evaluation; and General Assembly resolutions as included in the relevant components.",
+                "table_content": null,
+                "hyperlinks": [],
+                "children": []
+              },
+              {
+                "block_type": "paragraph-1",
+                "text": "29.3\tDetails on the composition of the deliverables proposed under section 29, together with their specific objectives, planned results and the related resource requirements, are contained in subsections 29A to 29F.",
+                "table_content": null,
+                "hyperlinks": [],
+                "children": []
+              },
+              {
+                "block_type": "paragraph-1",
+                "text": "29.4\tSummaries of the overall resource requirements for section 29 are set out in the table below.",
+                "table_content": null,
+                "hyperlinks": [],
+                "children": []
+              },
+              {
+                "block_type": "heading-sub-sub",
+                "text": "Overview of financial and post resources by subsection and funding source",
+                "table_content": null,
+                "hyperlinks": [],
+                "children": [
+                  {
+                    "block_type": "note",
+                    "text": "(Thousands of United States dollars/number of posts)",
+                    "table_content": null,
+                    "hyperlinks": [],
+                    "children": []
+                  },
+                  {
+                    "block_type": "image",
+                    "text": "",
+                    "table_content": null,
+                    "hyperlinks": [],
+                    "children": []
+                  },
+                  {
+                    "block_type": "table-content",
+                    "text": null,
+                    "table_content": [
+                      [
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "Regular budget",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "Regular budget",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "Regular budget",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "Other assessed",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "Other assessed",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "Other assessed",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "Extrabudgetary",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "Extrabudgetary",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "Extrabudgetary",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "Total",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "Total",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "Total",
+                          "hyperlinks": []
+                        }
+                      ],
+                      [
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "2025 approved",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "2026 estimate ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "Variance",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "2025 estimate",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "2025 estimate",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "2026 estimate",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "Variance",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "2025 estimate",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "2025 estimate",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "2026 estimate",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "Variance",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "2025 estimate",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "2025 estimate",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "2026 estimate",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "Variance",
+                          "hyperlinks": []
+                        }
+                      ],
+                      [
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Financial resources",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        }
+                      ],
+                      [
+                        {
+                          "text": "29A.\tDepartment of Management Strategy, Policy and Compliance",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 68 358.9 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 69 820.5 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 1 461.6 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 59 496.9 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 59 496.9 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 63 897.4 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 4 400.5 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 40 976.8 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 40 976.8 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 38 089.1 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " (2 887.7)",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "168 832.6 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "168 832.6 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "171 807.0 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 2 974.4 ",
+                          "hyperlinks": []
+                        }
+                      ],
+                      [
+                        {
+                          "text": "29B.\tDepartment of Operational Support",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 101 043.9 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "101 017.6 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " (26.3)",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "117 175.2 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "117 175.2 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "131 859.5 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 14 684.3 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 76 357.1 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 76 357.1 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 71 113.6 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " (5 243.5)",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "294 576.2 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "294 576.2 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "303 990.7 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 9 414.5 ",
+                          "hyperlinks": []
+                        }
+                      ],
+                      [
+                        {
+                          "text": "29C.\tOffice of Information and Communications Technology",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 55 389.6 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 55 382.3 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " (7.3)",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 34 268.8 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 34 268.8 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 35 048.5 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 779.7 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 69 721.3 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 69 721.3 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 63 611.7 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " (6 109.6)",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "159 379.6 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "159 379.6 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "154 042.5 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " (5 337.1)",
+                          "hyperlinks": []
+                        }
+                      ],
+                      [
+                        {
+                          "text": "29D.\tAdministration, Nairobi",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 23 512.3 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 19 015.2 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " (4 497.1)",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 30 560.1 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 30 560.1 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 30 560.1 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 54 072.4 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 54 072.4 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 49 575.3 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " (4 497.1)",
+                          "hyperlinks": []
+                        }
+                      ],
+                      [
+                        {
+                          "text": "29E.\tAdministration, Geneva",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 90 290.8 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 90 982.2 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 691.4 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 56 191.7 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 56 191.7 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 56 053.5 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " (138.2)",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "146 482.5 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "146 482.5 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "147 035.7 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 553.2 ",
+                          "hyperlinks": []
+                        }
+                      ],
+                      [
+                        {
+                          "text": "29F.\tAdministration, Vienna",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 22 314.6 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 22 408.1 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 93.5 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 28 844.1 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 28 844.1 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 26 233.5 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " (2 610.6)",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 51 158.7 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 51 158.7 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 48 641.6 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " (2 517.1)",
+                          "hyperlinks": []
+                        }
+                      ],
+                      [
+                        {
+                          "text": "\tTotal",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 360 910.1 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "358 625.9 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " (2 284.2)",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "210 940.9 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "210 940.9 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "230 805.4 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 19 864.5 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "302 651.1 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "302 651.1 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "285 661.5 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "(16 989.6)",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "874 502.0 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "874 502.0 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "875 092.8 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 590.8 ",
+                          "hyperlinks": []
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Post resources",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": "",
+                          "hyperlinks": []
+                        }
+                      ],
+                      [
+                        {
+                          "text": "29A.\tDepartment of Management Strategy, Policy and Compliance",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 275 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 282 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 7 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 180 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 180 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 180 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 131 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 131 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 131 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 586 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 586 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 593 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 7 ",
+                          "hyperlinks": []
+                        }
+                      ],
+                      [
+                        {
+                          "text": "29B.\tDepartment of Operational Support",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 366 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 370 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 4 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 436 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 436 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 498 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 62 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 97 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 97 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 96 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " (1)",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 899 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 899 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 964 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 65 ",
+                          "hyperlinks": []
+                        }
+                      ],
+                      [
+                        {
+                          "text": "29C.\tOffice of Information and Communications Technology",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 178 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 178 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 52 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 52 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 52 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 13 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 13 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 13 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 243 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 243 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 243 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        }
+                      ],
+                      [
+                        {
+                          "text": "29D.\tAdministration, Nairobi",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 112 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 114 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 2 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 299 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 299 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 299 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 411 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 411 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 413 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 2 ",
+                          "hyperlinks": []
+                        }
+                      ],
+                      [
+                        {
+                          "text": "29E.\tAdministration, Geneva",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 298 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 299 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 1 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 181 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 181 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 180 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " (1)",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 479 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 479 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 479 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        }
+                      ],
+                      [
+                        {
+                          "text": "29F.\tAdministration, Vienna",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 83 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 85 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 2 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 90 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 90 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 90 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " –   ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 173 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 173 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 175 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 2 ",
+                          "hyperlinks": []
+                        }
+                      ],
+                      [
+                        {
+                          "text": "\tTotal",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 1 312 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 1 328 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 16 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 668 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 668 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 730 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 62 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 811 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 811 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 809 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " (2)",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 2 791 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 2 791 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 2 867 ",
+                          "hyperlinks": []
+                        },
+                        {
+                          "text": " 76 ",
+                          "hyperlinks": []
+                        }
+                      ]
+                    ],
+                    "hyperlinks": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

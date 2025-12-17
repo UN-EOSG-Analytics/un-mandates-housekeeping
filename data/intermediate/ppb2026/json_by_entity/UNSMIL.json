@@ -1,0 +1,2269 @@
+{
+  "entity": "United Nations Support Mission in Libya",
+  "entity_abbrev": "UNSMIL",
+  "entity_raw_name": "7.\tUnited Nations Support Mission in Libya",
+  "source_file": "A_80_6 (SECT. 3)_ADD.4_CLUSTER_III_FASCICLE ADVANCE UNEDITED COPY FOR ACABQ.json",
+  "content": [
+    {
+      "block_type": "italic",
+      "text": "($90,432,200)",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": []
+    },
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The United Nations Support Mission in Libya (UNSMIL) is an integrated special political mission established by the Security Council in its resolution 2009 (2011). The Mission is mandated to support the country’s transition and post-conflict efforts, including through an inclusive national dialogue and a constitution-drafting process. Following the signing of a nationwide ceasefire agreement on 23 October 2020 that ended the armed conflict that began in April 2019, the Council, in its resolution 2570 (2021), further mandated UNSMIL to provide support to the 5+5 Joint Military Commission and the Libyan-led and Libyan-owned ceasefire monitoring mechanism.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "On 24 January 2025, the Secretary-General appointed Ms. Hanna Serwaa Tetteh of Ghana as his Special Representative for Libya and Head of UNSMIL. The Mission’s mandate was extended until 31 October 2025 through resolution 2755 (2024), in which the Council requested the Secretary-General to submit a strategic review of UNSMIL to the Council no later than 30 September 2025.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "On 4 February, UNSMIL announced the establishment of an advisory committee of 20 Libyan independent experts (7 women, 13 men) as part of a multi-track initiative in the Libyan-led and Libyan-owned political process facilitated by the United Nations. The role of the committee is to develop technically sound and politically viable proposals for resolving outstanding contentious issues to enable the holding of elections, building on the existing Libyan framework and laws, submitted to UNSMIL for consideration for the subsequent phase of the political process. In response to the violent clashes that erupted in Tripoli on 12 May, the Mission, together with the Presidency Council, launched a truce committee on 18 May to stabilize the situation and advance security arrangements in the capital.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The objective, to which this Mission contributes, is to support an inclusive Libyan-led political process and rights-based national reconciliation, conflict prevention and peacebuilding efforts; strengthen rule of law institutions, transitional justice processes and State-building efforts to optimize readiness for planning and implementing credible, transparent and inclusive elections; to advance human rights, gender equality and women and youth political participation; to support for the reform of the security sector, disarmament, demobilization and reintegration efforts and further the implementation of the October 2020 ceasefire agreement.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "To contribute to the objective, the Mission will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Provide mediation and good offices to support a Libyan-led, Libyan-owned political process facilitated by the United Nations and supported by international partners, with a focus on addressing contested political issues, enabling inclusive national presidential and parliamentary elections and fostering good governance. The Mission will continue to engage with a wide spectrum of Libyan stakeholders at all levels, particularly women and youth, to amplify their participation in the democratic transition and reconciliation processes;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Provide technical assistance to the High National Elections Commission for conducting transparent and inclusive national and municipal elections;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Support inclusive, victim-centred and rights-based national reconciliation processes based on transitional justice principles through capacity-building for reconciliation bodies and facilitating dialogue among diverse Libyan actors, including civil society, women and youth;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Strengthen the rule of law and accountability by supporting Libya’s judiciary and prosecutorial systems, including their critical role in ensuring justice for all Libyans;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Promote and protect human rights by monitoring, reporting and addressing violations, with a focus on sexual violence in conflict and violations against vulnerable groups, and by ensuring civic space for political participation;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Advance security sector reform by engaging legislative bodies to review national security legislation and supporting trust-building measures for the reunification of security and military institutions under civilian oversight, while establishing enhanced security coordination mechanisms;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Facilitate disarmament, demobilization and reintegration through community violence reduction initiatives, national coordination and civil society engagement, technical training and operational planning, including support for mine action coordination and weapon and ammunition management;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Support the 5+5 Joint Military Commission and its subcommittees in implementing the ceasefire agreement, including the withdrawal of foreign forces, foreign fighters and mercenaries and by engaging women, youth and civil society organizations on sustaining and strengthening the ceasefire agreement;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Support economic policy reform, in close cooperation with Member States and international financial institutions, including reunification and reform of the country’s banking system, a decentralization policy and the establishment of an inclusive and unified oversight mechanism that ensures transparent, equitable and accountable management of revenue across the country and distribution of national resources;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Advance the Women, Peace, and Security (WPS) and agenda, by expanding existing training programmes to build leadership capacity and promoting their meaningful participation in political and peacebuilding processes;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Engage with neighbouring countries, including sub-Saharan African countries, to ensure that their views and concerns are taken into consideration.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "An inclusive Libyan-led and Libyan-owned political process that leads to elected, unified, functional and representative government institutions, including economic institutions, contributing to political and economic stability and rights-based reconciliation;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Enhanced accountability of institutions, promotion of the rule of law throughout the country, and reconciliation and transitional justice processes promoting and protecting human rights;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Unified security sector institutions operating under civilian oversight, including professional, unified and accountable defence and security forces and full implementation of the provisions of the ceasefire agreement, including the withdrawal of foreign fighters, foreign forces and mercenaries.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Mission cooperates with relevant local, national, regional and international partners and regional organizations, including the African Union, League of Arab States, and European Union and the United Nations-African Union-European Union quartet.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Mission and the United Nations country team have taken steps towards enhancing integration, including through the United Nations Sustainable Development Cooperation Framework (2023-2026) and will continue to operationalize the Secretary-General’s focus on the humanitarian-development-peace nexus to facilitate long-term peace, security and sustainable development, in order to enhance the impact of United Nations interventions in support of all people in Libya.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to the external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Libyan Political Agreement of December 2015, Security Council resolution 2510 (2020), by which the Council endorsed the conclusions of the Berlin Conference on Libya, the October 2020 ceasefire agreement, relevant provisions of the Libyan Political Dialogue Forum Tunis road map and accompanying outputs, and resolutions5, as well as the comprehensive approach to enabling elections, will remain the guiding framework for United Nations support in Libya. The Libyan-led multitrack political process, facilitated by the United Nations, will establish the roadmap for elections and address contested political issues;",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "2510 (2020)",
+                      "https://undocs.org/en/S/RES/2510(2020)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The economic sector will continue to suffer from a lack of independent oversight and transparent management of public funds, while efforts to reunify the Central Bank will continue as part of the implementation of the road map and independent audit recommendations for reunification;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Libyan ceasefire agreement of October 2020, including the withdrawal of foreign forces, foreign fighters and mercenaries, will continue to be implemented, and consensus will be reached among relevant security and political actors in Libya on reforming and unifying security institutions and creating conditions conducive to the launch of a disarmament, demobilization and reintegration process;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The human rights situation in Libya will remain challenging, especially with respect to enhancing the rule of law and protecting and promoting civic space for all people in Libya to exercise their fundamental rights, in particular civil and political rights. Marginalization and underrepresentation of women in political and reconciliation processes will continue to pose a challenge to peacebuilding;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Institutional weaknesses and divisions among the country’s security actors will continue to enable violent extremist organizations to benefit from power vacuum and ungoverned spaces, thus inadvertently fostering an environment conducive to terrorism;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The security situation will remain fragile due to proliferation of weapons and armed actors, lack of unified security institutions, competition between armed actors, predatory economy, as well as the continued presence of smuggling and trafficking networks;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The overall humanitarian situation will continue to improve in line with security stabilization, with a steady decrease in the number of people needing humanitarian assistance and internally displaced persons. Meanwhile, the continued conflict in Sudan will require increased support for protection needs of Sudanese refugees, as well as other refugees, asylum seekers and migrants; and",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Strategic partnerships will continue among the international community, including regional organizations and the United Nations, in support of a Libyan-led and Libyan-owned political process adhering to the United Nations sanctions regime.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Mission integrates a gender perspective into its operational activities, deliverables, and results, as appropriate. From 2026 onward, the Mission will implement a renewed three-year action plan, “Inclusive Mediation and Peacebuilding Processes in Libya: Protection and Participation of Women (2026–2028)”. As part of the plan, the Mission will promote women’s participation in political and reconciliation processes and their representation in government institutions. To safeguard equal rights and opportunities for women, the Mission and the United Nations country team jointly promote women’s equal enjoyment of political, civil, economic and social rights through technical assistance to national institutions and civil society actors; advocacy for gender-responsive legislation and policies that protect women from violence; and measures to address gaps in basic services, particularly for displaced, migrant, and refugee women and girls. The Mission will support prevention and protection efforts in Libya, including through capacity-building for relevant institutions.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Evaluation activities",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In 2024, the Mission conducted a comprehensive staffing review exercise, providing an assessment of the organizational capacity and Mission structures and recommendations to enhance effectiveness and efficiency.  During the conduct of the review, the Security Council, in its resolution 2755 (2024), requested the Secretary-General to submit a strategic review no later than 30 September 2025, which includes an assessment and recommendations for increasing the efficiency and effectiveness of UNSMIL’s overall structure, including the objectives of UNSMIL. In view of the pending strategic review, the results of the concluded staffing review exercise would be reviewed against the outcome of strategic review, and as such are not reflected in the proposed programme plan for 2026.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In 2025, in addition to the strategic review mandated by the Council, UNSMIL plans to conduct a lesson’s learned exercise for the upcoming municipal council elections.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Strengthened rule of law institutions and transitional justice process protecting the rights of all people in Libya",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2024, the Mission provided technical assistance to the Presidential Council to finalize a draft law on national reconciliation which would lay the basis of a comprehensive and victims-centred transitional justice process. In partnership with the African Union, supported by the Chairs of the Berlin International Humanitarian Law/ Human Rights Working Group and in line with the provisions of the Libyan Political Dialogue Forum Roadmap, the Mission enabled consensus on a draft law that protects the independence of future transitional justice mechanisms. The Mission consistently engaged with victims and families of missing persons to document cases for future accountability.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective is presented in the performance measure below (see table 36 below).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 36 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual) ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Draft law on combating violence against women to the legislative bodies was agreed\nThe Monitoring, Analysis and Reporting Arrangement on conflict-related sexual violence was established\nA high-level committee on arbitrary detention, representing the Attorney General, the military prosecution, the police, and intelligence and judicial institutions continued its work\nHuman rights defenders and civil society actors in Libya are increasingly able to operate in a safer and more supportive environment",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The signing of a statement in favour of the adoption of the draft law by members of the legislative committee and women’s block of the House of Representatives highlighted UNSMIL’s mobilization of further support. However, the House of Representatives did not discuss the proposed draft law on the protection of women against violence, nor did it adopt a comprehensive law on transitional justice\nMembers of the public prosecution were trained as part of efforts to strengthen the rule of law institutions to investigate, prosecute, adjudicate and prevent abuses and violations of human rights\nMembers of civil society organizations and women human rights defenders were trained on collecting data on conflict-related sexual violence and monitoring of violations of human rights",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "A draft of the associations law was agreed by civil society organizations in 2024 and was reviewed by the Office of the High Commissioner for Human Rights and a gender consultant to ensure a comprehensive gender perspective\nA joint consultation forum was established as part of the Monitoring, Analysis and Reporting Arrangement on conflict-related sexual violence \nWomen Human Rights’ Defenders in Libya are gaining stronger safeguards as the zero draft of the protection strategy nears completion\nA draft law on national reconciliation was elaborated by Presidential Council through extensive consultations with victims’ groups, supported by UNSMIL, and through UNSMIL-facilitated consensus with the parliament, although the law remains to be adopted",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned results for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 1: unified security institutions promoting progress on security sector reform and the implementation of the ceasefire agreement, including the operationalization of a Libyan ceasefire monitoring mechanism – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2024, UNSMIL supported security sector reform and the ceasefire agreement by engaging the 5+5 Joint Military Commission and facilitating workshops, including a Code of Conduct session to enhance accountability and professionalism in the armed forces.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2026, UNSMIL will continue its support in planning and overseeing the withdrawal of foreign forces, foreign fighters and mercenaries. UNSMIL will support security sector reform including Libya’s unification of security sector institutions.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective and the target for 2026 are presented in the performance measure below (see table 37).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 37 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Maintenance of the ceasefire agreement \nConsensus built among stakeholders for the implementation of the action plan for the withdrawal of foreign forces, foreign fighters and mercenaries, including the establishment of a joint operations room and capacity-building programme for the local monitors\nEndorsement of the terms of reference for the establishment of a disarmament, demobilization and reintegration committee by the 5+5 Joint Military Commission to categorize armed groups\nActivation of a liaison and communication committee endorsed in meetings held in Cairo in November 2022 with neighbouring countries for the withdrawal of foreign fighters and mercenaries\nThe 5+5 Joint Military Commission agreed on the terms of reference of the joint military force",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Maintenance of the ceasefire agreement and development of the code of conduct for all security actors, as led by the Ministry of Defence of Libya\nLibyan ceasefire monitoring mechanism operationalized \nEngagement and coordination with the Libyan liaison committee and liaison committees from neighbouring countries ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Progress toward unification continued despite the continuing fragmentation of security sector institutions\n“Bottom-up” initiatives built collaboration on legislation, border security, electoral security, finance and administration\nEnhanced capacity and coordination of the 5+5 Joint Military Commission and its subcommittees\nStrengthened collaboration between the Libyan Liaison Committee and its neighbouring countries through targeted training programs and capacity-building efforts \nWhile a comprehensive disarmament, demobilization and reintegration framework was not established in 2024, pre-disarmament, demobilization and reintegration community violence reduction programmes were initiated",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "National security/ military institutions unified under civilian oversight\nFull implementation of the remaining articles of the ceasefire agreement, including the withdrawal of foreign fighters, foreign forces and mercenaries\nNational and inclusive security sector reform initiatives established\nNational disarmament, demobilization and reintegration committee set up and operational and a national disarmament, demobilization and reintegration plan developed",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "National security/ military institutions unified under civilian oversight\nA regional coordination mechanism established for more effective border security\nAdvanced implementation of the remaining articles of the ceasefire agreement, including the withdrawal of foreign fighters, foreign forces and mercenaries\nNational and inclusive security sector reform initiatives established\nNational disarmament, demobilization and reintegration committee set up and operational and a national disarmament, demobilization and reintegration plan developed\nCommunity violence reduction programmes are expanded and led by Libyan authorities and local civil society organizations\n",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 2: A comprehensive roadmap for holding national elections, towards the establishment of unified, elected, legitimate, inclusive and functional government institutions contributing to political stability and reconciliation – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "171.\tIn 2024, UNSMIL facilitated the resolution of the Central Bank of Libya leadership crisis and launched a United Nations-facilitated and Libyan-owned multitrack political process. UNSMIL provided technical assistance to the High National Election Commission in the holding of peaceful elections in 58 municipalities.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "172.\tIn 2026, UNSMIL will address unresolved electoral framework issues and propose a viable roadmap for elections. UNSMIL will continue advancing a structured dialogue to consolidate consensus around a unified national vision for the future of the country. The Mission plans to implement quick-impact projects to enhance confidence in its mandate in supporting the political process, reconciliation and prevention of intra- and inter-community violence, while ensuring tangible benefits for local communities. The projects will focus, among others, on women empowerment and income generation.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "173.\tProgress towards the objective and the target for 2026 are presented in the performance measure below (see table 38).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 38 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "United Nations-facilitated talks between the House of Representatives and High State Council failed to reach agreement on a constitutional framework for elections\nSupport continued for unification of the Central Bank of Libya, management of national deficits and access to foreign exchange in a manner that maintains currency value and steadies the price of vital commodities",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Young people and women are more actively engaged in reconciliation efforts and political processes through increased consultations, ensuring their voices shape Libya’s future \nConstitutional and legal framework for elections is in place, with UN’s technical support, and assessed technically implementable by the High National Elections Commission. Politically contested issues remain outstanding\nLibyan institutional stakeholders moved closer to resolving politically contested issues through the Mission’s elections-enabling initiative to advance consensus ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Through UNSMIL-led workshops, 500 youth and women increased their knowledge on key mission mandate issues enabling them to engage in the political process\nRa’idat trained 30 young women in leadership and advocacy\n\"You Engage\" strategy strengthened youth participation in governance\nUnited Nations-facilitated negotiations led to the resolution of the leadership crisis at the Central Bank of Libya in September 2024, and after more than a decade the Central Bank’s Board of Directors was reinstated on 21 October\nPreparatory consultations were undertaken throughout the year and a stakeholder-driven political process was launched in December 2024, including a structured dialogue to consolidate consensus around a unified national vision for the future of the country\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced participation and contribution of young people and women in reconciliation efforts and political processes.\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Increased participation and access and leadership of women and youth, in political processes, at a minimum of 30 per cent\nEconomic and financial institutions have increased capacity to provide macroeconomic stability and enact economic reforms\nAgenda and plan for comprehensive economic reforms are developed to achieve good governance and sustainable economy development\nPolitical roadmap and legal framework for the holding of national elections adopted\n",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 3: establishment of a comprehensive legal framework for a victim-centred transitional justice and reconciliation process – Proposed programme plan for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2026, the Mission will support Libyan stakeholders in developing and implementing a Charter of Rights, reinforcing existing legal frameworks, integrating human rights in the political agreement and facilitating reconciliation and transitional justice processes and fostering peace and social cohesion. In collaboration with political actors, civil society organizations, victims’ groups and the African Union, UNSMIL will advocate for the adoption of key legislative frameworks, including the National Reconciliation Law and the Law on the Protection of Women from Violence, as well as a new legislation on the rights of missing persons.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "italic",
+                      "text": "Lessons learned and planned change",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "The lesson learned for the Mission was that inclusive participation by Libya’s diverse political, social and geographic components, including women and youth and ethnic minorities and victim communities, is critical to sustainable peace and stability. In applying this lesson, the Mission will strengthen engagement with underrepresented groups and integrate broader social, economic and regional dynamics into its reconciliation and peacebuilding efforts.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective and the target for 2026 are presented in the performance measure below (see table 39).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 39 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Effective reparations and accountability mechanisms are in place to address past grievances and promote justice",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Drafting of key provisions for transitional justice and missing persons laws\nPilot mechanisms launched for victim support and referrals",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Strengthened institutional capacity for implementation and victim engagement\nExpansion of referral networks and repatriation pathways",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Establishment of referral and repatriation mechanisms\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Implementation of reparations and justice mechanisms with oversight structures\nAdoption of a comprehensive law on transitional justice and a related constitutional amendment to secure the transitional justice law\nAdoption of a comprehensive law on missing persons in line with the International Convention for the Protection of All Persons from Enforced Disappearance\nOperationalization of an independent Truth and Reconciliation Commission mandated to investigate on past violations and provide justice and reparations to victims while guaranteeing non-recurrence of violations\n",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Table 40 lists all deliverables of the Mission.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 40 – Deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tReport to the Security Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tMeeting of the Security Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tField and technical cooperation projects (number of projects)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "17",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "17",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3.\tProjects relating to arms, ammunition management, counter-proliferation and humanitarian mine action",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "17",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "17",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSeminars, workshops and training events (number of days)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "130",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "130",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "130",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "130",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4.\tSeminars and workshops on the political process, confidence-building, constitution-making, legislative and economic reform, electoral management and campaign, mediation and conflict resolution, prevention of and response to incitement to violence and hatred, media, young female social media activists, digital Libyan dialogue, unification of the army, and demobilization of armed groups; operationalization of the Libyan Ceasefire Monitoring Mechanism  through monthly meetings with the Libyan Liaison Committees; monthly coordination meetings with mine action implementing partners; 4 mine action-related workshops/training events to build national capacities on weapons and ammunition management and explosive ordnance response management. Organize a youth training and capacity-building program for 35 young women for electoral participation and community engagement.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "130",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "130",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "130",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "130",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tFact-finding, monitoring and investigation missions (number of missions)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "40",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "40",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "40",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "40",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5.\tMonitoring missions of the UNSMIL ceasefire monitoring component in support of the efforts of the Libyan ceasefire monitoring mechanism, to record and report on any alleged violation of the ceasefire, as well as analysis and reporting on the most recent developments in Libya, including periodic threat assessments of the overall situation that could have an impact on the ceasefire monitoring capacity-building programme established for the international monitors, Libyan monitors and the 5+5 Joint Military Commission (3 workshops); missions to support mine action efforts with regard to ammunition management; monitoring missions on the human rights situation, with visits to 6 prisons and detention centres, subject to access guarantees by official counterparts, including makeshift and secret detentions and other types of places where there are deprivations of liberty, such as women’s shelters and reformatories; monitoring of and reporting on some 60 cases of abuse and violations of human rights and violations of international humanitarian law, including sexual violence in conflict, and monitoring protection issues, with a focus on women and children; and monitoring of protection issues with a victim-centred approach and focus on women, children and migrants, reaching up to 30 beneficiaries who are referred to embassies concerned and/or legal and psychological aid for smooth integration into society",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "40",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "40",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "40",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "40",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tElectoral missions (number of missions)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "224",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "224",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "224",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "224",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t7.\tElectoral assistance missions to the High National Elections Commission headquarters in Tripoli or its field offices, providing technical advice and capacity-building to the electoral management body and to electoral counterparts",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "224",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "224 ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "224",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "224",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Good offices: Facilitate an inclusive political, security and economic dialogue through engagement with Libyan institutions, political parties, and civil society, including women and youth. Support military unification efforts, including disarmament, demobilization and reintegration and strategic security frameworks (20 beneficiaries); \nAdvance ceasefire implementation through monthly meetings of the 5+5 Joint Military Commission and Liaison Subcommittees (12–15 key actors), maintaining a database on foreign fighters, and conducting four capacity-building workshops for international monitors and Libyan subcommittees in 2025; \nEngage with CSOs, women and youth (YouEngage) in four workshops to promote ceasefire implementation; \nSupport transitional justice and accountability through technical advice and capacity building for 100 lawyers, prosecutors, and judges. Strengthen the judiciary with digital modernization efforts and best practices in post-conflict accountability;\nPromote women’s rights in line with the Convention on the Elimination of All Forms of Discrimination advocating for institutional protections, access to justice, and mechanisms for survivors of violence and support women’s empowerment units in security institutions and elections bodies.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Good offices: Facilitate an inclusive political, security and economic dialogue through engagement with Libyan institutions, political parties, and civil society, including women and youth. Support military unification efforts, including disarmament, demobilization and reintegration and strategic security frameworks (20 beneficiaries); \nAdvance ceasefire implementation through monthly meetings of the 5+5 Joint Military Commission and Liaison Subcommittees (12–15 key actors), maintaining a database on foreign fighters, and conducting four capacity-building workshops for international monitors and Libyan subcommittees in 2025; \nEngage with CSOs, women and youth (YouEngage) in four workshops to promote ceasefire implementation; \nSupport transitional justice and accountability through technical advice and capacity building for 100 lawyers, prosecutors, and judges. Strengthen the judiciary with digital modernization efforts and best practices in post-conflict accountability;\nPromote women’s rights in line with the Convention on the Elimination of All Forms of Discrimination advocating for institutional protections, access to justice, and mechanisms for survivors of violence and support women’s empowerment units in security institutions and elections bodies.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Good offices: Facilitate an inclusive political, security and economic dialogue through engagement with Libyan institutions, political parties, and civil society, including women and youth. Support military unification efforts, including disarmament, demobilization and reintegration and strategic security frameworks (20 beneficiaries); \nAdvance ceasefire implementation through monthly meetings of the 5+5 Joint Military Commission and Liaison Subcommittees (12–15 key actors), maintaining a database on foreign fighters, and conducting four capacity-building workshops for international monitors and Libyan subcommittees in 2025; \nEngage with CSOs, women and youth (YouEngage) in four workshops to promote ceasefire implementation; \nSupport transitional justice and accountability through technical advice and capacity building for 100 lawyers, prosecutors, and judges. Strengthen the judiciary with digital modernization efforts and best practices in post-conflict accountability;\nPromote women’s rights in line with the Convention on the Elimination of All Forms of Discrimination advocating for institutional protections, access to justice, and mechanisms for survivors of violence and support women’s empowerment units in security institutions and elections bodies.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Good offices: Facilitate an inclusive political, security and economic dialogue through engagement with Libyan institutions, political parties, and civil society, including women and youth. Support military unification efforts, including disarmament, demobilization and reintegration and strategic security frameworks (20 beneficiaries); \nAdvance ceasefire implementation through monthly meetings of the 5+5 Joint Military Commission and Liaison Subcommittees (12–15 key actors), maintaining a database on foreign fighters, and conducting four capacity-building workshops for international monitors and Libyan subcommittees in 2025; \nEngage with CSOs, women and youth (YouEngage) in four workshops to promote ceasefire implementation; \nSupport transitional justice and accountability through technical advice and capacity building for 100 lawyers, prosecutors, and judges. Strengthen the judiciary with digital modernization efforts and best practices in post-conflict accountability;\nPromote women’s rights in line with the Convention on the Elimination of All Forms of Discrimination advocating for institutional protections, access to justice, and mechanisms for survivors of violence and support women’s empowerment units in security institutions and elections bodies.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Good offices: Facilitate an inclusive political, security and economic dialogue through engagement with Libyan institutions, political parties, and civil society, including women and youth. Support military unification efforts, including disarmament, demobilization and reintegration and strategic security frameworks (20 beneficiaries); \nAdvance ceasefire implementation through monthly meetings of the 5+5 Joint Military Commission and Liaison Subcommittees (12–15 key actors), maintaining a database on foreign fighters, and conducting four capacity-building workshops for international monitors and Libyan subcommittees in 2025; \nEngage with CSOs, women and youth (YouEngage) in four workshops to promote ceasefire implementation; \nSupport transitional justice and accountability through technical advice and capacity building for 100 lawyers, prosecutors, and judges. Strengthen the judiciary with digital modernization efforts and best practices in post-conflict accountability;\nPromote women’s rights in line with the Convention on the Elimination of All Forms of Discrimination advocating for institutional protections, access to justice, and mechanisms for survivors of violence and support women’s empowerment units in security institutions and elections bodies.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConsultation, advice and advocacy: Support Libya’s political process through electoral assistance, constitution-making advice, and coordination with international partners (100 beneficiaries). Provide daily technical guidance to the High National Elections Commission, strengthening electoral management, and advising on electoral dispute resolution and security planning;\nAdvise the 5+5 Joint Military Commission and the Libyan-led and Libyan-owned ceasefire monitoring mechanism, on legal and security frameworks, including capacity-building;\nSupport Libyan Mine Action Centre and partners on arms control, clearance of explosives remnants of war and ammunition management; organize Mine Action Day event with 50 stakeholders;\nAdvance inclusive, victim-centred and rights-based national reconciliation through workshops and seminars reaching 50 beneficiaries confidence-building sessions with 50 participants from national and local authorities, and civil society organizations;\nPromote human rights through implementation of due diligence policy, civic space advocacy, and coordination with four local justice institutions (30 participants), including the Ministry of Justice, the Ministry of Interior, the prosecutor’s office and the High Judicial Council, for the release of individuals detained without a legal basis;\nSupport the Libyan Political Dialogue Forum and House of Representatives women’s caucus and civil society and women’s groups, reaching approximately 500 women;\nEstablish an advocacy plan for the law on violence against women; establish the National Consultation Groups as part of Monitoring, Analysis and Reporting Arrangements (MARA) and Conflict-Related Sexual Violence setting; \nSupport security sector governance, reform and development, including reintegration of non-State armed groups and supporting the increased presence of women in the police force; \nAdvocate for women’s rights by facilitating discussions among institutions and actors working on women’s rights and advising on laws and policies that promote gender equality; advice on violence against women and gender-based violence linked to the electoral process;\nSupport reinforcing the capacity of 30 human rights defenders and women human rights defenders on the Monitoring, Analysis and Reporting Arrangements Technical Working Group; \nAdvocate for the rights and protection of migrants and asylum-seekers and their access to justice, accountability and redress mechanisms, regardless of status; and advocacy and capacity-building to amplify the voices of young people and their meaningful participation in reconciliation efforts and political processes.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: Support Libya’s political process through electoral assistance, constitution-making advice, and coordination with international partners (100 beneficiaries). Provide daily technical guidance to the High National Elections Commission, strengthening electoral management, and advising on electoral dispute resolution and security planning;\nAdvise the 5+5 Joint Military Commission and the Libyan-led and Libyan-owned ceasefire monitoring mechanism, on legal and security frameworks, including capacity-building;\nSupport Libyan Mine Action Centre and partners on arms control, clearance of explosives remnants of war and ammunition management; organize Mine Action Day event with 50 stakeholders;\nAdvance inclusive, victim-centred and rights-based national reconciliation through workshops and seminars reaching 50 beneficiaries confidence-building sessions with 50 participants from national and local authorities, and civil society organizations;\nPromote human rights through implementation of due diligence policy, civic space advocacy, and coordination with four local justice institutions (30 participants), including the Ministry of Justice, the Ministry of Interior, the prosecutor’s office and the High Judicial Council, for the release of individuals detained without a legal basis;\nSupport the Libyan Political Dialogue Forum and House of Representatives women’s caucus and civil society and women’s groups, reaching approximately 500 women;\nEstablish an advocacy plan for the law on violence against women; establish the National Consultation Groups as part of Monitoring, Analysis and Reporting Arrangements (MARA) and Conflict-Related Sexual Violence setting; \nSupport security sector governance, reform and development, including reintegration of non-State armed groups and supporting the increased presence of women in the police force; \nAdvocate for women’s rights by facilitating discussions among institutions and actors working on women’s rights and advising on laws and policies that promote gender equality; advice on violence against women and gender-based violence linked to the electoral process;\nSupport reinforcing the capacity of 30 human rights defenders and women human rights defenders on the Monitoring, Analysis and Reporting Arrangements Technical Working Group; \nAdvocate for the rights and protection of migrants and asylum-seekers and their access to justice, accountability and redress mechanisms, regardless of status; and advocacy and capacity-building to amplify the voices of young people and their meaningful participation in reconciliation efforts and political processes.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: Support Libya’s political process through electoral assistance, constitution-making advice, and coordination with international partners (100 beneficiaries). Provide daily technical guidance to the High National Elections Commission, strengthening electoral management, and advising on electoral dispute resolution and security planning;\nAdvise the 5+5 Joint Military Commission and the Libyan-led and Libyan-owned ceasefire monitoring mechanism, on legal and security frameworks, including capacity-building;\nSupport Libyan Mine Action Centre and partners on arms control, clearance of explosives remnants of war and ammunition management; organize Mine Action Day event with 50 stakeholders;\nAdvance inclusive, victim-centred and rights-based national reconciliation through workshops and seminars reaching 50 beneficiaries confidence-building sessions with 50 participants from national and local authorities, and civil society organizations;\nPromote human rights through implementation of due diligence policy, civic space advocacy, and coordination with four local justice institutions (30 participants), including the Ministry of Justice, the Ministry of Interior, the prosecutor’s office and the High Judicial Council, for the release of individuals detained without a legal basis;\nSupport the Libyan Political Dialogue Forum and House of Representatives women’s caucus and civil society and women’s groups, reaching approximately 500 women;\nEstablish an advocacy plan for the law on violence against women; establish the National Consultation Groups as part of Monitoring, Analysis and Reporting Arrangements (MARA) and Conflict-Related Sexual Violence setting; \nSupport security sector governance, reform and development, including reintegration of non-State armed groups and supporting the increased presence of women in the police force; \nAdvocate for women’s rights by facilitating discussions among institutions and actors working on women’s rights and advising on laws and policies that promote gender equality; advice on violence against women and gender-based violence linked to the electoral process;\nSupport reinforcing the capacity of 30 human rights defenders and women human rights defenders on the Monitoring, Analysis and Reporting Arrangements Technical Working Group; \nAdvocate for the rights and protection of migrants and asylum-seekers and their access to justice, accountability and redress mechanisms, regardless of status; and advocacy and capacity-building to amplify the voices of young people and their meaningful participation in reconciliation efforts and political processes.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: Support Libya’s political process through electoral assistance, constitution-making advice, and coordination with international partners (100 beneficiaries). Provide daily technical guidance to the High National Elections Commission, strengthening electoral management, and advising on electoral dispute resolution and security planning;\nAdvise the 5+5 Joint Military Commission and the Libyan-led and Libyan-owned ceasefire monitoring mechanism, on legal and security frameworks, including capacity-building;\nSupport Libyan Mine Action Centre and partners on arms control, clearance of explosives remnants of war and ammunition management; organize Mine Action Day event with 50 stakeholders;\nAdvance inclusive, victim-centred and rights-based national reconciliation through workshops and seminars reaching 50 beneficiaries confidence-building sessions with 50 participants from national and local authorities, and civil society organizations;\nPromote human rights through implementation of due diligence policy, civic space advocacy, and coordination with four local justice institutions (30 participants), including the Ministry of Justice, the Ministry of Interior, the prosecutor’s office and the High Judicial Council, for the release of individuals detained without a legal basis;\nSupport the Libyan Political Dialogue Forum and House of Representatives women’s caucus and civil society and women’s groups, reaching approximately 500 women;\nEstablish an advocacy plan for the law on violence against women; establish the National Consultation Groups as part of Monitoring, Analysis and Reporting Arrangements (MARA) and Conflict-Related Sexual Violence setting; \nSupport security sector governance, reform and development, including reintegration of non-State armed groups and supporting the increased presence of women in the police force; \nAdvocate for women’s rights by facilitating discussions among institutions and actors working on women’s rights and advising on laws and policies that promote gender equality; advice on violence against women and gender-based violence linked to the electoral process;\nSupport reinforcing the capacity of 30 human rights defenders and women human rights defenders on the Monitoring, Analysis and Reporting Arrangements Technical Working Group; \nAdvocate for the rights and protection of migrants and asylum-seekers and their access to justice, accountability and redress mechanisms, regardless of status; and advocacy and capacity-building to amplify the voices of young people and their meaningful participation in reconciliation efforts and political processes.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: Support Libya’s political process through electoral assistance, constitution-making advice, and coordination with international partners (100 beneficiaries). Provide daily technical guidance to the High National Elections Commission, strengthening electoral management, and advising on electoral dispute resolution and security planning;\nAdvise the 5+5 Joint Military Commission and the Libyan-led and Libyan-owned ceasefire monitoring mechanism, on legal and security frameworks, including capacity-building;\nSupport Libyan Mine Action Centre and partners on arms control, clearance of explosives remnants of war and ammunition management; organize Mine Action Day event with 50 stakeholders;\nAdvance inclusive, victim-centred and rights-based national reconciliation through workshops and seminars reaching 50 beneficiaries confidence-building sessions with 50 participants from national and local authorities, and civil society organizations;\nPromote human rights through implementation of due diligence policy, civic space advocacy, and coordination with four local justice institutions (30 participants), including the Ministry of Justice, the Ministry of Interior, the prosecutor’s office and the High Judicial Council, for the release of individuals detained without a legal basis;\nSupport the Libyan Political Dialogue Forum and House of Representatives women’s caucus and civil society and women’s groups, reaching approximately 500 women;\nEstablish an advocacy plan for the law on violence against women; establish the National Consultation Groups as part of Monitoring, Analysis and Reporting Arrangements (MARA) and Conflict-Related Sexual Violence setting; \nSupport security sector governance, reform and development, including reintegration of non-State armed groups and supporting the increased presence of women in the police force; \nAdvocate for women’s rights by facilitating discussions among institutions and actors working on women’s rights and advising on laws and policies that promote gender equality; advice on violence against women and gender-based violence linked to the electoral process;\nSupport reinforcing the capacity of 30 human rights defenders and women human rights defenders on the Monitoring, Analysis and Reporting Arrangements Technical Working Group; \nAdvocate for the rights and protection of migrants and asylum-seekers and their access to justice, accountability and redress mechanisms, regardless of status; and advocacy and capacity-building to amplify the voices of young people and their meaningful participation in reconciliation efforts and political processes.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: multimedia and communications campaigns promoting the United Nations good offices and peace process, and content supporting reconciliation, social cohesion, prevention of hate speech and the respect for humanitarian and human rights law, targeting Libyan and international audiences; targeted meetings, events and leadership visits in the east, south and west, to engage youth and women from across Libya in key mandated areas. Implementation of the YouEngage to foster youth engagement on economy (anti-corruption), disarmament, demobilization and reintegration and human rights; support to national and municipal youth bodies through training; delivery of the third year of the Ra’idat training programme for 35 young women from across Libya and support the Ra’idat alumni network of women across Libya on advocacy programmes; implementing the outcomes of misinformation and disinformation awareness, including civic education to improve public understanding of the Mission’s mandate; development of training programmes with media and universities on hate speech prevention; support UNSMIL leadership in international engagements with Member States and diplomatic corps; continued  co-leadership of the United Nations Communication Group to ensure One UN messaging and staff training.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: multimedia and communications campaigns promoting the United Nations good offices and peace process, and content supporting reconciliation, social cohesion, prevention of hate speech and the respect for humanitarian and human rights law, targeting Libyan and international audiences; targeted meetings, events and leadership visits in the east, south and west, to engage youth and women from across Libya in key mandated areas. Implementation of the YouEngage to foster youth engagement on economy (anti-corruption), disarmament, demobilization and reintegration and human rights; support to national and municipal youth bodies through training; delivery of the third year of the Ra’idat training programme for 35 young women from across Libya and support the Ra’idat alumni network of women across Libya on advocacy programmes; implementing the outcomes of misinformation and disinformation awareness, including civic education to improve public understanding of the Mission’s mandate; development of training programmes with media and universities on hate speech prevention; support UNSMIL leadership in international engagements with Member States and diplomatic corps; continued  co-leadership of the United Nations Communication Group to ensure One UN messaging and staff training.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: multimedia and communications campaigns promoting the United Nations good offices and peace process, and content supporting reconciliation, social cohesion, prevention of hate speech and the respect for humanitarian and human rights law, targeting Libyan and international audiences; targeted meetings, events and leadership visits in the east, south and west, to engage youth and women from across Libya in key mandated areas. Implementation of the YouEngage to foster youth engagement on economy (anti-corruption), disarmament, demobilization and reintegration and human rights; support to national and municipal youth bodies through training; delivery of the third year of the Ra’idat training programme for 35 young women from across Libya and support the Ra’idat alumni network of women across Libya on advocacy programmes; implementing the outcomes of misinformation and disinformation awareness, including civic education to improve public understanding of the Mission’s mandate; development of training programmes with media and universities on hate speech prevention; support UNSMIL leadership in international engagements with Member States and diplomatic corps; continued  co-leadership of the United Nations Communication Group to ensure One UN messaging and staff training.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: multimedia and communications campaigns promoting the United Nations good offices and peace process, and content supporting reconciliation, social cohesion, prevention of hate speech and the respect for humanitarian and human rights law, targeting Libyan and international audiences; targeted meetings, events and leadership visits in the east, south and west, to engage youth and women from across Libya in key mandated areas. Implementation of the YouEngage to foster youth engagement on economy (anti-corruption), disarmament, demobilization and reintegration and human rights; support to national and municipal youth bodies through training; delivery of the third year of the Ra’idat training programme for 35 young women from across Libya and support the Ra’idat alumni network of women across Libya on advocacy programmes; implementing the outcomes of misinformation and disinformation awareness, including civic education to improve public understanding of the Mission’s mandate; development of training programmes with media and universities on hate speech prevention; support UNSMIL leadership in international engagements with Member States and diplomatic corps; continued  co-leadership of the United Nations Communication Group to ensure One UN messaging and staff training.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: multimedia and communications campaigns promoting the United Nations good offices and peace process, and content supporting reconciliation, social cohesion, prevention of hate speech and the respect for humanitarian and human rights law, targeting Libyan and international audiences; targeted meetings, events and leadership visits in the east, south and west, to engage youth and women from across Libya in key mandated areas. Implementation of the YouEngage to foster youth engagement on economy (anti-corruption), disarmament, demobilization and reintegration and human rights; support to national and municipal youth bodies through training; delivery of the third year of the Ra’idat training programme for 35 young women from across Libya and support the Ra’idat alumni network of women across Libya on advocacy programmes; implementing the outcomes of misinformation and disinformation awareness, including civic education to improve public understanding of the Mission’s mandate; development of training programmes with media and universities on hate speech prevention; support UNSMIL leadership in international engagements with Member States and diplomatic corps; continued  co-leadership of the United Nations Communication Group to ensure One UN messaging and staff training.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tExternal and media relations: press conferences, statements and interaction with top-tier international and regional media outlets in Arabic and English, as well as select national media; frequent engagement with local media from all parts of Libya; reporting on the human rights situation and acting as a public resource; conduct a large-scale public perception survey across Libya.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: press conferences, statements and interaction with top-tier international and regional media outlets in Arabic and English, as well as select national media; frequent engagement with local media from all parts of Libya; reporting on the human rights situation and acting as a public resource; conduct a large-scale public perception survey across Libya.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: press conferences, statements and interaction with top-tier international and regional media outlets in Arabic and English, as well as select national media; frequent engagement with local media from all parts of Libya; reporting on the human rights situation and acting as a public resource; conduct a large-scale public perception survey across Libya.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: press conferences, statements and interaction with top-tier international and regional media outlets in Arabic and English, as well as select national media; frequent engagement with local media from all parts of Libya; reporting on the human rights situation and acting as a public resource; conduct a large-scale public perception survey across Libya.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: press conferences, statements and interaction with top-tier international and regional media outlets in Arabic and English, as well as select national media; frequent engagement with local media from all parts of Libya; reporting on the human rights situation and acting as a public resource; conduct a large-scale public perception survey across Libya.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDigital platforms and multimedia content: maintain and develop targeted social media channels for women, youth, and United Nations information platforms in Arabic and English to create, and share content related to the Mission’s mandate and the United Nations country team; conduct a public perception survey and analyse social media trends to inform senior leadership decision-making.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: maintain and develop targeted social media channels for women, youth, and United Nations information platforms in Arabic and English to create, and share content related to the Mission’s mandate and the United Nations country team; conduct a public perception survey and analyse social media trends to inform senior leadership decision-making.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: maintain and develop targeted social media channels for women, youth, and United Nations information platforms in Arabic and English to create, and share content related to the Mission’s mandate and the United Nations country team; conduct a public perception survey and analyse social media trends to inform senior leadership decision-making.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: maintain and develop targeted social media channels for women, youth, and United Nations information platforms in Arabic and English to create, and share content related to the Mission’s mandate and the United Nations country team; conduct a public perception survey and analyse social media trends to inform senior leadership decision-making.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: maintain and develop targeted social media channels for women, youth, and United Nations information platforms in Arabic and English to create, and share content related to the Mission’s mandate and the United Nations country team; conduct a public perception survey and analyse social media trends to inform senior leadership decision-making.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Resource requirements (regular budget) – Table 41 – Financial resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Variance",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 vs. 2025 Increase/(decrease)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 vs. 2025 Increase/(decrease)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Military and police personnel costs ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6 673.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 6 700.0 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6,744.1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6,744.1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6 609.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6 609.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(135.1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(135.1)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Civilian personnel costs",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "42 669.1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 48 559.9 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "47 565.0 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "47 565.0 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "47 390.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "47 390.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(175.0)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(175.0)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Operational costs ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "38 421.3  ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 30 303.7 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "36 279.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "36 279.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "36 433.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "36 433.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "153.6 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "153.6 ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal (net of staff assessment) ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "87 763.6  ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "85 563.5 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "90 588.7 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "90 588.7 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "90 432.2 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "90 432.2 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(156.5)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(156.5)",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Table 42 – Human resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "USG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "ASGa",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-5b",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-4 c",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-3 b",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "FS",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "NPOc",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "GSd",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "LL",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Approved 2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "18",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "46",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "46",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "154",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "276",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "20",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "118",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "139",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "421",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "421",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Proposed 2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "18",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "46",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "46",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "154",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "276",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "20",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "118",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "139",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "421",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "421",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tChange ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-x",
+              "text": "a One post is funded at 50 per cent and cost-shared with the Development Coordination Office – b Includes one general temporary assistance position – c Includes three general temporary assistance position – d Other level, unless otherwise stated",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The proposed resource requirements for 2026 for UNSMIL amount to $90,432,200 (net of staff assessment) and would provide for the deployment of 233 United Nations Guard Unit personnel ($6,609,000), salaries and related costs ($47,390,000) for the deployment of 276 international posts and positions (1 Under-Secretary-General, 2 Assistant Secretary-General, 7 D-1, 18 P-5, 46 P-4, 46 P-3, 2 P-2, 154 Field Service) and 139 national posts and positions (20 National Professional Officers, 1 General Service and 118 Local level), 6 international United Nations Volunteers and 7 government-provided personnel, as well as operational costs ($36,433,200) comprising the costs for consultants and consulting services ($82,600), official travel ($970,000), facilities and infrastructure ($26,778,600), ground transportation ($203,200), air operations ($3,937,800), communications and information technology ($2,301,900), medical ($444,200) other supplies, services and equipment ($1,664,900), and quick-impact projects (50,000).",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "A vacancy rate of 22.9 per cent has been applied to the estimates for international staff on the basis of the actual average vacancy rate in 2024. Vacancy rates of 15.0 and 26.1 per cent have been applied for National Professional Officers and General Service categories staff, respectively, on the basis of the actual vacancy rates in March 2025. A vacancy rate of 25.0 per cent has been applied to the estimates for United Nations Volunteer positions and a vacancy rate of 53.6 per cent has been applied to the estimates for government-provided personnel on the basis of the actual vacancy rates in March 2025. The estimates for United Nations Guard Unit personnel are based on the actual deployment in March 2025.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "UNSMIL Comprehensive Staffing Review",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "other",
+              "text": "The Mission conducted a comprehensive staffing review from September 2024 to March 2025. It was led by a Task Force in coordination with United Nations Headquarters and in consultation with the Field Staff Union. The review aimed to align staffing resources with mandate priorities and operational needs, and to assess the Mission support structure in line with the Department for Operational Support guidelines on Mission Support Structure for Small Missions. By its resolution 2755 (2024), the Council requested the Secretary-General to submit a strategic review of UNSMIL to the Council no later than 30 September 2025, including recommendations for increasing the efficiency and effectiveness of UNSMIL’s overall structure, including the objectives of UNSMIL.  As the strategic review will be finalized after the 2026 proposed programme budget, the outcome of the staffing review is not reflected in the current proposed budget for 2026. The Mission awaits the outcome of the strategic review to ensure alignment with the Mission’s long-term strategic direction and future Security Council decisions.",
+              "table_content": null,
+              "hyperlinks": [
+                [
+                  "2755 (2024)",
+                  "https://docs.un.org/en/S/RES/2755(2024)"
+                ]
+              ],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "As at 31 March 2025, the Mission had 52 long-vacant posts, of which 32 were posts approved for establishment at the end of March 2022 in the context of the 2022 revised estimates to support the ceasefire monitoring mandate (see A/76/6(Sect.3)/Add.8). Of the 52 long-vacant posts, the comprehensive staffing review recommended post actions for 39 posts. In view of the pending strategic review, as well as the slow pace of operationalization of the 2020 ceasefire agreement, a vacancy rate of 100 per cent has been applied in the current proposed budget to the 32 posts vacant for more than 3 yea\tThe Mission’s approved 2025 staffing complement includes eight general temporary assistance positions. It is proposed that these positions be continued in 2026, as detailed below:",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "italic",
+              "text": "Office of the Deputy Special Representative of the Secretary-General, Political",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "other",
+                  "text": "The UNSMIL Mine Action Unit supports the delivery of the Mission’s mine action mandate in line with Security Council resolution 2755 (2024) by providing technical expertise and support to the Libyan security institutions and the ceasefire mechanisms on mine action and weapons and ammunition management, and representing the Mission in relationship with relevant national mine action stakeholders and the United Nations country team. The temporary assistance position of Chief of Section, Programme Management (P-5), was established on 1 January 2022 in response to a recommendation from the Board of Auditors to improve the Secretariat leadership of UNSMIL mine action programme. Seven other temporary assistance positions were established under the UNSMIL mine action programme as of 1 January 2025 as part of the transition of mine action delivery from implementation in partnership with UNOPS to direct Secretariat delivery. These positions include three Programme Management Officers (P-4), one Programme Management Officer (P-3), one Associate Programme Management Officer (National Professional Officer),  one Associate Administrative Officer (National Professional Officer), and one Data Analysis Officer (National Professional Officer). Given the continuity of the UNSMIL mine action programme in 2026, it is proposed that the eight temporary positions be continued to advance the UNSMIL mine action objectives in the most effective, cost-efficient and transparent manner.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "other",
+                  "text": "The decrease in requirements for 2026 compared with the approved resources for 2025 is attributable mainly to: (a) reduced requirements for civilian personnel, owing to the application of a 100 per cent vacancy rate to 35 posts vacant for more than 3 years (15 international, one National Professional Officer and 19 Local level) as described in paragraph ‎181 above, offset by the application of lower vacancy rates for all categories of personnel, and the application of lower continuing vacancy rates for the eight positions (3 P-4, 1 P-3 and 3 National Professional Officer) that were approved for establishment in 2025 and budgeted with a vacancy rate of 50 per cent; (b) reduced requirements for air operations in line with historical flight hour utilization rates; and (c) reduced requirements under military contingents for the United Nations Guard Unit personnel, owing to the non-requirement for rations due to anticipated stock availability from prior period procurement, as well as the removal of a provision for death and disability compensation following a review of historical expenditure pattern. The decrease is offset in part by increased requirements under: (a) facilities and infrastructure, due to additional requirements for the construction of a new road and parking area, fuel station, construction of the infrastructure networks and other security enhancements in connection with Phase 2 of the planned security enhancements works in the Mission’s compound; and (b) new requirements for the quick-impact projects mentioned in paragraph ‎174 above.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Extrabudgetary resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "other",
+              "text": "In 2025, extrabudgetary resources in the amount of $241,544 are projected to be utilized to support activities focused on facilitating an inclusive intra Libyan political process an economic track as well as capacity-building on human rights.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "In 2026, extrabudgetary resources in the amount of $157,200 are projected to be used to assist in the implementation of an inclusive multi-track intra-Libyan political dialogue process facilitated by UNSMIL, to unify institutions and take the country to elections.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "The decrease in the estimated extrabudgetary resources to be utilized in 2026 compared with 2025 is due mainly to the duration of funding in support of the capacity-building on human rights.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "In 2025, UNSMIL expects to receive $611,905 from United Nations agencies, funds, programmes, and other entities, in exchange for services provided including shared premises and the provision of security services across Libya. These funds will support one Local level post, medical services and the costs associated with maintaining United Nations compounds, including security services, rent, utilities, and maintenance services.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "For 2026, UNSMIL expects to receive $611,905 from UN agencies, funds, and other programmes through the cost recovery arrangements. The estimate covers a wide range of services provided by the Mission, comprising air transportation, ground transportation, freight services, medical services, security and security-related training services, communications and information technology services, administrative support, accommodation and office space, personal protective equipment and maintenance of vehicles, facilities.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

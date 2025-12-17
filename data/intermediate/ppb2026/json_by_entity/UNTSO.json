@@ -1,0 +1,3620 @@
+{
+  "entity": "United Nations Truce Supervision Organization",
+  "entity_abbrev": "UNTSO",
+  "entity_raw_name": "II.\tUnited Nations Truce Supervision Organization",
+  "source_file": "A_80_6_SECT.5.json",
+  "content": [
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "5.II.1\tThe United Nations Truce Supervision Organization (UNTSO) is mandated to assist the parties to the 1949 Armistice Agreements in the supervision of the application and observance of the terms of those Agreements. Its mandate derives from Security Council resolutions and decisions, including resolutions 50 (1948), 54 (1948) and 73 (1949). The military observers, assigned to assist the United Nations Mediator in supervising the truce in Palestine pursuant to resolution 50 (1948), became UNTSO pursuant to resolution 73 (1949) to supervise the Armistice Agreements between the parties to the Arab-Israeli conflict. Following the wars of 1956, 1967 and 1973, the functions of the observers were adapted in response to altered circumstances.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "50 (1948)",
+                      "https://docs.un.org/en/S/RES/50(1948)"
+                    ],
+                    [
+                      "54 (1948)",
+                      "https://docs.un.org/en/S/RES/54(1948)"
+                    ],
+                    [
+                      "73 (1949)",
+                      "https://docs.un.org/en/S/RES/73(1949)"
+                    ],
+                    [
+                      "50 (1948)",
+                      "https://docs.un.org/en/S/RES/50(1948)"
+                    ],
+                    [
+                      "73 (1949)",
+                      "https://docs.un.org/en/S/RES/73(1949)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "5.II.2\tUNTSO activities in Egypt, Israel, Jordan, Lebanon and the Syrian Arab Republic are aimed at maintaining the regional liaison architecture established under the Armistice Agreements. UNTSO provides trained military observers to UNDOF and UNIFIL.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "5.II.3\tThe objective, to which UNTSO contributes, is to ensure adherence to the Armistice Agreements of 1949 and related agreements.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "5.II.4\tTo contribute to the objective, UNTSO will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tProvide trained military observers to UNDOF and UNIFIL to assist in their mandate implementation by providing timely and accurate observation, reports, investigations and inspections. The mission provides administrative, logistical, communications and security support to all outstations and liaison offices;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tConduct regional liaison through strategic engagement and regular interaction with the parties, as well as with senior representatives of troop-contributing countries and other Member States in the mandate area, and conduct regular liaison, through offices in Egypt, Lebanon and the Syrian Arab Republic, and with Israel and Jordan from its headquarters;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tSupport informed strategic analysis and decision-making within the Organization, with peacekeeping partners and among regional actors through regional assessments, and support peacekeeping partnerships in coordination with other United Nations entities;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tConduct seminars, briefings and information exchanges with regional stakeholders, think tanks and senior representatives of troop-contributing countries and other Member States.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "5.II.5\tThe above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tReliable communications channels and relations of confidence with the parties, conflict resolution, reduced tensions, avoidance of misunderstandings that could escalate into cross-boundary conflict and expanded liaison and information networks with national and local community representatives and with actors with influence in the areas of interest;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tStrengthened situational awareness and decision-making by other United Nations entities, enhancing the impact of regional United Nations presences;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tImproved cooperation and understanding of cross-cutting regional issues among regional counterparts.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "5.II.6\tWith regard to the external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tAll parties to the Armistice Agreements of 1949 and related agreements will cooperate with UNTSO in the performance of its functions;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tAll parties will remain willing to resolve their disputes and to cooperate with the United Nations in fulfilment of the Security Council mandate.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "5.II.7\tWith regard to cooperation with other entities and inter-agency coordination and liaison, UNTSO will foster cooperation with a range of national, regional and international entities. It will engage with relevant national and regional organizations and collaborate closely with its regional peacekeeping partners, special political missions, humanitarian coordinators, United Nations security management systems and other relevant agencies in all five countries where it operates. These engagements are intended to facilitate the sharing and validation of information from the ground, integrate assessments, ensure consistency in key United Nations messages and capture synergies to enhance the collective impact of United Nations presences in the region. Strategic cooperation will occur at multiple levels, through regular consultations and inter-mission engagements with heads of missions and agencies, as well as at the working level. In addition, UNTSO will expand its efforts to share information and analyse regional trends that affect the implementation of United Nations mandates, including through consultative inter-mission coordination activities.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "5.II.8\tThe mission will continue to integrate a gender perspective into its operational activities, deliverables and results, as appropriate. This will include ensuring the inclusion of female military observers in operations and female language assistants in UNTSO activities.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Evaluation activities",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "5.II.9\tAn evaluation conducted by the office to assess how institutional knowledge is retained and shared between outgoing and incoming uniformed and civilian personnel was completed in 2024 and has guided the proposed programme plan for 2026.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "5.II.10\tIn response to the results of the evaluation referenced above, UNTSO will standardize the transfer of institutional knowledge among mission personnel. Key documents specific to each of the mission’s functional posts will be compiled, including important contacts and guidance to improve the mission’s handover and takeover processes and ensure efficient and effective continuity of functions. UNTSO will introduce an electronic platform to digitize the transfer of institutional knowledge and streamline the handover processes and will revise the standard operating procedures to ensure that it reflects the evaluation recommendations.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "5.II.11\tAn UNTSO evaluation on induction and continuation training at mission outstations is planned for 2026.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Adjusted UNTSO military observers’ footprint in response to changing security environment",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "5.II.12\tThe mission responded to Lebanon’s deteriorating security by adjusting UNTSO military observers’ posture to ensure personnel safety and security, including by implementing flexible deployment strategies, such as, in coordination with UNIFIL, adjusting patrols, reinforcing field office security and enhancing coordination with local and international actors. That adaptive approach also enabled the mission to continue its activities concerning the Golan, in coordination with UNDOF, related to monitoring violations in the area of separation and along the ceasefire line, providing reports and conducting inspections and investigations in a safe and secure manner. The proactive adjustments highlighted the UNTSO commitment to operational continuity and personnel protection in a challenging security environment.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "5.II.13\tProgress towards the objective is presented in the performance measure below (see table 5.II.1).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table",
+                      "text": "Table 5.II.1",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Timely observations, accurate reporting and a consistent presence in a high-tension environment",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned results for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 1: improved confidence in decision-making by the United Nations Disengagement Observer Force through upgraded observation – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "5.II.14\tThe mission’s work contributed to the maintenance of reporting through observation within existing capability, which did not meet the planned target of improved confidence in decision-making by UNDOF enabled by the improved accuracy and quality of reporting through upgraded 24-hour observation equipment at five observation posts. The target was not met owing to the uncertainty surrounding the liquidity situation, which entailed delays in the purchase of upgraded 24-hour observation equipment, as well as the security situation, which affected the installation of equipment at five observation posts.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "5.II.15\tProgress towards the objective and the target for 2026 are presented in the performance measure below (see table 5.II.2).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table",
+                      "text": "Table 5.II.2",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Limited visibility and object identification at night and lack of recording capability",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Reporting maintained through observation with existing capability",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Reporting maintained through observation with existing capability",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Improved quality of reporting enabled by additional observation of the area of separation and its limits, the Alpha and Bravo lines",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Improved quality of reporting enabled by additional observation of the area of separation and its limits, and the area of limitation",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Information on the history and mandate of UNTSO available through the seventy-fifth anniversary commemorations and the corresponding Yearbook",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Increased engagement by think tanks and academics, enabling better analysis and awareness of national and regional dynamics and perspectives",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced regional liaison through diversified engagement with target audiences, including Member States, troop-contributing countries, think tanks and academics",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced regional liaison through sustained diversified engagement with target audiences, including Member States, troop-contributing countries, think tanks and academics",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced baseline training for military observers to improve their versatility and operational effectiveness across all mission countries",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced operational readiness of military observers, through structured professional development programmes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced mission adaptability and capability to respond effectively to evolving operational environments",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 2: increased engagement in the mandate and work of the United Nations Truce Supervision Organization – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "5.II.16\tThe mission’s work contributed to increased engagement by think tanks and academics with expertise in national and regional developments in the region on the mandate and activities of UNTSO, enabling better analysis and awareness of national/regional dynamics and perspectives, which met the planned target.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "5.II.17\tProgress towards the objective and the target for 2026 are presented in the performance measure below (see table 5.II.3).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table",
+                      "text": "Table 5.II.3",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Limited visibility and object identification at night and lack of recording capability",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Reporting maintained through observation with existing capability",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Reporting maintained through observation with existing capability",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Improved quality of reporting enabled by additional observation of the area of separation and its limits, the Alpha and Bravo lines",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Improved quality of reporting enabled by additional observation of the area of separation and its limits, and the area of limitation",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Information on the history and mandate of UNTSO available through the seventy-fifth anniversary commemorations and the corresponding Yearbook",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Increased engagement by think tanks and academics, enabling better analysis and awareness of national and regional dynamics and perspectives",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced regional liaison through diversified engagement with target audiences, including Member States, troop-contributing countries, think tanks and academics",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced regional liaison through sustained diversified engagement with target audiences, including Member States, troop-contributing countries, think tanks and academics",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced baseline training for military observers to improve their versatility and operational effectiveness across all mission countries",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced operational readiness of military observers, through structured professional development programmes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced mission adaptability and capability to respond effectively to evolving operational environments",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 3: strengthened organizational ability to adapt to changing operating environments – Proposed programme plan for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "5.II.18\tThe mission aims to improve its flexibility to adapt to changing environments and effectively respond to such changes. This includes managing resources to quickly reallocate personnel, equipment and support as needs evolve. The approach began with a posture change during the conflict in Lebanon in 2024 and will be supported by a system to monitor regional trends and assess shifts in the political, security and humanitarian landscape, enabling timely adjustments to mission priorities.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "italic",
+                      "text": "Lessons learned and planned change",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "5.II.19\tThe lesson for the mission was the need for faster, more coordinated decision-making in rapidly evolving environments. In applying the lesson, the mission has focused on improving real-time communication and allocation of personnel, equipment and support to enable a quicker, more agile response to future challenges. UNTSO will further promote continuous learning, encourage innovation and conduct regular training and scenario-based exercises to prepare personnel for complex situations. By fostering cross-functional coordination and close collaboration with internal and external stakeholders, UNTSO will enhance its ability to anticipate changes and proactively meet mission objectives, utilizing new concepts of operations to continue mandate implementation in rapidly shifting contexts.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "5.II.20\tExpected progress towards the objective is presented in the performance measure below (see table 5.II.4).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table",
+                      "text": "Table 5.II.4",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Limited visibility and object identification at night and lack of recording capability",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Reporting maintained through observation with existing capability",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Reporting maintained through observation with existing capability",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Improved quality of reporting enabled by additional observation of the area of separation and its limits, the Alpha and Bravo lines",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Improved quality of reporting enabled by additional observation of the area of separation and its limits, and the area of limitation",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Information on the history and mandate of UNTSO available through the seventy-fifth anniversary commemorations and the corresponding Yearbook",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Increased engagement by think tanks and academics, enabling better analysis and awareness of national and regional dynamics and perspectives",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced regional liaison through diversified engagement with target audiences, including Member States, troop-contributing countries, think tanks and academics",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced regional liaison through sustained diversified engagement with target audiences, including Member States, troop-contributing countries, think tanks and academics",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced baseline training for military observers to improve their versatility and operational effectiveness across all mission countries",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced operational readiness of military observers, through structured professional development programmes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced mission adaptability and capability to respond effectively to evolving operational environments",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Legislative mandates",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "5.II.21\tThe list below, which was reviewed in the preparation of the proposed programme budget, provides all mandates entrusted to UNTSO.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "italic",
+                  "text": "Security Council resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "50 (1948)",
+                            "hyperlinks": [
+                              [
+                                "50 (1948)",
+                                "https://docs.un.org/en/S/RES/50(1948)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "54 (1948)",
+                            "hyperlinks": [
+                              [
+                                "54 (1948)",
+                                "https://docs.un.org/en/S/RES/54(1948)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "73 (1949)",
+                            "hyperlinks": [
+                              [
+                                "73 (1949)",
+                                "https://docs.un.org/en/S/RES/73(1949)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "50 (1948)",
+                          "https://docs.un.org/en/S/RES/50(1948)"
+                        ],
+                        [
+                          "54 (1948)",
+                          "https://docs.un.org/en/S/RES/54(1948)"
+                        ],
+                        [
+                          "73 (1949)",
+                          "https://docs.un.org/en/S/RES/73(1949)"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "5.II.22\tTable 5.II.5 lists all deliverables of UNTSO.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 5.II.5",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSeminars, workshops and training events (number of days)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "16",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "19",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "16",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "16",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tSeminars on the implications of regional developments for peacekeeping areas ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tSeminars on UNTSO operations (requested by Member States and international organizations) ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "17",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Consultation, advice and advocacy: consultation and liaison with national authorities in Egypt, Israel, Jordan, Lebanon and the Syrian Arab Republic, as well as local government officials, community leaders, international interlocutors and United Nations operations, organizations and country offices in the mission area to assess regional stability/security conditions, regional trend effects and potential disturbances among the parties and on peacekeeping areas of operation, and with the 32 troop-contributing countries and other Member State representatives.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Consultation, advice and advocacy: consultation and liaison with national authorities in Egypt, Israel, Jordan, Lebanon and the Syrian Arab Republic, as well as local government officials, community leaders, international interlocutors and United Nations operations, organizations and country offices in the mission area to assess regional stability/security conditions, regional trend effects and potential disturbances among the parties and on peacekeeping areas of operation, and with the 32 troop-contributing countries and other Member State representatives.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Consultation, advice and advocacy: consultation and liaison with national authorities in Egypt, Israel, Jordan, Lebanon and the Syrian Arab Republic, as well as local government officials, community leaders, international interlocutors and United Nations operations, organizations and country offices in the mission area to assess regional stability/security conditions, regional trend effects and potential disturbances among the parties and on peacekeeping areas of operation, and with the 32 troop-contributing countries and other Member State representatives.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Consultation, advice and advocacy: consultation and liaison with national authorities in Egypt, Israel, Jordan, Lebanon and the Syrian Arab Republic, as well as local government officials, community leaders, international interlocutors and United Nations operations, organizations and country offices in the mission area to assess regional stability/security conditions, regional trend effects and potential disturbances among the parties and on peacekeeping areas of operation, and with the 32 troop-contributing countries and other Member State representatives.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Consultation, advice and advocacy: consultation and liaison with national authorities in Egypt, Israel, Jordan, Lebanon and the Syrian Arab Republic, as well as local government officials, community leaders, international interlocutors and United Nations operations, organizations and country offices in the mission area to assess regional stability/security conditions, regional trend effects and potential disturbances among the parties and on peacekeeping areas of operation, and with the 32 troop-contributing countries and other Member State representatives.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "E.\tEnabling deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Administration: weekly, monthly, and annual situation reports; analytical assessment and thematic reports and briefings; tactical operational reports, including daily operational reports, incident reports and investigation reports; inter-mission support agreements with the Office of the Special Coordinator for the Middle East Peace Process, UNIFIL and UNDOF; and monthly mandatory induction training of incoming military observers prior to deployment in observer groups and liaison offices, and tactical training of military observers on the use of observation equipment.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Administration: weekly, monthly, and annual situation reports; analytical assessment and thematic reports and briefings; tactical operational reports, including daily operational reports, incident reports and investigation reports; inter-mission support agreements with the Office of the Special Coordinator for the Middle East Peace Process, UNIFIL and UNDOF; and monthly mandatory induction training of incoming military observers prior to deployment in observer groups and liaison offices, and tactical training of military observers on the use of observation equipment.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Administration: weekly, monthly, and annual situation reports; analytical assessment and thematic reports and briefings; tactical operational reports, including daily operational reports, incident reports and investigation reports; inter-mission support agreements with the Office of the Special Coordinator for the Middle East Peace Process, UNIFIL and UNDOF; and monthly mandatory induction training of incoming military observers prior to deployment in observer groups and liaison offices, and tactical training of military observers on the use of observation equipment.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Administration: weekly, monthly, and annual situation reports; analytical assessment and thematic reports and briefings; tactical operational reports, including daily operational reports, incident reports and investigation reports; inter-mission support agreements with the Office of the Special Coordinator for the Middle East Peace Process, UNIFIL and UNDOF; and monthly mandatory induction training of incoming military observers prior to deployment in observer groups and liaison offices, and tactical training of military observers on the use of observation equipment.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Administration: weekly, monthly, and annual situation reports; analytical assessment and thematic reports and briefings; tactical operational reports, including daily operational reports, incident reports and investigation reports; inter-mission support agreements with the Office of the Special Coordinator for the Middle East Peace Process, UNIFIL and UNDOF; and monthly mandatory induction training of incoming military observers prior to deployment in observer groups and liaison offices, and tactical training of military observers on the use of observation equipment.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub",
+          "text": "Overview",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "5.II.23\tPursuant to paragraph 20 of General Assembly resolution 77/262, UNTSO carried out a spending review as part of its proposed programme budget for 2026. Under the strategic guidance of the Head of Mission and Chief of Staff, and with the engagement of all managers and the Human Resources Services Division of the Department of Operational Support, a review was carried out of the mission’s operations. The review builds on previous process reviews undertaken by the mission to streamline support services across five countries and improve logistics support against the dynamically challenging areas of its operations, as well as lessons learned from the impact of the liquidity situation and the coronavirus disease (COVID-19) pandemic. The mission was subject to a civilian staffing review that was jointly undertaken with the Department and included an in-depth analysis of the mission’s organizational structure, staffing composition and levels to determine optimal alignment with evolving mission priorities, enhance resource efficiency and effectiveness and ensure that staff possess the skills required to provide high-quality services, while incorporating succession plans and future operational needs. The review also included an analysis of historical trends in non-post resource spending and distribution over the past five years to identify opportunities for efficiencies and realignment to support optimal implementation of the mission’s mandate and achieving results, as set out in the proposed programme plan for 2026. The review pointed to several opportunities for better and more efficient utilization of financial and human resources.",
+              "table_content": null,
+              "hyperlinks": [
+                [
+                  "77/262",
+                  "https://docs.un.org/en/A/RES/77/262"
+                ]
+              ],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "5.II.24\tWith regard to posts, while UNTSO is not proposing any increase or decrease in its staffing complement of 229 posts, several changes to the levels, functions and locations of existing posts are proposed as a result of the civilian staffing review, which reduces operational gaps and utilizes resources more effectively, while providing the mission with the flexibility needed to address emerging challenges. The proposed changes are as follows:",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(a)\tOffice of the Chief of Mission Support. The Chief of Mission Support is responsible for stewardship of the personnel, financial and property resources of UNTSO (and the Office of the Special Coordinator for the Middle East Peace Process) and acts as principal adviser to the mission leadership on management, logistics and administrative matters. The Chief also leads and guides the work of the mission support component carried out by the operations and resource management, service delivery management and supply chain management pillars, which is decentralized across five countries. The mission support component has 173 posts to support 159 military observers, 7 substantive posts and 48 security posts. The civilian staffing review identified workforce gaps in the immediate office of the Chief of Mission Support and in the areas of protocol, training and the environment. To address the workforce gaps, the following changes to the organizational structure and posts are proposed to enhance the oversight and effectiveness of managing cross-cutting functions in the Office. Through the restructuring effort, there would be clearer accountability, better coordination and quicker decision-making, enabling more effective response and support to mission needs, as follows:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-3",
+                      "text": "(i)\tOffice of the Chief of Mission Support. Redeployment of one Administrative Officer (Field Service) and one Administrative Assistant (Local level) from Service Delivery Management (formerly known as the Office of the Deputy Chief of Mission Support) to strengthen the existing capacity of the Office, which is comprised of one staff member at the D-1 level, one staff member in the Field Service and one National Professional Officer. The change reflects the evolving scope and complexity of the mission’s support function and is aimed at ensuring that the Chief of Mission Support is better positioned to efficiently manage administrative functions, strengthen coordination across the mission and effectively drive key strategic priorities. It is proposed that the National Professional Officer be redeployed to Protocol, as explained in paragraph 5.II.24 (a) (ii);",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-3",
+                      "text": "(ii)\tProtocol. Redeployment of two posts (one Protocol Officer (National Professional Officer) from the Office of the Chief of Mission Support and one Movement Control Assistant (Local level), to be reassigned as a Protocol Assistant, from Supply Chain Management) to Protocol, to be established under the Office of the Chief of Mission Support. Since 2022, the role of Protocol has expanded and includes an increased scope in interactions with host government authorities and relationship management with various ministries and embassies;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-3",
+                      "text": "(iii)\tEnvironment. Redeployment of one Environment Affairs Assistant (Local level) from Service Delivery Management (formerly the Office of the Deputy Chief of Mission Support) to Environment, to be established under the Office of the Chief of Mission Support to facilitate integration, management and oversight of environmental priorities and the related impact on the mission’s operations;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-3",
+                      "text": "(iv)\tLearning and Development. Redeployment of one Human Resources Assistant (Field Service) and one Administrative Assistant (Local level) from Human Resources Management to Learning and Development, to be established under the Office of the Chief of Mission Support. The two posts would be reassigned as Training Assistants (one Field Service and one Local level) to address the training and staff development gaps and ensure that all staff have access to targeted training, resources and ongoing development opportunities, in alignment with UNTSO strategic goals. Although the civilian staffing review recognized that the functions of training are normally managed under Human Resources Management, it was recommended, considering the size of the mission, that the unit be placed under the Office of the Chief;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(b)\tService Delivery Management (formerly Office of the Deputy Chief of Mission Support). It is proposed that the Office of the Deputy Chief of Mission Support be renamed Service Delivery Management and that the post of Deputy Mission Support Officer (P-5) be reassigned as Chief of Section, Service Delivery Management. The title “Deputy Chief of Mission Support” is no longer utilized in peacekeeping missions, and its reclassification as Chief of Section, Service Delivery Management, would reflect ongoing organizational needs (separation of service delivery and supply chain management functions) and ensure clarity in leadership roles and alignment with the mission support structure guidance. It is also proposed that one post of Administrative Assistant (Field Service) be redeployed from the Office of Mission Support to strengthen service delivery capacities, noting that the Office is redeploying the post of Administrative Officer (Field Service) and an Administrative Assistant (Local level) to the Office of the Chief of Mission Support, as reflected in paragraph 5.II.24 (a) (i);",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(c)\tMedical. Reclassification of one Medical Officer from the Field Service category to a post of Medical Officer (P-4). Medical has two posts (one Field Service and one Local level), and the Field Service post (FS-7) is a dually classified post at the P-4 level. Given the discontinuation of dual classifications, the civilian staffing review recommended regularizing the post as a Medical Officer (P-4), who would be responsible for managing the Local level post (Nurse) in the unit and providing medical care to UNTSO personnel, both military and civilian, to ensure their health and well-being across the mission’s area of operations;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(d)\tHuman Resources Management. Reclassification of one Chief Human Resources Officer post from the Field Service category to a P-4 post. Human Resources Management currently has 15 posts (6 Field Service and 9 Local level), including 1 Field Service post (FS-7) that is dually classified post as a P-4 post. Given the discontinuation of dual classifications, the civilian staffing review recommended regularizing the post as a P-4 Chief Human Resources Officer, who would be responsible for managing the section, which in 2026 would include 12 posts (4 Field Service and 8 Local level), as 2 posts (1 Field Service and 1 Local level) are proposed for redeployment to Learning and Development, as explained in paragraph 5.II.24 (a) (iv);",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(e)\tSupply Chain Management. Supply Chain Management provides a full spectrum of administrative and end-to-end logistics services support for the operations of UNTSO and the Office of the Special Coordinator for the Middle East Peace Process across several countries and in over 40 different storage locations. It includes Supply Chain Performance and Business Intelligence, Acquisition Planning, Procurement, Centralized Warehouse and Movement Control. Proposals are as follows:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-3",
+                      "text": "(i)\tAcquisition Planning. It is proposed that the unit be renamed Acquisition Management, and would involve: the reassignment of one post of Claims Assistant (Field Service) as an Acquisition Planning Officer (Field Service), Chief of Unit; the redeployment of one Information Systems Assistant (Local level) from Field Technology Services to the unit to which the post would be reassigned as an Acquisition Management Assistant (Requisitioner); and the reassignment of one Movement Control Assistant (Local level) as an Acquisition Planning Assistant (Local level). The proposed changes would address the recommendation from the Office of Internal Oversight Services audit to improve the acquisition process for goods and services and improve the management of critical operations, particularly in Receiving, Inspection and Property Disposal;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-3",
+                      "text": "(ii)\tMovement Control. As reflected in paragraphs 5.II.24 (a) (ii) and (g), it is proposed that two posts be redeployed out to fill capacity gaps in other areas of operations;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(f)\tEngineering and Facilities Management. Reclassification of one Engineer post from the Field Service category to the P-3 level. There are 12 posts (2 Field Service and 10 Local level), including 1 Field Service post (FS-6) that is dually classified as a P-3 post. Given the discontinuation of dual classifications, the civilian staffing review recommended regularizing the post as an Engineer (P-3), who would be responsible for managing the 11 posts in the unit that provides support to all observation posts, patrol bases and UNTSO offices (as well as Office of the Special Coordinator for the Middle East Peace Process offices) across its various locations;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(g)\tTransport. Redeployment of one post of Vehicle Technician (Local level) from Jerusalem to Lebanon, and redeployment of one post of Movement Control Assistant (Local level) from Movement Control to Transport, to be reassigned as an Administrative Assistant. The post changes would strengthen the existing capacities in Transport, which provides transportation services to the mission headquarters, outstations, liaison offices and observation posts, and address the shift in work from routine maintenance to the refurbishment of light armoured vehicles, the majority of which is undertaken by Observer Group Lebanon.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "5.II.25\tWith regard to non-post resources, the review identified a few areas in which, over time, UNTSO has improved its services by implementing cost-efficient and effective initiatives that have informed the 2026 programme budget as follows:",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(a)\tVehicle fleet management. The refurbishment of armoured vehicles from closing or downsizing missions in lieu of new acquisitions has proven to be a cost-effective and efficient alternative to new acquisitions. This approach reduces financial outlay and maximizes the utilization of United Nations resources. In addition, the mission plans to lease light passenger vehicles from UN Fleet in 2026, which would reduce financial outlay, while granting the mission access to newer, environmentally friendly and technologically advanced vehicles without the full cost of ownership. It also allows for easy fleet adjustments based on operational needs. The introduction of hybrid vehicles represents a step towards sustainable and environmentally responsible transportation. With three hybrid vehicles already in operation, UNTSO plans to acquire an additional eight through leasing in 2026, which would result in lower fuel consumption;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(b)\tEnergy-saving measures. Following the implementation of energy-saving measures at mission headquarters, including light-emitting diode lighting and a variable refrigerant flow air-conditioning system, energy consumption decreased by 14 per cent in 2024 compared with 2023, decreasing to approximately 114,700 kWh, which is expected to stabilize or decrease in 2025 and 2026. Fuel expenditure decreased in 2024 compared with the period 2020–2023, due primarily to the installation of solar panels at three locations, reducing dependence on fuel-powered generators. With plans to install solar panels at nine additional locations in 2025, further reductions in fuel consumption are anticipated in 2026. Consequently, the generator fuel budget for all 12 locations in 2026 is projected at 60,000 litres, down from 119,300 litres in 2024. Expanding solar energy usage will continue to enhance efficiency, sustainability and cost savings across operations;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(c)\tField remote infrastructure monitoring. In 2026, the mission will continue to implement the field remote infrastructure monitoring initiative, which began in 2024. The initiative represents a crucial Internet of things-based platform tailored for real-time monitoring and management of essential resources (i.e. water, electricity and fuel) in remote areas. By facilitating precise and timely data collection, it allows UNTSO to make informed decisions regarding resource allocation, analyse consumption trends and anticipate potential shortages. The integration of advanced data analytics significantly boosts operational efficiency by pinpointing areas for improvement, fostering sustainability and optimizing resource utilization. Robust reporting capabilities enhance transparency and accountability, ensuring effective communication with stakeholders. Field remote infrastructure monitoring also incorporates automation to refine resource management processes, such as refuelling generators and maintaining a steady power supply during critical operations. The system’s real-time monitoring capability allows for automated responses to fluctuating conditions, thereby improving operational readiness and efficiency while minimizing delays. Although the impact of field remote infrastructure monitoring may not always manifest itself in initial short-term cost reductions, its role in streamlining processes, improving decision-making and supporting sustainability initiatives optimizes resource management, enhances operational efficiency, minimizes waste over time and contributes to long-term operational savings and more effective resource utilization, ultimately reinforcing the overall objectives of the mission.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "5.II.26\tAnother significant advancement has been the transition to Microsoft Teams telephony, replacing in 2026 outdated Internet Protocol phone systems. Microsoft Teams telephony offers numerous benefits, including significant cost savings by eliminating the need for traditional phone hardware and reducing maintenance expenses. It seamlessly integrates with Microsoft 365 applications, providing a unified communication experience. Beginning in 2026, the phased elimination of Internet Protocol phones will progressively reduce the need for Cisco licences until they are completely discontinued. This cost-effective strategy reinforces the mission’s commitment to financial efficiency while enhancing operational effectiveness and the overall user experience.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "5.II.27\tThe review also highlighted the need to strengthen the mission’s capacities for Arabic language interpreters, who would bridge cultural and linguistic gaps and facilitate better understanding, clearer exchanges and more efficient operations due to the increasingly complex and diverse operational requirements in the region.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "5.II.28\tThe budgetary impact of the aforementioned changes has been calculated on a cost neutral basis, as reflected in paragraphs 5.II.33 (a) and (b). Notwithstanding, the proposed budget for 2026 reflects a net increase of $126,200 under other changes compared with the approved budget for 2025 that could not be accommodated within existing capacities, as explained in paragraphs 5.II.33 (c) and (d).",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "5.II.29\tThe proposed regular budget resources for 2026, including the breakdown of resource changes, as applicable, are reflected in tables 5.II.6 to 5.II.9.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table",
+              "text": "Table 5.II.6",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial resources by object of expenditure",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Thousands of United States dollars)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Object of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Posts",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "25 849.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "26 378.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "148.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "148.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "26 526.4",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Other staff costs ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "10 517.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "10 684.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "88.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "88.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "10 772.8",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Hospitality ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "8.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "8.4",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Travel of staff ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "281.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "391.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "391.6",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Contractual services ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "629.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "577.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "53.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "53.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "631.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General operating expenses ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 981.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 023.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "392.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "392.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "19.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2 415.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Supplies and materials ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "350.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "480.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(37.2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(37.2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(7.7)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "443.5",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Furniture and equipment ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "841.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 441.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(980.7)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(569.6)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(1,550.3)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(45.0)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 891.2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Improvement of premises",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "37.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "203.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "51.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "51.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "25.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "255.0",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "40 491.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "44 189.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(980.7)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "126.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(854.5)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(1.9)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "43 335.1",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 5.II.7",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed posts and post changes for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "image",
+                  "text": "",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "other",
+                  "text": "Note: The following abbreviations are used in tables and figures: ASG, Assistant Secretary-General; FS, Field Service; LL, Local level; NPO, National Professional Officer.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "note",
+                  "text": "(Number of posts)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Number",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Details",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Approved for 2025",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "229",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 ASG, 2 D-1, 3 P-5, 2 P-4, 3 P-3, 70 FS, 2 NPO, 146 LL",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Reclassification",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 post of Medical Officer (FS) to a P-4 post; 1 post of Chief Human Resources Officer (FS) to a P-4 post; 1 post of Engineer (FS) to a P-3 post; and the upward reclassification of 1 post of Field Security Officer (P-3) to the post of Deputy Chief Security Officer (P-4)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Redeployment",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 Administrative Officer (FS) and 1 Administrative Assistant (LL) from Service Delivery Management to the Office of the Chief of Mission Support\n1 Administrative Assistant (FS) from the Office of the Chief of Mission Support to Service Delivery Management\n1 Protocol Officer (NPO) from the Office of the Chief of Mission Support and 1 Movement Control Assistant (LL) from Supply Change Management to Protocol (to be reassigned as a Protocol Assistant)\n1 Environment Affairs Assistant (LL) from Service Delivery Management to Environment\n1 Human Resources Assistant (FS) and 1 Administrative Assistant (LL) from Human Resources Management to Learning and Development (to be reassigned as 2 Training Assistants)\n1 Information Systems Assistant (LL) from Field Technology Services to Supply Chain Management (to be reassigned as an Acquisition Management Assistant (Requisitioner))\n1 Vehicle Technician (LL) from Jerusalem to Lebanon; and 1 Movement Control Assistant (LL) from Movement Control to Transport (to be reassigned as an Administrative Assistant)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Reassignment",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 Deputy Chief Mission Support Officer (P-5) as Chief of Section, Service Delivery Management; 1 Claims Assistant (FS) as an Acquisition Planning Officer (FS); and 1 Movement Control Management Assistant (LL) as an Acquisition Planning Assistant (LL) under Supply Chain Management",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Proposed for 2026",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "229",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 ASG, 2 D-1, 3 P-5, 5 P-4, 3 P-3, 67 FS, 2 NPO, 146 LL",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 5.II.8",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed posts by category and grade",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Number of posts)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Category and grade",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 proposed",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Professional and higher",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "ASG",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "D-1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "11",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "14",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General Service and related",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "FS",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "70",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(3)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(3)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "67",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "NPO",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "LL",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "146",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "146",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "218",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(3)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(3)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "215",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "229",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "229",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "5.II.30\tAdditional details on the distribution of the proposed resources for 2026 are reflected in table 5.II.9 and figure 5.II.I.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "5.II.31\tAs shown in table 5.II.6, the overall resources proposed for 2026 amount to $43,335,100, reflecting a decrease of $854,500 compared with the approved budget for 2025. Resource changes result from technical adjustments and other changes. The proposed level of resources provides for the full, efficient and effective implementation of mandates.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 5.II.9",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial and post resources",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Thousands of United States dollars/number of posts)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Posts",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "25 849.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "26 378.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "148.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "148.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "26 526.4",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Non-post",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "14 642.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "17 811.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(980.7)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(21.9)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(1 002.6)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(5.6)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "16 808.7",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "40 491.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "44 189.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(980.7)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "126.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(854.5)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(1.9)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "43 335.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Professional and higher",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "11",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "27.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "14",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General Service and related",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "218",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(3)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(3)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(1.4)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "215",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "229",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "229",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "figure",
+                  "text": "Figure 5.II.I",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Distribution of proposed resources for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Number of posts/thousands of United States dollars)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "image",
+                  "text": "",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub",
+          "text": "Explanation of variances by factor and component – Overall resource changes",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Technical adjustments",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "5.II.32\tAs shown in table 5.II.6, resource changes reflect a decrease of $980,700 under furniture and equipment relating to the removal of non-recurrent provisions for the purchase of six units of mid-range optical equipment to replace ageing observation equipment at observation posts on the Golan, which were approved for 2025.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Other changes",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "5.II.33\tAs shown in table 5.II.6, resource changes reflect a net increase of $126,200, which includes cost-neutral changes resulting from the spending review and other changes that could not be accommodated with existing capacities, as explained below:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "italic",
+                  "text": "Cost-neutral changes resulting from the spending review",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tPosts. A net increase of $119,600 reflects the proposed reclassification of one Chief Human Resources Officer (P-4), one Medical Officer (P-4) and one Engineer (P-3) from the Field Service category, as explained in paragraphs 5.II.24 (c), (d) and (f) ($104,500); and the redeployment of one Vehicle Technician (Local level) from Jerusalem to Lebanon ($15,100), as explained in paragraph 5.II.24 (g) (see also annex II for further information on the functions of the proposed post changes);",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tNon-posts. The net decrease of $119,600 reflects:",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-3",
+                          "text": "(i)\tAn increase of $44,000 under contractual services, due mainly to the need to strengthen the mission’s capacities for Arabic interpreters, as explained in paragraph 5.II.27;",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "paragraph-3",
+                          "text": "(ii)\tAn increase of $392,000 under general operating expenses that would provide for:",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "other",
+                          "text": "a.\tIncreased maintenance costs for vehicles, as explained in paragraph 5.II.25 (a) ($85,300);",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "other",
+                          "text": "b.\tLeasing of eight hybrid 4 x 4 vehicles in lieu of acquisition, as explained in paragraph 5.II.25 (a) ($46,400);",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "other",
+                          "text": "c.\tFreight charges ($85,800);",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "other",
+                          "text": "d.\tIncreased shared security services costs with the Department of Safety and Security and the Security Operations Centre in Jerusalem ($69,000);",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "other",
+                          "text": "e.\tEstablishment of a cleaning and pest control services contract in lieu of hiring cleaners ($50,000);",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "other",
+                          "text": "f.\tInstallation of a closed-circuit television system in Israel-Syria Mixed Armistice Commission (ISMAC) House in Damascus ($23,000);",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "other",
+                          "text": "g.\tIncrease in the premium of the malicious acts insurance policy, due mainly to the increase in the number of exposures ($16,400);",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "other",
+                          "text": "h.\tIncrease in the requirements of hardware supplies and engineering tools such as welding and drilling machines and air compressors ($16,100);",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "paragraph-3",
+                          "text": "(iii)\tA decrease of $37,200 under supplies and materials, due mainly to a decrease in fuel consumption, as explained in paragraph 5.II.25 (b) ($17,300) and to reduced requirements for uniforms at mission headquarters in Jerusalem, as uniforms were purchased in 2024 ($13,900);",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "paragraph-3",
+                          "text": "(iv)\tA decrease of $569,600 under furniture and equipment, due mainly to a reduction in the planned number of vehicles to be replaced in 2026, as explained in paragraph 5.II.25 (a);",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "paragraph-3",
+                          "text": "(v)\tAn increase of $51,200 under improvement of premises that would provide for the replacement of damaged and degraded ballistic glasses at observation posts on the Alpha side of the Golan to ensure clear vision and provide protection for military observers during their 24-hour observation activities;",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "block_type": "italic",
+                  "text": "Other changes that could not be absorbed within existing capacities (increase of $126,200)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tPosts. An increase of $28,500 is proposed to cover requirements for the upward reclassification of a Field Security Officer (P-3) to Deputy Chief Security Officer (P-4) (see annex II);",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tOther staff costs. An increase of $88,000 is proposed to strengthen mission support capabilities in Protocol as a result of the increasing requirements for protocol support services;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tContractual services. The increase of $9,700 relates to the adjustment of standard information and communications technology rates for non-field personnel outside United Nations Headquarters.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Other information",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "5.II.34\tInformation on advance booking for air travel is reflected in table 5.II.10. The ongoing conflict in Israel and the Middle East presented operational challenges for offices in the region, leading to travel disruptions and heightened security measures that undermined efforts to further enhance compliance performance. With continuous monitoring of regional developments and close collaboration with its military pillars, UNTSO strategically devised and implemented alternative travel routes while employing proactive planning to ensure compliance with the advance purchase policy.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 5.II.10",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Compliance rate",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2022 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2023 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 planned",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 planned",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Air tickets purchased at least two weeks before the commencement of travel",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "97",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "96",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "94",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4092 @@
+{
+  "entity": "United Nations System Chief Executives Board for Coordination",
+  "entity_abbrev": "CEB",
+  "entity_raw_name": "III.\tUnited Nations System Chief Executives Board for Coordination",
+  "source_file": "A_80_6_SECT.31.json",
+  "content": [
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.III.1\tCEB, composed of the Secretary-General and the executive heads of the organizations of the United Nations system, is responsible for promoting coherence, cooperation and coordination in the policies, programmes and activities of the organizations of the United Nations system in accordance with their mandates and in response to the decisions of intergovernmental bodies. The mandate of CEB derives from the priorities established in relevant General Assembly and Economic and Social Council resolutions and decisions, including Council resolution 13 (III) and decision 2001/321. At a time when the international community is confronted by increasingly complex and interrelated global challenges, coordinated and coherent action by the entities of the United Nations system is imperative. Mobilizing the system’s collective capacity is vital to supporting Member States in the integrated and accelerated implementation of the 2030 Agenda for Sustainable Development and the Pact for the Future, as well as the full range of mandates entrusted to United Nations system entities.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "13 (III)",
+                      "https://docs.un.org/en/E/RES/13(III)"
+                    ]
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.III.2\tThe objective, to which CEB contributes, is to leverage the collective capacity of the organizations of the United Nations system for the effective delivery of mandates.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.III.3\tTo contribute to the objective, CEB will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tProvide vision and leadership to guide the effective, coherent and coordinated implementation of mandates by United Nations system organizations;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tProvide a forum for senior leaders of the United Nations system to agree on strategic action, enhance cooperation and pursue policy coherence in both programmatic and administrative areas and coordinate the use of resources, capacities and knowledge;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tThrough its High-level Committee on Programmes:",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-3",
+                          "text": "(i)\tFoster strategic system-wide policy coherence and programme coordination in response to intergovernmental mandates and in support of internationally agreed development goals;",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "paragraph-3",
+                          "text": "(ii)\tDevelop shared strategies, approaches and frameworks to address emerging policy and programme issues requiring system-wide action;",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tThrough its High-level Committee on Management:",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-3",
+                          "text": "(i)\tAccelerate the development of innovative approaches to improve efficiency and simplify and innovate business practices, fostering the harmonization, mutual recognition and integration of business operations, as well as encourage a coordinated approach to multilingualism across CEB member organizations;",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "paragraph-3",
+                          "text": "(ii)\tUtilize its functional networks on finance and budget, human resources, digitization and technology, procurement and safety and security to mainstream best practices, innovative management approaches and partnerships in all areas of management and to collect and publish comprehensive system-wide financial and human resources data.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.III.4\tThe above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tAccelerated progress towards the integrated and accelerated implementation of the 2030 Agenda by Member States and the full range of mandates entrusted to United Nations system entities, including the follow-up to and implementation of the Pact for the Future and its annexes;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tA more coherent, coordinated and efficient United Nations system response to global challenges, such as setbacks to sustainable development, inequalities, threats to human rights, negative impacts of climate change and risks of new and emerging technologies;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tGreater capacity of United Nations system organizations to provide effective management responses that drive systemic change in support of the delivery of mandates, through a focus on providing better data analytics; innovation and digital transformation; strategic foresight; and a work culture that encourages stronger results orientation;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tImproved analytical quality of United Nations system-wide comprehensive, comparable financial and human resources data, evidence-based advancement of the ongoing ICSC comprehensive compensation review and enhanced transparency and accountability regarding system-wide financial flows.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.III.5\tWith regard to the external factors, the overall plan for 2026 is based on the planning assumption that member organizations commit themselves and make timely contributions to the issues addressed by CEB.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.III.6\tCEB integrates a gender perspective in its activities, deliverables and results, as appropriate, including in the products of its high-level committees. The CEB annual human resources statistics will continue to present data on personnel of the United Nations system by category, grade and gender, helping to systematically track gender representation across the system. The CEB secretariat will continue to collaborate with the United Nations Entity for Gender Equality and the Empowerment of Women (UN-Women) on tracking the financial contribution of United Nations activities to gender equality and the empowerment of women. In addition, the CEB secretariat will support the High-level Committee on Programmes in continuing to address gender equality and women’s empowerment in a cross-cutting manner, spanning the Committee’s agenda.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.III.7\tIn line with the United Nations Disability Inclusion Strategy, the CEB High-level Committee on Management will continue to accelerate disability inclusion within organizations’ internal operations through the activities of its cross-functional networks.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Strengthened system-wide unity in support of climate action",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "31.III.8\tThe adverse impacts of climate change are felt by people everywhere, especially in developing countries. To bring the full weight of the United Nations system together for urgent climate action, the High-level Committee on Programmes developed and approved a set of strategic common messages to strengthen unity among organizations in support of ambitious outcomes at the twenty-ninth session of the Conference of the Parties to the United Nations Framework Convention on Climate Change and beyond. The Committee rapidly coalesced around seven key priority areas for action, which included emission reductions and climate finance, thereby effectively harmonizing positions and facilitating synergies. As a dynamic product, the CEB-endorsed common messages continue to provide a shared narrative for the United Nations system to advocate for accelerated action to protect people and planet.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "31.III.9\tProgress towards the objective is presented in the performance measure below (see table 31.III.1).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table",
+                      "text": "Table 31.III.1",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Strengthened unity, enabling the United Nations system to collectively promote key priorities and accelerated climate action for the benefit of people and planet",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned results for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 1: mutual recognition as an enabler of management reform across the United Nations system – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "31.III.10\tThe CEB secretariat’s work contributed to the expansion of inter-agency initiatives that employ mutual recognition in key areas such as procurement and human resources, which met the planned target.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "31.III.11\tProgress towards the objective and the target for 2026 are presented in the performance measure below (see table 31.III.2).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table",
+                      "text": "Table 31.III.2",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Successful cases of and best practices on mutual recognition identified\nStrategy established to address obstacles to the operationalization of mutual recognition",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Bottlenecks in the application of mutual recognition principles addressed through improved awareness and operationalization of management guidance",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Expansion of inter-agency initiatives that employ mutual recognition",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Mainstreaming of shared services enabled by the application of the mutual recognition principle",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Further mainstreaming of the mutual recognition principle to enhance operational effectiveness, supported through a community of practice and a network of mutual recognition champions ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "First use case, focused on maintaining updated human resources and financial data, went live to enable pension benefit calculation by the United Nations Joint Staff Pension Fund for selected sponsoring organizations",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital ID available for other use cases and in use in more United Nations organizations, which enables efficient data transfer and collaboration across United Nations system organizations ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital ID solution extended to other organizations, with additional business cases, to facilitate increased interoperability across the United Nations system ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Agreement across the United Nations system on a conceptual framework on measures of progress on sustainable development that complement and go beyond gross domestic product (GDP)a ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Shared vision among United Nations system organizations on:\n– data governance at the international level (see CEB/2023/1/Add.2)\n– duties to future generations (see CEB/2023/1/Add.1) \n– opportunities for collaboration on digital transformation",
+                            "hyperlinks": [
+                              [
+                                "CEB/2023/1/Add.2",
+                                "https://docs.un.org/en/CEB/2023/1/Add.2"
+                              ],
+                              [
+                                "CEB/2023/1/Add.1",
+                                "https://docs.un.org/en/CEB/2023/1/Add.1"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Collective thinking among United Nations system organizations on:\n– possible goals and principles for data governance at the international level (see CEB/2024/2/Add.1)\n– global governance of artificial intelligence (see CEB/2024/1/Add.1) and the responsible use of artificial intelligence in the United Nations systemb ",
+                            "hyperlinks": [
+                              [
+                                "CEB/2024/2/Add.1",
+                                "https://docs.un.org/en/CEB/2024/2/Add.1"
+                              ],
+                              [
+                                "CEB/2024/1/Add.1",
+                                "https://docs.un.org/en/CEB/2024/1/Add.1"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Improved United Nations system coherence on countering transnational organized crime \nAccelerated implementation of the United Nations Disability Inclusion Strategy across the United Nations system",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Improved United Nations system coherence on:\n– measures of progress on sustainable development that complement and go beyond GDP\n– solutions for enhanced digital transformation capabilities in United Nations system organizations, in accordance with action 45 of the Pact for the Future",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "CEB/2023/1/Add.2",
+                          "https://docs.un.org/en/CEB/2023/1/Add.2"
+                        ],
+                        [
+                          "CEB/2023/1/Add.1",
+                          "https://docs.un.org/en/CEB/2023/1/Add.1"
+                        ],
+                        [
+                          "CEB/2024/2/Add.1",
+                          "https://docs.un.org/en/CEB/2024/2/Add.1"
+                        ],
+                        [
+                          "CEB/2024/1/Add.1",
+                          "https://docs.un.org/en/CEB/2024/1/Add.1"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "other",
+                      "text": "a \tSee https://unsceb.org/valuing-what-counts-united-nations-system-wide-contribution-beyond-gross-domestic-product-gdp.",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "https://unsceb.org/valuing-what-counts-united-nations-system-wide-contribution-beyond-gross-domestic-product-gdp",
+                          "https://unsceb.org/valuing-what-counts-united-nations-system-wide-contribution-beyond-gross-domestic-product-gdp"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "other",
+                      "text": "b \tSee https://unsceb.org/sites/default/files/2025-01/Framework%20for%20a%20Model%20Policy%20on%20the%20%20\nResponsible%20Use%20of%20AI%20in%20UN%20System.pdf.",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "https://unsceb.org/sites/default/files/2025-01/Framework%20for%20a%20Model%20Policy%20on%20the%20%20\nResponsible%20Use%20of%20AI%20in%20UN%20System.pdf",
+                          "https://unsceb.org/sites/default/files/2025-01/Framework%20for%20a%20Model%20Policy%20on%20the%20%20Responsible%20Use%20of%20AI%20in%20UN%20System.pdf"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 2: United Nations Digital ID, a building block in enabling interoperability across United Nations organizations – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "31.III.12\tThe CEB secretariat’s work contributed to the first United Nations Digital ID use case, which was focused on maintaining updated human resources and financial data, going live to enable pension benefit calculation by the United Nations Joint Staff Pension Fund for selected sponsoring organizations, which met the planned target.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "31.III.13\tProgress towards the objective and the target for 2026 are presented in the performance measure below (see table 31.III.3).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table",
+                      "text": "Table 31.III.3",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Successful cases of and best practices on mutual recognition identified\nStrategy established to address obstacles to the operationalization of mutual recognition",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Bottlenecks in the application of mutual recognition principles addressed through improved awareness and operationalization of management guidance",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Expansion of inter-agency initiatives that employ mutual recognition",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Mainstreaming of shared services enabled by the application of the mutual recognition principle",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Further mainstreaming of the mutual recognition principle to enhance operational effectiveness, supported through a community of practice and a network of mutual recognition champions ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "First use case, focused on maintaining updated human resources and financial data, went live to enable pension benefit calculation by the United Nations Joint Staff Pension Fund for selected sponsoring organizations",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital ID available for other use cases and in use in more United Nations organizations, which enables efficient data transfer and collaboration across United Nations system organizations ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital ID solution extended to other organizations, with additional business cases, to facilitate increased interoperability across the United Nations system ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Agreement across the United Nations system on a conceptual framework on measures of progress on sustainable development that complement and go beyond gross domestic product (GDP)a ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Shared vision among United Nations system organizations on:\n– data governance at the international level (see CEB/2023/1/Add.2)\n– duties to future generations (see CEB/2023/1/Add.1) \n– opportunities for collaboration on digital transformation",
+                            "hyperlinks": [
+                              [
+                                "CEB/2023/1/Add.2",
+                                "https://docs.un.org/en/CEB/2023/1/Add.2"
+                              ],
+                              [
+                                "CEB/2023/1/Add.1",
+                                "https://docs.un.org/en/CEB/2023/1/Add.1"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Collective thinking among United Nations system organizations on:\n– possible goals and principles for data governance at the international level (see CEB/2024/2/Add.1)\n– global governance of artificial intelligence (see CEB/2024/1/Add.1) and the responsible use of artificial intelligence in the United Nations systemb ",
+                            "hyperlinks": [
+                              [
+                                "CEB/2024/2/Add.1",
+                                "https://docs.un.org/en/CEB/2024/2/Add.1"
+                              ],
+                              [
+                                "CEB/2024/1/Add.1",
+                                "https://docs.un.org/en/CEB/2024/1/Add.1"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Improved United Nations system coherence on countering transnational organized crime \nAccelerated implementation of the United Nations Disability Inclusion Strategy across the United Nations system",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Improved United Nations system coherence on:\n– measures of progress on sustainable development that complement and go beyond GDP\n– solutions for enhanced digital transformation capabilities in United Nations system organizations, in accordance with action 45 of the Pact for the Future",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "CEB/2023/1/Add.2",
+                          "https://docs.un.org/en/CEB/2023/1/Add.2"
+                        ],
+                        [
+                          "CEB/2023/1/Add.1",
+                          "https://docs.un.org/en/CEB/2023/1/Add.1"
+                        ],
+                        [
+                          "CEB/2024/2/Add.1",
+                          "https://docs.un.org/en/CEB/2024/2/Add.1"
+                        ],
+                        [
+                          "CEB/2024/1/Add.1",
+                          "https://docs.un.org/en/CEB/2024/1/Add.1"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "other",
+                      "text": "a \tSee https://unsceb.org/valuing-what-counts-united-nations-system-wide-contribution-beyond-gross-domestic-product-gdp.",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "https://unsceb.org/valuing-what-counts-united-nations-system-wide-contribution-beyond-gross-domestic-product-gdp",
+                          "https://unsceb.org/valuing-what-counts-united-nations-system-wide-contribution-beyond-gross-domestic-product-gdp"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "other",
+                      "text": "b \tSee https://unsceb.org/sites/default/files/2025-01/Framework%20for%20a%20Model%20Policy%20on%20the%20%20\nResponsible%20Use%20of%20AI%20in%20UN%20System.pdf.",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "https://unsceb.org/sites/default/files/2025-01/Framework%20for%20a%20Model%20Policy%20on%20the%20%20\nResponsible%20Use%20of%20AI%20in%20UN%20System.pdf",
+                          "https://unsceb.org/sites/default/files/2025-01/Framework%20for%20a%20Model%20Policy%20on%20the%20%20Responsible%20Use%20of%20AI%20in%20UN%20System.pdf"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 3: improved coherence of United Nations system activities for the acceleration of progress towards the Sustainable Development Goals and implementation of the Pact for the Future – Proposed programme plan for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "31.III.14\tThe Pact for the Future, a wide-ranging international agreement aimed at delivering a better future for people and planet, was adopted by the General Assembly at the Summit of the Future in September 2024 to accelerate progress towards achieving the Sustainable Development Goals while rising to new challenges and opportunities. The CEB secretariat supported processes under the High-level Committee on Programmes and the High-level Committee on Management to coordinate specific United Nations system contributions to intergovernmental deliberations preceding the Summit and to enhance United Nations system internal capacities. Each process enabled a common understanding and shared position among United Nations system entities. As a contribution to implementation of the Pact, United Nations organizations have to strengthen their capabilities to better deliver on their mandates and support Governments in meeting their commitments.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "italic",
+                      "text": "Lessons learned and planned change",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "31.III.15\tThe lesson for the CEB secretariat, based on its experience supporting activities in the lead-up to the Summit, was that coherence is best achieved through inclusive consultative processes among the United Nations system organizations, leveraging their diverse technical knowledge and experience. In applying the lesson, the CEB secretariat will support the two Committees in bringing together expertise spanning the United Nations to facilitate strategic system-wide policy coherence and coordination in programmatic and management areas of relevance across United Nations system mandates in order to contribute to accelerating progress towards the Sustainable Development Goals and implementing the Pact for the Future in a manner that complements activities being coordinated in other contexts.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "31.III.16\tExpected progress towards the objective is presented in the performance measure below (see table 31.III.4).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table",
+                      "text": "Table 31.III.4",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Successful cases of and best practices on mutual recognition identified\nStrategy established to address obstacles to the operationalization of mutual recognition",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Bottlenecks in the application of mutual recognition principles addressed through improved awareness and operationalization of management guidance",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Expansion of inter-agency initiatives that employ mutual recognition",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Mainstreaming of shared services enabled by the application of the mutual recognition principle",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Further mainstreaming of the mutual recognition principle to enhance operational effectiveness, supported through a community of practice and a network of mutual recognition champions ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "First use case, focused on maintaining updated human resources and financial data, went live to enable pension benefit calculation by the United Nations Joint Staff Pension Fund for selected sponsoring organizations",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital ID available for other use cases and in use in more United Nations organizations, which enables efficient data transfer and collaboration across United Nations system organizations ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital ID solution extended to other organizations, with additional business cases, to facilitate increased interoperability across the United Nations system ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Agreement across the United Nations system on a conceptual framework on measures of progress on sustainable development that complement and go beyond gross domestic product (GDP)a ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Shared vision among United Nations system organizations on:\n– data governance at the international level (see CEB/2023/1/Add.2)\n– duties to future generations (see CEB/2023/1/Add.1) \n– opportunities for collaboration on digital transformation",
+                            "hyperlinks": [
+                              [
+                                "CEB/2023/1/Add.2",
+                                "https://docs.un.org/en/CEB/2023/1/Add.2"
+                              ],
+                              [
+                                "CEB/2023/1/Add.1",
+                                "https://docs.un.org/en/CEB/2023/1/Add.1"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Collective thinking among United Nations system organizations on:\n– possible goals and principles for data governance at the international level (see CEB/2024/2/Add.1)\n– global governance of artificial intelligence (see CEB/2024/1/Add.1) and the responsible use of artificial intelligence in the United Nations systemb ",
+                            "hyperlinks": [
+                              [
+                                "CEB/2024/2/Add.1",
+                                "https://docs.un.org/en/CEB/2024/2/Add.1"
+                              ],
+                              [
+                                "CEB/2024/1/Add.1",
+                                "https://docs.un.org/en/CEB/2024/1/Add.1"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Improved United Nations system coherence on countering transnational organized crime \nAccelerated implementation of the United Nations Disability Inclusion Strategy across the United Nations system",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Improved United Nations system coherence on:\n– measures of progress on sustainable development that complement and go beyond GDP\n– solutions for enhanced digital transformation capabilities in United Nations system organizations, in accordance with action 45 of the Pact for the Future",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "CEB/2023/1/Add.2",
+                          "https://docs.un.org/en/CEB/2023/1/Add.2"
+                        ],
+                        [
+                          "CEB/2023/1/Add.1",
+                          "https://docs.un.org/en/CEB/2023/1/Add.1"
+                        ],
+                        [
+                          "CEB/2024/2/Add.1",
+                          "https://docs.un.org/en/CEB/2024/2/Add.1"
+                        ],
+                        [
+                          "CEB/2024/1/Add.1",
+                          "https://docs.un.org/en/CEB/2024/1/Add.1"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "other",
+                      "text": "a \tSee https://unsceb.org/valuing-what-counts-united-nations-system-wide-contribution-beyond-gross-domestic-product-gdp.",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "https://unsceb.org/valuing-what-counts-united-nations-system-wide-contribution-beyond-gross-domestic-product-gdp",
+                          "https://unsceb.org/valuing-what-counts-united-nations-system-wide-contribution-beyond-gross-domestic-product-gdp"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "other",
+                      "text": "b \tSee https://unsceb.org/sites/default/files/2025-01/Framework%20for%20a%20Model%20Policy%20on%20the%20%20\nResponsible%20Use%20of%20AI%20in%20UN%20System.pdf.",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "https://unsceb.org/sites/default/files/2025-01/Framework%20for%20a%20Model%20Policy%20on%20the%20%20\nResponsible%20Use%20of%20AI%20in%20UN%20System.pdf",
+                          "https://unsceb.org/sites/default/files/2025-01/Framework%20for%20a%20Model%20Policy%20on%20the%20%20Responsible%20Use%20of%20AI%20in%20UN%20System.pdf"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Legislative mandates",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.III.17\tThe list below provides all mandates entrusted to CEB.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "italic",
+                  "text": "General Assembly resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "64/289",
+                            "hyperlinks": [
+                              [
+                                "64/289",
+                                "https://docs.un.org/en/A/RES/64/289"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "System-wide coherence",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "69/313 ",
+                            "hyperlinks": [
+                              [
+                                "69/313",
+                                "https://docs.un.org/en/A/RES/69/313"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Addis Ababa Action Agenda of the Third International Conference on Financing for Development (Addis Ababa Action Agenda)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "79/226",
+                            "hyperlinks": [
+                              [
+                                "79/226",
+                                "https://docs.un.org/en/A/RES/79/226"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Quadrennial comprehensive policy review of operational activities for development of the United Nations system",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "79/247",
+                            "hyperlinks": [
+                              [
+                                "79/247",
+                                "https://docs.un.org/en/A/RES/79/247"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Programme planning",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "64/289",
+                          "https://docs.un.org/en/A/RES/64/289"
+                        ],
+                        [
+                          "69/313",
+                          "https://docs.un.org/en/A/RES/69/313"
+                        ],
+                        [
+                          "79/226",
+                          "https://docs.un.org/en/A/RES/79/226"
+                        ],
+                        [
+                          "79/247",
+                          "https://docs.un.org/en/A/RES/79/247"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "italic",
+                  "text": "Economic and Social Council resolutions and decisions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "13 (III)",
+                            "hyperlinks": [
+                              [
+                                "13 (III)",
+                                "https://docs.un.org/en/E/RES/13(III)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Coordination Committee",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2001/321",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Further consideration of the annual overview review report of the Administrative Committee on Coordination",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "13 (III)",
+                          "https://docs.un.org/en/E/RES/13(III)"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.III.18\tTable 31.III.5 lists all deliverables of CEB.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 31.III.5",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tAnnual overview report of CEB for the Economic and Social Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tNote by the Secretary-General on the budgetary and financial situation of the organizations of the United Nations system for the General Assembly",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3.\tNote by the Secretary-General with comments by CEB on reviews conducted by the Joint Inspection Unit",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5 ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "11",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "18",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tMeetings of: ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4.\tThe Fifth Committee",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5.\tThe Second Committee",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t6.\tThe Committee for Programme and Coordination",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t7.\tThe Advisory Committee on Administrative and Budgetary Questions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t8.\tThe Economic and Social Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTechnical materials (number of materials)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t9.\tReports on United Nations system financial, human resources and procurement statistics",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t10.\tCompilations and analyses of best practices in the areas of human resources, procurement, information technologies and finance and budget",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDatabases and substantive digital materials: United Nations system annual financial and human resources statistics (from approximately 40 reporting entities) available to all Member States and other stakeholders.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: United Nations system annual financial and human resources statistics (from approximately 40 reporting entities) available to all Member States and other stakeholders.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: United Nations system annual financial and human resources statistics (from approximately 40 reporting entities) available to all Member States and other stakeholders.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: United Nations system annual financial and human resources statistics (from approximately 40 reporting entities) available to all Member States and other stakeholders.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: United Nations system annual financial and human resources statistics (from approximately 40 reporting entities) available to all Member States and other stakeholders.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDigital platforms and multimedia content: CEB website accessible by all Member States and other stakeholders.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: CEB website accessible by all Member States and other stakeholders.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: CEB website accessible by all Member States and other stakeholders.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: CEB website accessible by all Member States and other stakeholders.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: CEB website accessible by all Member States and other stakeholders.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "E.\tEnabling deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tAdministration: summary of deliberations of two regular sessions (each) of CEB, the High-level Committee on Programmes and the High-level Committee on Management; reports for meetings of ICSC on common positions of the United Nations system relating to conditions of service; biannual promulgation of rates for freelance interpreters and translators; accounting guidance and system-wide support papers for United Nations entities; secretariat support for meetings of CEB, the High-level Committee on Programmes and the High-level Committee on Management; secretariat support for the Task Force on Accounting Standards, ad hoc inter-agency taskforce arrangements and United Nations representation at meetings of the Board of the International Public Sector Accounting Standards; maintenance of data management portal for the collection of data for the United Nations system on human resources and financial data (annual collection from approximately 40 entities); and annual headcount of United Nations system field staff.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tAdministration: summary of deliberations of two regular sessions (each) of CEB, the High-level Committee on Programmes and the High-level Committee on Management; reports for meetings of ICSC on common positions of the United Nations system relating to conditions of service; biannual promulgation of rates for freelance interpreters and translators; accounting guidance and system-wide support papers for United Nations entities; secretariat support for meetings of CEB, the High-level Committee on Programmes and the High-level Committee on Management; secretariat support for the Task Force on Accounting Standards, ad hoc inter-agency taskforce arrangements and United Nations representation at meetings of the Board of the International Public Sector Accounting Standards; maintenance of data management portal for the collection of data for the United Nations system on human resources and financial data (annual collection from approximately 40 entities); and annual headcount of United Nations system field staff.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tAdministration: summary of deliberations of two regular sessions (each) of CEB, the High-level Committee on Programmes and the High-level Committee on Management; reports for meetings of ICSC on common positions of the United Nations system relating to conditions of service; biannual promulgation of rates for freelance interpreters and translators; accounting guidance and system-wide support papers for United Nations entities; secretariat support for meetings of CEB, the High-level Committee on Programmes and the High-level Committee on Management; secretariat support for the Task Force on Accounting Standards, ad hoc inter-agency taskforce arrangements and United Nations representation at meetings of the Board of the International Public Sector Accounting Standards; maintenance of data management portal for the collection of data for the United Nations system on human resources and financial data (annual collection from approximately 40 entities); and annual headcount of United Nations system field staff.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tAdministration: summary of deliberations of two regular sessions (each) of CEB, the High-level Committee on Programmes and the High-level Committee on Management; reports for meetings of ICSC on common positions of the United Nations system relating to conditions of service; biannual promulgation of rates for freelance interpreters and translators; accounting guidance and system-wide support papers for United Nations entities; secretariat support for meetings of CEB, the High-level Committee on Programmes and the High-level Committee on Management; secretariat support for the Task Force on Accounting Standards, ad hoc inter-agency taskforce arrangements and United Nations representation at meetings of the Board of the International Public Sector Accounting Standards; maintenance of data management portal for the collection of data for the United Nations system on human resources and financial data (annual collection from approximately 40 entities); and annual headcount of United Nations system field staff.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tAdministration: summary of deliberations of two regular sessions (each) of CEB, the High-level Committee on Programmes and the High-level Committee on Management; reports for meetings of ICSC on common positions of the United Nations system relating to conditions of service; biannual promulgation of rates for freelance interpreters and translators; accounting guidance and system-wide support papers for United Nations entities; secretariat support for meetings of CEB, the High-level Committee on Programmes and the High-level Committee on Management; secretariat support for the Task Force on Accounting Standards, ad hoc inter-agency taskforce arrangements and United Nations representation at meetings of the Board of the International Public Sector Accounting Standards; maintenance of data management portal for the collection of data for the United Nations system on human resources and financial data (annual collection from approximately 40 entities); and annual headcount of United Nations system field staff.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub",
+          "text": "Overview (jointly financed activities)",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "31.III.19\tThe proposed jointly financed resources for 2026, including the breakdown of resource changes, as applicable, are reflected in tables 31.III.6 to 31.III.8.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table",
+              "text": "Table 31.III.6",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial resources by object of expenditure (jointly financed)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Thousands of United States dollars)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Object of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Posts",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 796.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 797.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 797.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Other staff costs ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "419.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "400.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(46.2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": " (46.2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(11.6)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "353.8",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Consultants ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "7.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "33.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(8.1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(8.1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(24.5)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "24.9",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Travel of staff ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "184.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "185.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(17.0)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(17.0)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(9.1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "168.8",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Contractual services ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "66.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "143.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(64.3)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(64.3)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(44.7)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "79.4",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General operating expenses",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "27.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "104.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(22.4)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(22.4)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(21.4)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "82.3",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Supplies and materials ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "13.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(12.2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(12.2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(89.0)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1.5",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Furniture and equipment ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "24.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(9.3)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(9.3)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(38.6)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "14.8",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4 508.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4 702.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(179.5)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(179.5)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(3.8)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4 522.6",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 31.III.7",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "image",
+                      "text": "",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "other",
+                      "text": "Note: The following abbreviations are used in tables and figures: GS (OL), General Service (Other level); GS (PL), General Service (Principal level).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed posts and post changes for 2026 (jointly financed)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Number of posts)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Number",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Details",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Approved for 2025",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 D-2, 2 D-1, 3 P-5, 2 P-4, 2 P-3, 1 GS (PL), 4 GS (OL)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Proposed for 2026",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 D-2, 2 D-1, 3 P-5, 2 P-4, 2 P-3, 1 GS (PL), 4 GS (OL)",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 31.III.8",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed posts by category and grade (jointly financed)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Number of posts)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Category and grade",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 proposed",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Professional and higher",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "D-2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "D-1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "10",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "10",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General Service and related",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "GS (PL)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "GS (OL)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.III.20\tAdditional details on the distribution of the proposed resources for 2026 are reflected in table 31.III.10 and figure 31.III.I.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.III.21\tAs shown in table 31.III.6, the overall resources proposed for 2026 amount to $4,522,600, reflecting a decrease of $179,500 (or 3.8 per cent) compared with the approved budget for 2025. Resource changes result from other changes.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.III.22\tGiven that the activities of the CEB secretariat are jointly funded by agencies, funds and programmes of the United Nations common system, the budget estimates have been established after consultation with the Finance and Budget Network of the High-level Committee on Management of CEB conducted in March 2025. The Network reviewed the budget proposed by the CEB secretariat (including for the International Public Sector Accounting Standards (IPSAS) project) for 2026 following the same process outlined under paragraph 31.I.25 above for ICSC. The CEB secretariat presented two scenarios for 2026: one with a zero nominal growth and a second with an approximately 20 per cent reduction in non-post resources, as further detailed below. The Network endorsed the second scenario, with a 2026 budget level of $4,522,600 for the CEB secretariat (including $238,600 for the IPSAS project).",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.III.23\tAs shown in table 31.III.10, resource changes result from a reduction of $179,500 under other changes in compliance with a decision of the Finance and Budget Network on the level of resources for 2026 for the CEB secretariat, reflecting decreases under (a) other staff costs ($46,200) resulting from the downward reclassification of the temporary position for the IPSAS project from the P-5 to the P-3 level; (b) contractual services ($64,300); (c) general operating expenses ($22,400); (d) travel of staff ($17,000); (e) supplies and materials ($12,200); (f) furniture and equipment ($9,300); and (g) consultants ($8,100).",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.III.24\tIn accordance with the 2030 Agenda for Sustainable Development, in particular target 12.6 of the Sustainable Development Goals, in which organizations are encouraged to integrate sustainability information into their reporting cycles, and in compliance with the cross-cutting mandate set out in paragraph 19 of General Assembly resolution 72/219, CEB is integrating environmental management practices into its operations. In 2026, in line with the Strategy for Sustainability Management in the United Nations System, 2020–2030, the CEB secretariat will continue to ensure that all meetings that it supports are single-use-plastic-free and paper-free to reduce waste and cut carbon emissions, as well as continue to promote an eco-friendly culture.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "72/219",
+                      "https://docs.un.org/en/A/RES/72/219"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.III.25\tInformation on the timely submission of documentation and advance booking for air travel is reflected in table 31.III.9. The CEB secretariat will continue to track compliance and to pursue the advance planning and nomination of travelling staff to meetings and conferences, whenever possible.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 31.III.9",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Compliance rate",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Percentage)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2022 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2023 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 planned",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 planned",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Timely submission of documentation",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Air tickets purchased at least two weeks before the commencement of travel",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "92.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "92.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "97.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 31.III.10",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial and post resources (jointly financed)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Thousands of United States dollars/number of posts)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Posts",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 796.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 797.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 797.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Non-post",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "711.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "905.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(179.5)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(179.5)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(19.8)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "725.5",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4 508.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4 702.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(179.5)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(179.5)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(3.8)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4 522.6",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Professional and higher",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "10",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "10",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General Service and related",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "figure",
+                  "text": "Figure 31.III.I",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Distribution of proposed resources for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Number of posts/thousands of United States dollars)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "image",
+                  "text": "",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub",
+          "text": "Regular budget",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "table",
+              "text": "Table 31.III.11",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial resources (United Nations share)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Thousands of United States dollars)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate (before recosting)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Object of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate (before recosting)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Non-post",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tGrants and contributions",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 318.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 408.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(17.6)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(53.1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(70.7)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(5.0)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 337.8",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 318.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 408.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(17.6)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(53.1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(70.7)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(5.0)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 337.8",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.III.26\tThe proposed regular budget resources for 2026 amount to $1,337,800 and reflect a decrease of $70,700 (or 5.0 per cent) compared with the approved budget for 2025. As reflected in table 31.III.11, resource changes result from technical adjustments and other changes, as follows:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tTechnical adjustments: A decrease of $17,600 resulting from a reduction in the United Nations Secretariat share of the budget of the CEB secretariat from 29.9 per cent for 2025 to 29.6 per cent for 2026, as determined by the CEB secretariat in accordance with the established methodology;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tOther changes: A decrease of $53,100, reflecting the United Nations Secretariat share (29.6 per cent) of the proposed decrease presented above under jointly funded resources ($179,500).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

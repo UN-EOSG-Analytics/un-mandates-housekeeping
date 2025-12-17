@@ -1,0 +1,4100 @@
+{
+  "entity": "International Civil Service Commission",
+  "entity_abbrev": "ICSC",
+  "entity_raw_name": "I.\tInternational Civil Service Commission",
+  "source_file": "A_80_6_SECT.31.json",
+  "content": [
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.I.1\tThe International Civil Service Commission (ICSC) was established pursuant to General Assembly resolution 3357 (XXIX) and is responsible for the regulation and coordination of the conditions of service for the United Nations common system. Under its statute, the Commission is a subsidiary organ of the Assembly. In the exercise of its functions, the Commission is guided by the principles set out in the agreements between the United Nations and other organizations aimed at the development of a single unified international civil service through the application of common personnel standards, methods and arrangements.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "3357 (XXIX)",
+                      "https://docs.un.org/en/A/RES/3357(XXIX)"
+                    ]
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.I.2\tThe objective, to which ICSC contributes, is to ensure fair and harmonized conditions of service for staff in the United Nations common system.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.I.3\tTo contribute to the objective, the Commission will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tContinue to develop and strengthen a common system of salaries, allowances and benefits under the Noblemaire and Flemming principles;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tApply the methodologies for determining salaries and post adjustment classifications;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tProvide guidance and advice on the administration of human resources management policies and systems, including job evaluation standards and tools, for all stakeholders;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tLend its expertise to stakeholders and work closely with the Human Resources Network of the United Nations System Chief Executives Board for Coordination (CEB);",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tSeek feedback from organizations on the conditions of service of staff;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(f)\tConduct workshops to educate staff on the work of the Commission and on the benefits and entitlements available to staff of the United Nations common system;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(g)\tMonitor and report to the General Assembly on the implementation of its decisions by common system organizations, and recommend appropriate measures to ensure compliance;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(h)\tAnalyse the conditions of service of staff in difficult duty stations;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-3",
+                          "text": "(i)\tPeriodically conduct comprehensive reviews of the common system compensation package;",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(j)\tExplore options for non-financial incentives for staff of the common system.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.I.4\tIn an effort to increase diversity and rejuvenate the workforce within the common system, the Commission will continue monitoring trends in the common system organizations and propose relevant updates to the General Assembly on any new developments as they relate to geographical diversity and the rejuvenation of the workforce.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.I.5\tThe above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tThe promotion of geographical diversity and rejuvenation of the workforce;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tA coherent, attractive and effective common-system human resources management system that is aligned closely with the achievement of organizational goals and objectives;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tAdequate conditions of service for all categories of staff.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.I.6\tWith regard to the external factors, the overall plan for 2026 is based on the planning assumption that organizations of the United Nations common system provide timely information, as requested by the Commission, and that they fully implement the Commission’s decisions and recommendations.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.I.7\tWith regard to cooperation with other entities at the global, regional, national and local levels, the Commission will continue to conduct reference checks with other international organizations to ascertain whether the organizations of the common system remain competitive and continue to be attractive on the labour market.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.I.8\tWith regard to inter-agency coordination and liaison, within the United Nations common system, the Commission will continue to engage with staff and heads of common system organizations through various forums. Engaging with staff and management of the various organizations will strengthen existing partnerships and lead to greater cooperation among stakeholders and full implementation of decisions and recommendations of the Commission and the General Assembly. This will also contribute to the timely completion of reviews requested of the Commission.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.I.9\tThe Commission integrates a gender perspective in its operational activities, deliverables and results, as appropriate. In 2026, the Commission will update the General Assembly on the implementation of existing gender parity policies in the United Nations common system and report on the implementation of the Commission’s recommendations. The Commission will also conduct an assessment and review of the implementation of the parental leave framework, in accordance with General Assembly resolution 77/256 A–B.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "77/256",
+                      "https://docs.un.org/en/A/RES/77/256A-B"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.I.10\tIn line with the United Nations Disability Inclusion Strategy, the Commission will continue to review the methodology and level of the allowance for a child with disabilities in conjunction with children’s and secondary dependants’ allowances and consider any additional measures in the context of the ongoing comprehensive review.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Greater consistency among United Nations common system organizations on the application of post adjustment multipliers",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "31.I.11\tIn its resolution 74/255 B, the General Assembly expressed concern at the application of two concurrent post adjustment multipliers in the United Nations common system at the Geneva duty station and noted with concern that the organizations of the common system faced the challenge of having two independent administrative tribunals with concurrent jurisdiction among organizations of the common system. Following several consultations by the Commission and the Secretary-General with the Fifth and Sixth Committees of the General Assembly, the Assembly, in its resolution 77/256 A, decided to amend articles 10 and 11 of the statute of the Commission and reaffirmed the authority and competence of the Commission to establish post adjustment multipliers for duty stations in the United Nations common system, under article 11 (c) of the statute. The Assembly, in the same resolution, invited common system organizations to complete, as quickly as practicable, formal acceptance of the amended statute and called upon all organizations that had not done so to implement the post adjustment multipliers established by the Commission, based on the results of the 2021 baseline cost-of-living surveys. The Commission engaged closely with common system organizations to promote implementation of the Assembly’s decisions. By the end of 2024, 24 out of 28 organizations had formally adopted the changes to the Commission’s statute.",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "74/255",
+                          "https://docs.un.org/en/A/RES/74/255a-b"
+                        ],
+                        [
+                          "77/256",
+                          "https://docs.un.org/en/A/RES/77/256a-b"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "31.I.12\tProgress towards the objective is presented in the performance measure below (table 31.I.1).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table",
+                      "text": "Table 31.I.1",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "The General Assembly decided to amend articles 10 and 11 of the statute of the Commission and reaffirmed the authority and competence of the Commission to establish post adjustment multipliers for duty stations in the United Nations common system, under article 11 (c) of the statute",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "23 out of 28 organizations formally adopted the changes to the Commission’s statute",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "24 out of 28 organizations formally adopted the changes to the Commission’s statute",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned results for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 1: a common system compensation package that is fit for purpose, competitive and cost-efficient – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "31.I.13\tThe Commission’s work contributed to organizations, staff representatives and staff members indicating their satisfaction with the common system compensation package through the global staff survey with a higher response rate than usual (a 27 per cent response rate compared with 21 per cent in the previous survey), which met the planned target.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "31.I.14\tProgress towards the objective and the target for 2026 are presented in the performance measure below (see table 31.I.2).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table",
+                      "text": "Table 31.I.2",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "The General Assembly requested a detailed outline of the Commission’s approach for the next review of the common system compensation package, including the structure, parameters and timelines",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The General Assembly considered a detailed outline of the review of the common system compensation package, which was expected to commence in 2024",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Organizations, staff representatives and staff members indicated their satisfaction with the common system compensation package with a higher response rate than usual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The General Assembly considers a progress report of the Commission on the comprehensive review of the compensation package",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The General Assembly considers a proposal by the Commission with respect to the common system compensation package",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "The General Assembly decided to continue the pilot study and to grant, on a pilot basis also, $14,000 annually to eligible staff members in category D duty stations not designated as non-family until 31 December 2024",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Attraction and retention of staff, especially women, in duty stations classified as undergoing extreme hardship",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The General Assembly approved the continuation of the pilot programme for payment of an amount in lieu of a settling-in grant at category D and E duty stations that are not designated as non-family until the conclusion of the comprehensive review of the compensation package (A/RES/79/252 A)",
+                            "hyperlinks": [
+                              [
+                                "A/RES/79/252",
+                                "https://docs.un.org/en/A/RES/79/252a-b"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Approval by the General Assembly of the Commission’s recommendation to regularize the payment of an allowance at duty stations with extreme hardship conditions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Presentation by the Commission to the General Assembly of its final proposal regarding the pilot programme ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "A/RES/79/252",
+                          "https://docs.un.org/en/A/RES/79/252a-b"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Common system organizations and staff provided feedback on issues with the application of the standards",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Legal offices of all common system organizations provided their views on the proposed revised standards",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The General Assembly considers the revised standards ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Common system organizations adopt the new standards, subject to approval of the standards by the General Assembly",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 2: more flexibility afforded to staff working in extreme hardship locations – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "31.I.15\tThe Commission’s work contributed to its recommendation on the payment of an allowance in different categories of duty stations, including non-family duty stations, and to the approval by the General Assembly of the continuation of the pilot programme for payment of an amount in lieu of a settling-in grant at category D and E duty stations that are not designated as non-family until the conclusion of the comprehensive review of the compensation package, which met the planned target.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "31.I.16\tProgress towards the objective and the target for 2026 are presented in the performance measure below (see table 31.I.3).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table",
+                      "text": "Table 31.I.3",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "The General Assembly requested a detailed outline of the Commission’s approach for the next review of the common system compensation package, including the structure, parameters and timelines",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The General Assembly considered a detailed outline of the review of the common system compensation package, which was expected to commence in 2024",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Organizations, staff representatives and staff members indicated their satisfaction with the common system compensation package with a higher response rate than usual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The General Assembly considers a progress report of the Commission on the comprehensive review of the compensation package",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The General Assembly considers a proposal by the Commission with respect to the common system compensation package",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "The General Assembly decided to continue the pilot study and to grant, on a pilot basis also, $14,000 annually to eligible staff members in category D duty stations not designated as non-family until 31 December 2024",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Attraction and retention of staff, especially women, in duty stations classified as undergoing extreme hardship",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The General Assembly approved the continuation of the pilot programme for payment of an amount in lieu of a settling-in grant at category D and E duty stations that are not designated as non-family until the conclusion of the comprehensive review of the compensation package (A/RES/79/252 A)",
+                            "hyperlinks": [
+                              [
+                                "A/RES/79/252",
+                                "https://docs.un.org/en/A/RES/79/252a-b"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Approval by the General Assembly of the Commission’s recommendation to regularize the payment of an allowance at duty stations with extreme hardship conditions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Presentation by the Commission to the General Assembly of its final proposal regarding the pilot programme ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "A/RES/79/252",
+                          "https://docs.un.org/en/A/RES/79/252a-b"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Common system organizations and staff provided feedback on issues with the application of the standards",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Legal offices of all common system organizations provided their views on the proposed revised standards",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The General Assembly considers the revised standards ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Common system organizations adopt the new standards, subject to approval of the standards by the General Assembly",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 3: revised standards of conduct to guide organizations on emerging issues – Proposed programme plan for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "31.I.17\tThe standards of conduct for the international civil service were first issued in 1954 and were intended to be a behavioural and ethical guide to inform and inspire staff. The passage of time and the emergence of new ethical challenges have created a need for clearer standards in relation to contacts outside the common system and more transparent accountability systems. The standards were reissued in 1986 and revised in 1998, 2001 and 2012. In 2022, the Commission decided to revise the current standards to ensure that they continued to meet the needs of the organizations. The focus was on external interactions, including political activities and conflict of interest; internal issues such as abuse of authority, harassment, all forms of violence, strengthening of accountability, duty of care and staff-management relations; and emerging issues. The Commission created a working group comprising staff, organizations and the Commission and will present the changes in its 2025 annual report, for roll-out in 2026.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "italic",
+                      "text": "Lessons learned and planned change",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "31.I.18\tThe lesson for the Commission was that any preliminary findings when undertaking such reviews should be shared widely with relevant legal offices within common system organizations before finalizing any changes. In applying the lesson, the Commission will continue to proactively engage with legal experts within the organizations to solicit their views prior to publication so that changes can be implemented by organizations, subject to their approval by the General Assembly.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "31.I.19\tExpected progress towards the objective is presented in the performance measure below (see table 31.I.4).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table",
+                      "text": "Table 31.I.4",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "The General Assembly requested a detailed outline of the Commission’s approach for the next review of the common system compensation package, including the structure, parameters and timelines",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The General Assembly considered a detailed outline of the review of the common system compensation package, which was expected to commence in 2024",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Organizations, staff representatives and staff members indicated their satisfaction with the common system compensation package with a higher response rate than usual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The General Assembly considers a progress report of the Commission on the comprehensive review of the compensation package",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The General Assembly considers a proposal by the Commission with respect to the common system compensation package",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "The General Assembly decided to continue the pilot study and to grant, on a pilot basis also, $14,000 annually to eligible staff members in category D duty stations not designated as non-family until 31 December 2024",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Attraction and retention of staff, especially women, in duty stations classified as undergoing extreme hardship",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The General Assembly approved the continuation of the pilot programme for payment of an amount in lieu of a settling-in grant at category D and E duty stations that are not designated as non-family until the conclusion of the comprehensive review of the compensation package (A/RES/79/252 A)",
+                            "hyperlinks": [
+                              [
+                                "A/RES/79/252",
+                                "https://docs.un.org/en/A/RES/79/252a-b"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Approval by the General Assembly of the Commission’s recommendation to regularize the payment of an allowance at duty stations with extreme hardship conditions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Presentation by the Commission to the General Assembly of its final proposal regarding the pilot programme ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "A/RES/79/252",
+                          "https://docs.un.org/en/A/RES/79/252a-b"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Common system organizations and staff provided feedback on issues with the application of the standards",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Legal offices of all common system organizations provided their views on the proposed revised standards",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The General Assembly considers the revised standards ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Common system organizations adopt the new standards, subject to approval of the standards by the General Assembly",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Legislative mandates",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.I.20\tThe list below provides all mandates entrusted to the Commission.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "italic",
+                  "text": "General Assembly resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "3357 (XXIX)",
+                            "hyperlinks": [
+                              [
+                                "3357 (XXIX)",
+                                "https://docs.un.org/en/A/RES/3357(XXIX)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Statute of the International Civil Service Commission",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "76/240; 77/256 (A–B); 79/252 (A–B)",
+                            "hyperlinks": [
+                              [
+                                "76/240",
+                                "https://docs.un.org/en/A/RES/76/240"
+                              ],
+                              [
+                                "77/256",
+                                "https://docs.un.org/en/A/RES/77/256a-b"
+                              ],
+                              [
+                                "79/252",
+                                "https://docs.un.org/en/A/RES/79/252a-b"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "United Nations common system",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "3357 (XXIX)",
+                          "https://docs.un.org/en/A/RES/3357(XXIX)"
+                        ],
+                        [
+                          "76/240",
+                          "https://docs.un.org/en/A/RES/76/240"
+                        ],
+                        [
+                          "77/256",
+                          "https://docs.un.org/en/A/RES/77/256a-b"
+                        ],
+                        [
+                          "79/252",
+                          "https://docs.un.org/en/A/RES/79/252a-b"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.I.21\tTable 31.I.5 lists all deliverables of the Commission.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 31.I.5",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tInternational Civil Service Commission annual report",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "56",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "119",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "119",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "119",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tMeetings of:",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tThe Fifth Committee",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3.\tThe Committee for Programme and Coordination",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4.\tThe Advisory Committee on Administrative and Budgetary Questions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5.\tThe Advisory Committee on Post Adjustment Questions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t6.\tThe International Civil Service Commission spring and summer sessions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "44",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "44",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "44",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "44",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t7.\tThe International Civil Service Commission on specific issues of conditions of service (working group)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "60",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "60",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "60",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSeminars, workshops and training events (number of days)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "20",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "20",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t8. \tWorkshops on the common system compensation package",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "20",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "20",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tPublications (number of publications)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "24",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "54",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "54",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "54",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t9.\tMonthly (or bimonthly) revisions and promulgations of post adjustment and rental subsidy thresholds",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "24",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "24",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "24",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t10.\tMonthly (or bimonthly) revisions and promulgations of approximately 400 daily subsistence allowance rates",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "24",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "24",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "24",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t11.\tSalaries and allowances booklet",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t12.\tPost adjustment booklet",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t13.\tGuide to mobility and hardship scheme and related arrangements",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t14.\tInformation on danger pay locations",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t15.\tRest and recuperation framework  ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConsultation, advice and advocacy: advice to the United Nations Appeals Tribunal and the International Labour Organization Administrative Tribunal on specific areas relating to human resources management; research papers on specific issues raised by Member States, organizations and staff representatives (restricted documents of the Commission); training on local salary survey and post adjustment methodologies; and information meetings with Member States and organizations outside the United Nations common system.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advice to the United Nations Appeals Tribunal and the International Labour Organization Administrative Tribunal on specific areas relating to human resources management; research papers on specific issues raised by Member States, organizations and staff representatives (restricted documents of the Commission); training on local salary survey and post adjustment methodologies; and information meetings with Member States and organizations outside the United Nations common system.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advice to the United Nations Appeals Tribunal and the International Labour Organization Administrative Tribunal on specific areas relating to human resources management; research papers on specific issues raised by Member States, organizations and staff representatives (restricted documents of the Commission); training on local salary survey and post adjustment methodologies; and information meetings with Member States and organizations outside the United Nations common system.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advice to the United Nations Appeals Tribunal and the International Labour Organization Administrative Tribunal on specific areas relating to human resources management; research papers on specific issues raised by Member States, organizations and staff representatives (restricted documents of the Commission); training on local salary survey and post adjustment methodologies; and information meetings with Member States and organizations outside the United Nations common system.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advice to the United Nations Appeals Tribunal and the International Labour Organization Administrative Tribunal on specific areas relating to human resources management; research papers on specific issues raised by Member States, organizations and staff representatives (restricted documents of the Commission); training on local salary survey and post adjustment methodologies; and information meetings with Member States and organizations outside the United Nations common system.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "E.\tEnabling deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "E.\tEnabling deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "E.\tEnabling deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "E.\tEnabling deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "E.\tEnabling deliverables",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tAdministration: International Civil Service Commission website; substantive documents for the Commission and the Advisory Committee on Post Adjustment Questions reports; and salary surveys and cost-of-living surveys for more than 60 field duty stations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tAdministration: International Civil Service Commission website; substantive documents for the Commission and the Advisory Committee on Post Adjustment Questions reports; and salary surveys and cost-of-living surveys for more than 60 field duty stations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tAdministration: International Civil Service Commission website; substantive documents for the Commission and the Advisory Committee on Post Adjustment Questions reports; and salary surveys and cost-of-living surveys for more than 60 field duty stations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tAdministration: International Civil Service Commission website; substantive documents for the Commission and the Advisory Committee on Post Adjustment Questions reports; and salary surveys and cost-of-living surveys for more than 60 field duty stations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tAdministration: International Civil Service Commission website; substantive documents for the Commission and the Advisory Committee on Post Adjustment Questions reports; and salary surveys and cost-of-living surveys for more than 60 field duty stations.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub",
+          "text": "Overview (jointly financed resources)",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "31.I.22\tThe proposed jointly financed resources for 2026, including the breakdown of resource changes, as applicable, are reflected in tables 31.I.6 to 31.I.8.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table",
+              "text": "Table 31.I.6",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial resources by object of expenditure (jointly financed)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Thousands of United States dollars)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Object of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Posts",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "8 032.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9 565.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9 565.0",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Other staff costs ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "77.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "159.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(0.8)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(0.8)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(0.5)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "158.5",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Non-staff compensation",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "637.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "646.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(3.1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(3.1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(0.5)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "643.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Hospitality ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3.9",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Consultants ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "270.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "634.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(3.1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(3.1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(0.5)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "631.6",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Travel of representatives",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "740.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "498.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "213.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "213.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "42.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "711.6",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Travel of staff ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "228.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "261.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(6.9)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(6.9)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "255.0",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Contractual services ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "103.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "374.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "128.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "128.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "34.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "502.2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General operating expenses",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 459.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 149.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(331.0)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(331.0)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(28.8)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "818.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Supplies and materials ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "36.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "40.0",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Furniture and equipment ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "64.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "64.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "11 563.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "13 393.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "13 393.1",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 31.I.7",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "image",
+                      "text": "",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "other",
+                      "text": "Note: The following abbreviations are used in tables and figures: GS (OL), General Service (Other level); GS (PL), General Service (Principal level).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed posts and post changes for 2026 (jointly financed)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Number of posts)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Number",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Details",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Approved for 2025",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "47",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 D-2, 3 D-1, 4 P-5, 11 P-4, 3 P-3, 4 P-2/1, 3 GS (PL), 18 GS (OL)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Proposed for 2026",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "47",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 D-2, 3 D-1, 4 P-5, 11 P-4, 3 P-3, 4 P-2/1, 3 GS (PL), 18 GS (OL)",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 31.I.8",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed posts by category and grade (jointly financed)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Number of posts)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Category and grade",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 proposed",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Professional and higher",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "D-2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "D-1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "11",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "11",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-2/1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "26",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "26",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General Service and related",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "GS (PL)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "GS (OL)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "18",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "18",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "21",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "21",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "47",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "47",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.I.23\tAdditional details on the distribution of the proposed resources for 2026 are reflected in table 31.I.10 and figure 31.I.I.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.I.24\tAs shown in table 31.I.6, the overall resources proposed for 2026 amount to $13,393,100, reflecting no change compared with the approved budget for 2025. The proposed level of resources provides for the full, efficient and effective implementation of mandates.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.I.25\tIn accordance with article 21 of the statute of the Commission, the budget estimates have been established after consultation with the Finance and Budget Network of the High-level Committee on Management of CEB conducted in March 2025. In the light of the ongoing significant financial constraints faced by United Nations system entities, in January 2025 the Network issued guidance to the jointly financed activities entities in formulating their 2026 budget proposals, noting that it was imperative that the 2026 budget formulation process reflect fiscal prudence and align with the financial realities of contributing organizations. To enable informed decision-making and flexibility in addressing financial constraints, the Network requested each jointly financed activities entity to submit to it two budget scenarios for 2026: one at zero growth and one with a 20 per cent reduction compared with the 2025 approved budget levels, with the caveat that if there were no vacant posts, the 20 per cent reduction might be applied to non-post resources only. That two-scenario approach was intended to enhance awareness among jointly financed activities entities of the financial challenges faced by contributing agencies, while ensuring a transparent, consultative and impact-driven decision-making process for the 2026 budgets. The Network reviewed the budget proposed by the Commission for 2026 and welcomed an initial proposal for a 5 per cent reduction, the Commission having indicated that achieving the requested 20 per cent reduction would be challenging without compromising its core functions. The Network nevertheless noted that there were clear opportunities for further reductions, including with respect to vacant posts in the Commission secretariat and with regard to travel, and requested the Commission to take the most prudent measures possible in finalizing the 2026 budget proposal for consideration by the General Assembly. The proposed resources for 2026 that are shown in the present budget submission are at the same level as those approved for 2025, as finalized by the Commission, with cost-neutral redeployments of resources mainly from general operating expenses to contractual services and travel of representatives.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.I.26\tIn accordance with the 2030 Agenda for Sustainable Development, in particular target 12.6 of the Sustainable Development Goals, in which the organizations are encouraged to integrate sustainability information into their reporting cycles, and in compliance with the cross-cutting mandate set out in paragraph 19 of General Assembly resolution 72/219, ICSC is integrating environmental management practices into its operations. In 2026, the Commission will continue its online repository, where most of its survey materials are deposited, and continue to encourage meeting participants to gain access to documents online, and, where not possible, documents have been emailed to meeting participants. Furthermore, with the use of Microsoft Teams, documents are shared with participants without the need to print hard copies. This has significantly reduced the number of documents printed and mailed.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "72/219",
+                      "https://docs.un.org/en/A/RES/72/219"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.I.27\tInformation on the timely submission of documentation and advance booking for air travel is reflected in table 31.I.9. The lower travel compliance rate was due to last-minute requests from organizations for the Commission to participate in meetings and training and late decisions by Commission members to attend meetings owing to their own obligations, as well as late visa approval for some Commission members. The Commission is faced with difficulty when staff and members of the Commission are invited to meetings on very short notice to discuss issues affecting staff in the United Nations common system.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 31.I.9",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Compliance rate",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Percentage)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2022 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2023 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 planned",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 planned",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Timely submission of documentation",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "97",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Air tickets purchased at least two weeks before the commencement of travel",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "73",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "74",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "77",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 31.I.10",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial and post resources (jointly financed)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Thousands of United States dollars/number of posts)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Posts",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "8 032.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9 565.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9 565.0",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Non-post",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 530.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 828.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "3 828.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "11 563.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "13 393.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "13 393.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Professional and higher",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "26",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "26",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General Service and related",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "21",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "21",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "47",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "47",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "figure",
+                  "text": "Figure 31.I.I",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Distribution of proposed resources for 2026 (before recosting)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Number of posts/thousands of United States dollars)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "image",
+                  "text": "",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub",
+          "text": "Regular budget",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "table",
+              "text": "Table 31.I.11",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Evolution of financial and post resources (United Nations share)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Thousands of United States dollars/number of posts)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate (before recosting)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate (before recosting)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Non-post",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tGrants and contributions",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4 896.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5 093.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "53.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "53.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5 147.0 ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4 896.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5 093.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "53.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "53.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5 147.0 ",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "31.I.28\tThe proposed regular budget resources for 2026 amount to $5,147,000 and reflect an increase of $53,200 (or 1.0 per cent) compared with the approved budget for 2025. As shown in table 31.I.11, resource changes result from technical adjustments ($53,200) due to an increase in the United Nations Secretariat share of the budget of the Commission, from 38.0 per cent for 2025 to 38.4 per cent for 2026, as determined by the CEB secretariat in accordance with the established methodology.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

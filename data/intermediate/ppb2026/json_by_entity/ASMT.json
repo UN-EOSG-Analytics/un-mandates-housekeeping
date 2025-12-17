@@ -1,0 +1,1843 @@
+{
+  "entity": "Analytical Support and Sanctions Monitoring Team pursuant to resolutions 1526 (2004) and 2253 (2015) concerning Islamic State in Iraq and the Levant (Da’esh), Al-Qaida and the Taliban and associated individuals and entities",
+  "entity_abbrev": "ASMT",
+  "entity_raw_name": "8.\tAnalytical Support and Sanctions Monitoring Team pursuant to resolutions 1526 (2004) and 2253 (2015) concerning Islamic State in Iraq and the Levant (Da’esh), Al-Qaida and the Taliban and associated individuals and entities",
+  "source_file": "A_80_6 (SECT. 3)_ADD.3_CLUSTER II_FASCICLE ADVANCE UNEDITED COPY FOR ACABQ.json",
+  "content": [
+    {
+      "block_type": "italic",
+      "text": "($6,003,300)",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": []
+    },
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Analytical Support and Sanctions Monitoring Team, which supports the work of both the Security Council Committee pursuant to resolutions 1267 (1999), 1989 (2011) and 2253 (2015) concerning Islamic State in Iraq and the Levant (Da’esh), Al-Qaida and associated individuals, groups, undertakings and entities (the ISIL (Da’esh) and Al-Qaida Sanctions Committee), and the Security Council Committee established pursuant to resolution 1988 (2011), is responsible for assisting in and reporting on the implementation of the asset freezes, travel bans and targeted arms embargoes on designated individuals and entities. The mandate is derived from the priorities established in the relevant Council resolutions, including resolution 1267 (1999), and renewed in its subsequent resolutions, including, most recently, 2734 (2024), 2761 (2024) and 2763 (2024). The sanctions regimes are aimed at strengthening the Council’s response to threats to international peace and security caused by terrorist acts and at contributing to the peace, stability and security of Afghanistan.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "1267 (1999)",
+                      "https://undocs.org/en/S/RES/1267(1999)"
+                    ],
+                    [
+                      "1989 (2011)",
+                      "https://undocs.org/en/S/RES/1989(2011)"
+                    ],
+                    [
+                      "2253 (2015)",
+                      "https://undocs.org/en/S/RES/2253(2015)"
+                    ],
+                    [
+                      "1988 (2011)",
+                      "https://undocs.org/en/S/RES/1988(2011)"
+                    ],
+                    [
+                      "1267 (1999)",
+                      "https://undocs.org/en/S/RES/1267(1999)"
+                    ],
+                    [
+                      "2734 (2024)",
+                      "https://undocs.org/en/S/RES/2734(2024)"
+                    ],
+                    [
+                      "2761 (2024)",
+                      "https://undocs.org/en/S/RES/2761(2024)"
+                    ],
+                    [
+                      "2763 (2024)",
+                      "https://undocs.org/en/S/RES/2763(2024)"
+                    ]
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The objective, to which this mission contributes, is to ensure the full implementation of sanctions regimes concerning ISIL (Da’esh), Al-Qaida and the Taliban, which include targeted arms embargoes, asset freezes and travel bans.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "To contribute to the objective, the Monitoring Team will provide updated information to the Security Council, the ISIL (Da’esh) and Al-Qaida Sanctions Committee, and the Security Council Committee established pursuant to resolution 1988 (2011).",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "1988 (2011)",
+                      "https://undocs.org/en/S/RES/1988(2011)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The above-mentioned work is expected to result in an enhanced capacity of the Council and the Committees to take follow-up action on alleged violations of the sanctions regimes.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to cooperation with other entities, in the context of information-sharing the Monitoring Team cooperates with, among others, Member States, the International Air Transport Association, the International Civil Aviation Organization, the World Customs Organization, the Financial Action Task Force and INTERPOL.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to inter-agency coordination and liaison, the Monitoring Team cooperates with, among others, the Counter-Terrorism Committee Executive Directorate, the Office of Counter-Terrorism, the mission assisting the Security Council Committee established pursuant to resolution 1540 (2004), the Office of the Ombudsperson established pursuant to Security Council resolution 1904 (2009), the Focal Point for Delisting to support the review of petitioners’ exemptions requests, the United Nations Office on Drugs and Crime (UNODC), the United Nations Assistance Mission in Afghanistan (UNAMA), and other sanctions monitoring teams, groups and panels, as appropriate. In the context of safety and security, information technology security and logistics, the Monitoring Team cooperates with the Department of Safety and Security, the Office of Information and Communications Technology, United Nations field missions and UNDP, as appropriate.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "1540 (2004)",
+                      "https://undocs.org/en/S/RES/1540(2004)"
+                    ],
+                    [
+                      "1904 (2009)",
+                      "https://undocs.org/en/S/RES/1904(2009)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to the external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tMember States comply with the resolutions of the Security Council and cooperate with the Monitoring Team;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tThe security situation allows the Monitoring Team to conduct missions, as needed.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Enhanced analysis to follow an evolving threat",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "To assist in addressing the global terrorism threat posed by ISIL (Da’esh) and Al-Qaida and the threat posed by the Taliban to the peace, stability and security of Afghanistan, and to fully implement sanctions measures, the Monitoring Team submitted nine reports to the Security Council or the Committees in 2024, providing analysis on evolving global terrorism threat, and two reports on the situation in Afghanistan. The Monitoring Team gathered information from Member States, including the de facto authorities in Afghanistan, regional organizations, and other stakeholders, and used databases and subscriptions procured by the United Nations to conduct research.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective is presented in the performance measure below (see table 38).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 38 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Security Council and Committees had comprehensive information on the terrorist threat and the Taliban, and Committees considered exemptions, amendments to listings and new designations",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Security Council and Committees had comprehensive information on the terrorist threat and the Taliban, and Committees considered exemptions, amendments to listings and new designations",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Security Council and Committees had comprehensive information on the terrorist threat and the Taliban, and Committees considered exemptions, amendments to listings and new designations",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned result for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Strengthened analysis to follow an evolving threat – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Through its engagement with Member States and with other stakeholders, the Monitoring Team met the planned target. In 2024, the Committees considered new designations and removed one individual from the ISIL (Da’esh) and Al-Qaida sanctions list. The Committee also approved amendments to the entries of 6 individuals and 1 entity on the ISIL (Da’esh) and Al-Qaida sanctions list. In 2024, the Committees also approved exemptions from existing sanctions measures.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "italic",
+                      "text": "Lessons learned and planned change",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "The lesson for the Monitoring Team was the continued need to seek efficiencies in planning in-person meetings with Member States, regional organizations, and other stakeholders to gather sensitive and confidential information and to provide tailored training to Member States on sanctions implementation. In applying the lesson, the Monitoring Team will continue to optimize its visits, regional meetings and participation in multilateral meetings to sustain in-person confidential discussions with Member States, regional organizations, and other stakeholders. The Monitoring Team will continue to hold virtual meetings using communication technology and benefit from databases and subscriptions procured by the United Nations for research.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective and the target for 2026 are presented in the performance measure below (see table 39).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 39 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Security Council and Committees had comprehensive information on the terrorist threat and the Taliban; and Committees considered exemptions, amendments to listings and new designations",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Security Council and Committees had comprehensive information on the terrorist threat and the Taliban, Committees considered exemptions and amendments to listings, and the Council and Committees considered new designations ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Security Council and Committees had comprehensive information on the terrorist threat and the Taliban; Committees considered exemptions and amendments to listings; and the Council and Committees considered new designations",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Security Council and Committees have comprehensive information on the terrorist threat and the Taliban; Committees consider exemptions and amendments to listings; and the Council and Committees consider new designations",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Security Council and Committees have comprehensive information on the terrorist threat, the Taliban and violations of standing humanitarian exemptions; Committees consider exemptions and amendments to listings; and the Council and Committees consider new designations",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Table 40 lists all deliverables of the mission.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 40 – Deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "11",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tReports to the Security Council and updates, monthly reports, country visit reports and/or reports on outreach activities to the sanctions committees ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "11",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "33",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "27",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "25",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "25",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tMeetings of sanctions committees",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "20",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "11",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3.\tChair’s briefings to Member States",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4.\tRegional meetings for security and intelligence services on the threat posed by Da’esh and Al-Qaida and the implementation of the sanctions regime",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "13",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConference and secretariat services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "33",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "27",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "25",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "25",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5.\tMeetings of sanctions committees",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "20",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "11",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t6.\tChair’s briefings to Member States",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "7.\tRegional meetings for security and intelligence services on the threat posed by Da’esh and Al-Qaida and the implementation of the sanctions regime",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "13",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSeminars, workshops and training events (number of days)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "97",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "62",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "95",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "100",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t8.\tRegional workshops on the implementation of relevant resolutions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "90",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "46",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "90",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "90",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t9.\tInduction seminar for new members of the Monitoring Team and other training sessions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "16",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tFact-finding and monitoring missions (number of missions)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "35",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "45",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "40",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "40",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t10.\tMissions to gather information relating to compliance with the sanctions regime",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "35",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "45",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "40",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "40",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConsultation, advice and advocacy: recommendations concerning individuals and entities to be listed; consultations with Member States on the implementation of sanctions regimes; consultations and advice to broaden engagement with international, regional, subregional and other organizations; and advice on the implementation of relevant resolutions.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: recommendations concerning individuals and entities to be listed; consultations with Member States on the implementation of sanctions regimes; consultations and advice to broaden engagement with international, regional, subregional and other organizations; and advice on the implementation of relevant resolutions.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: recommendations concerning individuals and entities to be listed; consultations with Member States on the implementation of sanctions regimes; consultations and advice to broaden engagement with international, regional, subregional and other organizations; and advice on the implementation of relevant resolutions.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: recommendations concerning individuals and entities to be listed; consultations with Member States on the implementation of sanctions regimes; consultations and advice to broaden engagement with international, regional, subregional and other organizations; and advice on the implementation of relevant resolutions.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: recommendations concerning individuals and entities to be listed; consultations with Member States on the implementation of sanctions regimes; consultations and advice to broaden engagement with international, regional, subregional and other organizations; and advice on the implementation of relevant resolutions.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDatabases and substantive digital materials: implementation, dissemination and maintenance of the enhanced data model and archives of documents collected by the Monitoring Team.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: implementation, dissemination and maintenance of the enhanced data model and archives of documents collected by the Monitoring Team.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: implementation, dissemination and maintenance of the enhanced data model and archives of documents collected by the Monitoring Team.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: implementation, dissemination and maintenance of the enhanced data model and archives of documents collected by the Monitoring Team.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: implementation, dissemination and maintenance of the enhanced data model and archives of documents collected by the Monitoring Team.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: outreach programmes to report on the work of the Monitoring Team; fact sheets on the work and mandate of the special political mission; and notes verbales on the activities of the sanctions committees/Monitoring Team.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: outreach programmes to report on the work of the Monitoring Team; fact sheets on the work and mandate of the special political mission; and notes verbales on the activities of the sanctions committees/Monitoring Team.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: outreach programmes to report on the work of the Monitoring Team; fact sheets on the work and mandate of the special political mission; and notes verbales on the activities of the sanctions committees/Monitoring Team.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: outreach programmes to report on the work of the Monitoring Team; fact sheets on the work and mandate of the special political mission; and notes verbales on the activities of the sanctions committees/Monitoring Team.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: outreach programmes to report on the work of the Monitoring Team; fact sheets on the work and mandate of the special political mission; and notes verbales on the activities of the sanctions committees/Monitoring Team.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tExternal and media relations: press releases on the activities of the sanctions committees/Monitoring Team.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: press releases on the activities of the sanctions committees/Monitoring Team.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: press releases on the activities of the sanctions committees/Monitoring Team.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: press releases on the activities of the sanctions committees/Monitoring Team.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: press releases on the activities of the sanctions committees/Monitoring Team.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDigital platforms and multimedia content: dissemination of information on the activities and mandates of the sanctions committees/Monitoring Team through their websites.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: dissemination of information on the activities and mandates of the sanctions committees/Monitoring Team through their websites.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: dissemination of information on the activities and mandates of the sanctions committees/Monitoring Team through their websites.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: dissemination of information on the activities and mandates of the sanctions committees/Monitoring Team through their websites.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: dissemination of information on the activities and mandates of the sanctions committees/Monitoring Team through their websites.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Resource requirements (regular budget) – Table 41 – Financial resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Variance",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 vs. 2025 Increase/(decrease)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 vs. 2025 Increase/(decrease)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Military and police personnel  ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Civilian personnel ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 193.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 925.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 832.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 832.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 652.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 652.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(180.4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(180.4)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Operational costs ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 323.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 804.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 325.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 325.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 350.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 350.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "25.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "25.6",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal (net of staff assessment) ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6 516.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5 729.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6 158.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6 158.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6 003.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6 003.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(154.8)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(154.8)",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Table 42 – Human resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "USG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "ASG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "FS",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "NPO",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "NPO",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "GS",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "LL",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Approved 2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "11",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8a",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "19",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Proposed 2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "11",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6a",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "17",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tChange ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "a\tOther level, unless otherwise stated.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The proposed resource requirements for the Monitoring Team for 2026 amount to $6,003,300 (net of staff assessment) and would provide for salaries and common staff costs ($2,652,400) for the continuation of 17 posts (1 P-5, 4 P-4, 6 P-3 and 6 General Service (Other level)) to provide substantive and administrative support to the sanctions regimes, and operational costs ($3,350,900) comprising expert fees ($2,178,100) and travel of experts ($401,700), official travel of staff ($89,200) and other operational and logistical support requirements, including the rental of premises, communications and information technology services and other supplies, services and equipment ($618,900).",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "For 2026, the following changes are proposed to the number and level of posts for the mission, reflecting efforts to enhance operational efficiency and streamline functions through consolidation and the improved use of technology:",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(a)\tAbolishment of one Administrative Assistant (General Service (Other level)) staff in New York, by leveraging digital tools and redistributing functions to avoid duplication; and",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(b)\tAbolishment of one Administrative Assistant (General Service (Other Level)) staff in New York, by consolidating for a more integrated and flexible allocation of human resources, while maintaining service delivery standards.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "A vacancy rate of 14.4 per cent has been applied to the staff costs for international staff, while a rate of 38.5 per cent has been applied for national staff, both on the basis of the average vacancy rate in 2024.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The decrease in the requirements for 2026 compared with the appropriation for 2025 is attributable primarily to: (a) the abolishment of two General Service posts and the associate operational provisions; (b) the application of a higher vacancy rate for national staff compared to 2025; (c) lower requirements for telecommunications and network services; (d) the application of latest ICT standard rates; and (e) the discontinuation of the subscription to the BBC Monitoring Service as cost avoidance as comparable content is accessible through an alternative subscription already available to the Monitoring Team. The decrease is offset in part by increased requirements for expert fees and the application of a lower vacancy rate for international staff compared with the rate of 17.5 per cent applied in 2025.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2006 @@
+{
+  "entity": "Office of the Special Adviser to the Secretary-General on the Prevention of Genocide",
+  "entity_abbrev": "OSASG-PG",
+  "entity_raw_name": "2.\t\tOffice of the Special Adviser to the Secretary-General on the Prevention of Genocide",
+  "source_file": "A_80_6 (SECT. 3)_ADD.2_CLUSTER I_FASCICLE ADVANCE UNEDITED COPY FOR ACABQ.json",
+  "content": [
+    {
+      "block_type": "italic",
+      "text": "($3,857,500)",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": []
+    },
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The mission is mandated to collect information on massive and serious violations of human rights and international humanitarian law of ethnic and racial origin that, if not prevented or halted, may lead to genocide; to act as a mechanism of early warning to the Secretary-General and, through him, to the Security Council, by bringing to their attention situations that could potentially result in genocide; to make recommendations to the Council, through the Secretary-General, on action to prevent or halt genocide; and to liaise with the United Nations system on activities for the prevention of genocide and on work to enhance the capacity of the United Nations to analyse and manage information regarding genocide or related crimes.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The mandate derives from the invitation of the Security Council to the Secretary-General in its resolution 1366 (2001) to refer to the Council information and analysis from within the United Nations system on cases of serious violations of international law, including international humanitarian law and human rights law. The Special Adviser on the Prevention of Genocide was appointed through an exchange of letters between the Secretary-General and the President of the Security Council (S/2004/567 and S/2004/568). The responsibilities of the Special Adviser were listed in the letter of the Secretary-General (S/2004/567). The mandate has been reaffirmed through various resolutions of the Security Council, the General Assembly and the Human Rights Council. In its resolution 77/318, the General Assembly noted the role of the Special Adviser in the launch of the United Nations Strategy and Plan of Action on Hate Speech, as part of efforts to address and counter hate speech.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "1366 (2001)",
+                      "https://undocs.org/en/S/RES/1366(2001)"
+                    ],
+                    [
+                      "S/2004/567",
+                      "https://undocs.org/en/S/2004/567"
+                    ],
+                    [
+                      "S/2004/568",
+                      "https://undocs.org/en/S/2004/568"
+                    ],
+                    [
+                      "S/2004/567",
+                      "https://undocs.org/en/S/2004/567"
+                    ],
+                    [
+                      "77/318",
+                      "https://undocs.org/en/A/RES/77/318"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to the responsibility to protect, the General Assembly, in paragraphs 138 and 139 of its resolution 60/1 on the 2005 World Summit Outcome, addressed the responsibility of Member States and the international community to protect populations from genocide, war crimes, ethnic cleansing and crimes against humanity. The Security Council reaffirmed the provisions of paragraphs 138 and 139 of that resolution in its resolutions 1674 (2006) and 1706 (2006). Through an exchange of letters (S/2007/721 and S/2007/722), the Special Adviser to the Secretary-General on the Responsibility to Protect was appointed and charged with the conceptual, institutional and operational development of the principle and with continuing a political dialogue with Member States on its implementation. The Assembly, in resolution 75/277, included an item on the responsibility to protect on its agenda and requested the Secretary-General to report annually on that item.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "60/1",
+                      "https://undocs.org/en/A/RES/60/1"
+                    ],
+                    [
+                      "1674 (2006)",
+                      "https://undocs.org/en/S/RES/1674(2006)"
+                    ],
+                    [
+                      "1706 (2006)",
+                      "https://undocs.org/en/S/RES/1706(2006)"
+                    ],
+                    [
+                      "S/2007/721",
+                      "https://undocs.org/en/S/2007/721"
+                    ],
+                    [
+                      "S/2007/722",
+                      "https://undocs.org/en/S/2007/722"
+                    ],
+                    [
+                      "75/277",
+                      "https://undocs.org/en/A/RES/75/277"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In its resolutions 2150 (2014) and 2171 (2014), the Security Council recalled the important role of the Special Advisers on the Prevention of Genocide and on the Responsibility to Protect, whose functions included acting as an early warning mechanism to prevent  situations that could result in genocide, crimes against humanity, war crimes and ethnic cleansing.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "2150 (2014)",
+                      "https://undocs.org/en/S/RES/2150(2014)"
+                    ],
+                    [
+                      "2171 (2014)",
+                      "https://undocs.org/en/S/RES/2171(2014)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Designated by the Secretary-General as the UN focal point for the implementation of the 2019 UN Strategy and Plan of Action on Hate Speech, the Office recognizes hate speech as a risk factor and indicator for genocide. The importance of addressing hate speech, and the Special Adviser's role, is underscored by numerous UN resolutions, including General Aseembly resolutions 75/309 (2021) and 77/318 (2023), and Security Council resolution 2686 (2023). Furthermore, General Assembly resolution 78/282 mandates the establishment of an outreach programme on the Srebrenica Genocide, beginning in 2025, starting its activities with preparations for the commemoration of the thirtieth anniversary of this genocide in 2025, and to bring to the attention of all Member States, United Nations system and civil society organizations for appropriate observance.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The objective, to which this mission contributes, is to advance national, regional and international efforts to protect populations from genocide, war crimes, ethnic cleansing and crimes against humanity and their incitement.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "To contribute to the objective, the mission will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tRaise awareness of the causes and dynamics of genocide through predictive and action-oriented analysis, enhanced by the collection and sharing of information from field missions and regional offices in accordance with its early warning mandate;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tAlert relevant actors with respect to the risk of genocide, through the implementation of the United Nations Strategy and Plan of Action on Hate Speech, capacity-building and advocacy;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tAdvocate and mobilize for appropriate action to prevent the risk of genocide through engagement within the United Nations and with external partners;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tStrengthen community-level efforts for prevention, including by assisting locally led initiatives aimed at bringing communities together;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tHarness technology to enhance prevention and counter its negative impacts, as outlined in Human Rights Council resolution 49/9;",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "49/9",
+                          "https://undocs.org/en/A/hrc/RES/49/9"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(f)\tIncrease female participation in decision-making roles and support implementation of the plan of action for women in communities to counter hate speech and prevent incitement to violence that could lead to genocide and related crimes;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(g)\tPrioritize action against Holocaust and genocide denial and the glorification of war crimes and criminals;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(h)\tSupport the universal ratification of the Convention on the Prevention and Punishment of the Crime of Genocide, and support efforts towards its implementation at the national level through legislation and implementation mechanisms.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The above-mentioned work is expected to result in increased capacity and action by United Nations intergovernmental bodies, Member States and regional and subregional organizations to prevent and mitigate the risk of genocide, war crimes, ethnic cleansing and crimes against humanity, including their incitement.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to the external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tContinued commitment of Member States, the Security Council and other intergovernmental bodies to engage with the mission to advance the prevention of genocide, war crimes, ethnic cleansing and crimes against humanity and enhance efforts aimed at conceptualizing the principle of the responsibility to protect;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tActive engagement of Member States and regional and other organizations to develop preventive capacity and take appropriate action for the prevention of genocide, war crimes, ethnic cleansing and crimes against humanity, including their incitement.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to cooperation with other entities, the mission will continue to work and partner with regional organizations, including the African Union, the International Conference on the Great Lakes Region, the Economic Community of West African States, the Association of Southeast Asian Nations (ASEAN), the Organization of American States, the Organization for Security and Cooperation in Europe (OSCE) and the European Union, among others, as well as with civil society, including religious leaders, traditional leaders, academia and traditional media  on developing capacity and take appropriate action for the prevention of genocide, war crimes, ethnic cleansing and crimes against humanity, including their incitement, at national and regional level. In 2026, the Office will prioritize continuing and strengthening cooperation.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to inter-agency coordination and liaison, the mission works closely with and supports United Nations country teams on the implementation of the United Nations Strategy and Plan of Action on Hate Speech.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The mission integrates a gender perspective in its operational activities, deliverables and results, as appropriate. This includes reflecting the gender dynamics in its monitoring and analysis and striving for the equal participation of women in its capacity-building events and workshops.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In line with the United Nations Disability Inclusion Strategy, the mission has developed a guidance note on integrating disability inclusion in its programmes and activities, and has launched, in November 2024, a guidance note on persons with disabilities and the prevention of genocide, war crimes, ethnic cleansing and crimes against humanity and on addressing hate speech to support mental health.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Collection of information for early warning and prevention on the risk of genocide and related crimes",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2024, following Zambia's adoption of the Genocide Convention in 2022, and with support from the mission, the Zambian National Committee for the Prevention and Punishment of Genocide, War Crimes, Crimes against Humanity and all forms of Discrimination was launched and its members trained in Lusaka in March.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Also, four major policy documents aimed at addressing hate speech and advancing genocide prevention were adopted in 2024, providing communities with additional tools to address and respond to assessed risks. These advancements, coupled with the increased advocacy for prevention within the Mission's mandate following the adoption of General Assembly resolution 78/282 on the International Day of Reflection and commemoration of the 1995 Genocide in Srebrenica, contribute to global prevention efforts and fostering healing for affected communities.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective is presented in the performance measure below (see table 7).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 7 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "No comprehensive analysis of risk of genocide, war crimes, crimes against humanity and ethnic cleansing\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "No comprehensive analysis of risk of genocide, war crimes, crimes against humanity and ethnic cleansing\n\n\n\n\n\n\n\n\n\n\n\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Consultations with civil society representatives, community leaders, government representatives, and other relevant national actors are held; and an analysis of the risk of genocide, war crimes, crimes against humanity and ethnic cleansing is developed, with relevant recommendations shared with the Secretary-General, Government and Civil Society\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Contribution to global efforts protecting populations from genocide, war crimes, and crimes against humanity \nYear-long commemoration of the 30th anniversary of the 1994 Genocide against the Tutsi, culminating in a series of high-level events in Kigali, Rwanda\nLeaders and experts brought together to strengthen global genocide prevention initiatives  \nDiscussions and dialogues generated four key policy documents focused on bolstering prevention strategies",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned result for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Enhanced protection from atrocity crimes through improved awareness and prevention mechanisms, and better risk identification capabilities for Member States and regional organizations – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2024, the Mission’s work advanced national, regional and international efforts to protect populations from genocide, war crimes and crimes against humanity, and met the planned target by having 20 follow-up actions taken by Member States and regional organizations to mitigate the risk of such crimes. In 2024, the Special Adviser undertook 14 official visits, issued 28 public statements and sent eight internal notes to the Secretary-General. The mission conducted 17 workshops and eight technical assistance initiatives, supported the development of context-specific action plans on countering and addressing hate speech for six United Nations country teams and two subregions, and highlighted the voices of community-level actors through dedicated initiatives, including Sudanese women. The Mission also continued implementing its “Champions of prevention” initiative, aimed at providing visibility to community-level prevention work undertaken by civil society actors from Rwanda, Bosnia and Herzegovina, Iraq/Yazidi, Bangladesh/Rohingya and Cambodia, and advocacy campaigns were tied either to relevant international days or to Special Adviser’s missions on countering and addressing hate speech.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "italic",
+                      "text": "Lessons learned and planned change",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "The lesson for the mission is that collaborating with UN field entities, the International Residual Mechanism for Criminal Tribunals (IRMCT), and active NGOs and civil society organizations proved essential for expanding the Office's outreach and risk assessment capabilities. In applying the lessons, the Mission will prioritize strengthening these partnerships, particularly with NGOs and civil society organizations on the ground, to further build capacity in areas crucial for preventing genocide and related crimes.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Expected progress towards the objective and the target for 2026 are presented in the performance measure below (see figure III).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Figure III – Performance measure: number of follow-up actions taken by Member States and other actors, as a result of early warning and recommendations provided by the mission",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "image",
+                      "text": "",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Table 8 lists all deliverables of the Office.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 8 – Deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tReport of the Secretary-General on the responsibility to protect",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tReport of the Secretary-General on the prevention of genocide to the Human Rights Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3.\tMeetings of the General Assembly on the responsibility to protect",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4.\tMeetings of the Human Rights Council on the prevention of genocide",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tField and technical cooperation projects (number of projects)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5.\tProjects on national mechanisms, including legislation, for the prevention of genocide, war crimes, ethnic cleansing and crimes against humanity",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSeminars, workshops and training events (number of days)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "45",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "41",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "48",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "48",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t6.\tWorkshops on the prevention of genocide, war crimes, ethnic cleansing and crimes against humanity, including their incitement, and on the establishment and review of national and regional early warning mechanisms, including coordinated participation with the International Residual Mechanism for Criminal Tribunals in conferences, expert meetings, memorial events and meetings of victims",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "45",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "41",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "48",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "48",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tPublications (number of publications)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t7.\tPublications, including media and on electronic platforms, on the prevention of genocide, war crimes, ethnic cleansing and crimes against humanity ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTechnical materials (number of materials)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t8.\tGuidance notes and awareness materials on countering and addressing hate speech",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t9.\tGuidance notes on genocide denial and the prevention of genocide, war crimes, ethnic cleansing and crimes against humanity ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tFact-finding, monitoring and investigation missions (number of missions)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "11",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t10.\tHigh-level and country-specific assessment missions ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "11",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConsultation, advice and advocacy: advice on the risk of genocide, war crimes, ethnic cleansing and crimes against humanity and on preventive measures; advocacy and consultations on the prevention of genocide, war crimes, ethnic cleansing and crimes against humanity; briefings on country situations and thematic areas relevant to prevention.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advice on the risk of genocide, war crimes, ethnic cleansing and crimes against humanity and on preventive measures; advocacy and consultations on the prevention of genocide, war crimes, ethnic cleansing and crimes against humanity; briefings on country situations and thematic areas relevant to prevention.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advice on the risk of genocide, war crimes, ethnic cleansing and crimes against humanity and on preventive measures; advocacy and consultations on the prevention of genocide, war crimes, ethnic cleansing and crimes against humanity; briefings on country situations and thematic areas relevant to prevention.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advice on the risk of genocide, war crimes, ethnic cleansing and crimes against humanity and on preventive measures; advocacy and consultations on the prevention of genocide, war crimes, ethnic cleansing and crimes against humanity; briefings on country situations and thematic areas relevant to prevention.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advice on the risk of genocide, war crimes, ethnic cleansing and crimes against humanity and on preventive measures; advocacy and consultations on the prevention of genocide, war crimes, ethnic cleansing and crimes against humanity; briefings on country situations and thematic areas relevant to prevention.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: commemoration of the International Day of Commemoration and Dignity of the Victims of the Crime of Genocide and of the Prevention of This Crime; anniversary of the adoption of the Convention on the Prevention and Punishment of the Crime of Genocide; commemoration of the International Day for Countering Hate Speech; The Srebrenica Genocide and the United Nations outreach programme”",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: commemoration of the International Day of Commemoration and Dignity of the Victims of the Crime of Genocide and of the Prevention of This Crime; anniversary of the adoption of the Convention on the Prevention and Punishment of the Crime of Genocide; commemoration of the International Day for Countering Hate Speech; The Srebrenica Genocide and the United Nations outreach programme”",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: commemoration of the International Day of Commemoration and Dignity of the Victims of the Crime of Genocide and of the Prevention of This Crime; anniversary of the adoption of the Convention on the Prevention and Punishment of the Crime of Genocide; commemoration of the International Day for Countering Hate Speech; The Srebrenica Genocide and the United Nations outreach programme”",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: commemoration of the International Day of Commemoration and Dignity of the Victims of the Crime of Genocide and of the Prevention of This Crime; anniversary of the adoption of the Convention on the Prevention and Punishment of the Crime of Genocide; commemoration of the International Day for Countering Hate Speech; The Srebrenica Genocide and the United Nations outreach programme”",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: commemoration of the International Day of Commemoration and Dignity of the Victims of the Crime of Genocide and of the Prevention of This Crime; anniversary of the adoption of the Convention on the Prevention and Punishment of the Crime of Genocide; commemoration of the International Day for Countering Hate Speech; The Srebrenica Genocide and the United Nations outreach programme”",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tExternal and media relations: public statements by the Special Adviser on situations of concern, on commemorative events and upon the conclusion of high-level missions; media briefings; editorial opinions (op-eds). ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: public statements by the Special Adviser on situations of concern, on commemorative events and upon the conclusion of high-level missions; media briefings; editorial opinions (op-eds). ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: public statements by the Special Adviser on situations of concern, on commemorative events and upon the conclusion of high-level missions; media briefings; editorial opinions (op-eds). ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: public statements by the Special Adviser on situations of concern, on commemorative events and upon the conclusion of high-level missions; media briefings; editorial opinions (op-eds). ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: public statements by the Special Adviser on situations of concern, on commemorative events and upon the conclusion of high-level missions; media briefings; editorial opinions (op-eds). ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Evaluation activities",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Office underwent an independent communication evaluation in 2024, analyzing data from 12 missions (January 2022-August 2024). The evaluation examined various communication outputs, finding that statements, speeches, and social media were the most effective advocacy tools, with potential for expansion. Based on the findings of the evaluations, the Office will improve its communication of work and achievements by embedding a strong communications culture within its operations.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "For 2026, the Office plans to evaluate the impact of its 2023-2024 Plans of Action and policy documents, collaborating with the UN system, funds, programs, NGOs, civil society organizations, and Member States to determine efficient implementation methods.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Resource requirements (regular budget) – Table 9 – Financial resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Variance",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 vs. 2025 Increase/(decrease)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 vs. 2025 Increase/(decrease)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Military and police personnel ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Civilian personnel ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 260.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 485.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 819.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 819.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 317.9 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 317.9 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 317.9 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "498.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "498.1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Operational costs ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "554.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "411.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "566.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "566.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "539.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "539.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "539.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(27.3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(27.3)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal (net of staff assessment) ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 815.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 896.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 386.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 386.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 857.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 857.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 857.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "470.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "470.8",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-x",
+              "text": "Table 10",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Human resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "USG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "ASG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "FS",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "NPO ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "NPO ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "GS",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "LL",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Approved 2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1a",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4b",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3b",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "14",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2c",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "21",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Proposed 2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1a",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4b",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3b",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "14",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2c",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "21",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tChange ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "a \tThe Assistant Secretary-General is on a $1-per-year contract.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "b \tIncludes one P-4 position and one P-2 position approved as general temporary assistance.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "c \tOther level, unless otherwise stated.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The proposed resources for 2026 for the mission amount to $3,857,500 (net of staff assessment) and would provide for salaries and common staff costs ($3,317,900) for 21 posts and positions (1 Under-Secretary-General, 1 Assistant Secretary-General, 2 P-5, 4 P-4, 3 P-3, 3 P-2, 2 General Service staff (Other level)) and 5 national United Nations Volunteer positions, as well as operational costs ($539,600), comprising costs for official travel ($233,100), facilities and infrastructure ($228,200), ground transportation ($3,600), communications and information technology ($31,000) and other supplies, services and equipment ($43,700).",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "For 2026, no change is proposed to the number and levels of the posts.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "It is proposed that two existing general temporary assistance positions be continued in 2026, as follows:",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(a)\tOne Political Affairs Officer (P-4) to enable the office to continue its support to the implementation of the United Nations Strategy and Plan of Action on Hate Speech in a context where the global rise and spread of hate speech continue to pose a challenge worldwide. The continuation of this position would allow the Office to continue providing sustained assistance in response to requests from Member States, regional organizations and United Nations field presences for technical assistance and capacity-building in the development and implementation of context-specific action plans to address and counter hate speech.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-2",
+                  "text": "(b)\tOne Associate Political Affairs Officer (P-2) to strengthen the analysis capacity of the mission and support campaigns of the Office on Holocaust denial, countering hate speech and ratification of the Convention on the Prevention and Punishment of the Crime of Genocide. The position will continue to focus on data analytics and use new technologies to research and gather information, including online trends of hate speech, as a key indicator of risk and potential trigger of genocide, war crimes, ethnic cleansing and crimes against humanity, which will enable the Office to respond to these new challenges and trends in the prevention of these crimes.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "Vacancy rates of 5.8 per cent has been applied to the estimates for international staff   based on the actual average vacancy rate in 2024; 25 per cent for United Nations Volunteers on the basis of the expected recruitment timeline; and zero per cent has been applied to national staff costs  based on the actual vacancy rate in March 2025.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The increase in requirements for 2026 compared with the appropriation for 2025 is mainly attributable to increased requirements for civilian personnel as a result of the application of lower vacancy rates of 5.8 per cent and zero per cent for international staff (including for 3 posts established with a vacancy rate of 50 per cent), and national staff, respectively, compared to 10.9 per cent applied in 2025, as well as the application of the continuing rate for three national United Nations Volunteers positions established with a vacancy rate of 50 per cent in 2025. The increase is offset in part by the absence of provision for consultants, the cancellation of two subscriptions for public information, and reduced requirements for conference and translation services based on utilization pattern.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Extrabudgetary resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "In 2025, extrabudgetary resources amounting to approximately $697,000 are to be utilized mainly for the staff costs of one post (P-4), the capacity-building and technical assistance programme and the preparation of the 2025 report of the Secretary-General on the responsibility to protect.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "For 2026, extrabudgetary resources in the estimated amount of $492,000 would continue to provide for one post (P-4) as well as the capacity-building and technical assistance programme and the preparation of the 2026 report of the Secretary-General on the responsibility to protect.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The decrease in the estimated extrabudgetary resources to be utilized in 2026 compared with 2025 is due mainly to the completion of some projects supporting capacity-building and technical assistance work as well as decreased unearmarked contributions.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1939 @@
+{
+  "entity": "Office of the Special Envoy of the Secretary-General for Syria",
+  "entity_abbrev": "OSESG-Syria",
+  "entity_raw_name": "6.\tOffice of the Special Envoy of the Secretary-General for Syria",
+  "source_file": "A_80_6 (SECT. 3)_ADD.2_CLUSTER I_FASCICLE ADVANCE UNEDITED COPY FOR ACABQ.json",
+  "content": [
+    {
+      "block_type": "italic",
+      "text": "($15,027,700)",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": []
+    },
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The mission is responsible for promoting a solution to the conflict in the Syrian Arab Republic and facilitating an inclusive, comprehensive and credible Syrian-owned and -led political solution that will meet the legitimate aspirations of the Syrian people for dignity, freedom and justice based on the principles of equality and non-discrimination. The mandate derives from the priorities established by the Security Council in resolutions 2118 (2013), 2254 (2015), 2268 (2016) and 2336 (2016), as well as by the General Assembly in resolution 66/253 A, which appointed a special envoy.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "2118 (2013)",
+                      "https://undocs.org/en/S/RES/2118(2013)"
+                    ],
+                    [
+                      "2254 (2015)",
+                      "https://undocs.org/en/S/RES/2254(2015)"
+                    ],
+                    [
+                      "2268 (2016)",
+                      "https://undocs.org/en/S/RES/2268(2016)"
+                    ],
+                    [
+                      "2336 (2016)",
+                      "https://undocs.org/en/S/RES/2336(2016)"
+                    ],
+                    [
+                      "66/253",
+                      "https://undocs.org/en/A/RES/66/253"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The ousting of the former president and his government in December 2024 has brought new opportunities and challenges and the Security Council has underlined (S/PRST/2025/4) the need for a lasting political solution in line with the principles of Security Council resolution 2254 (2015). It is critical to focus on an orderly, credible and inclusive Syrian-owned and -led political transition fully supported by the United Nations and based on a solid legal framework, leading towards a new constitution and free and fair elections in line with the principles of Security Council resolution 2254 (2015).",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "2254 (2015)",
+                      "https://undocs.org/en/S/RES/2254(2015)"
+                    ],
+                    [
+                      "2254 (2015)",
+                      "https://undocs.org/en/S/RES/2254(2015)"
+                    ]
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The objective of this mission is to advance the full implementation of all the relevant General Assembly and Security Council resolutions towards an inclusive, credible, comprehensive Syrian-owned and -led political solution to the conflict in the Syrian Arab Republic that meets the legitimate aspirations of the Syrian people for dignity, freedom and justice, based on the principles of equality and non-discrimination and with the full and meaningful participation of women.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "To contribute to the objective, the Mission will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tEngage with the Syrian authorities, all Syrian parties and the broadest possible spectrum of Syrian society as well as all key regional and international stakeholders on a Syrian-led and owned inclusive and credible political transition;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b) \tSupport the Syrian authorities and all Syrian parties to put in place stable, credible, and inclusive transitional arrangements for the mid-term that inspire public trust and confidence and that provides a path to long-term, inclusive governance, based on a new constitution and free and fair elections, that unfold in a safe, calm and neutral environment, and which is inclusive of all Syrians and in accordance with international standards, in line with the principles of Security Council resolution 2254 (2015);",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "2254 (2015)",
+                          "https://undocs.org/en/S/RES/2254(2015)"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c) \tCoordinate international action and support to achieve those goals, through the Special Envoy’s good offices to advise, support and convene international and Syrian stakeholders – as and when deemed helpful;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d) \tAdvocate for de-escalation and prevention of violence in Syria. Work towards a nationwide ceasefire;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tAdvocate for the respect, protection and fulfilment of human rights of all Syrians. Promote accountability for serious violations and the preservation of documentation and evidence to safeguard the right of the victims and their families and survivors to both truth and justice;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(f)\tEngage the Humanitarian Task Force of the International Syria Support Group to address urgent needs and advocate for international support, including steps toward lifting sanctions in line with economic recovery;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(g)\tPromote women’s meaningful participation in the political transition by engaging relevant actors and forums, including Syrian-Syrian dialogues, the Women’s Advisory Board, and the Civil Society Support Room. Advocate for the direct inclusion of women leaders, experts, and organizations in all transition processes.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tSustained, regular and substantive dialogue among relevant stakeholders on all issues outlined in Security Council resolution 2254 (2015);",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "2254 (2015)",
+                          "https://undocs.org/en/S/RES/2254(2015)"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tA political transition that reflects Syrian women’s meaningful participation and rights, by integrating their perspectives into decision-making and governance structures;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tIncreased trust in the political transition among Syrians and key regional and international stakeholders, supported by strong international consensus and a transitional justice framework;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tThe release of essential financial and technical assistance from the international community, coordinated by the UN, for reconstruction, gradual economic recovery across all regions of Syria, and the reintegration into the global economy.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to the external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tMost national, regional and international stakeholders will cooperate with the Special Envoy;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tSyria’s governance will remain challenging but with moves towards a more inclusive, balanced and stable framework of power sharing;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tThe security situation will likely remain volatile in 2026, with internal conflicts and external interventions posing serious challenges and with the potential to negatively affect civilians, especially women and children, risking more civilian casualties, renewed displacement and further destruction of civilian infrastructure as well as human rights violations.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tLegitimate processes for accountability and transitional justice are coupled with genuine efforts for social peace and reconciliation among Syrians.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tThe Syrian economy will remain fragile, requiring sustained international financial and technical support throughout 2026 and beyond, along with significant adjustments to address imposed sanctions.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to cooperation with other entities, the mission partners with the international community and international NGOs to facilitate and support its work, including the Syrian Civil Society Support Room and the Syrian Women’s Advisory Board. On detention and missing persons, it coordinates with specialized Syrian and international bodies, including the ICRC and the Independent Institution on Missing Persons.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to inter-agency coordination and liaison, the mission cooperates with UN Country Team and the Inter-Agency Task Force on Syria which ensures the coordination and coherence of United Nations political, humanitarian, human rights and other efforts in the country.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Mission integrates gender, disability, and anti-racism perspectives across its operations. This includes renewing its 2025–26 Gender Strategy to address the political transition, promoting the UN Disability Inclusion Strategy through staff training and communication, and advancing the Strategic Action Plan on Racism in coordination with the UN Anti-Racism Office.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Opportunites emerge to  support a credible and inclusive Syrian-owned and -led political  transition based on the principles of Security Council resolution 2254 (2015) – ",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Throughout the year, until the ouster of the former president and his government in early December 2024, the Special Envoy continued to carry out the Secretary-General’s good offices, prioritizing engagement with the Government of the Syrian Arab Republic and the opposition Syrian Negotiation Commission. The Special Envoy also continued to consult broadly with regional and international stakeholders to seek to maximize coherence and coordination among diplomatic efforts and to foster a constructive multilateral approach in line with resolution .",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          ". ",
+                          "https://undocs.org/en/S/RES/2254(2015)"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Following the ouster of the former president and government, efforts focused on stabilizing the situation, protecting civilians, and preserving Syrian institutions, while supporting a Syrian-owned and -led political transition toward an inclusive, credible, non-sectarian government in line with resolution 2254 (2015). Extensive consultations were held with Syrian and international stakeholders, including the de facto leadership in Damascus, to encourage concrete international steps. These efforts helped create space for dialogue with Damascus and caretaker authorities.",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "2254 (2015)",
+                          "https://undocs.org/en/S/RES/2254(2015)"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective is presented in the performance measure below (see table 25).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 25 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Constitutional Committee discussed draft constitutional texts. The Office shared ideas with the Committee’s Co-Chairs on ways to expedite the work and produce results and continued progress. Opportunities to advance a step-for-step confidence-building process in line with Security Council resolution 2254 (2015) were explored with national, regional and international stakeholders \n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "No consensus was found on a venue for resuming the Constitutional Committee or on ways to address substantive challenges facing the Committee. Proposals by the Special Envoy to advance step-for-step confidence-building measures in line with Security Council resolution 2254 (2015) were tabled\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "No progress was made in advancing mediation between the former government and opposition. After 8 December, national, regional and international stakeholders were brought in and benefited from systematic consultations with the mission with a view to supporting an orderly, credible and inclusive transitional process ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned result for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Promoting a comprehensive, inclusive, sustainable political solution in line with Security Council resolution 2254 (2015), through a coherence multilateral approach, a new constitution, and free and fair elections, with broad Syrian support as well as in line with international principles and standards. –  – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "2254 (2015)",
+                      "https://undocs.org/en/S/RES/2254(2015)"
+                    ]
+                  ],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2024, efforts to advance the Constitutional Committee and step-for-step confidence-building measures stalled. While these tracks did not yield the intended progress, detailed discussions were held with Syrian and international actors on a new, comprehensive approach to implement Security Council resolution 2254 (2015). Following the ouster of the former president, focus shifted to supporting an orderly, credible, and inclusive Syrian-owned transition. Looking ahead to 2026, the mission will prioritize advancing a renewed political transition roadmap grounded in resolution 2254 (2015).",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "2254 (2015)",
+                          "https://undocs.org/en/S/RES/2254(2015)"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2026, the mission intends to gradually shift its focus from immediately advocating for and supporting an orderly, credible, and inclusive Syrian-owned and -led political transition to promoting long-term transformative political arrangements, based on a new constitution and free and fair elections, inclusive of all Syrians and in accordance with international standards, in line with the principles of Security Council resolution 2254.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "italic",
+                      "text": "Lessons learned and planned change",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "The lesson for the mission was the need to promote with key stakeholders a new, comprehensive approach that would address the full range of issues. Events have obviously superseded the notion of talks between the former Syrian government and the Negotiation Commission. The mission will therefore need to continuously work in a nimble fashion, adapt and increase the pace of response and proactive advice to the Syrian authorities as changes unfold. Key priority for the mission in this new phase is to engage with the broadest possible spectrum of Syrian society and Syrian parties as well as regional and international stakeholders in order to help ensure that the Syrian-owned and -led political transition will be orderly, credible, inclusive, and based on the principles of Security Council resolution 2254 (2015).",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Expected progress towards the objective and the target for 2026 are presented in the performance measure below (see table 26).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 26 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026(planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Constitutional Committee discussed draft constitutional texts. The Office shared ideas with the Committee’s Co-Chairs on ways to expedite the work for continued progress\nOpportunities to advance a step-for-step confidence-building process in line with Security Council resolution 2254 (2015) were explored with national, regional and international stakeholders",
+                            "hyperlinks": [
+                              [
+                                "2254 (2015)",
+                                "https://undocs.org/en/S/RES/2254(2015)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "No consensus was found on a venue for resuming the Constitutional Committee or on ways to address substantive challenges facing the Committee \n\nProposals to advance step-for-step confidence-building measures in line with Security Council resolution 2254 (2015) were tabled ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "No progress was made on implementing Security Council resolution 2254 (2015)\nNational, regional and international stakeholders were brought in and benefitted from systematic consultations with the mission with a view to supporting an orderly, credible and inclusive transitional process\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Support a comprehensive set of issues of concern to relevant parties in accordance with Security Council resolution 2254 (2015)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Supporting transitional arrangements, progress towards supporting long-term transformative arrangements, based on a new constitution and free and fair elections, in line with the principles of Security Council resolution 2254 (2015), and with the widest spectrum of Syrian stakeholder support and the strongest international consensus.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "2254 (2015)",
+                          "https://undocs.org/en/S/RES/2254(2015)"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Table 27 lists all deliverables of the mission.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 27 – Deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A. \tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "140",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "30",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "30",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "142",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "142",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "28",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1. \tMeetings of the Security Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2. \tMeetings of the Task Force on the Ceasefire of the International Syria Support Group ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3. \tMeetings of the Task Force on Humanitarian Access of the International Syria Support Group ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4. \tMeetings of the large body of the Constitutional Committee",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5. \tMeetings of the small body of the Constitutional Committee",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "100",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "100",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "100",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B. \tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSeminars, workshops and training events (number of days)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "27",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "27",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "28 ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "28 ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "28",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t6. \tWorkshops for all Syrian stakeholders on topics relating to the peace talks, such as governance, constitution, elections, security governance/counter-terrorism and confidence-building measures",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "27",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "27",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "28 ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "28 ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "28",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C. \tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tGood offices: provision of good offices to facilitate an inclusive Syrian-led and -owned political solution to the Syrian conflict, in line with Security Council resolution2254.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: provision of good offices to facilitate an inclusive Syrian-led and -owned political solution to the Syrian conflict, in line with Security Council resolution2254.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: provision of good offices to facilitate an inclusive Syrian-led and -owned political solution to the Syrian conflict, in line with Security Council resolution2254.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: provision of good offices to facilitate an inclusive Syrian-led and -owned political solution to the Syrian conflict, in line with Security Council resolution2254.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: provision of good offices to facilitate an inclusive Syrian-led and -owned political solution to the Syrian conflict, in line with Security Council resolution2254.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: provision of good offices to facilitate an inclusive Syrian-led and -owned political solution to the Syrian conflict, in line with Security Council resolution2254.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: provision of good offices to facilitate an inclusive Syrian-led and -owned political solution to the Syrian conflict, in line with Security Council resolution2254.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultation, advice and advocacy in support of the political process with Member States and regional and international organizations; consultations and advice in support of the activities of specialized UN bodies focused on Syria, such as the IIMP; consultations in support of the political process, including on various process proposals and sanctions, with experts, and representatives of civil society and women’s organizations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultation, advice and advocacy in support of the political process with Member States and regional and international organizations; consultations and advice in support of the activities of specialized UN bodies focused on Syria, such as the IIMP; consultations in support of the political process, including on various process proposals and sanctions, with experts, and representatives of civil society and women’s organizations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultation, advice and advocacy in support of the political process with Member States and regional and international organizations; consultations and advice in support of the activities of specialized UN bodies focused on Syria, such as the IIMP; consultations in support of the political process, including on various process proposals and sanctions, with experts, and representatives of civil society and women’s organizations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultation, advice and advocacy in support of the political process with Member States and regional and international organizations; consultations and advice in support of the activities of specialized UN bodies focused on Syria, such as the IIMP; consultations in support of the political process, including on various process proposals and sanctions, with experts, and representatives of civil society and women’s organizations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultation, advice and advocacy in support of the political process with Member States and regional and international organizations; consultations and advice in support of the activities of specialized UN bodies focused on Syria, such as the IIMP; consultations in support of the political process, including on various process proposals and sanctions, with experts, and representatives of civil society and women’s organizations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultation, advice and advocacy in support of the political process with Member States and regional and international organizations; consultations and advice in support of the activities of specialized UN bodies focused on Syria, such as the IIMP; consultations in support of the political process, including on various process proposals and sanctions, with experts, and representatives of civil society and women’s organizations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultation, advice and advocacy in support of the political process with Member States and regional and international organizations; consultations and advice in support of the activities of specialized UN bodies focused on Syria, such as the IIMP; consultations in support of the political process, including on various process proposals and sanctions, with experts, and representatives of civil society and women’s organizations.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D. \tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tExternal and media relations: Monitoring media developments in Syria, including media analysis and translation, to provide timely insights and recommendations. Press statements, interviews, video messages, briefings, social media and web posts  stressing the importance of a credible and inclusive political transition, the end of violence, accountability for serious human rights violations, resolving the fate of missing persons, adequate humanitarian and recovery funding, and the role of women in the peace process. Providing guidance on the development related to media of legal, technical, and other frameworks, ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: Monitoring media developments in Syria, including media analysis and translation, to provide timely insights and recommendations. Press statements, interviews, video messages, briefings, social media and web posts  stressing the importance of a credible and inclusive political transition, the end of violence, accountability for serious human rights violations, resolving the fate of missing persons, adequate humanitarian and recovery funding, and the role of women in the peace process. Providing guidance on the development related to media of legal, technical, and other frameworks, ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: Monitoring media developments in Syria, including media analysis and translation, to provide timely insights and recommendations. Press statements, interviews, video messages, briefings, social media and web posts  stressing the importance of a credible and inclusive political transition, the end of violence, accountability for serious human rights violations, resolving the fate of missing persons, adequate humanitarian and recovery funding, and the role of women in the peace process. Providing guidance on the development related to media of legal, technical, and other frameworks, ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: Monitoring media developments in Syria, including media analysis and translation, to provide timely insights and recommendations. Press statements, interviews, video messages, briefings, social media and web posts  stressing the importance of a credible and inclusive political transition, the end of violence, accountability for serious human rights violations, resolving the fate of missing persons, adequate humanitarian and recovery funding, and the role of women in the peace process. Providing guidance on the development related to media of legal, technical, and other frameworks, ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: Monitoring media developments in Syria, including media analysis and translation, to provide timely insights and recommendations. Press statements, interviews, video messages, briefings, social media and web posts  stressing the importance of a credible and inclusive political transition, the end of violence, accountability for serious human rights violations, resolving the fate of missing persons, adequate humanitarian and recovery funding, and the role of women in the peace process. Providing guidance on the development related to media of legal, technical, and other frameworks, ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: Monitoring media developments in Syria, including media analysis and translation, to provide timely insights and recommendations. Press statements, interviews, video messages, briefings, social media and web posts  stressing the importance of a credible and inclusive political transition, the end of violence, accountability for serious human rights violations, resolving the fate of missing persons, adequate humanitarian and recovery funding, and the role of women in the peace process. Providing guidance on the development related to media of legal, technical, and other frameworks, ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: Monitoring media developments in Syria, including media analysis and translation, to provide timely insights and recommendations. Press statements, interviews, video messages, briefings, social media and web posts  stressing the importance of a credible and inclusive political transition, the end of violence, accountability for serious human rights violations, resolving the fate of missing persons, adequate humanitarian and recovery funding, and the role of women in the peace process. Providing guidance on the development related to media of legal, technical, and other frameworks, ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Resource requirements (regular budget) – Table 28 – Financial resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Variance",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 vs. 2025 Increase/(decrease)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 vs. 2025 Increase/(decrease)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Military and police personnel  ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Civilian personnel",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8 249.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9 050.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7 607.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7 607.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9 126.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9 126.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 518.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 518.9",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Operational costs ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5 411.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 138.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4 944.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4 944.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5 901.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5 901.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "957.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "957.1",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal (net of staff assessment) ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "13 660.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "12 188.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "12 551.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "12 551.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15 027.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15 027.7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 476.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 476.0",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Table 29 – Human resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "USG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "ASG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "FS",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "NPO ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "NPO ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "GS",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "LL",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Approved 2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "11",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "40",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7a",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "32",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "41",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "81",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Proposed 2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "11",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "40",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7 a",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "32",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "41",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "81",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tChange ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "a\tComprising 7 other level.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The proposed resource requirements for 2026 for the mission amount to $15,027,700 (net of staff assessment) and would provide for salaries and common staff costs ($9,126,300) for 81 posts (1 Under-Secretary-General, 1 Assistant Secretary-General, 1 D-2, 3 D-1, 7 P-5, 11 P-4, 8 P-3, 8 Field Service, 2 National Professional Officer, 7 General Service (Other level)) and 32 Local level, as well as operational costs ($5,901,400), comprising costs for consultants and consulting services ($81,700), official travel ($742,000), facilities and infrastructure ($4,028,200), ground transportation ($223,600), communications and information technology ($396,400), medical ($18,000) and other supplies, services and equipment ($411,500).",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "For 2026, no change is proposed to the number and levels of the posts.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "Vacancy rates of 27.5 per cent and 15.4 per cent have been applied to the estimates for international staff and General Service and Local level staff, respectively, based on the actual vacancy rates in March 2025. A vacancy rate of zero per cent has been applied to the estimates for National Professional Officers based on the actual average vacancy rate in 2024.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The increase in the requirements proposed for 2026 compared with the appropriation for 2025 is attributable mainly to: (a) increased requirements for civilian personnel, resulting from the application of lower vacancy rate of 27.5 per cent compared with the rate of 32.7 per cent applied in 2025 for international staff, and the application of the latest salary rates; as well as (b) higher requirements for facilities and infrastructure owing to the need for additional office space in compliance with Minimum Operating Security Standards in Damascus. The increase  is offset in part by the reduced requirements for air operations due to the removal of provisions for rental cost of a passenger charter plane and for services provided by UNOG for meetings of the international Syria Support Group and sessions of the Constitutional Committee.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub",
+          "text": "Extrabudgetary resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "In 2025, extrabudgetary resources of $279,000 are projected to fund a Senior Human Rights Officer (P-5) and support the mission in through the provision of substantive, logistical, security and support arrangements, including liaison with interlocutors of the Government of the Syrian Arab Republic and the opposition, civil society, including women’s groups, and regional and international stakeholders, as well as other activities.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "For 2026, extrabudgetary resources of $279,000 are projected to fund a Senior Human Rights Officer (P-5) and continue to support the assigned activities as above.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

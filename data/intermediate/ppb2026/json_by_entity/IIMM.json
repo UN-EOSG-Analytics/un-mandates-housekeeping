@@ -1,0 +1,4127 @@
+{
+  "entity": "Independent Investigative Mechanism for Myanmar",
+  "entity_abbrev": "IIMM",
+  "entity_raw_name": "II.\tIndependent Investigative Mechanism for Myanmar",
+  "source_file": "A_80_6_SECT.8.json",
+  "content": [
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.1\tThe Independent Investigative Mechanism for Myanmar is mandated to collect, consolidate, preserve and analyse evidence of the most serious international crimes and violations of international law committed in Myanmar since 2011 and prepare files that can be shared with competent investigative, prosecutorial and judicial authorities (“competent authorities”) in order to facilitate fair and independent criminal proceedings in national, regional or international courts or tribunals. The mandate derives from Human Rights Council resolutions 39/2, 42/3, 43/26, 46/21, 47/1, 49/23, 50/3, 52/31, 53/26 and 56/1. In its resolution 43/26, the Council called for close and timely cooperation between the Mechanism and any future investigations by the International Criminal Court or the International Court of Justice. The mandate is further elaborated in the Mechanism’s terms of reference (A/73/716, annex).",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "39/2",
+                      "https://docs.un.org/en/A/HRC/RES/39/2"
+                    ],
+                    [
+                      "42/3",
+                      "https://docs.un.org/en/A/HRC/RES/42/3"
+                    ],
+                    [
+                      "43/26",
+                      "https://docs.un.org/en/A/HRC/RES/43/26"
+                    ],
+                    [
+                      "46/21",
+                      "https://docs.un.org/en/A/HRC/RES/46/21"
+                    ],
+                    [
+                      "47/1",
+                      "https://docs.un.org/en/A/HRC/RES/47/1"
+                    ],
+                    [
+                      "49/23",
+                      "https://docs.un.org/en/A/HRC/RES/49/23"
+                    ],
+                    [
+                      "50/3",
+                      "https://docs.un.org/en/A/HRC/RES/50/3"
+                    ],
+                    [
+                      "52/31",
+                      "https://docs.un.org/en/A/HRC/RES/52/31"
+                    ],
+                    [
+                      "53/26",
+                      "https://docs.un.org/en/A/HRC/RES/53/26"
+                    ],
+                    [
+                      "56/1",
+                      "https://docs.un.org/en/A/HRC/RES/56/1"
+                    ],
+                    [
+                      "43/26",
+                      "https://docs.un.org/en/A/HRC/RES/43/26"
+                    ],
+                    [
+                      "A/73/716",
+                      "https://docs.un.org/en/A/73/716"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.2\tThe General Assembly welcomed the creation of the Mechanism in its resolution 73/264 and, in its resolutions 75/238, 76/180, 77/227, 78/219 and 79/182, called upon the United Nations to ensure that the Mechanism was afforded flexibility in terms of staffing, location and operational freedom so that it could deliver as effectively as possible on its mandate.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "73/264",
+                      "https://docs.un.org/en/A/RES/73/264"
+                    ],
+                    [
+                      "75/238",
+                      "https://docs.un.org/en/A/RES/75/238"
+                    ],
+                    [
+                      "76/180",
+                      "https://docs.un.org/en/A/RES/76/180"
+                    ],
+                    [
+                      "77/227",
+                      "https://docs.un.org/en/A/RES/77/227"
+                    ],
+                    [
+                      "78/219",
+                      "https://docs.un.org/en/A/RES/78/219"
+                    ],
+                    [
+                      "79/182",
+                      "https://docs.un.org/en/A/RES/79/182"
+                    ]
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.3\tThe objective, to which the Mechanism contributes, is to ensure accountability of perpetrators and justice for victims of the most serious international crimes and violations of international law committed in Myanmar since 2011.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.4\tTo contribute to the objective, the Mechanism will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tCollect and analyse information and evidence regarding crimes within its mandate, including by undertaking investigative missions;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tProvide protection and support services to witnesses and information providers, including through cooperation with national authorities and other partners;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tDevelop and maintain a secure electronic information management system that can protect against evolving risks to information and communications technology security and facilitate the analysis of vast quantities of data in multiple formats and languages;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tShare evidence and analysis with competent authorities in accordance with its mandate, including for proceedings at the International Criminal Court and the International Court of Justice;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tEngage in outreach to relevant stakeholders, in particular to victims and witnesses, using various communication tools and civil society dialogues.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.5\tThe above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tThe collection and preservation of information and evidence that can be shared with competent authorities in relation to crimes within the Mechanism’s mandate;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tThe initiation of fair and independent criminal proceedings by competent authorities in relation to the aforementioned crimes;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tGreater understanding of the Mechanism’s mandate, work and expected results by all relevant stakeholders, including victims and the general public, in particular inside Myanmar.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.6\tWith regard to the external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tSome relevant Member States will permit the Mechanism to conduct evidence collection and witness interviews on their territory and facilitate the safety and well-being of witnesses and information providers;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tSome competent authorities will seek to exercise jurisdiction over the crimes within the Mechanism’s mandate and such authorities will continue to request information from the Mechanism.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.7\tWith regard to cooperation with other entities at the global, regional, national and local levels, the Mechanism continues to engage with Member States, individuals, civil society organizations and business entities to seek relevant information and ensure support for its mandate.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.8\tWith regard to inter-agency coordination and liaison, the Mechanism continues to consult with international courts and other accountability mechanisms, in particular in the areas of legal and judicial cooperation, information management systems, investigation of sexual and gender-based crimes, witness protection and support, and development of methodologies and policies. The Mechanism also seeks the support of other United Nations entities working on issues relating to Myanmar to facilitate its activities.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.9\tThe Mechanism integrates a gender perspective in its operational activities, deliverables and results, as appropriate. The Mechanism will continue its focus on sexual and gender-based crimes and crimes against children, including in the evidence and analysis it shares with competent authorities and through appropriate access to protection and support measures for victims of such crimes.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.10\tIn line with the United Nations Disability Inclusion Strategy, the Mechanism will actively ensure appropriate access to protection and support measures to witnesses and victims with disabilities.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Evaluation activities",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.11\tAn evaluation conducted by the Mechanism on the establishment of cooperation arrangements with Member States for the purpose of facilitating the collection of testimonial and documentary evidence in their territory was completed in 2024 and has guided the proposed programme plan for 2026.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.12\tThe evaluation affirmed the Mechanism’s progress in advancing numerous cooperation arrangements with a concrete impact on the Mechanism’s efforts, as reflected in results 1 and 3. In response to the results of the evaluation referenced above, the Mechanism will continue regular consultations with States and national authorities, including through regional networks; adopt pragmatic and flexible approaches to negotiating cooperation arrangements, including to encourage greater cooperation by States; and, as necessary, adopt alternative arrangements for collecting evidence. The evaluation will also inform efforts to improve efficiencies in the submission of requests to States to collect evidence in their territory and their consideration of such requests.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.13\tThe following evaluations to be conducted by the Mechanism are planned for 2026:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tEvaluation of the Mechanism’s methodology for sharing information with national authorities and related outcomes;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tEvaluation of the Mechanism’s witness protection and support measures;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tEvaluation of the Mechanism’s security systems and applications, including their impact.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "National and international authorities utilize diverse formats of evidentiary material to advance ongoing legal proceedings",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "8.II.14\tThe Mechanism was established to enable national and international authorities to deliver justice for victims of serious international crimes committed in Myanmar. To that end, the Mechanism has been supporting three ongoing proceedings related to crimes committed against the Rohingya population in Myanmar that are being conducted by the International Court of Justice, the International Criminal Court and Federal Prosecutor’s Office No. 9 of Argentina. To date, the Mechanism has shared with competent authorities over 1 million information items in diverse formats, including witness statements, documents, photographs, videos, audio files, geospatial imagery, open-source materials and in-depth analytical products, on various matters of high contextual and evidentiary value to the ongoing proceedings. In September and November 2024 respectively, the Federal Prosecutor’s Office No. 9 of Argentina and the Office of the Prosecutor of the International Criminal Court made submissions to their respective judicial authorities seeking arrest warrants for certain individuals who are alleged to be responsible for serious international crimes committed against the Rohingya. The written submissions phase of the proceedings at the International Court of Justice regarding alleged violations by Myanmar of the Convention on the Prevention and Punishment of the Crime of Genocide concluded in late 2024 and oral hearings on the merits are expected to begin in 2025.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "8.II.15\tProgress towards the objective is presented in the performance measure below (see figure 8.II.I).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "figure",
+                      "text": "Figure 8.II.I",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure: number of evidentiary materials accessed by competent authorities (annual)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "image",
+                      "text": "",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned results for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 1: domestic and international authorities have access to evidence that assists in establishing specific crimes and identifying perpetrators – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "8.II.16\tThe Mechanism’s work contributed to domestic and international authorities having access to tailored, comprehensive and timely analytical products and underlying evidence in diverse formats that can assist such authorities in establishing specific crimes and identifying perpetrators of the most serious international crimes, which met the planned target.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "8.II.17\tProgress towards the objective and the target for 2026 are presented in the performance measure below (see table 8.II.1).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table",
+                      "text": "Table 8.II.1",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure: domestic and international authorities have access to:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Repository and analysis of information and evidence regarding priority situations and incidents",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Repository of evidence and targeted analysis of hate speech; military structures and chain of command; sexual and gender-based crimes; and two post-coup priority incidents in Kayah and Sagaing",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Repository of evidence and targeted analysis, including of (a) financial structures and connections between persons and groups of interest; (b) three post-coup priority incidents in Sagaing; and (c) geolocation of sites of interest",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Repository of evidence and analysis pertaining to key suspected individuals linked to priority situations and incidents",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Repository of evidence and analysis pertaining to additional persons and groups of interest and priority situations and incidents, including in Rakhine State ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 2: victims, survivors, civil society and information providers engage in accountability processes – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "8.II.18\tThe Mechanism’s work contributed to 33 engagements with victims, survivors, civil society representatives and information providers, for a cumulative total of 130 engagements, which exceeded the planned target of 122 engagements.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "8.II.19\tProgress towards the objective and the target for 2026 are presented in the performance measure below (see figure 8.II.II).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "figure",
+                      "text": "Figure 8.II.II",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure: number of engagements of victims, survivors, civil society representatives and information providers (cumulative)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "image",
+                      "text": "",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 3: increased access to evidence with the broadest possible admissibility in national, regional and international courts – Proposed programme plan for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "8.II.20\tBuilding complex international criminal cases requires forensically reliable and probative evidence. In accordance with best practices, the Mechanism has conducted screenings (preliminary interviews) and detailed interviews with victims and witnesses who have relevant information. The Mechanism has shared screening notes and witness statements with relevant competent authorities, contributing to progress in ongoing proceedings.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "italic",
+                      "text": "Lessons learned and planned change",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "8.II.21\tThe lesson for the Mechanism is that competent authorities have greatly valued the detailed witness statements that the Mechanism has taken in person from individuals with first-hand knowledge relevant to crimes. In applying the lesson, the Mechanism will continue to engage with more victims and individuals who witnessed the commission, planning or ordering of serious crimes to collect testimonies. In doing so, the Mechanism will continue to engage with individuals from a wide range of locations and backgrounds in an effort to increase the pool of witnesses in stable security situations who may be available to testify in judicial proceedings. Furthermore, the Mechanism will utilize more culturally informed interviewing techniques and focus the interviews on the core elements of crimes and evidence of the identity and responsibility of alleged perpetrators.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "8.II.22\tExpected progress towards the objective is presented in the performance measure below (see figure 8.II.III).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "figure",
+                      "text": "Figure 8.II.III",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure: number of screening notes and witness statements available for sharing (cumulative)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "image",
+                      "text": "",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Legislative mandates",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.23\tThe list below, which was reviewed in the preparation of the proposed programme budget, provides all mandates entrusted to the Mechanism.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "italic",
+                  "text": "General Assembly resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "73/264",
+                            "hyperlinks": [
+                              [
+                                "73/264",
+                                "https://docs.un.org/en/A/RES/73/264"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Situation of human rights in Myanmar",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "74/246; 75/238; 76/180; 77/227; 78/219; 79/182",
+                            "hyperlinks": [
+                              [
+                                "74/246",
+                                "https://docs.un.org/en/A/RES/74/246"
+                              ],
+                              [
+                                "75/238",
+                                "https://docs.un.org/en/A/RES/75/238"
+                              ],
+                              [
+                                "76/180",
+                                "https://docs.un.org/en/A/RES/76/180"
+                              ],
+                              [
+                                "77/227",
+                                "https://docs.un.org/en/A/RES/77/227"
+                              ],
+                              [
+                                "78/219",
+                                "https://docs.un.org/en/A/RES/78/219"
+                              ],
+                              [
+                                "79/182",
+                                "https://docs.un.org/en/A/RES/79/182"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Situation of human rights of Rohingya Muslims and other minorities in Myanmar ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "75/287",
+                            "hyperlinks": [
+                              [
+                                "75/287",
+                                "https://docs.un.org/en/A/RES/75/287"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "The situation in Myanmar",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "73/264",
+                          "https://docs.un.org/en/A/RES/73/264"
+                        ],
+                        [
+                          "74/246",
+                          "https://docs.un.org/en/A/RES/74/246"
+                        ],
+                        [
+                          "75/238",
+                          "https://docs.un.org/en/A/RES/75/238"
+                        ],
+                        [
+                          "76/180",
+                          "https://docs.un.org/en/A/RES/76/180"
+                        ],
+                        [
+                          "77/227",
+                          "https://docs.un.org/en/A/RES/77/227"
+                        ],
+                        [
+                          "78/219",
+                          "https://docs.un.org/en/A/RES/78/219"
+                        ],
+                        [
+                          "79/182",
+                          "https://docs.un.org/en/A/RES/79/182"
+                        ],
+                        [
+                          "75/287",
+                          "https://docs.un.org/en/A/RES/75/287"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "italic",
+                  "text": "Human Rights Council resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "39/2; 42/3; 47/1; 50/3; 53/26; 56/1",
+                            "hyperlinks": [
+                              [
+                                "39/2",
+                                "https://docs.un.org/en/A/HRC/RES/39/2"
+                              ],
+                              [
+                                "42/3",
+                                "https://docs.un.org/en/A/HRC/RES/42/3"
+                              ],
+                              [
+                                "47/1",
+                                "https://docs.un.org/en/A/HRC/RES/47/1"
+                              ],
+                              [
+                                "50/3",
+                                "https://docs.un.org/en/A/HRC/RES/50/3"
+                              ],
+                              [
+                                "53/26",
+                                "https://docs.un.org/en/A/HRC/RES/53/26"
+                              ],
+                              [
+                                "56/1",
+                                "https://docs.un.org/en/A/HRC/RES/56/1"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Situation of human rights of Rohingya Muslims and other minorities in Myanmar",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "43/26; 46/21; 49/23; 52/31; 55/20",
+                            "hyperlinks": [
+                              [
+                                "43/26",
+                                "https://docs.un.org/en/A/HRC/RES/43/26"
+                              ],
+                              [
+                                "46/21",
+                                "https://docs.un.org/en/A/HRC/RES/46/21"
+                              ],
+                              [
+                                "49/23",
+                                "https://docs.un.org/en/A/HRC/RES/49/23"
+                              ],
+                              [
+                                "52/31",
+                                "https://docs.un.org/en/A/HRC/RES/52/31"
+                              ],
+                              [
+                                "55/20",
+                                "https://docs.un.org/en/A/RES/55/20"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Situation of human rights in Myanmar",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "39/2",
+                          "https://docs.un.org/en/A/HRC/RES/39/2"
+                        ],
+                        [
+                          "42/3",
+                          "https://docs.un.org/en/A/HRC/RES/42/3"
+                        ],
+                        [
+                          "47/1",
+                          "https://docs.un.org/en/A/HRC/RES/47/1"
+                        ],
+                        [
+                          "50/3",
+                          "https://docs.un.org/en/A/HRC/RES/50/3"
+                        ],
+                        [
+                          "53/26",
+                          "https://docs.un.org/en/A/HRC/RES/53/26"
+                        ],
+                        [
+                          "56/1",
+                          "https://docs.un.org/en/A/HRC/RES/56/1"
+                        ],
+                        [
+                          "43/26",
+                          "https://docs.un.org/en/A/HRC/RES/43/26"
+                        ],
+                        [
+                          "46/21",
+                          "https://docs.un.org/en/A/HRC/RES/46/21"
+                        ],
+                        [
+                          "49/23",
+                          "https://docs.un.org/en/A/HRC/RES/49/23"
+                        ],
+                        [
+                          "52/31",
+                          "https://docs.un.org/en/A/HRC/RES/52/31"
+                        ],
+                        [
+                          "55/20",
+                          "https://docs.un.org/en/A/RES/55/20"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.24\tTable 8.II.2 lists all deliverables of the Mechanism.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 8.II.2",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tReports for the General Assembly",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tReports for the Human Rights Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tMeetings of: ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3.\tThe Human Rights Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4.\tThe General Assembly",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5.\tThe Advisory Committee on Administrative and Budgetary Questions ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t6.\tThe Committee for Programme and Coordination",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t7.\tThe Fifth Committee",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSeminars, workshops and training events (number of days)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t8.\tWorkshops for national, regional and international courts or tribunals on the Mechanism’s investigations in order to facilitate proceedings ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t9.\tWorkshop on collaboration between civil society groups working on Myanmar and the Mechanism",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTechnical materials (number of materials)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " 155",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "388",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "180",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "180",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t10.\tCompilation of information and evidence of international crimes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " 40",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "120",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "50",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "50",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t11.\tCompilation of analysis of evidence of international crimes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " 25",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "54",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "35",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "35",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t12.\tScreening notes and witness statements",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " 90",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "214",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "95",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "95",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tFact-finding, monitoring and investigation missions (number of missions)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t13.\tInvestigation missions to interview witnesses and collect evidence",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultations with more than 50 entities, including Member States and civil society organizations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultations with more than 50 entities, including Member States and civil society organizations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultations with more than 50 entities, including Member States and civil society organizations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultations with more than 50 entities, including Member States and civil society organizations.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: consultations with more than 50 entities, including Member States and civil society organizations.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDatabases and substantive digital materials: databases and technical systems to securely register, preserve and verify information and evidence; systems and tools for analysis of the repository of evidence; information technology systems for safe and secure operations; and tools for artificial intelligence-assisted search. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: databases and technical systems to securely register, preserve and verify information and evidence; systems and tools for analysis of the repository of evidence; information technology systems for safe and secure operations; and tools for artificial intelligence-assisted search. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: databases and technical systems to securely register, preserve and verify information and evidence; systems and tools for analysis of the repository of evidence; information technology systems for safe and secure operations; and tools for artificial intelligence-assisted search. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: databases and technical systems to securely register, preserve and verify information and evidence; systems and tools for analysis of the repository of evidence; information technology systems for safe and secure operations; and tools for artificial intelligence-assisted search. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDatabases and substantive digital materials: databases and technical systems to securely register, preserve and verify information and evidence; systems and tools for analysis of the repository of evidence; information technology systems for safe and secure operations; and tools for artificial intelligence-assisted search. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDirect service delivery: protection and support measures for witnesses, including 180 threat and risk assessments to identify security risks to witnesses; 180 psychosocial assessments to identify support needs; in-house psychosocial services to facilitate witness interviews and screenings; and referrals of witnesses to service providers to facilitate psychosocial support.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDirect service delivery: protection and support measures for witnesses, including 180 threat and risk assessments to identify security risks to witnesses; 180 psychosocial assessments to identify support needs; in-house psychosocial services to facilitate witness interviews and screenings; and referrals of witnesses to service providers to facilitate psychosocial support.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDirect service delivery: protection and support measures for witnesses, including 180 threat and risk assessments to identify security risks to witnesses; 180 psychosocial assessments to identify support needs; in-house psychosocial services to facilitate witness interviews and screenings; and referrals of witnesses to service providers to facilitate psychosocial support.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDirect service delivery: protection and support measures for witnesses, including 180 threat and risk assessments to identify security risks to witnesses; 180 psychosocial assessments to identify support needs; in-house psychosocial services to facilitate witness interviews and screenings; and referrals of witnesses to service providers to facilitate psychosocial support.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDirect service delivery: protection and support measures for witnesses, including 180 threat and risk assessments to identify security risks to witnesses; 180 psychosocial assessments to identify support needs; in-house psychosocial services to facilitate witness interviews and screenings; and referrals of witnesses to service providers to facilitate psychosocial support.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: one conference with relevant stakeholders on the Mechanism’s mandate and activities; three newsletters; five visual materials about the Mechanism’s work in at least two languages of Myanmar in addition to the Myanmar language (Burmese). ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: one conference with relevant stakeholders on the Mechanism’s mandate and activities; three newsletters; five visual materials about the Mechanism’s work in at least two languages of Myanmar in addition to the Myanmar language (Burmese). ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: one conference with relevant stakeholders on the Mechanism’s mandate and activities; three newsletters; five visual materials about the Mechanism’s work in at least two languages of Myanmar in addition to the Myanmar language (Burmese). ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: one conference with relevant stakeholders on the Mechanism’s mandate and activities; three newsletters; five visual materials about the Mechanism’s work in at least two languages of Myanmar in addition to the Myanmar language (Burmese). ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: one conference with relevant stakeholders on the Mechanism’s mandate and activities; three newsletters; five visual materials about the Mechanism’s work in at least two languages of Myanmar in addition to the Myanmar language (Burmese). ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tExternal and media relations: 15 press conferences and media interviews; panels and events; and at least four briefings to the diplomatic and academic communities on progress of the Mechanism’s work.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: 15 press conferences and media interviews; panels and events; and at least four briefings to the diplomatic and academic communities on progress of the Mechanism’s work.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: 15 press conferences and media interviews; panels and events; and at least four briefings to the diplomatic and academic communities on progress of the Mechanism’s work.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: 15 press conferences and media interviews; panels and events; and at least four briefings to the diplomatic and academic communities on progress of the Mechanism’s work.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: 15 press conferences and media interviews; panels and events; and at least four briefings to the diplomatic and academic communities on progress of the Mechanism’s work.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDigital platforms and multimedia content: Mechanism’s website and social media accounts.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: Mechanism’s website and social media accounts.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: Mechanism’s website and social media accounts.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: Mechanism’s website and social media accounts.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: Mechanism’s website and social media accounts.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub",
+          "text": "Overview",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "8.II.25\tThe proposed regular budget resources for 2026, including the breakdown of resource changes, as applicable, are reflected in tables 8.II.3 to 8.II.5.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table",
+              "text": "Table 8.II.3",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial resources by object of expenditure",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Thousands of United States dollars)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Object of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": " \n2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Object of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": " \n2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Other staff costs ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "10 013.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "11 785.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "168.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "168.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "11 954.2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Consultants ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "223.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "317.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "317.3",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Experts",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Travel of staff ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "381.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "479.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "479.8",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Contractual services ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 433.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 718.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 723.9",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General operating expenses ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "817.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "900.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "902.6",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Supplies and materials ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "42.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "26.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "26.0",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Furniture and equipment ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "261.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "267.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "271.3",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Grants and contributions ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "44.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "159.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "159.5",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "13 219.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15 653.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "180.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "180.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15 834.6",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 8.II.4",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "other",
+                      "text": "Note: The following abbreviations are used in tables and figures: ASG, Assistant Secretary-General; GS (OL), General Service (Other level).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed general temporary assistance positions and changes for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Number of positions)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Number",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Details",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Approved for 2025",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "57",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 ASG, 1 D-1, 4 P-5, 8 P-4, 20 P-3, 14 P-2/1, 9 GS (OL)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tEstablishment",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 P-2/1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Proposed for 2026",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "58",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 ASG, 1 D-1, 4 P-5, 8 P-4, 20 P-3, 15 P-2/1, 9 GS (OL)",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "image",
+                  "text": "",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 8.II.5",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed general temporary assistance positions by category and grade",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Number of positions)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "Category and grade",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 proposed",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Category and grade",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 proposed",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Professional and higher",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "ASG",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "D-1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "8",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "20",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "20",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-2/1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "14",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "48",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "49",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General Service and related",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "GS (OL)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": " 9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": " 9",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "57",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "58",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.26\tAdditional details on the distribution of the proposed resources for 2026 are reflected in tables 8.II.6 to 8.II.8 and figure 8.II.IV.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.27\tAs shown in tables 8.II.6 (1) and 8.II.7 (1), the overall resources proposed for 2026 amount to $15,834,600, reflecting a net increase of $180,800 (or 1.2 per cent) compared with the approved budget for 2025. Resource changes result from other changes. The proposed level of resources provides for the full, efficient and effective implementation of the Mechanism’s mandate.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 8.II.6",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial resources by source of funding and component",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Thousands of United States dollars)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "list-2",
+                  "text": "(1)\tRegular budget",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Component",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 expenditure",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 \napproved",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 estimate ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Component",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 expenditure",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 \napproved",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Technical adjustments",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "New/expanded mandates ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Other ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Total ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Percentage",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 estimate ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Programme of work",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "13 219.5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15 653.8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "180.8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "180.8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1.2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15 834.6",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubtotal, 1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "13 219.5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15 653.8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "180.8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "180.8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1.2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15 834.6",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "list-2",
+                  "text": "(2)\tExtrabudgetary",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Component",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 expenditure",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 estimate",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Change",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Percentage",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 estimate",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Programme of work ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3 410.5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3 996.9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(50.7)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(1.3)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3 946.2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubtotal, 2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3 410.5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3 996.9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(50.7)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(1.3)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3 946.2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTotal (1+2)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "16 630.0",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "19 650.7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "130.1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0.7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "19 780.8",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 8.II.7",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed general temporary assistance positions for 2026 by source of funding and component",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Number of positions)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "list-2",
+                  "text": "(1)\tRegular budget",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Component",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 \napproved",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 proposed",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Component",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 \napproved",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Technical adjustments",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "New/expanded mandates ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Other ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Total ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 proposed",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tProgramme of work",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "57",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "58",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubtotal, 1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "57",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "58",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "list-2",
+                  "text": "(2)\tExtrabudgetary",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Component",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 estimate",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Change",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 estimate",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tProgramme of work ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "         ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubtotal, 2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "        ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "– ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTotal (1+2)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "71",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "72",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 8.II.8",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial resources and general temporary assistance positions",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Thousands of United States dollars/number of positions)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 \nestimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 \nestimate",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Non-post",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "13 219.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15 653.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "180.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "180.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15 834.6",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "13 219.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15 653.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "180.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "180.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15 834.6",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Professional and higher",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "48",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "49",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General Service and related",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "9",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "57",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "58",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "figure",
+                  "text": "Figure 8.II.IV",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Distribution of proposed resources for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Number of positions/thousands of United States dollars)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "image",
+                  "text": "",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub",
+          "text": "Explanation of variances by factor",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Other changes",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.28\tAs shown in tables 8.II.6 (1) and 8.II.7 (1), resource changes reflect an increase of $180,800, as follows:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tAn increase of $168,400 under other staff costs related to the proposed establishment of one position of Associate Field Security Coordination Officer (P-2) in Geneva (see annex II);",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tAn increase of $10,100 related to the non-post provisions associated with the proposed establishment of the position of Associate Field Security Coordination Officer (P-2), comprising contractual services ($3,600), general operating expenses ($2,500) and furniture and equipment ($4,000);",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tAn increase of $2,300 under contractual services relating to the higher standard price of the core software package for non-field personnel outside of Headquarters.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Extrabudgetary resources",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.29\tAs reflected in tables 8.II.6 (2) and 8.II.7 (2), extrabudgetary resources amount to $3,946,200. The resources would complement regular budget resources and would be used mainly to provide for 14 general temporary assistance positions (3 P-4, 5 P-3 and 6 P-2) to perform the functions of investigating sexual and gender-based crimes and crimes against and affecting children; financial and open-source investigations; information management; and programme management and administration. In addition, non-post resources would be used to cover the costs for information technology services, travel of staff, consultants, general operating expenses and specialized training required to implement the mandate.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.30\tThe extrabudgetary resources under the Mechanism are subject to the oversight of the Mechanism, which has delegated authority from the Secretary-General.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Other information",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.31\tIn accordance with the 2030 Agenda for Sustainable Development, in particular target 12.6 of the Sustainable Development Goals, in which organizations are encouraged to integrate sustainability information into their reporting cycles, and in compliance with the cross-cutting mandate set out in paragraph 19 of General Assembly resolution 72/219, the Mechanism continues to minimize energy consumption at its facilities, where it installed special external walls with thermal insulation panels to reduce the dispersion of heat, thermal windows with energy-efficient features designed to resist the loss of heat and cold, light-emitting diode lights in all office and common areas, and a heating, ventilation and air-conditioning system with thermostats in all offices and common areas to enable better control of the system. The Mechanism also raises the awareness of its staff on energy-saving practices in the workplace.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "72/219",
+                      "https://docs.un.org/en/A/RES/72/219"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "8.II.32\tInformation on the timely submission of documentation and advance booking for air travel is reflected in table 8.II.9. The Mechanism will continue its efforts to improve the travel compliance rate through frequent monitoring of compliance with advance booking requirements for air travel, periodic briefings to staff on travel policies and monthly updates to managers.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 8.II.9",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Compliance rate",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "note",
+                  "text": "(Percentage)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2022 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2023 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 planned",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 planned",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Timely submission of documentation",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Air tickets purchased at least two weeks before the commencement of travel",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "83",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "92",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "98",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

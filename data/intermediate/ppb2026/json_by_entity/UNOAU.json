@@ -1,0 +1,4286 @@
+{
+  "entity": "United Nations Office to the African Union",
+  "entity_abbrev": "UNOAU",
+  "entity_raw_name": "IV.\tUnited Nations Office to the African Union",
+  "source_file": "A_80_6_SECT.3.json",
+  "content": [
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.1\tThe United Nations Office to the African Union was established on 1 July 2010 pursuant to General Assembly resolution 64/288. The mandate of the Office is to enhance the partnership between the United Nations and the African Union in the area of peace and security; provide coordinated and consistent United Nations advice to the African Union on long-term capacity-building and short-term operational support matters; and enhance coherence and efficiency in delivering United Nations assistance to the African Union. In its resolutions 2033 (2012), 2167 (2014), 2320 (2016), 2378 (2017) and 2457 (2019), the Security Council called upon the United Nations to strengthen the cooperation between the United Nations and the African Union, including in the areas of mediation, capacity-building and, in particular, the operationalization of the African Peace and Security Architecture and implementation of the Silencing the Guns initiative.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "64/288",
+                      "https://undocs.org/en/A/RES/64/288"
+                    ],
+                    [
+                      "2033 (2012)",
+                      "https://undocs.org/en/S/RES/2033(2012)"
+                    ],
+                    [
+                      "2167 (2014)",
+                      "https://undocs.org/en/S/RES/2167(2014)"
+                    ],
+                    [
+                      "2320 (2016)",
+                      "https://undocs.org/en/S/RES/2320(2016)"
+                    ],
+                    [
+                      "2378 (2017)",
+                      "https://undocs.org/en/S/RES/2378(2017)"
+                    ],
+                    [
+                      "2457 (2019)",
+                      "https://undocs.org/en/S/RES/2457(2019)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.2\tThe Office provides a mechanism for cooperation at the regional level, primarily with the African Union and subregional organizations throughout Africa. It seeks to build a common United Nations-African Union understanding of the causes and drivers of armed conflicts and potential armed conflicts, from which collaborative initiatives to prevent, manage and resolve armed conflicts can be developed.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.3\tThe objective, to which the Office contributes, is to strengthen the United Nations-African Union partnership for peace and security in Africa.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.4\tTo contribute to the objective, the Office will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tSupport the implementation of the priorities of the African Peace and Security Architecture and the African Governance Architecture, and their operationalization, through conflict prevention, crisis/conflict management, post-conflict reconstruction and peacebuilding, a focus on strategic security issues, and coordination and partnership;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tSupport regular, formal and informal engagements between the policy organs of the African Union, including the Peace and Security Council and the Permanent Representatives Committee, with the United Nations, including the Security Council and the Peacebuilding Commission;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tEngage with the African Union at senior and operational levels on political and operational priorities through the United Nations-African Union annual conference, the United Nations-African Union Joint Task Force on Peace and Security, and the annual United Nations-African Union consultative meeting on prevention and management of conflicts;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(d)\tConduct good offices missions to address peace and security challenges, including with regard to dispute resolution and elections, upon request by the African Union;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(e)\tMaintain regular interaction between the United Nations and the African Union, regional economic communities and regional mechanisms, as well as with Member States, on thematic and country-specific situations, including in support of the African Union early warning mechanism;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(f)\tBuild institutional capacities of the African Union Commission to prevent, manage and respond to armed conflicts and address root causes of conflict in Africa, including by strengthening the capabilities of the African Union with regard to early warning and mediation;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(g)\tSupport African Union efforts to advance implementation of Security Council resolution 1325 (2000) on women and peace and security, including by supporting efforts in addressing conflict-related sexual violence and enhancing the participation of women in peace and security processes;",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "1325 (2000)",
+                          "https://undocs.org/en/S/RES/1325(2000)"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(h)\tSupport the implementation of the African Union Continental Framework for Youth, Peace and Security, including its Ten-Year Implementation Plan for 2020–2029;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-3",
+                          "text": "(i)\tSupport African Union efforts in advocating for the effective operationalization of relevant accountability frameworks for parties involved in armed conflict;",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(j)\tCollaborate with the African Union to implement Security Council resolution 2719 (2023).",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "2719 (2023)",
+                          "https://undocs.org/en/S/RES/2719(2023)"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.5\tThe above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tStrengthened strategic coherence and collaboration between the African Union, the United Nations and other partners in addressing Africa’s peace and security challenges, including the root causes of conflicts;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tStrengthened ability of the African Union, the African Union Commission, the regional economic communities and the regional mechanisms with regard to conflict prevention, management and resolution, including the capacity of the African Union to plan and manage its peace operations.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.6\tWith regard to the external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(a)\tThere is continued political will and commitment by the United Nations and the African Union in promoting cooperation with regional and subregional organizations in peace and security;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(b)\tThe African Union will continue to develop the human and financial capacity necessary to effectively deliver on mandates to address peace and security challenges in Africa;",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-2",
+                      "text": "(c)\tExtrabudgetary funding is available.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.7\tWith regard to cooperation with other entities at the global, regional and national levels, the Office will maintain relationships with external partners and stakeholders, taking into consideration priorities expressed in Agenda 2063: The Africa We Want and relevant policy documents, the 2030 Agenda and the Joint United Nations-African Union Framework for Enhanced Partnership in Peace and Security. The Office will further maintain regular interaction on thematic and country-specific issues and advance common United Nations and African Union positions, while enhancing coordination and synergies between key partners, such as the European Union, regional economic communities and regional mechanisms.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.8\tWith regard to inter-agency coordination and liaison, the Office will continue to lead or support coordination mechanisms with United Nations entities to ensure coherence in delivering assistance to the African Union. The Office will also engage with relevant opportunities and issue-based coalitions of the Regional Collaborative Platform for Africa.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.9\tThe Office integrates a gender perspective in its operational activities, deliverables and results, as appropriate. A key focus will be on strengthening cooperation with the United Nations and the African Union to institutionalize gender-sensitive policymaking and programming. The Office will continue to support the full, equal and meaningful participation of women in preventive diplomacy, mediation, elections and early warning systems, and the deployment of women in peace support operations. This includes further mainstreaming the women and peace and security agenda in joint initiatives with the African Union Commission and subregional organizations.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.10\tIn line with the United Nations Disability Inclusion Strategy, the Office will provide support to the African Union, as relevant, to enhance the inclusion of persons with disabilities in peace and security initiatives.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Evaluation activities",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.11\tAn evaluation on support to the implementation of the United Nations-African Union Partnership in Peace and Security (2020–⁠2024), conducted by the Office and completed in 2024, has guided the proposed programme plan for 2026.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.12\tIn response to the results of that evaluation, the Office will enhance engagement with a wide range of partners to mobilize political, technical and voluntary financial support for the United Nations-African Union Partnership. The Office will also continue to integrate a gender perspective in the implementation of partnerships with the African Union to contribute to the women and peace and security agenda.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.13\tAn evaluation to be conducted by the Office on a topic to be determined is planned for 2026.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-x",
+                  "text": "Advancing peace and governance in Somalia through joint United Nations-African Union support to the security transition of Somalia",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.IV.14\tThe United Nations and the African Union, in their joint efforts supporting the African Union Transition Mission in Somalia (ATMIS), have made strides in advancing peace and strengthening governance in Somalia. These collaborative efforts have enabled the Federal Government of Somalia to maintain stability and ensure the functioning of its institutions. The Office provided support for the planning and management of ATMIS through joint assessments and the development and review of operational documents. The Office also participated with the African Union, as well as other United Nations entities, in developing a transition plan for ATMIS to the African Union Support and Stabilization Mission in Somalia (AUSSOM) and its implementation, including the pre-deployment assessment of uniformed personnel and enabling capabilities.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.IV.15\tProgress towards the objective is presented in the performance measure below (see table 3.IV.1).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Table 3.IV.1 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Election security is maintained and Government elected, with post-election security maintained",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced security environment enabling the elected Federal Government in Somalia to function ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Downsizing of ATMIS and the corresponding progressive takeover of security responsibilities by Somali security forces in line with Security Council resolution 2628 (2022)\nThe Security Council, by its resolution 2767 (2024) endorsed the African Union Peace and Security Council’s decision to replace ATMIS with AUSSOM",
+                            "hyperlinks": [
+                              [
+                                "2628 (2022)",
+                                "https://undocs.org/en/S/RES/2628(2022)"
+                              ],
+                              [
+                                "2767 (2024)",
+                                "https://undocs.org/en/S/RES/2767(2024)"
+                              ]
+                            ]
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "2628 (2022)",
+                          "https://undocs.org/en/S/RES/2628(2022)"
+                        ],
+                        [
+                          "2767 (2024)",
+                          "https://undocs.org/en/S/RES/2767(2024)"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned results for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-x",
+                  "text": "Result 1: progress towards predictable and sustainable funding for African Union peace support operations – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.IV.16\tThe Office’s work contributed to the endorsement by the Chairperson of the African Union Commission and the Secretary-General of the joint African Union-United Nations road map for the operationalization of resolution 2719 (2023), which met the planned target.",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "2719 (2023)",
+                          "https://undocs.org/en/S/RES/2719(2023)"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.IV.17\tProgress towards the objective and the target for 2026 are presented in the performance measure below (see table 3.IV.2).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Table 3.IV.2 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "The Security Council requesteda an update on progress made so far by the United Nations and the African Union to fulfil the commitments as set out in Security Council resolutions 2320 (2016) and 2378 (2017), and recommendations on moving forward that reflect good practices and lessons learned, with a view to securing predictable, sustainable and flexible resources",
+                            "hyperlinks": [
+                              [
+                                "2320 (2016)",
+                                "https://undocs.org/en/S/RES/2320(2016)"
+                              ],
+                              [
+                                "2378 (2017)",
+                                "https://undocs.org/en/S/RES/2378(2017)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Consideration by the Security Council of issues on the financing of African Union peace support operations (see S/2023/303), and adoption of Security Council resolution 2719 (2023) \nDevelopment of draft joint African Union-United Nations planning guidelines \nAdoption by the African Union of a consensus paper on predictable, adequate and sustainable financing for African Union peace and security activities",
+                            "hyperlinks": [
+                              [
+                                "S/2023/303",
+                                "https://undocs.org/en/S/2023/303"
+                              ],
+                              [
+                                "2719 (2023)",
+                                "https://undocs.org/en/S/RES/2719(2023)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "The Chairperson of the African Union Commission and the Secretary-General endorsed the joint African Union-United Nations road map for the operationalization of resolution 2719 (2023)",
+                            "hyperlinks": [
+                              [
+                                "2719 (2023)",
+                                "https://undocs.org/en/S/RES/2719(2023)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Establishment of a joint United Nations-African Union operational framework for the implementation of Security Council resolution 2719 (2023)",
+                            "hyperlinks": [
+                              [
+                                "2719 (2023)",
+                                "https://undocs.org/en/S/RES/2719(2023)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "The United Nations and the African Union implement the operational framework for the implementation of Security Council resolution 2719 (2023)",
+                            "hyperlinks": [
+                              [
+                                "2719 (2023)",
+                                "https://undocs.org/en/S/RES/2719(2023)"
+                              ]
+                            ]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "2320 (2016)",
+                          "https://undocs.org/en/S/RES/2320(2016)"
+                        ],
+                        [
+                          "2378 (2017)",
+                          "https://undocs.org/en/S/RES/2378(2017)"
+                        ],
+                        [
+                          "S/2023/303",
+                          "https://undocs.org/en/S/2023/303"
+                        ],
+                        [
+                          "2719 (2023)",
+                          "https://undocs.org/en/S/RES/2719(2023)"
+                        ],
+                        [
+                          "2719 (2023)",
+                          "https://undocs.org/en/S/RES/2719(2023)"
+                        ],
+                        [
+                          "2719 (2023)",
+                          "https://undocs.org/en/S/RES/2719(2023)"
+                        ],
+                        [
+                          "2719 (2023)",
+                          "https://undocs.org/en/S/RES/2719(2023)"
+                        ]
+                      ],
+                      "children": []
+                    },
+                    {
+                      "block_type": "other",
+                      "text": "a\tS/PRST/2022/6.",
+                      "table_content": null,
+                      "hyperlinks": [
+                        [
+                          "S/PRST/2022/6",
+                          "https://undocs.org/en/S/PRST/2022/6"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Result 2: advanced youth involvement in peace and security initiatives in Africa – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.IV.18\tThe Office’s work contributed to the completion by the African Union of the induction and training of the second cohort of the African Youth Ambassadors for Peace, strengthening youth leadership capacity and promoting inclusive, youth-led solutions to conflict across the continent through the Youth for Peace programme, which met the planned target.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.IV.19\tProgress towards the objective and the target for 2026 are presented in the performance measure below (see table 3.IV.3).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Table 3.IV.3 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "The African Union adopted the Bujumbura Declaration on youth, peace and security in Africa",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The African Union supported its member States to integrate the Continental Framework for Youth, Peace and Security into national policies and processes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The African Union completed the induction and training of the second cohort of African Youth ambassadors for Peace",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10 African Union member States develop national actional plans on youth, peace and security",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5 additional African Union member States develop national actional plans on youth, peace and security",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Result 3: enhancing joint United Nations-African Union efforts in preventing and mediating conflict, sustaining peace and addressing the root causes of conflict – Proposed programme plan for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.IV.20\tThe African Peace and Security Architecture remains central to fostering peace and stability across Africa. In 2024, the Office supported the Architecture, including by commencing the review of the African Standby Force, and in various thematic areas, including disarmament, demobilization and reintegration, security sector reform and addressing the impact of climate change on peace and security, through capacity-building and policy development.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Lessons learned and planned change",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.IV.21\tThe lesson for the Office was the need to further deepen United Nations-African Union coordination in implementation of efforts on disarmament, demobilization and reintegration activities, security sector reform and addressing the impact of climate change on peace and security. In applying the lesson, the Office will develop strategies across these thematic areas to strengthen United Nations support for African Union-led peace and security processes. The Office will implement these strategies through strengthened policy support, analysis, knowledge-sharing and capacity-building, with a view to enhancing coordination between the African Union and United Nations in these thematic areas.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "3.IV.22\tExpected progress towards the objective is presented in the performance measure below (see figure 3.IV.I).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Figure 3.IV.I – Performance measure: number of joint African Union–United Nations initiatives in support of security sector reform; disarmament, demobilization and reintegration; and addressing impact of climate change on peace and security",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "image",
+                      "text": "",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Legislative mandates",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.23\tThe list below, which was reviewed in the preparation of the proposed programme budget, provides all mandates entrusted to the programme.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "italic",
+                  "text": "General Assembly resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "52/220",
+                            "hyperlinks": [
+                              [
+                                "52/220",
+                                "https://undocs.org/en/A/RES/52/220"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Questions relating to the proposed programme budget for the biennium 1998–1999",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "60/268",
+                            "hyperlinks": [
+                              [
+                                "60/268",
+                                "https://undocs.org/en/A/RES/60/268"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Support account for peacekeeping operations",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "64/288",
+                            "hyperlinks": [
+                              [
+                                "64/288",
+                                "https://undocs.org/en/A/RES/64/288"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Financing of the United Nations Office to the African Union",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "65/274; 67/302",
+                            "hyperlinks": [
+                              [
+                                "65/274",
+                                "https://undocs.org/en/A/RES/65/274"
+                              ],
+                              [
+                                "67/302",
+                                "https://undocs.org/en/A/RES/67/302"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Cooperation between the United Nations and the African Union",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "71/270",
+                            "hyperlinks": [
+                              [
+                                "71/270",
+                                "https://undocs.org/en/A/RES/71/270"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "Review of the United Nations Office to the African Union",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "79/1",
+                            "hyperlinks": [
+                              [
+                                "79/1",
+                                "https://undocs.org/en/A/RES/79/1"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "The Pact for the Future",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "52/220",
+                          "https://undocs.org/en/A/RES/52/220"
+                        ],
+                        [
+                          "60/268",
+                          "https://undocs.org/en/A/RES/60/268"
+                        ],
+                        [
+                          "64/288",
+                          "https://undocs.org/en/A/RES/64/288"
+                        ],
+                        [
+                          "65/274",
+                          "https://undocs.org/en/A/RES/65/274"
+                        ],
+                        [
+                          "67/302",
+                          "https://undocs.org/en/A/RES/67/302"
+                        ],
+                        [
+                          "71/270",
+                          "https://undocs.org/en/A/RES/71/270"
+                        ],
+                        [
+                          "79/1",
+                          "https://undocs.org/en/A/RES/79/1"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "italic",
+                  "text": "Security Council resolutions",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "1325 (2000)",
+                            "hyperlinks": [
+                              [
+                                "1325 (2000)",
+                                "https://undocs.org/en/S/RES/1325(2000)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2033 (2012)",
+                            "hyperlinks": [
+                              [
+                                "2033 (2012)",
+                                "https://undocs.org/en/S/RES/2033(2012)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2167 (2014)",
+                            "hyperlinks": [
+                              [
+                                "2167 (2014)",
+                                "https://undocs.org/en/S/RES/2167(2014)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2250 (2015)",
+                            "hyperlinks": [
+                              [
+                                "2250 (2015)",
+                                "https://undocs.org/en/S/RES/2250(2015)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2320 (2016)",
+                            "hyperlinks": [
+                              [
+                                "2320 (2016)",
+                                "https://undocs.org/en/S/RES/2320(2016)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2378 (2017)",
+                            "hyperlinks": [
+                              [
+                                "2378 (2017)",
+                                "https://undocs.org/en/S/RES/2378(2017)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2457 (2019)",
+                            "hyperlinks": [
+                              [
+                                "2457 (2019)",
+                                "https://undocs.org/en/S/RES/2457(2019)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2710 (2023)",
+                            "hyperlinks": [
+                              [
+                                "2710 (2023)",
+                                "https://undocs.org/en/S/RES/2710(2023)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2719 (2023)",
+                            "hyperlinks": [
+                              [
+                                "2719 (2023)",
+                                "https://undocs.org/en/S/RES/2719(2023)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "1325 (2000)",
+                          "https://undocs.org/en/S/RES/1325(2000)"
+                        ],
+                        [
+                          "2033 (2012)",
+                          "https://undocs.org/en/S/RES/2033(2012)"
+                        ],
+                        [
+                          "2167 (2014)",
+                          "https://undocs.org/en/S/RES/2167(2014)"
+                        ],
+                        [
+                          "2250 (2015)",
+                          "https://undocs.org/en/S/RES/2250(2015)"
+                        ],
+                        [
+                          "2320 (2016)",
+                          "https://undocs.org/en/S/RES/2320(2016)"
+                        ],
+                        [
+                          "2378 (2017)",
+                          "https://undocs.org/en/S/RES/2378(2017)"
+                        ],
+                        [
+                          "2457 (2019)",
+                          "https://undocs.org/en/S/RES/2457(2019)"
+                        ],
+                        [
+                          "2710 (2023)",
+                          "https://undocs.org/en/S/RES/2710(2023)"
+                        ],
+                        [
+                          "2719 (2023)",
+                          "https://undocs.org/en/S/RES/2719(2023)"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.24\tTable 3.IV.4 lists all deliverables of the Office.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Table 3.IV.4 – United Nations Office to the African Union: deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tReport of the Secretary-General to the Security Council on strengthening the partnership between the United Nations and the African Union on issues of peace and security in Africa, including the work of the United Nations Office to the African Union",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "16",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "11",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tAnnual joint consultative meetings of the Security Council and the African Union Peace and Security Council ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3.\tAnnual joint consultative meetings between the United Nations Peacebuilding Commission and the African Union Peace and Security Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4.\tCoordination meetings of the Security Council and the African Union Peace and Security Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5.\tMeetings of the Fifth Committee",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t6.\tMeetings of the Committee for Programme and Coordination",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t7.\tMeetings of the Advisory Committee on Administrative and Budgetary Questions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSeminars, workshops and training events (number of days)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "100",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "101",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "100",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "103",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t8.\tTraining events for the African Union Mediation Support Unit on current methods and trends in mediation",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t9.\tTraining events for the secretariat of the African Union Peace and Security Council on current issues and trends in peace and security",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "11",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t10.\tTraining events for the African Union on military, police and civilian aspects of peace support operations ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "60",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "68",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "60",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "65",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t11.\tSeminars and workshops for experts and officials of African Union member States on topics related to conflict prevention, management and resolution ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "20 ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "20",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "20",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "22",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTechnical materials (number of materials)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "20",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "13",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "17",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t12.\tJoint United Nations-African Union technical review of and assessment reports on African Union peace support operations ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t13.\tPolicies and guidance documents in support of the African-led peace support operations",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t14.\tPeace and security-related policies and guidelines in support of the implementation of the African Peace and Security Architecture and conflict prevention, management and resolution",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tGood offices: support for the African Union in mediation and conflict prevention efforts; and one joint regional visit by the representatives of the African Union, the United Nations and regional economic communities for conflict analysis and early intervention.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: support for the African Union in mediation and conflict prevention efforts; and one joint regional visit by the representatives of the African Union, the United Nations and regional economic communities for conflict analysis and early intervention.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: support for the African Union in mediation and conflict prevention efforts; and one joint regional visit by the representatives of the African Union, the United Nations and regional economic communities for conflict analysis and early intervention.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: support for the African Union in mediation and conflict prevention efforts; and one joint regional visit by the representatives of the African Union, the United Nations and regional economic communities for conflict analysis and early intervention.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: support for the African Union in mediation and conflict prevention efforts; and one joint regional visit by the representatives of the African Union, the United Nations and regional economic communities for conflict analysis and early intervention.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConsultation, advice and advocacy: advice, in collaboration with the African Union Commission, to five regional economic communities and regional mechanisms on the development and harmonization of the African Peace and Security Architecture; advisory services and support to advance the implementation of the youth, peace and security and the women and peace and security agendas; 20 briefings to the African Union Peace and Security Council on peace and security issues; advice to the African Union and relevant stakeholders on processes to support the financing of African Union peace support operations, including the implementation of Security Council resolution 2719 (2023); advice and advocacy to the Open-ended Group of Friends of the United Nations-African Union partnership; and substantive and technical advice to the Peace Fund. ",
+                            "hyperlinks": [
+                              [
+                                "2719 (2023)",
+                                "https://undocs.org/en/S/RES/2719(2023)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advice, in collaboration with the African Union Commission, to five regional economic communities and regional mechanisms on the development and harmonization of the African Peace and Security Architecture; advisory services and support to advance the implementation of the youth, peace and security and the women and peace and security agendas; 20 briefings to the African Union Peace and Security Council on peace and security issues; advice to the African Union and relevant stakeholders on processes to support the financing of African Union peace support operations, including the implementation of Security Council resolution 2719 (2023); advice and advocacy to the Open-ended Group of Friends of the United Nations-African Union partnership; and substantive and technical advice to the Peace Fund. ",
+                            "hyperlinks": [
+                              [
+                                "2719 (2023)",
+                                "https://undocs.org/en/S/RES/2719(2023)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advice, in collaboration with the African Union Commission, to five regional economic communities and regional mechanisms on the development and harmonization of the African Peace and Security Architecture; advisory services and support to advance the implementation of the youth, peace and security and the women and peace and security agendas; 20 briefings to the African Union Peace and Security Council on peace and security issues; advice to the African Union and relevant stakeholders on processes to support the financing of African Union peace support operations, including the implementation of Security Council resolution 2719 (2023); advice and advocacy to the Open-ended Group of Friends of the United Nations-African Union partnership; and substantive and technical advice to the Peace Fund. ",
+                            "hyperlinks": [
+                              [
+                                "2719 (2023)",
+                                "https://undocs.org/en/S/RES/2719(2023)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advice, in collaboration with the African Union Commission, to five regional economic communities and regional mechanisms on the development and harmonization of the African Peace and Security Architecture; advisory services and support to advance the implementation of the youth, peace and security and the women and peace and security agendas; 20 briefings to the African Union Peace and Security Council on peace and security issues; advice to the African Union and relevant stakeholders on processes to support the financing of African Union peace support operations, including the implementation of Security Council resolution 2719 (2023); advice and advocacy to the Open-ended Group of Friends of the United Nations-African Union partnership; and substantive and technical advice to the Peace Fund. ",
+                            "hyperlinks": [
+                              [
+                                "2719 (2023)",
+                                "https://undocs.org/en/S/RES/2719(2023)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: advice, in collaboration with the African Union Commission, to five regional economic communities and regional mechanisms on the development and harmonization of the African Peace and Security Architecture; advisory services and support to advance the implementation of the youth, peace and security and the women and peace and security agendas; 20 briefings to the African Union Peace and Security Council on peace and security issues; advice to the African Union and relevant stakeholders on processes to support the financing of African Union peace support operations, including the implementation of Security Council resolution 2719 (2023); advice and advocacy to the Open-ended Group of Friends of the United Nations-African Union partnership; and substantive and technical advice to the Peace Fund. ",
+                            "hyperlinks": [
+                              [
+                                "2719 (2023)",
+                                "https://undocs.org/en/S/RES/2719(2023)"
+                              ]
+                            ]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: International Women’s Day, International Youth Day, Africa Day, International Day of United Nations Peacekeepers and International Day of Peace; information materials, flyers, banners and infographic documents; quarterly public newsletter of the Office; and information circular submitted every two weeks to the African Union Peace and Security Council on relevant Security Council resolutions and decisions. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: International Women’s Day, International Youth Day, Africa Day, International Day of United Nations Peacekeepers and International Day of Peace; information materials, flyers, banners and infographic documents; quarterly public newsletter of the Office; and information circular submitted every two weeks to the African Union Peace and Security Council on relevant Security Council resolutions and decisions. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: International Women’s Day, International Youth Day, Africa Day, International Day of United Nations Peacekeepers and International Day of Peace; information materials, flyers, banners and infographic documents; quarterly public newsletter of the Office; and information circular submitted every two weeks to the African Union Peace and Security Council on relevant Security Council resolutions and decisions. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: International Women’s Day, International Youth Day, Africa Day, International Day of United Nations Peacekeepers and International Day of Peace; information materials, flyers, banners and infographic documents; quarterly public newsletter of the Office; and information circular submitted every two weeks to the African Union Peace and Security Council on relevant Security Council resolutions and decisions. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: International Women’s Day, International Youth Day, Africa Day, International Day of United Nations Peacekeepers and International Day of Peace; information materials, flyers, banners and infographic documents; quarterly public newsletter of the Office; and information circular submitted every two weeks to the African Union Peace and Security Council on relevant Security Council resolutions and decisions. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDigital platforms and multimedia content: website and social media accounts; and online platform showcasing United Nations-African Union partnership activities.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: website and social media accounts; and online platform showcasing United Nations-African Union partnership activities.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: website and social media accounts; and online platform showcasing United Nations-African Union partnership activities.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: website and social media accounts; and online platform showcasing United Nations-African Union partnership activities.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: website and social media accounts; and online platform showcasing United Nations-African Union partnership activities.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "2719 (2023)",
+                          "https://undocs.org/en/S/RES/2719(2023)"
+                        ],
+                        [
+                          "2719 (2023)",
+                          "https://undocs.org/en/S/RES/2719(2023)"
+                        ],
+                        [
+                          "2719 (2023)",
+                          "https://undocs.org/en/S/RES/2719(2023)"
+                        ],
+                        [
+                          "2719 (2023)",
+                          "https://undocs.org/en/S/RES/2719(2023)"
+                        ],
+                        [
+                          "2719 (2023)",
+                          "https://undocs.org/en/S/RES/2719(2023)"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub",
+          "text": "Overview",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "3.IV.25\tThe proposed regular budget resources for 2026, including the breakdown of resource changes, as applicable, are reflected in tables 3.IV.5 to 3.IV.7.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table",
+              "text": "Table 3.IV.5",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial resources by object of expenditure – (Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Object of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 estimate ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Posts",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 267.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 122.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 122.7",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Travel of staff ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "7.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6.0",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Contractual services ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "5.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2.9",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "7.0",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General operating expenses",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "60.1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "60.1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Supplies and materials ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4.7",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 286.5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 200.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 200.5",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 3.IV.6",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed posts and post changes for 2026 – (Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Number",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Details",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Approved for 2025",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 USG, 1 D-2, 1 P-5, 1 P-4, 2 LL",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Proposed for 2026",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 USG, 1 D-2, 1 P-5, 1 P-4, 2 LL",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 3.IV.7",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed posts by category and grade – (Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Category and grade",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 proposed",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Professional and higher",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "USG",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "D-2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-5",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "P-4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General Service and related",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "LL",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tSubtotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.26\tAdditional details on the distribution of the proposed resources for 2026 are reflected in tables 3.IV.8 to 3.IV.10 and figure 3.IV.II.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.27\tAs shown in tables 3.IV.8 (1) and 3.IV.9 (1), the overall resources proposed for 2026 amount to $1,200,500, reflecting an increase of $200 compared with the approved budget for 2025. Resource changes result from other changes. The proposed level of resources provides for the full, efficient and effective implementation of mandates.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 3.IV.8",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial resources by source of funding, component and subprogramme – (Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "list-2",
+                  "text": "(1)\tRegular budget",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 estimate ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Component/subprogramme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 expenditure",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 approved",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Technical adjustments",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "New/expanded mandates ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Other ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Total ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Percentage",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 estimate ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Programme of work",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1 286.5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1 200.3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0.2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0.2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0.0",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1 200.5",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubtotal, 1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1 286.5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1 200.3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0.2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0.2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0.0",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1 200.5",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "list-2",
+                  "text": "(2)\tOther assessed",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Component/subprogramme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 expenditure",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 estimate",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Change",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Percentage",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 estimate",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Programme of work ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10 233.1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9 807.3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "535.4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5.5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10 342.7",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubtotal, 2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10 233.1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9 807.3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "535.4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5.5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10 342.7",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "list-2",
+                  "text": "(3)\tExtrabudgetary",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Component/subprogramme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 expenditure",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025\nestimate",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Change",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Percentage",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026\nestimate",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Programme of work ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "683.2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "701.9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(701.9)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(100.0)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubtotal, 3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "683.2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "701.9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(701.9)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(100.0)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTotal (1+2+3)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12 202.8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "11 709.5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(166.3)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(1.4)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "11 543.2",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 3.IV.9",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: proposed posts for 2026 by source of funding, component and subprogramme – (Number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "list-2",
+                  "text": "(1)\tRegular budget",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Component/subprogramme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 \napproved",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Changes",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 proposed",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Component/subprogramme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 \napproved",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Technical adjustments",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "New/expanded mandates ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Other ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Total ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 proposed",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Programme of work",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubtotal, 1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "list-2",
+                  "text": "(2)\tOther assessed",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Component/subprogramme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 estimate",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Change",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 estimate",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Programme of work ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "50",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "50",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubtotal, 2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "50",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "50",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "list-2",
+                  "text": "(3)\tExtrabudgetary",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Component/subprogramme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 estimate",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Change",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 estimate",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Programme of work ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(2)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubtotal, 3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(2)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTotal (1+2+3)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "58",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "(2)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "56",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 3.IV.10",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Overall: evolution of financial and post resources – (Thousands of United States dollars/number of posts)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Changes",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 \nestimate ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 approved",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Technical adjustments",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "New/expanded mandates",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Other ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Total",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Percentage ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 \nestimate ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Financial resources by main category of expenditure",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Posts",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 267.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 122.7",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 122.7",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Non-post",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "18.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "77.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "77.8",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 285.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 200.3",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "0.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "1 200.5",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Post resources by category",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Professional and higher",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "4",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "General Service and related",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "–",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "6",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "figure",
+                  "text": "Figure 3.IV.II",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Distribution of proposed resources for 2026 – (Number of posts/thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "image",
+                  "text": "",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub",
+          "text": "Explanation of variances by factor and component – Overall resource changes",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Other changes",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.28\tAs shown in table 3.IV.8 (1), resource changes reflect an increase of $200 under contractual services due to the adjustment of standard ICT rates for non-field personnel outside of Headquarters for 2026.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Other assessed resources",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.29\tAs reflected in tables 3.IV.8 (2) and 3.IV.9 (2), other assessed resources amount to $10,342,700. The resources would complement regular budget resources and provide for the requirements indicated in report of the Secretary-General on the budget for the support account for peacekeeping operations for the period from 1 July 2025 to 30 June 2026 (A/79/83).",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "A/79/83",
+                      "https://docs.un.org/en/A/79/83"
+                    ]
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Extrabudgetary resources",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.30\tAs reflected in tables 3.IV.8 (3) and 3.IV.9 (3), no extrabudgetary resources are expected in 2026 due to the discontinuation of donor funding.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Other information",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.31\tIn accordance with the 2030 Agenda, in particular target 12.6 of the Sustainable Development Goals, in which organizations are encouraged to integrate sustainability information into their reporting cycles, and in compliance with the cross-cutting mandate set out in paragraph 19 of General Assembly resolution 72/219, the Office is integrating environmental management practices into its operations. The Office will continue to deploy printers with energy-efficient technological capacity and levels, thus providing a low-energy footprint; install software on printers to monitor printing levels; and use electrical vehicles for an environmentally sustainable fleet solution, in line with a new policy put in place by the Government of Ethiopia banning the use of fossil fuel vehicles in the country.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "72/219",
+                      "https://docs.un.org/en/A/RES/72/219"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "3.IV.32\tInformation on advance booking for air travel is reflected in table 3.IV.11. The majority of official travel by the Office is in support of joint initiatives with the African Union, the regional economic communities and other partners. Notification or approval of such travel is often not received within time frames that would comply with the United Nations stipulations on travel. The Office will continue to ensure that notification or approval of travel is received within timelines that would enable compliance with the stipulated requirements and raise awareness of this obligation among its strategic partners.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table",
+                  "text": "Table 3.IV.11",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub-sub",
+              "text": "Compliance rate – (Percentage)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2022 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2023 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024 actual",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 planned",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026 planned",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Air tickets purchased at least two weeks before the commencement of travel",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "10",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "10",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "33",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

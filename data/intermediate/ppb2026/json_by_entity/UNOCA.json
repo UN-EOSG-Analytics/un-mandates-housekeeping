@@ -1,0 +1,1862 @@
+{
+  "entity": "United Nations Regional Office for Central Africa",
+  "entity_abbrev": "UNOCA",
+  "entity_raw_name": "6.\tUnited Nations Regional Office for Central Africa",
+  "source_file": "A_80_6 (SECT. 3)_ADD.4_CLUSTER_III_FASCICLE ADVANCE UNEDITED COPY FOR ACABQ.json",
+  "content": [
+    {
+      "block_type": "italic",
+      "text": "($8,329,200)",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": []
+    },
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "UNOCA is responsible for the prevention of conflicts and the consolidation of peace and security in Central Africa. The mandate derives from an exchange of letters between the Secretary-General and the President of the Security Council (S/2009/697 and S/2010/457). In another exchange of letters (S/2024/648 and S/2024/649), the mandate was extended until 31 August 2027.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "S/2009/697",
+                      "https://undocs.org/en/S/2009/697"
+                    ],
+                    [
+                      "S/2010/457",
+                      "https://undocs.org/en/S/2010/457"
+                    ],
+                    [
+                      "S/2024/648",
+                      "https://docs.un.org/S/2024/648"
+                    ],
+                    [
+                      "S/2024/649",
+                      "https://docs.un.org/S/2024/649"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The mandate for 2024–2027 encompasses four objectives, namely: (a) monitor political and security developments in Central Africa and carry out good offices on behalf of the Secretary-General in order to prevent and resolve conflicts, to help to sustain peace and to advise the Secretary-General and United Nations entities in the region on sustaining peace issues in Central Africa; (b) enhance subregional capacities for conflict prevention and mediation in countries of the subregion, with due attention given to the principles of the Charter of the United Nations, including human rights and gender dimensions; (c) support and enhance United Nations efforts in the subregion, as well as regional and subregional initiatives on peace and security, including from human rights and gender perspectives; and (d) enhance coherence and coordination in the work of the United Nations in the subregion on peace and security.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The mission serves as the secretariat of the United Nations Standing Advisory Committee on Security Questions in Central Africa.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The objective, to which this mission contributes, is to prevent conflict and consolidate peace and security in the Central Africa subregion.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "To contribute to the objective, the mission will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Engage in good offices activities to help countries to prevent political crises and election-related violence and peacefully resolve conflicts and crises stemming from political processes, including political transitions, and promote inclusive, peaceful and credible elections;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Leverage its partnership with subregional organizations, especially the Economic Community of Central African States (ECCAS) in conflict prevention, mediation and early warning, ensuring the participation of women, young people and other actors in inclusive peacebuilding and sustaining peace efforts, including the implementation of the regional strategy on hate speech, and addressing the adverse effects of climate change on peace and security;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Address cross-regional peace and security challenges, including farmer-herder dynamics, the crisis in the Lake Chad Basin and maritime piracy in the Gulf of Guinea, in close coordination with United Nations entities in Central and West Africa;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Carry out regular early warning analysis to inform preventive diplomacy and good offices efforts for peace and security in Central Africa, and mobilize support for preventive diplomacy, in collaboration with ECCAS and United Nations entities;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Enhance the coherence of the work of the United Nations on peace and security issues in Central Africa through regular consultations with relevant United Nations entities in the subregion, coordinate the efforts of United Nations entities geared towards the implementation of the regional conflict prevention framework and in line with commitments of the Pact for the Future, and support the country teams in adopting and/or rolling out national sustaining peace strategies aligned with the framework; and",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Support the regular ministerial meetings of United Nations Standing Advisory Committee on Security Questions in Central Africa as a platform for confidence-building between Member States to discuss threats and challenges to regional peace and security, with a view to preventing or addressing conflicts, crises or inter-State tensions.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Peaceful and credible electoral processes in the subregion, with relevant prevention mechanisms in place for potential election-related violence;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Prevention and mitigation of election-related violence, as well as the initiation or continuation of inclusive political dialogue processes, assisted by joint early-warning and good offices by the Mission and ECCAS in countries holding elections, facing a political crisis or undergoing a political transition;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Progress made by ECCAS towards the adoption of a regional humanitarian strategy for Central Africa and the set-up of the ECCAS parliament;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The United Nations Standing Advisory Committee on Security Questions in Central Africa is contributing to reinforced cooperation and coordination among ECCAS Member States, regional organisations and other key stakeholders of the subregion.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "A shared understanding of key peace and security challenges and priorities among United Nations entities in Central Africa, integrating emerging drivers of conflicts, including the impact of climate change and environmental degradation;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Enhanced coordination of United Nations efforts in support of regional and subregional initiatives on peace and security and governance; and",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Improved interregional coordination of efforts between Central and West Africa on: maritime security in the Gulf of Guinea; impact of climate change on peace and security; farmer-herder dynamics; and the crisis in the Lake Chad Basin region.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to inter-agency coordination and liaison, the mission works closely with the Office of the Special Envoy of the Secretary-General for the Great Lakes Region, UNOWAS, MINUSCA, MONUSCO and other relevant United Nations entities with respect to cross-border and transregional challenges to peace and security, in order to avoid duplication and ensure coherence and enhance synergies. Country-specific early warning and good offices activities are carried out in close coordination with the resident coordinators concerned.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "ECCAS institutional reform becomes increasingly more operational, with all peace and security institutions and mechanisms established and provided with adequate resources for their functioning;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "UNOCA and ECCAS maintain or strengthen their cooperation and regular consultations, and adopt and roll out a joint plan of action, within the framework of a new memorandum of understanding between ECCAS and the United Nations on peace and security issues;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "ECCAS member States remain committed to establishing a regional governance framework, work towards the adoption and implementation of regional governance standards and mechanisms and solicit or accept the support of UNOCA and regional and international partners;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The elections scheduled in the countries of the region, including in the countries undergoing political transitions, are held according to the constitutional and legal time frames or agreed-upon transitional timelines and the countries concerned accept the political engagement of UNOCA and ECCAS to defuse tensions, prevent election-related violence and resolve election-related crises;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "ECCAS and its member States show a commitment to the involvement of civil society actors, including the regional Coalition of Civil Society Organizations for Peace and Conflict Prevention in Central Africa, the Coalition of Youth, Peace and Security in Central Africa  and women’s organizations, in the activities of ECCAS in the realm of peace and security, including early warning, conflict prevention and peacebuilding. The Coalition becomes fully operational, with adequate human resources, and is supported by ECCAS member States and partners; and",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "ECCAS member States develop, adopt and begin implementation of a conflict-sensitive regional strategy on climate change and resilient development and regional regulation on pastoralism and transhumance in Central Africa to address the impacts of climate change on peace and security, while strengthening national and local mechanisms to prevent and peacefully resolve farmer-herder conflicts, and promote peaceful cross-border transhumance.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The mission integrates a gender perspective into its operational activities, deliverables and results, as appropriate, including support for the implementation of the regional action plan on Security Council resolution 1325 (2000) and the adoption and rolling out of national action plans. It continues its advocacy for the reinforcement of the role of women in conflict prevention and sustaining peace, as well as adequate representation of women in decision-making positions at both the national and regional levels. It works with other relevant United Nations entities and external partners to reinforce the capacities of women in decision-making and in mediation. It will continue supporting the operationalization and build the capacity of the ECCAS network of women mediators established in December 2021 and endorsed by the Heads of State in January 2022.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "1325 (2000)",
+                      "https://undocs.org/en/S/RES/1325(2000)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In line with the United Nations Disability Inclusion Strategy, the mission advocates for political and electoral processes in the region to be disability-sensitive, by encouraging Member States to take appropriate measures to facilitate the participation of persons with disabilities. The mission also encourages and supports experience-sharing between the States of the region on disability inclusion, thus facilitating the adoption of measures that take into consideration the specificities of the regional and national contexts.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Reduced tensions in electoral contexts",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2024, through good offices of the Special Representative of the Secretary-General, including the joint mission carried out with the President of the ECCAS Commission and the Special Envoy of the ECCAS facilitator for the transition in Chad, UNOCA encouraged political dialogue in Chad to create conditions for inclusive, peaceful and credible polls. The organization of the presidential election in May 2024 and legislative, provincial and local elections in December 2024 marked important steps towards the restoration of a constitutional order in Chad. Furthermore, UNOCA implemented projects to facilitate the effective participation of women and youth in the National Dialogue and the upcoming elections in Gabon in 2025.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective is presented in the performance measure below (see table 31).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 31 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Elections in Central Africa generally peaceful, with no or low level of violence\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Political transition in Chad advanced in an environment of relative calm including through the implementation of the Doha Peace Agreement. \n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Chad peacefully concluded its political transition, with the organizations of legislative, provincial and local elections. \nGabon’s transition advanced in a peaceful and inclusive manner, in line with the defined timeline.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned result for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result: Strengthened regional capacities for conflict prevention and mediation in Central Africa – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2024, the mission’s work contributed to strengthening of the capacities of Member States in Central Africa, including through the implementation of the Kigali Declaration on the prevention and combating of unconstitutional changes in Central Africa and continued engagement with civil society organizations. The regional conference on unconstitutional changes of government in Central Africa, organized by UNOCA and the Government of São Tomé and Príncipe, resulted in recommendations on addressing the root causes of unconstitutional changes of government in the region. Additionally, joint efforts have been made in partnership with local, regional and international stakeholders, with particular attention to ensure full, equal and meaningful participation of women and youth.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "italic",
+                      "text": "Lessons learned and planned change",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "A lesson for the mission was that coordination and cooperation with relevant stakeholders, particularly with regional and subregional organizations, are essential for more effective results. In applying the lesson, UNOCA plans to continue working with ECCAS and its Member States, as well as UN presences and country teams in the region and international and national stakeholders to prevent conflict and consolidate peace through promotion of good governance, taking into account the role of women and youth.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective and the target for 2025 are presented in the performance measure below (see table 32).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 32 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned) ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Recommendations on strengthening governance are concretized in line with the Kigali Declaration adopted by the United Nations Standing Advisory Committee on Security Questions in Central Africa ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Progress is achieved towards the development of a regional protocol on good governance",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Regional protocol on good governance is developed in close consultation with regional stakeholders \n",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Table 33 lists all deliverables of the mission.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 33 – Deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tReports of the Secretary-General to the Security Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tReport of the Secretary-General on the activities of the United Nations Standing Advisory Committee on Security Questions in Central Africa",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3.\tMeetings of the Security Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4.\tMinisterial meeting of the United Nations Standing Advisory Committee on Security Questions in Central Africa",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10 ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSeminars, workshops and training events (number of days)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "26",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "22",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "18",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "16",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5.\tWorkshop on conflict prevention, mediation, climate, peace and security, farmer-herder dynamics, human rights and women’s empowerment",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "20",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t6.\tWorkshop for journalists/media on their role in conflict prevention and protection of civilians",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tFact-finding, monitoring and investigation missions (number of missions)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "30",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " 25",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "30",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "30",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t7.\tField visits to Member States to gather information, consult stakeholders and coordinate action on issues relating to subregional peace and security, activities monitoring and data collecting",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "30",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "25",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "30",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "30",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tGood offices: preventive diplomacy and mediation, high-level diplomatic missions and meetings, including jointly with regional organizations (ECCAS and the African Union), regional and subregional summits, forums and high-level meetings to promote peace and stability, maritime safety and human rights, climate, peace and security and transhumance.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: preventive diplomacy and mediation, high-level diplomatic missions and meetings, including jointly with regional organizations (ECCAS and the African Union), regional and subregional summits, forums and high-level meetings to promote peace and stability, maritime safety and human rights, climate, peace and security and transhumance.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: preventive diplomacy and mediation, high-level diplomatic missions and meetings, including jointly with regional organizations (ECCAS and the African Union), regional and subregional summits, forums and high-level meetings to promote peace and stability, maritime safety and human rights, climate, peace and security and transhumance.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: preventive diplomacy and mediation, high-level diplomatic missions and meetings, including jointly with regional organizations (ECCAS and the African Union), regional and subregional summits, forums and high-level meetings to promote peace and stability, maritime safety and human rights, climate, peace and security and transhumance.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: preventive diplomacy and mediation, high-level diplomatic missions and meetings, including jointly with regional organizations (ECCAS and the African Union), regional and subregional summits, forums and high-level meetings to promote peace and stability, maritime safety and human rights, climate, peace and security and transhumance.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConsultation, advice and advocacy: strategic coordination meetings and round tables with regional and subregional organizations on regional integration, peace and security, human rights and counterterrorism (including security threats in the Lake Chad Basin).",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: strategic coordination meetings and round tables with regional and subregional organizations on regional integration, peace and security, human rights and counterterrorism (including security threats in the Lake Chad Basin).",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: strategic coordination meetings and round tables with regional and subregional organizations on regional integration, peace and security, human rights and counterterrorism (including security threats in the Lake Chad Basin).",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: strategic coordination meetings and round tables with regional and subregional organizations on regional integration, peace and security, human rights and counterterrorism (including security threats in the Lake Chad Basin).",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: strategic coordination meetings and round tables with regional and subregional organizations on regional integration, peace and security, human rights and counterterrorism (including security threats in the Lake Chad Basin).",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tOutreach: collaboration with civil society (e.g., media associations and women’s and youth groups), regulatory bodies, ECCAS and other key stakeholders for events to raise awareness on UNOCA’s mandate and activities, including in the framework of the Football Tournament for Peace usually organized during the International Day of Peace; collaboration with the media for the public’s better understanding of UNOCA’s good offices and mediation work; and joint activities with the United Nations Communications Groups (Gabon and other countries covered).",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach: collaboration with civil society (e.g., media associations and women’s and youth groups), regulatory bodies, ECCAS and other key stakeholders for events to raise awareness on UNOCA’s mandate and activities, including in the framework of the Football Tournament for Peace usually organized during the International Day of Peace; collaboration with the media for the public’s better understanding of UNOCA’s good offices and mediation work; and joint activities with the United Nations Communications Groups (Gabon and other countries covered).",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach: collaboration with civil society (e.g., media associations and women’s and youth groups), regulatory bodies, ECCAS and other key stakeholders for events to raise awareness on UNOCA’s mandate and activities, including in the framework of the Football Tournament for Peace usually organized during the International Day of Peace; collaboration with the media for the public’s better understanding of UNOCA’s good offices and mediation work; and joint activities with the United Nations Communications Groups (Gabon and other countries covered).",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach: collaboration with civil society (e.g., media associations and women’s and youth groups), regulatory bodies, ECCAS and other key stakeholders for events to raise awareness on UNOCA’s mandate and activities, including in the framework of the Football Tournament for Peace usually organized during the International Day of Peace; collaboration with the media for the public’s better understanding of UNOCA’s good offices and mediation work; and joint activities with the United Nations Communications Groups (Gabon and other countries covered).",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach: collaboration with civil society (e.g., media associations and women’s and youth groups), regulatory bodies, ECCAS and other key stakeholders for events to raise awareness on UNOCA’s mandate and activities, including in the framework of the Football Tournament for Peace usually organized during the International Day of Peace; collaboration with the media for the public’s better understanding of UNOCA’s good offices and mediation work; and joint activities with the United Nations Communications Groups (Gabon and other countries covered).",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tExternal and media relations: capacity-building programmes for the media and communications stakeholders in the subregion, in the context of national elections and other key political processes (in coordination with other UN entities; build, maintain and reinforce  working relationships with the media at the national, subregional and international levels on the work of UNOCA; organization of at least two press conferences for UNOCA leadership; and arrange for interviews with other colleagues from substantive or relevant components of UNOCA.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: capacity-building programmes for the media and communications stakeholders in the subregion, in the context of national elections and other key political processes (in coordination with other UN entities; build, maintain and reinforce  working relationships with the media at the national, subregional and international levels on the work of UNOCA; organization of at least two press conferences for UNOCA leadership; and arrange for interviews with other colleagues from substantive or relevant components of UNOCA.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: capacity-building programmes for the media and communications stakeholders in the subregion, in the context of national elections and other key political processes (in coordination with other UN entities; build, maintain and reinforce  working relationships with the media at the national, subregional and international levels on the work of UNOCA; organization of at least two press conferences for UNOCA leadership; and arrange for interviews with other colleagues from substantive or relevant components of UNOCA.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: capacity-building programmes for the media and communications stakeholders in the subregion, in the context of national elections and other key political processes (in coordination with other UN entities; build, maintain and reinforce  working relationships with the media at the national, subregional and international levels on the work of UNOCA; organization of at least two press conferences for UNOCA leadership; and arrange for interviews with other colleagues from substantive or relevant components of UNOCA.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: capacity-building programmes for the media and communications stakeholders in the subregion, in the context of national elections and other key political processes (in coordination with other UN entities; build, maintain and reinforce  working relationships with the media at the national, subregional and international levels on the work of UNOCA; organization of at least two press conferences for UNOCA leadership; and arrange for interviews with other colleagues from substantive or relevant components of UNOCA.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDigital platforms and multimedia content: three online platforms (social and digital media) to disseminate multilingual content promoting the mandate and strengthening the visibility of UNOCA activities; production and dissemination of various materials to reflect UNOCA activities for peace and stability in the subregion; production and dissemination of various digital materials (cards, infographics, videos and digital newsletters) and multimedia content to reflect UNOCA activities for peace and stability in the subregion; and production of a podcast programme on high-priority areas of the UNOCA mandate. \n      Prevention and fight against hate speech and incitement of violence: Continuing support for the endorsement/final adoption, by Heads of States of ECCAS, of the regional strategy to prevent and address the issue as well as for its implementation; facilitation of at least one session on disinformation.  \n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: three online platforms (social and digital media) to disseminate multilingual content promoting the mandate and strengthening the visibility of UNOCA activities; production and dissemination of various materials to reflect UNOCA activities for peace and stability in the subregion; production and dissemination of various digital materials (cards, infographics, videos and digital newsletters) and multimedia content to reflect UNOCA activities for peace and stability in the subregion; and production of a podcast programme on high-priority areas of the UNOCA mandate. \n      Prevention and fight against hate speech and incitement of violence: Continuing support for the endorsement/final adoption, by Heads of States of ECCAS, of the regional strategy to prevent and address the issue as well as for its implementation; facilitation of at least one session on disinformation.  \n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: three online platforms (social and digital media) to disseminate multilingual content promoting the mandate and strengthening the visibility of UNOCA activities; production and dissemination of various materials to reflect UNOCA activities for peace and stability in the subregion; production and dissemination of various digital materials (cards, infographics, videos and digital newsletters) and multimedia content to reflect UNOCA activities for peace and stability in the subregion; and production of a podcast programme on high-priority areas of the UNOCA mandate. \n      Prevention and fight against hate speech and incitement of violence: Continuing support for the endorsement/final adoption, by Heads of States of ECCAS, of the regional strategy to prevent and address the issue as well as for its implementation; facilitation of at least one session on disinformation.  \n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: three online platforms (social and digital media) to disseminate multilingual content promoting the mandate and strengthening the visibility of UNOCA activities; production and dissemination of various materials to reflect UNOCA activities for peace and stability in the subregion; production and dissemination of various digital materials (cards, infographics, videos and digital newsletters) and multimedia content to reflect UNOCA activities for peace and stability in the subregion; and production of a podcast programme on high-priority areas of the UNOCA mandate. \n      Prevention and fight against hate speech and incitement of violence: Continuing support for the endorsement/final adoption, by Heads of States of ECCAS, of the regional strategy to prevent and address the issue as well as for its implementation; facilitation of at least one session on disinformation.  \n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: three online platforms (social and digital media) to disseminate multilingual content promoting the mandate and strengthening the visibility of UNOCA activities; production and dissemination of various materials to reflect UNOCA activities for peace and stability in the subregion; production and dissemination of various digital materials (cards, infographics, videos and digital newsletters) and multimedia content to reflect UNOCA activities for peace and stability in the subregion; and production of a podcast programme on high-priority areas of the UNOCA mandate. \n      Prevention and fight against hate speech and incitement of violence: Continuing support for the endorsement/final adoption, by Heads of States of ECCAS, of the regional strategy to prevent and address the issue as well as for its implementation; facilitation of at least one session on disinformation.  \n",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Resource requirements (regular budget) – Table 34 – Financial resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Variance",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 vs. 2025 Increase/(decrease)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 vs. 2025 Increase/(decrease)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Military and police personnel  ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Civilian personnel ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6 610.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6 561.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6 286.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6 286.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 6 759.1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 6 759.1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 472.6 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 472.6 ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Operational costs ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 800.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 134.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 581.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 581.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 1 570.1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 1 570.1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " (11.5)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " (11.5)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal (net of staff assessment) ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8 410.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7 695.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7 868.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7 868.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 8 329.2 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 8 329.2 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 461.1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " 461.1 ",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Table 35 – Human resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "USG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "ASG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "FS",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "NPO ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "NPO ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "GS",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "LL",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Approved 2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "12",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "33",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "12",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "16",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "50",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Proposed 2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "12",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "33",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "12",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "16",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "50",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tChange ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The proposed resource requirements for 2026 for the mission amount to $8,329,200 (net of staff assessment) and would provide for salaries and common staff costs ($6,759,100) for the continuation of 33 international posts (1 Under-Secretary-General, 2 D-1, 5 P-5, 12 P-4, 6 P-3 and 7 Field Service), 16 national posts (4 National Professional Officer and 12 Local level) and one national United Nations Volunteer, as well as operational costs ($1,570,100), comprising the costs for consultants ($9,800), official travel ($535,900), facilities and infrastructure ($198,600), ground transportation ($63,000), air operations ($132,200), communications and information technology ($503,600) and other supplies, services and equipment ($127,000).",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "A vacancy rate of 12.1 per cent has been applied to the estimates for international staff on the basis of the actual vacancy rate as of March 2025. Vacancy rates of 25.0 per cent for National Professional Officer posts, 16.7 per cent for Local level posts and zero per cent for national United Nations Volunteers have been applied to the estimates based on the actual average vacancy rates in 2024.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The increase in requirements for 2026 compared with the appropriation for 2025 is attributable mainly to: (a) increased requirements under international staff due to the application of a lower vacancy rate of 12.1 per cent compared to the rate of 20.2 per cent in the approved budget for 2025; and (b) increased requirements for Local level staff owing primarily to the application of the most recent salary scale. The increased requirements are offset in part by reduced requirements for air operations in line with historical flight hour utilization rates, and the non-provisioning of resources for individual contractual services.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Extrabudgetary resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "In 2025, extrabudgetary resources in the amount of $713,500 are projected to be used to continue to support regional capacities to prevent, mitigate and resolve election-related crises and violence in the Central Africa subregion, including through the strengthening of electoral governance and support for the adoption of a regional protocol on democratic elections, and the continuation of one position of Political Affairs Officer (P-4), and establishment of one Junior Professional Officer/Associate Expert in Political Affairs.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "In 2026, extrabudgetary resources in the amount of $400,000 are projected to be utilised to support the continuation of the above-mentioned projects.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

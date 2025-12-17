@@ -1,0 +1,3780 @@
+{
+  "entity": "United Nations Transitional Assistance Mission in Somalia",
+  "entity_abbrev": "UNTMIS",
+  "entity_raw_name": "2.\tUnited Nations Transitional Assistance Mission in Somalia",
+  "source_file": "A_80_6 (SECT. 3)_ADD.4_CLUSTER_III_FASCICLE ADVANCE UNEDITED COPY FOR ACABQ.json",
+  "content": [
+    {
+      "block_type": "italic",
+      "text": "($97,616,400)",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": []
+    },
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The United Nations Transitional Assistance Mission in Somalia (UNTMIS), formerly the United Nations Assistance Mission in Somalia (UNSOM), is tasked with supporting the Federal Government of Somalia in the attainment of key national priorities while advancing the two-year phased transition of its functions to the Federal Government of Somalia, the United Nations country team and other stakeholders by 31 October 2026.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In its resolution 2753 (2024), the Security Council decided that the United Nations Assistance Mission in Somalia would be called the United Nations Transitional Assistance Mission in Somalia (UNTMIS) and that UNTMIS would continue to implement UNSOM’s mandate and at the same time begin the formal transition of its functions to the Federal Government of Somalia, the United Nations country team and other stakeholders from 1 November 2024. The Council expressed its intention, informed by conditions on the ground, to terminate the mandate of UNTMIS at the end of the anticipated two-phased transition by 31 October 2026.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "2753 (2024)",
+                      "https://undocs.org/en/S/RES/2753(2024)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Security Council further decided that the first phase of the transition covering seven tasks specified in resolution 2753 (2024) would run from 1 November 2024 until 31 October 2025. During this phase, UNTMIS would continue with the tasks mandated to UNSOM by the Council in resolutions 2158 (2014) and 2592 (2021), and resolution 2705 (2023). The first phase of the transition would be completed by 31 October 2025. The Council further requested the Secretary-General to prepare, in consultation with the Federal Government of Somalia, a road map for delivering the first phase of the transition of the Mission’s tasks to the , the United Nations country team and other stakeholders, including the practical modalities for the transition, such as the reduction of UNTMIS personnel. The Council also requested the Secretary-General to update the Council on the situation regarding Somalia and on progress made in the implementation of the transition plan, through two written reports. The first report, together with the aforementioned road map for the first phase of the transition, was submitted on 28 March 2025. The second report is due by 30 September 2025. Informed by the Secretary-General’s reporting, the Security Council will review the progress of the UNTMIS transition, by 31 October 2025, to support decision-making on timelines for the handover of UNTMIS’s remaining tasks during the second phase of its transition.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "2158 (2014)",
+                      "https://undocs.org/en/S/RES/2158(2014)"
+                    ],
+                    [
+                      "2592 (2021)",
+                      "https://undocs.org/en/S/RES/2592(2021)"
+                    ],
+                    [
+                      "2705 (2023)",
+                      "https://undocs.org/en/S/RES/2705(2023)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In its resolution 2753 (2024), the Security Council requested the Mission to maintain a presence, as appropriate, across Somalia to deliver its transition mandate, in coordination with the Federal Government of Somalia and federal member states, and to ensure strong cooperation with Somalia and the African Union, as the security situation allowed.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The objective, to which the Mission contributes, is to the advancement of the Federal Government of Somalia’s key national state-building and development priorities, while implementing a phased and gradual transition of its functions to the Federal Government of Somalia, the United Nations country team and other stakeholders through the delivery of its mandate established by the Security Council and in line with the priorities of the Federal Government of Somalia.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "To contribute to the objective, in line with the transition priorities set out in Security Council resolution 2753 (2024) the Mission, will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Provide support to state-building, including the constitutional review process and efforts to conduct free and fair elections, through inclusive and transparent one-person, one-vote processes, including through capacity building, technical assistance and policy guidance, and facilitation of dialogue to promote reconciliation;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Advance the promotion and protection of human rights, including through institutional and human capacity building, technical assistance and policy guidance;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Provide support to United Nations entities to ensure system-wide implementation of the human rights due diligence policy, where relevant, across United Nations support in country;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Strengthen rule of law, justice and corrections and security sector support, including through capacity building and technical assistance;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Ensure coordination of international donor support, working with bilateral and multilateral partners, including to assist authorities to deliver basic services and community reconciliation, including in areas newly recovered from Al-Shabaab;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Coordinate the United Nations efforts in Somalia;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Coordinate with the African Union Support and Stabilization Mission in Somalia (AUSSOM), with a view to the progressive and phased transfer of these tasks; complete handover of any other outstanding tasks by 31 October 2026.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Facilitate and coordinate with the Federal Government of Somalia and the United Nations country team as well as all relevant stakeholders on finalisation of transition including handover of residual substantive tasks as well as closure of the mission.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Progress on national priorities on inclusive political processes, security, the rule of law, human rights and economic and social development in line with the objectives in the United Nations Sustainable Development Cooperation Framework for the period 2026–2030 aligned to the Somalia’s National Transformation Plan and its Centennial Vision 2060;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Successful transition, closure of the Mission by handover of its remaining tasks to the Federal Government of Somalia, the United Nations country team and other stakeholders retaining the gains made by the Mission since its establishment.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to cooperation with other entities, the Mission will continue its close coordination with AUSSOM. UNTMIS will continue to ensure compliance with the human rights due diligence policy on United Nations support to non-United Nations security forces with regard to United Nations support that may be provided to any non-United Nations entities in Somalia.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to inter-agency coordination and liaison, the Mission will continue collaborating with United Nations agencies, funds and programmes in Somalia, in particular as concerns preparations for the eventual handover of tasks associated with the second phase of the transition. This includes identified mandated activities undertaken through programmes and advancing implementation of the priorities outlined in the United Nations Sustainable Development Cooperation Framework in support of the Federal Government of Somalia’s National Transformation Plan and its Centennial Vision 2060.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to the external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Federal Government of Somalia and federal member states would have resumed inclusive dialogue and reached political consensus on advancing state-building priorities;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The constitutional review process will have advanced;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Federal Government of Somalia and federal member states (Puntland and Jubaland) would have resumed dialogue and reached political agreements on advancing state-building priorities.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Somalia will continue to progressively assume responsibility for security, with the Federal Government of Somalia and federal member states making progress towards building able, accountable, acceptable and affordable security institutions as outlined in the Constitution, the national security architecture and the security sector development plan;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Human rights violations by parties to the conflict will remain a concern;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Al-Shabaab will remain the greatest threat to security and stability in Somalia, followed by clan violence and localized disputes, and young Somalis will remain vulnerable to radicalization and recruitment by extremist groups, in particular Al-Shabaab;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Women and girls will continue to be disproportionately affected by inequality, sexual violence, violations of international humanitarian law and violations and abuses of human rights;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The risk of discrimination and exclusion facing minorities, marginalized communities and internally displaced persons will persist;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Freedom of expression and civic space will face challenges, and the risk of human rights violations and protection risks to civilians will persist;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The United Nations presence in Somalia in 2026 will remain dependent on adequate security arrangements acceptable under the established United Nations security management system; and",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Availability of sufficient resources and capacities within the identified counterparts in the Federal Government of Somalia, United Nations country team and other stakeholders to enable timely assumption of identified tasks from UNTMIS will remain a concern for successful transition of the Mission.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The Mission integrates a gender perspective into its activities, deliverables and results, as appropriate, including support for the increased protection of women and girls, as well as the full, equal, meaningful and safe participation and representation of women in the political sphere, economic life and reconciliation and peacebuilding efforts.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In line with the United Nations Disability Inclusion Strategy, the Mission, in partnership with the United Nations Support Office in Somalia (UNSOS) has developed a two-year joint action plan for the period 2023–2025, which will conclude in December 2025. In 2026, the Mission will continue to undertake activities that are specifically applicable to them whereas the work that has been led by the Mission will be handed over to the United Nations country team after 31 October 2026.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024 – Disability inclusion in Somalia",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "On 31 July 2024, the House of the People of the Federal Parliament of Somalia approved the Disability Rights Protection Bill, which was later passed by the Upper House of the Federal Parliament of Somalia on 28 October 2024. The Disability Rights Protection Bill was signed into law on 2 December 2024.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "From 2023 and throughout 2024, the Mission supported the Federal Ministry of Women and Human Rights Development and the National Disability Agency (NDA) in developing the Disability Rights Protection Bill. The support included technical and legal advice as well as capacity building. During this work, the Mission collaborated closely with the NDA and civil society organizations dedicated to promoting the rights of persons with disabilities. This marks an important milestone in the domestication of the United Nations Convention on the Rights of Persons with Disabilities, ratified by Somalia in August 2019.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Progress towards the objective is presented in the performance measure below (see table 9).",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 9 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022(actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023(actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–\n\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "The Federal Ministry of Women and Human Rights Development and the National Disability Agency (NDA) developed the Disability Rights Protection Bill, which the Federal Cabinet unanimously approved on 27 July 2023. \n\nThe NDA and organizations of persons with disabilities completed a comprehensive, nationwide disability survey, which informed policymakers about the perceptions and priorities of persons with disabilities and to what extent they participate in public life. \n\nSupport extended to a larger number of organisations of persons with disabilities, such as the Somali Youth Organization for the Visually Impaired.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Somalia made incremental progress towards the adoption of the Disability Rights Protection Bill to ensure the domestication of the United Nations Convention on the Rights of Persons with Disabilities. \n\nThe NDA and related organizations working on disability rights undertook efforts to increase their capacity. For example, the Somali National Association of the Deaf was supported on its Somalia-wide consultation on codification of Somali Sign Language, which is currently under review by the Federal Ministry of Education, Culture, and Higher Education. With respect to disability inclusion in disaster preparedness, a group of organizations of persons with disabilities participated in a train the trainers programme and were then supported to train other organizations of persons with disabilities, climate activists and trade unions on disability inclusion in climate justice, resulting in a review of Somalia’s National Determined Contributions. \n",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned results for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 1: resolution of outstanding issues of federalization through Federal Government and federal member state dialogue, enabling progress on the constitutional review and other state-building objectives – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2024, the Mission contributed through technical assistance to the constitutional review process and passing of election-enabling legislation, which partially met the planned target of paving way to one person, one vote district, state and national elections as two Jubaland and Puntland states remained outside the process. The Mission supported the convening of three National Consultative Council (NCC) meetings of FGS and FMS leadership to advance national priorities, including through agreement on aspects of the constitutional review process, the fight against Al-Shabaab and proposals for the electoral calendar at the national and subnational levels. The Mission supported the Office of the Prime Minister in ensuring the integration of a gender perspective and inclusion of women into the Council processes. The Mission also supported the capacity-building of parliamentarians to strengthen their participation in the constitutional review process, including the harmonization of federal and state-level constitutions and rules of procedure for the parliamentary process. In addition, the Mission further increased its support for the development of the security sector, including advancing the implementation of the national security architecture, which is central to the federalisation of security.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Until 31 October 2026, the Mission will prioritize its support to national partners in creating an enabling environment for consultations and the operationalization of an inclusive Somali-owned constitutional review process. It will also exercise its good offices and provide technical support to foster political agreements on contentious issues relating to the constitutional framework.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective and the target for 2026 is presented in the performance measure below (see table 10).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "heading-x",
+                      "text": "Table 10",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022(actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023(actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Federal Government of Somalia convened the National Consultative Council three times (without Puntland), covering priority areas, including security/ fight against Al-Shabaab, elections, stabilization, constitutional review and power-sharing\nTechnical work between the Federal Government of Somalia and federal member states in preparation for or follow-up to meetings of the National Consultative Council (or an equivalent platform) progressed and included women",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Federal and state level leaders engaged in dialogue on key issues except for Puntland and Jubaland (withdrew in October 2024); remaining NCC members achieved agreement on some federalization and state-building objectives\nContentious issues relating to federalization and state-building at the federal and state levels were not resolved with Jubaland joining Puntland in rejecting Constitutional amendments.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Federal and state level leaders agree on progress towards implementation of national State-building priorities\nConsultations take place as part of the constitutional review process inclusive of diverse perspectives of women, youth and marginalized groups’ representatives\nAgreement on the constitutional review process and a timetable for constitution",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "A peaceful transition of power takes place through an electoral process that is agreed upon by the Federal Government of Somalia and all federal member state leaders and implemented across the country. Inclusive consultations on the constitutional review process undertaken\nConstitutional review process is significantly advanced with fewer contentious issues remaining\n",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026(planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Capacities of accountable, affordable and able Somali security forces protecting the civilian population strengthened\nStrategic coordination between national and international stakeholders in the security sector strengthened\nProgress made on legislation to improve external civilian oversight over security forces\nHirshabelle State Police Act enacted, and four police bills developed and consulted\nPartners coordination mechanism on maritime security established",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Somali security sector development plan adopted and national security architecture revised\nJoint justice and corrections programme adopted\nPhase 2 of joint police programme designed\nCoordination of maritime security stakeholders strengthened\nNational defector rehabilitation programme revised\nBaseline assessment of national counter-improvised explosive device framework conducted",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Workstreams on defence, police, rule of law and public financial management partially established for the implementation of the security sector development plan\nCapacity-building of national institutions and implementation of  the joint justice and corrections programme ongoing \nJubaland adopted the Somalia Police Force Act, and Federal Cabinet endorsed the SPF Bill pending parliamentary approval.\nPhase 2 of joint police programme under implementation\nNational defector rehabilitation programme is being implemented",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Strengthened coordination with the AUSSOM successor mission on the security transition\nTechnical support provided to strengthen Somali security institutions towards their full assumption of security responsibilities\nSupport for the implementation of the security sector development plan and the revised national security architecture is coordinated with stakeholders, facilitating progress\nIndependent judicial system is promoted through implementation of the next phase of the joint justice and corrections programme\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Somali Security sector governance improved through implementation of a federated national security architecture and enhanced capacity and affordability of relevant FGS-FMS institutions\nLegitimate judicial system is promoted through improved trust and service delivery, and greater independence\nSomali Police capacity strengthened through enhanced FGS-FMS coordination and capacity building \nFederal Government of Somalia and federal member states’ authorities’ tools and capacities to lead the rule of law and security sector governance reform enhanced in line with an agreed Transition Roadmap.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "In May 2022, Somalia successfully conducted its presidential election ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "In May 2023, Somalia's federal government and member states reached a landmark agreement to implement a one-person, one-vote system, replacing the longstanding 4.5 clan-based formula.\n \nIn June 2023, Puntland conducted district council elections using direct universal suffrage, marking Somalia's first such elections since 1969.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "In 2024, the National Consultative Council (NCC) (although without the participation of Puntland) adopted the universal election plans\n \nThe Federal Parliament passed electoral-related constitutional amendments, followed by the adoption of the three election-related laws in November. \n \nCommissioners of the newly established National Independent and Boundaries Commission (NIEBC) appointed in December \n ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Capacity-building initiatives tailored to NIEBC’s operational needs with a focus on electoral processes.\n \nNIEBC receives technical and advisory support for election management, including planning, legal framework implementation, and conducting district elections.\n\nStrengthened coordination amongst international partners and United Nations entities for electoral assistance activities and\nresource mobilization for Somali elections\n ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "NIEBC receives technical support for successful election management at federal and state levels.\n \nImplementation of electoral laws, including provisions for women’s representation.\nSupport for enforcing the 30% gender quota in registration, results, and seat allocation.\n  \nStrengthened cooperation between NIEBC, donors, and electoral partners.\n\nUNTMIS support to the Federal Government of Somalia and federal member states related to this result area is successfully transitioned by 31 October 2026 ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 2: strengthened priority capabilities of Somali rule of law and security institutions at the federal and state levels – Programme performance in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2024, the Mission contributed to strengthening Somali’s rule of law and security institutions at federal and state levels through strategic policy advice, capacity-building initiatives, technical support, and enhanced coordination. The first phase of the Joint Police Program highlighted the need for stronger coordination with national and international partners. To ensure a smooth transition, UN Police will collaborate more closely with UNDP in implementing Phase II.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Until 31 October 2026, the Mission will continue supporting Somali’s rule of law and security institutions through strategic, policy, and technical advice, along with partner coordination. Key priorities include advancing the revised national security architecture, establishing the National Security Council, and implementing the security sector development plan. The Mission will also support legal framework development for the rule of law and security governance, facilitate coordination on force generation, training, and accountability, and contribute to a national maritime security strategy. Additionally, capacity-building initiatives in 2026 will address barriers to women’s professional development in the rule of law sector and promote gender sensitivity among decision-makers. Further efforts will focus on federated policing, justice, and corrections models, promoting judicial independence, civilian oversight, and accountability to enhance access to justice, particularly in fragile areas. Coordination with AUSSOM and national capacity development will also be strengthened. These tasks will progressively be handed over to the appropriate national authorities and to the United Nations country team and international partners by 31 October 2026, according to a transition roadmap to be agreed with the Federal Government of Somalia.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective and the target for 2026, until 31 October, is presented in the performance measure below (see table 11).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "heading-x",
+                      "text": "Table 11",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022(actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023(actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Federal Government of Somalia convened the National Consultative Council three times (without Puntland), covering priority areas, including security/ fight against Al-Shabaab, elections, stabilization, constitutional review and power-sharing\nTechnical work between the Federal Government of Somalia and federal member states in preparation for or follow-up to meetings of the National Consultative Council (or an equivalent platform) progressed and included women",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Federal and state level leaders engaged in dialogue on key issues except for Puntland and Jubaland (withdrew in October 2024); remaining NCC members achieved agreement on some federalization and state-building objectives\nContentious issues relating to federalization and state-building at the federal and state levels were not resolved with Jubaland joining Puntland in rejecting Constitutional amendments.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Federal and state level leaders agree on progress towards implementation of national State-building priorities\nConsultations take place as part of the constitutional review process inclusive of diverse perspectives of women, youth and marginalized groups’ representatives\nAgreement on the constitutional review process and a timetable for constitution",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "A peaceful transition of power takes place through an electoral process that is agreed upon by the Federal Government of Somalia and all federal member state leaders and implemented across the country. Inclusive consultations on the constitutional review process undertaken\nConstitutional review process is significantly advanced with fewer contentious issues remaining\n",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026(planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Capacities of accountable, affordable and able Somali security forces protecting the civilian population strengthened\nStrategic coordination between national and international stakeholders in the security sector strengthened\nProgress made on legislation to improve external civilian oversight over security forces\nHirshabelle State Police Act enacted, and four police bills developed and consulted\nPartners coordination mechanism on maritime security established",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Somali security sector development plan adopted and national security architecture revised\nJoint justice and corrections programme adopted\nPhase 2 of joint police programme designed\nCoordination of maritime security stakeholders strengthened\nNational defector rehabilitation programme revised\nBaseline assessment of national counter-improvised explosive device framework conducted",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Workstreams on defence, police, rule of law and public financial management partially established for the implementation of the security sector development plan\nCapacity-building of national institutions and implementation of  the joint justice and corrections programme ongoing \nJubaland adopted the Somalia Police Force Act, and Federal Cabinet endorsed the SPF Bill pending parliamentary approval.\nPhase 2 of joint police programme under implementation\nNational defector rehabilitation programme is being implemented",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Strengthened coordination with the AUSSOM successor mission on the security transition\nTechnical support provided to strengthen Somali security institutions towards their full assumption of security responsibilities\nSupport for the implementation of the security sector development plan and the revised national security architecture is coordinated with stakeholders, facilitating progress\nIndependent judicial system is promoted through implementation of the next phase of the joint justice and corrections programme\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Somali Security sector governance improved through implementation of a federated national security architecture and enhanced capacity and affordability of relevant FGS-FMS institutions\nLegitimate judicial system is promoted through improved trust and service delivery, and greater independence\nSomali Police capacity strengthened through enhanced FGS-FMS coordination and capacity building \nFederal Government of Somalia and federal member states’ authorities’ tools and capacities to lead the rule of law and security sector governance reform enhanced in line with an agreed Transition Roadmap.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "In May 2022, Somalia successfully conducted its presidential election ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "In May 2023, Somalia's federal government and member states reached a landmark agreement to implement a one-person, one-vote system, replacing the longstanding 4.5 clan-based formula.\n \nIn June 2023, Puntland conducted district council elections using direct universal suffrage, marking Somalia's first such elections since 1969.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "In 2024, the National Consultative Council (NCC) (although without the participation of Puntland) adopted the universal election plans\n \nThe Federal Parliament passed electoral-related constitutional amendments, followed by the adoption of the three election-related laws in November. \n \nCommissioners of the newly established National Independent and Boundaries Commission (NIEBC) appointed in December \n ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Capacity-building initiatives tailored to NIEBC’s operational needs with a focus on electoral processes.\n \nNIEBC receives technical and advisory support for election management, including planning, legal framework implementation, and conducting district elections.\n\nStrengthened coordination amongst international partners and United Nations entities for electoral assistance activities and\nresource mobilization for Somali elections\n ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "NIEBC receives technical support for successful election management at federal and state levels.\n \nImplementation of electoral laws, including provisions for women’s representation.\nSupport for enforcing the 30% gender quota in registration, results, and seat allocation.\n  \nStrengthened cooperation between NIEBC, donors, and electoral partners.\n\nUNTMIS support to the Federal Government of Somalia and federal member states related to this result area is successfully transitioned by 31 October 2026 ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 3: Strengthened Electoral Management and inclusive participation in Somalia’s transition to Universal Suffrage – Proposed programme plan for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2026, Somalia will transition to universal suffrage elections at both the Federal and federal member states levels, including presidential and parliamentary elections. The success of these elections depends on the capacity of the National Independent and Boundaries Commission to administer, regulate, and oversee the electoral process effectively.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "A robust electoral legal framework, transparent electoral operations and meaningful stakeholder engagement are preconditions to ensure credible, inclusive elections. As Somalia moves forward to conducting universal suffrage elections, strengthening the National Independent and Boundaries Commission will be critical for public trust in the electoral process.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "italic",
+                      "text": "Lessons learned and planned change",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "paragraph-1",
+                          "text": "Early targeted engagement with policymakers significantly enhances the Mission’s ability to deliver effective technical assistance. This approach raised awareness and deepened knowledge among key counterparts, resulting in a more informed and internationally aligned legal framework. It also highlighted the importance of coordinated stakeholder engagement in ensuring the alignment and adoption of the electoral legal framework, including Temporary Special Measures and the 30 per cent women’s quota.",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In applying the lesson, UNTMIS will focus on providing technical support to the National Independent and Boundaries Commission during electoral operations across all stages of the electoral process, based on the Commission’s identified needs. Additionally, the Mission will work and coordinate closely with stakeholders to ensure timely resource mobilizations and maintain coordinated support for Somalia’s transition to direct elections at federal and federal member states levels.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective and the target for 2026 (until 31 October) is presented in the performance measure below (see table 12).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "heading-x",
+                      "text": "Table 12",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022(actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023(actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Federal Government of Somalia convened the National Consultative Council three times (without Puntland), covering priority areas, including security/ fight against Al-Shabaab, elections, stabilization, constitutional review and power-sharing\nTechnical work between the Federal Government of Somalia and federal member states in preparation for or follow-up to meetings of the National Consultative Council (or an equivalent platform) progressed and included women",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Federal and state level leaders engaged in dialogue on key issues except for Puntland and Jubaland (withdrew in October 2024); remaining NCC members achieved agreement on some federalization and state-building objectives\nContentious issues relating to federalization and state-building at the federal and state levels were not resolved with Jubaland joining Puntland in rejecting Constitutional amendments.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Federal and state level leaders agree on progress towards implementation of national State-building priorities\nConsultations take place as part of the constitutional review process inclusive of diverse perspectives of women, youth and marginalized groups’ representatives\nAgreement on the constitutional review process and a timetable for constitution",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "A peaceful transition of power takes place through an electoral process that is agreed upon by the Federal Government of Somalia and all federal member state leaders and implemented across the country. Inclusive consultations on the constitutional review process undertaken\nConstitutional review process is significantly advanced with fewer contentious issues remaining\n",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026(planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Capacities of accountable, affordable and able Somali security forces protecting the civilian population strengthened\nStrategic coordination between national and international stakeholders in the security sector strengthened\nProgress made on legislation to improve external civilian oversight over security forces\nHirshabelle State Police Act enacted, and four police bills developed and consulted\nPartners coordination mechanism on maritime security established",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Somali security sector development plan adopted and national security architecture revised\nJoint justice and corrections programme adopted\nPhase 2 of joint police programme designed\nCoordination of maritime security stakeholders strengthened\nNational defector rehabilitation programme revised\nBaseline assessment of national counter-improvised explosive device framework conducted",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Workstreams on defence, police, rule of law and public financial management partially established for the implementation of the security sector development plan\nCapacity-building of national institutions and implementation of  the joint justice and corrections programme ongoing \nJubaland adopted the Somalia Police Force Act, and Federal Cabinet endorsed the SPF Bill pending parliamentary approval.\nPhase 2 of joint police programme under implementation\nNational defector rehabilitation programme is being implemented",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Strengthened coordination with the AUSSOM successor mission on the security transition\nTechnical support provided to strengthen Somali security institutions towards their full assumption of security responsibilities\nSupport for the implementation of the security sector development plan and the revised national security architecture is coordinated with stakeholders, facilitating progress\nIndependent judicial system is promoted through implementation of the next phase of the joint justice and corrections programme\n",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Somali Security sector governance improved through implementation of a federated national security architecture and enhanced capacity and affordability of relevant FGS-FMS institutions\nLegitimate judicial system is promoted through improved trust and service delivery, and greater independence\nSomali Police capacity strengthened through enhanced FGS-FMS coordination and capacity building \nFederal Government of Somalia and federal member states’ authorities’ tools and capacities to lead the rule of law and security sector governance reform enhanced in line with an agreed Transition Roadmap.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": " ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "In May 2022, Somalia successfully conducted its presidential election ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "In May 2023, Somalia's federal government and member states reached a landmark agreement to implement a one-person, one-vote system, replacing the longstanding 4.5 clan-based formula.\n \nIn June 2023, Puntland conducted district council elections using direct universal suffrage, marking Somalia's first such elections since 1969.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "In 2024, the National Consultative Council (NCC) (although without the participation of Puntland) adopted the universal election plans\n \nThe Federal Parliament passed electoral-related constitutional amendments, followed by the adoption of the three election-related laws in November. \n \nCommissioners of the newly established National Independent and Boundaries Commission (NIEBC) appointed in December \n ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Capacity-building initiatives tailored to NIEBC’s operational needs with a focus on electoral processes.\n \nNIEBC receives technical and advisory support for election management, including planning, legal framework implementation, and conducting district elections.\n\nStrengthened coordination amongst international partners and United Nations entities for electoral assistance activities and\nresource mobilization for Somali elections\n ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "NIEBC receives technical support for successful election management at federal and state levels.\n \nImplementation of electoral laws, including provisions for women’s representation.\nSupport for enforcing the 30% gender quota in registration, results, and seat allocation.\n  \nStrengthened cooperation between NIEBC, donors, and electoral partners.\n\nUNTMIS support to the Federal Government of Somalia and federal member states related to this result area is successfully transitioned by 31 October 2026 ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Table 13 lists all deliverables of the Mission. All mandated activities will be implemented in line with the two-phased transition of the Mission functions to the Federal Government of Somalia, the United Nations country team and other stakeholders by 31 October 2026. Liquidation-related activities will be undertaken by 31 December 2026.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-x",
+                  "text": "Table 13",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Deliverables for the period 2024-2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "1.\tReports of the Secretary-General for the Security Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive servicing of meetings (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "2.\tMeetings of the Security Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tField and technical cooperation projects (number of projects) ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "3.\tJoint programmes on state-building and reconciliation support, joint justice and corrections, human rights and electoral support programme",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Seminars, workshops and training events (number of days) ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "187",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "243",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "173",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "134",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "4.\tSeminars to support the implementation of laws promoting the rights of children",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "5.\tSeminars on the coordination and implementation of federated political agreements on rule of law and on rightsizing the Somali security forces, in alignment with the transition of security functions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "0",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "6.\tSeminars on security and justice-focused public expenditure ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "7.\tWorkshops on addressing conflict-related sexual violence (protection of women) ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "8.\tWorkshops, seminars and training events on capacity-building of human rights institutions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "9.  Thematic workshops on human rights issues with civil society, such as those dealing with minorities, people with disabilities, women and children, civil society engagement and basic human rights obligations, and on monitoring and reporting on the human rights performance of Somali security forces and their ability to foster trust and confidence in communities",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "11",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "10.\tWorkshops for the country task force on monitoring and reporting on violations against children, including children and armed conflict ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "11.\tWorkshops on advocating and capacity-building to establish an affordable justice system and the roll-out of the federated justice and corrections model",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "16",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "17",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "12.\tWorkshops to enhance the capacity of the custodial corps and other prison stakeholders on corrections system development and prison management ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "16",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "17",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "13.\tWorkshops on civilian oversight of security institutions ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "14.\tWorkshops on implementation of maritime priorities in accordance with the Somali national maritime security strategy and blue economy strategy, strengthening legislation and opportunities for women based on the women in the maritime sector strategy ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "17",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "15.\tWorkshops to support institutional capacity-building towards the implementation of the national security architecture and the Somalia security sector development plan",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "16",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "16.\tWorkshops, training and capacity-building support for the implementation of the stabilization analytical tools ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "17.\tTraining on protection of civilians ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "18.\tWorkshops on prevention of and response to electoral violence against women leaders ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "19.\tWorkshops/seminars/training activities in journalism, social media and coverage of election campaigns ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "16",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "39",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "20",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "10",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "20.\tWorkshops, seminars and capacity-building activities for police personnel from both the Federal Government of Somalia and federal member states on implementing the Somalia security development plan and new policing model, in alignment with the transition of security functions",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "16",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "19",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "14",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "12",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "21.\tWorkshops, seminars or capacity-building/training events in support of relevant government institutions at the federal and state levels on inclusive politics",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "22.\tWorkshops, seminars or capacity-building/training events on peacebuilding, mediation and conflict resolution",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "23.\tWorkshops, seminars or capacity-building/training events on the constitutional review process",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "5",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "24. Workshops to build the capacity of civil society for monitoring and reporting on the human rights performance of Somali security forces and their ability to foster trust and confidence in communities, including with regard to conflict-related sexual violence ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "25.\tConsultations with and workshops/working sessions on mediation, reconciliation, negotiation and policy dialogues for women civil society leaders and women members of Parliament and senators",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "15",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "16",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "26.\tWorkshop in support of NTP coordination architecture",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "27. Workshop with the Federal Government of Somalia and federal member states to enhance awareness and increase women’s participation in the rule of law/ justice sector ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "4",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tPublications (number of publications)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "28.\tHuman Rights and Protection Group reports on freedom of expression and/or protection of civilians in Somalia’s conflict-related sexual violence and cultural rights in Somalia",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "30.\tStudy report on Somali women’s experience and aspirations in peace and politics in the country",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "1",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tFact-finding, monitoring and investigation missions (number of missions)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "–",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "31.\tHuman rights monitoring, reporting and investigations, including conflict-related sexual violence and children and armed conflict, monitoring of and follow-up on incidents involving security forces supported by the United Nations, through the human rights due diligence policy",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "18",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "9",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "7",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.  Substantive Deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.  Substantive Deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.  Substantive Deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.  Substantive Deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "C.  Substantive Deliverables",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Good offices: provide support to the Federal Government of Somalia, the federal member states and other stakeholders in advancing the national priorities, including concrete movement towards the conclusion of the constitutional review process, enhanced women's meaningful participation, and representation in decision-making processes, elections and peacebuilding,  implementation of the national security architecture and progressing political processes towards the 2026 elections; and provide support to Somali stakeholders in addressing clan and localized conflicts, including in recently recovered areas.\nConsultation, advice and advocacy: consultations with civil society on deepening federalism, the constitutional review process, local conflict management and resolution and the national reconciliation process; advice on drafting the revised constitution;  Strategic and technical advice on the implementation of the electoral legal framework, operational planning for the 2026 federal and Federal Member State elections; Provide technical and advisory support to National Independent and Boundaries Commission on women’s leadership for the planned electoral processes, including registration, results and seat allocation and participation in political leadership roles in other governance institutions; advice on the compliance of national legislation with international human rights law, including policies addressing sexual violence in conflict and children in armed conflict; advice and advocacy to strengthen the national protection framework and institutionalize accountability mechanisms on the implementation of human rights commitments, on recommendations emerging from the human rights universal periodic review process, on human rights due diligence assessments and on addressing violations committed by international, national and government-affiliated forces; advice on security sector legislation and budgetary measures, including the sustainable financial management of the security sector; consultations on the legal framework to implement the national security architecture; advocacy for increased joint planning between security forces and stabilization actors in recovered areas and link to more development-oriented services; strategic advice and advocacy towards the establishment of independent and accountable security and rule of law institutions; enhancement of the Somali maritime administration and women in the maritime sector",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Good offices: provide support to the Federal Government of Somalia, the federal member states and other stakeholders in advancing the national priorities, including concrete movement towards the conclusion of the constitutional review process, enhanced women's meaningful participation, and representation in decision-making processes, elections and peacebuilding,  implementation of the national security architecture and progressing political processes towards the 2026 elections; and provide support to Somali stakeholders in addressing clan and localized conflicts, including in recently recovered areas.\nConsultation, advice and advocacy: consultations with civil society on deepening federalism, the constitutional review process, local conflict management and resolution and the national reconciliation process; advice on drafting the revised constitution;  Strategic and technical advice on the implementation of the electoral legal framework, operational planning for the 2026 federal and Federal Member State elections; Provide technical and advisory support to National Independent and Boundaries Commission on women’s leadership for the planned electoral processes, including registration, results and seat allocation and participation in political leadership roles in other governance institutions; advice on the compliance of national legislation with international human rights law, including policies addressing sexual violence in conflict and children in armed conflict; advice and advocacy to strengthen the national protection framework and institutionalize accountability mechanisms on the implementation of human rights commitments, on recommendations emerging from the human rights universal periodic review process, on human rights due diligence assessments and on addressing violations committed by international, national and government-affiliated forces; advice on security sector legislation and budgetary measures, including the sustainable financial management of the security sector; consultations on the legal framework to implement the national security architecture; advocacy for increased joint planning between security forces and stabilization actors in recovered areas and link to more development-oriented services; strategic advice and advocacy towards the establishment of independent and accountable security and rule of law institutions; enhancement of the Somali maritime administration and women in the maritime sector",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Good offices: provide support to the Federal Government of Somalia, the federal member states and other stakeholders in advancing the national priorities, including concrete movement towards the conclusion of the constitutional review process, enhanced women's meaningful participation, and representation in decision-making processes, elections and peacebuilding,  implementation of the national security architecture and progressing political processes towards the 2026 elections; and provide support to Somali stakeholders in addressing clan and localized conflicts, including in recently recovered areas.\nConsultation, advice and advocacy: consultations with civil society on deepening federalism, the constitutional review process, local conflict management and resolution and the national reconciliation process; advice on drafting the revised constitution;  Strategic and technical advice on the implementation of the electoral legal framework, operational planning for the 2026 federal and Federal Member State elections; Provide technical and advisory support to National Independent and Boundaries Commission on women’s leadership for the planned electoral processes, including registration, results and seat allocation and participation in political leadership roles in other governance institutions; advice on the compliance of national legislation with international human rights law, including policies addressing sexual violence in conflict and children in armed conflict; advice and advocacy to strengthen the national protection framework and institutionalize accountability mechanisms on the implementation of human rights commitments, on recommendations emerging from the human rights universal periodic review process, on human rights due diligence assessments and on addressing violations committed by international, national and government-affiliated forces; advice on security sector legislation and budgetary measures, including the sustainable financial management of the security sector; consultations on the legal framework to implement the national security architecture; advocacy for increased joint planning between security forces and stabilization actors in recovered areas and link to more development-oriented services; strategic advice and advocacy towards the establishment of independent and accountable security and rule of law institutions; enhancement of the Somali maritime administration and women in the maritime sector",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Good offices: provide support to the Federal Government of Somalia, the federal member states and other stakeholders in advancing the national priorities, including concrete movement towards the conclusion of the constitutional review process, enhanced women's meaningful participation, and representation in decision-making processes, elections and peacebuilding,  implementation of the national security architecture and progressing political processes towards the 2026 elections; and provide support to Somali stakeholders in addressing clan and localized conflicts, including in recently recovered areas.\nConsultation, advice and advocacy: consultations with civil society on deepening federalism, the constitutional review process, local conflict management and resolution and the national reconciliation process; advice on drafting the revised constitution;  Strategic and technical advice on the implementation of the electoral legal framework, operational planning for the 2026 federal and Federal Member State elections; Provide technical and advisory support to National Independent and Boundaries Commission on women’s leadership for the planned electoral processes, including registration, results and seat allocation and participation in political leadership roles in other governance institutions; advice on the compliance of national legislation with international human rights law, including policies addressing sexual violence in conflict and children in armed conflict; advice and advocacy to strengthen the national protection framework and institutionalize accountability mechanisms on the implementation of human rights commitments, on recommendations emerging from the human rights universal periodic review process, on human rights due diligence assessments and on addressing violations committed by international, national and government-affiliated forces; advice on security sector legislation and budgetary measures, including the sustainable financial management of the security sector; consultations on the legal framework to implement the national security architecture; advocacy for increased joint planning between security forces and stabilization actors in recovered areas and link to more development-oriented services; strategic advice and advocacy towards the establishment of independent and accountable security and rule of law institutions; enhancement of the Somali maritime administration and women in the maritime sector",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Good offices: provide support to the Federal Government of Somalia, the federal member states and other stakeholders in advancing the national priorities, including concrete movement towards the conclusion of the constitutional review process, enhanced women's meaningful participation, and representation in decision-making processes, elections and peacebuilding,  implementation of the national security architecture and progressing political processes towards the 2026 elections; and provide support to Somali stakeholders in addressing clan and localized conflicts, including in recently recovered areas.\nConsultation, advice and advocacy: consultations with civil society on deepening federalism, the constitutional review process, local conflict management and resolution and the national reconciliation process; advice on drafting the revised constitution;  Strategic and technical advice on the implementation of the electoral legal framework, operational planning for the 2026 federal and Federal Member State elections; Provide technical and advisory support to National Independent and Boundaries Commission on women’s leadership for the planned electoral processes, including registration, results and seat allocation and participation in political leadership roles in other governance institutions; advice on the compliance of national legislation with international human rights law, including policies addressing sexual violence in conflict and children in armed conflict; advice and advocacy to strengthen the national protection framework and institutionalize accountability mechanisms on the implementation of human rights commitments, on recommendations emerging from the human rights universal periodic review process, on human rights due diligence assessments and on addressing violations committed by international, national and government-affiliated forces; advice on security sector legislation and budgetary measures, including the sustainable financial management of the security sector; consultations on the legal framework to implement the national security architecture; advocacy for increased joint planning between security forces and stabilization actors in recovered areas and link to more development-oriented services; strategic advice and advocacy towards the establishment of independent and accountable security and rule of law institutions; enhancement of the Somali maritime administration and women in the maritime sector",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Outreach: Outreach: continuation of two long-term strategic messaging campaigns targeting Somali audiences communicating on the work of UNTMIS in the last phase of transitioning its functions, tied into the planned one-person, one-vote elections, on the value of democratization processes and importance of electoral participation by the general public; and the Strategic Communications and Public Affairs Group will support efforts of the United Nations Communications Group to harmonize the United Nations joint messaging campaigns, as well as the coordination of United Nations family outreach events with the United Nations agencies, funds and programmes.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Outreach: Outreach: continuation of two long-term strategic messaging campaigns targeting Somali audiences communicating on the work of UNTMIS in the last phase of transitioning its functions, tied into the planned one-person, one-vote elections, on the value of democratization processes and importance of electoral participation by the general public; and the Strategic Communications and Public Affairs Group will support efforts of the United Nations Communications Group to harmonize the United Nations joint messaging campaigns, as well as the coordination of United Nations family outreach events with the United Nations agencies, funds and programmes.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Outreach: Outreach: continuation of two long-term strategic messaging campaigns targeting Somali audiences communicating on the work of UNTMIS in the last phase of transitioning its functions, tied into the planned one-person, one-vote elections, on the value of democratization processes and importance of electoral participation by the general public; and the Strategic Communications and Public Affairs Group will support efforts of the United Nations Communications Group to harmonize the United Nations joint messaging campaigns, as well as the coordination of United Nations family outreach events with the United Nations agencies, funds and programmes.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Outreach: Outreach: continuation of two long-term strategic messaging campaigns targeting Somali audiences communicating on the work of UNTMIS in the last phase of transitioning its functions, tied into the planned one-person, one-vote elections, on the value of democratization processes and importance of electoral participation by the general public; and the Strategic Communications and Public Affairs Group will support efforts of the United Nations Communications Group to harmonize the United Nations joint messaging campaigns, as well as the coordination of United Nations family outreach events with the United Nations agencies, funds and programmes.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Outreach: Outreach: continuation of two long-term strategic messaging campaigns targeting Somali audiences communicating on the work of UNTMIS in the last phase of transitioning its functions, tied into the planned one-person, one-vote elections, on the value of democratization processes and importance of electoral participation by the general public; and the Strategic Communications and Public Affairs Group will support efforts of the United Nations Communications Group to harmonize the United Nations joint messaging campaigns, as well as the coordination of United Nations family outreach events with the United Nations agencies, funds and programmes.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "External and media relations: External and media relations: reinforce working relationships with Somali and international media to help to ensure a better understanding of the work of UNTMIS and the transitional process and, more broadly, the actual work of the United Nations in Somalia; continue supporting the development of the Somali communications sector, through capacity-building programmes for the media and government communications offices, at both the national and subnational levels; and organize at least two press conferences for United Nations leadership and arrange for interviews and other media coverage with United Nations officials, as required.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: External and media relations: reinforce working relationships with Somali and international media to help to ensure a better understanding of the work of UNTMIS and the transitional process and, more broadly, the actual work of the United Nations in Somalia; continue supporting the development of the Somali communications sector, through capacity-building programmes for the media and government communications offices, at both the national and subnational levels; and organize at least two press conferences for United Nations leadership and arrange for interviews and other media coverage with United Nations officials, as required.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: External and media relations: reinforce working relationships with Somali and international media to help to ensure a better understanding of the work of UNTMIS and the transitional process and, more broadly, the actual work of the United Nations in Somalia; continue supporting the development of the Somali communications sector, through capacity-building programmes for the media and government communications offices, at both the national and subnational levels; and organize at least two press conferences for United Nations leadership and arrange for interviews and other media coverage with United Nations officials, as required.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: External and media relations: reinforce working relationships with Somali and international media to help to ensure a better understanding of the work of UNTMIS and the transitional process and, more broadly, the actual work of the United Nations in Somalia; continue supporting the development of the Somali communications sector, through capacity-building programmes for the media and government communications offices, at both the national and subnational levels; and organize at least two press conferences for United Nations leadership and arrange for interviews and other media coverage with United Nations officials, as required.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "External and media relations: External and media relations: reinforce working relationships with Somali and international media to help to ensure a better understanding of the work of UNTMIS and the transitional process and, more broadly, the actual work of the United Nations in Somalia; continue supporting the development of the Somali communications sector, through capacity-building programmes for the media and government communications offices, at both the national and subnational levels; and organize at least two press conferences for United Nations leadership and arrange for interviews and other media coverage with United Nations officials, as required.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Digital platforms and multimedia content: four digital platforms (social and digital media) that produce multilingual and multimedia content, with at least 200 items (including cards, infographics and videos) for dissemination on social media and online channels; for traditional platforms, produce Somali-language radio programming, with at least 30 episodes of the “Path to peace” programme and, as required, awareness campaigns aligned with UN transition priorities, targeting Somali audiences; a series of radio programmes on high-priority topics on an ad hoc basis; four English-language UNTMIS quarterly updates, aimed at Somali government partners, international partners and donors; and digital newsletters highlighting work of the United Nations. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: four digital platforms (social and digital media) that produce multilingual and multimedia content, with at least 200 items (including cards, infographics and videos) for dissemination on social media and online channels; for traditional platforms, produce Somali-language radio programming, with at least 30 episodes of the “Path to peace” programme and, as required, awareness campaigns aligned with UN transition priorities, targeting Somali audiences; a series of radio programmes on high-priority topics on an ad hoc basis; four English-language UNTMIS quarterly updates, aimed at Somali government partners, international partners and donors; and digital newsletters highlighting work of the United Nations. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: four digital platforms (social and digital media) that produce multilingual and multimedia content, with at least 200 items (including cards, infographics and videos) for dissemination on social media and online channels; for traditional platforms, produce Somali-language radio programming, with at least 30 episodes of the “Path to peace” programme and, as required, awareness campaigns aligned with UN transition priorities, targeting Somali audiences; a series of radio programmes on high-priority topics on an ad hoc basis; four English-language UNTMIS quarterly updates, aimed at Somali government partners, international partners and donors; and digital newsletters highlighting work of the United Nations. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: four digital platforms (social and digital media) that produce multilingual and multimedia content, with at least 200 items (including cards, infographics and videos) for dissemination on social media and online channels; for traditional platforms, produce Somali-language radio programming, with at least 30 episodes of the “Path to peace” programme and, as required, awareness campaigns aligned with UN transition priorities, targeting Somali audiences; a series of radio programmes on high-priority topics on an ad hoc basis; four English-language UNTMIS quarterly updates, aimed at Somali government partners, international partners and donors; and digital newsletters highlighting work of the United Nations. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Digital platforms and multimedia content: four digital platforms (social and digital media) that produce multilingual and multimedia content, with at least 200 items (including cards, infographics and videos) for dissemination on social media and online channels; for traditional platforms, produce Somali-language radio programming, with at least 30 episodes of the “Path to peace” programme and, as required, awareness campaigns aligned with UN transition priorities, targeting Somali audiences; a series of radio programmes on high-priority topics on an ad hoc basis; four English-language UNTMIS quarterly updates, aimed at Somali government partners, international partners and donors; and digital newsletters highlighting work of the United Nations. ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B. \tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Resource requirements (regular budget)",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-x",
+              "text": "Table 14 – Financial resources4",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "other",
+                  "text": "4",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "note",
+                  "text": "(Thousands of United States dollars)",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "table-content",
+                  "text": null,
+                  "table_content": [
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2024",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2026",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Variance",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Appropriation",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Appropriation ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Appropriation ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Requirements",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Requirements",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "Requirements",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 vs. 2026 Increase/(decrease)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "2025 vs. 2026 Increase/(decrease)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Category of expenditure",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(2)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(3)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(3)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(4)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(4)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(4)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(5)=(4)-(3)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(5)=(4)-(3)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Military and police personnel costs ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": " 16 497.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15 728.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "16 194.8 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "16 194.8 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15 009.7 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15 009.7 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "15 009.7 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(1 185.1)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(1 185.1)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Civilian personnel ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": " 44 833.6",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "47 763.0",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "44 520.6 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "44 520.6 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "51 714.4 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "51 714.4 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "51 714.4 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "7 193.8 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "7 193.8 ",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Operational costs ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": " 39 805.4",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "28 919.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "39 461.9 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "39 461.9 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "30 892.3 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "30 892.3 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "30 892.3 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(8 569.6)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(8 569.6)",
+                        "hyperlinks": []
+                      }
+                    ],
+                    [
+                      {
+                        "text": "\tTotal (net of staff assessment) ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": " 101 136.8",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "92 411.2",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100 177.3 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "100 177.3 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "97 616.4 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "97 616.4 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "97 616.4 ",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(2 560.9)",
+                        "hyperlinks": []
+                      },
+                      {
+                        "text": "(2 560.9)",
+                        "hyperlinks": []
+                      }
+                    ]
+                  ],
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-x",
+              "text": "Table 15",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Human resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "  ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " \n \n \n \n \nUnited Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " \n \n \n \n \nUnited Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " \n \n \n \n \nUnited Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": " ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "USG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " ASG ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " D-2 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-5 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-4 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-3 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-2 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "FS ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "NPO",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "GS ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "LL",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": " Approved 2025 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2a",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "26 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "46 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "32",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "52 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "166 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "84 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "45 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "129",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "19 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "314",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "314",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": " Proposed 2026 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2a",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "7",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "26 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "41 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "30",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "50 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "157 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "84 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "45 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "129 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "13 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "17 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "303 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "303 ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": " Net Change  ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(9)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "- ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(11)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(11)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": " Proposed ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8 ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": " 1 November 2026 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8 ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": " (Liquidation team) ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8 ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "8 ",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": " Change  ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(25)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(38)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(30)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(48)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(149)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(84)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "– ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(45)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(129)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(13)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(17)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": " ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(295)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(295)",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "heading-x",
+              "text": "a One position is funded at 50 per cent and cost-shared with the Development Coordination Office",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The proposed resource requirements for 2026 for the Mission amount to $97,616,400 (net of staff assessment) and would provide for: (a) the deployment of 625 United Nations Guard Unit personnel for 10 months and 12 United Nations police personnel for 10 months ($15,009,700); (b) salaries and related costs ($51,714,400) for 157 international posts (1 Under-Secretary-General, 2 Assistant Secretary-General, 7 D-1, 26 P 5, 41 P-4, 30 P-3 and 50 Field Service), 129 national posts (84 National Professional Officer and 45 Local level) and 17 United Nations Volunteers (13 international and 4 national) until 31 October 2026; (b) the deployment of 20 government-provided personnel until 31 October 2026; (c) salaries and related costs for 8 international posts (2 D-1, 1 P-5, 3 P-4, 2 Field Service), which will compose the Mission’s liquidation team for the period from 1 November to 31 December 2026; and (d) operational costs ($30,892,300), comprising the costs for consultants and consulting services ($499,700), official travel ($690,300), facilities and infrastructure ($11,689,300), ground transportation ($1,040,200), air operations ($6,438,900), communications and information technology ($3,628,700), medical ($1,114,200), and other supplies, services and equipment ($5,791,000).",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The proposed resources under salaries and other costs also include a provision of $17,464,300 for payments due to staff members at the time of separation from service. The provision comprises estimated termination indemnity ($6,586,300), repatriation grants ($5,042,000), relocation grants ($1,778,000), accrued annual leave for international and national staff ($3,692,600), travel expenses to cover repatriation of international staff ($365,400).",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The resources under operational costs also include a provision of $3.8 million as the reimbursement for the logistical support package received from UNSOS, in line with Security Council resolution 2741 (2024), para 5(a), which stipulates that such support package would be on a cost-recovery basis. Based on a comprehensive analysis of workload statistics, specific to different functions in UNSOS, it was estimated that an amount of $3,855,000 (net of staff assessment) should be cost recovered from UNTMIS in 2026 for the logistical support package. This will be duly taken into account in the upcoming proposed budget for UNSOS for the period from 1 July 2026 to 30 June 2027.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Vacancy rates of zero per cent have been applied to the estimates for military contingents; and 41.7 per cent have been applied to the estimates for United Nations police, 17.0 per cent to the estimates for international staff, 15.6 per cent for National Professional Officers, 17.8 per cent for Local level posts based on the actual vacancy rates as at 31 March 2026; 55.0 per cent for government-provided personnel based on the actual average vacancy rate during 2024. Vacancy rates of 27.0 per cent and 75.0 per cent have been applied to the estimates for international United Nations Volunteers and national United Nations Volunteers, respectively, based on the planned deployment.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In preparation for the liquidation, it is proposed to abolish 9 posts (5 P-4, 2 P-2, 2 Field Service) and two international United Nations volunteer positions effective 1 January 2026 as follows:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "One post of Corrections Officer (P-4) in the Justice and Corrections Section;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "One post of United Nations Police Officer (P-4) in the Police Unit;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "One post of Electoral Officer (P-4) in the Integrated Electoral Support Group;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "One post of Mission Planning (P-4) Officer in the Regional and Liaison Offices;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "One post of Political Affairs Officer (P-4) in the Political Affairs and Mediation Group;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "One post of Political Affairs Officer (P-3) in the Political Affairs and Mediation Group;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "One post of Electoral Officer (P-3) in the Integrated Electoral Support Group;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Two posts of Administrative Assistants (Field Service) in the Regional and Liaison Offices;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "One position of Judicial Affairs Officer (international United Nations Volunteer) in the Justice and Corrections; and",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "One position of Security Sector Reform Officer (international United Nations Volunteer) in the Security Sector Reform Section.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "During the course of 2026, the Mission will progress in its second phase of transition as per the provisions of the resolution 2753 (2024) and it is planned that it will separate the remaining staffing complement except for eight international posts (2 D-1, 1 P-5, 3 P-4, 2 Field Service) which will constitute the UNTMIS liquidation team for the period from 1 November to 31 December 2026. During this period the team will focus on the residual activities related to liaising with the United Nations Agencies, Funds and Programmes on possible challenges and capacity gaps related to the handover of UNTMIS tasks as well as closure of administrative open items in finance and budget in coordination with the United Nations Headquarters.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "For military and police personnel and government-provided personnel, 20 government-provided personnel and 12 United Nations police officers are planned to be repatriated, and respective government-provided personnel positions are to be abolished as of 31 October 2026. In addition, the United Nations Guard Unit personnel are also planned to be repatriated as of 31 October 2026.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The decrease in requirements for 2026 compared with the appropriation for 2025 is attributable primarily to the cease of mandated activities and planned repatriation of the all the military and police, the majority of the civilian personnel as well as closure and handover of the Mission’s locations by 31 October 2026. The reduced requirements were partially offset by estimated payments in the amount of $17,464,300 due to staff members at the time of separation from service.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

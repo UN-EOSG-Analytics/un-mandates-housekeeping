@@ -1,0 +1,2009 @@
+{
+  "entity": "United Nations Office for West Africa and the Sahel",
+  "entity_abbrev": "UNOWAS",
+  "entity_raw_name": "1.\tUnited Nations Office for West Africa and the Sahel",
+  "source_file": "A_80_6 (SECT. 3)_ADD.4_CLUSTER_III_FASCICLE ADVANCE UNEDITED COPY FOR ACABQ.json",
+  "content": [
+    {
+      "block_type": "italic",
+      "text": "($15, 960,200)",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": []
+    },
+    {
+      "block_type": "a/b",
+      "text": "A.\tProposed programme plan for 2026 and programme performance in 2024",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "heading",
+          "text": "Overall orientation",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Mandates and background",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The United Nations Office for West Africa and the Sahel (UNOWAS) is responsible for conflict prevention and ensuring sustainable peace and security in West Africa and the Sahel. Its mandate derives from the exchanges of letters between the Secretary-General and the President of the Security Council (S/2016/88 and S/2016/89, S/2016/1128 and S/2016/1129, S/2019/1009 and S/2020/85 and S/2023/70 and S/2023/71), as well as Council resolution 2349 (2017). The mission’s current mandate will expire on 31 January 2026.",
+                  "table_content": null,
+                  "hyperlinks": [
+                    [
+                      "S/2016/88",
+                      "https://undocs.org/en/S/2016/88"
+                    ],
+                    [
+                      "S/2016/89",
+                      "https://undocs.org/en/S/2016/89"
+                    ],
+                    [
+                      "S/2016/1128",
+                      "https://undocs.org/en/S/2016/1128"
+                    ],
+                    [
+                      "S/2016/1129",
+                      "https://undocs.org/en/S/2016/1129"
+                    ],
+                    [
+                      "S/2019/1009",
+                      "https://undocs.org/en/S/2019/1009"
+                    ],
+                    [
+                      "S/2020/85",
+                      "https://undocs.org/en/S/2020/85"
+                    ],
+                    [
+                      "S/2023/70",
+                      "https://undocs.org/en/S/2023/70"
+                    ],
+                    [
+                      "S/2023/71",
+                      "https://undocs.org/en/S/2023/71"
+                    ],
+                    [
+                      "2349 (2017)",
+                      "https://undocs.org/en/S/RES/2349(2017)"
+                    ]
+                  ],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "UNOWAS is mandated  to monitor political developments in West Africa and the Sahel, and carry out  good offices to support conflict prevention, peacebuilding, sustaining peace and mediation efforts in the subregion, mindful of the sustainable development context; enhance regional and subregional partnerships to address cross-border and cross-cutting threats to peace and security; support, through political advocacy and playing a convening role, the implementation of the United Nations integrated strategy for the Sahel; and promote good governance, respect for the rule of law, human rights and gender mainstreaming in conflict prevention, management and resolution.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block_type": "heading",
+          "text": "Programme of work",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "heading-sub",
+              "text": "Objective",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The objective, to which this mission contributes, is to achieve peace and security in West Africa and the Sahel.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Strategy and external factors for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "To contribute to the objective, the mission will:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Strengthen its early warning and conflict prevention and resolution actions with relevant partners, with a focus on West African countries undergoing political transitions and those scheduled to hold elections in 2026; de-escalate crises relating to governance-related challenges; lead regional and international diplomatic engagements to build consensus on regional responses; support regional solutions to cross-cutting threats to peace and security; and monitor and assess political developments in the region;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Enhance partnerships with regional institutions, civil society organizations, and United Nations entities to address regional peace and security challenges, focusing on root causes of instability and insecurity in the region, while reinforcing the peace-security-development nexus; and conduct high-level advocacy to facilitate humanitarian assistance and access to critical social services by populations affected by conflict and insecurity;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Accelerate the implementation of women and peace, security and youth, peace and security agendas through the promotion of involvement of women and young people in political and decision-making processes and mediation initiatives; and advance the promotion of good governance and respect for human rights and the rule of law; and",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Intensify its analytical work, including on governance and the adverse implications of climate change.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The above-mentioned work is expected to result in:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Prevention and mitigation of conflicts through consensual political processes, including in countries undergoing political transitions;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Strengthened regional and subregional cross-border responses and coherent, comprehensive and integrated approaches to challenges relating to climate change, transnational organized crime, illicit trafficking, farmer and herder dynamics, intercommunal violence, terrorism, violent extremism and humanitarian access;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Mainstreaming of gender and youth participation in conflict prevention, management and resolution activities; and",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Strengthened initiatives to address violations of human rights and international humanitarian law and improve security sector governance.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to cooperation with other entities, UNOWAS works with the African Union, ECOWAS, the Mano River Union, the Lake Chad Basin Commission, the Accra Initiative, the Liptako-Gourma Authority, the Gulf of Guinea Commission, the African Development Bank, national human rights institutions and other civil society groups in the region to strengthen and harmonize regional capacities for conflict prevention and resolution, peacebuilding and sustaining peace; advance good governance and respect for human rights and the rule of law and the participation of women and young people in political and decision-making processes; and support regional responses to address climate change and cross-border threats to peace and security.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "With regard to inter-agency coordination and liaison, UNOWAS collaborates with the Development Coordination Office and resident coordinators, humanitarian coordinators, UN country teams, UN agencies, funds and programmes based in Dakar and across the region and other UN partners to create political space for humanitarian access and developmental initiatives. Working with the Special Coordinator for Development in the Sahel, UNOWAS promotes the UN integrated strategy for the Sahel and supports cost-effective, innovative approaches.  It coordinates with the United Nations Regional Office for Central Africa (UNOCA) on transregional issues affecting West and Central Africa, including terrorism in the Lake Chad Basin, farmer-herder conflicts, climate security, piracy and maritime security in the Gulf of Guinea.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "In relation to the external factors, the overall plan for 2026 is based on the following planning assumptions:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Demand for UNOWAS good offices to facilitate political dialogue and defuse political tensions, and to support countries undergoing political transitions and institutional reforms;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Heads of State and Governments of West Africa, ECOWAS, the Lake Chad Basin Commission, the Mano River Union, the African Union, the Gulf of Guinea Commission and the Accra Initiative demonstrate political will for sustained support to regional peace and security mechanisms and commitment to mobilizing resources required to address challenges to peace and stability;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The ECOWAS early warning and response mechanisms and other regional conflict prevention instruments are operational at the national and regional levels;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "The international community remains committed to supporting the countries of the region and regional and subregional organizations in addressing governance and security challenges;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Peacebuilding and peace consolidation efforts by regional and subregional organizations and other partners continue;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Political and technical level engagements with UNOCA in support of the Gulf of Guinea Commission and the Interregional Coordination Centre for Maritime Safety and Security in the Gulf of Guinea continue;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Political commitment on the part of national, regional, and international partners to work with the United Nations in the context of the United Nations Integrated Strategy for the Sahel;",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Governments in the region remain willing to engage with UNOWAS and other partners to improve human rights and rule of law.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Programme performance in 2024",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Conducive environment for peaceful and inclusive electoral processes in West Africa and the Sahel",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2024, UNOWAS led initiatives to prevent conflict and defuse electoral tensions in Ghana, Mauritania, and Senegal, in collaboration with national and regional partners. For Ghana’s December 2024 elections, the Mission promoted an inclusive, transparent process through stakeholder engagement, and supporting the “I Pledge for Peace” campaign led by the National Peace Council. In Senegal’s March 2024 elections, the Mission engaged with political and electoral stakeholders to ensure peaceful elections. For Mauritania’s June 2024 presidential election, the Mission engaged with political and electoral stakeholders, advocating for dialogue to address challenges, strengthen social cohesion, and promote national dialogue and electoral reforms.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the objective is presented in the performance measure below (see Table 3).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 3 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual) ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "S",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Return of key stakeholders to the Inter-Party Advisory Committee to create conditions for peaceful and inclusive elections in Ghana",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Return of key stakeholders to the Inter-Party Advisory Committee to create conditions for peaceful and inclusive elections in Ghana ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "‘I Pledge for peace’ campaign rolled out and ‘I Pledge for Peace’ agreement signed in Ghana ahead of the elections\n\nInclusive and Peaceful elections held in Mauritania and results accepted by all parties.\n\nIn Senegal’s March 2024 elections, the Mission engaged with political and electoral stakeholders to ensure peaceful elections, UNOWAS preventive diplomacy contributed to harmonization of messages and readiness for dialogue by all stakeholders, leading to peaceful elections whose outcome was accepted by all",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Planned results for 2026",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 1: Enhanced political dialogue throughout West Africa and the Sahel – Programme performance in 2024 and target for 2026:",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2024, the Mission led 38 high-level engagements to enhance dialogue and facilitate rapprochement between ECOWAS and transitioning countries, Burkina Faso, Guinea, Mali, and Niger. These efforts improved bilateral relations and donor engagement, as well as reduced tensions. In response to the announced withdrawal of Burkina Faso, Mali and Niger from ECOWAS, the Mission promoted dialogue to rebuild trust, preserve regional integration, and strengthen cooperation on peace and security. This created a conducive environment for dialogue, eased tensions, and prevented further deterioration of the security situation.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2026, the Mission will continue fostering political consensus, stability, and social cohesion, supporting inclusive governance, rule of law, and human rights throughout West Africa and the Sahel. The Mission will advocate for regional security cooperation to address threats to peace and human security, prioritizing nationally led peacebuilding and prevention initiatives, aligned with the Pact for the Future.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Progress towards the 2026 objective and target is presented in the performance measure below (see Table 4).",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 4 – Performance measure",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "2022 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2023 (actual) ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 (actual)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 (planned)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 (planned)",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Enhanced bilateral and regional dialogue between ECOWAS and the countries under political transition",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced bilateral and regional dialogue between ECOWAS and the countries under political transition",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Enhanced bilateral and regional dialogue between ECOWAS and the countries under political transition",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Sustained dialogue and continued diplomatic relations in West Africa and the Sahel",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "Sustained dialogue and continued diplomatic relations in West Africa and the Sahel ",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Result 2: Enhanced regional and sub-regional partnerships to respond to cross-border and cross-cutting security challenges – Proposed programme in 2024 and target for 2026",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "In 2024, the Mission worked with regional and subregional partners to strengthen peace and security in West Africa and the Sahel and to safeguard regional integration. The Mission signed Memorandums of Understanding with ECOWAS and the Mano River Union (MRU), which enhanced existing regional partnerships and supported the evaluation of the Yaoundé Architecture for maritime safety and security in the Gulf of Guinea. In response to the weakening of regional security cooperation mechanisms, the Mission advocated for continued support for the Accra Initiative, the preservation of the Multinational Joint Task Force in the Lake Chad Basin and the full implementation of Security Council resolution 2719 (2023). Additionally, the Mission fostered cooperation and peaceful dialogue between Coastal states and Sahelian countries to contain the spread of terrorism and violent extremism.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Lessons learned and planned change",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "The key lesson learned is the importance of regional ownership in ensuring effective lasting security arrangements A major challenge was the trust deficit between some member states hindering cooperation on security matters. UNOWAS promoted kinetic and non-kinetic security approaches, with successful models from the Multinational Joint Task Force (MNJTF) and the Lake Chad Regional Stabilization Strategy offering valuable insights. Going forward, the Mission will work to bridge trust gaps, promote ownership of security initiatives and encourage integrated multi-dimensional responses to regional security challenges.",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "paragraph-1",
+                      "text": "Expected progress towards the objective is presented in the performance measure below (see table 5)",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": []
+                    },
+                    {
+                      "block_type": "heading-x",
+                      "text": "Table 5",
+                      "table_content": null,
+                      "hyperlinks": [],
+                      "children": [
+                        {
+                          "block_type": "other",
+                          "text": "Performance measure:",
+                          "table_content": null,
+                          "hyperlinks": [],
+                          "children": []
+                        },
+                        {
+                          "block_type": "table-content",
+                          "text": null,
+                          "table_content": [
+                            [
+                              {
+                                "text": "2022 (actual)",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "2023 (actual)",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "2024 (actual)",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "2025 (planned)",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "2026 (planned)",
+                                "hyperlinks": []
+                              }
+                            ],
+                            [
+                              {
+                                "text": "",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "",
+                                "hyperlinks": []
+                              }
+                            ],
+                            [
+                              {
+                                "text": "-",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "-",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "-",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "Confidence-building and trust-strengthening regional security and governance mechanisms and arrangements ",
+                                "hyperlinks": []
+                              },
+                              {
+                                "text": "Strengthened regional security and governance mechanisms and arrangements",
+                                "hyperlinks": []
+                              }
+                            ]
+                          ],
+                          "hyperlinks": [],
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "block_type": "heading-sub",
+              "text": "Deliverables",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": [
+                {
+                  "block_type": "paragraph-1",
+                  "text": "Table 6 lists all deliverables of the mission.",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": []
+                },
+                {
+                  "block_type": "heading-sub-sub",
+                  "text": "Table 6 – Deliverables for the period 2024–2026, by category and subcategory",
+                  "table_content": null,
+                  "hyperlinks": [],
+                  "children": [
+                    {
+                      "block_type": "table-content",
+                      "text": null,
+                      "table_content": [
+                        [
+                          {
+                            "text": "Category and subcategory",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2024 actual",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2025 planned",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2026 planned",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "A.\tFacilitation of the intergovernmental process and expert bodies",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tParliamentary documentation (number of documents)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t1.\tReports of the Secretary-General to the Security Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSubstantive services for meetings (number of three-hour meetings)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t2.\tMeetings of the Security Council",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "2",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "3",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "B.\tGeneration and transfer of knowledge",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tSeminars, workshops and training events (number of days)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "17",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "20",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "17",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "20",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t3.\tWorkshops on peace and security, including terrorism, violent extremism conducive to terrorism, transnational organized crime, human rights and the implementation of Security Council resolution 1325 (2000) and subsequent resolutions on women’s rights",
+                            "hyperlinks": [
+                              [
+                                "1325 (2000)",
+                                "https://undocs.org/en/S/RES/1325(2000)"
+                              ]
+                            ]
+                          },
+                          {
+                            "text": "17",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "20",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "17",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "20",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tTechnical materials (number of materials)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t4.\tIssue papers on peace and security, human rights, gender and young people",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "6",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "8",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tFact-finding, monitoring and investigation missions (number of missions)",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "27",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "25",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "27",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "30",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\t5.\tAdvocacy and support for integrated subregional and cross-border responses on cross-cutting threats to peace and security, in particular election-related instability and challenges related to governance deficits, security sector reform, transnational organized crime, illicit trafficking, terrorism and violent extremism conducive to terrorism; consultations on human rights during political and electoral processes; and advocacy for the effective implementation of the United Nations integrated strategy for the Sahel and advocacy for enhanced strategic cooperation and coordination in the Sahel in fulfilment of the objectives of the integrated strategy",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "27",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "25",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "27",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "30",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "C.\tSubstantive deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tGood offices: provision of good offices, including jointly with ECOWAS and the African Union, on conflict prevention across countries of West Africa and the Sahel, keeping into account human rights and gender aspects.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: provision of good offices, including jointly with ECOWAS and the African Union, on conflict prevention across countries of West Africa and the Sahel, keeping into account human rights and gender aspects.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: provision of good offices, including jointly with ECOWAS and the African Union, on conflict prevention across countries of West Africa and the Sahel, keeping into account human rights and gender aspects.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: provision of good offices, including jointly with ECOWAS and the African Union, on conflict prevention across countries of West Africa and the Sahel, keeping into account human rights and gender aspects.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tGood offices: provision of good offices, including jointly with ECOWAS and the African Union, on conflict prevention across countries of West Africa and the Sahel, keeping into account human rights and gender aspects.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tConsultation, advice and advocacy: monitoring missions to West Africa and the Sahel countries to analyse developments and emerging threats and identify entry points for early warning and conflict prevention activities; monitoring missions to the countries of the region to support United Nations initiatives to sustain peace; and pre- and post-electoral missions to countries conducting elections in West Africa and the Sahel to monitor tensions related to the electoral process.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: monitoring missions to West Africa and the Sahel countries to analyse developments and emerging threats and identify entry points for early warning and conflict prevention activities; monitoring missions to the countries of the region to support United Nations initiatives to sustain peace; and pre- and post-electoral missions to countries conducting elections in West Africa and the Sahel to monitor tensions related to the electoral process.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: monitoring missions to West Africa and the Sahel countries to analyse developments and emerging threats and identify entry points for early warning and conflict prevention activities; monitoring missions to the countries of the region to support United Nations initiatives to sustain peace; and pre- and post-electoral missions to countries conducting elections in West Africa and the Sahel to monitor tensions related to the electoral process.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: monitoring missions to West Africa and the Sahel countries to analyse developments and emerging threats and identify entry points for early warning and conflict prevention activities; monitoring missions to the countries of the region to support United Nations initiatives to sustain peace; and pre- and post-electoral missions to countries conducting elections in West Africa and the Sahel to monitor tensions related to the electoral process.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tConsultation, advice and advocacy: monitoring missions to West Africa and the Sahel countries to analyse developments and emerging threats and identify entry points for early warning and conflict prevention activities; monitoring missions to the countries of the region to support United Nations initiatives to sustain peace; and pre- and post-electoral missions to countries conducting elections in West Africa and the Sahel to monitor tensions related to the electoral process.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "D.\tCommunication deliverables",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: digital and print, information campaigns, brochures, flyers, and information notes to promote the good offices and the mission’s activities while enhancing visibility of the mission. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: digital and print, information campaigns, brochures, flyers, and information notes to promote the good offices and the mission’s activities while enhancing visibility of the mission. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: digital and print, information campaigns, brochures, flyers, and information notes to promote the good offices and the mission’s activities while enhancing visibility of the mission. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: digital and print, information campaigns, brochures, flyers, and information notes to promote the good offices and the mission’s activities while enhancing visibility of the mission. ",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tOutreach programmes, special events and information materials: digital and print, information campaigns, brochures, flyers, and information notes to promote the good offices and the mission’s activities while enhancing visibility of the mission. ",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tExternal and media relations: media encounters, briefings, press conferences, press releases, statements and op-eds.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: media encounters, briefings, press conferences, press releases, statements and op-eds.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: media encounters, briefings, press conferences, press releases, statements and op-eds.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: media encounters, briefings, press conferences, press releases, statements and op-eds.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tExternal and media relations: media encounters, briefings, press conferences, press releases, statements and op-eds.",
+                            "hyperlinks": []
+                          }
+                        ],
+                        [
+                          {
+                            "text": "\tDigital platforms and multimedia content: dissemination of information and promotion of the good offices and the activities of the mission through its website and social media.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: dissemination of information and promotion of the good offices and the activities of the mission through its website and social media.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: dissemination of information and promotion of the good offices and the activities of the mission through its website and social media.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: dissemination of information and promotion of the good offices and the activities of the mission through its website and social media.",
+                            "hyperlinks": []
+                          },
+                          {
+                            "text": "\tDigital platforms and multimedia content: dissemination of information and promotion of the good offices and the activities of the mission through its website and social media.",
+                            "hyperlinks": []
+                          }
+                        ]
+                      ],
+                      "hyperlinks": [
+                        [
+                          "1325 (2000)",
+                          "https://undocs.org/en/S/RES/1325(2000)"
+                        ]
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_type": "a/b",
+      "text": "B.\tProposed post and non-post resource requirements for 2026",
+      "table_content": null,
+      "hyperlinks": [],
+      "children": [
+        {
+          "block_type": "image",
+          "text": "",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "other",
+          "text": "The following abbreviations are used in the tables: ASG, Assistant Secretary-General; FS, Field Service; GS, General Service; NPO, National Professional Officer; USG; Under-Secretary-General.",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": []
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Resource requirements (regular budget) – Table 7 – Financial resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "note",
+              "text": "(Thousands of United States dollars)",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2024",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Variance",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Appropriation ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Requirements",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 vs. 2025 Increase/(decrease)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2026 vs. 2025 Increase/(decrease)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Category of expenditure",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(2)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(4)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(5)=(4)-(3)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Military and police personnel  ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "113.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "49.4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "108.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "108.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "107.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "107.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "107.0",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1.9)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(1.9)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Civilian personnel ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "10 229.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "10 783.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "10 505.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "10 505.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "11 153.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "11 153.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "11 153.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "648.6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "648.6",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Operational costs ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5 557.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "3 866.5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5 087.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "5 087.9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4 699.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4 699.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "4 699.3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(388.6)",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "(388.6)",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tTotal (net of staff assessment) ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15 900.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "14 699.8",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15 702.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15 702.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15 960.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15 960.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "15 960.2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "258.1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "258.1",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Table 8 – Human resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "table-content",
+              "text": null,
+              "table_content": [
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National staff",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "United Nations Volunteers",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "USG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "ASG",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "D-1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-5",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-4",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-3",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "P-2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "FS",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "NPO ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "GS",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "LL",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "International",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "National",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Subtotal",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "Total",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Approved 2025",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "16",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "13",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "49",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "22a",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "31",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "80",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "Proposed 2026",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "2",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "16",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "13",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "1",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "6",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "49",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "9",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "22a",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "31",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "80",
+                    "hyperlinks": []
+                  }
+                ],
+                [
+                  {
+                    "text": "\tChange ",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  },
+                  {
+                    "text": "–",
+                    "hyperlinks": []
+                  }
+                ]
+              ],
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "other",
+              "text": "a\tIncludes one general temporary assistance position.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The proposed resource requirements for 2026 for UNOWAS amount to $15,960,200 (net of staff assessment) and would provide for the deployment of one military adviser and one police adviser ($107,000), salaries and common staff costs ($11,153,900) for 49 international posts (1 Under-Secretary-General, 1 Assistant Secretary-General, 2 D-1, 9 P-5, 16 P-4, 13 P-3, 1 P-2 and 6 Field Service), 30 national posts (9 National Professional Officer and 22 Local level), and 1 Local level position (general temporary assistance), and operational costs ($4,699,300), comprising costs for official travel ($788,000), facilities and infrastructure ($209,300), ground transportation ($97,400), air operations ($2,153,200), communications and information technology ($620,000) and other supplies, services and equipment ($831,400).",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "In 2026, no change is proposed to the number and levels of the posts.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The mission’s approved 2025 staffing table includes one general temporary assistance position. It is proposed that this position, Finance and Budget Assistant (Local level), be continued in 2026, to support and maintain internal control over the financial transactions of the mission.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "Vacancy rates of 15.6 per cent for international posts and 0.8 per cent for Local level posts and position, based on the actual average vacancy rates in 2024, and zero per cent for National Professional Officer posts, based on the actual vacancy rate in March 2025, have been applied to the estimates. A vacancy rate of zero per cent has been applied to the estimates for military and police advisers on the basis of the actual vacancy rate in March 2025.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "The increase in requirements for 2026 compared with the appropriation for 2025 is attributable mainly to increased requirements for civilian personnel, owing to: (a) the application of the latest salary rates for international staff; and (b) the application of lower vacancy rate of zero per cent compared with the rate of 8.3 per cent applied in 2025 for National Professional Officers. The increase is offset in part by: (a) the non-provisioning of resources for consultants and consulting services in 2026 with the use of in-house capacity; (b) reduced requirements for air operations in line with historical flight hour utilization rates; (c) reduced requirements for official travel; (d) reduced requirements for other services for meeting and workshop facilitation services; and (e) lower requirements for communications and information technology due to lower estimated costs of software licenses and fees, as well as less printing and fewer reproductions and magazine subscriptions for public information and publication services.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "block_type": "heading-sub-sub",
+          "text": "Extrabudgetary resources",
+          "table_content": null,
+          "hyperlinks": [],
+          "children": [
+            {
+              "block_type": "paragraph-1",
+              "text": "In 2025, extrabudgetary resources amounting to $447,100 are estimated, as follows:",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "Voluntary contributions of $311,600, are projected to enhance the Department of Political and Peacebuilding Affairs field capacity to address climate change-related security risks. The project will boost field offices’ abilities to build synergies around climate security and foster opportunities for dialogue.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "Cost-recovery resources of $135,500, which are projected to be used to cover the costs of the United Nations Educational, Scientific and Cultural Organization (UNESCO) in Dakar for utilities and maintenance services and the United Nations Office on Drugs and Crime (UNODC) for rental and utility services under the office-sharing arrangements with the UNOWAS Liaison Cell Office in Nouakchott, Mauritania, and the UNOWAS Liaison Cell Office in Abuja, Nigeria.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            },
+            {
+              "block_type": "paragraph-1",
+              "text": "In 2026, extrabudgetary resources amounting to $447,100 (comprising voluntary contributions of $311,600 and cost-recovery resources of $135,500) are projected for the above activities aimed at achieving peace and security in West Africa and the Sahel, as well as activities funded from cost recovery.",
+              "table_content": null,
+              "hyperlinks": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
