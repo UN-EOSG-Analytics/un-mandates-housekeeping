@@ -19,6 +19,11 @@ export interface RecurrenceAction {
   group_title: string;
 }
 
+export interface EntityRelevance {
+  indices: number[];
+  ai_comments: Record<number, string>;  // paragraph_index -> comment
+}
+
 export interface Paragraph {
   text: string;
   type: string | null;
@@ -45,8 +50,7 @@ export interface PPBRecord {
   document_symbol: string | null;
   uniform_title: string | null;
   recurrence_actions?: RecurrenceAction[];
-  entity_mention_counts?: Record<string, number>;
-  entity_mention_indices?: Record<string, number[]>;
+  entity_relevance?: Record<string, EntityRelevance>;
 }
 
 // Hierarchical structure for UI
@@ -60,14 +64,16 @@ export interface Mandate {
   title: string;
   link: string | null;
   action: MandateAction | null;
-  mentionCount: number;
-  mentionIndices: number[];
+  relevanceCount: number;
+  relevanceIndices: number[];
+  aiComments: Record<number, string>;
   entity?: string;
   entityLong?: string | null;
   isBackground?: boolean;
   otherEntitiesCount: number;
   allEntities: string[];
   entityLongMap: Record<string, string>;
+  allEntityRelevance: Record<string, EntityRelevance>;
 }
 
 export interface EntityData {

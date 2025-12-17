@@ -204,6 +204,16 @@ def find_mentioning_paragraph_indices(paras, entity_short, entity_long):
 paras_dir = Path("public/data/paragraphs")
 paras_dir.mkdir(parents=True, exist_ok=True)
 
+
+def load_paragraphs(symbol):
+    """Load paragraphs from saved file."""
+    safe_symbol = symbol.replace("/", "_").replace(" ", "_")
+    para_file = paras_dir / f"{safe_symbol}.json"
+    if para_file.exists():
+        with open(para_file) as f:
+            return json.load(f)
+    return []
+
 # Augment ppb records
 action_count = 0
 mentions_count = 0
@@ -231,27 +241,59 @@ for record in ppb:
         record["recurrence_actions"] = recurrence_actions
         action_count += 1
 
-    # Entity mention counts (not full paragraphs)
-    entity_mention_counts = {}
-    entity_mention_indices = {}
-    for entity in entities:
-        entity_long = entity_long_lookup.get(entity, "")
-        indices = find_mentioning_paragraph_indices(paras, entity, entity_long)
-        if indices:
-            entity_mention_counts[entity] = len(indices)
-            entity_mention_indices[entity] = indices
-    if entity_mention_counts:
-        record["entity_mention_counts"] = entity_mention_counts
-        record["entity_mention_indices"] = entity_mention_indices
-        mentions_count += 1
-
     # Remove paragraphs from main data (they're now in separate files)
     if "paragraphs" in record:
         del record["paragraphs"]
 
 print(f"Records with recurrence actions: {action_count}")
-print(f"Records with entity mentions: {mentions_count}")
 print(f"Documents with paragraphs saved: {docs_with_paras}")
+
+# Load LLM relevance data
+llm_relevance_dir = Path("data/intermediate/llm_relevance")
+llm_data_by_symbol = {}
+if llm_relevance_dir.exists():
+    for llm_file in llm_relevance_dir.glob("*.json"):
+        with open(llm_file) as f:
+            llm_data_by_symbol[llm_file.stem] = json.load(f)
+
+print(f"\n=== BUILDING UNIFIED RELEVANCE ===")
+print(f"LLM relevance files loaded: {len(llm_data_by_symbol)}")
+
+# Build unified entity_relevance: combines mentions + LLM into one structure
+relevance_count = 0
+for record in ppb:
+    symbol = record.get("full_document_symbol")
+    safe_symbol = symbol.replace("/", "_").replace(" ", "_")
+    entities = record.get("entities") or []
+    paras = load_paragraphs(symbol)
+    llm_data = llm_data_by_symbol.get(safe_symbol, {})
+
+    entity_relevance = {}
+    for entity in entities:
+        entity_long = entity_long_lookup.get(entity, "")
+        
+        # Get mention indices
+        mention_indices = set(find_mentioning_paragraph_indices(paras, entity, entity_long))
+        
+        # Get LLM relevance for this entity
+        llm_items = llm_data.get(entity, [])
+        llm_indices = {item["paragraph_index"] for item in llm_items}
+        llm_comments = {item["paragraph_index"]: item["relevance_comment"] for item in llm_items}
+        
+        # Combine indices
+        all_indices = sorted(mention_indices | llm_indices)
+        
+        if all_indices:
+            entity_relevance[entity] = {
+                "indices": all_indices,
+                "ai_comments": llm_comments,  # Only for LLM-identified ones
+            }
+    
+    if entity_relevance:
+        record["entity_relevance"] = entity_relevance
+        relevance_count += 1
+
+print(f"Records with entity relevance: {relevance_count}")
 
 with open("public/data/ppb2026_augmented.json", "w") as f:
     json.dump(ppb, f, indent=2, ensure_ascii=False)

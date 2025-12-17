@@ -19,23 +19,25 @@ function MandateGrid({ mandates }: { mandates: Mandate[] }) {
               symbol={m.symbol}
               link={m.link}
               title={m.title}
-              mentionCount={m.mentionCount}
-              mentionIndices={m.mentionIndices}
+              relevanceCount={m.relevanceCount}
+              relevanceIndices={m.relevanceIndices}
+              aiComments={m.aiComments}
               entity={m.entity}
               entityLong={m.entityLong}
               allEntities={m.allEntities}
               entityLongMap={m.entityLongMap}
+              allEntityRelevance={m.allEntityRelevance}
             />
             <div className="text-gray-600 truncate">{m.title}</div>
             <Tooltip
               content={
-                m.mentionCount > 0
-                  ? `${m.mentionCount} mention${m.mentionCount !== 1 ? "s" : ""} of ${m.entity} in ${m.symbol}`
-                  : `No mentions of ${m.entity} in ${m.symbol}`
+                m.relevanceCount > 0
+                  ? `${m.relevanceCount} paragraph${m.relevanceCount !== 1 ? "s" : ""} relevant to ${m.entity}'s mandate`
+                  : `No paragraphs identified as relevant to ${m.entity}'s mandate`
               }
             >
               <span className="text-gray-400 text-xs text-center cursor-help">
-                {m.mentionCount > 0 ? `${m.mentionCount}×` : "—"}
+                {m.relevanceCount > 0 ? `${m.relevanceCount}×` : "—"}
               </span>
             </Tooltip>
             <Tooltip

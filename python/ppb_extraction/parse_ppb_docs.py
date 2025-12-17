@@ -1,3 +1,5 @@
+# copied and slightly improved from https://github.com/UN-EOSG-Analytics/un80-docs-processing/blob/main/src/pipeline/
+
 import json
 import os
 import re

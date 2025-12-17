@@ -1,20 +1,22 @@
 "use client";
 
 import { useState, useCallback, useEffect } from "react";
-import { X, ChevronDown, Loader2 } from "lucide-react";
-import type { Paragraph } from "@/types";
+import { X, ChevronDown, Loader2, Sparkles } from "lucide-react";
+import type { Paragraph, EntityRelevance } from "@/types";
 import { Tooltip } from "./Tooltip";
 
 interface Props {
   symbol: string;
   link: string | null;
   title?: string;
-  mentionCount: number;
-  mentionIndices: number[];
+  relevanceCount: number;
+  relevanceIndices: number[];
+  aiComments: Record<number, string>;
   entity?: string;
   entityLong?: string | null;
   allEntities?: string[];
   entityLongMap?: Record<string, string>;
+  allEntityRelevance: Record<string, EntityRelevance>;
 }
 
 function cleanPrefix(prefix: string) {
@@ -36,17 +38,37 @@ function highlightEntity(text: string, entity?: string, entityLong?: string | nu
   });
 }
 
-function ParaBox({ p, indent, entity, entityLong }: { p: Paragraph; indent: number; entity?: string; entityLong?: string | null }) {
+function ParaBox({ 
+  p, 
+  indent, 
+  entity, 
+  entityLong,
+  aiComment,
+}: { 
+  p: Paragraph; 
+  indent: number; 
+  entity?: string; 
+  entityLong?: string | null;
+  aiComment?: string | null;
+}) {
   const label = p.prefix ? cleanPrefix(p.prefix) : null;
+  
   return (
-    <div className="bg-gray-100 rounded-lg p-4" style={{ marginLeft: indent }}>
-      <div className="flex gap-3">
-        {label && (
-          <span className="flex-shrink-0 w-7 h-7 rounded-full bg-un-blue text-white text-xs font-medium flex items-center justify-center">
-            {label}
-          </span>
-        )}
-        <p className="text-gray-700 leading-relaxed">{highlightEntity(p.text, entity, entityLong)}</p>
+    <div style={{ marginLeft: indent }}>
+      <div className="rounded-lg p-4 bg-gray-100">
+        <div className="flex gap-3">
+          {label && (
+            <span className="flex-shrink-0 w-7 h-7 rounded-full bg-un-blue text-white text-xs font-medium flex items-center justify-center">
+              {label}
+            </span>
+          )}
+          <p className="text-gray-700 leading-relaxed flex-1">{highlightEntity(p.text, entity, entityLong)}</p>
+          {aiComment && (
+            <Tooltip content={aiComment}>
+              <Sparkles className="h-4 w-4 text-amber-500 flex-shrink-0 cursor-help" />
+            </Tooltip>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -75,55 +97,53 @@ function CollapsedGap({
       className="flex items-center gap-2 text-sm text-gray-400 hover:text-gray-600 py-2 w-full"
     >
       <ChevronDown className={`h-4 w-4 transition-transform ${expanded ? "" : "-rotate-90"}`} />
-      {expanded ? "Hide" : "Show"} {count} paragraph{count !== 1 && "s"} without mention of {entity}
+      {expanded ? "Hide" : "Show"} {count} paragraph{count !== 1 && "s"} not relevant to {entity}'s mandate
     </button>
   );
 }
 
 function FilteredParagraphTree({
   paragraphs,
-  mentionIndices,
+  relevantIndices,
+  aiComments,
   entity,
   entityLong,
 }: {
   paragraphs: Paragraph[];
-  mentionIndices: Set<number>;
+  relevantIndices: Set<number>;
+  aiComments: Record<number, string>;
   entity: string;
   entityLong?: string | null;
 }) {
   const [expandedGaps, setExpandedGaps] = useState<Set<number>>(new Set());
   const [showPreamble, setShowPreamble] = useState(false);
 
-  const content = paragraphs.filter((p) => p.type !== "frontmatter" && p.text?.trim());
   const contentIndices = paragraphs.map((p, i) => ({ p, origIdx: i })).filter(({ p }) => p.type !== "frontmatter" && p.text?.trim());
   
-  const isMentioning = (origIdx: number) => mentionIndices.has(origIdx);
+  const isRelevant = (origIdx: number) => relevantIndices.has(origIdx);
 
   const preamble = contentIndices.filter(({ p }) => p.paragraph_type === "preambular");
   const operative = contentIndices.filter(({ p }) => p.paragraph_type !== "preambular");
 
-  type Segment = { type: "mentioning" | "gap"; items: { p: Paragraph; origIdx: number }[]; gapIndex?: number };
+  type Segment = { type: "relevant" | "gap"; items: { p: Paragraph; origIdx: number }[]; gapIndex?: number };
   const segments: Segment[] = [];
   let gapIndex = 0;
   let pendingHeadings: { p: Paragraph; origIdx: number }[] = [];
 
   for (const item of operative) {
-    const mentions = isMentioning(item.origIdx);
+    const relevant = isRelevant(item.origIdx);
 
-    if (item.p.type === "heading" && !mentions) {
-      // Non-mentioning heading: hold for attachment to next segment
+    if (item.p.type === "heading" && !relevant) {
       pendingHeadings.push(item);
-    } else if (mentions) {
-      // Mentioning item (paragraph or heading)
+    } else if (relevant) {
       const lastSeg = segments[segments.length - 1];
-      if (lastSeg?.type === "mentioning") {
+      if (lastSeg?.type === "relevant") {
         lastSeg.items.push(...pendingHeadings, item);
       } else {
-        segments.push({ type: "mentioning", items: [...pendingHeadings, item] });
+        segments.push({ type: "relevant", items: [...pendingHeadings, item] });
       }
       pendingHeadings = [];
     } else {
-      // Non-mentioning paragraph
       const lastSeg = segments[segments.length - 1];
       if (lastSeg?.type === "gap") {
         lastSeg.items.push(...pendingHeadings, item);
@@ -150,7 +170,7 @@ function FilteredParagraphTree({
     });
   };
 
-  const preambleMentions = preamble.filter(({ origIdx }) => isMentioning(origIdx));
+  const preambleRelevant = preamble.filter(({ origIdx }) => isRelevant(origIdx));
 
   return (
     <div className="space-y-3">
@@ -162,21 +182,30 @@ function FilteredParagraphTree({
           >
             <ChevronDown className={`h-4 w-4 transition-transform ${showPreamble ? "" : "-rotate-90"}`} />
             {showPreamble ? "Hide" : "Show"} {preamble.length} preambular paragraph{preamble.length !== 1 && "s"}
-            {preambleMentions.length > 0 && (
-              <span className="text-un-blue">({preambleMentions.length} mentioning {entity})</span>
+            {preambleRelevant.length > 0 && (
+              <span className="text-un-blue">({preambleRelevant.length} relevant to {entity}'s mandate)</span>
             )}
           </button>
           {showPreamble && (
             <div className="space-y-3">
-              {preamble.map(({ p }, i) => <ParaBox key={`pp-${i}`} p={p} indent={getIndent(p)} entity={entity} entityLong={entityLong} />)}
+              {preamble.map(({ p, origIdx }, i) => (
+                <ParaBox 
+                  key={`pp-${i}`} 
+                  p={p} 
+                  indent={getIndent(p)} 
+                  entity={entity} 
+                  entityLong={entityLong}
+                  aiComment={aiComments[origIdx]}
+                />
+              ))}
             </div>
           )}
         </>
       )}
 
       {segments.map((seg, i) => {
-        if (seg.type === "mentioning") {
-          return seg.items.map(({ p }, j) => {
+        if (seg.type === "relevant") {
+          return seg.items.map(({ p, origIdx }, j) => {
             if (p.type === "heading") {
               const indent = p.heading_level && p.heading_level > 1 ? (p.heading_level - 1) * 16 : 0;
               return (
@@ -185,7 +214,16 @@ function FilteredParagraphTree({
                 </div>
               );
             }
-            return <ParaBox key={`seg-${i}-${j}`} p={p} indent={getIndent(p)} entity={entity} entityLong={entityLong} />;
+            return (
+              <ParaBox 
+                key={`seg-${i}-${j}`} 
+                p={p} 
+                indent={getIndent(p)} 
+                entity={entity} 
+                entityLong={entityLong}
+                aiComment={aiComments[origIdx]}
+              />
+            );
           });
         }
 
@@ -195,7 +233,7 @@ function FilteredParagraphTree({
             <CollapsedGap count={seg.items.length} entity={entity} expanded={expanded} onToggle={() => toggleGap(seg.gapIndex!)} />
             {expanded && (
               <div className="space-y-3">
-                {seg.items.map(({ p }, j) => {
+                {seg.items.map(({ p, origIdx }, j) => {
                   if (p.type === "heading") {
                     const indent = p.heading_level && p.heading_level > 1 ? (p.heading_level - 1) * 16 : 0;
                     return (
@@ -262,12 +300,14 @@ export function DocumentSymbol({
   symbol,
   link,
   title,
-  mentionCount,
-  mentionIndices,
+  relevanceCount,
+  relevanceIndices,
+  aiComments,
   entity,
   entityLong,
   allEntities,
   entityLongMap,
+  allEntityRelevance,
 }: Props) {
   const [open, setOpen] = useState(false);
   const [selectedEntity, setSelectedEntity] = useState<string | null>(entity || null);
@@ -279,14 +319,12 @@ export function DocumentSymbol({
     if (open && !paragraphs && !loading) {
       setLoading(true);
       const safeSymbol = symbol.replace(/\//g, "_").replace(/ /g, "_");
+      
       fetch(`${basePath}/data/paragraphs/${safeSymbol}.json`)
         .then((res) => (res.ok ? res.json() : null))
-        .then((data) => {
-          setParagraphs(data || []);
-          setLoading(false);
-        })
-        .catch(() => {
-          setParagraphs([]);
+        .catch(() => null)
+        .then((parasData) => {
+          setParagraphs(parasData || []);
           setLoading(false);
         });
     }
@@ -321,19 +359,36 @@ export function DocumentSymbol({
     return indices;
   };
 
-  // Compute mention counts for all entities
-  const entityMentionCounts: Record<string, number> = {};
+  // Get relevance for an entity from allEntityRelevance (pre-computed) or compute mentions on-the-fly
+  const getEntityRelevance = (paras: Paragraph[], ent: string, entLong?: string): { indices: Set<number>; aiComments: Record<number, string> } => {
+    const relevance = allEntityRelevance[ent];
+    if (relevance) {
+      // Use pre-computed data from augmented JSON
+      return {
+        indices: new Set(relevance.indices),
+        aiComments: relevance.ai_comments || {},
+      };
+    }
+    // Fallback: compute mentions only (no AI comments)
+    return {
+      indices: computeMentionIndices(paras, ent, entLong),
+      aiComments: {},
+    };
+  };
+
+  // Compute relevance counts for all entities
+  const entityRelevanceCounts: Record<string, number> = {};
   if (paragraphs && allEntities) {
     for (const ent of allEntities) {
       const entLong = entityLongMap?.[ent];
-      entityMentionCounts[ent] = computeMentionIndices(paragraphs, ent, entLong).size;
+      entityRelevanceCounts[ent] = getEntityRelevance(paragraphs, ent, entLong).indices.size;
     }
   }
 
   const selectedEntityLong = selectedEntity ? entityLongMap?.[selectedEntity] : undefined;
-  const mentionIndicesSet = paragraphs && selectedEntity
-    ? computeMentionIndices(paragraphs, selectedEntity, selectedEntityLong)
-    : new Set<number>();
+  const selectedRelevance = paragraphs && selectedEntity
+    ? getEntityRelevance(paragraphs, selectedEntity, selectedEntityLong)
+    : { indices: new Set<number>(), aiComments: {} };
 
   return (
     <>
@@ -367,7 +422,7 @@ export function DocumentSymbol({
                   <div className="text-xs text-gray-500 mb-1.5">Entities citing this document</div>
                   <div className="flex flex-wrap items-center gap-1.5">
                     {allEntities.map((e) => {
-                      const count = entityMentionCounts[e] || 0;
+                      const count = entityRelevanceCounts[e] || 0;
                       return (
                         <button
                           key={e}
@@ -397,7 +452,13 @@ export function DocumentSymbol({
                 </div>
               ) : paragraphs && paragraphs.length > 0 ? (
                 selectedEntity ? (
-                  <FilteredParagraphTree paragraphs={paragraphs} mentionIndices={mentionIndicesSet} entity={selectedEntity} entityLong={selectedEntityLong || null} />
+                  <FilteredParagraphTree 
+                    paragraphs={paragraphs} 
+                    relevantIndices={selectedRelevance.indices} 
+                    aiComments={selectedRelevance.aiComments}
+                    entity={selectedEntity} 
+                    entityLong={selectedEntityLong || null} 
+                  />
                 ) : (
                   <FullParagraphTree paragraphs={paragraphs} />
                 )

@@ -72,22 +72,25 @@ export function transformPPBData(
       if (!entity) continue;
 
       const action = getActionForEntity(rec, entity);
-      const mentionCount = rec.entity_mention_counts?.[entity] || 0;
-      const mentionIndices = rec.entity_mention_indices?.[entity] || [];
+      const relevance = rec.entity_relevance?.[entity];
+      const relevanceIndices = relevance?.indices || [];
+      const aiComments = relevance?.ai_comments || {};
 
       const mandate: Mandate = {
         symbol,
         title,
         link,
         action,
-        mentionCount,
-        mentionIndices,
+        relevanceCount: relevanceIndices.length,
+        relevanceIndices,
+        aiComments,
         entity,
         entityLong,
         isBackground,
         otherEntitiesCount: Math.max(0, rec.num_entities - 1),
         allEntities: (rec.entities || []).filter((e): e is string => e !== null),
         entityLongMap,
+        allEntityRelevance: rec.entity_relevance || {},
       };
 
       const meta = metaByName[budgetPart.toLowerCase()] || null;
