@@ -1015,7 +1015,7 @@ wheels = [
 ]
 
 [[package]]
-name = "un-website-boilerplate"
+name = "un-mandates-housekeeping"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
