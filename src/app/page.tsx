@@ -8,12 +8,17 @@ import type { PPBRecord, BudgetPartMeta } from "@/types";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 async function getData() {
-  const dataPath = path.join(process.cwd(), "public/data/ppb2026_augmented.json");
+  const dataPath = path.join(
+    process.cwd(),
+    "public/data/ppb2026_augmented.json",
+  );
   const metaPath = path.join(process.cwd(), "public/data/budget_parts.json");
-  
+
   const records: PPBRecord[] = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
-  const budgetPartsMeta: BudgetPartMeta[] = JSON.parse(fs.readFileSync(metaPath, "utf-8"));
-  
+  const budgetPartsMeta: BudgetPartMeta[] = JSON.parse(
+    fs.readFileSync(metaPath, "utf-8"),
+  );
+
   return transformPPBData(records, budgetPartsMeta);
 }
 
@@ -22,9 +27,9 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+      <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
         {/* Header */}
-        <div className="flex items-center gap-4 mb-8">
+        <div className="mb-8 flex items-center gap-4">
           <Image
             src={`${basePath}/images/UN_Logo_Stacked_Colour_English.svg`}
             alt="UN Logo"

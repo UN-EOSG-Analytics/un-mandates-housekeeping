@@ -21,7 +21,7 @@ export interface RecurrenceAction {
 
 export interface EntityRelevance {
   indices: number[];
-  ai_comments: Record<number, string>;  // paragraph_index -> comment
+  ai_comments: Record<number, string>; // paragraph_index -> comment
 }
 
 export interface Paragraph {

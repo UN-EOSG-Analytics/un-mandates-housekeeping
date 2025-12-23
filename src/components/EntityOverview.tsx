@@ -12,87 +12,87 @@ interface Props {
 
 function MandateGrid({ mandates }: { mandates: Mandate[] }) {
   return (
-    <div className="grid grid-cols-[130px_1fr_50px_50px_60px_140px_24px] gap-x-3 gap-y-1.5 text-sm items-center">
+    <div className="grid grid-cols-[130px_1fr_50px_50px_60px_140px_24px] items-center gap-x-3 gap-y-1.5 text-sm">
       {mandates.map((m) => (
-          <div key={m.symbol} className="contents">
-            <DocumentSymbol
-              symbol={m.symbol}
-              link={m.link}
-              title={m.title}
-              relevanceCount={m.relevanceCount}
-              relevanceIndices={m.relevanceIndices}
-              aiComments={m.aiComments}
-              entity={m.entity}
-              entityLong={m.entityLong}
-              allEntities={m.allEntities}
-              entityLongMap={m.entityLongMap}
-              allEntityRelevance={m.allEntityRelevance}
-            />
-            <div className="text-gray-600 truncate">{m.title}</div>
-            <Tooltip
-              content={
-                m.relevanceCount > 0
-                  ? `${m.relevanceCount} paragraph${m.relevanceCount !== 1 ? "s" : ""} relevant to ${m.entity}'s mandate`
-                  : `No paragraphs identified as relevant to ${m.entity}'s mandate`
-              }
-            >
-              <span className="text-gray-400 text-xs text-center cursor-help">
-                {m.relevanceCount > 0 ? `${m.relevanceCount}×` : "—"}
-              </span>
-            </Tooltip>
-            <Tooltip
-              content={
-                m.otherEntitiesCount > 0
-                  ? `${m.otherEntitiesCount} other entit${m.otherEntitiesCount !== 1 ? "ies" : "y"} also cite${m.otherEntitiesCount === 1 ? "s" : ""} ${m.symbol}`
-                  : `No other entities cite ${m.symbol}`
-              }
-            >
-              <span className="text-gray-400 text-xs text-center cursor-help">
-                {m.otherEntitiesCount > 0 ? `+${m.otherEntitiesCount}` : "—"}
-              </span>
-            </Tooltip>
-            {m.action ? (
-              <>
-                <Tooltip
-                  content={
+        <div key={m.symbol} className="contents">
+          <DocumentSymbol
+            symbol={m.symbol}
+            link={m.link}
+            title={m.title}
+            relevanceCount={m.relevanceCount}
+            relevanceIndices={m.relevanceIndices}
+            aiComments={m.aiComments}
+            entity={m.entity}
+            entityLong={m.entityLong}
+            allEntities={m.allEntities}
+            entityLongMap={m.entityLongMap}
+            allEntityRelevance={m.allEntityRelevance}
+          />
+          <div className="truncate text-gray-600">{m.title}</div>
+          <Tooltip
+            content={
+              m.relevanceCount > 0
+                ? `${m.relevanceCount} paragraph${m.relevanceCount !== 1 ? "s" : ""} relevant to ${m.entity}'s mandate`
+                : `No paragraphs identified as relevant to ${m.entity}'s mandate`
+            }
+          >
+            <span className="cursor-help text-center text-xs text-gray-400">
+              {m.relevanceCount > 0 ? `${m.relevanceCount}×` : "—"}
+            </span>
+          </Tooltip>
+          <Tooltip
+            content={
+              m.otherEntitiesCount > 0
+                ? `${m.otherEntitiesCount} other entit${m.otherEntitiesCount !== 1 ? "ies" : "y"} also cite${m.otherEntitiesCount === 1 ? "s" : ""} ${m.symbol}`
+                : `No other entities cite ${m.symbol}`
+            }
+          >
+            <span className="cursor-help text-center text-xs text-gray-400">
+              {m.otherEntitiesCount > 0 ? `+${m.otherEntitiesCount}` : "—"}
+            </span>
+          </Tooltip>
+          {m.action ? (
+            <>
+              <Tooltip
+                content={
+                  m.action.type === "DROP"
+                    ? "Newer version already cited"
+                    : "Newer version available"
+                }
+              >
+                <span
+                  className={`inline-block w-14 cursor-help rounded py-0.5 text-center text-xs font-medium ${
                     m.action.type === "DROP"
-                      ? "Newer version already cited"
-                      : "Newer version available"
-                  }
+                      ? "bg-red-50 text-red-600"
+                      : "bg-amber-50 text-amber-600"
+                  }`}
                 >
-                  <span
-                    className={`inline-block w-14 text-center text-xs py-0.5 rounded font-medium cursor-help ${
-                      m.action.type === "DROP"
-                        ? "bg-red-50 text-red-600"
-                        : "bg-amber-50 text-amber-600"
-                    }`}
-                  >
-                    {m.action.type}
-                  </span>
-                </Tooltip>
-                <div className="text-gray-400 truncate text-xs">
-                  → {m.action.newerSymbol}
-                </div>
-                <Tooltip content="Compare documents">
-                  <a
-                    href={`https://mandates.un.org/diff?symbol1=${encodeURIComponent(m.symbol)}&symbol2=${encodeURIComponent(m.action.newerSymbol)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-un-blue transition-colors"
-                  >
-                    <GitCompareArrows className="h-3.5 w-3.5" />
-                  </a>
-                </Tooltip>
-              </>
-            ) : (
-              <>
-                <div />
-                <div />
-                <div />
-              </>
-            )}
-          </div>
-        ))}
+                  {m.action.type}
+                </span>
+              </Tooltip>
+              <div className="truncate text-xs text-gray-400">
+                → {m.action.newerSymbol}
+              </div>
+              <Tooltip content="Compare documents">
+                <a
+                  href={`https://mandates.un.org/diff?symbol1=${encodeURIComponent(m.symbol)}&symbol2=${encodeURIComponent(m.action.newerSymbol)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 transition-colors hover:text-un-blue"
+                >
+                  <GitCompareArrows className="h-3.5 w-3.5" />
+                </a>
+              </Tooltip>
+            </>
+          ) : (
+            <>
+              <div />
+              <div />
+              <div />
+            </>
+          )}
+        </div>
+      ))}
     </div>
   );
 }
@@ -158,32 +158,41 @@ function EntityPanel({
 
   const totalMandates =
     backgroundMandates.length +
-    Object.values(legislativeMandates).reduce((sum, arr) => sum + arr.length, 0);
+    Object.values(legislativeMandates).reduce(
+      (sum, arr) => sum + arr.length,
+      0,
+    );
   const filteredTotal =
     filteredBackground.length +
-    Object.values(filteredLegislative).reduce((sum, arr) => sum + arr.length, 0);
+    Object.values(filteredLegislative).reduce(
+      (sum, arr) => sum + arr.length,
+      0,
+    );
 
   return (
-    <div ref={panelRef} className="relative mt-2 col-span-full">
+    <div ref={panelRef} className="relative col-span-full mt-2">
       {/* Arrow pointing up */}
       <div
-        className="absolute -top-2 w-4 h-4 bg-gray-100 rotate-45"
+        className="absolute -top-2 h-4 w-4 rotate-45 bg-gray-100"
         style={{ left: `${arrowLeft}px` }}
       />
-      <div className="bg-gray-100 rounded-lg p-4 relative">
-        <div className="flex items-center justify-between mb-4">
+      <div className="relative rounded-lg bg-gray-100 p-4">
+        <div className="mb-4 flex items-center justify-between">
           <div>
             <span className="font-semibold text-foreground">{entity}</span>
             {entityLong && (
-              <span className="text-sm text-gray-500 ml-2">{entityLong}</span>
+              <span className="ml-2 text-sm text-gray-500">{entityLong}</span>
             )}
-            <span className="text-xs text-gray-400 ml-2">
-              {filterEntity ? `${filteredTotal} of ${totalMandates}` : totalMandates} mandates
+            <span className="ml-2 text-xs text-gray-400">
+              {filterEntity
+                ? `${filteredTotal} of ${totalMandates}`
+                : totalMandates}{" "}
+              mandates
             </span>
           </div>
           <button
             onClick={onClose}
-            className="p-1 hover:bg-gray-200 rounded transition-colors"
+            className="rounded p-1 transition-colors hover:bg-gray-200"
           >
             <X className="h-4 w-4 text-gray-500" />
           </button>
@@ -192,23 +201,34 @@ function EntityPanel({
         {/* Co-citing entities filter */}
         {coCitingEntities.length > 0 && (
           <div className="mb-4">
-            <div className="text-xs text-gray-500 mb-1.5">Co-citing entities</div>
+            <div className="mb-1.5 text-xs text-gray-500">
+              Co-citing entities
+            </div>
             <div className="flex flex-wrap items-center gap-1.5">
               {coCitingEntities.map(({ entity: e, count }) => (
                 <button
                   key={e}
                   onClick={() => setFilterEntity(filterEntity === e ? null : e)}
-                  className={`text-xs px-2 py-0.5 rounded transition-colors ${
-                    filterEntity === e ? "bg-un-blue text-white" : "bg-white text-gray-600 hover:bg-gray-200"
+                  className={`rounded px-2 py-0.5 text-xs transition-colors ${
+                    filterEntity === e
+                      ? "bg-un-blue text-white"
+                      : "bg-white text-gray-600 hover:bg-gray-200"
                   }`}
                 >
-                  {e} <span className={filterEntity === e ? "text-white/70" : "text-gray-400"}>({count})</span>
+                  {e}{" "}
+                  <span
+                    className={
+                      filterEntity === e ? "text-white/70" : "text-gray-400"
+                    }
+                  >
+                    ({count})
+                  </span>
                 </button>
               ))}
               {filterEntity && (
                 <button
                   onClick={() => setFilterEntity(null)}
-                  className="text-xs px-2 py-0.5 rounded bg-gray-300 text-gray-600 hover:bg-gray-400 ml-1"
+                  className="ml-1 rounded bg-gray-300 px-2 py-0.5 text-xs text-gray-600 hover:bg-gray-400"
                 >
                   show all mandate documents
                 </button>
@@ -221,7 +241,7 @@ function EntityPanel({
           {/* Background mandates first */}
           {filteredBackground.length > 0 && (
             <div>
-              <h4 className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">
+              <h4 className="mb-2 text-xs font-medium tracking-wide text-gray-500 uppercase">
                 Mandates and background
               </h4>
               <MandateGrid mandates={filteredBackground} />
@@ -233,7 +253,7 @@ function EntityPanel({
             .sort(([a], [b]) => a.localeCompare(b))
             .map(([subprog, mandates]) => (
               <div key={subprog}>
-                <h4 className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">
+                <h4 className="mb-2 text-xs font-medium tracking-wide text-gray-500 uppercase">
                   {subprog}
                 </h4>
                 <MandateGrid mandates={mandates} />
@@ -241,7 +261,9 @@ function EntityPanel({
             ))}
 
           {filteredTotal === 0 && filterEntity && (
-            <div className="text-sm text-gray-400">No mandates match this filter</div>
+            <div className="text-sm text-gray-400">
+              No mandates match this filter
+            </div>
           )}
         </div>
       </div>
@@ -266,14 +288,18 @@ function EntityBox({
     <button
       ref={buttonRef}
       onClick={onClick}
-      className={`px-3 py-2 h-10 rounded-lg text-sm font-medium text-left transition-colors truncate flex items-center justify-between gap-2 ${
+      className={`flex h-10 items-center justify-between gap-2 truncate rounded-lg px-3 py-2 text-left text-sm font-medium transition-colors ${
         isSelected
           ? "bg-un-blue text-white"
-          : "bg-gray-200 hover:bg-gray-300 text-foreground"
+          : "bg-gray-200 text-foreground hover:bg-gray-300"
       }`}
     >
       <span className="truncate">{entity}</span>
-      <span className={`text-xs ${isSelected ? "text-white/70" : "text-gray-400"}`}>{mandateCount}</span>
+      <span
+        className={`text-xs ${isSelected ? "text-white/70" : "text-gray-400"}`}
+      >
+        {mandateCount}
+      </span>
     </button>
   );
 }
@@ -309,28 +335,46 @@ export function EntityOverview({ parts }: Props) {
     <div className="space-y-8">
       {parts.map((partData) => {
         const entities = partData.entities;
-        const selectedIdx = entities.findIndex((e) => `${partData.part}-${e.entity}` === expandedEntity);
-        const selectedRowEnd = selectedIdx >= 0 ? Math.ceil((selectedIdx + 1) / columns) * columns : -1;
+        const selectedIdx = entities.findIndex(
+          (e) => `${partData.part}-${e.entity}` === expandedEntity,
+        );
+        const selectedRowEnd =
+          selectedIdx >= 0
+            ? Math.ceil((selectedIdx + 1) / columns) * columns
+            : -1;
         const expandedData = selectedIdx >= 0 ? entities[selectedIdx] : null;
 
         return (
           <div key={partData.part}>
             <div className="mb-3 flex items-baseline gap-2">
               {partData.numeral && (
-                <span className="text-sm font-medium text-gray-400">{partData.numeral}.</span>
+                <span className="text-sm font-medium text-gray-400">
+                  {partData.numeral}.
+                </span>
               )}
-              <span className="text-sm font-medium text-gray-500">{partData.part}</span>
+              <span className="text-sm font-medium text-gray-500">
+                {partData.part}
+              </span>
             </div>
 
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2">
+            <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
               {entities.map((entityData, idx) => {
                 const entityKey = `${partData.part}-${entityData.entity}`;
-                const isLastInSelectedRow = idx + 1 === selectedRowEnd || (idx === entities.length - 1 && selectedRowEnd > entities.length);
+                const isLastInSelectedRow =
+                  idx + 1 === selectedRowEnd ||
+                  (idx === entities.length - 1 &&
+                    selectedRowEnd > entities.length);
                 return (
                   <Fragment key={entityKey}>
                     <EntityBox
                       entity={entityData.entity}
-                      mandateCount={entityData.backgroundMandates.length + Object.values(entityData.legislativeMandates).reduce((sum, arr) => sum + arr.length, 0)}
+                      mandateCount={
+                        entityData.backgroundMandates.length +
+                        Object.values(entityData.legislativeMandates).reduce(
+                          (sum, arr) => sum + arr.length,
+                          0,
+                        )
+                      }
                       isSelected={expandedEntity === entityKey}
                       onClick={() => toggleEntity(entityKey)}
                       buttonRef={(el) => {

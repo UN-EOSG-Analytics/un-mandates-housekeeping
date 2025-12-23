@@ -8,7 +8,7 @@ import type {
 
 function getActionForEntity(
   rec: PPBRecord,
-  entity: string
+  entity: string,
 ): MandateAction | null {
   const action = rec.recurrence_actions?.find((a) => a.entity === entity);
   if (!action) return null;
@@ -25,7 +25,7 @@ function isBackgroundPart(part: string | null): boolean {
 
 export function transformPPBData(
   records: PPBRecord[],
-  budgetPartsMeta: BudgetPartMeta[]
+  budgetPartsMeta: BudgetPartMeta[],
 ): PartData[] {
   // Build lookup from name to meta
   const metaByName: Record<string, BudgetPartMeta> = {};
@@ -88,7 +88,9 @@ export function transformPPBData(
         entityLong,
         isBackground,
         otherEntitiesCount: Math.max(0, rec.num_entities - 1),
-        allEntities: (rec.entities || []).filter((e): e is string => e !== null),
+        allEntities: (rec.entities || []).filter(
+          (e): e is string => e !== null,
+        ),
         entityLongMap,
         allEntityRelevance: rec.entity_relevance || {},
       };
@@ -118,7 +120,9 @@ export function transformPPBData(
         if (!entityData.legislativeMandates[key]) {
           entityData.legislativeMandates[key] = [];
         }
-        if (!entityData.legislativeMandates[key].some((m) => m.symbol === symbol)) {
+        if (
+          !entityData.legislativeMandates[key].some((m) => m.symbol === symbol)
+        ) {
           entityData.legislativeMandates[key].push(mandate);
         }
       }

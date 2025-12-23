@@ -23,49 +23,64 @@ function cleanPrefix(prefix: string) {
   return prefix.replace(/[.\(\)\[\]]/g, "").trim();
 }
 
-function highlightEntity(text: string, entity?: string, entityLong?: string | null): React.ReactNode {
+function highlightEntity(
+  text: string,
+  entity?: string,
+  entityLong?: string | null,
+): React.ReactNode {
   if (!entity && !entityLong) return text;
-  
+
   const terms = [entity, entityLong].filter(Boolean) as string[];
-  const pattern = new RegExp(`\\b(${terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`, 'gi');
-  
+  const pattern = new RegExp(
+    `\\b(${terms.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})\\b`,
+    "gi",
+  );
+
   const parts = text.split(pattern);
   if (parts.length === 1) return text;
-  
+
   return parts.map((part, i) => {
-    const isMatch = terms.some(t => t.toLowerCase() === part.toLowerCase());
-    return isMatch ? <strong key={i} className="text-foreground">{part}</strong> : part;
+    const isMatch = terms.some((t) => t.toLowerCase() === part.toLowerCase());
+    return isMatch ? (
+      <strong key={i} className="text-foreground">
+        {part}
+      </strong>
+    ) : (
+      part
+    );
   });
 }
 
-function ParaBox({ 
-  p, 
-  indent, 
-  entity, 
+function ParaBox({
+  p,
+  indent,
+  entity,
   entityLong,
   aiComment,
-}: { 
-  p: Paragraph; 
-  indent: number; 
-  entity?: string; 
+}: {
+  p: Paragraph;
+  indent: number;
+  entity?: string;
   entityLong?: string | null;
   aiComment?: string | null;
 }) {
   const label = p.prefix ? cleanPrefix(p.prefix) : null;
-  
+
   return (
     <div style={{ marginLeft: indent }}>
-      <div className="rounded-lg p-4 bg-gray-100">
+      <div className="rounded-lg bg-gray-100 p-4">
         <div className="flex gap-3">
           {label && (
-            <span className="flex-shrink-0 w-7 h-7 rounded-full bg-un-blue text-white text-xs font-medium flex items-center justify-center">
+            <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-un-blue text-xs font-medium text-white">
               {label}
             </span>
           )}
-          <p className="text-gray-700 leading-relaxed flex-1">{highlightEntity(p.text, entity, entityLong)}</p>
+          <p className="flex-1 leading-relaxed text-gray-700">
+            {highlightEntity(p.text, entity, entityLong)}
+          </p>
           {aiComment && (
             <Tooltip content={aiComment}>
-              <Sparkles className="h-4 w-4 text-amber-500 flex-shrink-0 cursor-help" />
+              <Sparkles className="h-4 w-4 flex-shrink-0 cursor-help text-amber-500" />
             </Tooltip>
           )}
         </div>
@@ -75,7 +90,8 @@ function ParaBox({
 }
 
 function getIndent(p: Paragraph) {
-  if (p.paragraph_level && p.paragraph_level > 1) return (p.paragraph_level - 1) * 24;
+  if (p.paragraph_level && p.paragraph_level > 1)
+    return (p.paragraph_level - 1) * 24;
   if (p.heading_level && p.heading_level > 1) return (p.heading_level - 1) * 16;
   return 0;
 }
@@ -94,10 +110,13 @@ function CollapsedGap({
   return (
     <button
       onClick={onToggle}
-      className="flex items-center gap-2 text-sm text-gray-400 hover:text-gray-600 py-2 w-full"
+      className="flex w-full items-center gap-2 py-2 text-sm text-gray-400 hover:text-gray-600"
     >
-      <ChevronDown className={`h-4 w-4 transition-transform ${expanded ? "" : "-rotate-90"}`} />
-      {expanded ? "Hide" : "Show"} {count} paragraph{count !== 1 && "s"} not relevant to {entity}'s mandate
+      <ChevronDown
+        className={`h-4 w-4 transition-transform ${expanded ? "" : "-rotate-90"}`}
+      />
+      {expanded ? "Hide" : "Show"} {count} paragraph{count !== 1 && "s"} not
+      relevant to {entity}'s mandate
     </button>
   );
 }
@@ -118,14 +137,24 @@ function FilteredParagraphTree({
   const [expandedGaps, setExpandedGaps] = useState<Set<number>>(new Set());
   const [showPreamble, setShowPreamble] = useState(false);
 
-  const contentIndices = paragraphs.map((p, i) => ({ p, origIdx: i })).filter(({ p }) => p.type !== "frontmatter" && p.text?.trim());
-  
+  const contentIndices = paragraphs
+    .map((p, i) => ({ p, origIdx: i }))
+    .filter(({ p }) => p.type !== "frontmatter" && p.text?.trim());
+
   const isRelevant = (origIdx: number) => relevantIndices.has(origIdx);
 
-  const preamble = contentIndices.filter(({ p }) => p.paragraph_type === "preambular");
-  const operative = contentIndices.filter(({ p }) => p.paragraph_type !== "preambular");
+  const preamble = contentIndices.filter(
+    ({ p }) => p.paragraph_type === "preambular",
+  );
+  const operative = contentIndices.filter(
+    ({ p }) => p.paragraph_type !== "preambular",
+  );
 
-  type Segment = { type: "relevant" | "gap"; items: { p: Paragraph; origIdx: number }[]; gapIndex?: number };
+  type Segment = {
+    type: "relevant" | "gap";
+    items: { p: Paragraph; origIdx: number }[];
+    gapIndex?: number;
+  };
   const segments: Segment[] = [];
   let gapIndex = 0;
   let pendingHeadings: { p: Paragraph; origIdx: number }[] = [];
@@ -148,7 +177,11 @@ function FilteredParagraphTree({
       if (lastSeg?.type === "gap") {
         lastSeg.items.push(...pendingHeadings, item);
       } else {
-        segments.push({ type: "gap", items: [...pendingHeadings, item], gapIndex: gapIndex++ });
+        segments.push({
+          type: "gap",
+          items: [...pendingHeadings, item],
+          gapIndex: gapIndex++,
+        });
       }
       pendingHeadings = [];
     }
@@ -158,7 +191,11 @@ function FilteredParagraphTree({
     if (lastSeg?.type === "gap") {
       lastSeg.items.push(...pendingHeadings);
     } else {
-      segments.push({ type: "gap", items: pendingHeadings, gapIndex: gapIndex++ });
+      segments.push({
+        type: "gap",
+        items: pendingHeadings,
+        gapIndex: gapIndex++,
+      });
     }
   }
 
@@ -170,7 +207,9 @@ function FilteredParagraphTree({
     });
   };
 
-  const preambleRelevant = preamble.filter(({ origIdx }) => isRelevant(origIdx));
+  const preambleRelevant = preamble.filter(({ origIdx }) =>
+    isRelevant(origIdx),
+  );
 
   return (
     <div className="space-y-3">
@@ -178,22 +217,27 @@ function FilteredParagraphTree({
         <>
           <button
             onClick={() => setShowPreamble(!showPreamble)}
-            className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700 py-2"
+            className="flex items-center gap-2 py-2 text-sm text-gray-500 hover:text-gray-700"
           >
-            <ChevronDown className={`h-4 w-4 transition-transform ${showPreamble ? "" : "-rotate-90"}`} />
-            {showPreamble ? "Hide" : "Show"} {preamble.length} preambular paragraph{preamble.length !== 1 && "s"}
+            <ChevronDown
+              className={`h-4 w-4 transition-transform ${showPreamble ? "" : "-rotate-90"}`}
+            />
+            {showPreamble ? "Hide" : "Show"} {preamble.length} preambular
+            paragraph{preamble.length !== 1 && "s"}
             {preambleRelevant.length > 0 && (
-              <span className="text-un-blue">({preambleRelevant.length} relevant to {entity}'s mandate)</span>
+              <span className="text-un-blue">
+                ({preambleRelevant.length} relevant to {entity}'s mandate)
+              </span>
             )}
           </button>
           {showPreamble && (
             <div className="space-y-3">
               {preamble.map(({ p, origIdx }, i) => (
-                <ParaBox 
-                  key={`pp-${i}`} 
-                  p={p} 
-                  indent={getIndent(p)} 
-                  entity={entity} 
+                <ParaBox
+                  key={`pp-${i}`}
+                  p={p}
+                  indent={getIndent(p)}
+                  entity={entity}
                   entityLong={entityLong}
                   aiComment={aiComments[origIdx]}
                 />
@@ -207,19 +251,26 @@ function FilteredParagraphTree({
         if (seg.type === "relevant") {
           return seg.items.map(({ p, origIdx }, j) => {
             if (p.type === "heading") {
-              const indent = p.heading_level && p.heading_level > 1 ? (p.heading_level - 1) * 16 : 0;
+              const indent =
+                p.heading_level && p.heading_level > 1
+                  ? (p.heading_level - 1) * 16
+                  : 0;
               return (
-                <div key={`seg-${i}-${j}`} style={{ marginLeft: indent }} className={`font-semibold text-foreground ${p.heading_level === 1 ? "text-base mt-4" : "text-sm mt-2"}`}>
+                <div
+                  key={`seg-${i}-${j}`}
+                  style={{ marginLeft: indent }}
+                  className={`font-semibold text-foreground ${p.heading_level === 1 ? "mt-4 text-base" : "mt-2 text-sm"}`}
+                >
                   {p.text}
                 </div>
               );
             }
             return (
-              <ParaBox 
-                key={`seg-${i}-${j}`} 
-                p={p} 
-                indent={getIndent(p)} 
-                entity={entity} 
+              <ParaBox
+                key={`seg-${i}-${j}`}
+                p={p}
+                indent={getIndent(p)}
+                entity={entity}
                 entityLong={entityLong}
                 aiComment={aiComments[origIdx]}
               />
@@ -230,19 +281,39 @@ function FilteredParagraphTree({
         const expanded = expandedGaps.has(seg.gapIndex!);
         return (
           <div key={`gap-${seg.gapIndex}`}>
-            <CollapsedGap count={seg.items.length} entity={entity} expanded={expanded} onToggle={() => toggleGap(seg.gapIndex!)} />
+            <CollapsedGap
+              count={seg.items.length}
+              entity={entity}
+              expanded={expanded}
+              onToggle={() => toggleGap(seg.gapIndex!)}
+            />
             {expanded && (
               <div className="space-y-3">
                 {seg.items.map(({ p, origIdx }, j) => {
                   if (p.type === "heading") {
-                    const indent = p.heading_level && p.heading_level > 1 ? (p.heading_level - 1) * 16 : 0;
+                    const indent =
+                      p.heading_level && p.heading_level > 1
+                        ? (p.heading_level - 1) * 16
+                        : 0;
                     return (
-                      <div key={`gap-${seg.gapIndex}-${j}`} style={{ marginLeft: indent }} className={`font-semibold text-foreground ${p.heading_level === 1 ? "text-base mt-4" : "text-sm mt-2"}`}>
+                      <div
+                        key={`gap-${seg.gapIndex}-${j}`}
+                        style={{ marginLeft: indent }}
+                        className={`font-semibold text-foreground ${p.heading_level === 1 ? "mt-4 text-base" : "mt-2 text-sm"}`}
+                      >
                         {p.text}
                       </div>
                     );
                   }
-                  return <ParaBox key={`gap-${seg.gapIndex}-${j}`} p={p} indent={getIndent(p)} entity={entity} entityLong={entityLong} />;
+                  return (
+                    <ParaBox
+                      key={`gap-${seg.gapIndex}-${j}`}
+                      p={p}
+                      indent={getIndent(p)}
+                      entity={entity}
+                      entityLong={entityLong}
+                    />
+                  );
                 })}
               </div>
             )}
@@ -256,7 +327,9 @@ function FilteredParagraphTree({
 function FullParagraphTree({ paragraphs }: { paragraphs: Paragraph[] }) {
   const [showPreamble, setShowPreamble] = useState(false);
 
-  const content = paragraphs.filter((p) => p.type !== "frontmatter" && p.text?.trim());
+  const content = paragraphs.filter(
+    (p) => p.type !== "frontmatter" && p.text?.trim(),
+  );
   const preamble = content.filter((p) => p.paragraph_type === "preambular");
   const operative = content.filter((p) => p.paragraph_type !== "preambular");
 
@@ -264,13 +337,21 @@ function FullParagraphTree({ paragraphs }: { paragraphs: Paragraph[] }) {
     <div className="space-y-3">
       {preamble.length > 0 && (
         <>
-          <button onClick={() => setShowPreamble(!showPreamble)} className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700 py-2">
-            <ChevronDown className={`h-4 w-4 transition-transform ${showPreamble ? "" : "-rotate-90"}`} />
-            {showPreamble ? "Hide" : "Show"} {preamble.length} preambular paragraph{preamble.length !== 1 && "s"}
+          <button
+            onClick={() => setShowPreamble(!showPreamble)}
+            className="flex items-center gap-2 py-2 text-sm text-gray-500 hover:text-gray-700"
+          >
+            <ChevronDown
+              className={`h-4 w-4 transition-transform ${showPreamble ? "" : "-rotate-90"}`}
+            />
+            {showPreamble ? "Hide" : "Show"} {preamble.length} preambular
+            paragraph{preamble.length !== 1 && "s"}
           </button>
           {showPreamble && (
             <div className="space-y-3">
-              {preamble.map((p, i) => <ParaBox key={`pp-${i}`} p={p} indent={getIndent(p)} />)}
+              {preamble.map((p, i) => (
+                <ParaBox key={`pp-${i}`} p={p} indent={getIndent(p)} />
+              ))}
             </div>
           )}
         </>
@@ -278,9 +359,16 @@ function FullParagraphTree({ paragraphs }: { paragraphs: Paragraph[] }) {
 
       {operative.map((p, i) => {
         if (p.type === "heading") {
-          const indent = p.heading_level && p.heading_level > 1 ? (p.heading_level - 1) * 16 : 0;
+          const indent =
+            p.heading_level && p.heading_level > 1
+              ? (p.heading_level - 1) * 16
+              : 0;
           return (
-            <div key={`op-${i}`} style={{ marginLeft: indent }} className={`font-semibold text-foreground ${p.heading_level === 1 ? "text-base mt-4" : "text-sm mt-2"}`}>
+            <div
+              key={`op-${i}`}
+              style={{ marginLeft: indent }}
+              className={`font-semibold text-foreground ${p.heading_level === 1 ? "mt-4 text-base" : "mt-2 text-sm"}`}
+            >
               {p.text}
             </div>
           );
@@ -310,7 +398,9 @@ export function DocumentSymbol({
   allEntityRelevance,
 }: Props) {
   const [open, setOpen] = useState(false);
-  const [selectedEntity, setSelectedEntity] = useState<string | null>(entity || null);
+  const [selectedEntity, setSelectedEntity] = useState<string | null>(
+    entity || null,
+  );
   const [paragraphs, setParagraphs] = useState<Paragraph[] | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -319,7 +409,7 @@ export function DocumentSymbol({
     if (open && !paragraphs && !loading) {
       setLoading(true);
       const safeSymbol = symbol.replace(/\//g, "_").replace(/ /g, "_");
-      
+
       fetch(`${basePath}/data/paragraphs/${safeSymbol}.json`)
         .then((res) => (res.ok ? res.json() : null))
         .catch(() => null)
@@ -337,30 +427,42 @@ export function DocumentSymbol({
 
   const isTruncated = symbol.length > 18;
   const displaySymbol = isTruncated ? symbol.slice(0, 18) + "…" : symbol;
-  
+
   const btn = (
     <button
       onClick={handleClick}
-      className="w-fit px-2 py-0.5 rounded bg-blue-50 text-un-blue text-xs font-medium hover:bg-blue-100 transition-colors whitespace-nowrap"
+      className="w-fit rounded bg-blue-50 px-2 py-0.5 text-xs font-medium whitespace-nowrap text-un-blue transition-colors hover:bg-blue-100"
     >
       {displaySymbol}
     </button>
   );
 
   // Compute mention indices for an entity (using both short and long name)
-  const computeMentionIndices = (paras: Paragraph[], ent: string, entLong?: string): Set<number> => {
+  const computeMentionIndices = (
+    paras: Paragraph[],
+    ent: string,
+    entLong?: string,
+  ): Set<number> => {
     const terms = [ent];
     if (entLong) terms.push(entLong);
-    const pattern = new RegExp(`\\b(${terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`, 'i');
+    const pattern = new RegExp(
+      `\\b(${terms.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})\\b`,
+      "i",
+    );
     const indices = new Set<number>();
     paras.forEach((p, i) => {
-      if (p.text && p.type !== "heading" && pattern.test(p.text)) indices.add(i);
+      if (p.text && p.type !== "heading" && pattern.test(p.text))
+        indices.add(i);
     });
     return indices;
   };
 
   // Get relevance for an entity from allEntityRelevance (pre-computed) or compute mentions on-the-fly
-  const getEntityRelevance = (paras: Paragraph[], ent: string, entLong?: string): { indices: Set<number>; aiComments: Record<number, string> } => {
+  const getEntityRelevance = (
+    paras: Paragraph[],
+    ent: string,
+    entLong?: string,
+  ): { indices: Set<number>; aiComments: Record<number, string> } => {
     const relevance = allEntityRelevance[ent];
     if (relevance) {
       // Use pre-computed data from augmented JSON
@@ -381,14 +483,21 @@ export function DocumentSymbol({
   if (paragraphs && allEntities) {
     for (const ent of allEntities) {
       const entLong = entityLongMap?.[ent];
-      entityRelevanceCounts[ent] = getEntityRelevance(paragraphs, ent, entLong).indices.size;
+      entityRelevanceCounts[ent] = getEntityRelevance(
+        paragraphs,
+        ent,
+        entLong,
+      ).indices.size;
     }
   }
 
-  const selectedEntityLong = selectedEntity ? entityLongMap?.[selectedEntity] : undefined;
-  const selectedRelevance = paragraphs && selectedEntity
-    ? getEntityRelevance(paragraphs, selectedEntity, selectedEntityLong)
-    : { indices: new Set<number>(), aiComments: {} };
+  const selectedEntityLong = selectedEntity
+    ? entityLongMap?.[selectedEntity]
+    : undefined;
+  const selectedRelevance =
+    paragraphs && selectedEntity
+      ? getEntityRelevance(paragraphs, selectedEntity, selectedEntityLong)
+      : { indices: new Set<number>(), aiComments: {} };
 
   return (
     <>
@@ -396,21 +505,34 @@ export function DocumentSymbol({
 
       {open && (
         <div className="fixed inset-0 z-50 flex justify-end">
-          <div className="absolute inset-0 bg-black/20" onClick={() => setOpen(false)} />
+          <div
+            className="absolute inset-0 bg-black/20"
+            onClick={() => setOpen(false)}
+          />
 
-          <div className="relative w-full max-w-lg bg-white shadow-xl flex flex-col h-full">
-            <div className="p-4 border-b">
+          <div className="relative flex h-full w-full max-w-lg flex-col bg-white shadow-xl">
+            <div className="border-b p-4">
               <div className="flex items-start justify-between">
                 <div>
                   <div className="font-semibold text-foreground">{symbol}</div>
-                  {title && <div className="text-sm text-gray-500 mt-0.5">{title}</div>}
+                  {title && (
+                    <div className="mt-0.5 text-sm text-gray-500">{title}</div>
+                  )}
                 </div>
-                <button onClick={() => setOpen(false)} className="p-1 hover:bg-gray-100 rounded">
+                <button
+                  onClick={() => setOpen(false)}
+                  className="rounded p-1 hover:bg-gray-100"
+                >
                   <X className="h-4 w-4 text-gray-500" />
                 </button>
               </div>
               {link && (
-                <a href={link} target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-sm text-un-blue hover:underline">
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-block text-sm text-un-blue hover:underline"
+                >
                   View PDF →
                 </a>
               )}
@@ -419,7 +541,9 @@ export function DocumentSymbol({
             <div className="flex-1 overflow-y-auto p-4">
               {allEntities && allEntities.length > 0 && (
                 <div className="mb-4">
-                  <div className="text-xs text-gray-500 mb-1.5">Entities citing this document</div>
+                  <div className="mb-1.5 text-xs text-gray-500">
+                    Entities citing this document
+                  </div>
                   <div className="flex flex-wrap items-center gap-1.5">
                     {allEntities.map((e) => {
                       const count = entityRelevanceCounts[e] || 0;
@@ -427,18 +551,31 @@ export function DocumentSymbol({
                         <button
                           key={e}
                           onClick={() => setSelectedEntity(e)}
-                          className={`text-xs px-2 py-0.5 rounded transition-colors ${
-                            selectedEntity === e ? "bg-un-blue text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                          className={`rounded px-2 py-0.5 text-xs transition-colors ${
+                            selectedEntity === e
+                              ? "bg-un-blue text-white"
+                              : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                           }`}
                         >
-                          {e} <span className={selectedEntity === e ? "text-white/70" : "text-gray-400"}>({count})</span>
+                          {e}{" "}
+                          <span
+                            className={
+                              selectedEntity === e
+                                ? "text-white/70"
+                                : "text-gray-400"
+                            }
+                          >
+                            ({count})
+                          </span>
                         </button>
                       );
                     })}
                     <button
                       onClick={() => setSelectedEntity(null)}
-                      className={`text-xs px-2 py-0.5 rounded transition-colors ml-1 ${
-                        !selectedEntity ? "bg-gray-600 text-white" : "bg-gray-200 text-gray-500 hover:bg-gray-300"
+                      className={`ml-1 rounded px-2 py-0.5 text-xs transition-colors ${
+                        !selectedEntity
+                          ? "bg-gray-600 text-white"
+                          : "bg-gray-200 text-gray-500 hover:bg-gray-300"
                       }`}
                     >
                       show all paragraphs
@@ -452,18 +589,20 @@ export function DocumentSymbol({
                 </div>
               ) : paragraphs && paragraphs.length > 0 ? (
                 selectedEntity ? (
-                  <FilteredParagraphTree 
-                    paragraphs={paragraphs} 
-                    relevantIndices={selectedRelevance.indices} 
+                  <FilteredParagraphTree
+                    paragraphs={paragraphs}
+                    relevantIndices={selectedRelevance.indices}
                     aiComments={selectedRelevance.aiComments}
-                    entity={selectedEntity} 
-                    entityLong={selectedEntityLong || null} 
+                    entity={selectedEntity}
+                    entityLong={selectedEntityLong || null}
                   />
                 ) : (
                   <FullParagraphTree paragraphs={paragraphs} />
                 )
               ) : (
-                <div className="text-gray-400 text-sm">No paragraph data available</div>
+                <div className="text-sm text-gray-400">
+                  No paragraph data available
+                </div>
               )}
             </div>
           </div>

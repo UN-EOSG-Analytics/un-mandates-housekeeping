@@ -18,14 +18,14 @@ export function Tooltip({ content, children }: Props) {
     if (show && triggerRef.current) {
       const rect = triggerRef.current.getBoundingClientRect();
       const viewportWidth = window.innerWidth;
-      
+
       // Vertical position
       setPosition(rect.top < 80 ? "bottom" : "top");
-      
+
       // Horizontal alignment - estimate tooltip width (max 320px)
       const tooltipWidth = Math.min(320, content.length * 6 + 16);
       const centerX = rect.left + rect.width / 2;
-      
+
       if (centerX - tooltipWidth / 2 < 8) {
         setAlign("left");
       } else if (centerX + tooltipWidth / 2 > viewportWidth - 8) {
@@ -59,7 +59,7 @@ export function Tooltip({ content, children }: Props) {
       {show && (
         <span
           ref={tooltipRef}
-          className={`absolute z-50 px-2 py-1.5 text-xs text-white bg-gray-800 rounded max-w-xs w-max text-left ${alignClasses[align]} ${
+          className={`absolute z-50 w-max max-w-xs rounded bg-gray-800 px-2 py-1.5 text-left text-xs text-white ${alignClasses[align]} ${
             position === "top" ? "bottom-full mb-1" : "top-full mt-1"
           }`}
         >
