@@ -63,6 +63,7 @@ export interface Mandate {
   symbol: string;
   title: string;
   link: string | null;
+  year: number | null;
   action: MandateAction | null;
   relevanceCount: number;
   relevanceIndices: number[];

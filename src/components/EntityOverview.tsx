@@ -10,10 +10,37 @@ interface Props {
   parts: PartData[];
 }
 
+const currentYear = new Date().getFullYear();
+
+function getAgeIndicator(year: number | null): {
+  color: string;
+  bgColor: string;
+  label: string;
+  tooltip: string;
+} {
+  if (!year) return { color: "text-gray-400", bgColor: "bg-gray-100", label: "—", tooltip: "Year unknown" };
+  
+  const age = currentYear - year;
+  
+  if (age < 5) {
+    return { color: "text-green-600", bgColor: "bg-green-100", label: "<5", tooltip: `${age} year${age !== 1 ? "s" : ""} old` };
+  } else if (age < 10) {
+    return { color: "text-yellow-600", bgColor: "bg-yellow-100", label: ">5", tooltip: `${age} years old` };
+  } else if (age < 20) {
+    return { color: "text-orange-600", bgColor: "bg-orange-100", label: ">10", tooltip: `${age} years old` };
+  } else if (age < 50) {
+    return { color: "text-red-600", bgColor: "bg-red-100", label: ">20", tooltip: `${age} years old` };
+  } else {
+    return { color: "text-red-800", bgColor: "bg-red-200", label: ">50", tooltip: `${age} years old` };
+  }
+}
+
 function MandateGrid({ mandates }: { mandates: Mandate[] }) {
   return (
-    <div className="grid grid-cols-[130px_1fr_50px_50px_60px_140px_24px] items-center gap-x-3 gap-y-1.5 text-sm">
-      {mandates.map((m) => (
+    <div className="grid grid-cols-[130px_1fr_45px_36px_50px_50px_60px_140px_24px] items-center gap-x-3 gap-y-1.5 text-sm">
+      {mandates.map((m) => {
+        const ageInfo = getAgeIndicator(m.year);
+        return (
         <div key={m.symbol} className="contents">
           <DocumentSymbol
             symbol={m.symbol}
@@ -28,7 +55,20 @@ function MandateGrid({ mandates }: { mandates: Mandate[] }) {
             entityLongMap={m.entityLongMap}
             allEntityRelevance={m.allEntityRelevance}
           />
-          <div className="truncate text-gray-600">{m.title}</div>
+          <div
+            className="cursor-help truncate text-gray-600"
+            title={m.title}
+          >
+            {m.title}
+          </div>
+          <div className="text-center text-xs text-gray-400">
+            {m.year ?? "—"}
+          </div>
+          <Tooltip content={ageInfo.tooltip}>
+            <span className={`cursor-help rounded px-1 py-0.5 text-center text-xs font-medium ${ageInfo.color} ${ageInfo.bgColor}`}>
+              {ageInfo.label}
+            </span>
+          </Tooltip>
           <Tooltip
             content={
               m.relevanceCount > 0
@@ -92,7 +132,8 @@ function MandateGrid({ mandates }: { mandates: Mandate[] }) {
             </>
           )}
         </div>
-      ))}
+      );
+      })}
     </div>
   );
 }

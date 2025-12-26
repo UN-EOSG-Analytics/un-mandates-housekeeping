@@ -52,6 +52,7 @@ export function transformPPBData(
     const symbol = rec.full_document_symbol;
     const title = rec.description || rec.uniform_title || "";
     const link = rec.link;
+    const year = rec.year;
 
     // Build entity -> entityLong map from all citation_info
     const entityLongMap: Record<string, string> = {};
@@ -80,6 +81,7 @@ export function transformPPBData(
         symbol,
         title,
         link,
+        year,
         action,
         relevanceCount: relevanceIndices.length,
         relevanceIndices,

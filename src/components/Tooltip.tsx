@@ -51,7 +51,7 @@ export function Tooltip({ content, children }: Props) {
   return (
     <span
       ref={triggerRef}
-      className="relative inline-block"
+      className="relative inline-block max-w-full"
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
     >
