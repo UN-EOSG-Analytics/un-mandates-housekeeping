@@ -17,7 +17,7 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
+      <main className="mx-auto max-w-7xl px-3 py-8 sm:px-4">
         {/* Header */}
         <div className="mb-8 flex items-center gap-4">
           <Image

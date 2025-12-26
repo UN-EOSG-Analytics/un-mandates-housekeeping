@@ -64,6 +64,8 @@ export interface Mandate {
   title: string;
   link: string | null;
   year: number | null;
+  body: string | null;
+  docType: string | null;
   action: MandateAction | null;
   relevanceCount: number;
   relevanceIndices: number[];
