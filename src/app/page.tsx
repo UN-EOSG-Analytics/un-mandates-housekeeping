@@ -1,23 +1,13 @@
-import fs from "fs";
-import path from "path";
 import Image from "next/image";
 import { EntityOverview } from "@/components/EntityOverview";
 import { transformPPBData } from "@/lib/transformData";
-import type { PPBRecord, BudgetPartMeta } from "@/types";
+import { fetchPPBRecords, getBudgetPartsMeta } from "@/lib/data-service";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 async function getData() {
-  const dataPath = path.join(
-    process.cwd(),
-    "public/data/ppb2026_augmented.json",
-  );
-  const metaPath = path.join(process.cwd(), "public/data/budget_parts.json");
-
-  const records: PPBRecord[] = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
-  const budgetPartsMeta: BudgetPartMeta[] = JSON.parse(
-    fs.readFileSync(metaPath, "utf-8"),
-  );
+  const records = await fetchPPBRecords();
+  const budgetPartsMeta = getBudgetPartsMeta();
 
   return transformPPBData(records, budgetPartsMeta);
 }
