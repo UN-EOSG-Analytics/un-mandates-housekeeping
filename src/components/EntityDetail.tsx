@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { GitCompareArrows } from "lucide-react";
+import { ExportDropdown } from "./ExportDropdown";
 import type { Mandate } from "@/types";
 import { DocumentSymbol } from "./DocumentSymbol";
 import { Tooltip } from "./Tooltip";
@@ -276,6 +277,9 @@ export function EntityDetail({
             <div className="text-sm text-gray-500">
               {filterEntity ? `of ${totalMandates} ` : ""}mandate
               {totalMandates !== 1 ? "s" : ""}
+            </div>
+            <div className="mt-3">
+              <ExportDropdown entity={entity} />
             </div>
           </div>
         </div>

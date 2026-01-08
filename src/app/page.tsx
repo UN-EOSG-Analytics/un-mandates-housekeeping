@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { EntityOverview } from "@/components/EntityOverview";
+import { ExportDropdown } from "@/components/ExportDropdown";
 import { transformPPBData } from "@/lib/transformData";
 import { fetchPPBRecords, getBudgetPartsMeta } from "@/lib/data-service";
 
@@ -19,23 +20,26 @@ export default async function Home() {
     <div className="min-h-screen bg-background">
       <main className="mx-auto max-w-7xl px-3 py-8 sm:px-4">
         {/* Header */}
-        <div className="mb-8 flex items-center gap-4">
-          <Image
-            src={`${basePath}/images/UN_Logo_Stacked_Colour_English.svg`}
-            alt="UN Logo"
-            width={60}
-            height={60}
-            className="h-14 w-auto select-none"
-            draggable={false}
-          />
-          <div>
-            <h1 className="text-2xl font-bold text-foreground">
-              PPB 2026 Mandate Housekeeping
-            </h1>
-            <p className="text-sm text-gray-500">
-              Overview of mandates and suggestions for updates
-            </p>
+        <div className="mb-8 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <Image
+              src={`${basePath}/images/UN_Logo_Stacked_Colour_English.svg`}
+              alt="UN Logo"
+              width={60}
+              height={60}
+              className="h-14 w-auto select-none"
+              draggable={false}
+            />
+            <div>
+              <h1 className="text-2xl font-bold text-foreground">
+                PPB 2026 Mandate Housekeeping
+              </h1>
+              <p className="text-sm text-gray-500">
+                Overview of mandates and suggestions for updates
+              </p>
+            </div>
           </div>
+          <ExportDropdown label="Export All" />
         </div>
 
         {/* Entity Overview */}
