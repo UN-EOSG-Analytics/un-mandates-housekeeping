@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { query } from "@/lib/db";
 import { getCurrentUser } from "@/lib/auth";
-import type { MandateDecision, MandateState, UserRole } from "@/types";
+import type { MandateDecision, MandateComment, MandateState, UserRole } from "@/types";
 
-interface DbRow {
+interface DecisionRow {
   id: string;
   document_symbol: string;
   entity: string;
@@ -15,7 +15,17 @@ interface DbRow {
   role: UserRole;
 }
 
-const toDecision = (row: DbRow): MandateDecision => ({
+interface CommentRow {
+  id: string;
+  document_symbol: string;
+  entity: string;
+  subprogramme: string | null;
+  comment: string;
+  user_email: string;
+  created_at: string;
+}
+
+const toDecision = (row: DecisionRow): MandateDecision => ({
   id: row.id,
   documentSymbol: row.document_symbol,
   entity: row.entity,
@@ -27,29 +37,40 @@ const toDecision = (row: DbRow): MandateDecision => ({
   role: row.role,
 });
 
+const toComment = (row: CommentRow): MandateComment => ({
+  id: row.id,
+  documentSymbol: row.document_symbol,
+  entity: row.entity,
+  subprogramme: row.subprogramme,
+  comment: row.comment,
+  userEmail: row.user_email,
+  createdAt: row.created_at,
+});
+
 export async function GET(req: NextRequest) {
   const entity = req.nextUrl.searchParams.get("entity");
   if (!entity) return NextResponse.json({ error: "entity required" }, { status: 400 });
 
-  // Get latest decision per (document_symbol, subprogramme, role)
-  const rows = await query<DbRow>(
-    `WITH decisions_with_role AS (
-      SELECT d.*, 
-             CASE WHEN p.email IS NOT NULL THEN 'ppbd' ELSE 'focal' END as role
-      FROM mandates_housekeeping.mandate_decisions d
-      LEFT JOIN mandates_housekeeping.ppbd_reviewers p ON d.user_email = p.email
-      WHERE d.entity = $1
-    )
-    SELECT DISTINCT ON (document_symbol, COALESCE(subprogramme, ''), role)
-      *
-    FROM decisions_with_role
-    ORDER BY document_symbol, COALESCE(subprogramme, ''), role, created_at DESC`,
-    [entity]
-  );
+  // Get all decisions and comments
+  const [decisionRows, commentRows] = await Promise.all([
+    query<DecisionRow>(
+      `SELECT d.*, CASE WHEN p.email IS NOT NULL THEN 'ppbd' ELSE 'focal' END as role
+       FROM mandates_housekeeping.mandate_decisions d
+       LEFT JOIN mandates_housekeeping.ppbd_reviewers p ON d.user_email = p.email
+       WHERE d.entity = $1
+       ORDER BY d.created_at`,
+      [entity]
+    ),
+    query<CommentRow>(
+      `SELECT * FROM mandates_housekeeping.mandate_comments WHERE entity = $1 ORDER BY created_at`,
+      [entity]
+    ),
+  ]);
 
   // Group into MandateState objects
   const stateMap: Record<string, MandateState> = {};
-  for (const row of rows) {
+  
+  for (const row of decisionRows) {
     const key = `${row.document_symbol}:${row.subprogramme || ""}`;
     if (!stateMap[key]) {
       stateMap[key] = {
@@ -58,9 +79,30 @@ export async function GET(req: NextRequest) {
         subprogramme: row.subprogramme,
         focal: null,
         ppbd: null,
+        decisions: [],
+        comments: [],
       };
     }
-    stateMap[key][row.role] = toDecision(row);
+    const decision = toDecision(row);
+    stateMap[key].decisions.push(decision);
+    // Track latest per role
+    stateMap[key][row.role] = decision;
+  }
+
+  for (const row of commentRows) {
+    const key = `${row.document_symbol}:${row.subprogramme || ""}`;
+    if (!stateMap[key]) {
+      stateMap[key] = {
+        documentSymbol: row.document_symbol,
+        entity: row.entity,
+        subprogramme: row.subprogramme,
+        focal: null,
+        ppbd: null,
+        decisions: [],
+        comments: [],
+      };
+    }
+    stateMap[key].comments.push(toComment(row));
   }
 
   return NextResponse.json(Object.values(stateMap));
@@ -86,7 +128,7 @@ export async function POST(req: NextRequest) {
   }
 
   // Insert new decision event
-  const rows = await query<DbRow>(
+  const rows = await query<DecisionRow>(
     `WITH inserted AS (
       INSERT INTO mandates_housekeeping.mandate_decisions 
         (document_symbol, entity, subprogramme, decision, new_symbol, user_email)

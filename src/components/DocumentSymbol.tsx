@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useEffect } from "react";
 import { X, ChevronDown, Loader2, Sparkles } from "lucide-react";
-import type { Paragraph, EntityRelevance, MandateState, Decision, UserRole } from "@/types";
+import type { Paragraph, EntityRelevance, MandateState, MandateDecision, MandateComment, Decision, UserRole } from "@/types";
 import { Tooltip } from "./Tooltip";
 
 const currentYear = new Date().getFullYear();
@@ -28,6 +28,7 @@ interface Props {
   state?: MandateState;
   userRole?: UserRole | null;
   onDecision?: (decision: Decision, newSymbol?: string) => void;
+  onComment?: (comment: string) => void;
 }
 
 function cleanPrefix(prefix: string) {
@@ -414,6 +415,7 @@ export function DocumentSymbol({
   state,
   userRole,
   onDecision,
+  onComment,
 }: Props) {
   const [internalOpen, setInternalOpen] = useState(false);
   const open = controlledOpen ?? internalOpen;
@@ -421,6 +423,8 @@ export function DocumentSymbol({
   const [selectedEntity, setSelectedEntity] = useState<string | null>(null);
   const [paragraphs, setParagraphs] = useState<Paragraph[] | null>(null);
   const [loading, setLoading] = useState(false);
+  const [commentText, setCommentText] = useState("");
+  const [activeTab, setActiveTab] = useState<"activity" | "paragraphs">("activity");
 
   // Fetch paragraphs when sidebar opens
   useEffect(() => {
@@ -585,23 +589,23 @@ export function DocumentSymbol({
               {onDecision && (
                 <div className="mt-4 space-y-2 text-sm border-t pt-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-500">Focal point decision</span>
                     <div className="flex items-center gap-2">
-                      <select
-                        value={state?.focal?.decision || ""}
-                        onChange={(e) => userRole === "focal" && e.target.value && onDecision(e.target.value as Decision)}
-                        disabled={userRole !== "focal"}
-                        className="rounded border border-gray-200 px-2 py-1 text-sm disabled:opacity-50"
-                      >
-                        <option value="">—</option>
-                        <option value="retain">Retain</option>
-                        <option value="remove">Remove</option>
-                        <option value="update">Update</option>
-                      </select>
+                      <span className="text-gray-500">Focal point</span>
                       {state?.focal?.userEmail && (
                         <span className="text-xs text-gray-400">{state.focal.userEmail}</span>
                       )}
                     </div>
+                    <select
+                      value={state?.focal?.decision || ""}
+                      onChange={(e) => userRole === "focal" && e.target.value && onDecision(e.target.value as Decision)}
+                      disabled={userRole !== "focal"}
+                      className="rounded border border-gray-200 px-2 py-1 text-sm disabled:opacity-50"
+                    >
+                      <option value="">—</option>
+                      <option value="retain">Retain</option>
+                      <option value="remove">Remove</option>
+                      <option value="update">Update</option>
+                    </select>
                   </div>
                   {state?.focal?.decision === "update" && (
                     <div className="flex items-center justify-between">
@@ -617,23 +621,23 @@ export function DocumentSymbol({
                     </div>
                   )}
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-500">PPBD decision</span>
                     <div className="flex items-center gap-2">
-                      <select
-                        value={state?.ppbd?.decision || ""}
-                        onChange={(e) => userRole === "ppbd" && e.target.value && onDecision(e.target.value as Decision)}
-                        disabled={userRole !== "ppbd"}
-                        className="rounded border border-gray-200 px-2 py-1 text-sm disabled:opacity-50"
-                      >
-                        <option value="">—</option>
-                        <option value="retain">Retain</option>
-                        <option value="remove">Remove</option>
-                        <option value="update">Update</option>
-                      </select>
+                      <span className="text-gray-500">PPBD</span>
                       {state?.ppbd?.userEmail && (
                         <span className="text-xs text-gray-400">{state.ppbd.userEmail}</span>
                       )}
                     </div>
+                    <select
+                      value={state?.ppbd?.decision || ""}
+                      onChange={(e) => userRole === "ppbd" && e.target.value && onDecision(e.target.value as Decision)}
+                      disabled={userRole !== "ppbd"}
+                      className="rounded border border-gray-200 px-2 py-1 text-sm disabled:opacity-50"
+                    >
+                      <option value="">—</option>
+                      <option value="retain">Retain</option>
+                      <option value="remove">Remove</option>
+                      <option value="update">Update</option>
+                    </select>
                   </div>
                   {state?.ppbd?.decision === "update" && (
                     <div className="flex items-center justify-between">
@@ -650,73 +654,181 @@ export function DocumentSymbol({
                   )}
                 </div>
               )}
+
+              {/* Tabs */}
+              <div className="mt-4 border-t pt-3 flex gap-1">
+                <button
+                  onClick={() => setActiveTab("activity")}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-t transition-colors ${
+                    activeTab === "activity"
+                      ? "bg-gray-100 text-gray-900"
+                      : "text-gray-500 hover:text-gray-700"
+                  }`}
+                >
+                  Activity {((state?.decisions?.length || 0) + (state?.comments?.length || 0)) > 0 && (
+                    <span className="ml-1 text-gray-400">
+                      ({(state?.decisions?.length || 0) + (state?.comments?.length || 0)})
+                    </span>
+                  )}
+                </button>
+                <button
+                  onClick={() => setActiveTab("paragraphs")}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-t transition-colors ${
+                    activeTab === "paragraphs"
+                      ? "bg-gray-100 text-gray-900"
+                      : "text-gray-500 hover:text-gray-700"
+                  }`}
+                >
+                  Paragraphs
+                </button>
+              </div>
             </div>
 
-            <div className="flex-1 overflow-y-auto p-4">
-              {allEntities && allEntities.length > 0 && (
-                <div className="mb-4">
-                  <div className="mb-1.5 text-xs text-gray-500">
-                    Entities citing this document
-                  </div>
-                  <div className="flex flex-wrap items-center gap-1.5">
-                    {allEntities.map((e) => {
-                      const count = entityRelevanceCounts[e] || 0;
-                      return (
+            <div className="flex-1 overflow-y-auto p-4 bg-gray-50">
+              {activeTab === "activity" ? (
+                <div className="space-y-3">
+                  {/* Activity log (all decisions + comments interleaved) */}
+                  {(() => {
+                    type ActivityItem = { type: "decision"; data: MandateDecision } | { type: "comment"; data: MandateComment };
+                    const items: ActivityItem[] = [];
+                    for (const d of state?.decisions || []) items.push({ type: "decision", data: d });
+                    for (const c of state?.comments || []) items.push({ type: "comment", data: c });
+                    items.sort((a, b) => new Date(a.data.createdAt).getTime() - new Date(b.data.createdAt).getTime());
+                    
+                    if (items.length === 0) {
+                      return <div className="text-sm text-gray-400">No activity yet</div>;
+                    }
+                    
+                    return items.map((item, i) => (
+                      <div key={item.data.id || i} className="text-xs">
+                        {item.type === "decision" ? (
+                          <div className={`rounded p-2 ${
+                            item.data.decision === "retain" ? "bg-green-50" :
+                            item.data.decision === "remove" ? "bg-red-50" :
+                            item.data.decision === "update" ? "bg-amber-50" :
+                            "bg-blue-50"
+                          }`}>
+                            <div className="flex items-center gap-1">
+                              <span className={`font-medium ${
+                                item.data.decision === "retain" ? "text-green-700" :
+                                item.data.decision === "remove" ? "text-red-700" :
+                                item.data.decision === "update" ? "text-amber-700" :
+                                "text-blue-700"
+                              }`}>
+                                {(item.data as MandateDecision).role === "ppbd" ? "PPBD" : "Focal"}: {item.data.decision}
+                              </span>
+                              {(item.data as MandateDecision).newSymbol && (
+                                <span className="text-gray-500">→ {(item.data as MandateDecision).newSymbol}</span>
+                              )}
+                            </div>
+                            <div className="text-gray-400 mt-0.5">
+                              {item.data.userEmail} · {new Date(item.data.createdAt).toLocaleDateString()}
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="rounded bg-white p-2 shadow-sm">
+                            <div className="text-gray-700">{(item.data as MandateComment).comment}</div>
+                            <div className="text-gray-400 mt-0.5">
+                              {item.data.userEmail} · {new Date(item.data.createdAt).toLocaleDateString()}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    ));
+                  })()}
+                  {/* Add comment input */}
+                  {onComment && (
+                    <div className="flex gap-2 pt-2">
+                      <input
+                        type="text"
+                        value={commentText}
+                        onChange={(e) => setCommentText(e.target.value)}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter" && commentText.trim()) {
+                            onComment(commentText.trim());
+                            setCommentText("");
+                          }
+                        }}
+                        placeholder="Add a comment..."
+                        className="flex-1 rounded border border-gray-200 bg-white px-2 py-1.5 text-xs"
+                      />
+                      <button
+                        onClick={() => {
+                          if (commentText.trim()) {
+                            onComment(commentText.trim());
+                            setCommentText("");
+                          }
+                        }}
+                        disabled={!commentText.trim()}
+                        className="rounded bg-un-blue px-3 py-1.5 text-xs text-white disabled:opacity-50"
+                      >
+                        Send
+                      </button>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <>
+                  {allEntities && allEntities.length > 0 && (
+                    <div className="mb-4">
+                      <div className="mb-1.5 text-xs text-gray-500">
+                        Filter by entity
+                      </div>
+                      <div className="flex flex-wrap items-center gap-1.5">
                         <button
-                          key={e}
-                          onClick={() => setSelectedEntity(e)}
+                          onClick={() => setSelectedEntity(null)}
                           className={`rounded px-2 py-0.5 text-xs transition-colors ${
-                            selectedEntity === e
-                              ? "bg-un-blue text-white"
-                              : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                            !selectedEntity
+                              ? "bg-gray-600 text-white"
+                              : "bg-white text-gray-500 hover:bg-gray-100"
                           }`}
                         >
-                          {e}{" "}
-                          <span
-                            className={
-                              selectedEntity === e
-                                ? "text-white/70"
-                                : "text-gray-400"
-                            }
-                          >
-                            ({count})
-                          </span>
+                          All
                         </button>
-                      );
-                    })}
-                    <button
-                      onClick={() => setSelectedEntity(null)}
-                      className={`ml-1 rounded px-2 py-0.5 text-xs transition-colors ${
-                        !selectedEntity
-                          ? "bg-gray-600 text-white"
-                          : "bg-gray-200 text-gray-500 hover:bg-gray-300"
-                      }`}
-                    >
-                      show all paragraphs
-                    </button>
-                  </div>
-                </div>
-              )}
-              {loading ? (
-                <div className="flex items-center justify-center py-8">
-                  <Loader2 className="h-6 w-6 animate-spin text-gray-400" />
-                </div>
-              ) : paragraphs && paragraphs.length > 0 ? (
-                selectedEntity ? (
-                  <FilteredParagraphTree
-                    paragraphs={paragraphs}
-                    relevantIndices={selectedRelevance.indices}
-                    aiComments={selectedRelevance.aiComments}
-                    entity={selectedEntity}
-                    entityLong={selectedEntityLong || null}
-                  />
-                ) : (
-                  <FullParagraphTree paragraphs={paragraphs} />
-                )
-              ) : (
-                <div className="text-sm text-gray-400">
-                  No paragraph data available
-                </div>
+                        {allEntities.map((e) => {
+                          const count = entityRelevanceCounts[e] || 0;
+                          return (
+                            <button
+                              key={e}
+                              onClick={() => setSelectedEntity(e)}
+                              className={`rounded px-2 py-0.5 text-xs transition-colors ${
+                                selectedEntity === e
+                                  ? "bg-un-blue text-white"
+                                  : "bg-white text-gray-600 hover:bg-gray-100"
+                              }`}
+                            >
+                              {e}{" "}
+                              <span className={selectedEntity === e ? "text-white/70" : "text-gray-400"}>
+                                ({count})
+                              </span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+                  {loading ? (
+                    <div className="flex items-center justify-center py-8">
+                      <Loader2 className="h-6 w-6 animate-spin text-gray-400" />
+                    </div>
+                  ) : paragraphs && paragraphs.length > 0 ? (
+                    selectedEntity ? (
+                      <FilteredParagraphTree
+                        paragraphs={paragraphs}
+                        relevantIndices={selectedRelevance.indices}
+                        aiComments={selectedRelevance.aiComments}
+                        entity={selectedEntity}
+                        entityLong={selectedEntityLong || null}
+                      />
+                    ) : (
+                      <FullParagraphTree paragraphs={paragraphs} />
+                    )
+                  ) : (
+                    <div className="text-sm text-gray-400">
+                      No paragraph data available
+                    </div>
+                  )}
+                </>
               )}
             </div>
           </div>

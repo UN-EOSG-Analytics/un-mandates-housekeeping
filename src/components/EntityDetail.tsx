@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Plus, Loader2 } from "lucide-react";
 import { ExportDropdown } from "./ExportDropdown";
-import type { Mandate, MandateState, Decision, UserRole } from "@/types";
+import type { Mandate, MandateState, MandateComment, Decision, UserRole } from "@/types";
 import { DocumentSymbol } from "./DocumentSymbol";
 import { Tooltip } from "./Tooltip";
 
@@ -136,7 +136,7 @@ function DecisionSelect({
   );
 }
 
-const GRID_COLS = "grid-cols-[140px_1fr_50px_90px_55px_45px_60px_130px_130px]";
+const GRID_COLS = "grid-cols-[140px_1fr_50px_90px_55px_45px_60px_45px_130px_130px]";
 
 function ColumnHeaders() {
   return (
@@ -148,6 +148,7 @@ function ColumnHeaders() {
       <div>Year</div>
       <div>Age</div>
       <div>Others</div>
+      <div>💬</div>
       <div>Focal Point</div>
       <div>PPBD</div>
     </div>
@@ -159,14 +160,17 @@ function MandateRow({
   state,
   userRole,
   onDecision,
+  onComment,
 }: {
   mandate: Mandate;
   state?: MandateState;
   userRole: UserRole | null;
   onDecision: (decision: Decision, newSymbol?: string) => void;
+  onComment: (comment: string) => void;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const ageInfo = getAgeIndicator(mandate.year);
+  const commentCount = state?.comments?.length ?? 0;
 
   return (
     <div
@@ -195,6 +199,7 @@ function MandateRow({
           state={state}
           userRole={userRole}
           onDecision={onDecision}
+          onComment={onComment}
         />
       </div>
       <div className="cursor-help truncate text-gray-600" title={mandate.title}>
@@ -228,6 +233,11 @@ function MandateRow({
           {mandate.otherEntitiesCount > 0
             ? `+${mandate.otherEntitiesCount}`
             : "—"}
+        </span>
+      </Tooltip>
+      <Tooltip content={commentCount > 0 ? "Click to view comments" : "Click to add a comment"}>
+        <span className={`cursor-pointer text-xs ${commentCount > 0 ? "text-un-blue font-medium" : "text-gray-400"}`}>
+          {commentCount > 0 ? commentCount : "—"}
         </span>
       </Tooltip>
       <div onClick={(e) => e.stopPropagation()}>
@@ -293,7 +303,7 @@ function AddEntryRow({
           Add
         </button>
       </div>
-      <div className="col-span-7" />
+      <div className="col-span-8" />
     </div>
   );
 }
@@ -306,6 +316,7 @@ function MandateSection({
   states,
   userRole,
   onDecision,
+  onComment,
   onAdd,
 }: {
   title: string;
@@ -315,6 +326,7 @@ function MandateSection({
   states: Record<string, MandateState>;
   userRole: UserRole | null;
   onDecision: (symbol: string, decision: Decision, newSymbol?: string) => void;
+  onComment: (symbol: string, comment: string) => void;
   onAdd: (symbol: string) => void;
 }) {
   const stateKey = (symbol: string) => `${symbol}:${subprogramme || ""}`;
@@ -339,6 +351,7 @@ function MandateSection({
             state={states[stateKey(m.symbol)]}
             userRole={userRole}
             onDecision={(decision, newSymbol) => onDecision(m.symbol, decision, newSymbol)}
+            onComment={(comment) => onComment(m.symbol, comment)}
           />
         ))}
         {addedEntries.map((s) => {
@@ -351,7 +364,7 @@ function MandateSection({
               <div className="rounded bg-blue-100 px-2 py-0.5 text-xs font-medium text-un-blue">
                 {s.documentSymbol}
               </div>
-              <div className="col-span-6 text-xs text-gray-400">
+              <div className="col-span-7 text-xs text-gray-400">
                 Added by {addedBy?.userEmail}
               </div>
               <div />
@@ -406,6 +419,17 @@ export function EntityDetail({
       if (!userRole || !userEmail) return;
       const key = `${symbol}:${subprogramme || ""}`;
       const now = new Date().toISOString();
+      const newDecision = {
+        id: "",
+        documentSymbol: symbol,
+        entity,
+        subprogramme,
+        decision,
+        newSymbol: newSymbol || null,
+        userEmail,
+        createdAt: now,
+        role: userRole,
+      };
       // Optimistic update
       setStates((prev) => ({
         ...prev,
@@ -414,17 +438,8 @@ export function EntityDetail({
           documentSymbol: symbol,
           entity,
           subprogramme,
-          [userRole]: {
-            id: "",
-            documentSymbol: symbol,
-            entity,
-            subprogramme,
-            decision,
-            newSymbol: newSymbol || null,
-            userEmail,
-            createdAt: now,
-            role: userRole,
-          },
+          [userRole]: newDecision,
+          decisions: [...(prev[key]?.decisions || []), newDecision],
         },
       }));
 
@@ -437,11 +452,60 @@ export function EntityDetail({
         const updated = await res.json();
         setStates((prev) => ({
           ...prev,
-          [key]: { ...prev[key], [updated.role]: updated },
+          [key]: {
+            ...prev[key],
+            [updated.role]: updated,
+            decisions: [...(prev[key]?.decisions?.filter((d) => d.id) || []), updated],
+          },
         }));
       }
     },
     [entity, userRole, userEmail]
+  );
+
+  const handleComment = useCallback(
+    async (symbol: string, subprogramme: string | null, comment: string) => {
+      if (!userEmail) return;
+      const key = `${symbol}:${subprogramme || ""}`;
+      const now = new Date().toISOString();
+      const newComment: MandateComment = {
+        id: "",
+        documentSymbol: symbol,
+        entity,
+        subprogramme,
+        comment,
+        userEmail,
+        createdAt: now,
+      };
+      // Optimistic update
+      setStates((prev) => ({
+        ...prev,
+        [key]: {
+          ...prev[key],
+          documentSymbol: symbol,
+          entity,
+          subprogramme,
+          comments: [...(prev[key]?.comments || []), newComment],
+        },
+      }));
+
+      const res = await fetch("/api/housekeeping/comments", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ documentSymbol: symbol, entity, subprogramme, comment }),
+      });
+      if (res.ok) {
+        const added: MandateComment = await res.json();
+        setStates((prev) => ({
+          ...prev,
+          [key]: {
+            ...prev[key],
+            comments: [...(prev[key]?.comments?.filter((c) => c.id) || []), added],
+          },
+        }));
+      }
+    },
+    [entity, userEmail]
   );
 
   // Combine all mandates for co-citing calculation
@@ -563,6 +627,7 @@ export function EntityDetail({
           onDecision={(symbol, decision, newSymbol) =>
             handleDecision(symbol, null, decision, newSymbol)
           }
+          onComment={(symbol, comment) => handleComment(symbol, null, comment)}
           onAdd={(symbol) => handleDecision(symbol, null, "add")}
         />
 
@@ -580,6 +645,7 @@ export function EntityDetail({
               onDecision={(symbol, decision, newSymbol) =>
                 handleDecision(symbol, subprog, decision, newSymbol)
               }
+              onComment={(symbol, comment) => handleComment(symbol, subprog, comment)}
               onAdd={(symbol) => handleDecision(symbol, subprog, "add")}
             />
           ))}

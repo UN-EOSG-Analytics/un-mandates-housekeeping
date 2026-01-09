@@ -112,14 +112,26 @@ export interface MandateDecision {
   newSymbol: string | null;
   userEmail: string;
   createdAt: string;
-  role: UserRole; // derived from ppbd_reviewers table
+  role: UserRole;
 }
 
-// Current state per mandate (latest decisions by role)
+export interface MandateComment {
+  id: string;
+  documentSymbol: string;
+  entity: string;
+  subprogramme: string | null;
+  comment: string;
+  userEmail: string;
+  createdAt: string;
+}
+
+// Current state per mandate (latest decisions by role + full history)
 export interface MandateState {
   documentSymbol: string;
   entity: string;
   subprogramme: string | null;
-  focal: MandateDecision | null;
-  ppbd: MandateDecision | null;
+  focal: MandateDecision | null;  // latest focal decision
+  ppbd: MandateDecision | null;   // latest ppbd decision
+  decisions: MandateDecision[];   // all decisions
+  comments: MandateComment[];
 }
