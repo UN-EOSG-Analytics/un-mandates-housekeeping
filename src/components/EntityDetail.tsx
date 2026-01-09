@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
-import { Plus, Loader2, Check, MessageSquare } from "lucide-react";
+import { useState, useEffect, useCallback, useRef } from "react";
+import { Plus, Loader2, Check, MessageSquare, X } from "lucide-react";
 import { ExportDropdown } from "./ExportDropdown";
 import type { Mandate, MandateState, MandateComment, Decision, UserRole } from "@/types";
 import { DocumentSymbol } from "./DocumentSymbol";
@@ -78,7 +78,6 @@ function DecisionSelect({
   createdAt,
   onChange,
   disabled,
-  showAdd,
 }: {
   decision: Decision | null;
   newSymbol: string | null;
@@ -86,7 +85,6 @@ function DecisionSelect({
   createdAt: string | null;
   onChange: (decision: Decision, newSymbol?: string) => void;
   disabled?: boolean;
-  showAdd?: boolean;
 }) {
   const [localNewSymbol, setLocalNewSymbol] = useState(newSymbol || "");
 
@@ -106,7 +104,6 @@ function DecisionSelect({
         decision === "retain" ? "bg-green-50 text-green-700" :
         decision === "remove" ? "bg-red-50 text-red-700" :
         decision === "update" ? "bg-amber-50 text-amber-700" :
-        decision === "add" ? "bg-blue-50 text-blue-700" :
         "bg-white text-gray-500"
       }`}
     >
@@ -114,7 +111,6 @@ function DecisionSelect({
       <option value="retain">Retain</option>
       <option value="remove">Remove</option>
       <option value="update">Update</option>
-      {showAdd && <option value="add">Add</option>}
     </select>
   );
 
@@ -316,6 +312,28 @@ function MandateRow({
   );
 }
 
+function AddBadge({ show, canCancel, onCancel }: { show: boolean; canCancel: boolean; onCancel: () => void }) {
+  if (!show) return <span className="text-xs text-gray-400">—</span>;
+  return (
+    <span className="inline-flex h-7 w-20 items-center rounded border border-blue-200 bg-blue-50 pl-2 pr-px text-xs text-blue-700">
+      <span className="flex-1">Add</span>
+      {canCancel && (
+        <button onClick={onCancel} className="rounded p-0.5 hover:bg-blue-100" title="Cancel">
+          <X className="h-3 w-3" />
+        </button>
+      )}
+    </span>
+  );
+}
+
+interface SearchResult {
+  symbol: string;
+  title: string | null;
+  type: string | null;
+  year: number | null;
+  body: string | null;
+}
+
 function AddEntryRow({
   onAdd,
   disabled,
@@ -323,39 +341,133 @@ function AddEntryRow({
   onAdd: (symbol: string) => void;
   disabled?: boolean;
 }) {
-  const [symbol, setSymbol] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [query, setQuery] = useState("");
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [searching, setSearching] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [focused, setFocused] = useState(false);
+  const [highlighted, setHighlighted] = useState(-1);
+  const debounceRef = useRef<NodeJS.Timeout | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleAdd = async () => {
-    if (!symbol.trim()) return;
-    setLoading(true);
-    await onAdd(symbol.trim());
-    setSymbol("");
-    setLoading(false);
+  const search = useCallback((q: string) => {
+    if (q.length < 2) {
+      setResults([]);
+      setOpen(false);
+      return;
+    }
+    setSearching(true);
+    fetch(`/api/documents/search?q=${encodeURIComponent(q)}`)
+      .then((r) => r.json())
+      .then((data) => {
+        setResults(data);
+        setOpen(data.length > 0);
+        setHighlighted(data.length > 0 ? 0 : -1);
+      })
+      .finally(() => setSearching(false));
+  }, []);
+
+  const handleInputChange = (value: string) => {
+    setQuery(value);
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => search(value), 200);
   };
 
+  const handleSelect = (doc: SearchResult) => {
+    onAdd(doc.symbol);
+    setQuery("");
+    setResults([]);
+    setOpen(false);
+    setHighlighted(-1);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (!open || results.length === 0) {
+      if (e.key === "Escape") setQuery("");
+      return;
+    }
+    switch (e.key) {
+      case "ArrowDown":
+        e.preventDefault();
+        setHighlighted((i) => (i + 1) % results.length);
+        break;
+      case "ArrowUp":
+        e.preventDefault();
+        setHighlighted((i) => (i - 1 + results.length) % results.length);
+        break;
+      case "Enter":
+        e.preventDefault();
+        if (highlighted >= 0) handleSelect(results[highlighted]);
+        break;
+      case "Escape":
+        setOpen(false);
+        setHighlighted(-1);
+        break;
+    }
+  };
+
+  // Close dropdown on click outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  if (disabled) return null;
+
   return (
-    <div className={`grid ${GRID_COLS} items-center gap-x-2 gap-y-1.5 rounded-lg border-2 border-dashed border-gray-200 bg-gray-50/50 px-3 py-2 text-sm`}>
-      <div className="col-span-2 flex items-center gap-2">
+    <div ref={containerRef} className="relative">
+      <div
+        className={`flex items-center gap-2 rounded-lg border-2 border-dashed px-3 py-2 transition-colors ${
+          focused ? "border-un-blue/40 bg-blue-50/30" : "border-gray-200 bg-gray-50/50"
+        }`}
+      >
+        <Plus className={`h-4 w-4 ${focused ? "text-un-blue" : "text-gray-400"}`} />
         <input
           type="text"
-          value={symbol}
-          onChange={(e) => setSymbol(e.target.value)}
-          onKeyDown={(e) => e.key === "Enter" && !disabled && handleAdd()}
-          placeholder="Add document symbol..."
-          disabled={disabled}
-          className="h-7 flex-1 rounded border border-gray-200 px-2 text-xs disabled:opacity-50"
+          value={query}
+          onChange={(e) => handleInputChange(e.target.value)}
+          onFocus={() => {
+            setFocused(true);
+            if (results.length > 0) setOpen(true);
+          }}
+          onBlur={() => setFocused(false)}
+          onKeyDown={handleKeyDown}
+          placeholder="Add mandate document — search by symbol or title..."
+          className="flex-1 bg-transparent text-sm text-gray-700 placeholder:text-gray-400 focus:outline-none"
         />
-        <button
-          onClick={handleAdd}
-          disabled={!symbol.trim() || loading || disabled}
-          className="flex h-7 items-center gap-1 rounded bg-un-blue px-2 text-xs text-white hover:bg-un-blue/90 disabled:opacity-50"
-        >
-          {loading ? <Loader2 className="h-3 w-3 animate-spin" /> : <Plus className="h-3 w-3" />}
-          Add
-        </button>
+        {searching && <Loader2 className="h-4 w-4 animate-spin text-gray-400" />}
       </div>
-      <div className="col-span-8" />
+
+      {open && results.length > 0 && (
+        <div className="absolute top-full left-0 right-0 z-20 mt-1 max-h-72 overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg">
+          {results.map((doc, i) => (
+            <button
+              key={doc.symbol}
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => handleSelect(doc)}
+              onMouseEnter={() => setHighlighted(i)}
+              className={`w-full px-3 py-2 text-left border-b border-gray-100 last:border-0 ${
+                i === highlighted ? "bg-un-blue/10" : "hover:bg-gray-50"
+              }`}
+            >
+              <div className="flex items-baseline gap-2">
+                <span className="font-medium text-un-blue text-sm">{doc.symbol}</span>
+                <span className="text-xs text-gray-400">
+                  {[doc.body, doc.year].filter(Boolean).join(" · ")}
+                </span>
+              </div>
+              {doc.title && (
+                <div className="text-xs text-gray-600 truncate mt-0.5">{doc.title}</div>
+              )}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -386,9 +498,11 @@ function MandateSection({
   onAdd: (symbol: string) => void;
 }) {
   const stateKey = (symbol: string) => `${symbol}:${subprogramme || ""}`;
-  // Find user-added entries (decision === "add")
+  // Find user-added entries (decision === "add", excluding cancelled)
   const addedEntries = Object.values(states).filter(
-    (s) => s.subprogramme === subprogramme && (s.focal?.decision === "add" || s.ppbd?.decision === "add")
+    (s) => s.subprogramme === subprogramme && 
+      (s.focal?.decision === "add" || s.ppbd?.decision === "add") &&
+      s.focal?.decision !== "cancel" && s.ppbd?.decision !== "cancel"
   );
 
   if (mandates.length === 0 && addedEntries.length === 0) return null;
@@ -413,20 +527,27 @@ function MandateSection({
           />
         ))}
         {addedEntries.map((s) => {
-          const addedBy = s.focal?.decision === "add" ? s.focal : s.ppbd;
+          const focalAdded = s.focal?.decision === "add";
+          const ppbdAdded = s.ppbd?.decision === "add";
+          const canCancelFocal = userRole === "focal" && focalAdded;
+          const canCancelPpbd = userRole === "ppbd" && ppbdAdded;
           return (
             <div
               key={`${s.documentSymbol}:${s.subprogramme}`}
-              className={`grid ${GRID_COLS} items-center gap-x-2 gap-y-1.5 rounded-lg bg-blue-50 px-3 py-2.5 text-sm shadow-sm`}
+              className={`grid ${GRID_COLS} items-center gap-x-2 gap-y-1.5 rounded-lg bg-white px-3 py-2.5 text-sm shadow-sm`}
             >
-              <div className="rounded bg-blue-100 px-2 py-0.5 text-xs font-medium text-un-blue">
+              <span className="rounded bg-blue-50 px-2 py-0.5 text-xs font-medium text-un-blue w-fit">
                 {s.documentSymbol}
-              </div>
-              <div className="col-span-7 text-xs text-gray-400">
-                Added by {addedBy?.userEmail}
-              </div>
-              <div />
-              <div />
+              </span>
+              <div className="text-xs text-gray-400 italic">New addition</div>
+              <div className="text-xs text-gray-400">—</div>
+              <div className="text-xs text-gray-400">—</div>
+              <div className="text-xs text-gray-400">—</div>
+              <div className="text-xs text-gray-400">—</div>
+              <div className="text-xs text-gray-400">—</div>
+              <div className="text-xs text-gray-400">—</div>
+              <AddBadge show={focalAdded} canCancel={canCancelFocal} onCancel={() => onDecision(s.documentSymbol, "cancel")} />
+              <AddBadge show={ppbdAdded} canCancel={canCancelPpbd} onCancel={() => onDecision(s.documentSymbol, "cancel")} />
             </div>
           );
         })}

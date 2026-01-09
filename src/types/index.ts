@@ -100,7 +100,7 @@ export interface PartData {
 }
 
 // Housekeeping decisions (event log)
-export type Decision = "retain" | "remove" | "add" | "update";
+export type Decision = "retain" | "remove" | "add" | "update" | "cancel";
 export type UserRole = "focal" | "ppbd";
 
 export interface MandateDecision {

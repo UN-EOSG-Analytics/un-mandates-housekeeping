@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS mandates_housekeeping.mandate_decisions (
   entity TEXT NOT NULL,
   subprogramme TEXT,
   
-  decision TEXT NOT NULL CHECK (decision IN ('retain', 'remove', 'add', 'update')),
+  decision TEXT NOT NULL CHECK (decision IN ('retain', 'remove', 'add', 'update', 'cancel')),
   new_symbol TEXT,  -- only for 'update' decisions
   
   user_email TEXT NOT NULL,

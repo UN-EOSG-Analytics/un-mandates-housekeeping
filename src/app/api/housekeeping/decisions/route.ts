@@ -134,7 +134,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "invalid request" }, { status: 400 });
   }
 
-  if (!["retain", "remove", "add", "update"].includes(decision)) {
+  if (!["retain", "remove", "add", "update", "cancel"].includes(decision)) {
     return NextResponse.json({ error: "invalid decision" }, { status: 400 });
   }
 
