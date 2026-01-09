@@ -1,22 +1,21 @@
 import { NextResponse } from "next/server";
 import { verifyMagicToken, upsertUser, createSession } from "@/lib/auth";
 
-export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
-  const token = searchParams.get("token");
+export async function POST(request: Request) {
+  const { token } = await request.json();
 
   if (!token) {
-    return NextResponse.redirect(new URL("/login?error=missing_token", request.url));
+    return NextResponse.json({ error: "Missing token" }, { status: 400 });
   }
 
   const email = await verifyMagicToken(token);
   if (!email) {
-    return NextResponse.redirect(new URL("/login?error=invalid_token", request.url));
+    return NextResponse.json({ error: "Invalid or expired link" }, { status: 400 });
   }
 
   const userId = await upsertUser(email);
   await createSession(userId);
 
-  return NextResponse.redirect(new URL("/", request.url));
+  return NextResponse.json({ ok: true });
 }
 
