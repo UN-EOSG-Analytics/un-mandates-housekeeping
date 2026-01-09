@@ -98,3 +98,25 @@ export interface PartData {
   order: number;
   entities: EntityData[];
 }
+
+// Housekeeping entries (decisions + additions combined)
+export type DecisionValue = "retain" | "remove" | "update" | null;
+
+export interface MandateEntry {
+  id: string;
+  documentSymbol: string;
+  entity: string;
+  subprogramme: string | null;
+  // User-added entry (null = existing from PPB)
+  addedBy: string | null;
+  addedAt: string | null;
+  // Decisions
+  focalDecision: DecisionValue;
+  focalNewSymbol: string | null;
+  focalDecidedBy: string | null;
+  focalDecidedAt: string | null;
+  ppbdDecision: DecisionValue;
+  ppbdNewSymbol: string | null;
+  ppbdDecidedBy: string | null;
+  ppbdDecidedAt: string | null;
+}

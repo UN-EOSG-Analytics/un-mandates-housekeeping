@@ -2,13 +2,19 @@
 
 import { useState, useCallback, useEffect } from "react";
 import { X, ChevronDown, Loader2, Sparkles } from "lucide-react";
-import type { Paragraph, EntityRelevance } from "@/types";
+import type { Paragraph, EntityRelevance, MandateEntry, DecisionValue } from "@/types";
 import { Tooltip } from "./Tooltip";
+
+const currentYear = new Date().getFullYear();
 
 interface Props {
   symbol: string;
   link: string | null;
   title?: string;
+  year?: number | null;
+  body?: string | null;
+  docType?: string | null;
+  otherEntitiesCount?: number;
   relevanceCount: number;
   relevanceIndices: number[];
   aiComments: Record<number, string>;
@@ -17,6 +23,10 @@ interface Props {
   allEntities?: string[];
   entityLongMap?: Record<string, string>;
   allEntityRelevance: Record<string, EntityRelevance>;
+  isOpen?: boolean;
+  onOpenChange?: (open: boolean) => void;
+  entry?: MandateEntry;
+  onDecisionChange?: (type: "focal" | "ppbd", value: DecisionValue, newSymbol?: string) => void;
 }
 
 function cleanPrefix(prefix: string) {
@@ -116,7 +126,7 @@ function CollapsedGap({
         className={`h-4 w-4 transition-transform ${expanded ? "" : "-rotate-90"}`}
       />
       {expanded ? "Hide" : "Show"} {count} paragraph{count !== 1 && "s"} not
-      relevant to {entity}'s mandate
+      mentioning {entity}
     </button>
   );
 }
@@ -226,7 +236,7 @@ function FilteredParagraphTree({
             paragraph{preamble.length !== 1 && "s"}
             {preambleRelevant.length > 0 && (
               <span className="text-un-blue">
-                ({preambleRelevant.length} relevant to {entity}'s mandate)
+                ({preambleRelevant.length} mentioning {entity})
               </span>
             )}
           </button>
@@ -386,6 +396,10 @@ export function DocumentSymbol({
   symbol,
   link,
   title,
+  year,
+  body,
+  docType,
+  otherEntitiesCount,
   relevanceCount,
   relevanceIndices,
   aiComments,
@@ -394,11 +408,15 @@ export function DocumentSymbol({
   allEntities,
   entityLongMap,
   allEntityRelevance,
+  isOpen: controlledOpen,
+  onOpenChange,
+  entry,
+  onDecisionChange,
 }: Props) {
-  const [open, setOpen] = useState(false);
-  const [selectedEntity, setSelectedEntity] = useState<string | null>(
-    entity || null,
-  );
+  const [internalOpen, setInternalOpen] = useState(false);
+  const open = controlledOpen ?? internalOpen;
+  const setOpen = onOpenChange ?? setInternalOpen;
+  const [selectedEntity, setSelectedEntity] = useState<string | null>(null);
   const [paragraphs, setParagraphs] = useState<Paragraph[] | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -511,28 +529,110 @@ export function DocumentSymbol({
           <div className="relative flex h-full w-full max-w-lg flex-col bg-white shadow-xl">
             <div className="border-b p-4">
               <div className="flex items-start justify-between">
-                <div>
-                  <div className="font-semibold text-foreground">{symbol}</div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-lg font-semibold text-foreground">{symbol}</div>
                   {title && (
-                    <div className="mt-0.5 text-sm text-gray-500">{title}</div>
+                    <div className="mt-1 text-sm text-gray-600">{title}</div>
                   )}
                 </div>
                 <button
                   onClick={() => setOpen(false)}
-                  className="rounded p-1 hover:bg-gray-100"
+                  className="rounded p-1 hover:bg-gray-100 ml-2"
                 >
                   <X className="h-4 w-4 text-gray-500" />
                 </button>
               </div>
-              {link && (
-                <a
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-2 inline-block text-sm text-un-blue hover:underline"
-                >
-                  View PDF →
-                </a>
+
+              {/* Metadata */}
+              <div className="mt-4 space-y-2 text-sm">
+                {year && (
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">Year</span>
+                    <span className="text-gray-700">{year} ({currentYear - year} years old)</span>
+                  </div>
+                )}
+                {body && (
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">Issuing body</span>
+                    <span className="text-gray-700">{body}</span>
+                  </div>
+                )}
+                {docType && (
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">Document type</span>
+                    <span className="text-gray-700">{docType}</span>
+                  </div>
+                )}
+                {otherEntitiesCount !== undefined && otherEntitiesCount > 0 && (
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">Also cited by</span>
+                    <span className="text-gray-700">{otherEntitiesCount} other {otherEntitiesCount === 1 ? "entity" : "entities"}</span>
+                  </div>
+                )}
+                {link && (
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">Source</span>
+                    <a href={link} target="_blank" rel="noopener noreferrer" className="text-un-blue hover:underline">
+                      View PDF →
+                    </a>
+                  </div>
+                )}
+              </div>
+
+              {/* Decision fields */}
+              {onDecisionChange && (
+                <div className="mt-4 space-y-2 text-sm border-t pt-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-500">Focal point decision</span>
+                    <select
+                      value={entry?.focalDecision || ""}
+                      onChange={(e) => onDecisionChange("focal", e.target.value as DecisionValue || null)}
+                      className="rounded border border-gray-200 px-2 py-1 text-sm"
+                    >
+                      <option value="">—</option>
+                      <option value="retain">Retain</option>
+                      <option value="remove">Remove</option>
+                      <option value="update">Update</option>
+                    </select>
+                  </div>
+                  {entry?.focalDecision === "update" && (
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-500">New symbol</span>
+                      <input
+                        type="text"
+                        defaultValue={entry?.focalNewSymbol || ""}
+                        onBlur={(e) => onDecisionChange("focal", "update", e.target.value)}
+                        className="rounded border border-gray-200 px-2 py-1 text-sm w-40"
+                        placeholder="Enter new symbol"
+                      />
+                    </div>
+                  )}
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-500">PPBD decision</span>
+                    <select
+                      value={entry?.ppbdDecision || ""}
+                      onChange={(e) => onDecisionChange("ppbd", e.target.value as DecisionValue || null)}
+                      className="rounded border border-gray-200 px-2 py-1 text-sm"
+                    >
+                      <option value="">—</option>
+                      <option value="retain">Retain</option>
+                      <option value="remove">Remove</option>
+                      <option value="update">Update</option>
+                    </select>
+                  </div>
+                  {entry?.ppbdDecision === "update" && (
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-500">New symbol</span>
+                      <input
+                        type="text"
+                        defaultValue={entry?.ppbdNewSymbol || ""}
+                        onBlur={(e) => onDecisionChange("ppbd", "update", e.target.value)}
+                        className="rounded border border-gray-200 px-2 py-1 text-sm w-40"
+                        placeholder="Enter new symbol"
+                      />
+                    </div>
+                  )}
+                </div>
               )}
             </div>
 
