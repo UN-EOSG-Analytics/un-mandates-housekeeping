@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import { Plus, Loader2, Check, MessageSquare, X } from "lucide-react";
+import { Plus, Loader2, Check, MessageSquare, X, AlertTriangle } from "lucide-react";
 import { ExportDropdown } from "./ExportDropdown";
 import type { Mandate, MandateState, MandateComment, Decision, UserRole } from "@/types";
 import { DocumentSymbol } from "./DocumentSymbol";
 import { Tooltip } from "./Tooltip";
+import { getAgeIndicator } from "@/lib/age-indicator";
 
 interface Props {
   entity: string;
@@ -15,60 +16,20 @@ interface Props {
   legislativeMandates: Record<string, Mandate[]>;
 }
 
-const currentYear = new Date().getFullYear();
+// Abbreviations for common UN issuing bodies
+const BODY_ABBREVS: Record<string, string> = {
+  "General Assembly": "GA",
+  "Security Council": "SC",
+  "Economic and Social Council": "ECOSOC",
+  "Human Rights Council": "HRC",
+  "Secretary-General": "SG",
+  "International Court of Justice": "ICJ",
+  "Trusteeship Council": "TC",
+};
 
-function getAgeIndicator(year: number | null): {
-  color: string;
-  bgColor: string;
-  label: string;
-  tooltip: string;
-} {
-  if (!year)
-    return {
-      color: "text-gray-400",
-      bgColor: "bg-gray-100",
-      label: "—",
-      tooltip: "Year unknown",
-    };
-
-  const age = currentYear - year;
-
-  if (age < 5) {
-    return {
-      color: "text-green-600",
-      bgColor: "bg-green-100",
-      label: "<5",
-      tooltip: `${age} year${age !== 1 ? "s" : ""} old`,
-    };
-  } else if (age < 10) {
-    return {
-      color: "text-yellow-600",
-      bgColor: "bg-yellow-100",
-      label: ">5",
-      tooltip: `${age} years old`,
-    };
-  } else if (age < 20) {
-    return {
-      color: "text-orange-600",
-      bgColor: "bg-orange-100",
-      label: ">10",
-      tooltip: `${age} years old`,
-    };
-  } else if (age < 50) {
-    return {
-      color: "text-red-600",
-      bgColor: "bg-red-100",
-      label: ">20",
-      tooltip: `${age} years old`,
-    };
-  } else {
-    return {
-      color: "text-red-800",
-      bgColor: "bg-red-200",
-      label: ">50",
-      tooltip: `${age} years old`,
-    };
-  }
+function abbreviateBody(body: string | null): string | null {
+  if (!body) return null;
+  return BODY_ABBREVS[body] ?? body;
 }
 
 function DecisionSelect({
@@ -180,7 +141,7 @@ function PhaseTracker() {
   );
 }
 
-const GRID_COLS = "grid-cols-[140px_1fr_50px_90px_55px_45px_60px_45px_130px_130px]";
+const GRID_COLS = "grid-cols-[140px_1fr_50px_55px_45px_60px_45px_25px_130px_130px]";
 
 function ColumnHeaders() {
   return (
@@ -188,11 +149,11 @@ function ColumnHeaders() {
       <div>Symbol</div>
       <div>Title</div>
       <div>Body</div>
-      <div>Type</div>
       <div>Year</div>
       <div>Age</div>
       <div>Others</div>
       <div><MessageSquare className="h-3 w-3" /></div>
+      <div></div>
       <div>Focal Point</div>
       <div>PPBD</div>
     </div>
@@ -207,6 +168,7 @@ function MandateRow({
   userEmail,
   onDecision,
   onComment,
+  isAdded,
 }: {
   mandate: Mandate;
   state?: MandateState;
@@ -215,9 +177,15 @@ function MandateRow({
   userEmail: string | null;
   onDecision: (decision: Decision, newSymbol?: string) => void;
   onComment: (comment: string) => void;
+  isAdded?: boolean;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const ageInfo = getAgeIndicator(mandate.year);
+
+  const focalAdded = isAdded && state?.focal?.decision === "add";
+  const ppbdAdded = isAdded && state?.ppbd?.decision === "add";
+  const canCancelFocal = isAdded && userRole === "focal" && focalAdded;
+  const canCancelPpbd = isAdded && userRole === "ppbd" && ppbdAdded;
 
   return (
     <div
@@ -231,7 +199,6 @@ function MandateRow({
           title={mandate.title}
           year={mandate.year}
           body={mandate.body}
-          docType={mandate.docType}
           otherEntitiesCount={mandate.otherEntitiesCount}
           relevanceCount={mandate.relevanceCount}
           relevanceIndices={mandate.relevanceIndices}
@@ -248,19 +215,15 @@ function MandateRow({
           userEmail={userEmail}
           onDecision={onDecision}
           onComment={onComment}
+          metadataFromDb={mandate.metadataFromDb}
+          docType={mandate.docType}
         />
       </div>
-      <div className="cursor-help truncate text-gray-600" title={mandate.title}>
-        {mandate.title}
+      <div className="cursor-help truncate text-gray-600" title={mandate.title || undefined}>
+        {mandate.title || <span className="italic text-gray-400">No title</span>}
       </div>
       <div className="text-xs text-gray-400" title={mandate.body ?? undefined}>
-        {mandate.body ?? "—"}
-      </div>
-      <div
-        className="truncate text-xs text-gray-400"
-        title={mandate.docType ?? undefined}
-      >
-        {mandate.docType ?? "—"}
+        {abbreviateBody(mandate.body) ?? "—"}
       </div>
       <div className="text-xs text-gray-400">{mandate.year ?? "—"}</div>
       <Tooltip content={ageInfo.tooltip}>
@@ -288,25 +251,40 @@ function MandateRow({
           {commentCount > 0 ? commentCount : "—"}
         </span>
       </Tooltip>
-      <div onClick={(e) => e.stopPropagation()}>
-        <DecisionSelect
-          decision={state?.focal?.decision ?? null}
-          newSymbol={state?.focal?.newSymbol ?? null}
-          userEmail={state?.focal?.userEmail ?? null}
-          createdAt={state?.focal?.createdAt ?? null}
-          onChange={userRole === "focal" ? onDecision : () => {}}
-          disabled={userRole !== "focal"}
-        />
+      <div>
+        {!mandate.metadataFromDb && (
+          <Tooltip content="Metadata not found in documents database">
+            <AlertTriangle className="h-4 w-4 text-amber-500" />
+          </Tooltip>
+        )}
       </div>
       <div onClick={(e) => e.stopPropagation()}>
-        <DecisionSelect
-          decision={state?.ppbd?.decision ?? null}
-          newSymbol={state?.ppbd?.newSymbol ?? null}
-          userEmail={state?.ppbd?.userEmail ?? null}
-          createdAt={state?.ppbd?.createdAt ?? null}
-          onChange={userRole === "ppbd" ? onDecision : () => {}}
-          disabled={userRole !== "ppbd"}
-        />
+        {isAdded ? (
+          <AddBadge show={!!focalAdded} canCancel={!!canCancelFocal} onCancel={() => onDecision("cancel")} />
+        ) : (
+          <DecisionSelect
+            decision={state?.focal?.decision ?? null}
+            newSymbol={state?.focal?.newSymbol ?? null}
+            userEmail={state?.focal?.userEmail ?? null}
+            createdAt={state?.focal?.createdAt ?? null}
+            onChange={userRole === "focal" ? onDecision : () => {}}
+            disabled={userRole !== "focal"}
+          />
+        )}
+      </div>
+      <div onClick={(e) => e.stopPropagation()}>
+        {isAdded ? (
+          <AddBadge show={!!ppbdAdded} canCancel={!!canCancelPpbd} onCancel={() => onDecision("cancel")} />
+        ) : (
+          <DecisionSelect
+            decision={state?.ppbd?.decision ?? null}
+            newSymbol={state?.ppbd?.newSymbol ?? null}
+            userEmail={state?.ppbd?.userEmail ?? null}
+            createdAt={state?.ppbd?.createdAt ?? null}
+            onChange={userRole === "ppbd" ? onDecision : () => {}}
+            disabled={userRole !== "ppbd"}
+          />
+        )}
       </div>
     </div>
   );
@@ -476,9 +454,11 @@ function MandateSection({
   title,
   mandates,
   entity,
+  entityLong,
   subprogramme,
   states,
   totalComments,
+  addedMetadata,
   userRole,
   userEmail,
   onDecision,
@@ -488,9 +468,11 @@ function MandateSection({
   title: string;
   mandates: Mandate[];
   entity: string;
+  entityLong: string | null;
   subprogramme: string | null;
   states: Record<string, MandateState>;
   totalComments: Record<string, number>;
+  addedMetadata: Record<string, { title: string | null; year: number | null; body: string | null; docType: string | null }>;
   userRole: UserRole | null;
   userEmail: string | null;
   onDecision: (symbol: string, decision: Decision, newSymbol?: string) => void;
@@ -498,14 +480,42 @@ function MandateSection({
   onAdd: (symbol: string) => void;
 }) {
   const stateKey = (symbol: string) => `${symbol}:${subprogramme || ""}`;
-  // Find user-added entries (decision === "add", excluding cancelled)
+  const existingSymbols = new Set(mandates.map((m) => m.symbol));
+  // Find user-added entries (decision === "add", excluding cancelled, not already in mandates)
   const addedEntries = Object.values(states).filter(
     (s) => s.subprogramme === subprogramme && 
       (s.focal?.decision === "add" || s.ppbd?.decision === "add") &&
-      s.focal?.decision !== "cancel" && s.ppbd?.decision !== "cancel"
+      s.focal?.decision !== "cancel" && s.ppbd?.decision !== "cancel" &&
+      !existingSymbols.has(s.documentSymbol)
   );
 
-  if (mandates.length === 0 && addedEntries.length === 0) return null;
+  // Convert added entries to Mandate objects
+  const addedMandates: Mandate[] = addedEntries.map((s) => {
+    const meta = addedMetadata[s.documentSymbol];
+    return {
+      symbol: s.documentSymbol,
+      title: meta?.title || "",
+      link: null,
+      year: meta?.year || null,
+      body: meta?.body || null,
+      docType: meta?.docType || null,
+      action: null,
+      relevanceCount: 0,
+      relevanceIndices: [],
+      aiComments: {},
+      entity,
+      entityLong,
+      isBackground: subprogramme === null,
+      otherEntitiesCount: 0,
+      allEntities: [entity],
+      entityLongMap: entityLong ? { [entity]: entityLong } : {},
+      allEntityRelevance: {},
+      metadataFromDb: !!meta,
+      isAdded: true,
+    };
+  });
+
+  if (mandates.length === 0 && addedMandates.length === 0) return null;
 
   return (
     <div>
@@ -526,31 +536,19 @@ function MandateSection({
             onComment={(comment) => onComment(m.symbol, comment)}
           />
         ))}
-        {addedEntries.map((s) => {
-          const focalAdded = s.focal?.decision === "add";
-          const ppbdAdded = s.ppbd?.decision === "add";
-          const canCancelFocal = userRole === "focal" && focalAdded;
-          const canCancelPpbd = userRole === "ppbd" && ppbdAdded;
-          return (
-            <div
-              key={`${s.documentSymbol}:${s.subprogramme}`}
-              className={`grid ${GRID_COLS} items-center gap-x-2 gap-y-1.5 rounded-lg bg-white px-3 py-2.5 text-sm shadow-sm`}
-            >
-              <span className="rounded bg-blue-50 px-2 py-0.5 text-xs font-medium text-un-blue w-fit">
-                {s.documentSymbol}
-              </span>
-              <div className="text-xs text-gray-400 italic">New addition</div>
-              <div className="text-xs text-gray-400">—</div>
-              <div className="text-xs text-gray-400">—</div>
-              <div className="text-xs text-gray-400">—</div>
-              <div className="text-xs text-gray-400">—</div>
-              <div className="text-xs text-gray-400">—</div>
-              <div className="text-xs text-gray-400">—</div>
-              <AddBadge show={focalAdded} canCancel={canCancelFocal} onCancel={() => onDecision(s.documentSymbol, "cancel")} />
-              <AddBadge show={ppbdAdded} canCancel={canCancelPpbd} onCancel={() => onDecision(s.documentSymbol, "cancel")} />
-            </div>
-          );
-        })}
+        {addedMandates.map((m) => (
+          <MandateRow
+            key={m.symbol}
+            mandate={m}
+            state={states[stateKey(m.symbol)]}
+            commentCount={totalComments[m.symbol] || 0}
+            userRole={userRole}
+            userEmail={userEmail}
+            onDecision={(decision) => onDecision(m.symbol, decision)}
+            onComment={(comment) => onComment(m.symbol, comment)}
+            isAdded
+          />
+        ))}
         <AddEntryRow onAdd={onAdd} disabled={!userRole} />
       </div>
     </div>
@@ -569,6 +567,7 @@ export function EntityDetail({
   const [totalComments, setTotalComments] = useState<Record<string, number>>({});
   const [userRole, setUserRole] = useState<UserRole | null>(null);
   const [userEmail, setUserEmail] = useState<string | null>(null);
+  const [addedMetadata, setAddedMetadata] = useState<Record<string, { title: string | null; year: number | null; body: string | null; docType: string | null }>>({});
 
   // Fetch user role and decisions on mount
   useEffect(() => {
@@ -594,6 +593,25 @@ export function EntityDetail({
       })
       .catch(() => {});
   }, [entity]);
+
+  // Fetch metadata for added documents
+  useEffect(() => {
+    const existingSymbols = new Set([
+      ...backgroundMandates.map((m) => m.symbol),
+      ...Object.values(legislativeMandates).flat().map((m) => m.symbol),
+    ]);
+    const addedSymbols = Object.values(states)
+      .filter((s) => (s.focal?.decision === "add" || s.ppbd?.decision === "add") && !existingSymbols.has(s.documentSymbol))
+      .map((s) => s.documentSymbol)
+      .filter((sym) => !addedMetadata[sym]);
+
+    if (addedSymbols.length === 0) return;
+
+    fetch(`/api/documents/metadata?symbols=${encodeURIComponent(addedSymbols.join(","))}`)
+      .then((r) => r.ok ? r.json() : {})
+      .then((data) => setAddedMetadata((prev) => ({ ...prev, ...data })))
+      .catch(() => {});
+  }, [states, backgroundMandates, legislativeMandates, addedMetadata]);
 
   const handleDecision = useCallback(
     async (symbol: string, subprogramme: string | null, decision: Decision, newSymbol?: string) => {
@@ -809,9 +827,11 @@ export function EntityDetail({
           title="Mandates and background"
           mandates={filteredBackground}
           entity={entity}
+          entityLong={entityLong}
           subprogramme={null}
           states={states}
           totalComments={totalComments}
+          addedMetadata={addedMetadata}
           userRole={userRole}
           userEmail={userEmail}
           onDecision={(symbol, decision, newSymbol) =>
@@ -829,9 +849,11 @@ export function EntityDetail({
               title={subprog}
               mandates={mandates}
               entity={entity}
+              entityLong={entityLong}
               subprogramme={subprog}
               states={states}
               totalComments={totalComments}
+              addedMetadata={addedMetadata}
               userRole={userRole}
               userEmail={userEmail}
               onDecision={(symbol, decision, newSymbol) =>

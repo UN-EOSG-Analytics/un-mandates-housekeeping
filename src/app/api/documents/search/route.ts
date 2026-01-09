@@ -9,6 +9,10 @@ interface DocumentRow {
   issuing_body: string | null;
 }
 
+function cleanTitle(title: string | null): string | null {
+  return title?.replace(/\s*:\s*$/, "").trim() || null;
+}
+
 export async function GET(req: NextRequest) {
   const q = req.nextUrl.searchParams.get("q")?.trim();
   if (!q || q.length < 2) {
@@ -31,7 +35,7 @@ export async function GET(req: NextRequest) {
   return NextResponse.json(
     rows.map((r) => ({
       symbol: r.symbol,
-      title: r.proper_title,
+      title: cleanTitle(r.proper_title),
       type: r.document_type,
       year: r.date_year,
       body: r.issuing_body,

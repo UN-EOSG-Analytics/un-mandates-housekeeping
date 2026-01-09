@@ -43,25 +43,25 @@ interface DBCitationRow {
   programme: number | null;
   programme_title: string | null;
   component: string | null;
-  // Joined from source_documents_metadata_clean
-  symbol: string | null;
-  uniform_title: string | null;
-  proper_title: string | null;
-  title: string | null;
-  publication_date: string | null;
-  date_year: number | null;
-  issuing_body: string | null;
-  // Joined from source_documents
+  // Joined from public.documents (preferred source)
+  doc_symbol: string | null;
+  doc_proper_title: string | null;
+  doc_date_year: number | null;
+  doc_issuing_body: string | null;
+  doc_document_type: string | null;
+  // Joined from source_documents_metadata_clean (fallback)
+  meta_title: string | null;
+  meta_proper_title: string | null;
+  meta_date_year: number | null;
+  meta_issuing_body: string | null;
+  meta_document_type: string | null;
+  // Joined from source_documents (link only)
   ppb_link: string | null;
-  ppb_year: number | null;
-  ppb_body: string | null;
-  ppb_type: string | null;
-  ppb_description: string | null;
 }
 
 /**
  * Fetch all PPB records from database
- * Joins source_document_citations, source_documents, and source_documents_metadata_clean
+ * Joins with public.documents for authoritative metadata, falls back to ppb2026 tables
  */
 export async function fetchPPBRecords(): Promise<PPBRecord[]> {
   const rows = await query<DBCitationRow>(`
@@ -80,20 +80,21 @@ export async function fetchPPBRecords(): Promise<PPBRecord[]> {
       c.programme,
       c.programme_title,
       c.component,
-      m.symbol,
-      m.uniform_title,
-      m.proper_title,
-      m.title,
-      m.publication_date,
-      m.date_year,
-      m.issuing_body,
-      d.ppb_link,
-      d.ppb_year,
-      d.ppb_body,
-      d.ppb_type,
-      d.ppb_description
+      doc.symbol as doc_symbol,
+      doc.proper_title as doc_proper_title,
+      doc.date_year as doc_date_year,
+      doc.issuing_body as doc_issuing_body,
+      doc.document_type as doc_document_type,
+      m.title as meta_title,
+      m.proper_title as meta_proper_title,
+      m.date_year as meta_date_year,
+      m.issuing_body as meta_issuing_body,
+      m.document_type as meta_document_type,
+      d.ppb_link
     FROM ppb2026.source_document_citations c
-    LEFT JOIN ppb2026.source_documents_metadata_clean m 
+    LEFT JOIN public.documents doc 
+      ON REGEXP_REPLACE(c.ppb_full_document_symbol, '(\\d) ([A-Z])$', '\\1\\2') = doc.symbol
+    LEFT JOIN ppb2026.source_documents_metadata_clean m
       ON c.ppb_full_document_symbol = m.ppb_full_document_symbol
     LEFT JOIN ppb2026.source_documents d 
       ON c.ppb_full_document_symbol = d.ppb_full_document_symbol
@@ -108,18 +109,15 @@ export async function fetchPPBRecords(): Promise<PPBRecord[]> {
     const symbol = row.ppb_full_document_symbol;
     
     if (!recordsMap.has(symbol)) {
-      // Determine document title from available fields
-      let uniformTitle: string | null = null;
-      if (row.uniform_title) {
-        // uniform_title is stored as JSON array string like "{...}"
-        try {
-          const parsed = row.uniform_title.replace(/^\{|\}$/g, '').split(',')[0]?.replace(/^"|"$/g, '');
-          uniformTitle = parsed || null;
-        } catch {
-          uniformTitle = row.uniform_title;
-        }
-      }
-
+      // Prefer public.documents data, fall back to source_documents_metadata_clean
+      const hasDbMetadata = row.doc_symbol !== null;
+      
+      // Title priority: doc.proper_title > meta.title > meta.proper_title
+      const title = row.doc_proper_title || row.meta_title || row.meta_proper_title || null;
+      const year = row.doc_date_year ?? row.meta_date_year ?? null;
+      const body = row.doc_issuing_body || row.meta_issuing_body || null;
+      const docType = row.doc_document_type || row.meta_document_type || null;
+      
       recordsMap.set(symbol, {
         full_document_symbol: symbol,
         num_citations: 0,
@@ -127,16 +125,16 @@ export async function fetchPPBRecords(): Promise<PPBRecord[]> {
         entities: [],
         link: row.ppb_link,
         priority_area: row.priority_area,
-        year: row.ppb_year,
-        body: row.ppb_body,
+        year,
+        body,
         pillar: row.pillar,
         entity_long: row.entity_long,
-        description: row.ppb_description || row.proper_title || row.title,
-        type: row.ppb_type,
+        description: title,
+        type: docType,
         citation_info: [],
-        document_symbol: row.symbol,
-        uniform_title: uniformTitle,
-        // These fields are computed from external data, not in DB yet
+        document_symbol: row.doc_symbol,
+        uniform_title: null,
+        metadata_from_db: hasDbMetadata,
         recurrence_actions: undefined,
         entity_relevance: undefined,
       });

@@ -49,6 +49,7 @@ export interface PPBRecord {
   citation_info: CitationInfo[];
   document_symbol: string | null;
   uniform_title: string | null;
+  metadata_from_db?: boolean;
   recurrence_actions?: RecurrenceAction[];
   entity_relevance?: Record<string, EntityRelevance>;
 }
@@ -77,6 +78,8 @@ export interface Mandate {
   allEntities: string[];
   entityLongMap: Record<string, string>;
   allEntityRelevance: Record<string, EntityRelevance>;
+  metadataFromDb?: boolean;
+  isAdded?: boolean;
 }
 
 export interface EntityData {

@@ -23,6 +23,10 @@ function isBackgroundPart(part: string | null): boolean {
   return part === "Mandates and background";
 }
 
+function cleanTitle(title: string): string {
+  return title.replace(/\s*:\s*$/, "").trim();
+}
+
 export function transformPPBData(
   records: PPBRecord[],
   budgetPartsMeta: BudgetPartMeta[],
@@ -50,11 +54,12 @@ export function transformPPBData(
 
   for (const rec of records) {
     const symbol = rec.full_document_symbol;
-    const title = rec.description || rec.uniform_title || "";
+    const title = cleanTitle(rec.description || rec.uniform_title || "");
     const link = rec.link;
     const year = rec.year;
     const body = rec.body;
     const docType = rec.type;
+    const metadataFromDb = rec.metadata_from_db ?? false;
 
     // Build entity -> entityLong map from all citation_info
     const entityLongMap: Record<string, string> = {};
@@ -99,6 +104,7 @@ export function transformPPBData(
         ),
         entityLongMap,
         allEntityRelevance: rec.entity_relevance || {},
+        metadataFromDb,
       };
 
       const meta = metaByName[budgetPart.toLowerCase()] || null;

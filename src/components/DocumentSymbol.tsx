@@ -1,11 +1,10 @@
 "use client";
 
 import { useState, useCallback, useEffect } from "react";
-import { X, ChevronDown, Loader2, Sparkles } from "lucide-react";
+import { X, ChevronDown, Loader2, Sparkles, AlertTriangle } from "lucide-react";
 import type { Paragraph, EntityRelevance, MandateState, MandateDecision, MandateComment, Decision, UserRole } from "@/types";
 import { Tooltip } from "./Tooltip";
-
-const currentYear = new Date().getFullYear();
+import { getAgeIndicator } from "@/lib/age-indicator";
 
 interface Props {
   symbol: string;
@@ -30,6 +29,7 @@ interface Props {
   userEmail?: string | null;
   onDecision?: (decision: Decision, newSymbol?: string) => void;
   onComment?: (comment: string) => void;
+  metadataFromDb?: boolean;
 }
 
 function cleanPrefix(prefix: string) {
@@ -418,6 +418,7 @@ export function DocumentSymbol({
   userEmail,
   onDecision,
   onComment,
+  metadataFromDb,
 }: Props) {
   const [internalOpen, setInternalOpen] = useState(false);
   const open = controlledOpen ?? internalOpen;
@@ -573,13 +574,13 @@ export function DocumentSymbol({
       {isTruncated ? <Tooltip content={symbol}>{btn}</Tooltip> : btn}
 
       {open && (
-        <div className="fixed inset-0 z-50 flex justify-end">
+        <div className="fixed inset-0 z-50 flex justify-end cursor-default">
           <div
-            className="absolute inset-0 bg-black/20"
+            className="absolute inset-0 bg-black/20 cursor-pointer"
             onClick={() => setOpen(false)}
           />
 
-          <div className="relative flex h-full w-full max-w-lg flex-col bg-white shadow-xl">
+          <div className="relative flex h-full w-full max-w-lg flex-col bg-white shadow-xl cursor-default">
             <div className="border-b p-4">
               <div className="flex items-start justify-between">
                 <div className="flex-1 min-w-0">
@@ -598,12 +599,22 @@ export function DocumentSymbol({
 
               {/* Metadata */}
               <div className="mt-4 space-y-2 text-sm">
-                {year && (
-                  <div className="flex justify-between">
-                    <span className="text-gray-500">Year</span>
-                    <span className="text-gray-700">{year} ({currentYear - year} years old)</span>
-                  </div>
-                )}
+                {year && (() => {
+                  const ageInfo = getAgeIndicator(year);
+                  return (
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-500">Year</span>
+                      <span className="flex items-center gap-2">
+                        <span className="text-gray-700">{year}</span>
+                        <Tooltip content={ageInfo.tooltip}>
+                          <span className={`rounded px-1.5 py-0.5 text-xs font-medium ${ageInfo.color} ${ageInfo.bgColor}`}>
+                            {ageInfo.label}
+                          </span>
+                        </Tooltip>
+                      </span>
+                    </div>
+                  );
+                })()}
                 {body && (
                   <div className="flex justify-between">
                     <span className="text-gray-500">Issuing body</span>
@@ -630,6 +641,12 @@ export function DocumentSymbol({
                     </a>
                   </div>
                 )}
+                {!metadataFromDb && (
+                  <div className="mt-3 flex items-center gap-2 rounded bg-amber-50 p-2 text-xs text-amber-700">
+                    <AlertTriangle className="h-4 w-4 flex-shrink-0" />
+                    <span>Metadata not found in documents database</span>
+                  </div>
+                )}
               </div>
 
               {/* Decisions table */}
@@ -654,10 +671,7 @@ export function DocumentSymbol({
                         const canEditPpbd = isCurrentEntity && userRole === "ppbd" && onDecision;
                         
                         return (
-                          <tr
-                            key={ent}
-                            className={isCurrentEntity ? "bg-un-blue/10" : ""}
-                          >
+                          <tr key={ent}>
                             <td className={`py-1.5 pr-2 font-medium ${isCurrentEntity ? "text-un-blue" : "text-gray-600"}`}>
                               {ent}
                             </td>
