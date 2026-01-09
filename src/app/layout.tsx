@@ -1,6 +1,7 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
 import { Roboto } from "next/font/google";
+import { SITE_TITLE, SITE_SUBTITLE } from "@/components/Header";
 import "./globals.css";
 
 // https://fonts.google.com/specimen/Roboto
@@ -11,11 +12,11 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "United Nations",
-  description: "A modern web application for the United Nations.",
+  title: SITE_TITLE,
+  description: SITE_SUBTITLE,
   openGraph: {
-    title: "United Nations",
-    description: "A modern web application for the United Nations.",
+    title: SITE_TITLE,
+    description: SITE_SUBTITLE,
     type: "website",
     locale: "en_US",
   },

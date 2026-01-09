@@ -208,6 +208,7 @@ function MandateRow({
   state,
   commentCount,
   userRole,
+  userEmail,
   onDecision,
   onComment,
 }: {
@@ -215,6 +216,7 @@ function MandateRow({
   state?: MandateState;
   commentCount: number;
   userRole: UserRole | null;
+  userEmail: string | null;
   onDecision: (decision: Decision, newSymbol?: string) => void;
   onComment: (comment: string) => void;
 }) {
@@ -247,6 +249,7 @@ function MandateRow({
           onOpenChange={setSidebarOpen}
           state={state}
           userRole={userRole}
+          userEmail={userEmail}
           onDecision={onDecision}
           onComment={onComment}
         />
@@ -365,6 +368,7 @@ function MandateSection({
   states,
   totalComments,
   userRole,
+  userEmail,
   onDecision,
   onComment,
   onAdd,
@@ -376,6 +380,7 @@ function MandateSection({
   states: Record<string, MandateState>;
   totalComments: Record<string, number>;
   userRole: UserRole | null;
+  userEmail: string | null;
   onDecision: (symbol: string, decision: Decision, newSymbol?: string) => void;
   onComment: (symbol: string, comment: string) => void;
   onAdd: (symbol: string) => void;
@@ -402,6 +407,7 @@ function MandateSection({
             state={states[stateKey(m.symbol)]}
             commentCount={totalComments[m.symbol] || 0}
             userRole={userRole}
+            userEmail={userEmail}
             onDecision={(decision, newSymbol) => onDecision(m.symbol, decision, newSymbol)}
             onComment={(comment) => onComment(m.symbol, comment)}
           />
@@ -686,6 +692,7 @@ export function EntityDetail({
           states={states}
           totalComments={totalComments}
           userRole={userRole}
+          userEmail={userEmail}
           onDecision={(symbol, decision, newSymbol) =>
             handleDecision(symbol, null, decision, newSymbol)
           }
@@ -705,6 +712,7 @@ export function EntityDetail({
               states={states}
               totalComments={totalComments}
               userRole={userRole}
+              userEmail={userEmail}
               onDecision={(symbol, decision, newSymbol) =>
                 handleDecision(symbol, subprog, decision, newSymbol)
               }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { SITE_TITLE } from "@/components/Header";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -39,7 +40,7 @@ export default function LoginPage() {
             height={80}
             className="mb-4"
           />
-          <h1 className="text-xl font-semibold text-foreground">Mandate Housekeeping</h1>
+          <h1 className="text-xl font-semibold text-foreground">{SITE_TITLE}</h1>
           <p className="text-sm text-gray-500">Sign in with your UN email</p>
         </div>
 

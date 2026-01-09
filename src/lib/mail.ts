@@ -1,4 +1,5 @@
 import nodemailer from "nodemailer";
+import { SITE_TITLE } from "@/components/Header";
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || "smtp.mailbox.org",
@@ -16,10 +17,10 @@ export async function sendMagicLink(email: string, token: string) {
   const logoUrl = `${baseUrl}/images/UN_Logo_Stacked_Colour_English.png`;
 
   await transporter.sendMail({
-    from: `"UN Mandate Housekeeping" <${process.env.SMTP_FROM || process.env.SMTP_USER}>`,
+    from: `"${SITE_TITLE}" <${process.env.SMTP_FROM || process.env.SMTP_USER}>`,
     to: email,
-    subject: "Sign in to PPB 2027 Mandate Housekeeping",
-    text: `PPB 2027 Mandate Housekeeping\n\nClick here to sign in: ${link}\n\nThis link expires in 15 minutes.\n\nIf you did not request this email, you can safely ignore it.`,
+    subject: `Sign in to ${SITE_TITLE}`,
+    text: `${SITE_TITLE}\n\nClick here to sign in: ${link}\n\nThis link expires in 15 minutes.\n\nIf you did not request this email, you can safely ignore it.`,
     html: `
 <!DOCTYPE html>
 <html>
@@ -36,7 +37,7 @@ export async function sendMagicLink(email: string, token: string) {
                 <img src="${logoUrl}" alt="UN" width="120" style="display:block;" />
               </td>
               <td style="vertical-align:middle;">
-                <div style="font-size:20px;font-weight:700;color:#000000;line-height:1.2;">7 Mandate Housekeeping</div>
+                <div style="font-size:20px;font-weight:700;color:#000000;line-height:1.2;">${SITE_TITLE}</div>
               </td>
             </tr>
           </table>

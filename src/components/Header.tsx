@@ -1,0 +1,37 @@
+import Image from "next/image";
+import Link from "next/link";
+import { UserMenu } from "./UserMenu";
+
+interface Props {
+  user?: { email: string; isPpbd?: boolean } | null;
+  children?: React.ReactNode;
+}
+
+export const SITE_TITLE = "Mandate Housekeeping Platform";
+export const SITE_SUBTITLE = "Analytics and collaborative review of mandate citations for PPB 2027";
+
+export function Header({ user, children }: Props) {
+  return (
+    <div className="mb-6 flex items-center justify-between">
+      <Link href="/" className="flex items-center gap-4 hover:opacity-90">
+        <Image
+          src="/images/UN_Logo_Stacked_Colour_English.svg"
+          alt="UN Logo"
+          width={60}
+          height={60}
+          className="h-14 w-auto select-none"
+          draggable={false}
+        />
+        <div>
+          <h1 className="text-2xl font-bold text-foreground">{SITE_TITLE}</h1>
+          <p className="text-sm text-gray-500">{SITE_SUBTITLE}</p>
+        </div>
+      </Link>
+      <div className="flex items-center gap-4">
+        {user && <UserMenu email={user.email} isPpbd={user.isPpbd} />}
+        {children}
+      </div>
+    </div>
+  );
+}
+

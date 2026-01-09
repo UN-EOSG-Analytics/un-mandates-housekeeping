@@ -1,11 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { transformPPBData } from "@/lib/transformData";
 import { fetchPPBRecords, getBudgetPartsMeta } from "@/lib/data-service";
 import { EntityDetail } from "@/components/EntityDetail";
-import { UserMenu } from "@/components/UserMenu";
+import { Header } from "@/components/Header";
 import { getCurrentUser } from "@/lib/auth";
 import type { EntityData } from "@/types";
 
@@ -44,30 +43,7 @@ export default async function EntityPage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-background">
       <main className="mx-auto max-w-7xl px-3 py-8 sm:px-4">
-        {/* Header */}
-        <div className="mb-6 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Image
-              src="/images/UN_Logo_Stacked_Colour_English.svg"
-              alt="UN Logo"
-              width={60}
-              height={60}
-              className="h-14 w-auto select-none"
-              draggable={false}
-            />
-            <div>
-              <h1 className="text-2xl font-bold text-foreground">
-                PPB 2027 Mandate Housekeeping
-              </h1>
-              <p className="text-sm text-gray-500">
-                Overview of mandates and suggestions for updates
-              </p>
-            </div>
-          </div>
-          {user && <UserMenu email={user.email} isPpbd={user.isPpbd} />}
-        </div>
-
-        {/* Breadcrumb / Back navigation */}
+        <Header user={user} />
         <Link
           href="/"
           className="mb-6 inline-flex items-center gap-2 text-sm text-gray-500 transition-colors hover:text-un-blue"
@@ -75,8 +51,6 @@ export default async function EntityPage({ params }: PageProps) {
           <ArrowLeft className="h-4 w-4" />
           <span>Back to all entities</span>
         </Link>
-
-        {/* Entity Detail */}
         <EntityDetail
           entity={entityData.entity}
           entityLong={entityData.entityLong}

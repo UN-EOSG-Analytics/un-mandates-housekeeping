@@ -27,6 +27,7 @@ interface Props {
   onOpenChange?: (open: boolean) => void;
   state?: MandateState;
   userRole?: UserRole | null;
+  userEmail?: string | null;
   onDecision?: (decision: Decision, newSymbol?: string) => void;
   onComment?: (comment: string) => void;
 }
@@ -414,6 +415,7 @@ export function DocumentSymbol({
   onOpenChange,
   state,
   userRole,
+  userEmail,
   onDecision,
   onComment,
 }: Props) {
@@ -467,13 +469,13 @@ export function DocumentSymbol({
       subprogramme: null,
       decision,
       newSymbol: newSymbol || null,
-      userEmail: "",
+      userEmail: userEmail || "",
       createdAt: new Date().toISOString(),
       role: userRole,
     };
     setAllDecisions((prev) => [...prev, newDecision]);
     onDecision(decision, newSymbol);
-  }, [onDecision, entity, userRole, symbol]);
+  }, [onDecision, entity, userRole, userEmail, symbol]);
 
   // Wrapper to update local state when comment is added
   const handleComment = useCallback((comment: string) => {
@@ -485,12 +487,12 @@ export function DocumentSymbol({
       entity,
       subprogramme: null,
       comment,
-      userEmail: "",
+      userEmail: userEmail || "",
       createdAt: new Date().toISOString(),
     };
     setAllComments((prev) => [...prev, newComment]);
     onComment(comment);
-  }, [onComment, entity, symbol]);
+  }, [onComment, entity, userEmail, symbol]);
 
   const isTruncated = symbol.length > 18;
   const displaySymbol = isTruncated ? symbol.slice(0, 18) + "…" : symbol;
