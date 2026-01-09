@@ -3,7 +3,7 @@ import Link from "next/link";
 import { UserMenu } from "./UserMenu";
 
 interface Props {
-  user?: { email: string; isPpbd?: boolean } | null;
+  user?: { email: string; entity?: string | null; isPpbd?: boolean } | null;
   children?: React.ReactNode;
 }
 

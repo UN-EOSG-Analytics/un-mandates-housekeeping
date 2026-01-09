@@ -2,14 +2,15 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { X, Search, ChevronRight } from "lucide-react";
+import { X, Search, ChevronRight, Star } from "lucide-react";
 import type { PartData, EntityData } from "@/types";
 
 interface Props {
   parts: PartData[];
+  userEntity?: string | null;
 }
 
-function EntityCard({ entityData }: { entityData: EntityData }) {
+function EntityCard({ entityData, highlight }: { entityData: EntityData; highlight?: boolean }) {
   const mandateCount =
     entityData.backgroundMandates.length +
     Object.values(entityData.legislativeMandates).reduce(
@@ -27,7 +28,11 @@ function EntityCard({ entityData }: { entityData: EntityData }) {
   return (
     <Link
       href={`/entity/${encodeURIComponent(entityData.entity)}`}
-      className="group flex items-center justify-between gap-2 rounded-lg bg-gray-100 px-3 py-2.5 transition-all hover:bg-un-blue hover:shadow-md"
+      className={`group flex items-center justify-between gap-2 rounded-lg px-3 py-2.5 transition-all hover:shadow-md ${
+        highlight
+          ? "bg-un-blue/10 ring-2 ring-un-blue/30 hover:bg-un-blue"
+          : "bg-gray-100 hover:bg-un-blue"
+      }`}
     >
       <div className="min-w-0 flex-1">
         <div className="truncate text-sm font-medium text-foreground group-hover:text-white">
@@ -54,8 +59,13 @@ function EntityCard({ entityData }: { entityData: EntityData }) {
   );
 }
 
-export function EntityOverview({ parts }: Props) {
+export function EntityOverview({ parts, userEntity }: Props) {
   const [searchQuery, setSearchQuery] = useState("");
+
+  // Find user's entity data
+  const myEntityData = userEntity
+    ? parts.flatMap((p) => p.entities).find((e) => e.entity === userEntity)
+    : null;
 
   // Filter parts based on search query
   const filteredParts = searchQuery.trim()
@@ -78,6 +88,19 @@ export function EntityOverview({ parts }: Props) {
 
   return (
     <div className="space-y-6">
+      {/* My Entity card - shown for non-PPBD users */}
+      {myEntityData && !searchQuery && (
+        <div className="mb-2">
+          <div className="mb-2 flex items-center gap-2 text-sm font-medium text-un-blue">
+            <Star className="h-4 w-4 fill-current" />
+            My Entity
+          </div>
+          <div className="max-w-xs">
+            <EntityCard entityData={myEntityData} highlight />
+          </div>
+        </div>
+      )}
+
       {/* Search box */}
       <div>
         <div className="relative">

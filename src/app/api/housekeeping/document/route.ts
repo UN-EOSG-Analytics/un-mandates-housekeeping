@@ -10,8 +10,11 @@ interface DecisionRow {
   decision: string;
   new_symbol: string | null;
   user_email: string;
+  user_entity: string | null;
   created_at: string;
   role: UserRole;
+  approved_by: string | null;
+  approved_at: string | null;
 }
 
 interface CommentRow {
@@ -21,6 +24,7 @@ interface CommentRow {
   subprogramme: string | null;
   comment: string;
   user_email: string;
+  user_entity: string | null;
   created_at: string;
 }
 
@@ -32,8 +36,11 @@ const toDecision = (row: DecisionRow): MandateDecision => ({
   decision: row.decision as MandateDecision["decision"],
   newSymbol: row.new_symbol,
   userEmail: row.user_email,
+  userEntity: row.user_entity,
   createdAt: row.created_at,
   role: row.role,
+  approvedBy: row.approved_by,
+  approvedAt: row.approved_at,
 });
 
 const toComment = (row: CommentRow): MandateComment => ({
@@ -43,6 +50,7 @@ const toComment = (row: CommentRow): MandateComment => ({
   subprogramme: row.subprogramme,
   comment: row.comment,
   userEmail: row.user_email,
+  userEntity: row.user_entity,
   createdAt: row.created_at,
 });
 
@@ -53,15 +61,21 @@ export async function GET(req: NextRequest) {
 
   const [decisionRows, commentRows] = await Promise.all([
     query<DecisionRow>(
-      `SELECT d.*, CASE WHEN p.email IS NOT NULL THEN 'ppbd' ELSE 'focal' END as role
+      `SELECT d.*, u.entity as user_entity,
+              CASE WHEN p.email IS NOT NULL THEN 'ppbd' ELSE 'focal' END as role
        FROM mandates_housekeeping.mandate_decisions d
+       LEFT JOIN mandates_housekeeping.users u ON d.user_email = u.email
        LEFT JOIN mandates_housekeeping.ppbd_reviewers p ON d.user_email = p.email
        WHERE d.document_symbol = $1
        ORDER BY d.created_at`,
       [symbol]
     ),
     query<CommentRow>(
-      `SELECT * FROM mandates_housekeeping.mandate_comments WHERE document_symbol = $1 ORDER BY created_at`,
+      `SELECT c.*, u.entity as user_entity
+       FROM mandates_housekeeping.mandate_comments c
+       LEFT JOIN mandates_housekeeping.users u ON c.user_email = u.email
+       WHERE c.document_symbol = $1 
+       ORDER BY c.created_at`,
       [symbol]
     ),
   ]);
@@ -71,4 +85,3 @@ export async function GET(req: NextRequest) {
     comments: commentRows.map(toComment),
   });
 }
-

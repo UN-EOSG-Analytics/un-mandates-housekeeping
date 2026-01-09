@@ -132,7 +132,7 @@ function PhaseTracker() {
   );
 }
 
-const GRID_COLS = "grid-cols-[140px_1fr_50px_55px_45px_60px_45px_25px_130px_130px]";
+const GRID_COLS = "grid-cols-[140px_1fr_50px_55px_45px_60px_25px_130px_45px_50px]";
 
 function ColumnHeaders() {
   return (
@@ -143,10 +143,10 @@ function ColumnHeaders() {
       <div>Year</div>
       <div>Age</div>
       <div>Others</div>
-      <div><MessageSquare className="h-3 w-3" /></div>
       <div></div>
-      <div>Focal Point</div>
-      <div>PPBD</div>
+      <div>Decision</div>
+      <div><MessageSquare className="h-3 w-3" /></div>
+      <div>OK</div>
     </div>
   );
 }
@@ -161,6 +161,7 @@ function MandateRowContent({
   isUpdateTarget,
   onOpenSidebar,
   onDecision,
+  onApprove,
   onUpdateClick,
 }: {
   mandate: Mandate;
@@ -171,18 +172,22 @@ function MandateRowContent({
   isUpdateTarget?: boolean; // True for the "new" row in update view (no dropdowns)
   onOpenSidebar: () => void;
   onDecision: (decision: Decision, newSymbol?: string) => void;
+  onApprove?: (decisionId: string, approved: boolean) => void;
   onUpdateClick?: () => void;
 }) {
   const ageInfo = getAgeIndicator(mandate.year);
 
   const focalAdded = isAdded && state?.focal?.decision === "add";
-  const ppbdAdded = isAdded && state?.ppbd?.decision === "add";
   const canCancelFocal = isAdded && userRole === "focal" && focalAdded;
-  const canCancelPpbd = isAdded && userRole === "ppbd" && ppbdAdded;
 
   // Check if this row has an update decision (to grey out content)
-  const hasUpdate = state?.focal?.decision === "update" || state?.ppbd?.decision === "update";
+  const hasUpdate = state?.focal?.decision === "update";
   const contentGreyed = hasUpdate && !isUpdateTarget;
+
+  // Approval state
+  const hasDecision = !!state?.focal;
+  const isApproved = !!state?.focal?.approvedBy;
+  const canApprove = userRole === "ppbd" && onApprove && hasDecision && state?.focal?.id;
 
   return (
     <div
@@ -232,11 +237,6 @@ function MandateRowContent({
           {mandate.otherEntitiesCount > 0 ? `+${mandate.otherEntitiesCount}` : "—"}
         </span>
       </Tooltip>
-      <Tooltip content={commentCount > 0 ? "Click to view comments" : "Click to add a comment"}>
-        <span className={`cursor-pointer text-xs ${commentCount > 0 ? "text-un-blue font-medium" : "text-gray-400"} ${contentGreyed ? "opacity-50" : ""}`}>
-          {commentCount > 0 ? commentCount : "—"}
-        </span>
-      </Tooltip>
       <div>
         {!mandate.metadataFromDb && (
           <Tooltip content="Metadata not found in documents database">
@@ -261,21 +261,31 @@ function MandateRowContent({
           />
         )}
       </div>
-      <div onClick={(e) => e.stopPropagation()}>
+      <Tooltip content={commentCount > 0 ? "Click to view comments" : "Click to add a comment"}>
+        <span className={`cursor-pointer text-xs ${commentCount > 0 ? "text-un-blue font-medium" : "text-gray-400"} ${contentGreyed ? "opacity-50" : ""}`}>
+          {commentCount > 0 ? commentCount : "—"}
+        </span>
+      </Tooltip>
+      <div onClick={(e) => e.stopPropagation()} className="flex items-center justify-center">
         {isUpdateTarget ? (
-          <span className="text-xs text-gray-400">—</span>
-        ) : isAdded ? (
-          <AddBadge show={!!ppbdAdded} canCancel={!!canCancelPpbd} onCancel={() => onDecision("cancel")} />
+          <span className="inline-flex h-6 w-6 items-center justify-center text-xs text-gray-400">—</span>
+        ) : hasDecision ? (
+          <button
+            onClick={() => canApprove && state?.focal?.id && onApprove(state.focal.id, !isApproved)}
+            disabled={!canApprove}
+            title={isApproved ? `Approved by ${state?.focal?.approvedBy}` : (canApprove ? "Click to approve" : "No decision to approve")}
+            className={`inline-flex h-6 w-6 items-center justify-center rounded transition-colors ${
+              isApproved 
+                ? "bg-emerald-600 text-white" 
+                : canApprove 
+                  ? "border border-gray-300 bg-white hover:border-emerald-400 hover:bg-emerald-50" 
+                  : "border border-gray-200 bg-gray-50"
+            } ${!canApprove ? "cursor-default" : "cursor-pointer"}`}
+          >
+            {isApproved && <Check className="h-4 w-4" />}
+          </button>
         ) : (
-          <DecisionSelect
-            decision={state?.ppbd?.decision ?? null}
-            newSymbol={state?.ppbd?.newSymbol ?? null}
-            userEmail={state?.ppbd?.userEmail ?? null}
-            createdAt={state?.ppbd?.createdAt ?? null}
-            onChange={userRole === "ppbd" ? onDecision : () => {}}
-            onUpdateClick={userRole === "ppbd" ? onUpdateClick : undefined}
-            disabled={userRole !== "ppbd"}
-          />
+          <span className="inline-flex h-6 w-6 items-center justify-center text-xs text-gray-300">—</span>
         )}
       </div>
     </div>
@@ -289,6 +299,7 @@ function MandateRow({
   userRole,
   userEmail,
   onDecision,
+  onApprove,
   onUpdateWithManual,
   onComment,
   isAdded,
@@ -300,6 +311,7 @@ function MandateRow({
   userRole: UserRole | null;
   userEmail: string | null;
   onDecision: (decision: Decision, newSymbol?: string) => void;
+  onApprove: (decisionId: string, approved: boolean) => void;
   onUpdateWithManual: (newSymbol: string, manualData: ManualEntryData) => void;
   onComment: (comment: string) => void;
   isAdded?: boolean;
@@ -309,7 +321,7 @@ function MandateRow({
   const [showUpdateSearch, setShowUpdateSearch] = useState(false);
 
   // Check if there's a completed update (has newSymbol)
-  const currentUserDecision = userRole === "focal" ? state?.focal : userRole === "ppbd" ? state?.ppbd : null;
+  const currentUserDecision = userRole === "focal" ? state?.focal : null;
   const hasCompletedUpdate = currentUserDecision?.decision === "update" && currentUserDecision?.newSymbol;
   const newSymbol = currentUserDecision?.newSymbol;
 
@@ -346,6 +358,7 @@ function MandateRow({
         isAdded={isAdded}
         onOpenSidebar={() => setSidebarOpen(true)}
         onDecision={onDecision}
+        onApprove={onApprove}
         onUpdateClick={() => setShowUpdateSearch(true)}
       />
 
@@ -401,6 +414,7 @@ function MandateRow({
           userRole={userRole}
           userEmail={userEmail}
           onDecision={onDecision}
+          onApprove={onApprove}
           onComment={onComment}
           onUpdateClick={() => { setSidebarOpen(false); setShowUpdateSearch(true); }}
           metadataFromDb={mandate.metadataFromDb}
@@ -818,6 +832,7 @@ function MandateSection({
   userRole,
   userEmail,
   onDecision,
+  onApprove,
   onUpdateWithManual,
   onComment,
   onAdd,
@@ -835,6 +850,7 @@ function MandateSection({
   userRole: UserRole | null;
   userEmail: string | null;
   onDecision: (symbol: string, decision: Decision, newSymbol?: string) => void;
+  onApprove: (decisionId: string, approved: boolean) => void;
   onUpdateWithManual: (symbol: string, newSymbol: string, manualData: ManualEntryData) => void;
   onComment: (symbol: string, comment: string) => void;
   onAdd: (symbol: string) => void;
@@ -904,6 +920,7 @@ function MandateSection({
               userRole={userRole}
               userEmail={userEmail}
               onDecision={(decision, newSymbol) => onDecision(m.symbol, decision, newSymbol)}
+              onApprove={onApprove}
               onUpdateWithManual={(newSymbol, manualData) => onUpdateWithManual(m.symbol, newSymbol, manualData)}
               onComment={(comment) => onComment(m.symbol, comment)}
               updateTargetMetadata={targetSymbol ? updateTargetMetadata[targetSymbol] : undefined}
@@ -919,6 +936,7 @@ function MandateSection({
             userRole={userRole}
             userEmail={userEmail}
             onDecision={(decision) => onDecision(m.symbol, decision)}
+            onApprove={onApprove}
             onUpdateWithManual={() => {}}
             onComment={(comment) => onComment(m.symbol, comment)}
             isAdded
@@ -1030,8 +1048,11 @@ export function EntityDetail({
         decision,
         newSymbol: newSymbol || null,
         userEmail,
+        userEntity: null,
         createdAt: now,
         role: userRole,
+        approvedBy: null,
+        approvedAt: null,
       };
       // Optimistic update
       setStates((prev) => ({
@@ -1086,8 +1107,11 @@ export function EntityDetail({
         newSymbol,
         manualMetadata,
         userEmail,
+        userEntity: null,
         createdAt: now,
         role: userRole,
+        approvedBy: null,
+        approvedAt: null,
       };
       // Optimistic update
       setStates((prev) => ({
@@ -1158,8 +1182,11 @@ export function EntityDetail({
         newSymbol: null,
         manualMetadata,
         userEmail,
+        userEntity: null,
         createdAt: now,
         role: userRole,
+        approvedBy: null,
+        approvedAt: null,
       };
       // Optimistic update
       setStates((prev) => ({
@@ -1222,6 +1249,7 @@ export function EntityDetail({
         subprogramme,
         comment,
         userEmail,
+        userEntity: null, // Will be populated from server response
         createdAt: now,
       };
       // Optimistic update
@@ -1257,6 +1285,37 @@ export function EntityDetail({
       }
     },
     [entity, userEmail]
+  );
+
+  const handleApprove = useCallback(
+    async (decisionId: string, approved: boolean) => {
+      // Optimistic update - find and update the decision
+      setStates((prev) => {
+        const newStates = { ...prev };
+        for (const key of Object.keys(newStates)) {
+          const s = newStates[key];
+          if (s?.focal?.id === decisionId) {
+            newStates[key] = {
+              ...s,
+              focal: {
+                ...s.focal,
+                approvedBy: approved ? userEmail : null,
+                approvedAt: approved ? new Date().toISOString() : null,
+              },
+            };
+            break;
+          }
+        }
+        return newStates;
+      });
+
+      await fetch("/api/housekeeping/approve", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ decisionId, approved }),
+      });
+    },
+    [userEmail]
   );
 
   // Combine all mandates for co-citing calculation
@@ -1386,6 +1445,7 @@ export function EntityDetail({
           onDecision={(symbol, decision, newSymbol) =>
             handleDecision(symbol, null, decision, newSymbol)
           }
+          onApprove={handleApprove}
           onUpdateWithManual={(symbol, newSymbol, manualData) =>
             handleUpdateWithManual(symbol, null, newSymbol, manualData)
           }
@@ -1413,6 +1473,7 @@ export function EntityDetail({
               onDecision={(symbol, decision, newSymbol) =>
                 handleDecision(symbol, subprog, decision, newSymbol)
               }
+              onApprove={handleApprove}
               onUpdateWithManual={(symbol, newSymbol, manualData) =>
                 handleUpdateWithManual(symbol, subprog, newSymbol, manualData)
               }

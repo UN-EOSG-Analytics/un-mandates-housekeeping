@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback, useEffect } from "react";
-import { X, ChevronDown, Loader2, Sparkles, AlertTriangle } from "lucide-react";
+import { X, ChevronDown, Loader2, Sparkles, AlertTriangle, Check } from "lucide-react";
 import type { Paragraph, EntityRelevance, MandateState, MandateDecision, MandateComment, Decision, UserRole } from "@/types";
 import { Tooltip } from "./Tooltip";
 import { getAgeIndicator } from "@/lib/age-indicator";
@@ -28,6 +28,7 @@ interface Props {
   userRole?: UserRole | null;
   userEmail?: string | null;
   onDecision?: (decision: Decision, newSymbol?: string) => void;
+  onApprove?: (decisionId: string, approved: boolean) => void;
   onComment?: (comment: string) => void;
   onUpdateClick?: () => void; // Called when user selects "update" from sidebar
   metadataFromDb?: boolean;
@@ -418,6 +419,7 @@ export function DocumentSymbol({
   userRole,
   userEmail,
   onDecision,
+  onApprove,
   onComment,
   onUpdateClick,
   metadataFromDb,
@@ -433,6 +435,7 @@ export function DocumentSymbol({
   const [activeTab, setActiveTab] = useState<"activity" | "paragraphs">("activity");
   const [allDecisions, setAllDecisions] = useState<MandateDecision[]>([]);
   const [allComments, setAllComments] = useState<MandateComment[]>([]);
+  const [entitiesExpanded, setEntitiesExpanded] = useState(false);
 
   // Fetch paragraphs and document-wide activity when sidebar opens
   useEffect(() => {
@@ -473,8 +476,11 @@ export function DocumentSymbol({
       decision,
       newSymbol: newSymbol || null,
       userEmail: userEmail || "",
+      userEntity: null,
       createdAt: new Date().toISOString(),
       role: userRole,
+      approvedBy: null,
+      approvedAt: null,
     };
     setAllDecisions((prev) => [...prev, newDecision]);
     onDecision(decision, newSymbol);
@@ -491,6 +497,7 @@ export function DocumentSymbol({
       subprogramme: null,
       comment,
       userEmail: userEmail || "",
+      userEntity: null,
       createdAt: new Date().toISOString(),
     };
     setAllComments((prev) => [...prev, newComment]);
@@ -655,92 +662,111 @@ export function DocumentSymbol({
               </div>
 
               {/* Decisions table */}
-              {allEntities && allEntities.length > 0 && (
-                <div className="mt-4 border-t pt-4">
-                  <div className="text-xs font-medium text-gray-500 uppercase mb-2">Decisions</div>
-                  <table className="w-full text-xs">
-                    <thead>
-                      <tr className="text-gray-400">
-                        <th className="text-left font-medium pb-1">Entity</th>
-                        <th className="text-center font-medium pb-1 w-20">Focal</th>
-                        <th className="text-center font-medium pb-1 w-20">PPBD</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {allEntities.map((ent) => {
-                        const isCurrentEntity = ent === entity;
-                        const entDecisions = allDecisions.filter((d) => d.entity === ent);
-                        const latestFocal = entDecisions.filter((d) => d.role === "focal").pop();
-                        const latestPpbd = entDecisions.filter((d) => d.role === "ppbd").pop();
-                        const canEditFocal = isCurrentEntity && userRole === "focal" && onDecision;
-                        const canEditPpbd = isCurrentEntity && userRole === "ppbd" && onDecision;
-                        
-                        return (
-                          <tr key={ent}>
-                            <td className={`py-1.5 pr-2 font-medium ${isCurrentEntity ? "text-un-blue" : "text-gray-600"}`}>
-                              {ent}
-                            </td>
-                            <td className="py-1.5 px-1">
-                              <select
-                                value={isCurrentEntity ? (state?.focal?.decision || "") : (latestFocal?.decision || "")}
-                                onChange={(e) => {
-                                  if (!canEditFocal || !e.target.value) return;
-                                  if (e.target.value === "update" && onUpdateClick) {
-                                    onUpdateClick();
-                                  } else {
-                                    handleDecision(e.target.value as Decision);
-                                  }
-                                }}
-                                disabled={!canEditFocal}
-                                title={latestFocal ? `${latestFocal.userEmail} · ${new Date(latestFocal.createdAt).toLocaleDateString()}` : undefined}
-                                className={`h-6 w-full rounded border px-1 text-xs ${
-                                  (isCurrentEntity ? state?.focal?.decision : latestFocal?.decision) === "retain" ? "border-green-200 bg-green-50 text-green-700" :
-                                  (isCurrentEntity ? state?.focal?.decision : latestFocal?.decision) === "remove" ? "border-red-200 bg-red-50 text-red-700" :
-                                  (isCurrentEntity ? state?.focal?.decision : latestFocal?.decision) === "update" ? "border-amber-200 bg-amber-50 text-amber-700" :
-                                  (isCurrentEntity ? state?.focal?.decision : latestFocal?.decision) === "add" ? "border-blue-200 bg-blue-50 text-blue-700" :
-                                  "border-gray-200 bg-white text-gray-400"
-                                } ${!canEditFocal ? "opacity-60 cursor-default" : ""}`}
-                              >
-                                <option value="">—</option>
-                                <option value="retain">Retain</option>
-                                <option value="remove">Remove</option>
-                                <option value="update">Update</option>
-                              </select>
-                            </td>
-                            <td className="py-1.5 px-1">
-                              <select
-                                value={isCurrentEntity ? (state?.ppbd?.decision || "") : (latestPpbd?.decision || "")}
-                                onChange={(e) => {
-                                  if (!canEditPpbd || !e.target.value) return;
-                                  if (e.target.value === "update" && onUpdateClick) {
-                                    onUpdateClick();
-                                  } else {
-                                    handleDecision(e.target.value as Decision);
-                                  }
-                                }}
-                                disabled={!canEditPpbd}
-                                title={latestPpbd ? `${latestPpbd.userEmail} · ${new Date(latestPpbd.createdAt).toLocaleDateString()}` : undefined}
-                                className={`h-6 w-full rounded border px-1 text-xs ${
-                                  (isCurrentEntity ? state?.ppbd?.decision : latestPpbd?.decision) === "retain" ? "border-green-200 bg-green-50 text-green-700" :
-                                  (isCurrentEntity ? state?.ppbd?.decision : latestPpbd?.decision) === "remove" ? "border-red-200 bg-red-50 text-red-700" :
-                                  (isCurrentEntity ? state?.ppbd?.decision : latestPpbd?.decision) === "update" ? "border-amber-200 bg-amber-50 text-amber-700" :
-                                  (isCurrentEntity ? state?.ppbd?.decision : latestPpbd?.decision) === "add" ? "border-blue-200 bg-blue-50 text-blue-700" :
-                                  "border-gray-200 bg-white text-gray-400"
-                                } ${!canEditPpbd ? "opacity-60 cursor-default" : ""}`}
-                              >
-                                <option value="">—</option>
-                                <option value="retain">Retain</option>
-                                <option value="remove">Remove</option>
-                                <option value="update">Update</option>
-                              </select>
-                            </td>
+              {allEntities && allEntities.length > 0 && (() => {
+                // Sort: current entity first, then others alphabetically
+                const sortedEntities = [
+                  ...(entity ? [entity] : []),
+                  ...allEntities.filter(e => e !== entity).sort()
+                ];
+                const MAX_VISIBLE = 5; // current + 4 others
+                const hasMore = sortedEntities.length > MAX_VISIBLE;
+                const visibleEntities = entitiesExpanded ? sortedEntities : sortedEntities.slice(0, MAX_VISIBLE);
+                
+                return (
+                  <div className="mt-4 border-t pt-4">
+                    <div className="text-xs font-medium text-gray-500 uppercase mb-2">Decisions</div>
+                    <div className="max-h-48 overflow-y-auto">
+                      <table className="w-full text-xs">
+                        <thead className="sticky top-0 bg-gray-50">
+                          <tr className="text-gray-400">
+                            <th className="text-left font-medium pb-1">Entity</th>
+                            <th className="text-center font-medium pb-1 w-24">Decision</th>
+                            <th className="text-center font-medium pb-1 w-12">Approved</th>
                           </tr>
-                        );
-                      })}
-                    </tbody>
-                  </table>
-                </div>
-              )}
+                        </thead>
+                        <tbody>
+                          {visibleEntities.map((ent) => {
+                            const isCurrentEntity = ent === entity;
+                            const entDecisions = allDecisions.filter((d) => d.entity === ent);
+                            const latestFocal = entDecisions.filter((d) => d.role === "focal").pop();
+                            const canEdit = isCurrentEntity && userRole === "focal" && onDecision;
+                            const canApprove = isCurrentEntity && userRole === "ppbd" && onApprove && latestFocal;
+                            const isApproved = !!(isCurrentEntity ? state?.focal?.approvedBy : latestFocal?.approvedBy);
+                            const decisionId = isCurrentEntity ? state?.focal?.id : latestFocal?.id;
+                            
+                            return (
+                              <tr key={ent}>
+                                <td className={`py-1.5 pr-2 font-medium ${isCurrentEntity ? "text-un-blue" : "text-gray-600"}`}>
+                                  {ent}
+                                </td>
+                                <td className="py-1.5 px-1">
+                                  <select
+                                    value={isCurrentEntity ? (state?.focal?.decision || "") : (latestFocal?.decision || "")}
+                                    onChange={(e) => {
+                                      if (!canEdit || !e.target.value) return;
+                                      if (e.target.value === "update" && onUpdateClick) {
+                                        onUpdateClick();
+                                      } else {
+                                        handleDecision(e.target.value as Decision);
+                                      }
+                                    }}
+                                    disabled={!canEdit}
+                                    title={latestFocal ? `${latestFocal.userEmail} · ${new Date(latestFocal.createdAt).toLocaleDateString()}` : undefined}
+                                    className={`h-6 w-full rounded border px-1 text-xs ${
+                                      (isCurrentEntity ? state?.focal?.decision : latestFocal?.decision) === "retain" ? "border-green-200 bg-green-50 text-green-700" :
+                                      (isCurrentEntity ? state?.focal?.decision : latestFocal?.decision) === "remove" ? "border-red-200 bg-red-50 text-red-700" :
+                                      (isCurrentEntity ? state?.focal?.decision : latestFocal?.decision) === "update" ? "border-amber-200 bg-amber-50 text-amber-700" :
+                                      (isCurrentEntity ? state?.focal?.decision : latestFocal?.decision) === "add" ? "border-blue-200 bg-blue-50 text-blue-700" :
+                                      "border-gray-200 bg-white text-gray-400"
+                                    } ${!canEdit ? "opacity-60 cursor-default" : ""}`}
+                                  >
+                                    <option value="">—</option>
+                                    <option value="retain">Retain</option>
+                                    <option value="remove">Remove</option>
+                                    <option value="update">Update</option>
+                                  </select>
+                                </td>
+                                <td className="py-1.5 px-1 text-center">
+                                  {latestFocal || (isCurrentEntity && state?.focal) ? (
+                                    <button
+                                      onClick={() => {
+                                        if (canApprove && decisionId) {
+                                          onApprove(decisionId, !isApproved);
+                                        }
+                                      }}
+                                      disabled={!canApprove}
+                                      title={isApproved ? `Approved by ${(isCurrentEntity ? state?.focal?.approvedBy : latestFocal?.approvedBy)}` : (canApprove ? "Click to approve" : "")}
+                                      className={`inline-flex h-6 w-6 items-center justify-center rounded transition-colors ${
+                                        isApproved 
+                                          ? "bg-emerald-600 text-white" 
+                                          : canApprove 
+                                            ? "border border-gray-300 bg-white hover:border-emerald-400 hover:bg-emerald-50" 
+                                            : "border border-gray-200 bg-gray-50"
+                                      } ${!canApprove ? "cursor-default" : "cursor-pointer"}`}
+                                    >
+                                      {isApproved && <Check className="h-4 w-4" />}
+                                    </button>
+                                  ) : (
+                                    <span className="text-gray-300">—</span>
+                                  )}
+                                </td>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                    </div>
+                    {hasMore && (
+                      <button
+                        onClick={() => setEntitiesExpanded(!entitiesExpanded)}
+                        className="mt-2 text-xs text-un-blue hover:underline"
+                      >
+                        {entitiesExpanded ? "Show less" : `Show ${sortedEntities.length - MAX_VISIBLE} more entities`}
+                      </button>
+                    )}
+                  </div>
+                );
+              })()}
 
               {/* Tabs */}
               <div className="mt-4 border-t pt-3 flex gap-1">
@@ -848,10 +874,15 @@ export function DocumentSymbol({
                                   item.data.decision === "update" ? "text-amber-700" :
                                   "text-blue-700"
                                 }`}>
-                                  {(item.data as MandateDecision).role === "ppbd" ? "PPBD decision" : "Focal point decision"}: {item.data.decision}
+                                  {(item.data as MandateDecision).role === "ppbd" ? "PPBD" : "Focal"}: {item.data.decision}
                                 </span>
                                 {(item.data as MandateDecision).newSymbol && (
                                   <span className="text-gray-500">→ {(item.data as MandateDecision).newSymbol}</span>
+                                )}
+                                {(item.data as MandateDecision).approvedBy && (
+                                  <span className="ml-auto flex items-center gap-0.5 text-emerald-600" title={`Approved by ${(item.data as MandateDecision).approvedBy}`}>
+                                    <Check className="h-3.5 w-3.5" />
+                                  </span>
                                 )}
                               </div>
                               <div className="flex items-center gap-1.5 text-gray-400 mt-0.5">
@@ -860,6 +891,11 @@ export function DocumentSymbol({
                                 }`}>
                                   {itemEntity}
                                 </span>
+                                {(item.data as MandateDecision).userEntity && (
+                                  <span className="rounded bg-gray-100 px-1 py-0.5 text-[10px] font-medium text-gray-500">
+                                    {(item.data as MandateDecision).userEntity}
+                                  </span>
+                                )}
                                 <span>{item.data.userEmail}</span>
                                 <span>·</span>
                                 <span>{new Date(item.data.createdAt).toLocaleDateString()}</span>
@@ -874,6 +910,11 @@ export function DocumentSymbol({
                                 }`}>
                                   {itemEntity}
                                 </span>
+                                {(item.data as MandateComment).userEntity && (
+                                  <span className="rounded bg-gray-100 px-1 py-0.5 text-[10px] font-medium text-gray-500">
+                                    {(item.data as MandateComment).userEntity}
+                                  </span>
+                                )}
                                 <span>{item.data.userEmail}</span>
                                 <span>·</span>
                                 <span>{new Date(item.data.createdAt).toLocaleDateString()}</span>

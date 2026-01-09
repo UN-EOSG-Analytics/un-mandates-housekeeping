@@ -122,8 +122,11 @@ export interface MandateDecision {
   newSymbol: string | null;
   manualMetadata?: ManualMetadata | null;
   userEmail: string;
+  userEntity: string | null;
   createdAt: string;
   role: UserRole;
+  approvedBy: string | null;
+  approvedAt: string | null;
 }
 
 export interface MandateComment {
@@ -133,6 +136,7 @@ export interface MandateComment {
   subprogramme: string | null;
   comment: string;
   userEmail: string;
+  userEntity: string | null;
   createdAt: string;
 }
 

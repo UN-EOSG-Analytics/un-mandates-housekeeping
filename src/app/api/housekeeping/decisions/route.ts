@@ -19,8 +19,11 @@ interface DecisionRow {
   new_symbol: string | null;
   manual_metadata: ManualMetadata | null;
   user_email: string;
+  user_entity: string | null;
   created_at: string;
   role: UserRole;
+  approved_by: string | null;
+  approved_at: string | null;
 }
 
 interface CommentRow {
@@ -30,6 +33,7 @@ interface CommentRow {
   subprogramme: string | null;
   comment: string;
   user_email: string;
+  user_entity: string | null;
   created_at: string;
 }
 
@@ -42,8 +46,11 @@ const toDecision = (row: DecisionRow): MandateDecision => ({
   newSymbol: row.new_symbol,
   manualMetadata: row.manual_metadata,
   userEmail: row.user_email,
+  userEntity: row.user_entity,
   createdAt: row.created_at,
   role: row.role,
+  approvedBy: row.approved_by,
+  approvedAt: row.approved_at,
 });
 
 const toComment = (row: CommentRow): MandateComment => ({
@@ -53,6 +60,7 @@ const toComment = (row: CommentRow): MandateComment => ({
   subprogramme: row.subprogramme,
   comment: row.comment,
   userEmail: row.user_email,
+  userEntity: row.user_entity,
   createdAt: row.created_at,
 });
 
@@ -63,15 +71,21 @@ export async function GET(req: NextRequest) {
   // Get all decisions, comments, and total comment counts per document
   const [decisionRows, commentRows, totalCommentRows] = await Promise.all([
     query<DecisionRow>(
-      `SELECT d.*, CASE WHEN p.email IS NOT NULL THEN 'ppbd' ELSE 'focal' END as role
+      `SELECT d.*, u.entity as user_entity, 
+              CASE WHEN p.email IS NOT NULL THEN 'ppbd' ELSE 'focal' END as role
        FROM mandates_housekeeping.mandate_decisions d
+       LEFT JOIN mandates_housekeeping.users u ON d.user_email = u.email
        LEFT JOIN mandates_housekeeping.ppbd_reviewers p ON d.user_email = p.email
        WHERE d.entity = $1
        ORDER BY d.created_at`,
       [entity]
     ),
     query<CommentRow>(
-      `SELECT * FROM mandates_housekeeping.mandate_comments WHERE entity = $1 ORDER BY created_at`,
+      `SELECT c.*, u.entity as user_entity
+       FROM mandates_housekeeping.mandate_comments c
+       LEFT JOIN mandates_housekeeping.users u ON c.user_email = u.email
+       WHERE c.entity = $1 
+       ORDER BY c.created_at`,
       [entity]
     ),
     query<{ document_symbol: string; count: string }>(
@@ -164,9 +178,10 @@ export async function POST(req: NextRequest) {
       VALUES ($1, $2, $3, $4, $5, $6, $7)
       RETURNING *
     )
-    SELECT i.*, 
+    SELECT i.*, u.entity as user_entity,
            CASE WHEN p.email IS NOT NULL THEN 'ppbd' ELSE 'focal' END as role
     FROM inserted i
+    LEFT JOIN mandates_housekeeping.users u ON i.user_email = u.email
     LEFT JOIN mandates_housekeeping.ppbd_reviewers p ON i.user_email = p.email`,
     [documentSymbol, entity, subprogramme || null, decision, newSymbol || null, manualMetadata ? JSON.stringify(manualMetadata) : null, user.email]
   );

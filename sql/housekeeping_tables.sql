@@ -20,7 +20,10 @@ CREATE TABLE IF NOT EXISTS mandates_housekeeping.mandate_decisions (
   manual_metadata JSONB,  -- for manual 'add': {title, body, year, link}
   
   user_email TEXT NOT NULL,
-  created_at TIMESTAMPTZ DEFAULT NOW()
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  
+  approved_by TEXT,  -- PPBD email who approved
+  approved_at TIMESTAMPTZ
 );
 
 CREATE INDEX IF NOT EXISTS idx_mandate_decisions_lookup 

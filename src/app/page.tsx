@@ -20,7 +20,7 @@ export default async function Home() {
         <Header user={user}>
           <ExportDropdown label="Export All" />
         </Header>
-        <EntityOverview parts={parts} />
+        <EntityOverview parts={parts} userEntity={user?.entity} />
       </main>
     </div>
   );

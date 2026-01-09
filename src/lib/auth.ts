@@ -49,13 +49,18 @@ export async function verifyMagicToken(token: string): Promise<string | null> {
   return rows[0]?.email || null;
 }
 
-export async function upsertUser(email: string): Promise<string> {
+export async function upsertUser(email: string, entity?: string): Promise<string> {
   const rows = await query<{ id: string }>(
-    `INSERT INTO mandates_housekeeping.users (email, last_login_at) 
-     VALUES ($1, NOW()) 
-     ON CONFLICT (email) DO UPDATE SET last_login_at = NOW()
-     RETURNING id`,
-    [email.toLowerCase()]
+    entity
+      ? `INSERT INTO mandates_housekeeping.users (email, entity, last_login_at) 
+         VALUES ($1, $2, NOW()) 
+         ON CONFLICT (email) DO UPDATE SET entity = COALESCE(mandates_housekeeping.users.entity, $2), last_login_at = NOW()
+         RETURNING id`
+      : `INSERT INTO mandates_housekeeping.users (email, last_login_at) 
+         VALUES ($1, NOW()) 
+         ON CONFLICT (email) DO UPDATE SET last_login_at = NOW()
+         RETURNING id`,
+    entity ? [email.toLowerCase(), entity] : [email.toLowerCase()]
   );
   return rows[0].id;
 }
@@ -116,14 +121,14 @@ export async function getCurrentUser() {
   const session = await getSession();
   if (!session) return null;
 
-  const rows = await query<{ id: string; email: string; is_ppbd: boolean }>(
-    `SELECT u.id, u.email, (p.email IS NOT NULL) as is_ppbd
+  const rows = await query<{ id: string; email: string; entity: string | null; is_ppbd: boolean }>(
+    `SELECT u.id, u.email, u.entity, (p.email IS NOT NULL) as is_ppbd
      FROM mandates_housekeeping.users u
      LEFT JOIN mandates_housekeeping.ppbd_reviewers p ON u.email = p.email
      WHERE u.id = $1`,
     [session.userId]
   );
   if (!rows[0]) return null;
-  return { id: rows[0].id, email: rows[0].email, isPpbd: rows[0].is_ppbd };
+  return { id: rows[0].id, email: rows[0].email, entity: rows[0].entity, isPpbd: rows[0].is_ppbd };
 }
 

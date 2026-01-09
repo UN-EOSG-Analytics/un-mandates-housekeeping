@@ -6,6 +6,7 @@ CREATE SCHEMA IF NOT EXISTS mandates_housekeeping;
 CREATE TABLE IF NOT EXISTS mandates_housekeeping.users (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   email TEXT UNIQUE NOT NULL,
+  entity TEXT,
   created_at TIMESTAMPTZ DEFAULT NOW(),
   last_login_at TIMESTAMPTZ
 );

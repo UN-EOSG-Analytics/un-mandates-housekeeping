@@ -10,6 +10,7 @@ interface DbRow {
   subprogramme: string | null;
   comment: string;
   user_email: string;
+  user_entity: string | null;
   created_at: string;
 }
 
@@ -20,6 +21,7 @@ const toComment = (row: DbRow): MandateComment => ({
   subprogramme: row.subprogramme,
   comment: row.comment,
   userEmail: row.user_email,
+  userEntity: row.user_entity,
   createdAt: row.created_at,
 });
 
@@ -35,10 +37,15 @@ export async function POST(req: NextRequest) {
   }
 
   const rows = await query<DbRow>(
-    `INSERT INTO mandates_housekeeping.mandate_comments 
-       (document_symbol, entity, subprogramme, comment, user_email)
-     VALUES ($1, $2, $3, $4, $5)
-     RETURNING *`,
+    `WITH inserted AS (
+      INSERT INTO mandates_housekeeping.mandate_comments 
+        (document_symbol, entity, subprogramme, comment, user_email)
+      VALUES ($1, $2, $3, $4, $5)
+      RETURNING *
+    )
+    SELECT i.*, u.entity as user_entity
+    FROM inserted i
+    LEFT JOIN mandates_housekeeping.users u ON i.user_email = u.email`,
     [documentSymbol, entity, subprogramme || null, comment.trim(), user.email]
   );
 
