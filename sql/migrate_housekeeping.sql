@@ -1,7 +1,10 @@
--- Housekeeping tables for mandate decisions
+-- Migration: Drop old tables and create new simplified schema
 -- Run this in your PostgreSQL database
 
-CREATE SCHEMA IF NOT EXISTS mandates_housekeeping;
+-- Drop old tables if they exist
+DROP TABLE IF EXISTS mandates_housekeeping.mandate_entries;
+DROP TABLE IF EXISTS mandates_housekeeping.mandate_additions;
+DROP TABLE IF EXISTS mandates_housekeeping.mandate_decisions;
 
 -- PPBD reviewers (everyone else with @un.org is a focal point)
 CREATE TABLE IF NOT EXISTS mandates_housekeeping.ppbd_reviewers (
@@ -9,7 +12,7 @@ CREATE TABLE IF NOT EXISTS mandates_housekeeping.ppbd_reviewers (
 );
 
 -- Decision event log (append-only)
-CREATE TABLE IF NOT EXISTS mandates_housekeeping.mandate_decisions (
+CREATE TABLE mandates_housekeeping.mandate_decisions (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   document_symbol TEXT NOT NULL,
   entity TEXT NOT NULL,
@@ -22,6 +25,7 @@ CREATE TABLE IF NOT EXISTS mandates_housekeeping.mandate_decisions (
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
-CREATE INDEX IF NOT EXISTS idx_mandate_decisions_lookup 
+CREATE INDEX idx_mandate_decisions_lookup 
   ON mandates_housekeeping.mandate_decisions 
   (entity, document_symbol, COALESCE(subprogramme, ''), created_at DESC);
+

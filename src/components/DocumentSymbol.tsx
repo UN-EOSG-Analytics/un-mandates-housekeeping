@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useEffect } from "react";
 import { X, ChevronDown, Loader2, Sparkles } from "lucide-react";
-import type { Paragraph, EntityRelevance, MandateEntry, DecisionValue } from "@/types";
+import type { Paragraph, EntityRelevance, MandateState, Decision, UserRole } from "@/types";
 import { Tooltip } from "./Tooltip";
 
 const currentYear = new Date().getFullYear();
@@ -25,8 +25,9 @@ interface Props {
   allEntityRelevance: Record<string, EntityRelevance>;
   isOpen?: boolean;
   onOpenChange?: (open: boolean) => void;
-  entry?: MandateEntry;
-  onDecisionChange?: (type: "focal" | "ppbd", value: DecisionValue, newSymbol?: string) => void;
+  state?: MandateState;
+  userRole?: UserRole | null;
+  onDecision?: (decision: Decision, newSymbol?: string) => void;
 }
 
 function cleanPrefix(prefix: string) {
@@ -410,8 +411,9 @@ export function DocumentSymbol({
   allEntityRelevance,
   isOpen: controlledOpen,
   onOpenChange,
-  entry,
-  onDecisionChange,
+  state,
+  userRole,
+  onDecision,
 }: Props) {
   const [internalOpen, setInternalOpen] = useState(false);
   const open = controlledOpen ?? internalOpen;
@@ -580,54 +582,68 @@ export function DocumentSymbol({
               </div>
 
               {/* Decision fields */}
-              {onDecisionChange && (
+              {onDecision && (
                 <div className="mt-4 space-y-2 text-sm border-t pt-4">
                   <div className="flex items-center justify-between">
                     <span className="text-gray-500">Focal point decision</span>
-                    <select
-                      value={entry?.focalDecision || ""}
-                      onChange={(e) => onDecisionChange("focal", e.target.value as DecisionValue || null)}
-                      className="rounded border border-gray-200 px-2 py-1 text-sm"
-                    >
-                      <option value="">—</option>
-                      <option value="retain">Retain</option>
-                      <option value="remove">Remove</option>
-                      <option value="update">Update</option>
-                    </select>
+                    <div className="flex items-center gap-2">
+                      <select
+                        value={state?.focal?.decision || ""}
+                        onChange={(e) => userRole === "focal" && e.target.value && onDecision(e.target.value as Decision)}
+                        disabled={userRole !== "focal"}
+                        className="rounded border border-gray-200 px-2 py-1 text-sm disabled:opacity-50"
+                      >
+                        <option value="">—</option>
+                        <option value="retain">Retain</option>
+                        <option value="remove">Remove</option>
+                        <option value="update">Update</option>
+                      </select>
+                      {state?.focal?.userEmail && (
+                        <span className="text-xs text-gray-400">{state.focal.userEmail}</span>
+                      )}
+                    </div>
                   </div>
-                  {entry?.focalDecision === "update" && (
+                  {state?.focal?.decision === "update" && (
                     <div className="flex items-center justify-between">
                       <span className="text-gray-500">New symbol</span>
                       <input
                         type="text"
-                        defaultValue={entry?.focalNewSymbol || ""}
-                        onBlur={(e) => onDecisionChange("focal", "update", e.target.value)}
-                        className="rounded border border-gray-200 px-2 py-1 text-sm w-40"
+                        defaultValue={state?.focal?.newSymbol || ""}
+                        onBlur={(e) => userRole === "focal" && onDecision("update", e.target.value)}
+                        disabled={userRole !== "focal"}
+                        className="rounded border border-gray-200 px-2 py-1 text-sm w-40 disabled:opacity-50"
                         placeholder="Enter new symbol"
                       />
                     </div>
                   )}
                   <div className="flex items-center justify-between">
                     <span className="text-gray-500">PPBD decision</span>
-                    <select
-                      value={entry?.ppbdDecision || ""}
-                      onChange={(e) => onDecisionChange("ppbd", e.target.value as DecisionValue || null)}
-                      className="rounded border border-gray-200 px-2 py-1 text-sm"
-                    >
-                      <option value="">—</option>
-                      <option value="retain">Retain</option>
-                      <option value="remove">Remove</option>
-                      <option value="update">Update</option>
-                    </select>
+                    <div className="flex items-center gap-2">
+                      <select
+                        value={state?.ppbd?.decision || ""}
+                        onChange={(e) => userRole === "ppbd" && e.target.value && onDecision(e.target.value as Decision)}
+                        disabled={userRole !== "ppbd"}
+                        className="rounded border border-gray-200 px-2 py-1 text-sm disabled:opacity-50"
+                      >
+                        <option value="">—</option>
+                        <option value="retain">Retain</option>
+                        <option value="remove">Remove</option>
+                        <option value="update">Update</option>
+                      </select>
+                      {state?.ppbd?.userEmail && (
+                        <span className="text-xs text-gray-400">{state.ppbd.userEmail}</span>
+                      )}
+                    </div>
                   </div>
-                  {entry?.ppbdDecision === "update" && (
+                  {state?.ppbd?.decision === "update" && (
                     <div className="flex items-center justify-between">
                       <span className="text-gray-500">New symbol</span>
                       <input
                         type="text"
-                        defaultValue={entry?.ppbdNewSymbol || ""}
-                        onBlur={(e) => onDecisionChange("ppbd", "update", e.target.value)}
-                        className="rounded border border-gray-200 px-2 py-1 text-sm w-40"
+                        defaultValue={state?.ppbd?.newSymbol || ""}
+                        onBlur={(e) => userRole === "ppbd" && onDecision("update", e.target.value)}
+                        disabled={userRole !== "ppbd"}
+                        className="rounded border border-gray-200 px-2 py-1 text-sm w-40 disabled:opacity-50"
                         placeholder="Enter new symbol"
                       />
                     </div>

@@ -64,7 +64,7 @@ export default async function EntityPage({ params }: PageProps) {
               </p>
             </div>
           </div>
-          {user && <UserMenu email={user.email} />}
+          {user && <UserMenu email={user.email} isPpbd={user.isPpbd} />}
         </div>
 
         {/* Breadcrumb / Back navigation */}

@@ -116,10 +116,14 @@ export async function getCurrentUser() {
   const session = await getSession();
   if (!session) return null;
 
-  const rows = await query<{ id: string; email: string }>(
-    `SELECT id, email FROM mandates_housekeeping.users WHERE id = $1`,
+  const rows = await query<{ id: string; email: string; is_ppbd: boolean }>(
+    `SELECT u.id, u.email, (p.email IS NOT NULL) as is_ppbd
+     FROM mandates_housekeeping.users u
+     LEFT JOIN mandates_housekeeping.ppbd_reviewers p ON u.email = p.email
+     WHERE u.id = $1`,
     [session.userId]
   );
-  return rows[0] || null;
+  if (!rows[0]) return null;
+  return { id: rows[0].id, email: rows[0].email, isPpbd: rows[0].is_ppbd };
 }
 

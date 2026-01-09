@@ -99,24 +99,27 @@ export interface PartData {
   entities: EntityData[];
 }
 
-// Housekeeping entries (decisions + additions combined)
-export type DecisionValue = "retain" | "remove" | "update" | null;
+// Housekeeping decisions (event log)
+export type Decision = "retain" | "remove" | "add" | "update";
+export type UserRole = "focal" | "ppbd";
 
-export interface MandateEntry {
+export interface MandateDecision {
   id: string;
   documentSymbol: string;
   entity: string;
   subprogramme: string | null;
-  // User-added entry (null = existing from PPB)
-  addedBy: string | null;
-  addedAt: string | null;
-  // Decisions
-  focalDecision: DecisionValue;
-  focalNewSymbol: string | null;
-  focalDecidedBy: string | null;
-  focalDecidedAt: string | null;
-  ppbdDecision: DecisionValue;
-  ppbdNewSymbol: string | null;
-  ppbdDecidedBy: string | null;
-  ppbdDecidedAt: string | null;
+  decision: Decision;
+  newSymbol: string | null;
+  userEmail: string;
+  createdAt: string;
+  role: UserRole; // derived from ppbd_reviewers table
+}
+
+// Current state per mandate (latest decisions by role)
+export interface MandateState {
+  documentSymbol: string;
+  entity: string;
+  subprogramme: string | null;
+  focal: MandateDecision | null;
+  ppbd: MandateDecision | null;
 }

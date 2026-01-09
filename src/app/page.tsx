@@ -39,7 +39,7 @@ export default async function Home() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            {user && <UserMenu email={user.email} />}
+            {user && <UserMenu email={user.email} isPpbd={user.isPpbd} />}
             <ExportDropdown label="Export All" />
           </div>
         </div>

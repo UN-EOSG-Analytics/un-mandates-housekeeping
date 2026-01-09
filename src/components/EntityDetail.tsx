@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Plus, Loader2 } from "lucide-react";
 import { ExportDropdown } from "./ExportDropdown";
-import type { Mandate, MandateEntry, DecisionValue } from "@/types";
+import type { Mandate, MandateState, Decision, UserRole } from "@/types";
 import { DocumentSymbol } from "./DocumentSymbol";
 import { Tooltip } from "./Tooltip";
 
@@ -71,41 +71,42 @@ function getAgeIndicator(year: number | null): {
   }
 }
 
-type DecisionType = "focal" | "ppbd";
-
 function DecisionSelect({
-  value,
+  decision,
   newSymbol,
-  decidedBy,
-  decidedAt,
+  userEmail,
+  createdAt,
   onChange,
   disabled,
+  showAdd,
 }: {
-  value: DecisionValue;
+  decision: Decision | null;
   newSymbol: string | null;
-  decidedBy: string | null;
-  decidedAt: string | null;
-  onChange: (decision: DecisionValue, newSymbol?: string) => void;
+  userEmail: string | null;
+  createdAt: string | null;
+  onChange: (decision: Decision, newSymbol?: string) => void;
   disabled?: boolean;
+  showAdd?: boolean;
 }) {
   const [localNewSymbol, setLocalNewSymbol] = useState(newSymbol || "");
 
-  const tooltipContent = decidedBy && decidedAt
-    ? `Set by ${decidedBy} at ${new Date(decidedAt).toLocaleDateString()}`
+  const tooltipContent = userEmail && createdAt
+    ? `Set by ${userEmail} at ${new Date(createdAt).toLocaleDateString()}`
     : null;
 
   const select = (
     <select
-      value={value || ""}
+      value={decision || ""}
       onChange={(e) => {
-        const v = e.target.value as DecisionValue | "";
-        onChange(v || null, v === "update" ? localNewSymbol : undefined);
+        const v = e.target.value as Decision | "";
+        if (v) onChange(v, v === "update" ? localNewSymbol : undefined);
       }}
       disabled={disabled}
       className={`h-7 w-20 rounded border border-gray-200 px-1 text-xs ${
-        value === "retain" ? "bg-green-50 text-green-700" :
-        value === "remove" ? "bg-red-50 text-red-700" :
-        value === "update" ? "bg-amber-50 text-amber-700" :
+        decision === "retain" ? "bg-green-50 text-green-700" :
+        decision === "remove" ? "bg-red-50 text-red-700" :
+        decision === "update" ? "bg-amber-50 text-amber-700" :
+        decision === "add" ? "bg-blue-50 text-blue-700" :
         "bg-white text-gray-500"
       }`}
     >
@@ -113,13 +114,14 @@ function DecisionSelect({
       <option value="retain">Retain</option>
       <option value="remove">Remove</option>
       <option value="update">Update</option>
+      {showAdd && <option value="add">Add</option>}
     </select>
   );
 
   return (
     <div className="flex items-center gap-1">
       {tooltipContent ? <Tooltip content={tooltipContent}>{select}</Tooltip> : select}
-      {value === "update" && (
+      {decision === "update" && (
         <input
           type="text"
           value={localNewSymbol}
@@ -154,12 +156,14 @@ function ColumnHeaders() {
 
 function MandateRow({
   mandate,
-  entry,
-  onDecisionChange,
+  state,
+  userRole,
+  onDecision,
 }: {
   mandate: Mandate;
-  entry?: MandateEntry;
-  onDecisionChange: (type: DecisionType, value: DecisionValue, newSymbol?: string) => void;
+  state?: MandateState;
+  userRole: UserRole | null;
+  onDecision: (decision: Decision, newSymbol?: string) => void;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const ageInfo = getAgeIndicator(mandate.year);
@@ -188,8 +192,9 @@ function MandateRow({
           allEntityRelevance={mandate.allEntityRelevance}
           isOpen={sidebarOpen}
           onOpenChange={setSidebarOpen}
-          entry={entry}
-          onDecisionChange={onDecisionChange}
+          state={state}
+          userRole={userRole}
+          onDecision={onDecision}
         />
       </div>
       <div className="cursor-help truncate text-gray-600" title={mandate.title}>
@@ -227,20 +232,22 @@ function MandateRow({
       </Tooltip>
       <div onClick={(e) => e.stopPropagation()}>
         <DecisionSelect
-          value={entry?.focalDecision ?? null}
-          newSymbol={entry?.focalNewSymbol ?? null}
-          decidedBy={entry?.focalDecidedBy ?? null}
-          decidedAt={entry?.focalDecidedAt ?? null}
-          onChange={(v, ns) => onDecisionChange("focal", v, ns)}
+          decision={state?.focal?.decision ?? null}
+          newSymbol={state?.focal?.newSymbol ?? null}
+          userEmail={state?.focal?.userEmail ?? null}
+          createdAt={state?.focal?.createdAt ?? null}
+          onChange={userRole === "focal" ? onDecision : () => {}}
+          disabled={userRole !== "focal"}
         />
       </div>
       <div onClick={(e) => e.stopPropagation()}>
         <DecisionSelect
-          value={entry?.ppbdDecision ?? null}
-          newSymbol={entry?.ppbdNewSymbol ?? null}
-          decidedBy={entry?.ppbdDecidedBy ?? null}
-          decidedAt={entry?.ppbdDecidedAt ?? null}
-          onChange={(v, ns) => onDecisionChange("ppbd", v, ns)}
+          decision={state?.ppbd?.decision ?? null}
+          newSymbol={state?.ppbd?.newSymbol ?? null}
+          userEmail={state?.ppbd?.userEmail ?? null}
+          createdAt={state?.ppbd?.createdAt ?? null}
+          onChange={userRole === "ppbd" ? onDecision : () => {}}
+          disabled={userRole !== "ppbd"}
         />
       </div>
     </div>
@@ -248,13 +255,11 @@ function MandateRow({
 }
 
 function AddEntryRow({
-  entity,
-  subprogramme,
   onAdd,
+  disabled,
 }: {
-  entity: string;
-  subprogramme: string | null;
   onAdd: (symbol: string) => void;
+  disabled?: boolean;
 }) {
   const [symbol, setSymbol] = useState("");
   const [loading, setLoading] = useState(false);
@@ -274,13 +279,14 @@ function AddEntryRow({
           type="text"
           value={symbol}
           onChange={(e) => setSymbol(e.target.value)}
-          onKeyDown={(e) => e.key === "Enter" && handleAdd()}
+          onKeyDown={(e) => e.key === "Enter" && !disabled && handleAdd()}
           placeholder="Add document symbol..."
-          className="h-7 flex-1 rounded border border-gray-200 px-2 text-xs"
+          disabled={disabled}
+          className="h-7 flex-1 rounded border border-gray-200 px-2 text-xs disabled:opacity-50"
         />
         <button
           onClick={handleAdd}
-          disabled={!symbol.trim() || loading}
+          disabled={!symbol.trim() || loading || disabled}
           className="flex h-7 items-center gap-1 rounded bg-un-blue px-2 text-xs text-white hover:bg-un-blue/90 disabled:opacity-50"
         >
           {loading ? <Loader2 className="h-3 w-3 animate-spin" /> : <Plus className="h-3 w-3" />}
@@ -297,21 +303,24 @@ function MandateSection({
   mandates,
   entity,
   subprogramme,
-  entries,
-  onDecisionChange,
-  onAddEntry,
+  states,
+  userRole,
+  onDecision,
+  onAdd,
 }: {
   title: string;
   mandates: Mandate[];
   entity: string;
   subprogramme: string | null;
-  entries: Record<string, MandateEntry>;
-  onDecisionChange: (symbol: string, type: DecisionType, value: DecisionValue, newSymbol?: string) => void;
-  onAddEntry: (symbol: string) => void;
+  states: Record<string, MandateState>;
+  userRole: UserRole | null;
+  onDecision: (symbol: string, decision: Decision, newSymbol?: string) => void;
+  onAdd: (symbol: string) => void;
 }) {
-  const entryKey = (symbol: string) => `${symbol}:${entity}:${subprogramme || ""}`;
-  const addedEntries = Object.values(entries).filter(
-    (e) => e.addedBy && e.subprogramme === subprogramme
+  const stateKey = (symbol: string) => `${symbol}:${subprogramme || ""}`;
+  // Find user-added entries (decision === "add")
+  const addedEntries = Object.values(states).filter(
+    (s) => s.subprogramme === subprogramme && (s.focal?.decision === "add" || s.ppbd?.decision === "add")
   );
 
   if (mandates.length === 0 && addedEntries.length === 0) return null;
@@ -327,28 +336,30 @@ function MandateSection({
           <MandateRow
             key={m.symbol}
             mandate={{ ...m, entity }}
-            entry={entries[entryKey(m.symbol)]}
-            onDecisionChange={(type, value, newSymbol) =>
-              onDecisionChange(m.symbol, type, value, newSymbol)
-            }
+            state={states[stateKey(m.symbol)]}
+            userRole={userRole}
+            onDecision={(decision, newSymbol) => onDecision(m.symbol, decision, newSymbol)}
           />
         ))}
-        {addedEntries.map((e) => (
-          <div
-            key={e.id}
-            className={`grid ${GRID_COLS} items-center gap-x-2 gap-y-1.5 rounded-lg bg-blue-50 px-3 py-2.5 text-sm shadow-sm`}
-          >
-            <div className="rounded bg-blue-100 px-2 py-0.5 text-xs font-medium text-un-blue">
-              {e.documentSymbol}
+        {addedEntries.map((s) => {
+          const addedBy = s.focal?.decision === "add" ? s.focal : s.ppbd;
+          return (
+            <div
+              key={`${s.documentSymbol}:${s.subprogramme}`}
+              className={`grid ${GRID_COLS} items-center gap-x-2 gap-y-1.5 rounded-lg bg-blue-50 px-3 py-2.5 text-sm shadow-sm`}
+            >
+              <div className="rounded bg-blue-100 px-2 py-0.5 text-xs font-medium text-un-blue">
+                {s.documentSymbol}
+              </div>
+              <div className="col-span-6 text-xs text-gray-400">
+                Added by {addedBy?.userEmail}
+              </div>
+              <div />
+              <div />
             </div>
-            <div className="col-span-6 text-xs text-gray-400">
-              Added by {e.addedBy}
-            </div>
-            <div />
-            <div />
-          </div>
-        ))}
-        <AddEntryRow entity={entity} subprogramme={subprogramme} onAdd={onAddEntry} />
+          );
+        })}
+        <AddEntryRow onAdd={onAdd} disabled={!userRole} />
       </div>
     </div>
   );
@@ -362,77 +373,75 @@ export function EntityDetail({
   legislativeMandates,
 }: Props) {
   const [filterEntity, setFilterEntity] = useState<string | null>(null);
-  const [entries, setEntries] = useState<Record<string, MandateEntry>>({});
+  const [states, setStates] = useState<Record<string, MandateState>>({});
+  const [userRole, setUserRole] = useState<UserRole | null>(null);
+  const [userEmail, setUserEmail] = useState<string | null>(null);
 
-  // Fetch entries on mount
+  // Fetch user role and decisions on mount
   useEffect(() => {
-    fetch(`/api/housekeeping/entries?entity=${encodeURIComponent(entity)}`)
-      .then((r) => r.ok ? r.json() : [])
-      .then((data: MandateEntry[]) => {
-        const map: Record<string, MandateEntry> = {};
-        for (const e of data) {
-          map[`${e.documentSymbol}:${e.entity}:${e.subprogramme || ""}`] = e;
+    fetch("/api/housekeeping/role")
+      .then((r) => r.ok ? r.json() : null)
+      .then((data) => {
+        if (data) {
+          setUserRole(data.role);
+          setUserEmail(data.email);
         }
-        setEntries(map);
+      })
+      .catch(() => {});
+
+    fetch(`/api/housekeeping/decisions?entity=${encodeURIComponent(entity)}`)
+      .then((r) => r.ok ? r.json() : [])
+      .then((data: MandateState[]) => {
+        const map: Record<string, MandateState> = {};
+        for (const s of data) {
+          map[`${s.documentSymbol}:${s.subprogramme || ""}`] = s;
+        }
+        setStates(map);
       })
       .catch(() => {});
   }, [entity]);
 
-  const handleDecisionChange = useCallback(
-    async (symbol: string, subprogramme: string | null, type: DecisionType, value: DecisionValue, newSymbol?: string) => {
-      const key = `${symbol}:${entity}:${subprogramme || ""}`;
+  const handleDecision = useCallback(
+    async (symbol: string, subprogramme: string | null, decision: Decision, newSymbol?: string) => {
+      if (!userRole || !userEmail) return;
+      const key = `${symbol}:${subprogramme || ""}`;
+      const now = new Date().toISOString();
       // Optimistic update
-      setEntries((prev) => ({
+      setStates((prev) => ({
         ...prev,
         [key]: {
           ...prev[key],
-          id: prev[key]?.id || "",
           documentSymbol: symbol,
           entity,
           subprogramme,
-          ...(type === "focal"
-            ? { focalDecision: value, focalNewSymbol: newSymbol || null }
-            : { ppbdDecision: value, ppbdNewSymbol: newSymbol || null }),
-        } as MandateEntry,
+          [userRole]: {
+            id: "",
+            documentSymbol: symbol,
+            entity,
+            subprogramme,
+            decision,
+            newSymbol: newSymbol || null,
+            userEmail,
+            createdAt: now,
+            role: userRole,
+          },
+        },
       }));
 
-      const res = await fetch("/api/housekeeping/entries", {
+      const res = await fetch("/api/housekeeping/decisions", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          documentSymbol: symbol,
-          entity,
-          subprogramme,
-          action: { type, decision: value, newSymbol },
-        }),
+        body: JSON.stringify({ documentSymbol: symbol, entity, subprogramme, decision, newSymbol }),
       });
       if (res.ok) {
-        const updated: MandateEntry = await res.json();
-        setEntries((prev) => ({ ...prev, [key]: updated }));
+        const updated = await res.json();
+        setStates((prev) => ({
+          ...prev,
+          [key]: { ...prev[key], [updated.role]: updated },
+        }));
       }
     },
-    [entity]
-  );
-
-  const handleAddEntry = useCallback(
-    async (subprogramme: string | null, symbol: string) => {
-      const key = `${symbol}:${entity}:${subprogramme || ""}`;
-      const res = await fetch("/api/housekeeping/entries", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          documentSymbol: symbol,
-          entity,
-          subprogramme,
-          action: { type: "add" },
-        }),
-      });
-      if (res.ok) {
-        const added: MandateEntry = await res.json();
-        setEntries((prev) => ({ ...prev, [key]: added }));
-      }
-    },
-    [entity]
+    [entity, userRole, userEmail]
   );
 
   // Combine all mandates for co-citing calculation
@@ -549,11 +558,12 @@ export function EntityDetail({
           mandates={filteredBackground}
           entity={entity}
           subprogramme={null}
-          entries={entries}
-          onDecisionChange={(symbol, type, value, newSymbol) =>
-            handleDecisionChange(symbol, null, type, value, newSymbol)
+          states={states}
+          userRole={userRole}
+          onDecision={(symbol, decision, newSymbol) =>
+            handleDecision(symbol, null, decision, newSymbol)
           }
-          onAddEntry={(symbol) => handleAddEntry(null, symbol)}
+          onAdd={(symbol) => handleDecision(symbol, null, "add")}
         />
 
         {Object.entries(filteredLegislative)
@@ -565,11 +575,12 @@ export function EntityDetail({
               mandates={mandates}
               entity={entity}
               subprogramme={subprog}
-              entries={entries}
-              onDecisionChange={(symbol, type, value, newSymbol) =>
-                handleDecisionChange(symbol, subprog, type, value, newSymbol)
+              states={states}
+              userRole={userRole}
+              onDecision={(symbol, decision, newSymbol) =>
+                handleDecision(symbol, subprog, decision, newSymbol)
               }
-              onAddEntry={(symbol) => handleAddEntry(subprog, symbol)}
+              onAdd={(symbol) => handleDecision(symbol, subprog, "add")}
             />
           ))}
 
