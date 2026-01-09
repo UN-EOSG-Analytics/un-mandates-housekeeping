@@ -3,6 +3,13 @@ import { query } from "@/lib/db";
 import { getCurrentUser } from "@/lib/auth";
 import type { MandateDecision, MandateComment, MandateState, UserRole } from "@/types";
 
+interface ManualMetadata {
+  title?: string;
+  body?: string;
+  year?: number;
+  link?: string;
+}
+
 interface DecisionRow {
   id: string;
   document_symbol: string;
@@ -10,6 +17,7 @@ interface DecisionRow {
   subprogramme: string | null;
   decision: string;
   new_symbol: string | null;
+  manual_metadata: ManualMetadata | null;
   user_email: string;
   created_at: string;
   role: UserRole;
@@ -32,6 +40,7 @@ const toDecision = (row: DecisionRow): MandateDecision => ({
   subprogramme: row.subprogramme,
   decision: row.decision as MandateDecision["decision"],
   newSymbol: row.new_symbol,
+  manualMetadata: row.manual_metadata,
   userEmail: row.user_email,
   createdAt: row.created_at,
   role: row.role,
@@ -128,7 +137,7 @@ export async function POST(req: NextRequest) {
   if (!user) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
 
   const body = await req.json();
-  const { documentSymbol, entity, subprogramme, decision, newSymbol } = body;
+  const { documentSymbol, entity, subprogramme, decision, newSymbol, manualMetadata } = body;
 
   if (!documentSymbol || !entity || !decision) {
     return NextResponse.json({ error: "invalid request" }, { status: 400 });
@@ -142,19 +151,24 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "newSymbol required for update" }, { status: 400 });
   }
 
+  // Validate manual metadata link if provided
+  if (manualMetadata?.link && !/^https?:\/\/.+/.test(manualMetadata.link)) {
+    return NextResponse.json({ error: "invalid link format" }, { status: 400 });
+  }
+
   // Insert new decision event
   const rows = await query<DecisionRow>(
     `WITH inserted AS (
       INSERT INTO mandates_housekeeping.mandate_decisions 
-        (document_symbol, entity, subprogramme, decision, new_symbol, user_email)
-      VALUES ($1, $2, $3, $4, $5, $6)
+        (document_symbol, entity, subprogramme, decision, new_symbol, manual_metadata, user_email)
+      VALUES ($1, $2, $3, $4, $5, $6, $7)
       RETURNING *
     )
     SELECT i.*, 
            CASE WHEN p.email IS NOT NULL THEN 'ppbd' ELSE 'focal' END as role
     FROM inserted i
     LEFT JOIN mandates_housekeeping.ppbd_reviewers p ON i.user_email = p.email`,
-    [documentSymbol, entity, subprogramme || null, decision, newSymbol || null, user.email]
+    [documentSymbol, entity, subprogramme || null, decision, newSymbol || null, manualMetadata ? JSON.stringify(manualMetadata) : null, user.email]
   );
 
   return NextResponse.json(toDecision(rows[0]));

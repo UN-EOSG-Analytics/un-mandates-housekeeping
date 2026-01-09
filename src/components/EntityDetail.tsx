@@ -312,19 +312,35 @@ interface SearchResult {
   body: string | null;
 }
 
+interface ManualEntryData {
+  symbol: string;
+  title: string;
+  body: string;
+  year: string;
+  link: string;
+}
+
 function AddEntryRow({
   onAdd,
+  onAddManual,
   disabled,
 }: {
   onAdd: (symbol: string) => void;
+  onAddManual: (data: ManualEntryData) => void;
   disabled?: boolean;
 }) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [searching, setSearching] = useState(false);
+  const [searchDone, setSearchDone] = useState(false);
   const [open, setOpen] = useState(false);
   const [focused, setFocused] = useState(false);
   const [highlighted, setHighlighted] = useState(-1);
+  const [showManualForm, setShowManualForm] = useState(false);
+  const [manualData, setManualData] = useState<ManualEntryData>({ symbol: "", title: "", body: "", year: "", link: "" });
+  const [bodySuggestions, setBodySuggestions] = useState<string[]>([]);
+  const [showBodySuggestions, setShowBodySuggestions] = useState(false);
+  const [linkError, setLinkError] = useState("");
   const debounceRef = useRef<NodeJS.Timeout | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -332,14 +348,17 @@ function AddEntryRow({
     if (q.length < 2) {
       setResults([]);
       setOpen(false);
+      setSearchDone(false);
       return;
     }
     setSearching(true);
+    setSearchDone(false);
     fetch(`/api/documents/search?q=${encodeURIComponent(q)}`)
       .then((r) => r.json())
       .then((data) => {
         setResults(data);
-        setOpen(data.length > 0);
+        setOpen(true);
+        setSearchDone(true);
         setHighlighted(data.length > 0 ? 0 : -1);
       })
       .finally(() => setSearching(false));
@@ -357,25 +376,86 @@ function AddEntryRow({
     setResults([]);
     setOpen(false);
     setHighlighted(-1);
+    setSearchDone(false);
+  };
+
+  const handleOpenManualForm = () => {
+    setManualData({ symbol: query, title: "", body: "", year: "", link: "" });
+    setShowManualForm(true);
+    setOpen(false);
+    // Fetch body suggestions
+    fetch("/api/documents/bodies")
+      .then((r) => r.json())
+      .then(setBodySuggestions)
+      .catch(() => {});
+  };
+
+  const validateManualForm = (): boolean => {
+    const errors: string[] = [];
+    if (!manualData.symbol.trim()) errors.push("symbol");
+    if (!manualData.title.trim()) errors.push("title");
+    if (!manualData.body.trim()) errors.push("body");
+    if (!manualData.year.trim()) errors.push("year");
+    if (!manualData.link.trim()) errors.push("link");
+    
+    // Validate year format (4-digit number between 1945-2100)
+    const yearNum = parseInt(manualData.year);
+    if (manualData.year && (isNaN(yearNum) || yearNum < 1945 || yearNum > 2100)) {
+      errors.push("year");
+    }
+    
+    // Validate link format
+    if (manualData.link && !/^https?:\/\/.+/.test(manualData.link)) {
+      setLinkError("Link must start with http:// or https://");
+      return false;
+    }
+    
+    return errors.length === 0;
+  };
+
+  const isFormValid = manualData.symbol.trim() && 
+    manualData.title.trim() && 
+    manualData.body.trim() && 
+    manualData.year.trim() && 
+    manualData.link.trim() &&
+    /^\d{4}$/.test(manualData.year) &&
+    parseInt(manualData.year) >= 1945 &&
+    parseInt(manualData.year) <= 2100 &&
+    /^https?:\/\/.+/.test(manualData.link);
+
+  const handleManualSubmit = () => {
+    if (!validateManualForm()) return;
+    onAddManual(manualData);
+    setShowManualForm(false);
+    setManualData({ symbol: "", title: "", body: "", year: "", link: "" });
+    setQuery("");
+    setLinkError("");
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (!open || results.length === 0) {
+    if (!open) {
       if (e.key === "Escape") setQuery("");
       return;
     }
+    const totalItems = results.length + (searchDone && results.length === 0 ? 1 : 0);
+    if (totalItems === 0) return;
+    
     switch (e.key) {
       case "ArrowDown":
         e.preventDefault();
-        setHighlighted((i) => (i + 1) % results.length);
+        setHighlighted((i) => (i + 1) % totalItems);
         break;
       case "ArrowUp":
         e.preventDefault();
-        setHighlighted((i) => (i - 1 + results.length) % results.length);
+        setHighlighted((i) => (i - 1 + totalItems) % totalItems);
         break;
       case "Enter":
         e.preventDefault();
-        if (highlighted >= 0) handleSelect(results[highlighted]);
+        if (highlighted >= 0 && highlighted < results.length) {
+          handleSelect(results[highlighted]);
+        } else if (highlighted === results.length || (results.length === 0 && highlighted === 0)) {
+          handleOpenManualForm();
+        }
         break;
       case "Escape":
         setOpen(false);
@@ -389,6 +469,7 @@ function AddEntryRow({
     const handleClickOutside = (e: MouseEvent) => {
       if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
         setOpen(false);
+        setShowBodySuggestions(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -396,6 +477,129 @@ function AddEntryRow({
   }, []);
 
   if (disabled) return null;
+
+  if (showManualForm) {
+    const filteredBodies = bodySuggestions.filter((b) => 
+      b.toLowerCase().includes(manualData.body.toLowerCase())
+    ).slice(0, 8);
+
+    return (
+      <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+        <div className="flex items-center justify-between mb-3">
+          <span className="text-sm font-medium text-gray-700">Add document manually</span>
+          <button onClick={() => setShowManualForm(false)} className="text-gray-400 hover:text-gray-600">
+            <X className="h-4 w-4" />
+          </button>
+        </div>
+        <div className="space-y-3">
+          <div>
+            <label className="block text-xs text-gray-500 mb-1">Symbol <span className="text-red-400">*</span></label>
+            <input
+              type="text"
+              value={manualData.symbol}
+              onChange={(e) => setManualData((d) => ({ ...d, symbol: e.target.value }))}
+              className="w-full rounded border border-gray-200 px-2 py-1.5 text-sm focus:border-un-blue focus:outline-none"
+              placeholder="e.g. A/RES/78/123"
+            />
+          </div>
+          <div>
+            <label className="block text-xs text-gray-500 mb-1">Title <span className="text-red-400">*</span></label>
+            <input
+              type="text"
+              value={manualData.title}
+              onChange={(e) => setManualData((d) => ({ ...d, title: e.target.value }))}
+              className="w-full rounded border border-gray-200 px-2 py-1.5 text-sm focus:border-un-blue focus:outline-none"
+              placeholder="Document title"
+            />
+          </div>
+          <div className="relative">
+            <label className="block text-xs text-gray-500 mb-1">Issuing body <span className="text-red-400">*</span></label>
+            <input
+              type="text"
+              value={manualData.body}
+              onChange={(e) => setManualData((d) => ({ ...d, body: e.target.value }))}
+              onFocus={() => setShowBodySuggestions(true)}
+              onBlur={() => setTimeout(() => setShowBodySuggestions(false), 150)}
+              className="w-full rounded border border-gray-200 px-2 py-1.5 text-sm focus:border-un-blue focus:outline-none"
+              placeholder="e.g. General Assembly"
+            />
+            {showBodySuggestions && filteredBodies.length > 0 && (
+              <div className="absolute top-full left-0 right-0 z-10 mt-1 max-h-40 overflow-y-auto rounded border border-gray-200 bg-white shadow-lg">
+                {filteredBodies.map((b) => (
+                  <button
+                    key={b}
+                    onMouseDown={(e) => e.preventDefault()}
+                    onClick={() => {
+                      setManualData((d) => ({ ...d, body: b }));
+                      setShowBodySuggestions(false);
+                    }}
+                    className="w-full px-2 py-1.5 text-left text-sm hover:bg-gray-50"
+                  >
+                    {b}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+          <div>
+            <label className="block text-xs text-gray-500 mb-1">Year <span className="text-red-400">*</span></label>
+            <input
+              type="number"
+              value={manualData.year}
+              onChange={(e) => setManualData((d) => ({ ...d, year: e.target.value }))}
+              className={`w-full rounded border px-2 py-1.5 text-sm focus:outline-none ${
+                manualData.year && (!/^\d{4}$/.test(manualData.year) || parseInt(manualData.year) < 1945 || parseInt(manualData.year) > 2100)
+                  ? "border-red-300 focus:border-red-400"
+                  : "border-gray-200 focus:border-un-blue"
+              }`}
+              placeholder="e.g. 2024"
+              min="1945"
+              max="2100"
+            />
+            {manualData.year && (!/^\d{4}$/.test(manualData.year) || parseInt(manualData.year) < 1945 || parseInt(manualData.year) > 2100) && (
+              <p className="text-xs text-red-500 mt-1">Year must be 4 digits between 1945-2100</p>
+            )}
+          </div>
+          <div>
+            <label className="block text-xs text-gray-500 mb-1">Link <span className="text-red-400">*</span></label>
+            <input
+              type="url"
+              value={manualData.link}
+              onChange={(e) => {
+                setManualData((d) => ({ ...d, link: e.target.value }));
+                setLinkError("");
+              }}
+              className={`w-full rounded border px-2 py-1.5 text-sm focus:outline-none ${
+                linkError || (manualData.link && !/^https?:\/\/.+/.test(manualData.link))
+                  ? "border-red-300 focus:border-red-400"
+                  : "border-gray-200 focus:border-un-blue"
+              }`}
+              placeholder="https://..."
+            />
+            {(linkError || (manualData.link && !/^https?:\/\/.+/.test(manualData.link))) && (
+              <p className="text-xs text-red-500 mt-1">{linkError || "Link must start with http:// or https://"}</p>
+            )}
+          </div>
+          <p className="text-xs text-gray-400">All fields are required</p>
+          <div className="flex justify-end gap-2 pt-2">
+            <button
+              onClick={() => setShowManualForm(false)}
+              className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-800"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={handleManualSubmit}
+              disabled={!isFormValid}
+              className="rounded bg-un-blue px-3 py-1.5 text-sm text-white hover:bg-un-blue/90 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              Add
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div ref={containerRef} className="relative">
@@ -411,7 +615,7 @@ function AddEntryRow({
           onChange={(e) => handleInputChange(e.target.value)}
           onFocus={() => {
             setFocused(true);
-            if (results.length > 0) setOpen(true);
+            if (searchDone) setOpen(true);
           }}
           onBlur={() => setFocused(false)}
           onKeyDown={handleKeyDown}
@@ -421,7 +625,7 @@ function AddEntryRow({
         {searching && <Loader2 className="h-4 w-4 animate-spin text-gray-400" />}
       </div>
 
-      {open && results.length > 0 && (
+      {open && (
         <div className="absolute top-full left-0 right-0 z-20 mt-1 max-h-72 overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg">
           {results.map((doc, i) => (
             <button
@@ -429,7 +633,7 @@ function AddEntryRow({
               onMouseDown={(e) => e.preventDefault()}
               onClick={() => handleSelect(doc)}
               onMouseEnter={() => setHighlighted(i)}
-              className={`w-full px-3 py-2 text-left border-b border-gray-100 last:border-0 ${
+              className={`w-full px-3 py-2 text-left border-b border-gray-100 ${
                 i === highlighted ? "bg-un-blue/10" : "hover:bg-gray-50"
               }`}
             >
@@ -444,6 +648,22 @@ function AddEntryRow({
               )}
             </button>
           ))}
+          {searchDone && results.length === 0 && (
+            <div className="px-3 py-2 text-sm text-gray-500">No documents found</div>
+          )}
+          {searchDone && (
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={handleOpenManualForm}
+              onMouseEnter={() => setHighlighted(results.length)}
+              className={`w-full px-3 py-2 text-left text-sm border-t border-gray-100 ${
+                highlighted === results.length ? "bg-un-blue/10" : "hover:bg-gray-50"
+              }`}
+            >
+              <span className="text-un-blue">+ Add manually...</span>
+              {query && <span className="text-gray-400 ml-1">"{query}"</span>}
+            </button>
+          )}
         </div>
       )}
     </div>
@@ -464,6 +684,7 @@ function MandateSection({
   onDecision,
   onComment,
   onAdd,
+  onAddManual,
 }: {
   title: string;
   mandates: Mandate[];
@@ -472,12 +693,13 @@ function MandateSection({
   subprogramme: string | null;
   states: Record<string, MandateState>;
   totalComments: Record<string, number>;
-  addedMetadata: Record<string, { title: string | null; year: number | null; body: string | null; docType: string | null }>;
+  addedMetadata: Record<string, { title: string | null; year: number | null; body: string | null; docType: string | null } | null>;
   userRole: UserRole | null;
   userEmail: string | null;
   onDecision: (symbol: string, decision: Decision, newSymbol?: string) => void;
   onComment: (symbol: string, comment: string) => void;
   onAdd: (symbol: string) => void;
+  onAddManual: (data: ManualEntryData) => void;
 }) {
   const stateKey = (symbol: string) => `${symbol}:${subprogramme || ""}`;
   const existingSymbols = new Set(mandates.map((m) => m.symbol));
@@ -492,12 +714,14 @@ function MandateSection({
   // Convert added entries to Mandate objects
   const addedMandates: Mandate[] = addedEntries.map((s) => {
     const meta = addedMetadata[s.documentSymbol];
+    // Check for manual metadata in the decision
+    const manualMeta = s.focal?.manualMetadata || s.ppbd?.manualMetadata;
     return {
       symbol: s.documentSymbol,
-      title: meta?.title || "",
-      link: null,
-      year: meta?.year || null,
-      body: meta?.body || null,
+      title: manualMeta?.title || meta?.title || "",
+      link: manualMeta?.link || null,
+      year: manualMeta?.year || meta?.year || null,
+      body: manualMeta?.body || meta?.body || null,
       docType: meta?.docType || null,
       action: null,
       relevanceCount: 0,
@@ -549,7 +773,7 @@ function MandateSection({
             isAdded
           />
         ))}
-        <AddEntryRow onAdd={onAdd} disabled={!userRole} />
+        <AddEntryRow onAdd={onAdd} onAddManual={onAddManual} disabled={!userRole} />
       </div>
     </div>
   );
@@ -567,7 +791,7 @@ export function EntityDetail({
   const [totalComments, setTotalComments] = useState<Record<string, number>>({});
   const [userRole, setUserRole] = useState<UserRole | null>(null);
   const [userEmail, setUserEmail] = useState<string | null>(null);
-  const [addedMetadata, setAddedMetadata] = useState<Record<string, { title: string | null; year: number | null; body: string | null; docType: string | null }>>({});
+  const [addedMetadata, setAddedMetadata] = useState<Record<string, { title: string | null; year: number | null; body: string | null; docType: string | null } | null>>({});
 
   // Fetch user role and decisions on mount
   useEffect(() => {
@@ -603,13 +827,20 @@ export function EntityDetail({
     const addedSymbols = Object.values(states)
       .filter((s) => (s.focal?.decision === "add" || s.ppbd?.decision === "add") && !existingSymbols.has(s.documentSymbol))
       .map((s) => s.documentSymbol)
-      .filter((sym) => !addedMetadata[sym]);
+      .filter((sym) => !(sym in addedMetadata)); // Use "in" to check if key exists (even if null)
 
     if (addedSymbols.length === 0) return;
 
     fetch(`/api/documents/metadata?symbols=${encodeURIComponent(addedSymbols.join(","))}`)
       .then((r) => r.ok ? r.json() : {})
-      .then((data) => setAddedMetadata((prev) => ({ ...prev, ...data })))
+      .then((data: Record<string, { title: string | null; year: number | null; body: string | null; docType: string | null }>) => {
+        // Mark all looked-up symbols, even if no data found (to prevent re-fetching)
+        const result: Record<string, { title: string | null; year: number | null; body: string | null; docType: string | null } | null> = {};
+        for (const sym of addedSymbols) {
+          result[sym] = data[sym] || null; // null means "looked up but not found"
+        }
+        setAddedMetadata((prev) => ({ ...prev, ...result }));
+      })
       .catch(() => {});
   }, [states, backgroundMandates, legislativeMandates, addedMetadata]);
 
@@ -646,6 +877,78 @@ export function EntityDetail({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ documentSymbol: symbol, entity, subprogramme, decision, newSymbol }),
+      });
+      if (res.ok) {
+        const updated = await res.json();
+        setStates((prev) => ({
+          ...prev,
+          [key]: {
+            ...prev[key],
+            [updated.role]: updated,
+            decisions: [...(prev[key]?.decisions?.filter((d) => d.id) || []), updated],
+          },
+        }));
+      }
+    },
+    [entity, userRole, userEmail]
+  );
+
+  const handleAddManual = useCallback(
+    async (subprogramme: string | null, data: ManualEntryData) => {
+      if (!userRole || !userEmail) return;
+      const key = `${data.symbol}:${subprogramme || ""}`;
+      const now = new Date().toISOString();
+      const manualMetadata = {
+        title: data.title || undefined,
+        body: data.body || undefined,
+        year: data.year ? parseInt(data.year) : undefined,
+        link: data.link || undefined,
+      };
+      const newDecision = {
+        id: "",
+        documentSymbol: data.symbol,
+        entity,
+        subprogramme,
+        decision: "add" as Decision,
+        newSymbol: null,
+        manualMetadata,
+        userEmail,
+        createdAt: now,
+        role: userRole,
+      };
+      // Optimistic update
+      setStates((prev) => ({
+        ...prev,
+        [key]: {
+          ...prev[key],
+          documentSymbol: data.symbol,
+          entity,
+          subprogramme,
+          [userRole]: newDecision,
+          decisions: [...(prev[key]?.decisions || []), newDecision],
+        },
+      }));
+      // Also add to addedMetadata for display
+      setAddedMetadata((prev) => ({
+        ...prev,
+        [data.symbol]: {
+          title: data.title || null,
+          year: data.year ? parseInt(data.year) : null,
+          body: data.body || null,
+          docType: null,
+        },
+      }));
+
+      const res = await fetch("/api/housekeeping/decisions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          documentSymbol: data.symbol,
+          entity,
+          subprogramme,
+          decision: "add",
+          manualMetadata,
+        }),
       });
       if (res.ok) {
         const updated = await res.json();
@@ -839,6 +1142,7 @@ export function EntityDetail({
           }
           onComment={(symbol, comment) => handleComment(symbol, null, comment)}
           onAdd={(symbol) => handleDecision(symbol, null, "add")}
+          onAddManual={(data) => handleAddManual(null, data)}
         />
 
         {Object.entries(filteredLegislative)
@@ -861,6 +1165,7 @@ export function EntityDetail({
               }
               onComment={(symbol, comment) => handleComment(symbol, subprog, comment)}
               onAdd={(symbol) => handleDecision(symbol, subprog, "add")}
+              onAddManual={(data) => handleAddManual(subprog, data)}
             />
           ))}
 

@@ -106,6 +106,13 @@ export interface PartData {
 export type Decision = "retain" | "remove" | "add" | "update" | "cancel";
 export type UserRole = "focal" | "ppbd";
 
+export interface ManualMetadata {
+  title?: string;
+  body?: string;
+  year?: number;
+  link?: string;
+}
+
 export interface MandateDecision {
   id: string;
   documentSymbol: string;
@@ -113,6 +120,7 @@ export interface MandateDecision {
   subprogramme: string | null;
   decision: Decision;
   newSymbol: string | null;
+  manualMetadata?: ManualMetadata | null;
   userEmail: string;
   createdAt: string;
   role: UserRole;

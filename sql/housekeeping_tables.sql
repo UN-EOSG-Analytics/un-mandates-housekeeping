@@ -17,6 +17,7 @@ CREATE TABLE IF NOT EXISTS mandates_housekeeping.mandate_decisions (
   
   decision TEXT NOT NULL CHECK (decision IN ('retain', 'remove', 'add', 'update', 'cancel')),
   new_symbol TEXT,  -- only for 'update' decisions
+  manual_metadata JSONB,  -- for manual 'add': {title, body, year, link}
   
   user_email TEXT NOT NULL,
   created_at TIMESTAMPTZ DEFAULT NOW()
