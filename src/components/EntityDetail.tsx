@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { Plus, Loader2, Check } from "lucide-react";
+import { Plus, Loader2, Check, MessageSquare } from "lucide-react";
 import { ExportDropdown } from "./ExportDropdown";
 import type { Mandate, MandateState, MandateComment, Decision, UserRole } from "@/types";
 import { DocumentSymbol } from "./DocumentSymbol";
@@ -196,7 +196,7 @@ function ColumnHeaders() {
       <div>Year</div>
       <div>Age</div>
       <div>Others</div>
-      <div>💬</div>
+      <div><MessageSquare className="h-3 w-3" /></div>
       <div>Focal Point</div>
       <div>PPBD</div>
     </div>
@@ -206,19 +206,20 @@ function ColumnHeaders() {
 function MandateRow({
   mandate,
   state,
+  commentCount,
   userRole,
   onDecision,
   onComment,
 }: {
   mandate: Mandate;
   state?: MandateState;
+  commentCount: number;
   userRole: UserRole | null;
   onDecision: (decision: Decision, newSymbol?: string) => void;
   onComment: (comment: string) => void;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const ageInfo = getAgeIndicator(mandate.year);
-  const commentCount = state?.comments?.length ?? 0;
 
   return (
     <div
@@ -362,6 +363,7 @@ function MandateSection({
   entity,
   subprogramme,
   states,
+  totalComments,
   userRole,
   onDecision,
   onComment,
@@ -372,6 +374,7 @@ function MandateSection({
   entity: string;
   subprogramme: string | null;
   states: Record<string, MandateState>;
+  totalComments: Record<string, number>;
   userRole: UserRole | null;
   onDecision: (symbol: string, decision: Decision, newSymbol?: string) => void;
   onComment: (symbol: string, comment: string) => void;
@@ -397,6 +400,7 @@ function MandateSection({
             key={m.symbol}
             mandate={{ ...m, entity }}
             state={states[stateKey(m.symbol)]}
+            commentCount={totalComments[m.symbol] || 0}
             userRole={userRole}
             onDecision={(decision, newSymbol) => onDecision(m.symbol, decision, newSymbol)}
             onComment={(comment) => onComment(m.symbol, comment)}
@@ -435,6 +439,7 @@ export function EntityDetail({
 }: Props) {
   const [filterEntity, setFilterEntity] = useState<string | null>(null);
   const [states, setStates] = useState<Record<string, MandateState>>({});
+  const [totalComments, setTotalComments] = useState<Record<string, number>>({});
   const [userRole, setUserRole] = useState<UserRole | null>(null);
   const [userEmail, setUserEmail] = useState<string | null>(null);
 
@@ -451,13 +456,14 @@ export function EntityDetail({
       .catch(() => {});
 
     fetch(`/api/housekeeping/decisions?entity=${encodeURIComponent(entity)}`)
-      .then((r) => r.ok ? r.json() : [])
-      .then((data: MandateState[]) => {
+      .then((r) => r.ok ? r.json() : { states: [], totalComments: {} })
+      .then((data: { states: MandateState[]; totalComments: Record<string, number> }) => {
         const map: Record<string, MandateState> = {};
-        for (const s of data) {
+        for (const s of data.states) {
           map[`${s.documentSymbol}:${s.subprogramme || ""}`] = s;
         }
         setStates(map);
+        setTotalComments(data.totalComments);
       })
       .catch(() => {});
   }, [entity]);
@@ -535,6 +541,10 @@ export function EntityDetail({
           subprogramme,
           comments: [...(prev[key]?.comments || []), newComment],
         },
+      }));
+      setTotalComments((prev) => ({
+        ...prev,
+        [symbol]: (prev[symbol] || 0) + 1,
       }));
 
       const res = await fetch("/api/housekeeping/comments", {
@@ -674,6 +684,7 @@ export function EntityDetail({
           entity={entity}
           subprogramme={null}
           states={states}
+          totalComments={totalComments}
           userRole={userRole}
           onDecision={(symbol, decision, newSymbol) =>
             handleDecision(symbol, null, decision, newSymbol)
@@ -692,6 +703,7 @@ export function EntityDetail({
               entity={entity}
               subprogramme={subprog}
               states={states}
+              totalComments={totalComments}
               userRole={userRole}
               onDecision={(symbol, decision, newSymbol) =>
                 handleDecision(symbol, subprog, decision, newSymbol)

@@ -421,24 +421,33 @@ export function DocumentSymbol({
   const open = controlledOpen ?? internalOpen;
   const setOpen = onOpenChange ?? setInternalOpen;
   const [selectedEntity, setSelectedEntity] = useState<string | null>(null);
+  const [activityFilterEntity, setActivityFilterEntity] = useState<string | null>(null);
   const [paragraphs, setParagraphs] = useState<Paragraph[] | null>(null);
   const [loading, setLoading] = useState(false);
   const [commentText, setCommentText] = useState("");
   const [activeTab, setActiveTab] = useState<"activity" | "paragraphs">("activity");
+  const [allDecisions, setAllDecisions] = useState<MandateDecision[]>([]);
+  const [allComments, setAllComments] = useState<MandateComment[]>([]);
 
-  // Fetch paragraphs when sidebar opens
+  // Fetch paragraphs and document-wide activity when sidebar opens
   useEffect(() => {
     if (open && !paragraphs && !loading) {
       setLoading(true);
       const safeSymbol = symbol.replace(/\//g, "_").replace(/ /g, "_");
 
-      fetch(`/data/paragraphs/${safeSymbol}.json`)
-        .then((res) => (res.ok ? res.json() : null))
-        .catch(() => null)
-        .then((parasData) => {
-          setParagraphs(parasData || []);
-          setLoading(false);
-        });
+      Promise.all([
+        fetch(`/data/paragraphs/${safeSymbol}.json`)
+          .then((res) => (res.ok ? res.json() : null))
+          .catch(() => null),
+        fetch(`/api/housekeeping/document?symbol=${encodeURIComponent(symbol)}`)
+          .then((res) => (res.ok ? res.json() : { decisions: [], comments: [] }))
+          .catch(() => ({ decisions: [], comments: [] })),
+      ]).then(([parasData, activityData]) => {
+        setParagraphs(parasData || []);
+        setAllDecisions(activityData.decisions || []);
+        setAllComments(activityData.comments || []);
+        setLoading(false);
+      });
     }
   }, [open, paragraphs, loading, symbol]);
 
@@ -446,6 +455,42 @@ export function DocumentSymbol({
     e.preventDefault();
     setOpen(true);
   }, []);
+
+  // Wrapper to update local state when decision is made
+  const handleDecision = useCallback((decision: Decision, newSymbol?: string) => {
+    if (!onDecision || !entity || !userRole) return;
+    // Optimistic update to local state
+    const newDecision: MandateDecision = {
+      id: "",
+      documentSymbol: symbol,
+      entity,
+      subprogramme: null,
+      decision,
+      newSymbol: newSymbol || null,
+      userEmail: "",
+      createdAt: new Date().toISOString(),
+      role: userRole,
+    };
+    setAllDecisions((prev) => [...prev, newDecision]);
+    onDecision(decision, newSymbol);
+  }, [onDecision, entity, userRole, symbol]);
+
+  // Wrapper to update local state when comment is added
+  const handleComment = useCallback((comment: string) => {
+    if (!onComment || !entity) return;
+    // Optimistic update to local state
+    const newComment: MandateComment = {
+      id: "",
+      documentSymbol: symbol,
+      entity,
+      subprogramme: null,
+      comment,
+      userEmail: "",
+      createdAt: new Date().toISOString(),
+    };
+    setAllComments((prev) => [...prev, newComment]);
+    onComment(comment);
+  }, [onComment, entity, symbol]);
 
   const isTruncated = symbol.length > 18;
   const displaySymbol = isTruncated ? symbol.slice(0, 18) + "…" : symbol;
@@ -585,73 +630,80 @@ export function DocumentSymbol({
                 )}
               </div>
 
-              {/* Decision fields */}
-              {onDecision && (
-                <div className="mt-4 space-y-2 text-sm border-t pt-4">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="text-gray-500">Focal point</span>
-                      {state?.focal?.userEmail && (
-                        <span className="text-xs text-gray-400">{state.focal.userEmail}</span>
-                      )}
-                    </div>
-                    <select
-                      value={state?.focal?.decision || ""}
-                      onChange={(e) => userRole === "focal" && e.target.value && onDecision(e.target.value as Decision)}
-                      disabled={userRole !== "focal"}
-                      className="rounded border border-gray-200 px-2 py-1 text-sm disabled:opacity-50"
-                    >
-                      <option value="">—</option>
-                      <option value="retain">Retain</option>
-                      <option value="remove">Remove</option>
-                      <option value="update">Update</option>
-                    </select>
-                  </div>
-                  {state?.focal?.decision === "update" && (
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-500">New symbol</span>
-                      <input
-                        type="text"
-                        defaultValue={state?.focal?.newSymbol || ""}
-                        onBlur={(e) => userRole === "focal" && onDecision("update", e.target.value)}
-                        disabled={userRole !== "focal"}
-                        className="rounded border border-gray-200 px-2 py-1 text-sm w-40 disabled:opacity-50"
-                        placeholder="Enter new symbol"
-                      />
-                    </div>
-                  )}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="text-gray-500">PPBD</span>
-                      {state?.ppbd?.userEmail && (
-                        <span className="text-xs text-gray-400">{state.ppbd.userEmail}</span>
-                      )}
-                    </div>
-                    <select
-                      value={state?.ppbd?.decision || ""}
-                      onChange={(e) => userRole === "ppbd" && e.target.value && onDecision(e.target.value as Decision)}
-                      disabled={userRole !== "ppbd"}
-                      className="rounded border border-gray-200 px-2 py-1 text-sm disabled:opacity-50"
-                    >
-                      <option value="">—</option>
-                      <option value="retain">Retain</option>
-                      <option value="remove">Remove</option>
-                      <option value="update">Update</option>
-                    </select>
-                  </div>
-                  {state?.ppbd?.decision === "update" && (
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-500">New symbol</span>
-                      <input
-                        type="text"
-                        defaultValue={state?.ppbd?.newSymbol || ""}
-                        onBlur={(e) => userRole === "ppbd" && onDecision("update", e.target.value)}
-                        disabled={userRole !== "ppbd"}
-                        className="rounded border border-gray-200 px-2 py-1 text-sm w-40 disabled:opacity-50"
-                        placeholder="Enter new symbol"
-                      />
-                    </div>
-                  )}
+              {/* Decisions table */}
+              {allEntities && allEntities.length > 0 && (
+                <div className="mt-4 border-t pt-4">
+                  <div className="text-xs font-medium text-gray-500 uppercase mb-2">Decisions</div>
+                  <table className="w-full text-xs">
+                    <thead>
+                      <tr className="text-gray-400">
+                        <th className="text-left font-medium pb-1">Entity</th>
+                        <th className="text-center font-medium pb-1 w-20">Focal</th>
+                        <th className="text-center font-medium pb-1 w-20">PPBD</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {allEntities.map((ent) => {
+                        const isCurrentEntity = ent === entity;
+                        const entDecisions = allDecisions.filter((d) => d.entity === ent);
+                        const latestFocal = entDecisions.filter((d) => d.role === "focal").pop();
+                        const latestPpbd = entDecisions.filter((d) => d.role === "ppbd").pop();
+                        const canEditFocal = isCurrentEntity && userRole === "focal" && onDecision;
+                        const canEditPpbd = isCurrentEntity && userRole === "ppbd" && onDecision;
+                        
+                        return (
+                          <tr
+                            key={ent}
+                            className={isCurrentEntity ? "bg-un-blue/10" : ""}
+                          >
+                            <td className={`py-1.5 pr-2 font-medium ${isCurrentEntity ? "text-un-blue" : "text-gray-600"}`}>
+                              {ent}
+                            </td>
+                            <td className="py-1.5 px-1">
+                              <select
+                                value={isCurrentEntity ? (state?.focal?.decision || "") : (latestFocal?.decision || "")}
+                                onChange={(e) => canEditFocal && e.target.value && handleDecision(e.target.value as Decision)}
+                                disabled={!canEditFocal}
+                                title={latestFocal ? `${latestFocal.userEmail} · ${new Date(latestFocal.createdAt).toLocaleDateString()}` : undefined}
+                                className={`h-6 w-full rounded border px-1 text-xs ${
+                                  (isCurrentEntity ? state?.focal?.decision : latestFocal?.decision) === "retain" ? "border-green-200 bg-green-50 text-green-700" :
+                                  (isCurrentEntity ? state?.focal?.decision : latestFocal?.decision) === "remove" ? "border-red-200 bg-red-50 text-red-700" :
+                                  (isCurrentEntity ? state?.focal?.decision : latestFocal?.decision) === "update" ? "border-amber-200 bg-amber-50 text-amber-700" :
+                                  (isCurrentEntity ? state?.focal?.decision : latestFocal?.decision) === "add" ? "border-blue-200 bg-blue-50 text-blue-700" :
+                                  "border-gray-200 bg-white text-gray-400"
+                                } ${!canEditFocal ? "opacity-60 cursor-default" : ""}`}
+                              >
+                                <option value="">—</option>
+                                <option value="retain">Retain</option>
+                                <option value="remove">Remove</option>
+                                <option value="update">Update</option>
+                              </select>
+                            </td>
+                            <td className="py-1.5 px-1">
+                              <select
+                                value={isCurrentEntity ? (state?.ppbd?.decision || "") : (latestPpbd?.decision || "")}
+                                onChange={(e) => canEditPpbd && e.target.value && handleDecision(e.target.value as Decision)}
+                                disabled={!canEditPpbd}
+                                title={latestPpbd ? `${latestPpbd.userEmail} · ${new Date(latestPpbd.createdAt).toLocaleDateString()}` : undefined}
+                                className={`h-6 w-full rounded border px-1 text-xs ${
+                                  (isCurrentEntity ? state?.ppbd?.decision : latestPpbd?.decision) === "retain" ? "border-green-200 bg-green-50 text-green-700" :
+                                  (isCurrentEntity ? state?.ppbd?.decision : latestPpbd?.decision) === "remove" ? "border-red-200 bg-red-50 text-red-700" :
+                                  (isCurrentEntity ? state?.ppbd?.decision : latestPpbd?.decision) === "update" ? "border-amber-200 bg-amber-50 text-amber-700" :
+                                  (isCurrentEntity ? state?.ppbd?.decision : latestPpbd?.decision) === "add" ? "border-blue-200 bg-blue-50 text-blue-700" :
+                                  "border-gray-200 bg-white text-gray-400"
+                                } ${!canEditPpbd ? "opacity-60 cursor-default" : ""}`}
+                              >
+                                <option value="">—</option>
+                                <option value="retain">Retain</option>
+                                <option value="remove">Remove</option>
+                                <option value="update">Update</option>
+                              </select>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
                 </div>
               )}
 
@@ -665,9 +717,9 @@ export function DocumentSymbol({
                       : "text-gray-500 hover:text-gray-700"
                   }`}
                 >
-                  Activity {((state?.decisions?.length || 0) + (state?.comments?.length || 0)) > 0 && (
+                  Activity {(allDecisions.length + allComments.length) > 0 && (
                     <span className="ml-1 text-gray-400">
-                      ({(state?.decisions?.length || 0) + (state?.comments?.length || 0)})
+                      ({allDecisions.length + allComments.length})
                     </span>
                   )}
                 </button>
@@ -687,54 +739,115 @@ export function DocumentSymbol({
             <div className="flex-1 overflow-y-auto p-4 bg-gray-50">
               {activeTab === "activity" ? (
                 <div className="space-y-3">
+                  {/* Entity filter pills */}
+                  {allEntities && allEntities.length > 1 && (
+                    <div className="mb-3">
+                      <div className="flex flex-wrap items-center gap-1.5">
+                        <button
+                          onClick={() => setActivityFilterEntity(null)}
+                          className={`rounded px-2 py-0.5 text-xs transition-colors ${
+                            !activityFilterEntity
+                              ? "bg-gray-600 text-white"
+                              : "bg-white text-gray-500 hover:bg-gray-100"
+                          }`}
+                        >
+                          All entities
+                        </button>
+                        {allEntities.map((ent) => {
+                          const isCurrentEntity = ent === entity;
+                          const count = allDecisions.filter((d) => d.entity === ent).length +
+                                       allComments.filter((c) => c.entity === ent).length;
+                          return (
+                            <button
+                              key={ent}
+                              onClick={() => setActivityFilterEntity(ent)}
+                              className={`rounded px-2 py-0.5 text-xs transition-colors ${
+                                activityFilterEntity === ent
+                                  ? "bg-un-blue text-white"
+                                  : isCurrentEntity
+                                  ? "bg-un-blue/20 text-un-blue hover:bg-un-blue/30"
+                                  : "bg-white text-gray-600 hover:bg-gray-100"
+                              }`}
+                            >
+                              {ent} <span className={activityFilterEntity === ent ? "text-white/70" : "text-gray-400"}>({count})</span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
                   {/* Activity log (all decisions + comments interleaved) */}
                   {(() => {
                     type ActivityItem = { type: "decision"; data: MandateDecision } | { type: "comment"; data: MandateComment };
                     const items: ActivityItem[] = [];
-                    for (const d of state?.decisions || []) items.push({ type: "decision", data: d });
-                    for (const c of state?.comments || []) items.push({ type: "comment", data: c });
+                    const filteredDecisions = activityFilterEntity
+                      ? allDecisions.filter((d) => d.entity === activityFilterEntity)
+                      : allDecisions;
+                    const filteredComments = activityFilterEntity
+                      ? allComments.filter((c) => c.entity === activityFilterEntity)
+                      : allComments;
+                    for (const d of filteredDecisions) items.push({ type: "decision", data: d });
+                    for (const c of filteredComments) items.push({ type: "comment", data: c });
                     items.sort((a, b) => new Date(a.data.createdAt).getTime() - new Date(b.data.createdAt).getTime());
                     
                     if (items.length === 0) {
                       return <div className="text-sm text-gray-400">No activity yet</div>;
                     }
                     
-                    return items.map((item, i) => (
-                      <div key={item.data.id || i} className="text-xs">
-                        {item.type === "decision" ? (
-                          <div className={`rounded p-2 ${
-                            item.data.decision === "retain" ? "bg-green-50" :
-                            item.data.decision === "remove" ? "bg-red-50" :
-                            item.data.decision === "update" ? "bg-amber-50" :
-                            "bg-blue-50"
-                          }`}>
-                            <div className="flex items-center gap-1">
-                              <span className={`font-medium ${
-                                item.data.decision === "retain" ? "text-green-700" :
-                                item.data.decision === "remove" ? "text-red-700" :
-                                item.data.decision === "update" ? "text-amber-700" :
-                                "text-blue-700"
-                              }`}>
-                                {(item.data as MandateDecision).role === "ppbd" ? "PPBD" : "Focal"}: {item.data.decision}
-                              </span>
-                              {(item.data as MandateDecision).newSymbol && (
-                                <span className="text-gray-500">→ {(item.data as MandateDecision).newSymbol}</span>
-                              )}
+                    return items.map((item, i) => {
+                      const itemEntity = item.data.entity;
+                      const isCurrentEntity = itemEntity === entity;
+                      return (
+                        <div key={item.data.id || i} className="text-xs">
+                          {item.type === "decision" ? (
+                            <div className={`rounded p-2 ${
+                              item.data.decision === "retain" ? "bg-green-50" :
+                              item.data.decision === "remove" ? "bg-red-50" :
+                              item.data.decision === "update" ? "bg-amber-50" :
+                              "bg-blue-50"
+                            }`}>
+                              <div className="flex items-center gap-1">
+                                <span className={`font-medium ${
+                                  item.data.decision === "retain" ? "text-green-700" :
+                                  item.data.decision === "remove" ? "text-red-700" :
+                                  item.data.decision === "update" ? "text-amber-700" :
+                                  "text-blue-700"
+                                }`}>
+                                  {(item.data as MandateDecision).role === "ppbd" ? "PPBD decision" : "Focal point decision"}: {item.data.decision}
+                                </span>
+                                {(item.data as MandateDecision).newSymbol && (
+                                  <span className="text-gray-500">→ {(item.data as MandateDecision).newSymbol}</span>
+                                )}
+                              </div>
+                              <div className="flex items-center gap-1.5 text-gray-400 mt-0.5">
+                                <span className={`rounded px-1 py-0.5 text-[10px] font-medium ${
+                                  isCurrentEntity ? "bg-un-blue/20 text-un-blue" : "bg-gray-200 text-gray-500"
+                                }`}>
+                                  {itemEntity}
+                                </span>
+                                <span>{item.data.userEmail}</span>
+                                <span>·</span>
+                                <span>{new Date(item.data.createdAt).toLocaleDateString()}</span>
+                              </div>
                             </div>
-                            <div className="text-gray-400 mt-0.5">
-                              {item.data.userEmail} · {new Date(item.data.createdAt).toLocaleDateString()}
+                          ) : (
+                            <div className="rounded bg-white p-2 shadow-sm">
+                              <div className="text-gray-700">{(item.data as MandateComment).comment}</div>
+                              <div className="flex items-center gap-1.5 text-gray-400 mt-0.5">
+                                <span className={`rounded px-1 py-0.5 text-[10px] font-medium ${
+                                  isCurrentEntity ? "bg-un-blue/20 text-un-blue" : "bg-gray-200 text-gray-500"
+                                }`}>
+                                  {itemEntity}
+                                </span>
+                                <span>{item.data.userEmail}</span>
+                                <span>·</span>
+                                <span>{new Date(item.data.createdAt).toLocaleDateString()}</span>
+                              </div>
                             </div>
-                          </div>
-                        ) : (
-                          <div className="rounded bg-white p-2 shadow-sm">
-                            <div className="text-gray-700">{(item.data as MandateComment).comment}</div>
-                            <div className="text-gray-400 mt-0.5">
-                              {item.data.userEmail} · {new Date(item.data.createdAt).toLocaleDateString()}
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    ));
+                          )}
+                        </div>
+                      );
+                    });
                   })()}
                   {/* Add comment input */}
                   {onComment && (
@@ -745,17 +858,17 @@ export function DocumentSymbol({
                         onChange={(e) => setCommentText(e.target.value)}
                         onKeyDown={(e) => {
                           if (e.key === "Enter" && commentText.trim()) {
-                            onComment(commentText.trim());
+                            handleComment(commentText.trim());
                             setCommentText("");
                           }
                         }}
-                        placeholder="Add a comment..."
+                        placeholder={`Add a comment for ${entity}...`}
                         className="flex-1 rounded border border-gray-200 bg-white px-2 py-1.5 text-xs"
                       />
                       <button
                         onClick={() => {
                           if (commentText.trim()) {
-                            onComment(commentText.trim());
+                            handleComment(commentText.trim());
                             setCommentText("");
                           }
                         }}

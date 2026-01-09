@@ -18,8 +18,8 @@ export async function sendMagicLink(email: string, token: string) {
   await transporter.sendMail({
     from: `"UN Mandate Housekeeping" <${process.env.SMTP_FROM || process.env.SMTP_USER}>`,
     to: email,
-    subject: "Sign in to PPB 2026 Mandate Housekeeping",
-    text: `PPB 2026 Mandate Housekeeping\n\nClick here to sign in: ${link}\n\nThis link expires in 15 minutes.\n\nIf you did not request this email, you can safely ignore it.`,
+    subject: "Sign in to PPB 2027 Mandate Housekeeping",
+    text: `PPB 2027 Mandate Housekeeping\n\nClick here to sign in: ${link}\n\nThis link expires in 15 minutes.\n\nIf you did not request this email, you can safely ignore it.`,
     html: `
 <!DOCTYPE html>
 <html>
@@ -36,7 +36,7 @@ export async function sendMagicLink(email: string, token: string) {
                 <img src="${logoUrl}" alt="UN" width="120" style="display:block;" />
               </td>
               <td style="vertical-align:middle;">
-                <div style="font-size:20px;font-weight:700;color:#000000;line-height:1.2;">PPB 2026 Mandate Housekeeping</div>
+                <div style="font-size:20px;font-weight:700;color:#000000;line-height:1.2;">7 Mandate Housekeeping</div>
               </td>
             </tr>
           </table>

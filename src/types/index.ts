@@ -133,5 +133,5 @@ export interface MandateState {
   focal: MandateDecision | null;  // latest focal decision
   ppbd: MandateDecision | null;   // latest ppbd decision
   decisions: MandateDecision[];   // all decisions
-  comments: MandateComment[];
+  comments: MandateComment[];     // comments for this entity
 }

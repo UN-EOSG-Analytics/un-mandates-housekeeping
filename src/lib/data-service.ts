@@ -1,5 +1,5 @@
 /**
- * Data service for PPB 2026 mandate data
+ * Data service for PPB 2027 mandate data
  * Fetches data from PostgreSQL database
  */
 

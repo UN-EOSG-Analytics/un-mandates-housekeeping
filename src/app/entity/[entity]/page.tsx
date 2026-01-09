@@ -57,7 +57,7 @@ export default async function EntityPage({ params }: PageProps) {
             />
             <div>
               <h1 className="text-2xl font-bold text-foreground">
-                PPB 2026 Mandate Housekeeping
+                PPB 2027 Mandate Housekeeping
               </h1>
               <p className="text-sm text-gray-500">
                 Overview of mandates and suggestions for updates

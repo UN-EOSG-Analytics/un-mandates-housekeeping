@@ -51,8 +51,8 @@ export async function GET(req: NextRequest) {
   const entity = req.nextUrl.searchParams.get("entity");
   if (!entity) return NextResponse.json({ error: "entity required" }, { status: 400 });
 
-  // Get all decisions and comments
-  const [decisionRows, commentRows] = await Promise.all([
+  // Get all decisions, comments, and total comment counts per document
+  const [decisionRows, commentRows, totalCommentRows] = await Promise.all([
     query<DecisionRow>(
       `SELECT d.*, CASE WHEN p.email IS NOT NULL THEN 'ppbd' ELSE 'focal' END as role
        FROM mandates_housekeeping.mandate_decisions d
@@ -65,7 +65,19 @@ export async function GET(req: NextRequest) {
       `SELECT * FROM mandates_housekeeping.mandate_comments WHERE entity = $1 ORDER BY created_at`,
       [entity]
     ),
+    query<{ document_symbol: string; count: string }>(
+      `SELECT document_symbol, COUNT(*)::text as count 
+       FROM mandates_housekeeping.mandate_comments 
+       GROUP BY document_symbol`,
+      []
+    ),
   ]);
+
+  // Build total comments lookup
+  const totalCommentsMap: Record<string, number> = {};
+  for (const row of totalCommentRows) {
+    totalCommentsMap[row.document_symbol] = parseInt(row.count);
+  }
 
   // Group into MandateState objects
   const stateMap: Record<string, MandateState> = {};
@@ -105,7 +117,10 @@ export async function GET(req: NextRequest) {
     stateMap[key].comments.push(toComment(row));
   }
 
-  return NextResponse.json(Object.values(stateMap));
+  return NextResponse.json({
+    states: Object.values(stateMap),
+    totalComments: totalCommentsMap,
+  });
 }
 
 export async function POST(req: NextRequest) {
