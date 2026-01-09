@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { Plus, Loader2 } from "lucide-react";
+import { Plus, Loader2, Check } from "lucide-react";
 import { ExportDropdown } from "./ExportDropdown";
 import type { Mandate, MandateState, MandateComment, Decision, UserRole } from "@/types";
 import { DocumentSymbol } from "./DocumentSymbol";
@@ -132,6 +132,54 @@ function DecisionSelect({
           className="h-7 w-28 rounded border border-gray-200 px-1.5 text-xs"
         />
       )}
+    </div>
+  );
+}
+
+function PhaseTracker() {
+  const phases = [
+    { id: 1, name: "Internal Review", type: "internal" },
+    { id: 2, name: "PPBD Review", type: "ppbd" },
+    { id: 3, name: "Internal Review", type: "internal" },
+    { id: 4, name: "PPBD Review", type: "ppbd" },
+  ];
+  const currentPhase = 1; // Mockup: always phase 1
+
+  return (
+    <div className="rounded-lg border border-gray-200 bg-white px-4 py-3 shadow-sm">
+      <div className="flex items-center gap-2">
+        <span className="text-xs font-medium text-gray-500 uppercase">Review phases</span>
+        <div className="flex-1 flex items-center gap-1">
+          {phases.map((phase, i) => (
+            <div key={phase.id} className="flex items-center">
+              {i > 0 && <div className="w-6 h-px bg-gray-200 mx-1" />}
+              <div
+                className={`flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium transition-colors ${
+                  phase.id < currentPhase
+                    ? "bg-green-100 text-green-700"
+                    : phase.id === currentPhase
+                    ? phase.type === "internal"
+                      ? "bg-un-blue text-white"
+                      : "bg-amber-500 text-white"
+                    : "bg-gray-100 text-gray-400"
+                }`}
+              >
+                {phase.id < currentPhase && <Check className="h-3 w-3" />}
+                <span className="tabular-nums">{phase.id}.</span>
+                {phase.name}
+              </div>
+            </div>
+          ))}
+        </div>
+        {currentPhase <= phases.length && (
+          <button
+            onClick={() => alert("Phase completion not yet implemented")}
+            className="rounded bg-un-blue px-3 py-1 text-xs font-medium text-white hover:bg-un-blue/90"
+          >
+            Complete Phase {currentPhase}
+          </button>
+        )}
+      </div>
     </div>
   );
 }
@@ -581,6 +629,9 @@ export function EntityDetail({
           </div>
         </div>
       </div>
+
+      {/* Phase Tracker */}
+      <PhaseTracker />
 
       {/* Co-citing entities filter */}
       {coCitingEntities.length > 0 && (
