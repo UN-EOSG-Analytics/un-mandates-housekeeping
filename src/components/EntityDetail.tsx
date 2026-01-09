@@ -178,7 +178,7 @@ function MandateRowContent({
   const ageInfo = getAgeIndicator(mandate.year);
 
   const focalAdded = isAdded && state?.focal?.decision === "add";
-  const canCancelFocal = isAdded && userRole === "focal" && focalAdded;
+  const canCancelFocal = isAdded && (userRole === "focal" || userRole === "ppbd") && focalAdded;
 
   // Check if this row has an update decision (to grey out content)
   const hasUpdate = state?.focal?.decision === "update";
@@ -255,9 +255,9 @@ function MandateRowContent({
             newSymbol={state?.focal?.newSymbol ?? null}
             userEmail={state?.focal?.userEmail ?? null}
             createdAt={state?.focal?.createdAt ?? null}
-            onChange={userRole === "focal" ? onDecision : () => {}}
-            onUpdateClick={userRole === "focal" ? onUpdateClick : undefined}
-            disabled={userRole !== "focal"}
+            onChange={onDecision}
+            onUpdateClick={onUpdateClick}
+            disabled={!userRole}
           />
         )}
       </div>
@@ -321,7 +321,7 @@ function MandateRow({
   const [showUpdateSearch, setShowUpdateSearch] = useState(false);
 
   // Check if there's a completed update (has newSymbol)
-  const currentUserDecision = userRole === "focal" ? state?.focal : null;
+  const currentUserDecision = state?.focal ?? state?.ppbd;
   const hasCompletedUpdate = currentUserDecision?.decision === "update" && currentUserDecision?.newSymbol;
   const newSymbol = currentUserDecision?.newSymbol;
 

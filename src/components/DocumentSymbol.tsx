@@ -689,7 +689,7 @@ export function DocumentSymbol({
                             const isCurrentEntity = ent === entity;
                             const entDecisions = allDecisions.filter((d) => d.entity === ent);
                             const latestFocal = entDecisions.filter((d) => d.role === "focal").pop();
-                            const canEdit = isCurrentEntity && userRole === "focal" && onDecision;
+                            const canEdit = isCurrentEntity && (userRole === "focal" || userRole === "ppbd") && onDecision;
                             const canApprove = isCurrentEntity && userRole === "ppbd" && onApprove && latestFocal;
                             const isApproved = !!(isCurrentEntity ? state?.focal?.approvedBy : latestFocal?.approvedBy);
                             const decisionId = isCurrentEntity ? state?.focal?.id : latestFocal?.id;
