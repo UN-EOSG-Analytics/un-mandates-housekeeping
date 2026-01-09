@@ -1,20 +1,19 @@
 import Image from "next/image";
 import { EntityOverview } from "@/components/EntityOverview";
 import { ExportDropdown } from "@/components/ExportDropdown";
+import { UserMenu } from "@/components/UserMenu";
 import { transformPPBData } from "@/lib/transformData";
 import { fetchPPBRecords, getBudgetPartsMeta } from "@/lib/data-service";
-
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+import { getCurrentUser } from "@/lib/auth";
 
 async function getData() {
   const records = await fetchPPBRecords();
   const budgetPartsMeta = getBudgetPartsMeta();
-
   return transformPPBData(records, budgetPartsMeta);
 }
 
 export default async function Home() {
-  const parts = await getData();
+  const [parts, user] = await Promise.all([getData(), getCurrentUser()]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -23,7 +22,7 @@ export default async function Home() {
         <div className="mb-8 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Image
-              src={`${basePath}/images/UN_Logo_Stacked_Colour_English.svg`}
+              src="/images/UN_Logo_Stacked_Colour_English.svg"
               alt="UN Logo"
               width={60}
               height={60}
@@ -39,7 +38,10 @@ export default async function Home() {
               </p>
             </div>
           </div>
-          <ExportDropdown label="Export All" />
+          <div className="flex items-center gap-4">
+            {user && <UserMenu email={user.email} />}
+            <ExportDropdown label="Export All" />
+          </div>
         </div>
 
         {/* Entity Overview */}

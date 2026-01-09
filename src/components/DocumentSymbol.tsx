@@ -382,8 +382,6 @@ function FullParagraphTree({ paragraphs }: { paragraphs: Paragraph[] }) {
   );
 }
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-
 export function DocumentSymbol({
   symbol,
   link,
@@ -410,7 +408,7 @@ export function DocumentSymbol({
       setLoading(true);
       const safeSymbol = symbol.replace(/\//g, "_").replace(/ /g, "_");
 
-      fetch(`${basePath}/data/paragraphs/${safeSymbol}.json`)
+      fetch(`/data/paragraphs/${safeSymbol}.json`)
         .then((res) => (res.ok ? res.json() : null))
         .catch(() => null)
         .then((parasData) => {
