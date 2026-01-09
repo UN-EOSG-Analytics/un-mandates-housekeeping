@@ -29,6 +29,7 @@ interface Props {
   userEmail?: string | null;
   onDecision?: (decision: Decision, newSymbol?: string) => void;
   onComment?: (comment: string) => void;
+  onUpdateClick?: () => void; // Called when user selects "update" from sidebar
   metadataFromDb?: boolean;
 }
 
@@ -418,6 +419,7 @@ export function DocumentSymbol({
   userEmail,
   onDecision,
   onComment,
+  onUpdateClick,
   metadataFromDb,
 }: Props) {
   const [internalOpen, setInternalOpen] = useState(false);
@@ -569,9 +571,12 @@ export function DocumentSymbol({
       ? getEntityRelevance(paragraphs, selectedEntity, selectedEntityLong)
       : { indices: new Set<number>(), aiComments: {} };
 
+  // In controlled mode (isOpen passed), only render the sidebar
+  const sidebarOnly = controlledOpen !== undefined;
+
   return (
     <>
-      {isTruncated ? <Tooltip content={symbol}>{btn}</Tooltip> : btn}
+      {!sidebarOnly && (isTruncated ? <Tooltip content={symbol}>{btn}</Tooltip> : btn)}
 
       {open && (
         <div className="fixed inset-0 z-50 flex justify-end cursor-default">
@@ -678,7 +683,14 @@ export function DocumentSymbol({
                             <td className="py-1.5 px-1">
                               <select
                                 value={isCurrentEntity ? (state?.focal?.decision || "") : (latestFocal?.decision || "")}
-                                onChange={(e) => canEditFocal && e.target.value && handleDecision(e.target.value as Decision)}
+                                onChange={(e) => {
+                                  if (!canEditFocal || !e.target.value) return;
+                                  if (e.target.value === "update" && onUpdateClick) {
+                                    onUpdateClick();
+                                  } else {
+                                    handleDecision(e.target.value as Decision);
+                                  }
+                                }}
                                 disabled={!canEditFocal}
                                 title={latestFocal ? `${latestFocal.userEmail} · ${new Date(latestFocal.createdAt).toLocaleDateString()}` : undefined}
                                 className={`h-6 w-full rounded border px-1 text-xs ${
@@ -698,7 +710,14 @@ export function DocumentSymbol({
                             <td className="py-1.5 px-1">
                               <select
                                 value={isCurrentEntity ? (state?.ppbd?.decision || "") : (latestPpbd?.decision || "")}
-                                onChange={(e) => canEditPpbd && e.target.value && handleDecision(e.target.value as Decision)}
+                                onChange={(e) => {
+                                  if (!canEditPpbd || !e.target.value) return;
+                                  if (e.target.value === "update" && onUpdateClick) {
+                                    onUpdateClick();
+                                  } else {
+                                    handleDecision(e.target.value as Decision);
+                                  }
+                                }}
                                 disabled={!canEditPpbd}
                                 title={latestPpbd ? `${latestPpbd.userEmail} · ${new Date(latestPpbd.createdAt).toLocaleDateString()}` : undefined}
                                 className={`h-6 w-full rounded border px-1 text-xs ${

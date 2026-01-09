@@ -38,6 +38,7 @@ function DecisionSelect({
   userEmail,
   createdAt,
   onChange,
+  onUpdateClick,
   disabled,
 }: {
   decision: Decision | null;
@@ -45,10 +46,9 @@ function DecisionSelect({
   userEmail: string | null;
   createdAt: string | null;
   onChange: (decision: Decision, newSymbol?: string) => void;
+  onUpdateClick?: () => void; // Callback to show search UI
   disabled?: boolean;
 }) {
-  const [localNewSymbol, setLocalNewSymbol] = useState(newSymbol || "");
-
   const tooltipContent = userEmail && createdAt
     ? `Set by ${userEmail} at ${new Date(createdAt).toLocaleDateString()}`
     : null;
@@ -58,7 +58,13 @@ function DecisionSelect({
       value={decision || ""}
       onChange={(e) => {
         const v = e.target.value as Decision | "";
-        if (v) onChange(v, v === "update" ? localNewSymbol : undefined);
+        if (v === "update") {
+          // Trigger search UI instead of immediate onChange
+          if (onUpdateClick) onUpdateClick();
+          else onChange(v);
+        } else if (v) {
+          onChange(v);
+        }
       }}
       disabled={disabled}
       className={`h-7 w-20 rounded border border-gray-200 px-1 text-xs ${
@@ -75,22 +81,7 @@ function DecisionSelect({
     </select>
   );
 
-  return (
-    <div className="flex items-center gap-1">
-      {tooltipContent ? <Tooltip content={tooltipContent}>{select}</Tooltip> : select}
-      {decision === "update" && (
-        <input
-          type="text"
-          value={localNewSymbol}
-          onChange={(e) => setLocalNewSymbol(e.target.value)}
-          onBlur={() => onChange("update", localNewSymbol)}
-          onKeyDown={(e) => e.key === "Enter" && onChange("update", localNewSymbol)}
-          placeholder="New symbol"
-          className="h-7 w-28 rounded border border-gray-200 px-1.5 text-xs"
-        />
-      )}
-    </div>
-  );
+  return tooltipContent ? <Tooltip content={tooltipContent}>{select}</Tooltip> : select;
 }
 
 function PhaseTracker() {
@@ -160,26 +151,28 @@ function ColumnHeaders() {
   );
 }
 
-function MandateRow({
+// Inner row content (shared between normal and update target rows)
+function MandateRowContent({
   mandate,
   state,
   commentCount,
   userRole,
-  userEmail,
-  onDecision,
-  onComment,
   isAdded,
+  isUpdateTarget,
+  onOpenSidebar,
+  onDecision,
+  onUpdateClick,
 }: {
   mandate: Mandate;
   state?: MandateState;
   commentCount: number;
   userRole: UserRole | null;
-  userEmail: string | null;
-  onDecision: (decision: Decision, newSymbol?: string) => void;
-  onComment: (comment: string) => void;
   isAdded?: boolean;
+  isUpdateTarget?: boolean; // True for the "new" row in update view (no dropdowns)
+  onOpenSidebar: () => void;
+  onDecision: (decision: Decision, newSymbol?: string) => void;
+  onUpdateClick?: () => void;
 }) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   const ageInfo = getAgeIndicator(mandate.year);
 
   const focalAdded = isAdded && state?.focal?.decision === "add";
@@ -187,11 +180,205 @@ function MandateRow({
   const canCancelFocal = isAdded && userRole === "focal" && focalAdded;
   const canCancelPpbd = isAdded && userRole === "ppbd" && ppbdAdded;
 
+  // Check if this row has an update decision (to grey out content)
+  const hasUpdate = state?.focal?.decision === "update" || state?.ppbd?.decision === "update";
+  const contentGreyed = hasUpdate && !isUpdateTarget;
+
   return (
     <div
-      className={`grid ${GRID_COLS} items-center gap-x-2 gap-y-1.5 rounded-lg bg-white px-3 py-2.5 text-sm shadow-sm cursor-pointer hover:bg-gray-50 transition-colors`}
-      onClick={() => setSidebarOpen(true)}
+      className={`grid ${GRID_COLS} items-center gap-x-2 gap-y-1.5 px-3 py-2.5 text-sm cursor-pointer transition-colors ${
+        isUpdateTarget ? "bg-amber-50/50" : "hover:bg-gray-50"
+      }`}
+      onClick={onOpenSidebar}
     >
+      <div onClick={(e) => e.stopPropagation()}>
+        {isUpdateTarget && <span className="text-amber-500 mr-1 text-xs">↳</span>}
+        <a
+          href={mandate.link || "#"}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`inline-block rounded px-2 py-0.5 text-xs font-medium whitespace-nowrap transition-colors ${
+            contentGreyed 
+              ? "bg-gray-100 text-gray-400" 
+              : "bg-blue-50 text-un-blue hover:bg-blue-100"
+          }`}
+          onClick={(e) => !mandate.link && e.preventDefault()}
+        >
+          {mandate.symbol}
+        </a>
+      </div>
+      <div className={`cursor-help truncate ${contentGreyed ? "text-gray-400" : "text-gray-600"}`} title={mandate.title || undefined}>
+        {mandate.title || <span className="italic text-gray-400">No title</span>}
+      </div>
+      <div className={`text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`} title={mandate.body ?? undefined}>
+        {abbreviateBody(mandate.body) ?? "—"}
+      </div>
+      <div className={`text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`}>{mandate.year ?? "—"}</div>
+      <Tooltip content={ageInfo.tooltip}>
+        <span
+          className={`cursor-help rounded px-1.5 py-0.5 text-xs font-medium ${contentGreyed ? "opacity-50" : ""} ${ageInfo.color} ${ageInfo.bgColor}`}
+        >
+          {ageInfo.label}
+        </span>
+      </Tooltip>
+      <Tooltip
+        content={
+          mandate.otherEntitiesCount > 0
+            ? `${mandate.otherEntitiesCount} other entit${mandate.otherEntitiesCount !== 1 ? "ies" : "y"} also cite${mandate.otherEntitiesCount === 1 ? "s" : ""} ${mandate.symbol}`
+            : `No other entities cite ${mandate.symbol}`
+        }
+      >
+        <span className={`cursor-help text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`}>
+          {mandate.otherEntitiesCount > 0 ? `+${mandate.otherEntitiesCount}` : "—"}
+        </span>
+      </Tooltip>
+      <Tooltip content={commentCount > 0 ? "Click to view comments" : "Click to add a comment"}>
+        <span className={`cursor-pointer text-xs ${commentCount > 0 ? "text-un-blue font-medium" : "text-gray-400"} ${contentGreyed ? "opacity-50" : ""}`}>
+          {commentCount > 0 ? commentCount : "—"}
+        </span>
+      </Tooltip>
+      <div>
+        {!mandate.metadataFromDb && (
+          <Tooltip content="Metadata not found in documents database">
+            <AlertTriangle className="h-4 w-4 text-amber-500" />
+          </Tooltip>
+        )}
+      </div>
+      <div onClick={(e) => e.stopPropagation()}>
+        {isUpdateTarget ? (
+          <span className="text-xs text-gray-400">—</span>
+        ) : isAdded ? (
+          <AddBadge show={!!focalAdded} canCancel={!!canCancelFocal} onCancel={() => onDecision("cancel")} />
+        ) : (
+          <DecisionSelect
+            decision={state?.focal?.decision ?? null}
+            newSymbol={state?.focal?.newSymbol ?? null}
+            userEmail={state?.focal?.userEmail ?? null}
+            createdAt={state?.focal?.createdAt ?? null}
+            onChange={userRole === "focal" ? onDecision : () => {}}
+            onUpdateClick={userRole === "focal" ? onUpdateClick : undefined}
+            disabled={userRole !== "focal"}
+          />
+        )}
+      </div>
+      <div onClick={(e) => e.stopPropagation()}>
+        {isUpdateTarget ? (
+          <span className="text-xs text-gray-400">—</span>
+        ) : isAdded ? (
+          <AddBadge show={!!ppbdAdded} canCancel={!!canCancelPpbd} onCancel={() => onDecision("cancel")} />
+        ) : (
+          <DecisionSelect
+            decision={state?.ppbd?.decision ?? null}
+            newSymbol={state?.ppbd?.newSymbol ?? null}
+            userEmail={state?.ppbd?.userEmail ?? null}
+            createdAt={state?.ppbd?.createdAt ?? null}
+            onChange={userRole === "ppbd" ? onDecision : () => {}}
+            onUpdateClick={userRole === "ppbd" ? onUpdateClick : undefined}
+            disabled={userRole !== "ppbd"}
+          />
+        )}
+      </div>
+    </div>
+  );
+}
+
+function MandateRow({
+  mandate,
+  state,
+  commentCount,
+  userRole,
+  userEmail,
+  onDecision,
+  onUpdateWithManual,
+  onComment,
+  isAdded,
+  updateTargetMetadata,
+}: {
+  mandate: Mandate;
+  state?: MandateState;
+  commentCount: number;
+  userRole: UserRole | null;
+  userEmail: string | null;
+  onDecision: (decision: Decision, newSymbol?: string) => void;
+  onUpdateWithManual: (newSymbol: string, manualData: ManualEntryData) => void;
+  onComment: (comment: string) => void;
+  isAdded?: boolean;
+  updateTargetMetadata?: { title: string | null; year: number | null; body: string | null } | null;
+}) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [showUpdateSearch, setShowUpdateSearch] = useState(false);
+
+  // Check if there's a completed update (has newSymbol)
+  const currentUserDecision = userRole === "focal" ? state?.focal : userRole === "ppbd" ? state?.ppbd : null;
+  const hasCompletedUpdate = currentUserDecision?.decision === "update" && currentUserDecision?.newSymbol;
+  const newSymbol = currentUserDecision?.newSymbol;
+
+  // Create a fake mandate object for the "new" row in update view
+  const newMandate: Mandate | null = hasCompletedUpdate && newSymbol ? {
+    ...mandate,
+    symbol: newSymbol,
+    title: updateTargetMetadata?.title || "",
+    year: updateTargetMetadata?.year || null,
+    body: updateTargetMetadata?.body || null,
+    link: null,
+    metadataFromDb: !!updateTargetMetadata,
+    isAdded: false,
+  } : null;
+
+  const handleUpdateSelect = (symbol: string) => {
+    onDecision("update", symbol);
+    setShowUpdateSearch(false);
+  };
+
+  const handleUpdateManual = (data: ManualEntryData) => {
+    onUpdateWithManual(data.symbol, data);
+    setShowUpdateSearch(false);
+  };
+
+  return (
+    <div className="rounded-lg bg-white shadow-sm">
+      {/* Original row */}
+      <MandateRowContent
+        mandate={mandate}
+        state={state}
+        commentCount={commentCount}
+        userRole={userRole}
+        isAdded={isAdded}
+        onOpenSidebar={() => setSidebarOpen(true)}
+        onDecision={onDecision}
+        onUpdateClick={() => setShowUpdateSearch(true)}
+      />
+
+      {/* Update search input (shown when user selects "update" from dropdown) */}
+      {showUpdateSearch && !hasCompletedUpdate && (
+        <div className="border-t border-gray-100 px-3 py-2 bg-amber-50/30">
+          <div className="text-xs text-amber-600 mb-2 font-medium">Select replacement document:</div>
+          <DocumentSearchInput
+            onSelect={handleUpdateSelect}
+            onManualSubmit={handleUpdateManual}
+            onCancel={() => setShowUpdateSearch(false)}
+            placeholder="Search for replacement document..."
+            submitLabel="Update"
+            formTitle="Enter replacement document manually"
+            compact
+          />
+        </div>
+      )}
+
+      {/* New document row (shown when update is complete) */}
+      {hasCompletedUpdate && newMandate && (
+        <MandateRowContent
+          mandate={newMandate}
+          state={undefined}
+          commentCount={0}
+          userRole={null}
+          isUpdateTarget
+          onOpenSidebar={() => {}}
+          onDecision={() => {}}
+        />
+      )}
+
+      {/* Sidebar (reuse DocumentSymbol for full sidebar) */}
       <div onClick={(e) => e.stopPropagation()}>
         <DocumentSymbol
           symbol={mandate.symbol}
@@ -215,76 +402,10 @@ function MandateRow({
           userEmail={userEmail}
           onDecision={onDecision}
           onComment={onComment}
+          onUpdateClick={() => { setSidebarOpen(false); setShowUpdateSearch(true); }}
           metadataFromDb={mandate.metadataFromDb}
           docType={mandate.docType}
         />
-      </div>
-      <div className="cursor-help truncate text-gray-600" title={mandate.title || undefined}>
-        {mandate.title || <span className="italic text-gray-400">No title</span>}
-      </div>
-      <div className="text-xs text-gray-400" title={mandate.body ?? undefined}>
-        {abbreviateBody(mandate.body) ?? "—"}
-      </div>
-      <div className="text-xs text-gray-400">{mandate.year ?? "—"}</div>
-      <Tooltip content={ageInfo.tooltip}>
-        <span
-          className={`cursor-help rounded px-1.5 py-0.5 text-xs font-medium ${ageInfo.color} ${ageInfo.bgColor}`}
-        >
-          {ageInfo.label}
-        </span>
-      </Tooltip>
-      <Tooltip
-        content={
-          mandate.otherEntitiesCount > 0
-            ? `${mandate.otherEntitiesCount} other entit${mandate.otherEntitiesCount !== 1 ? "ies" : "y"} also cite${mandate.otherEntitiesCount === 1 ? "s" : ""} ${mandate.symbol}`
-            : `No other entities cite ${mandate.symbol}`
-        }
-      >
-        <span className="cursor-help text-xs text-gray-400">
-          {mandate.otherEntitiesCount > 0
-            ? `+${mandate.otherEntitiesCount}`
-            : "—"}
-        </span>
-      </Tooltip>
-      <Tooltip content={commentCount > 0 ? "Click to view comments" : "Click to add a comment"}>
-        <span className={`cursor-pointer text-xs ${commentCount > 0 ? "text-un-blue font-medium" : "text-gray-400"}`}>
-          {commentCount > 0 ? commentCount : "—"}
-        </span>
-      </Tooltip>
-      <div>
-        {!mandate.metadataFromDb && (
-          <Tooltip content="Metadata not found in documents database">
-            <AlertTriangle className="h-4 w-4 text-amber-500" />
-          </Tooltip>
-        )}
-      </div>
-      <div onClick={(e) => e.stopPropagation()}>
-        {isAdded ? (
-          <AddBadge show={!!focalAdded} canCancel={!!canCancelFocal} onCancel={() => onDecision("cancel")} />
-        ) : (
-          <DecisionSelect
-            decision={state?.focal?.decision ?? null}
-            newSymbol={state?.focal?.newSymbol ?? null}
-            userEmail={state?.focal?.userEmail ?? null}
-            createdAt={state?.focal?.createdAt ?? null}
-            onChange={userRole === "focal" ? onDecision : () => {}}
-            disabled={userRole !== "focal"}
-          />
-        )}
-      </div>
-      <div onClick={(e) => e.stopPropagation()}>
-        {isAdded ? (
-          <AddBadge show={!!ppbdAdded} canCancel={!!canCancelPpbd} onCancel={() => onDecision("cancel")} />
-        ) : (
-          <DecisionSelect
-            decision={state?.ppbd?.decision ?? null}
-            newSymbol={state?.ppbd?.newSymbol ?? null}
-            userEmail={state?.ppbd?.userEmail ?? null}
-            createdAt={state?.ppbd?.createdAt ?? null}
-            onChange={userRole === "ppbd" ? onDecision : () => {}}
-            disabled={userRole !== "ppbd"}
-          />
-        )}
       </div>
     </div>
   );
@@ -320,14 +441,23 @@ interface ManualEntryData {
   link: string;
 }
 
-function AddEntryRow({
-  onAdd,
-  onAddManual,
-  disabled,
+// Reusable document search input component
+function DocumentSearchInput({
+  onSelect,
+  onManualSubmit,
+  onCancel,
+  placeholder,
+  submitLabel,
+  formTitle,
+  compact,
 }: {
-  onAdd: (symbol: string) => void;
-  onAddManual: (data: ManualEntryData) => void;
-  disabled?: boolean;
+  onSelect: (symbol: string) => void;
+  onManualSubmit: (data: ManualEntryData) => void;
+  onCancel?: () => void;
+  placeholder?: string;
+  submitLabel?: string;
+  formTitle?: string;
+  compact?: boolean;
 }) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -371,7 +501,7 @@ function AddEntryRow({
   };
 
   const handleSelect = (doc: SearchResult) => {
-    onAdd(doc.symbol);
+    onSelect(doc.symbol);
     setQuery("");
     setResults([]);
     setOpen(false);
@@ -383,34 +513,10 @@ function AddEntryRow({
     setManualData({ symbol: query, title: "", body: "", year: "", link: "" });
     setShowManualForm(true);
     setOpen(false);
-    // Fetch body suggestions
     fetch("/api/documents/bodies")
       .then((r) => r.json())
       .then(setBodySuggestions)
       .catch(() => {});
-  };
-
-  const validateManualForm = (): boolean => {
-    const errors: string[] = [];
-    if (!manualData.symbol.trim()) errors.push("symbol");
-    if (!manualData.title.trim()) errors.push("title");
-    if (!manualData.body.trim()) errors.push("body");
-    if (!manualData.year.trim()) errors.push("year");
-    if (!manualData.link.trim()) errors.push("link");
-    
-    // Validate year format (4-digit number between 1945-2100)
-    const yearNum = parseInt(manualData.year);
-    if (manualData.year && (isNaN(yearNum) || yearNum < 1945 || yearNum > 2100)) {
-      errors.push("year");
-    }
-    
-    // Validate link format
-    if (manualData.link && !/^https?:\/\/.+/.test(manualData.link)) {
-      setLinkError("Link must start with http:// or https://");
-      return false;
-    }
-    
-    return errors.length === 0;
   };
 
   const isFormValid = manualData.symbol.trim() && 
@@ -424,8 +530,8 @@ function AddEntryRow({
     /^https?:\/\/.+/.test(manualData.link);
 
   const handleManualSubmit = () => {
-    if (!validateManualForm()) return;
-    onAddManual(manualData);
+    if (!isFormValid) return;
+    onManualSubmit(manualData);
     setShowManualForm(false);
     setManualData({ symbol: "", title: "", body: "", year: "", link: "" });
     setQuery("");
@@ -434,10 +540,13 @@ function AddEntryRow({
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (!open) {
-      if (e.key === "Escape") setQuery("");
+      if (e.key === "Escape") {
+        setQuery("");
+        onCancel?.();
+      }
       return;
     }
-    const totalItems = results.length + (searchDone && results.length === 0 ? 1 : 0);
+    const totalItems = results.length + (searchDone ? 1 : 0);
     if (totalItems === 0) return;
     
     switch (e.key) {
@@ -460,11 +569,11 @@ function AddEntryRow({
       case "Escape":
         setOpen(false);
         setHighlighted(-1);
+        onCancel?.();
         break;
     }
   };
 
-  // Close dropdown on click outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
@@ -476,18 +585,16 @@ function AddEntryRow({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  if (disabled) return null;
-
   if (showManualForm) {
     const filteredBodies = bodySuggestions.filter((b) => 
       b.toLowerCase().includes(manualData.body.toLowerCase())
     ).slice(0, 8);
 
     return (
-      <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+      <div className={`rounded-lg border border-gray-200 bg-white p-4 shadow-sm ${compact ? "p-3" : ""}`}>
         <div className="flex items-center justify-between mb-3">
-          <span className="text-sm font-medium text-gray-700">Add document manually</span>
-          <button onClick={() => setShowManualForm(false)} className="text-gray-400 hover:text-gray-600">
+          <span className="text-sm font-medium text-gray-700">{formTitle || "Add document manually"}</span>
+          <button onClick={() => { setShowManualForm(false); onCancel?.(); }} className="text-gray-400 hover:text-gray-600">
             <X className="h-4 w-4" />
           </button>
         </div>
@@ -583,7 +690,7 @@ function AddEntryRow({
           <p className="text-xs text-gray-400">All fields are required</p>
           <div className="flex justify-end gap-2 pt-2">
             <button
-              onClick={() => setShowManualForm(false)}
+              onClick={() => { setShowManualForm(false); onCancel?.(); }}
               className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-800"
             >
               Cancel
@@ -593,7 +700,7 @@ function AddEntryRow({
               disabled={!isFormValid}
               className="rounded bg-un-blue px-3 py-1.5 text-sm text-white hover:bg-un-blue/90 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Add
+              {submitLabel || "Add"}
             </button>
           </div>
         </div>
@@ -619,10 +726,16 @@ function AddEntryRow({
           }}
           onBlur={() => setFocused(false)}
           onKeyDown={handleKeyDown}
-          placeholder="Add mandate document — search by symbol or title..."
+          placeholder={placeholder || "Search by symbol or title..."}
           className="flex-1 bg-transparent text-sm text-gray-700 placeholder:text-gray-400 focus:outline-none"
+          autoFocus={compact}
         />
         {searching && <Loader2 className="h-4 w-4 animate-spin text-gray-400" />}
+        {onCancel && (
+          <button onClick={onCancel} className="text-gray-400 hover:text-gray-600">
+            <X className="h-4 w-4" />
+          </button>
+        )}
       </div>
 
       {open && (
@@ -670,6 +783,28 @@ function AddEntryRow({
   );
 }
 
+// Wrapper for the "Add" row at bottom of sections
+function AddEntryRow({
+  onAdd,
+  onAddManual,
+  disabled,
+}: {
+  onAdd: (symbol: string) => void;
+  onAddManual: (data: ManualEntryData) => void;
+  disabled?: boolean;
+}) {
+  if (disabled) return null;
+  return (
+    <DocumentSearchInput
+      onSelect={onAdd}
+      onManualSubmit={onAddManual}
+      placeholder="Add mandate document — search by symbol or title..."
+      submitLabel="Add"
+      formTitle="Add document manually"
+    />
+  );
+}
+
 function MandateSection({
   title,
   mandates,
@@ -679,9 +814,11 @@ function MandateSection({
   states,
   totalComments,
   addedMetadata,
+  updateTargetMetadata,
   userRole,
   userEmail,
   onDecision,
+  onUpdateWithManual,
   onComment,
   onAdd,
   onAddManual,
@@ -694,9 +831,11 @@ function MandateSection({
   states: Record<string, MandateState>;
   totalComments: Record<string, number>;
   addedMetadata: Record<string, { title: string | null; year: number | null; body: string | null; docType: string | null } | null>;
+  updateTargetMetadata: Record<string, { title: string | null; year: number | null; body: string | null } | null>;
   userRole: UserRole | null;
   userEmail: string | null;
   onDecision: (symbol: string, decision: Decision, newSymbol?: string) => void;
+  onUpdateWithManual: (symbol: string, newSymbol: string, manualData: ManualEntryData) => void;
   onComment: (symbol: string, comment: string) => void;
   onAdd: (symbol: string) => void;
   onAddManual: (data: ManualEntryData) => void;
@@ -741,6 +880,12 @@ function MandateSection({
 
   if (mandates.length === 0 && addedMandates.length === 0) return null;
 
+  // Get update target symbol for metadata lookup
+  const getUpdateTargetSymbol = (symbol: string) => {
+    const s = states[stateKey(symbol)];
+    return s?.focal?.newSymbol || s?.ppbd?.newSymbol;
+  };
+
   return (
     <div>
       <h3 className="mb-3 px-3 text-sm font-semibold tracking-wide text-gray-600 uppercase">
@@ -748,18 +893,23 @@ function MandateSection({
       </h3>
       <div className="space-y-1.5">
         <ColumnHeaders />
-        {mandates.map((m) => (
-          <MandateRow
-            key={m.symbol}
-            mandate={{ ...m, entity }}
-            state={states[stateKey(m.symbol)]}
-            commentCount={totalComments[m.symbol] || 0}
-            userRole={userRole}
-            userEmail={userEmail}
-            onDecision={(decision, newSymbol) => onDecision(m.symbol, decision, newSymbol)}
-            onComment={(comment) => onComment(m.symbol, comment)}
-          />
-        ))}
+        {mandates.map((m) => {
+          const targetSymbol = getUpdateTargetSymbol(m.symbol);
+          return (
+            <MandateRow
+              key={m.symbol}
+              mandate={{ ...m, entity }}
+              state={states[stateKey(m.symbol)]}
+              commentCount={totalComments[m.symbol] || 0}
+              userRole={userRole}
+              userEmail={userEmail}
+              onDecision={(decision, newSymbol) => onDecision(m.symbol, decision, newSymbol)}
+              onUpdateWithManual={(newSymbol, manualData) => onUpdateWithManual(m.symbol, newSymbol, manualData)}
+              onComment={(comment) => onComment(m.symbol, comment)}
+              updateTargetMetadata={targetSymbol ? updateTargetMetadata[targetSymbol] : undefined}
+            />
+          );
+        })}
         {addedMandates.map((m) => (
           <MandateRow
             key={m.symbol}
@@ -769,6 +919,7 @@ function MandateSection({
             userRole={userRole}
             userEmail={userEmail}
             onDecision={(decision) => onDecision(m.symbol, decision)}
+            onUpdateWithManual={() => {}}
             onComment={(comment) => onComment(m.symbol, comment)}
             isAdded
           />
@@ -792,6 +943,7 @@ export function EntityDetail({
   const [userRole, setUserRole] = useState<UserRole | null>(null);
   const [userEmail, setUserEmail] = useState<string | null>(null);
   const [addedMetadata, setAddedMetadata] = useState<Record<string, { title: string | null; year: number | null; body: string | null; docType: string | null } | null>>({});
+  const [updateTargetMetadata, setUpdateTargetMetadata] = useState<Record<string, { title: string | null; year: number | null; body: string | null } | null>>({});
 
   // Fetch user role and decisions on mount
   useEffect(() => {
@@ -844,6 +996,27 @@ export function EntityDetail({
       .catch(() => {});
   }, [states, backgroundMandates, legislativeMandates, addedMetadata]);
 
+  // Fetch metadata for update target documents
+  useEffect(() => {
+    const updateTargetSymbols = Object.values(states)
+      .filter((s) => s.focal?.decision === "update" || s.ppbd?.decision === "update")
+      .map((s) => s.focal?.newSymbol || s.ppbd?.newSymbol)
+      .filter((sym): sym is string => !!sym && !(sym in updateTargetMetadata));
+
+    if (updateTargetSymbols.length === 0) return;
+
+    fetch(`/api/documents/metadata?symbols=${encodeURIComponent(updateTargetSymbols.join(","))}`)
+      .then((r) => r.ok ? r.json() : {})
+      .then((data: Record<string, { title: string | null; year: number | null; body: string | null }>) => {
+        const result: Record<string, { title: string | null; year: number | null; body: string | null } | null> = {};
+        for (const sym of updateTargetSymbols) {
+          result[sym] = data[sym] || null;
+        }
+        setUpdateTargetMetadata((prev) => ({ ...prev, ...result }));
+      })
+      .catch(() => {});
+  }, [states, updateTargetMetadata]);
+
   const handleDecision = useCallback(
     async (symbol: string, subprogramme: string | null, decision: Decision, newSymbol?: string) => {
       if (!userRole || !userEmail) return;
@@ -877,6 +1050,78 @@ export function EntityDetail({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ documentSymbol: symbol, entity, subprogramme, decision, newSymbol }),
+      });
+      if (res.ok) {
+        const updated = await res.json();
+        setStates((prev) => ({
+          ...prev,
+          [key]: {
+            ...prev[key],
+            [updated.role]: updated,
+            decisions: [...(prev[key]?.decisions?.filter((d) => d.id) || []), updated],
+          },
+        }));
+      }
+    },
+    [entity, userRole, userEmail]
+  );
+
+  const handleUpdateWithManual = useCallback(
+    async (symbol: string, subprogramme: string | null, newSymbol: string, manualData: ManualEntryData) => {
+      if (!userRole || !userEmail) return;
+      const key = `${symbol}:${subprogramme || ""}`;
+      const now = new Date().toISOString();
+      const manualMetadata = {
+        title: manualData.title || undefined,
+        body: manualData.body || undefined,
+        year: manualData.year ? parseInt(manualData.year) : undefined,
+        link: manualData.link || undefined,
+      };
+      const newDecision = {
+        id: "",
+        documentSymbol: symbol,
+        entity,
+        subprogramme,
+        decision: "update" as Decision,
+        newSymbol,
+        manualMetadata,
+        userEmail,
+        createdAt: now,
+        role: userRole,
+      };
+      // Optimistic update
+      setStates((prev) => ({
+        ...prev,
+        [key]: {
+          ...prev[key],
+          documentSymbol: symbol,
+          entity,
+          subprogramme,
+          [userRole]: newDecision,
+          decisions: [...(prev[key]?.decisions || []), newDecision],
+        },
+      }));
+      // Also add to updateTargetMetadata for display
+      setUpdateTargetMetadata((prev) => ({
+        ...prev,
+        [newSymbol]: {
+          title: manualData.title || null,
+          year: manualData.year ? parseInt(manualData.year) : null,
+          body: manualData.body || null,
+        },
+      }));
+
+      const res = await fetch("/api/housekeeping/decisions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          documentSymbol: symbol,
+          entity,
+          subprogramme,
+          decision: "update",
+          newSymbol,
+          manualMetadata,
+        }),
       });
       if (res.ok) {
         const updated = await res.json();
@@ -1135,10 +1380,14 @@ export function EntityDetail({
           states={states}
           totalComments={totalComments}
           addedMetadata={addedMetadata}
+          updateTargetMetadata={updateTargetMetadata}
           userRole={userRole}
           userEmail={userEmail}
           onDecision={(symbol, decision, newSymbol) =>
             handleDecision(symbol, null, decision, newSymbol)
+          }
+          onUpdateWithManual={(symbol, newSymbol, manualData) =>
+            handleUpdateWithManual(symbol, null, newSymbol, manualData)
           }
           onComment={(symbol, comment) => handleComment(symbol, null, comment)}
           onAdd={(symbol) => handleDecision(symbol, null, "add")}
@@ -1158,10 +1407,14 @@ export function EntityDetail({
               states={states}
               totalComments={totalComments}
               addedMetadata={addedMetadata}
+              updateTargetMetadata={updateTargetMetadata}
               userRole={userRole}
               userEmail={userEmail}
               onDecision={(symbol, decision, newSymbol) =>
                 handleDecision(symbol, subprog, decision, newSymbol)
+              }
+              onUpdateWithManual={(symbol, newSymbol, manualData) =>
+                handleUpdateWithManual(symbol, subprog, newSymbol, manualData)
               }
               onComment={(symbol, comment) => handleComment(symbol, subprog, comment)}
               onAdd={(symbol) => handleDecision(symbol, subprog, "add")}
