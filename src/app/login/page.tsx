@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
 import { SITE_TITLE } from "@/components/Header";
+import Image from "next/image";
+import { useState } from "react";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -34,12 +34,12 @@ export default function LoginPage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="w-full max-w-sm">
-        <div className="mb-8 flex flex-col items-center">
+        <div className="mb-8 flex flex-col items-start">
           <Image
             src="/images/UN_Logo_Stacked_Colour_English.svg"
             alt="UN Logo"
-            width={80}
-            height={80}
+            width={120}
+            height={120}
             className="mb-4"
           />
           <h1 className="text-xl font-semibold text-foreground">
@@ -49,8 +49,8 @@ export default function LoginPage() {
         </div>
 
         {status === "sent" ? (
-          <div className="rounded-lg bg-green-50 p-4 text-center text-green-800">
-            <p className="font-medium">Check your email</p>
+          <div className="rounded-lg bg-green-50 p-4 text-green-800">
+            <p className="font-medium">Please check your email</p>
             <p className="mt-1 text-sm">We sent a sign-in link to {email}</p>
           </div>
         ) : (
