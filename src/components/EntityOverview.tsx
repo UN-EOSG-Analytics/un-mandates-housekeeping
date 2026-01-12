@@ -96,7 +96,7 @@ export function EntityOverview({ parts, userEntity }: Props) {
     <div className="space-y-6">
       {/* My Entity card - shown for non-PPBD users */}
       {myEntityData && !searchQuery && (
-        <div className="mb-2">
+        <div className="mb-8">
           <div className="mb-2 flex items-center gap-2 text-sm font-medium text-un-blue">
             <Star className="h-4 w-4 fill-current" />
             My Entity
