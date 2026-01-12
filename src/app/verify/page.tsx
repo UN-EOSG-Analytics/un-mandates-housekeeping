@@ -67,7 +67,7 @@ function VerifyContent() {
         : selectedEntity;
 
     if (!hasExistingEntity && !entity) {
-      setError("Please select your entity");
+      setError("Please select your organisational entity");
       return;
     }
 
@@ -107,7 +107,7 @@ function VerifyContent() {
           disabled={loading}
           className="w-full rounded-lg bg-un-blue px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
         >
-          {loading ? "Signing in..." : "Complete Sign In"}
+          {loading ? "Signing in..." : "Complete sign-in"}
         </button>
       </div>
     );
@@ -124,7 +124,7 @@ function VerifyContent() {
 
       <div>
         <label className="mb-2 block text-sm font-medium text-gray-700">
-          Select your entity
+          Select your organisational entity
         </label>
         <select
           value={selectedEntity}
@@ -145,7 +145,7 @@ function VerifyContent() {
       {selectedEntity === "Other" && (
         <input
           type="text"
-          placeholder="Enter your entity name"
+          placeholder="Enter your organisational entity"
           value={otherEntity}
           onChange={(e) => setOtherEntity(e.target.value)}
           className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm focus:border-un-blue focus:ring-1 focus:ring-un-blue focus:outline-none"
@@ -163,7 +163,7 @@ function VerifyContent() {
         }
         className="w-full rounded-lg bg-un-blue px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
       >
-        {loading ? "Signing in..." : "Complete Sign In"}
+        {loading ? "Signing in..." : "Complete sign-in"}
       </button>
     </div>
   );
@@ -174,7 +174,7 @@ export default function VerifyPage() {
     <main className="flex min-h-screen items-center justify-center bg-white">
       <div className="w-full max-w-sm px-6">
         <h1 className="mb-6 text-xl font-bold text-gray-900">
-          Complete Sign In
+          Complete sign-in
         </h1>
         <Suspense fallback={<p className="text-gray-500">Loading...</p>}>
           <VerifyContent />

@@ -45,13 +45,13 @@ export default function LoginPage() {
           <h1 className="text-xl font-semibold text-foreground">
             {SITE_TITLE}
           </h1>
-          <p className="text-sm text-gray-500">Sign in with your UN email</p>
+          <p className="text-sm text-gray-500">Sign in with your UN e-mail address</p>
         </div>
 
         {status === "sent" ? (
           <div className="rounded-lg bg-green-50 p-4 text-green-800">
-            <p className="font-medium">Please check your email</p>
-            <p className="mt-1 text-sm">We sent a sign-in link to {email}</p>
+            <p className="font-medium">Please check your e-mail</p>
+            <p className="mt-1 text-sm">We have sent a sign-in link to {email}</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
