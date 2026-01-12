@@ -232,7 +232,11 @@ function FilteredParagraphTree({
   const toggleGap = (idx: number) => {
     setExpandedGaps((prev) => {
       const next = new Set(prev);
-      next.has(idx) ? next.delete(idx) : next.add(idx);
+      if (next.has(idx)) {
+        next.delete(idx);
+      } else {
+        next.add(idx);
+      }
       return next;
     });
   };
@@ -319,7 +323,7 @@ function FilteredParagraphTree({
             />
             {expanded && (
               <div className="space-y-3">
-                {seg.items.map(({ p, origIdx }, j) => {
+                {seg.items.map(({ p }, j) => {
                   if (p.type === "heading") {
                     const indent =
                       p.heading_level && p.heading_level > 1
@@ -420,11 +424,11 @@ export function DocumentSymbol({
   body,
   docType,
   otherEntitiesCount,
-  relevanceCount,
-  relevanceIndices,
-  aiComments,
+  relevanceCount: _relevanceCount,
+  relevanceIndices: _relevanceIndices,
+  aiComments: _aiComments,
   entity,
-  entityLong,
+  entityLong: _entityLong,
   allEntities,
   entityLongMap,
   allEntityRelevance,
@@ -459,31 +463,33 @@ export function DocumentSymbol({
   // Fetch paragraphs and document-wide activity when sidebar opens
   useEffect(() => {
     if (open && !paragraphs && !loading) {
-      setLoading(true);
-      const safeSymbol = symbol.replace(/\//g, "_").replace(/ /g, "_");
+      const fetchData = async () => {
+        setLoading(true);
+        const safeSymbol = symbol.replace(/\//g, "_").replace(/ /g, "_");
 
-      Promise.all([
-        fetch(`/data/paragraphs/${safeSymbol}.json`)
-          .then((res) => (res.ok ? res.json() : null))
-          .catch(() => null),
-        fetch(`/api/housekeeping/document?symbol=${encodeURIComponent(symbol)}`)
-          .then((res) =>
-            res.ok ? res.json() : { decisions: [], comments: [] },
-          )
-          .catch(() => ({ decisions: [], comments: [] })),
-      ]).then(([parasData, activityData]) => {
+        const [parasData, activityData] = await Promise.all([
+          fetch(`/data/paragraphs/${safeSymbol}.json`)
+            .then((res) => (res.ok ? res.json() : null))
+            .catch(() => null),
+          fetch(`/api/housekeeping/document?symbol=${encodeURIComponent(symbol)}`)
+            .then((res) =>
+              res.ok ? res.json() : { decisions: [], comments: [] },
+            )
+            .catch(() => ({ decisions: [], comments: [] })),
+        ]);
         setParagraphs(parasData || []);
         setAllDecisions(activityData.decisions || []);
         setAllComments(activityData.comments || []);
         setLoading(false);
-      });
+      };
+      fetchData();
     }
   }, [open, paragraphs, loading, symbol]);
 
   const handleClick = useCallback((e: React.MouseEvent) => {
     e.preventDefault();
     setOpen(true);
-  }, []);
+  }, [setOpen]);
 
   // Wrapper to update local state when decision is made
   const handleDecision = useCallback(

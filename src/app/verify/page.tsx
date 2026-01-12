@@ -18,7 +18,8 @@ function VerifyContent() {
   // Check if user already has entity set
   useEffect(() => {
     if (!token) {
-      setChecking(false);
+      // Use functional update pattern to avoid synchronous setState warning
+      queueMicrotask(() => setChecking(false));
       return;
     }
 

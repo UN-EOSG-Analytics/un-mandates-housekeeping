@@ -47,7 +47,7 @@ function abbreviateBody(body: string | null): string | null {
 
 function DecisionSelect({
   decision,
-  newSymbol,
+  newSymbol: _,
   userEmail,
   createdAt,
   onChange,
@@ -964,7 +964,7 @@ function DocumentSearchInput({
               }`}
             >
               <span className="text-un-blue">+ Add manually...</span>
-              {query && <span className="ml-1 text-gray-400">"{query}"</span>}
+              {query && <span className="ml-1 text-gray-400">&ldquo;{query}&rdquo;</span>}
             </button>
           )}
         </div>

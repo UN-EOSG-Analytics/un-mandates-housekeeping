@@ -18,9 +18,9 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 // Helper function for queries
-export async function query<T = any>(
+export async function query<T = Record<string, unknown>>(
   text: string,
-  params?: any[],
+  params?: unknown[],
 ): Promise<T[]> {
   const client = await pool.connect();
   try {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useCallback } from "react";
 
 interface Props {
   content: string;
@@ -14,8 +14,9 @@ export function Tooltip({ content, children }: Props) {
   const triggerRef = useRef<HTMLSpanElement>(null);
   const tooltipRef = useRef<HTMLSpanElement>(null);
 
-  useEffect(() => {
-    if (show && triggerRef.current) {
+  // Calculate position when mouse enters - before showing
+  const handleMouseEnter = useCallback(() => {
+    if (triggerRef.current) {
       const rect = triggerRef.current.getBoundingClientRect();
       const viewportWidth = window.innerWidth;
 
@@ -34,7 +35,8 @@ export function Tooltip({ content, children }: Props) {
         setAlign("center");
       }
     }
-  }, [show, content]);
+    setShow(true);
+  }, [content]);
 
   const alignClasses = {
     left: "left-0",
@@ -52,7 +54,7 @@ export function Tooltip({ content, children }: Props) {
     <span
       ref={triggerRef}
       className="relative inline-block max-w-full"
-      onMouseEnter={() => setShow(true)}
+      onMouseEnter={handleMouseEnter}
       onMouseLeave={() => setShow(false)}
     >
       {children}
