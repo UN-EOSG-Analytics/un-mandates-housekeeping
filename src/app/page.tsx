@@ -1,5 +1,6 @@
 import { EntityOverview } from "@/components/EntityOverview";
 import { ExportDropdown } from "@/components/ExportDropdown";
+import Footer from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { transformPPBData } from "@/lib/transformData";
 import { fetchPPBRecords, getBudgetPartsMeta } from "@/lib/data-service";
@@ -22,6 +23,7 @@ export default async function Home() {
         </Header>
         <EntityOverview parts={parts} userEntity={user?.entity} />
       </main>
+      <Footer />
     </div>
   );
 }
