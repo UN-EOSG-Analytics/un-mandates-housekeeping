@@ -1,6 +1,7 @@
 "use client";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useState, useEffect, Suspense } from "react";
+import { EntityCombobox } from "@/components/EntityCombobox";
 
 function VerifyContent() {
   const searchParams = useSearchParams();
@@ -126,20 +127,12 @@ function VerifyContent() {
         <label className="mb-2 block text-sm font-medium text-gray-700">
           Select your organisational entity
         </label>
-        <select
+        <EntityCombobox
           value={selectedEntity}
-          onChange={(e) => setSelectedEntity(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm focus:border-un-blue focus:ring-1 focus:ring-un-blue focus:outline-none"
-        >
-          <option value="">Choose...</option>
-          <option value="PPBD">PPBD</option>
-          {entities.map((e) => (
-            <option key={e} value={e}>
-              {e}
-            </option>
-          ))}
-          <option value="Other">Other</option>
-        </select>
+          onChange={setSelectedEntity}
+          entities={entities}
+          placeholder="Choose entity..."
+        />
       </div>
 
       {selectedEntity === "Other" && (

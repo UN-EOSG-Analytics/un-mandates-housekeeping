@@ -29,7 +29,13 @@ export function Header({ user, children }: Props) {
         </div>
       </Link>
       <div className="flex items-center gap-4">
-        {user && <UserMenu email={user.email} isPpbd={user.isPpbd} />}
+        {user && (
+          <UserMenu
+            email={user.email}
+            entity={user.entity}
+            isPpbd={user.isPpbd}
+          />
+        )}
         {children}
       </div>
     </div>
