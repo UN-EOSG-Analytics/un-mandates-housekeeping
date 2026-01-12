@@ -6,7 +6,9 @@ import { SITE_TITLE } from "@/components/Header";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "sent" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "sent" | "error">(
+    "idle",
+  );
   const [errorMsg, setErrorMsg] = useState("");
 
   async function handleSubmit(e: React.FormEvent) {
@@ -40,7 +42,9 @@ export default function LoginPage() {
             height={80}
             className="mb-4"
           />
-          <h1 className="text-xl font-semibold text-foreground">{SITE_TITLE}</h1>
+          <h1 className="text-xl font-semibold text-foreground">
+            {SITE_TITLE}
+          </h1>
           <p className="text-sm text-gray-500">Sign in with your UN email</p>
         </div>
 
@@ -58,7 +62,7 @@ export default function LoginPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="your.name@un.org"
                 required
-                className="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-un-blue focus:outline-none focus:ring-1 focus:ring-un-blue"
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-un-blue focus:ring-1 focus:ring-un-blue focus:outline-none"
               />
             </div>
 
@@ -79,4 +83,3 @@ export default function LoginPage() {
     </div>
   );
 }
-

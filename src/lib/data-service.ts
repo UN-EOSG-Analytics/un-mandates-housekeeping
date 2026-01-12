@@ -4,24 +4,32 @@
  */
 
 import { query } from "./db";
-import type {
-  PPBRecord,
-  CitationInfo,
-  BudgetPartMeta,
-} from "@/types";
+import type { PPBRecord, CitationInfo, BudgetPartMeta } from "@/types";
 
 // Budget parts metadata (static - matches budget_parts.json)
 export const BUDGET_PARTS_META: BudgetPartMeta[] = [
-  { numeral: "I", order: 1, name: "Overall policymaking, direction and coordination" },
+  {
+    numeral: "I",
+    order: 1,
+    name: "Overall policymaking, direction and coordination",
+  },
   { numeral: "II", order: 2, name: "Political affairs" },
   { numeral: "III", order: 3, name: "International justice and law" },
-  { numeral: "IV", order: 4, name: "International cooperation and development" },
+  {
+    numeral: "IV",
+    order: 4,
+    name: "International cooperation and development",
+  },
   { numeral: "V", order: 5, name: "Regional cooperation and development" },
   { numeral: "VI", order: 6, name: "Human rights and humanitarian affairs" },
   { numeral: "VII", order: 7, name: "Global communications" },
   { numeral: "VIII", order: 8, name: "Common support services" },
   { numeral: "IX", order: 9, name: "Internal oversight" },
-  { numeral: "X", order: 10, name: "Jointly financed administrative activities and special expenses" },
+  {
+    numeral: "X",
+    order: 10,
+    name: "Jointly financed administrative activities and special expenses",
+  },
   { numeral: "XI", order: 11, name: "Capital expenditure" },
   { numeral: "XII", order: 12, name: "Safety and security" },
   { numeral: "XIII", order: 13, name: "Development account" },
@@ -107,17 +115,18 @@ export async function fetchPPBRecords(): Promise<PPBRecord[]> {
 
   for (const row of rows) {
     const symbol = row.ppb_full_document_symbol;
-    
+
     if (!recordsMap.has(symbol)) {
       // Prefer public.documents data, fall back to source_documents_metadata_clean
       const hasDbMetadata = row.doc_symbol !== null;
-      
+
       // Title priority: doc.proper_title > meta.title > meta.proper_title
-      const title = row.doc_proper_title || row.meta_title || row.meta_proper_title || null;
+      const title =
+        row.doc_proper_title || row.meta_title || row.meta_proper_title || null;
       const year = row.doc_date_year ?? row.meta_date_year ?? null;
       const body = row.doc_issuing_body || row.meta_issuing_body || null;
       const docType = row.doc_document_type || row.meta_document_type || null;
-      
+
       recordsMap.set(symbol, {
         full_document_symbol: symbol,
         num_citations: 0,

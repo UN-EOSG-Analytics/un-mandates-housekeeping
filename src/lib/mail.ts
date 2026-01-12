@@ -61,4 +61,3 @@ export async function sendMagicLink(email: string, token: string) {
 </html>`,
   });
 }
-

@@ -10,7 +10,13 @@ interface Props {
   userEntity?: string | null;
 }
 
-function EntityCard({ entityData, highlight }: { entityData: EntityData; highlight?: boolean }) {
+function EntityCard({
+  entityData,
+  highlight,
+}: {
+  entityData: EntityData;
+  highlight?: boolean;
+}) {
   const mandateCount =
     entityData.backgroundMandates.length +
     Object.values(entityData.legislativeMandates).reduce(
@@ -104,18 +110,18 @@ export function EntityOverview({ parts, userEntity }: Props) {
       {/* Search box */}
       <div>
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+          <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-gray-400" />
           <input
             type="text"
             placeholder="Search entities..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full rounded-lg border border-gray-300 py-2 pl-10 pr-4 text-sm focus:border-un-blue focus:outline-none focus:ring-1 focus:ring-un-blue"
+            className="w-full rounded-lg border border-gray-300 py-2 pr-4 pl-10 text-sm focus:border-un-blue focus:ring-1 focus:ring-un-blue focus:outline-none"
           />
           {searchQuery && (
             <button
               onClick={() => setSearchQuery("")}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+              className="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400 hover:text-gray-600"
             >
               <X className="h-4 w-4" />
             </button>

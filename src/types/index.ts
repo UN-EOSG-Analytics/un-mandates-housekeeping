@@ -145,8 +145,8 @@ export interface MandateState {
   documentSymbol: string;
   entity: string;
   subprogramme: string | null;
-  focal: MandateDecision | null;  // latest focal decision
-  ppbd: MandateDecision | null;   // latest ppbd decision
-  decisions: MandateDecision[];   // all decisions
-  comments: MandateComment[];     // comments for this entity
+  focal: MandateDecision | null; // latest focal decision
+  ppbd: MandateDecision | null; // latest ppbd decision
+  decisions: MandateDecision[]; // all decisions
+  comments: MandateComment[]; // comments for this entity
 }

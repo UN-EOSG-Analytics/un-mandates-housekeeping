@@ -8,7 +8,7 @@ export async function GET() {
     const docs = await query(
       `SELECT * FROM ppb2026.source_documents 
        ORDER BY last_updated DESC 
-       LIMIT 5`
+       LIMIT 5`,
     );
 
     return NextResponse.json(docs);
@@ -16,7 +16,7 @@ export async function GET() {
     console.error("Database error:", error);
     return NextResponse.json(
       { error: "Failed to fetch documents" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

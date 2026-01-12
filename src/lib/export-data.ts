@@ -21,7 +21,7 @@ async function getMandateRows(entityFilter?: string): Promise<MandateRow[]> {
   for (const rec of records) {
     for (const ci of rec.citation_info) {
       if (entityFilter && ci.entity !== entityFilter) continue;
-      
+
       const key = `${ci.entity}:${rec.full_document_symbol}:${ci["sub-programme"] || ""}`;
       if (seen.has(key)) continue;
       seen.add(key);
@@ -49,24 +49,36 @@ async function getMandateRows(entityFilter?: string): Promise<MandateRow[]> {
 
 export async function exportToCsv(entity?: string): Promise<string> {
   const rows = await getMandateRows(entity);
-  
-  const headers = ["Symbol", "Title", "Body", "Year", "Link", "Entity", "Entity Long", "Subprogramme", "Part"];
+
+  const headers = [
+    "Symbol",
+    "Title",
+    "Body",
+    "Year",
+    "Link",
+    "Entity",
+    "Entity Long",
+    "Subprogramme",
+    "Part",
+  ];
   const csvRows = [headers.join(",")];
-  
+
   for (const r of rows) {
-    csvRows.push([
-      quote(r.symbol),
-      quote(r.title),
-      quote(r.body),
-      r.year?.toString() || "",
-      quote(r.link || ""),
-      quote(r.entity),
-      quote(r.entityLong || ""),
-      quote(r.subprogramme || ""),
-      quote(r.part || ""),
-    ].join(","));
+    csvRows.push(
+      [
+        quote(r.symbol),
+        quote(r.title),
+        quote(r.body),
+        r.year?.toString() || "",
+        quote(r.link || ""),
+        quote(r.entity),
+        quote(r.entityLong || ""),
+        quote(r.subprogramme || ""),
+        quote(r.part || ""),
+      ].join(","),
+    );
   }
-  
+
   return csvRows.join("\n");
 }
 
@@ -78,20 +90,60 @@ function quote(s: string): string {
 }
 
 const COLUMN_INFO = [
-  { key: "symbol", header: "Symbol", width: 20, desc: "Official UN document symbol (e.g., A/RES/78/123)" },
-  { key: "title", header: "Title", width: 60, desc: "Document title or description" },
-  { key: "body", header: "Body", width: 12, desc: "Issuing body: GA (General Assembly), SC (Security Council), ECOSOC, etc." },
+  {
+    key: "symbol",
+    header: "Symbol",
+    width: 20,
+    desc: "Official UN document symbol (e.g., A/RES/78/123)",
+  },
+  {
+    key: "title",
+    header: "Title",
+    width: 60,
+    desc: "Document title or description",
+  },
+  {
+    key: "body",
+    header: "Body",
+    width: 12,
+    desc: "Issuing body: GA (General Assembly), SC (Security Council), ECOSOC, etc.",
+  },
   { key: "year", header: "Year", width: 8, desc: "Year of adoption" },
-  { key: "link", header: "Link", width: 40, desc: "URL to the official document" },
-  { key: "entity", header: "Entity", width: 15, desc: "Entity abbreviation (e.g., DESA, UNOCT)" },
-  { key: "entityLong", header: "Entity Full Name", width: 40, desc: "Full entity name" },
-  { key: "subprogramme", header: "Subprogramme", width: 30, desc: "Subprogramme or component within the entity" },
-  { key: "part", header: "Part", width: 20, desc: "Section type: Legislative mandates or Mandates and background" },
+  {
+    key: "link",
+    header: "Link",
+    width: 40,
+    desc: "URL to the official document",
+  },
+  {
+    key: "entity",
+    header: "Entity",
+    width: 15,
+    desc: "Entity abbreviation (e.g., DESA, UNOCT)",
+  },
+  {
+    key: "entityLong",
+    header: "Entity Full Name",
+    width: 40,
+    desc: "Full entity name",
+  },
+  {
+    key: "subprogramme",
+    header: "Subprogramme",
+    width: 30,
+    desc: "Subprogramme or component within the entity",
+  },
+  {
+    key: "part",
+    header: "Part",
+    width: 20,
+    desc: "Section type: Legislative mandates or Mandates and background",
+  },
 ] as const;
 
 export async function exportToXlsx(entity?: string): Promise<Buffer> {
   const rows = await getMandateRows(entity);
-  
+
   const workbook = new ExcelJS.Workbook();
   workbook.creator = "UN Mandates Housekeeping";
   workbook.created = new Date();
@@ -99,12 +151,15 @@ export async function exportToXlsx(entity?: string): Promise<Buffer> {
   // Cover sheet
   const cover = workbook.addWorksheet("Cover");
   const title = entity ? `Mandates for ${entity}` : "All PPB 2027 Mandates";
-  const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000";
+  const baseUrl = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000";
   const sourceUrl = entity ? `${baseUrl}/entity/${entity}/` : `${baseUrl}/`;
 
   cover.getCell("A1").value = title;
   cover.getCell("A1").font = { bold: true, size: 16 };
-  cover.getCell("A2").value = `Generated: ${new Date().toISOString().split("T")[0]}`;
+  cover.getCell("A2").value =
+    `Generated: ${new Date().toISOString().split("T")[0]}`;
   cover.getCell("A3").value = `Total records: ${rows.length}`;
   cover.getCell("A4").value = "Source:";
   cover.getCell("B4").value = { text: sourceUrl, hyperlink: sourceUrl };
@@ -124,17 +179,21 @@ export async function exportToXlsx(entity?: string): Promise<Buffer> {
 
   // Data sheet
   const data = workbook.addWorksheet("Mandates");
-  
+
   // Headers
   const headerRow = data.getRow(1);
   COLUMN_INFO.forEach((col, i) => {
     const cell = headerRow.getCell(i + 1);
     cell.value = col.header;
     cell.font = { bold: true };
-    cell.fill = { type: "pattern", pattern: "solid", fgColor: { argb: "FFE0E0E0" } };
+    cell.fill = {
+      type: "pattern",
+      pattern: "solid",
+      fgColor: { argb: "FFE0E0E0" },
+    };
     cell.border = { bottom: { style: "thin" } };
   });
-  
+
   // Freeze header row
   data.views = [{ state: "frozen", ySplit: 1 }];
 
@@ -163,4 +222,3 @@ export async function exportToXlsx(entity?: string): Promise<Buffer> {
 
   return Buffer.from(await workbook.xlsx.writeBuffer());
 }
-

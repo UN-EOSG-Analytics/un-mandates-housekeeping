@@ -15,7 +15,10 @@ export async function POST(request: Request) {
   }
 
   if (!isValidUnEmail(email)) {
-    return NextResponse.json({ error: "Only @un.org emails allowed" }, { status: 403 });
+    return NextResponse.json(
+      { error: "Only @un.org emails allowed" },
+      { status: 403 },
+    );
   }
 
   const token = await createMagicToken(email);
@@ -23,4 +26,3 @@ export async function POST(request: Request) {
 
   return NextResponse.json({ ok: true });
 }
-

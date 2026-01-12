@@ -10,7 +10,7 @@ const CONTENT_TYPES = {
 
 export async function GET(
   request: Request,
-  { params }: { params: Promise<{ entity: string; format: string }> }
+  { params }: { params: Promise<{ entity: string; format: string }> },
 ) {
   const { entity, format } = await params;
 
@@ -45,11 +45,13 @@ export async function GET(
     });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown error";
-    if (message.includes("No legislative mandates found") || message.includes("No mandates found")) {
+    if (
+      message.includes("No legislative mandates found") ||
+      message.includes("No mandates found")
+    ) {
       return NextResponse.json({ error: message }, { status: 404 });
     }
     console.error("Export error:", error);
     return NextResponse.json({ error: "Failed to export" }, { status: 500 });
   }
 }
-

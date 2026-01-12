@@ -2,7 +2,13 @@
 
 import { useRouter } from "next/navigation";
 
-export function UserMenu({ email, isPpbd }: { email: string; isPpbd?: boolean }) {
+export function UserMenu({
+  email,
+  isPpbd,
+}: {
+  email: string;
+  isPpbd?: boolean;
+}) {
   const router = useRouter();
 
   async function handleLogout() {
@@ -20,11 +26,10 @@ export function UserMenu({ email, isPpbd }: { email: string; isPpbd?: boolean })
       )}
       <button
         onClick={handleLogout}
-        className="text-gray-400 hover:text-gray-600 transition-colors"
+        className="text-gray-400 transition-colors hover:text-gray-600"
       >
         Logout
       </button>
     </div>
   );
 }
-

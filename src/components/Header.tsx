@@ -8,7 +8,8 @@ interface Props {
 }
 
 export const SITE_TITLE = "Mandate Housekeeping Platform";
-export const SITE_SUBTITLE = "Analytics and collaborative review of mandate citations for PPB 2027";
+export const SITE_SUBTITLE =
+  "Analytics and collaborative review of mandate citations for PPB 2027";
 
 export function Header({ user, children }: Props) {
   return (
@@ -34,4 +35,3 @@ export function Header({ user, children }: Props) {
     </div>
   );
 }
-

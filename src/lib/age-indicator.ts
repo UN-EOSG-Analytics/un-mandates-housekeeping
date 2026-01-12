@@ -55,4 +55,3 @@ export function getAgeIndicator(year: number | null): AgeIndicator {
     };
   }
 }
-

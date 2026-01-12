@@ -10,7 +10,10 @@ export async function POST(request: Request) {
 
   const email = await verifyMagicToken(token);
   if (!email) {
-    return NextResponse.json({ error: "Invalid or expired link" }, { status: 400 });
+    return NextResponse.json(
+      { error: "Invalid or expired link" },
+      { status: 400 },
+    );
   }
 
   const userId = await upsertUser(email, entity);
@@ -18,4 +21,3 @@ export async function POST(request: Request) {
 
   return NextResponse.json({ ok: true });
 }
-

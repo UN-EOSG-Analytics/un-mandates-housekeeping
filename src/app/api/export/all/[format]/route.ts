@@ -10,7 +10,7 @@ const CONTENT_TYPES = {
 
 export async function GET(
   request: Request,
-  { params }: { params: Promise<{ format: string }> }
+  { params }: { params: Promise<{ format: string }> },
 ) {
   const { format } = await params;
 
@@ -44,4 +44,3 @@ export async function GET(
     return NextResponse.json({ error: "Failed to export" }, { status: 500 });
   }
 }
-

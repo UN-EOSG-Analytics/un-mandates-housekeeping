@@ -57,17 +57,19 @@ function VerifyContent() {
 
   const handleVerify = async () => {
     if (!token) return;
-    
+
     // If user already has entity, don't require selection
-    const entity = hasExistingEntity 
-      ? undefined 
-      : (selectedEntity === "Other" ? otherEntity.trim() : selectedEntity);
-    
+    const entity = hasExistingEntity
+      ? undefined
+      : selectedEntity === "Other"
+        ? otherEntity.trim()
+        : selectedEntity;
+
     if (!hasExistingEntity && !entity) {
       setError("Please select your entity");
       return;
     }
-    
+
     setLoading(true);
     const res = await fetch("/api/auth/verify", {
       method: "POST",
@@ -118,7 +120,7 @@ function VerifyContent() {
           Signing in as <span className="font-medium">{userEmail}</span>
         </p>
       )}
-      
+
       <div>
         <label className="mb-2 block text-sm font-medium text-gray-700">
           Select your entity
@@ -126,12 +128,14 @@ function VerifyContent() {
         <select
           value={selectedEntity}
           onChange={(e) => setSelectedEntity(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm focus:border-un-blue focus:outline-none focus:ring-1 focus:ring-un-blue"
+          className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm focus:border-un-blue focus:ring-1 focus:ring-un-blue focus:outline-none"
         >
           <option value="">Choose...</option>
           <option value="PPBD">PPBD</option>
           {entities.map((e) => (
-            <option key={e} value={e}>{e}</option>
+            <option key={e} value={e}>
+              {e}
+            </option>
           ))}
           <option value="Other">Other</option>
         </select>
@@ -143,7 +147,7 @@ function VerifyContent() {
           placeholder="Enter your entity name"
           value={otherEntity}
           onChange={(e) => setOtherEntity(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm focus:border-un-blue focus:outline-none focus:ring-1 focus:ring-un-blue"
+          className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm focus:border-un-blue focus:ring-1 focus:ring-un-blue focus:outline-none"
         />
       )}
 
@@ -151,7 +155,11 @@ function VerifyContent() {
 
       <button
         onClick={handleVerify}
-        disabled={loading || !selectedEntity || (selectedEntity === "Other" && !otherEntity.trim())}
+        disabled={
+          loading ||
+          !selectedEntity ||
+          (selectedEntity === "Other" && !otherEntity.trim())
+        }
         className="w-full rounded-lg bg-un-blue px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
       >
         {loading ? "Signing in..." : "Complete Sign In"}
@@ -164,7 +172,9 @@ export default function VerifyPage() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-white">
       <div className="w-full max-w-sm px-6">
-        <h1 className="mb-6 text-xl font-bold text-gray-900">Complete Sign In</h1>
+        <h1 className="mb-6 text-xl font-bold text-gray-900">
+          Complete Sign In
+        </h1>
         <Suspense fallback={<p className="text-gray-500">Loading...</p>}>
           <VerifyContent />
         </Suspense>

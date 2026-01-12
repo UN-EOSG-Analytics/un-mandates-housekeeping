@@ -29,7 +29,7 @@ export async function GET(req: NextRequest) {
        CASE WHEN symbol ILIKE $1 || '%' THEN 0 ELSE 1 END,
        date_year DESC NULLS LAST
      LIMIT 20`,
-    [q]
+    [q],
   );
 
   return NextResponse.json(
@@ -39,7 +39,6 @@ export async function GET(req: NextRequest) {
       type: r.document_type,
       year: r.date_year,
       body: r.issuing_body,
-    }))
+    })),
   );
 }
-

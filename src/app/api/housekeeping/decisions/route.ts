@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { query } from "@/lib/db";
 import { getCurrentUser } from "@/lib/auth";
-import type { MandateDecision, MandateComment, MandateState, UserRole } from "@/types";
+import type {
+  MandateDecision,
+  MandateComment,
+  MandateState,
+  UserRole,
+} from "@/types";
 
 interface ManualMetadata {
   title?: string;
@@ -66,7 +71,8 @@ const toComment = (row: CommentRow): MandateComment => ({
 
 export async function GET(req: NextRequest) {
   const entity = req.nextUrl.searchParams.get("entity");
-  if (!entity) return NextResponse.json({ error: "entity required" }, { status: 400 });
+  if (!entity)
+    return NextResponse.json({ error: "entity required" }, { status: 400 });
 
   // Get all decisions, comments, and total comment counts per document
   const [decisionRows, commentRows, totalCommentRows] = await Promise.all([
@@ -78,7 +84,7 @@ export async function GET(req: NextRequest) {
        LEFT JOIN mandates_housekeeping.ppbd_reviewers p ON d.user_email = p.email
        WHERE d.entity = $1
        ORDER BY d.created_at`,
-      [entity]
+      [entity],
     ),
     query<CommentRow>(
       `SELECT c.*, u.entity as user_entity
@@ -86,13 +92,13 @@ export async function GET(req: NextRequest) {
        LEFT JOIN mandates_housekeeping.users u ON c.user_email = u.email
        WHERE c.entity = $1 
        ORDER BY c.created_at`,
-      [entity]
+      [entity],
     ),
     query<{ document_symbol: string; count: string }>(
       `SELECT document_symbol, COUNT(*)::text as count 
        FROM mandates_housekeeping.mandate_comments 
        GROUP BY document_symbol`,
-      []
+      [],
     ),
   ]);
 
@@ -104,7 +110,7 @@ export async function GET(req: NextRequest) {
 
   // Group into MandateState objects
   const stateMap: Record<string, MandateState> = {};
-  
+
   for (const row of decisionRows) {
     const key = `${row.document_symbol}:${row.subprogramme || ""}`;
     if (!stateMap[key]) {
@@ -148,10 +154,18 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
   const user = await getCurrentUser();
-  if (!user) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  if (!user)
+    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
 
   const body = await req.json();
-  const { documentSymbol, entity, subprogramme, decision, newSymbol, manualMetadata } = body;
+  const {
+    documentSymbol,
+    entity,
+    subprogramme,
+    decision,
+    newSymbol,
+    manualMetadata,
+  } = body;
 
   if (!documentSymbol || !entity || !decision) {
     return NextResponse.json({ error: "invalid request" }, { status: 400 });
@@ -162,7 +176,10 @@ export async function POST(req: NextRequest) {
   }
 
   if (decision === "update" && !newSymbol) {
-    return NextResponse.json({ error: "newSymbol required for update" }, { status: 400 });
+    return NextResponse.json(
+      { error: "newSymbol required for update" },
+      { status: 400 },
+    );
   }
 
   // Validate manual metadata link if provided
@@ -183,9 +200,16 @@ export async function POST(req: NextRequest) {
     FROM inserted i
     LEFT JOIN mandates_housekeeping.users u ON i.user_email = u.email
     LEFT JOIN mandates_housekeeping.ppbd_reviewers p ON i.user_email = p.email`,
-    [documentSymbol, entity, subprogramme || null, decision, newSymbol || null, manualMetadata ? JSON.stringify(manualMetadata) : null, user.email]
+    [
+      documentSymbol,
+      entity,
+      subprogramme || null,
+      decision,
+      newSymbol || null,
+      manualMetadata ? JSON.stringify(manualMetadata) : null,
+      user.email,
+    ],
   );
 
   return NextResponse.json(toDecision(rows[0]));
 }
-

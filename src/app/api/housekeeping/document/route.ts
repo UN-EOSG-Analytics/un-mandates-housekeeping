@@ -57,7 +57,8 @@ const toComment = (row: CommentRow): MandateComment => ({
 // Get all decisions and comments for a document across all entities
 export async function GET(req: NextRequest) {
   const symbol = req.nextUrl.searchParams.get("symbol");
-  if (!symbol) return NextResponse.json({ error: "symbol required" }, { status: 400 });
+  if (!symbol)
+    return NextResponse.json({ error: "symbol required" }, { status: 400 });
 
   const [decisionRows, commentRows] = await Promise.all([
     query<DecisionRow>(
@@ -68,7 +69,7 @@ export async function GET(req: NextRequest) {
        LEFT JOIN mandates_housekeeping.ppbd_reviewers p ON d.user_email = p.email
        WHERE d.document_symbol = $1
        ORDER BY d.created_at`,
-      [symbol]
+      [symbol],
     ),
     query<CommentRow>(
       `SELECT c.*, u.entity as user_entity
@@ -76,7 +77,7 @@ export async function GET(req: NextRequest) {
        LEFT JOIN mandates_housekeeping.users u ON c.user_email = u.email
        WHERE c.document_symbol = $1 
        ORDER BY c.created_at`,
-      [symbol]
+      [symbol],
     ),
   ]);
 

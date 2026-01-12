@@ -22,7 +22,10 @@ export async function GET(req: NextRequest) {
   const symbols = req.nextUrl.searchParams.get("symbols");
   if (!symbols) return NextResponse.json({});
 
-  const symbolList = symbols.split(",").map((s) => s.trim()).filter(Boolean);
+  const symbolList = symbols
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
   if (symbolList.length === 0) return NextResponse.json({});
 
   // Build map of normalized -> original symbols
@@ -42,10 +45,18 @@ export async function GET(req: NextRequest) {
     `SELECT symbol, proper_title, date_year, issuing_body, document_type
      FROM public.documents
      WHERE symbol IN (${placeholders})`,
-    uniqueSymbols
+    uniqueSymbols,
   );
 
-  const result: Record<string, { title: string | null; year: number | null; body: string | null; docType: string | null }> = {};
+  const result: Record<
+    string,
+    {
+      title: string | null;
+      year: number | null;
+      body: string | null;
+      docType: string | null;
+    }
+  > = {};
   for (const row of rows) {
     const originalSymbol = normalizedMap[row.symbol];
     if (originalSymbol && !result[originalSymbol]) {
@@ -60,4 +71,3 @@ export async function GET(req: NextRequest) {
 
   return NextResponse.json(result);
 }
-

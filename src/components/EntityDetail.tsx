@@ -1,9 +1,22 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import { Plus, Loader2, Check, MessageSquare, X, AlertTriangle } from "lucide-react";
+import {
+  Plus,
+  Loader2,
+  Check,
+  MessageSquare,
+  X,
+  AlertTriangle,
+} from "lucide-react";
 import { ExportDropdown } from "./ExportDropdown";
-import type { Mandate, MandateState, MandateComment, Decision, UserRole } from "@/types";
+import type {
+  Mandate,
+  MandateState,
+  MandateComment,
+  Decision,
+  UserRole,
+} from "@/types";
 import { DocumentSymbol } from "./DocumentSymbol";
 import { Tooltip } from "./Tooltip";
 import { getAgeIndicator } from "@/lib/age-indicator";
@@ -49,9 +62,10 @@ function DecisionSelect({
   onUpdateClick?: () => void; // Callback to show search UI
   disabled?: boolean;
 }) {
-  const tooltipContent = userEmail && createdAt
-    ? `Set by ${userEmail} at ${new Date(createdAt).toLocaleDateString()}`
-    : null;
+  const tooltipContent =
+    userEmail && createdAt
+      ? `Set by ${userEmail} at ${new Date(createdAt).toLocaleDateString()}`
+      : null;
 
   const select = (
     <select
@@ -68,10 +82,13 @@ function DecisionSelect({
       }}
       disabled={disabled}
       className={`h-7 w-20 rounded border border-gray-200 px-1 text-xs ${
-        decision === "retain" ? "bg-green-50 text-green-700" :
-        decision === "remove" ? "bg-red-50 text-red-700" :
-        decision === "update" ? "bg-amber-50 text-amber-700" :
-        "bg-white text-gray-500"
+        decision === "retain"
+          ? "bg-green-50 text-green-700"
+          : decision === "remove"
+            ? "bg-red-50 text-red-700"
+            : decision === "update"
+              ? "bg-amber-50 text-amber-700"
+              : "bg-white text-gray-500"
       }`}
     >
       <option value="">—</option>
@@ -81,7 +98,11 @@ function DecisionSelect({
     </select>
   );
 
-  return tooltipContent ? <Tooltip content={tooltipContent}>{select}</Tooltip> : select;
+  return tooltipContent ? (
+    <Tooltip content={tooltipContent}>{select}</Tooltip>
+  ) : (
+    select
+  );
 }
 
 function PhaseTracker() {
@@ -96,20 +117,22 @@ function PhaseTracker() {
   return (
     <div className="rounded-lg border border-gray-200 bg-white px-4 py-3 shadow-sm">
       <div className="flex items-center gap-2">
-        <span className="text-xs font-medium text-gray-500 uppercase">Review phases</span>
-        <div className="flex-1 flex items-center gap-1">
+        <span className="text-xs font-medium text-gray-500 uppercase">
+          Review phases
+        </span>
+        <div className="flex flex-1 items-center gap-1">
           {phases.map((phase, i) => (
             <div key={phase.id} className="flex items-center">
-              {i > 0 && <div className="w-6 h-px bg-gray-200 mx-1" />}
+              {i > 0 && <div className="mx-1 h-px w-6 bg-gray-200" />}
               <div
                 className={`flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium transition-colors ${
                   phase.id < currentPhase
                     ? "bg-green-100 text-green-700"
                     : phase.id === currentPhase
-                    ? phase.type === "internal"
-                      ? "bg-un-blue text-white"
-                      : "bg-amber-500 text-white"
-                    : "bg-gray-100 text-gray-400"
+                      ? phase.type === "internal"
+                        ? "bg-un-blue text-white"
+                        : "bg-amber-500 text-white"
+                      : "bg-gray-100 text-gray-400"
                 }`}
               >
                 {phase.id < currentPhase && <Check className="h-3 w-3" />}
@@ -132,11 +155,14 @@ function PhaseTracker() {
   );
 }
 
-const GRID_COLS = "grid-cols-[140px_1fr_50px_55px_45px_60px_25px_130px_45px_50px]";
+const GRID_COLS =
+  "grid-cols-[140px_1fr_50px_55px_45px_60px_25px_130px_45px_50px]";
 
 function ColumnHeaders() {
   return (
-    <div className={`grid ${GRID_COLS} items-center gap-x-2 px-3 py-1.5 text-[10px] font-medium tracking-wider text-gray-400 uppercase`}>
+    <div
+      className={`grid ${GRID_COLS} items-center gap-x-2 px-3 py-1.5 text-[10px] font-medium tracking-wider text-gray-400 uppercase`}
+    >
       <div>Symbol</div>
       <div>Title</div>
       <div>Body</div>
@@ -145,7 +171,9 @@ function ColumnHeaders() {
       <div>Others</div>
       <div></div>
       <div>Decision</div>
-      <div><MessageSquare className="h-3 w-3" /></div>
+      <div>
+        <MessageSquare className="h-3 w-3" />
+      </div>
       <div>OK</div>
     </div>
   );
@@ -178,7 +206,8 @@ function MandateRowContent({
   const ageInfo = getAgeIndicator(mandate.year);
 
   const focalAdded = isAdded && state?.focal?.decision === "add";
-  const canCancelFocal = isAdded && (userRole === "focal" || userRole === "ppbd") && focalAdded;
+  const canCancelFocal =
+    isAdded && (userRole === "focal" || userRole === "ppbd") && focalAdded;
 
   // Check if this row has an update decision (to grey out content)
   const hasUpdate = state?.focal?.decision === "update";
@@ -187,24 +216,27 @@ function MandateRowContent({
   // Approval state
   const hasDecision = !!state?.focal;
   const isApproved = !!state?.focal?.approvedBy;
-  const canApprove = userRole === "ppbd" && onApprove && hasDecision && state?.focal?.id;
+  const canApprove =
+    userRole === "ppbd" && onApprove && hasDecision && state?.focal?.id;
 
   return (
     <div
-      className={`grid ${GRID_COLS} items-center gap-x-2 gap-y-1.5 px-3 py-2.5 text-sm cursor-pointer transition-colors ${
+      className={`grid ${GRID_COLS} cursor-pointer items-center gap-x-2 gap-y-1.5 px-3 py-2.5 text-sm transition-colors ${
         isUpdateTarget ? "bg-amber-50/50" : "hover:bg-gray-50"
       }`}
       onClick={onOpenSidebar}
     >
       <div onClick={(e) => e.stopPropagation()}>
-        {isUpdateTarget && <span className="text-amber-500 mr-1 text-xs">↳</span>}
+        {isUpdateTarget && (
+          <span className="mr-1 text-xs text-amber-500">↳</span>
+        )}
         <a
           href={mandate.link || "#"}
           target="_blank"
           rel="noopener noreferrer"
           className={`inline-block rounded px-2 py-0.5 text-xs font-medium whitespace-nowrap transition-colors ${
-            contentGreyed 
-              ? "bg-gray-100 text-gray-400" 
+            contentGreyed
+              ? "bg-gray-100 text-gray-400"
               : "bg-blue-50 text-un-blue hover:bg-blue-100"
           }`}
           onClick={(e) => !mandate.link && e.preventDefault()}
@@ -212,13 +244,25 @@ function MandateRowContent({
           {mandate.symbol}
         </a>
       </div>
-      <div className={`cursor-help truncate ${contentGreyed ? "text-gray-400" : "text-gray-600"}`} title={mandate.title || undefined}>
-        {mandate.title || <span className="italic text-gray-400">No title</span>}
+      <div
+        className={`cursor-help truncate ${contentGreyed ? "text-gray-400" : "text-gray-600"}`}
+        title={mandate.title || undefined}
+      >
+        {mandate.title || (
+          <span className="text-gray-400 italic">No title</span>
+        )}
       </div>
-      <div className={`text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`} title={mandate.body ?? undefined}>
+      <div
+        className={`text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`}
+        title={mandate.body ?? undefined}
+      >
         {abbreviateBody(mandate.body) ?? "—"}
       </div>
-      <div className={`text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`}>{mandate.year ?? "—"}</div>
+      <div
+        className={`text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`}
+      >
+        {mandate.year ?? "—"}
+      </div>
       <Tooltip content={ageInfo.tooltip}>
         <span
           className={`cursor-help rounded px-1.5 py-0.5 text-xs font-medium ${contentGreyed ? "opacity-50" : ""} ${ageInfo.color} ${ageInfo.bgColor}`}
@@ -233,8 +277,12 @@ function MandateRowContent({
             : `No other entities cite ${mandate.symbol}`
         }
       >
-        <span className={`cursor-help text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`}>
-          {mandate.otherEntitiesCount > 0 ? `+${mandate.otherEntitiesCount}` : "—"}
+        <span
+          className={`cursor-help text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`}
+        >
+          {mandate.otherEntitiesCount > 0
+            ? `+${mandate.otherEntitiesCount}`
+            : "—"}
         </span>
       </Tooltip>
       <div>
@@ -248,7 +296,11 @@ function MandateRowContent({
         {isUpdateTarget ? (
           <span className="text-xs text-gray-400">—</span>
         ) : isAdded ? (
-          <AddBadge show={!!focalAdded} canCancel={!!canCancelFocal} onCancel={() => onDecision("cancel")} />
+          <AddBadge
+            show={!!focalAdded}
+            canCancel={!!canCancelFocal}
+            onCancel={() => onDecision("cancel")}
+          />
         ) : (
           <DecisionSelect
             decision={state?.focal?.decision ?? null}
@@ -261,31 +313,54 @@ function MandateRowContent({
           />
         )}
       </div>
-      <Tooltip content={commentCount > 0 ? "Click to view comments" : "Click to add a comment"}>
-        <span className={`cursor-pointer text-xs ${commentCount > 0 ? "text-un-blue font-medium" : "text-gray-400"} ${contentGreyed ? "opacity-50" : ""}`}>
+      <Tooltip
+        content={
+          commentCount > 0 ? "Click to view comments" : "Click to add a comment"
+        }
+      >
+        <span
+          className={`cursor-pointer text-xs ${commentCount > 0 ? "font-medium text-un-blue" : "text-gray-400"} ${contentGreyed ? "opacity-50" : ""}`}
+        >
           {commentCount > 0 ? commentCount : "—"}
         </span>
       </Tooltip>
-      <div onClick={(e) => e.stopPropagation()} className="flex items-center justify-center">
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="flex items-center justify-center"
+      >
         {isUpdateTarget ? (
-          <span className="inline-flex h-6 w-6 items-center justify-center text-xs text-gray-400">—</span>
+          <span className="inline-flex h-6 w-6 items-center justify-center text-xs text-gray-400">
+            —
+          </span>
         ) : hasDecision ? (
           <button
-            onClick={() => canApprove && state?.focal?.id && onApprove(state.focal.id, !isApproved)}
+            onClick={() =>
+              canApprove &&
+              state?.focal?.id &&
+              onApprove(state.focal.id, !isApproved)
+            }
             disabled={!canApprove}
-            title={isApproved ? `Approved by ${state?.focal?.approvedBy}` : (canApprove ? "Click to approve" : "No decision to approve")}
+            title={
+              isApproved
+                ? `Approved by ${state?.focal?.approvedBy}`
+                : canApprove
+                  ? "Click to approve"
+                  : "No decision to approve"
+            }
             className={`inline-flex h-6 w-6 items-center justify-center rounded transition-colors ${
-              isApproved 
-                ? "bg-emerald-600 text-white" 
-                : canApprove 
-                  ? "border border-gray-300 bg-white hover:border-emerald-400 hover:bg-emerald-50" 
+              isApproved
+                ? "bg-emerald-600 text-white"
+                : canApprove
+                  ? "border border-gray-300 bg-white hover:border-emerald-400 hover:bg-emerald-50"
                   : "border border-gray-200 bg-gray-50"
             } ${!canApprove ? "cursor-default" : "cursor-pointer"}`}
           >
             {isApproved && <Check className="h-4 w-4" />}
           </button>
         ) : (
-          <span className="inline-flex h-6 w-6 items-center justify-center text-xs text-gray-300">—</span>
+          <span className="inline-flex h-6 w-6 items-center justify-center text-xs text-gray-300">
+            —
+          </span>
         )}
       </div>
     </div>
@@ -315,27 +390,36 @@ function MandateRow({
   onUpdateWithManual: (newSymbol: string, manualData: ManualEntryData) => void;
   onComment: (comment: string) => void;
   isAdded?: boolean;
-  updateTargetMetadata?: { title: string | null; year: number | null; body: string | null } | null;
+  updateTargetMetadata?: {
+    title: string | null;
+    year: number | null;
+    body: string | null;
+  } | null;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showUpdateSearch, setShowUpdateSearch] = useState(false);
 
   // Check if there's a completed update (has newSymbol)
   const currentUserDecision = state?.focal ?? state?.ppbd;
-  const hasCompletedUpdate = currentUserDecision?.decision === "update" && currentUserDecision?.newSymbol;
+  const hasCompletedUpdate =
+    currentUserDecision?.decision === "update" &&
+    currentUserDecision?.newSymbol;
   const newSymbol = currentUserDecision?.newSymbol;
 
   // Create a fake mandate object for the "new" row in update view
-  const newMandate: Mandate | null = hasCompletedUpdate && newSymbol ? {
-    ...mandate,
-    symbol: newSymbol,
-    title: updateTargetMetadata?.title || "",
-    year: updateTargetMetadata?.year || null,
-    body: updateTargetMetadata?.body || null,
-    link: null,
-    metadataFromDb: !!updateTargetMetadata,
-    isAdded: false,
-  } : null;
+  const newMandate: Mandate | null =
+    hasCompletedUpdate && newSymbol
+      ? {
+          ...mandate,
+          symbol: newSymbol,
+          title: updateTargetMetadata?.title || "",
+          year: updateTargetMetadata?.year || null,
+          body: updateTargetMetadata?.body || null,
+          link: null,
+          metadataFromDb: !!updateTargetMetadata,
+          isAdded: false,
+        }
+      : null;
 
   const handleUpdateSelect = (symbol: string) => {
     onDecision("update", symbol);
@@ -364,8 +448,10 @@ function MandateRow({
 
       {/* Update search input (shown when user selects "update" from dropdown) */}
       {showUpdateSearch && !hasCompletedUpdate && (
-        <div className="border-t border-gray-100 px-3 py-2 bg-amber-50/30">
-          <div className="text-xs text-amber-600 mb-2 font-medium">Select replacement document:</div>
+        <div className="border-t border-gray-100 bg-amber-50/30 px-3 py-2">
+          <div className="mb-2 text-xs font-medium text-amber-600">
+            Select replacement document:
+          </div>
           <DocumentSearchInput
             onSelect={handleUpdateSelect}
             onManualSubmit={handleUpdateManual}
@@ -416,7 +502,10 @@ function MandateRow({
           onDecision={onDecision}
           onApprove={onApprove}
           onComment={onComment}
-          onUpdateClick={() => { setSidebarOpen(false); setShowUpdateSearch(true); }}
+          onUpdateClick={() => {
+            setSidebarOpen(false);
+            setShowUpdateSearch(true);
+          }}
           metadataFromDb={mandate.metadataFromDb}
           docType={mandate.docType}
         />
@@ -425,13 +514,25 @@ function MandateRow({
   );
 }
 
-function AddBadge({ show, canCancel, onCancel }: { show: boolean; canCancel: boolean; onCancel: () => void }) {
+function AddBadge({
+  show,
+  canCancel,
+  onCancel,
+}: {
+  show: boolean;
+  canCancel: boolean;
+  onCancel: () => void;
+}) {
   if (!show) return <span className="text-xs text-gray-400">—</span>;
   return (
-    <span className="inline-flex h-7 w-20 items-center rounded border border-blue-200 bg-blue-50 pl-2 pr-px text-xs text-blue-700">
+    <span className="inline-flex h-7 w-20 items-center rounded border border-blue-200 bg-blue-50 pr-px pl-2 text-xs text-blue-700">
       <span className="flex-1">Add</span>
       {canCancel && (
-        <button onClick={onCancel} className="rounded p-0.5 hover:bg-blue-100" title="Cancel">
+        <button
+          onClick={onCancel}
+          className="rounded p-0.5 hover:bg-blue-100"
+          title="Cancel"
+        >
           <X className="h-3 w-3" />
         </button>
       )}
@@ -481,7 +582,13 @@ function DocumentSearchInput({
   const [focused, setFocused] = useState(false);
   const [highlighted, setHighlighted] = useState(-1);
   const [showManualForm, setShowManualForm] = useState(false);
-  const [manualData, setManualData] = useState<ManualEntryData>({ symbol: "", title: "", body: "", year: "", link: "" });
+  const [manualData, setManualData] = useState<ManualEntryData>({
+    symbol: "",
+    title: "",
+    body: "",
+    year: "",
+    link: "",
+  });
   const [bodySuggestions, setBodySuggestions] = useState<string[]>([]);
   const [showBodySuggestions, setShowBodySuggestions] = useState(false);
   const [linkError, setLinkError] = useState("");
@@ -533,10 +640,11 @@ function DocumentSearchInput({
       .catch(() => {});
   };
 
-  const isFormValid = manualData.symbol.trim() && 
-    manualData.title.trim() && 
-    manualData.body.trim() && 
-    manualData.year.trim() && 
+  const isFormValid =
+    manualData.symbol.trim() &&
+    manualData.title.trim() &&
+    manualData.body.trim() &&
+    manualData.year.trim() &&
     manualData.link.trim() &&
     /^\d{4}$/.test(manualData.year) &&
     parseInt(manualData.year) >= 1945 &&
@@ -562,7 +670,7 @@ function DocumentSearchInput({
     }
     const totalItems = results.length + (searchDone ? 1 : 0);
     if (totalItems === 0) return;
-    
+
     switch (e.key) {
       case "ArrowDown":
         e.preventDefault();
@@ -576,7 +684,10 @@ function DocumentSearchInput({
         e.preventDefault();
         if (highlighted >= 0 && highlighted < results.length) {
           handleSelect(results[highlighted]);
-        } else if (highlighted === results.length || (results.length === 0 && highlighted === 0)) {
+        } else if (
+          highlighted === results.length ||
+          (results.length === 0 && highlighted === 0)
+        ) {
           handleOpenManualForm();
         }
         break;
@@ -590,7 +701,10 @@ function DocumentSearchInput({
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(e.target as Node)
+      ) {
         setOpen(false);
         setShowBodySuggestions(false);
       }
@@ -600,52 +714,76 @@ function DocumentSearchInput({
   }, []);
 
   if (showManualForm) {
-    const filteredBodies = bodySuggestions.filter((b) => 
-      b.toLowerCase().includes(manualData.body.toLowerCase())
-    ).slice(0, 8);
+    const filteredBodies = bodySuggestions
+      .filter((b) => b.toLowerCase().includes(manualData.body.toLowerCase()))
+      .slice(0, 8);
 
     return (
-      <div className={`rounded-lg border border-gray-200 bg-white p-4 shadow-sm ${compact ? "p-3" : ""}`}>
-        <div className="flex items-center justify-between mb-3">
-          <span className="text-sm font-medium text-gray-700">{formTitle || "Add document manually"}</span>
-          <button onClick={() => { setShowManualForm(false); onCancel?.(); }} className="text-gray-400 hover:text-gray-600">
+      <div
+        className={`rounded-lg border border-gray-200 bg-white p-4 shadow-sm ${compact ? "p-3" : ""}`}
+      >
+        <div className="mb-3 flex items-center justify-between">
+          <span className="text-sm font-medium text-gray-700">
+            {formTitle || "Add document manually"}
+          </span>
+          <button
+            onClick={() => {
+              setShowManualForm(false);
+              onCancel?.();
+            }}
+            className="text-gray-400 hover:text-gray-600"
+          >
             <X className="h-4 w-4" />
           </button>
         </div>
         <div className="space-y-3">
           <div>
-            <label className="block text-xs text-gray-500 mb-1">Symbol <span className="text-red-400">*</span></label>
+            <label className="mb-1 block text-xs text-gray-500">
+              Symbol <span className="text-red-400">*</span>
+            </label>
             <input
               type="text"
               value={manualData.symbol}
-              onChange={(e) => setManualData((d) => ({ ...d, symbol: e.target.value }))}
+              onChange={(e) =>
+                setManualData((d) => ({ ...d, symbol: e.target.value }))
+              }
               className="w-full rounded border border-gray-200 px-2 py-1.5 text-sm focus:border-un-blue focus:outline-none"
               placeholder="e.g. A/RES/78/123"
             />
           </div>
           <div>
-            <label className="block text-xs text-gray-500 mb-1">Title <span className="text-red-400">*</span></label>
+            <label className="mb-1 block text-xs text-gray-500">
+              Title <span className="text-red-400">*</span>
+            </label>
             <input
               type="text"
               value={manualData.title}
-              onChange={(e) => setManualData((d) => ({ ...d, title: e.target.value }))}
+              onChange={(e) =>
+                setManualData((d) => ({ ...d, title: e.target.value }))
+              }
               className="w-full rounded border border-gray-200 px-2 py-1.5 text-sm focus:border-un-blue focus:outline-none"
               placeholder="Document title"
             />
           </div>
           <div className="relative">
-            <label className="block text-xs text-gray-500 mb-1">Issuing body <span className="text-red-400">*</span></label>
+            <label className="mb-1 block text-xs text-gray-500">
+              Issuing body <span className="text-red-400">*</span>
+            </label>
             <input
               type="text"
               value={manualData.body}
-              onChange={(e) => setManualData((d) => ({ ...d, body: e.target.value }))}
+              onChange={(e) =>
+                setManualData((d) => ({ ...d, body: e.target.value }))
+              }
               onFocus={() => setShowBodySuggestions(true)}
-              onBlur={() => setTimeout(() => setShowBodySuggestions(false), 150)}
+              onBlur={() =>
+                setTimeout(() => setShowBodySuggestions(false), 150)
+              }
               className="w-full rounded border border-gray-200 px-2 py-1.5 text-sm focus:border-un-blue focus:outline-none"
               placeholder="e.g. General Assembly"
             />
             {showBodySuggestions && filteredBodies.length > 0 && (
-              <div className="absolute top-full left-0 right-0 z-10 mt-1 max-h-40 overflow-y-auto rounded border border-gray-200 bg-white shadow-lg">
+              <div className="absolute top-full right-0 left-0 z-10 mt-1 max-h-40 overflow-y-auto rounded border border-gray-200 bg-white shadow-lg">
                 {filteredBodies.map((b) => (
                   <button
                     key={b}
@@ -663,13 +801,20 @@ function DocumentSearchInput({
             )}
           </div>
           <div>
-            <label className="block text-xs text-gray-500 mb-1">Year <span className="text-red-400">*</span></label>
+            <label className="mb-1 block text-xs text-gray-500">
+              Year <span className="text-red-400">*</span>
+            </label>
             <input
               type="number"
               value={manualData.year}
-              onChange={(e) => setManualData((d) => ({ ...d, year: e.target.value }))}
+              onChange={(e) =>
+                setManualData((d) => ({ ...d, year: e.target.value }))
+              }
               className={`w-full rounded border px-2 py-1.5 text-sm focus:outline-none ${
-                manualData.year && (!/^\d{4}$/.test(manualData.year) || parseInt(manualData.year) < 1945 || parseInt(manualData.year) > 2100)
+                manualData.year &&
+                (!/^\d{4}$/.test(manualData.year) ||
+                  parseInt(manualData.year) < 1945 ||
+                  parseInt(manualData.year) > 2100)
                   ? "border-red-300 focus:border-red-400"
                   : "border-gray-200 focus:border-un-blue"
               }`}
@@ -677,12 +822,19 @@ function DocumentSearchInput({
               min="1945"
               max="2100"
             />
-            {manualData.year && (!/^\d{4}$/.test(manualData.year) || parseInt(manualData.year) < 1945 || parseInt(manualData.year) > 2100) && (
-              <p className="text-xs text-red-500 mt-1">Year must be 4 digits between 1945-2100</p>
-            )}
+            {manualData.year &&
+              (!/^\d{4}$/.test(manualData.year) ||
+                parseInt(manualData.year) < 1945 ||
+                parseInt(manualData.year) > 2100) && (
+                <p className="mt-1 text-xs text-red-500">
+                  Year must be 4 digits between 1945-2100
+                </p>
+              )}
           </div>
           <div>
-            <label className="block text-xs text-gray-500 mb-1">Link <span className="text-red-400">*</span></label>
+            <label className="mb-1 block text-xs text-gray-500">
+              Link <span className="text-red-400">*</span>
+            </label>
             <input
               type="url"
               value={manualData.link}
@@ -691,20 +843,27 @@ function DocumentSearchInput({
                 setLinkError("");
               }}
               className={`w-full rounded border px-2 py-1.5 text-sm focus:outline-none ${
-                linkError || (manualData.link && !/^https?:\/\/.+/.test(manualData.link))
+                linkError ||
+                (manualData.link && !/^https?:\/\/.+/.test(manualData.link))
                   ? "border-red-300 focus:border-red-400"
                   : "border-gray-200 focus:border-un-blue"
               }`}
               placeholder="https://..."
             />
-            {(linkError || (manualData.link && !/^https?:\/\/.+/.test(manualData.link))) && (
-              <p className="text-xs text-red-500 mt-1">{linkError || "Link must start with http:// or https://"}</p>
+            {(linkError ||
+              (manualData.link && !/^https?:\/\/.+/.test(manualData.link))) && (
+              <p className="mt-1 text-xs text-red-500">
+                {linkError || "Link must start with http:// or https://"}
+              </p>
             )}
           </div>
           <p className="text-xs text-gray-400">All fields are required</p>
           <div className="flex justify-end gap-2 pt-2">
             <button
-              onClick={() => { setShowManualForm(false); onCancel?.(); }}
+              onClick={() => {
+                setShowManualForm(false);
+                onCancel?.();
+              }}
               className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-800"
             >
               Cancel
@@ -712,7 +871,7 @@ function DocumentSearchInput({
             <button
               onClick={handleManualSubmit}
               disabled={!isFormValid}
-              className="rounded bg-un-blue px-3 py-1.5 text-sm text-white hover:bg-un-blue/90 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="rounded bg-un-blue px-3 py-1.5 text-sm text-white hover:bg-un-blue/90 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {submitLabel || "Add"}
             </button>
@@ -726,10 +885,14 @@ function DocumentSearchInput({
     <div ref={containerRef} className="relative">
       <div
         className={`flex items-center gap-2 rounded-lg border-2 border-dashed px-3 py-2 transition-colors ${
-          focused ? "border-un-blue/40 bg-blue-50/30" : "border-gray-200 bg-gray-50/50"
+          focused
+            ? "border-un-blue/40 bg-blue-50/30"
+            : "border-gray-200 bg-gray-50/50"
         }`}
       >
-        <Plus className={`h-4 w-4 ${focused ? "text-un-blue" : "text-gray-400"}`} />
+        <Plus
+          className={`h-4 w-4 ${focused ? "text-un-blue" : "text-gray-400"}`}
+        />
         <input
           type="text"
           value={query}
@@ -744,51 +907,64 @@ function DocumentSearchInput({
           className="flex-1 bg-transparent text-sm text-gray-700 placeholder:text-gray-400 focus:outline-none"
           autoFocus={compact}
         />
-        {searching && <Loader2 className="h-4 w-4 animate-spin text-gray-400" />}
+        {searching && (
+          <Loader2 className="h-4 w-4 animate-spin text-gray-400" />
+        )}
         {onCancel && (
-          <button onClick={onCancel} className="text-gray-400 hover:text-gray-600">
+          <button
+            onClick={onCancel}
+            className="text-gray-400 hover:text-gray-600"
+          >
             <X className="h-4 w-4" />
           </button>
         )}
       </div>
 
       {open && (
-        <div className="absolute top-full left-0 right-0 z-20 mt-1 max-h-72 overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg">
+        <div className="absolute top-full right-0 left-0 z-20 mt-1 max-h-72 overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg">
           {results.map((doc, i) => (
             <button
               key={doc.symbol}
               onMouseDown={(e) => e.preventDefault()}
               onClick={() => handleSelect(doc)}
               onMouseEnter={() => setHighlighted(i)}
-              className={`w-full px-3 py-2 text-left border-b border-gray-100 ${
+              className={`w-full border-b border-gray-100 px-3 py-2 text-left ${
                 i === highlighted ? "bg-un-blue/10" : "hover:bg-gray-50"
               }`}
             >
               <div className="flex items-baseline gap-2">
-                <span className="font-medium text-un-blue text-sm">{doc.symbol}</span>
+                <span className="text-sm font-medium text-un-blue">
+                  {doc.symbol}
+                </span>
                 <span className="text-xs text-gray-400">
                   {[doc.body, doc.year].filter(Boolean).join(" · ")}
                 </span>
               </div>
               {doc.title && (
-                <div className="text-xs text-gray-600 truncate mt-0.5">{doc.title}</div>
+                <div className="mt-0.5 truncate text-xs text-gray-600">
+                  {doc.title}
+                </div>
               )}
             </button>
           ))}
           {searchDone && results.length === 0 && (
-            <div className="px-3 py-2 text-sm text-gray-500">No documents found</div>
+            <div className="px-3 py-2 text-sm text-gray-500">
+              No documents found
+            </div>
           )}
           {searchDone && (
             <button
               onMouseDown={(e) => e.preventDefault()}
               onClick={handleOpenManualForm}
               onMouseEnter={() => setHighlighted(results.length)}
-              className={`w-full px-3 py-2 text-left text-sm border-t border-gray-100 ${
-                highlighted === results.length ? "bg-un-blue/10" : "hover:bg-gray-50"
+              className={`w-full border-t border-gray-100 px-3 py-2 text-left text-sm ${
+                highlighted === results.length
+                  ? "bg-un-blue/10"
+                  : "hover:bg-gray-50"
               }`}
             >
               <span className="text-un-blue">+ Add manually...</span>
-              {query && <span className="text-gray-400 ml-1">"{query}"</span>}
+              {query && <span className="ml-1 text-gray-400">"{query}"</span>}
             </button>
           )}
         </div>
@@ -845,13 +1021,28 @@ function MandateSection({
   subprogramme: string | null;
   states: Record<string, MandateState>;
   totalComments: Record<string, number>;
-  addedMetadata: Record<string, { title: string | null; year: number | null; body: string | null; docType: string | null } | null>;
-  updateTargetMetadata: Record<string, { title: string | null; year: number | null; body: string | null } | null>;
+  addedMetadata: Record<
+    string,
+    {
+      title: string | null;
+      year: number | null;
+      body: string | null;
+      docType: string | null;
+    } | null
+  >;
+  updateTargetMetadata: Record<
+    string,
+    { title: string | null; year: number | null; body: string | null } | null
+  >;
   userRole: UserRole | null;
   userEmail: string | null;
   onDecision: (symbol: string, decision: Decision, newSymbol?: string) => void;
   onApprove: (decisionId: string, approved: boolean) => void;
-  onUpdateWithManual: (symbol: string, newSymbol: string, manualData: ManualEntryData) => void;
+  onUpdateWithManual: (
+    symbol: string,
+    newSymbol: string,
+    manualData: ManualEntryData,
+  ) => void;
   onComment: (symbol: string, comment: string) => void;
   onAdd: (symbol: string) => void;
   onAddManual: (data: ManualEntryData) => void;
@@ -860,10 +1051,12 @@ function MandateSection({
   const existingSymbols = new Set(mandates.map((m) => m.symbol));
   // Find user-added entries (decision === "add", excluding cancelled, not already in mandates)
   const addedEntries = Object.values(states).filter(
-    (s) => s.subprogramme === subprogramme && 
+    (s) =>
+      s.subprogramme === subprogramme &&
       (s.focal?.decision === "add" || s.ppbd?.decision === "add") &&
-      s.focal?.decision !== "cancel" && s.ppbd?.decision !== "cancel" &&
-      !existingSymbols.has(s.documentSymbol)
+      s.focal?.decision !== "cancel" &&
+      s.ppbd?.decision !== "cancel" &&
+      !existingSymbols.has(s.documentSymbol),
   );
 
   // Convert added entries to Mandate objects
@@ -919,11 +1112,17 @@ function MandateSection({
               commentCount={totalComments[m.symbol] || 0}
               userRole={userRole}
               userEmail={userEmail}
-              onDecision={(decision, newSymbol) => onDecision(m.symbol, decision, newSymbol)}
+              onDecision={(decision, newSymbol) =>
+                onDecision(m.symbol, decision, newSymbol)
+              }
               onApprove={onApprove}
-              onUpdateWithManual={(newSymbol, manualData) => onUpdateWithManual(m.symbol, newSymbol, manualData)}
+              onUpdateWithManual={(newSymbol, manualData) =>
+                onUpdateWithManual(m.symbol, newSymbol, manualData)
+              }
               onComment={(comment) => onComment(m.symbol, comment)}
-              updateTargetMetadata={targetSymbol ? updateTargetMetadata[targetSymbol] : undefined}
+              updateTargetMetadata={
+                targetSymbol ? updateTargetMetadata[targetSymbol] : undefined
+              }
             />
           );
         })}
@@ -942,7 +1141,11 @@ function MandateSection({
             isAdded
           />
         ))}
-        <AddEntryRow onAdd={onAdd} onAddManual={onAddManual} disabled={!userRole} />
+        <AddEntryRow
+          onAdd={onAdd}
+          onAddManual={onAddManual}
+          disabled={!userRole}
+        />
       </div>
     </div>
   );
@@ -957,16 +1160,33 @@ export function EntityDetail({
 }: Props) {
   const [filterEntity, setFilterEntity] = useState<string | null>(null);
   const [states, setStates] = useState<Record<string, MandateState>>({});
-  const [totalComments, setTotalComments] = useState<Record<string, number>>({});
+  const [totalComments, setTotalComments] = useState<Record<string, number>>(
+    {},
+  );
   const [userRole, setUserRole] = useState<UserRole | null>(null);
   const [userEmail, setUserEmail] = useState<string | null>(null);
-  const [addedMetadata, setAddedMetadata] = useState<Record<string, { title: string | null; year: number | null; body: string | null; docType: string | null } | null>>({});
-  const [updateTargetMetadata, setUpdateTargetMetadata] = useState<Record<string, { title: string | null; year: number | null; body: string | null } | null>>({});
+  const [addedMetadata, setAddedMetadata] = useState<
+    Record<
+      string,
+      {
+        title: string | null;
+        year: number | null;
+        body: string | null;
+        docType: string | null;
+      } | null
+    >
+  >({});
+  const [updateTargetMetadata, setUpdateTargetMetadata] = useState<
+    Record<
+      string,
+      { title: string | null; year: number | null; body: string | null } | null
+    >
+  >({});
 
   // Fetch user role and decisions on mount
   useEffect(() => {
     fetch("/api/housekeeping/role")
-      .then((r) => r.ok ? r.json() : null)
+      .then((r) => (r.ok ? r.json() : null))
       .then((data) => {
         if (data) {
           setUserRole(data.role);
@@ -976,15 +1196,20 @@ export function EntityDetail({
       .catch(() => {});
 
     fetch(`/api/housekeeping/decisions?entity=${encodeURIComponent(entity)}`)
-      .then((r) => r.ok ? r.json() : { states: [], totalComments: {} })
-      .then((data: { states: MandateState[]; totalComments: Record<string, number> }) => {
-        const map: Record<string, MandateState> = {};
-        for (const s of data.states) {
-          map[`${s.documentSymbol}:${s.subprogramme || ""}`] = s;
-        }
-        setStates(map);
-        setTotalComments(data.totalComments);
-      })
+      .then((r) => (r.ok ? r.json() : { states: [], totalComments: {} }))
+      .then(
+        (data: {
+          states: MandateState[];
+          totalComments: Record<string, number>;
+        }) => {
+          const map: Record<string, MandateState> = {};
+          for (const s of data.states) {
+            map[`${s.documentSymbol}:${s.subprogramme || ""}`] = s;
+          }
+          setStates(map);
+          setTotalComments(data.totalComments);
+        },
+      )
       .catch(() => {});
   }, [entity]);
 
@@ -992,51 +1217,102 @@ export function EntityDetail({
   useEffect(() => {
     const existingSymbols = new Set([
       ...backgroundMandates.map((m) => m.symbol),
-      ...Object.values(legislativeMandates).flat().map((m) => m.symbol),
+      ...Object.values(legislativeMandates)
+        .flat()
+        .map((m) => m.symbol),
     ]);
     const addedSymbols = Object.values(states)
-      .filter((s) => (s.focal?.decision === "add" || s.ppbd?.decision === "add") && !existingSymbols.has(s.documentSymbol))
+      .filter(
+        (s) =>
+          (s.focal?.decision === "add" || s.ppbd?.decision === "add") &&
+          !existingSymbols.has(s.documentSymbol),
+      )
       .map((s) => s.documentSymbol)
       .filter((sym) => !(sym in addedMetadata)); // Use "in" to check if key exists (even if null)
 
     if (addedSymbols.length === 0) return;
 
-    fetch(`/api/documents/metadata?symbols=${encodeURIComponent(addedSymbols.join(","))}`)
-      .then((r) => r.ok ? r.json() : {})
-      .then((data: Record<string, { title: string | null; year: number | null; body: string | null; docType: string | null }>) => {
-        // Mark all looked-up symbols, even if no data found (to prevent re-fetching)
-        const result: Record<string, { title: string | null; year: number | null; body: string | null; docType: string | null } | null> = {};
-        for (const sym of addedSymbols) {
-          result[sym] = data[sym] || null; // null means "looked up but not found"
-        }
-        setAddedMetadata((prev) => ({ ...prev, ...result }));
-      })
+    fetch(
+      `/api/documents/metadata?symbols=${encodeURIComponent(addedSymbols.join(","))}`,
+    )
+      .then((r) => (r.ok ? r.json() : {}))
+      .then(
+        (
+          data: Record<
+            string,
+            {
+              title: string | null;
+              year: number | null;
+              body: string | null;
+              docType: string | null;
+            }
+          >,
+        ) => {
+          // Mark all looked-up symbols, even if no data found (to prevent re-fetching)
+          const result: Record<
+            string,
+            {
+              title: string | null;
+              year: number | null;
+              body: string | null;
+              docType: string | null;
+            } | null
+          > = {};
+          for (const sym of addedSymbols) {
+            result[sym] = data[sym] || null; // null means "looked up but not found"
+          }
+          setAddedMetadata((prev) => ({ ...prev, ...result }));
+        },
+      )
       .catch(() => {});
   }, [states, backgroundMandates, legislativeMandates, addedMetadata]);
 
   // Fetch metadata for update target documents
   useEffect(() => {
     const updateTargetSymbols = Object.values(states)
-      .filter((s) => s.focal?.decision === "update" || s.ppbd?.decision === "update")
+      .filter(
+        (s) => s.focal?.decision === "update" || s.ppbd?.decision === "update",
+      )
       .map((s) => s.focal?.newSymbol || s.ppbd?.newSymbol)
       .filter((sym): sym is string => !!sym && !(sym in updateTargetMetadata));
 
     if (updateTargetSymbols.length === 0) return;
 
-    fetch(`/api/documents/metadata?symbols=${encodeURIComponent(updateTargetSymbols.join(","))}`)
-      .then((r) => r.ok ? r.json() : {})
-      .then((data: Record<string, { title: string | null; year: number | null; body: string | null }>) => {
-        const result: Record<string, { title: string | null; year: number | null; body: string | null } | null> = {};
-        for (const sym of updateTargetSymbols) {
-          result[sym] = data[sym] || null;
-        }
-        setUpdateTargetMetadata((prev) => ({ ...prev, ...result }));
-      })
+    fetch(
+      `/api/documents/metadata?symbols=${encodeURIComponent(updateTargetSymbols.join(","))}`,
+    )
+      .then((r) => (r.ok ? r.json() : {}))
+      .then(
+        (
+          data: Record<
+            string,
+            { title: string | null; year: number | null; body: string | null }
+          >,
+        ) => {
+          const result: Record<
+            string,
+            {
+              title: string | null;
+              year: number | null;
+              body: string | null;
+            } | null
+          > = {};
+          for (const sym of updateTargetSymbols) {
+            result[sym] = data[sym] || null;
+          }
+          setUpdateTargetMetadata((prev) => ({ ...prev, ...result }));
+        },
+      )
       .catch(() => {});
   }, [states, updateTargetMetadata]);
 
   const handleDecision = useCallback(
-    async (symbol: string, subprogramme: string | null, decision: Decision, newSymbol?: string) => {
+    async (
+      symbol: string,
+      subprogramme: string | null,
+      decision: Decision,
+      newSymbol?: string,
+    ) => {
       if (!userRole || !userEmail) return;
       const key = `${symbol}:${subprogramme || ""}`;
       const now = new Date().toISOString();
@@ -1070,7 +1346,13 @@ export function EntityDetail({
       const res = await fetch("/api/housekeeping/decisions", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ documentSymbol: symbol, entity, subprogramme, decision, newSymbol }),
+        body: JSON.stringify({
+          documentSymbol: symbol,
+          entity,
+          subprogramme,
+          decision,
+          newSymbol,
+        }),
       });
       if (res.ok) {
         const updated = await res.json();
@@ -1079,16 +1361,24 @@ export function EntityDetail({
           [key]: {
             ...prev[key],
             [updated.role]: updated,
-            decisions: [...(prev[key]?.decisions?.filter((d) => d.id) || []), updated],
+            decisions: [
+              ...(prev[key]?.decisions?.filter((d) => d.id) || []),
+              updated,
+            ],
           },
         }));
       }
     },
-    [entity, userRole, userEmail]
+    [entity, userRole, userEmail],
   );
 
   const handleUpdateWithManual = useCallback(
-    async (symbol: string, subprogramme: string | null, newSymbol: string, manualData: ManualEntryData) => {
+    async (
+      symbol: string,
+      subprogramme: string | null,
+      newSymbol: string,
+      manualData: ManualEntryData,
+    ) => {
       if (!userRole || !userEmail) return;
       const key = `${symbol}:${subprogramme || ""}`;
       const now = new Date().toISOString();
@@ -1154,12 +1444,15 @@ export function EntityDetail({
           [key]: {
             ...prev[key],
             [updated.role]: updated,
-            decisions: [...(prev[key]?.decisions?.filter((d) => d.id) || []), updated],
+            decisions: [
+              ...(prev[key]?.decisions?.filter((d) => d.id) || []),
+              updated,
+            ],
           },
         }));
       }
     },
-    [entity, userRole, userEmail]
+    [entity, userRole, userEmail],
   );
 
   const handleAddManual = useCallback(
@@ -1229,12 +1522,15 @@ export function EntityDetail({
           [key]: {
             ...prev[key],
             [updated.role]: updated,
-            decisions: [...(prev[key]?.decisions?.filter((d) => d.id) || []), updated],
+            decisions: [
+              ...(prev[key]?.decisions?.filter((d) => d.id) || []),
+              updated,
+            ],
           },
         }));
       }
     },
-    [entity, userRole, userEmail]
+    [entity, userRole, userEmail],
   );
 
   const handleComment = useCallback(
@@ -1271,7 +1567,12 @@ export function EntityDetail({
       const res = await fetch("/api/housekeeping/comments", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ documentSymbol: symbol, entity, subprogramme, comment }),
+        body: JSON.stringify({
+          documentSymbol: symbol,
+          entity,
+          subprogramme,
+          comment,
+        }),
       });
       if (res.ok) {
         const added: MandateComment = await res.json();
@@ -1279,12 +1580,15 @@ export function EntityDetail({
           ...prev,
           [key]: {
             ...prev[key],
-            comments: [...(prev[key]?.comments?.filter((c) => c.id) || []), added],
+            comments: [
+              ...(prev[key]?.comments?.filter((c) => c.id) || []),
+              added,
+            ],
           },
         }));
       }
     },
-    [entity, userEmail]
+    [entity, userEmail],
   );
 
   const handleApprove = useCallback(
@@ -1315,7 +1619,7 @@ export function EntityDetail({
         body: JSON.stringify({ decisionId, approved }),
       });
     },
-    [userEmail]
+    [userEmail],
   );
 
   // Combine all mandates for co-citing calculation
@@ -1398,7 +1702,7 @@ export function EntityDetail({
       {/* Co-citing entities filter */}
       {coCitingEntities.length > 0 && (
         <div className="flex flex-wrap items-center gap-1.5 px-3">
-          <span className="text-[10px] font-medium text-gray-400 uppercase mr-2">
+          <span className="mr-2 text-[10px] font-medium text-gray-400 uppercase">
             Filter mandate documents by cross-citing entities:
           </span>
           {coCitingEntities.map(({ entity: e, count }) => (
@@ -1412,7 +1716,11 @@ export function EntityDetail({
               }`}
             >
               {e}{" "}
-              <span className={filterEntity === e ? "text-white/60" : "text-gray-400"}>
+              <span
+                className={
+                  filterEntity === e ? "text-white/60" : "text-gray-400"
+                }
+              >
                 {count}
               </span>
             </button>
@@ -1477,7 +1785,9 @@ export function EntityDetail({
               onUpdateWithManual={(symbol, newSymbol, manualData) =>
                 handleUpdateWithManual(symbol, subprog, newSymbol, manualData)
               }
-              onComment={(symbol, comment) => handleComment(symbol, subprog, comment)}
+              onComment={(symbol, comment) =>
+                handleComment(symbol, subprog, comment)
+              }
               onAdd={(symbol) => handleDecision(symbol, subprog, "add")}
               onAddManual={(data) => handleAddManual(subprog, data)}
             />

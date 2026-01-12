@@ -6,8 +6,7 @@ export async function GET() {
     `SELECT DISTINCT issuing_body 
      FROM public.documents 
      WHERE issuing_body IS NOT NULL 
-     ORDER BY issuing_body`
+     ORDER BY issuing_body`,
   );
   return NextResponse.json(rows.map((r) => r.issuing_body));
 }
-

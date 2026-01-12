@@ -27,7 +27,8 @@ const toComment = (row: DbRow): MandateComment => ({
 
 export async function POST(req: NextRequest) {
   const user = await getCurrentUser();
-  if (!user) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  if (!user)
+    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
 
   const body = await req.json();
   const { documentSymbol, entity, subprogramme, comment } = body;
@@ -46,9 +47,8 @@ export async function POST(req: NextRequest) {
     SELECT i.*, u.entity as user_entity
     FROM inserted i
     LEFT JOIN mandates_housekeeping.users u ON i.user_email = u.email`,
-    [documentSymbol, entity, subprogramme || null, comment.trim(), user.email]
+    [documentSymbol, entity, subprogramme || null, comment.trim(), user.email],
   );
 
   return NextResponse.json(toComment(rows[0]));
 }
-

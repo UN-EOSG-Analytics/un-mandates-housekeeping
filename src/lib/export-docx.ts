@@ -57,9 +57,12 @@ function para(styleId: string, text: string, tabs = ""): string {
 }
 
 // Generate table XML for citations
-function citationTable(mandates: Mandate[], hyperlinks: Map<string, string>): string {
+function citationTable(
+  mandates: Mandate[],
+  hyperlinks: Map<string, string>,
+): string {
   const sorted = [...mandates].sort((a, b) => a.symbol.localeCompare(b.symbol));
-  
+
   let rows = "";
   for (let i = 0; i < sorted.length; i += 2) {
     let cells = "";
@@ -68,7 +71,7 @@ function citationTable(mandates: Mandate[], hyperlinks: Map<string, string>): st
       if (m) {
         const displaySymbol = escapeXml(stripPrefix(m.symbol));
         const title = escapeXml(m.title);
-        
+
         // Symbol cell - with or without hyperlink
         let symbolContent: string;
         if (m.link) {
@@ -78,9 +81,9 @@ function citationTable(mandates: Mandate[], hyperlinks: Map<string, string>): st
         } else {
           symbolContent = `<w:r><w:rPr><w:sz w:val="17"/></w:rPr><w:t>${displaySymbol}</w:t></w:r>`;
         }
-        
+
         cells += `<w:tc><w:tcPr><w:tcW w:w="1408" w:type="dxa"/><w:tcBorders><w:top w:val="none"/><w:left w:val="none"/><w:bottom w:val="none"/><w:right w:val="none"/></w:tcBorders></w:tcPr><w:p><w:pPr><w:spacing w:before="40" w:after="40" w:line="200" w:lineRule="exact"/></w:pPr>${symbolContent}</w:p></w:tc>`;
-        
+
         // Title cell
         cells += `<w:tc><w:tcPr><w:tcW w:w="1699" w:type="dxa"/><w:tcBorders><w:top w:val="none"/><w:left w:val="none"/><w:bottom w:val="none"/><w:right w:val="none"/></w:tcBorders></w:tcPr><w:p><w:pPr><w:spacing w:before="40" w:after="40" w:line="200" w:lineRule="exact"/><w:ind w:left="86"/></w:pPr><w:r><w:rPr><w:sz w:val="17"/></w:rPr><w:t>${title}</w:t></w:r></w:p></w:tc>`;
       } else {
@@ -91,7 +94,7 @@ function citationTable(mandates: Mandate[], hyperlinks: Map<string, string>): st
     }
     rows += `<w:tr>${cells}</w:tr>`;
   }
-  
+
   return `<w:tbl>
     <w:tblPr>
       <w:tblW w:w="5000" w:type="pct"/>
@@ -106,12 +109,17 @@ function citationTable(mandates: Mandate[], hyperlinks: Map<string, string>): st
   </w:tbl>`;
 }
 
-export async function exportEntityToDocx(entityAbbrev: string): Promise<Buffer> {
+export async function exportEntityToDocx(
+  entityAbbrev: string,
+): Promise<Buffer> {
   // Load template
-  const templatePath = join(process.cwd(), "data/references/un_styles_template.docx");
+  const templatePath = join(
+    process.cwd(),
+    "data/references/un_styles_template.docx",
+  );
   const templateBuffer = await readFile(templatePath);
   const zip = await JSZip.loadAsync(templateBuffer);
-  
+
   // Load PPB data from database (same source as frontend)
   const ppbData = await fetchPPBRecords();
 
@@ -128,7 +136,8 @@ export async function exportEntityToDocx(entityAbbrev: string): Promise<Buffer> 
       const part = ci.part_in_document || "Legislative mandates";
       if (part !== "Legislative mandates") continue;
 
-      const subprog = ci["sub-programme"] || ci.component || "All Subprogrammes";
+      const subprog =
+        ci["sub-programme"] || ci.component || "All Subprogrammes";
       const key = `${subprog}:${rec.full_document_symbol}`;
       if (seen.has(key)) continue;
       seen.add(key);
@@ -150,7 +159,9 @@ export async function exportEntityToDocx(entityAbbrev: string): Promise<Buffer> 
 
   // Check if we found any data
   if (bySubprog.size === 0) {
-    throw new Error(`No legislative mandates found for entity: ${entityAbbrev}`);
+    throw new Error(
+      `No legislative mandates found for entity: ${entityAbbrev}`,
+    );
   }
 
   // Sort subprogrammes
@@ -163,7 +174,7 @@ export async function exportEntityToDocx(entityAbbrev: string): Promise<Buffer> 
   // Generate document content
   const hyperlinks = new Map<string, string>();
   let content = "";
-  
+
   // Main header
   content += para("H1", "Legislative mandates", "\t\t");
 
@@ -225,7 +236,7 @@ export async function exportEntityToDocx(entityAbbrev: string): Promise<Buffer> 
   <Relationship Id="rId6" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings" Target="webSettings.xml"/>
   <Relationship Id="rId7" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes" Target="footnotes.xml"/>
   <Relationship Id="rId8" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes" Target="endnotes.xml"/>`;
-  
+
   for (const [rId, url] of hyperlinks) {
     relsContent += `\n  <Relationship Id="${rId}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="${escapeXml(url)}" TargetMode="External"/>`;
   }
@@ -236,7 +247,10 @@ export async function exportEntityToDocx(entityAbbrev: string): Promise<Buffer> 
   zip.file("word/_rels/document.xml.rels", relsContent);
 
   // Generate output
-  const buffer = await zip.generateAsync({ type: "nodebuffer", compression: "DEFLATE" });
+  const buffer = await zip.generateAsync({
+    type: "nodebuffer",
+    compression: "DEFLATE",
+  });
   return buffer;
 }
 
@@ -244,7 +258,7 @@ export async function exportEntityToDocx(entityAbbrev: string): Promise<Buffer> 
 function buildEntityContent(
   ppbData: Awaited<ReturnType<typeof fetchPPBRecords>>,
   entityAbbrev: string,
-  hyperlinks: Map<string, string>
+  hyperlinks: Map<string, string>,
 ): string {
   const bySubprog: Map<string, Map<string, Mandate[]>> = new Map();
   const seen = new Set<string>();
@@ -256,7 +270,8 @@ function buildEntityContent(
       const part = ci.part_in_document || "Legislative mandates";
       if (part !== "Legislative mandates") continue;
 
-      const subprog = ci["sub-programme"] || ci.component || "All Subprogrammes";
+      const subprog =
+        ci["sub-programme"] || ci.component || "All Subprogrammes";
       const key = `${subprog}:${rec.full_document_symbol}`;
       if (seen.has(key)) continue;
       seen.add(key);
@@ -320,7 +335,10 @@ function buildEntityContent(
 }
 
 export async function exportAllToDocx(): Promise<Buffer> {
-  const templatePath = join(process.cwd(), "data/references/un_styles_template.docx");
+  const templatePath = join(
+    process.cwd(),
+    "data/references/un_styles_template.docx",
+  );
   const templateBuffer = await readFile(templatePath);
   const zip = await JSZip.loadAsync(templateBuffer);
   const ppbData = await fetchPPBRecords();
@@ -341,8 +359,8 @@ export async function exportAllToDocx(): Promise<Buffer> {
   let content = "";
 
   // Sort entities alphabetically by long name
-  const sortedEntities = [...entityNames.entries()].sort((a, b) => 
-    (a[1] || a[0]).localeCompare(b[1] || b[0])
+  const sortedEntities = [...entityNames.entries()].sort((a, b) =>
+    (a[1] || a[0]).localeCompare(b[1] || b[0]),
   );
 
   for (const [entity, entityLong] of sortedEntities) {
@@ -386,5 +404,8 @@ export async function exportAllToDocx(): Promise<Buffer> {
   zip.file("word/document.xml", documentXml);
   zip.file("word/_rels/document.xml.rels", relsContent);
 
-  return await zip.generateAsync({ type: "nodebuffer", compression: "DEFLATE" });
+  return await zip.generateAsync({
+    type: "nodebuffer",
+    compression: "DEFLATE",
+  });
 }

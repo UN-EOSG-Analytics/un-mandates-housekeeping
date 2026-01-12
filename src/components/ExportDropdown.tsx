@@ -20,7 +20,8 @@ export function ExportDropdown({ entity, label = "Export" }: Props) {
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+      if (ref.current && !ref.current.contains(e.target as Node))
+        setOpen(false);
     };
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
@@ -40,10 +41,12 @@ export function ExportDropdown({ entity, label = "Export" }: Props) {
       >
         <Download className="h-3.5 w-3.5" />
         {label}
-        <ChevronDown className={`ml-0.5 h-3 w-3 text-gray-400 transition-transform ${open ? "rotate-180" : ""}`} />
+        <ChevronDown
+          className={`ml-0.5 h-3 w-3 text-gray-400 transition-transform ${open ? "rotate-180" : ""}`}
+        />
       </button>
       {open && (
-        <div className="absolute right-0 top-full z-10 mt-1 min-w-full overflow-hidden rounded-md border border-gray-200 bg-white py-1 shadow-sm">
+        <div className="absolute top-full right-0 z-10 mt-1 min-w-full overflow-hidden rounded-md border border-gray-200 bg-white py-1 shadow-sm">
           {FORMATS.map(({ id, label }) => (
             <a
               key={id}
@@ -60,4 +63,3 @@ export function ExportDropdown({ entity, label = "Export" }: Props) {
     </div>
   );
 }
-

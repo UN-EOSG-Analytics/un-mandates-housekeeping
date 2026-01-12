@@ -20,7 +20,7 @@ if (process.env.NODE_ENV !== "production") {
 // Helper function for queries
 export async function query<T = any>(
   text: string,
-  params?: any[]
+  params?: any[],
 ): Promise<T[]> {
   const client = await pool.connect();
   try {

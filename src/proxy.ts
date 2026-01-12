@@ -1,7 +1,14 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const PUBLIC_PATHS = ["/login", "/verify", "/api/auth/request", "/api/auth/verify", "/api/auth/check-entity", "/api/entities"];
+const PUBLIC_PATHS = [
+  "/login",
+  "/verify",
+  "/api/auth/request",
+  "/api/auth/verify",
+  "/api/auth/check-entity",
+  "/api/entities",
+];
 
 async function verifySessionToken(token: string): Promise<boolean> {
   try {
@@ -11,20 +18,24 @@ async function verifySessionToken(token: string): Promise<boolean> {
 
     const payload = atob(payloadB64);
     const encoder = new TextEncoder();
-    
+
     const key = await crypto.subtle.importKey(
       "raw",
       encoder.encode(secret),
       { name: "HMAC", hash: "SHA-256" },
       false,
-      ["sign"]
+      ["sign"],
     );
-    
-    const signatureBytes = await crypto.subtle.sign("HMAC", key, encoder.encode(payload));
+
+    const signatureBytes = await crypto.subtle.sign(
+      "HMAC",
+      key,
+      encoder.encode(payload),
+    );
     const expectedSig = Array.from(new Uint8Array(signatureBytes))
-      .map(b => b.toString(16).padStart(2, "0"))
+      .map((b) => b.toString(16).padStart(2, "0"))
       .join("");
-    
+
     // Constant-time comparison
     if (sig.length !== expectedSig.length) return false;
     let diff = 0;
@@ -49,7 +60,11 @@ export async function proxy(request: NextRequest) {
   }
 
   // Allow static assets
-  if (pathname.startsWith("/_next") || pathname.startsWith("/images") || pathname.startsWith("/data")) {
+  if (
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/images") ||
+    pathname.startsWith("/data")
+  ) {
     return NextResponse.next();
   }
 
