@@ -17,16 +17,19 @@ export function UserMenu({
   }
 
   return (
-    <div className="flex items-center gap-3 text-sm">
-      <span className="text-gray-500">{email}</span>
-      {isPpbd && (
-        <span className="rounded bg-amber-100 px-1.5 py-0.5 text-xs font-medium text-amber-700">
-          PPBD
-        </span>
-      )}
+    <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2">
+        <span className="text-sm text-gray-600">{email}</span>
+        {isPpbd && (
+          <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-700">
+            PPBD
+          </span>
+        )}
+      </div>
+      <div className="h-4 w-px bg-gray-200" />
       <button
         onClick={handleLogout}
-        className="text-gray-400 transition-colors hover:text-gray-600"
+        className="text-sm text-gray-500 transition-colors hover:text-gray-900"
       >
         Logout
       </button>
