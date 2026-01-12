@@ -39,6 +39,7 @@ function EntityCard({
           ? "bg-un-blue/10 ring-2 ring-un-blue/30 hover:bg-un-blue"
           : "bg-gray-100 hover:bg-un-blue"
       }`}
+      title={entityData.entityLong || entityData.entity}
     >
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-1.5">
