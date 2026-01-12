@@ -41,8 +41,13 @@ function EntityCard({
       }`}
     >
       <div className="min-w-0 flex-1">
-        <div className="truncate text-sm font-medium text-foreground group-hover:text-white">
-          {entityData.entity}
+        <div className="flex items-center gap-1.5">
+          <span className="truncate text-sm font-medium text-foreground group-hover:text-white">
+            {entityData.entity}
+          </span>
+          <span className="shrink-0 text-xs text-gray-400 group-hover:text-white/70">
+            {mandateCount}
+          </span>
         </div>
         {entityData.entityLong && (
           <div className="truncate text-xs text-gray-500 group-hover:text-white/70">
@@ -56,9 +61,6 @@ function EntityCard({
             {actionCount}
           </span>
         )}
-        <span className="text-xs text-gray-400 group-hover:text-white/70">
-          {mandateCount}
-        </span>
         <ChevronRight className="h-4 w-4 text-gray-300 group-hover:text-white/70" />
       </div>
     </Link>
