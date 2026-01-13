@@ -8,7 +8,7 @@ export const pool =
   globalForDb.pool ||
   new Pool({
     connectionString: process.env.DATABASE_URL,
-    max: 20,
+    max: 2, // Vercel Serverless Functions, no PgBouncer on Azure
     idleTimeoutMillis: 30000,
     connectionTimeoutMillis: 2000,
   });
