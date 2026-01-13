@@ -67,18 +67,36 @@ export function VerifyForm({ entities }: VerifyFormProps) {
     }
 
     setLoading(true);
-    const res = await fetch("/api/auth/verify", {
+    
+    // First verify the token and create session
+    const verifyRes = await fetch("/api/auth/verify", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ token, entity }),
+      body: JSON.stringify({ token }),
     });
-    if (res.ok) {
-      router.push("/");
-    } else {
-      const data = await res.json();
+    if (!verifyRes.ok) {
+      const data = await verifyRes.json();
       setError(data.error || "Verification failed");
       setLoading(false);
+      return;
     }
+
+    // If new user, set their entity
+    if (!hasExistingEntity && entity) {
+      const entityRes = await fetch("/api/auth/update-entity", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ entity }),
+      });
+      if (!entityRes.ok) {
+        const data = await entityRes.json();
+        setError(data.error || "Failed to set entity");
+        setLoading(false);
+        return;
+      }
+    }
+
+    router.push("/");
   };
 
   if (!token) {

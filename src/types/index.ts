@@ -112,7 +112,6 @@ export interface PartData {
 
 // Housekeeping decisions (event log)
 export type Decision = "retain" | "remove" | "add" | "update" | "cancel";
-export type UserRole = "focal" | "ppbd";
 
 export interface ManualMetadata {
   title?: string;
@@ -132,7 +131,6 @@ export interface MandateDecision {
   userEmail: string;
   userEntity: string | null;
   createdAt: string;
-  role: UserRole;
   approvedBy: string | null;
   approvedAt: string | null;
 }
@@ -148,13 +146,12 @@ export interface MandateComment {
   createdAt: string;
 }
 
-// Current state per mandate (latest decisions by role + full history)
+// Current state per mandate (latest decision + full history)
 export interface MandateState {
   documentSymbol: string;
   entity: string;
   subprogramme: string | null;
-  focal: MandateDecision | null; // latest focal decision
-  ppbd: MandateDecision | null; // latest ppbd decision
-  decisions: MandateDecision[]; // all decisions
+  decision: MandateDecision | null; // latest decision
+  decisions: MandateDecision[]; // all decisions (history)
   comments: MandateComment[]; // comments for this entity
 }

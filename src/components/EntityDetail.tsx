@@ -14,8 +14,8 @@ import type {
   Mandate,
   MandateState,
   MandateComment,
+  MandateDecision,
   Decision,
-  UserRole,
 } from "@/types";
 import { DocumentSymbol } from "./DocumentSymbol";
 import { Tooltip } from "./Tooltip";
@@ -49,9 +49,9 @@ function abbreviateBody(body: string | null): string | null {
 function PhaseTracker() {
   const phases = [
     { id: 1, name: "Internal Review", type: "internal" },
-    { id: 2, name: "PPBD Review", type: "ppbd" },
+    { id: 2, name: "OPPFB Review", type: "ppbd" },
     { id: 3, name: "Internal Review", type: "internal" },
-    { id: 4, name: "PPBD Review", type: "ppbd" },
+    { id: 4, name: "OPPFB Review", type: "ppbd" },
   ];
   const currentPhase = 1; // Mockup: always phase 1
 
@@ -126,7 +126,7 @@ function MandateRowContent({
   mandate,
   state,
   commentCount,
-  userRole,
+  isReviewer,
   isAdded,
   isUpdateTarget,
   onOpenSidebar,
@@ -138,7 +138,7 @@ function MandateRowContent({
   mandate: Mandate;
   state?: MandateState;
   commentCount: number;
-  userRole: UserRole | null;
+  isReviewer: boolean;
   isAdded?: boolean;
   isUpdateTarget?: boolean; // True for the "new" row in update view (no dropdowns)
   onOpenSidebar: () => void;
@@ -148,20 +148,19 @@ function MandateRowContent({
   suggestedUpdateSymbol?: string; // Pre-fill for update search (e.g., from newer-available warning)
 }) {
   const ageInfo = getAgeIndicator(mandate.year);
+  const currentDecision = state?.decision;
 
-  const focalAdded = isAdded && state?.focal?.decision === "add";
-  const canCancelFocal =
-    isAdded && (userRole === "focal" || userRole === "ppbd") && focalAdded;
+  const isAddedDecision = isAdded && currentDecision?.decision === "add";
+  const canCancel = isAdded && isAddedDecision;
 
   // Check if this row has an update decision (to grey out content)
-  const hasUpdate = state?.focal?.decision === "update";
+  const hasUpdate = currentDecision?.decision === "update";
   const contentGreyed = hasUpdate && !isUpdateTarget;
 
-  // Approval state
-  const hasDecision = !!state?.focal;
-  const isApproved = !!state?.focal?.approvedBy;
-  const canApprove =
-    userRole === "ppbd" && onApprove && hasDecision && state?.focal?.id;
+  // Approval state - only reviewers can approve, and only if there's a decision
+  const hasDecision = !!currentDecision;
+  const isApproved = !!currentDecision?.approvedBy;
+  const canApprove = isReviewer && onApprove && hasDecision && currentDecision?.id;
 
   return (
     <div
@@ -251,8 +250,8 @@ function MandateRowContent({
             
             if (warnings.length === 0) return null;
             
-            // If there's a newer-available warning and user can interact, make it clickable
-            if (newerAvailable && onUpdateClick && userRole) {
+            // If there's a newer-available warning, make it clickable
+            if (newerAvailable && onUpdateClick) {
               return (
                 <button
                   onClick={(e) => {
@@ -291,18 +290,18 @@ function MandateRowContent({
           <span className="text-xs text-gray-400">—</span>
         ) : isAdded ? (
           <AddBadge
-            show={!!focalAdded}
-            canCancel={!!canCancelFocal}
+            show={!!isAddedDecision}
+            canCancel={!!canCancel}
             onCancel={() => onDecision("cancel")}
           />
         ) : (
           <DecisionDropdown
-            decision={state?.focal?.decision ?? null}
-            userEmail={state?.focal?.userEmail ?? null}
-            createdAt={state?.focal?.createdAt ?? null}
+            decision={currentDecision?.decision ?? null}
+            userEmail={currentDecision?.userEmail ?? null}
+            createdAt={currentDecision?.createdAt ?? null}
             onChange={onDecision}
             onUpdateClick={onUpdateClick}
-            disabled={!userRole}
+            disabled={false}
           />
         )}
       </div>
@@ -329,13 +328,13 @@ function MandateRowContent({
           <button
             onClick={() =>
               canApprove &&
-              state?.focal?.id &&
-              onApprove(state.focal.id, !isApproved)
+              currentDecision?.id &&
+              onApprove(currentDecision.id, !isApproved)
             }
             disabled={!canApprove}
             title={
               isApproved
-                ? `Approved by ${state?.focal?.approvedBy}`
+                ? `Approved by ${currentDecision?.approvedBy}`
                 : canApprove
                   ? "Click to approve"
                   : "No decision to approve"
@@ -364,7 +363,7 @@ function MandateRow({
   mandate,
   state,
   commentCount,
-  userRole,
+  isReviewer,
   userEmail,
   onDecision,
   onApprove,
@@ -376,7 +375,7 @@ function MandateRow({
   mandate: Mandate;
   state?: MandateState;
   commentCount: number;
-  userRole: UserRole | null;
+  isReviewer: boolean;
   userEmail: string | null;
   onDecision: (decision: Decision, newSymbol?: string) => void;
   onApprove: (decisionId: string, approved: boolean) => void;
@@ -398,11 +397,11 @@ function MandateRow({
   const suggestedUpdateSymbol = warnings.find((w) => w.suggestedUpdate)?.suggestedUpdate;
 
   // Check if there's a completed update (has newSymbol)
-  const currentUserDecision = state?.focal ?? state?.ppbd;
+  const currentDecision = state?.decision;
   const hasCompletedUpdate =
-    currentUserDecision?.decision === "update" &&
-    currentUserDecision?.newSymbol;
-  const newSymbol = currentUserDecision?.newSymbol;
+    currentDecision?.decision === "update" &&
+    currentDecision?.newSymbol;
+  const newSymbol = currentDecision?.newSymbol;
 
   // Create a fake mandate object for the "new" row in update view
   const newMandate: Mandate | null =
@@ -436,7 +435,7 @@ function MandateRow({
         mandate={mandate}
         state={state}
         commentCount={commentCount}
-        userRole={userRole}
+        isReviewer={isReviewer}
         isAdded={isAdded}
         onOpenSidebar={() => setSidebarOpen(true)}
         onDecision={onDecision}
@@ -469,7 +468,7 @@ function MandateRow({
           mandate={newMandate}
           state={undefined}
           commentCount={0}
-          userRole={null}
+          isReviewer={false}
           isUpdateTarget
           onOpenSidebar={() => setNewDocSidebarOpen(true)}
           onDecision={() => {}}
@@ -496,7 +495,7 @@ function MandateRow({
           isOpen={sidebarOpen}
           onOpenChange={setSidebarOpen}
           state={state}
-          userRole={userRole}
+          isReviewer={isReviewer}
           userEmail={userEmail}
           onDecision={onDecision}
           onApprove={onApprove}
@@ -528,7 +527,7 @@ function MandateRow({
             isOpen={newDocSidebarOpen}
             onOpenChange={setNewDocSidebarOpen}
             state={state}
-            userRole={userRole}
+            isReviewer={isReviewer}
             userEmail={userEmail}
             onDecision={onDecision}
             onApprove={onApprove}
@@ -1042,7 +1041,7 @@ function MandateSection({
   totalComments,
   addedMetadata,
   updateTargetMetadata,
-  userRole,
+  isReviewer,
   userEmail,
   onDecision,
   onApprove,
@@ -1071,7 +1070,7 @@ function MandateSection({
     string,
     { title: string | null; year: number | null; body: string | null } | null
   >;
-  userRole: UserRole | null;
+  isReviewer: boolean;
   userEmail: string | null;
   onDecision: (symbol: string, decision: Decision, newSymbol?: string) => void;
   onApprove: (decisionId: string, approved: boolean) => void;
@@ -1090,9 +1089,7 @@ function MandateSection({
   const addedEntries = Object.values(states).filter(
     (s) =>
       s.subprogramme === subprogramme &&
-      (s.focal?.decision === "add" || s.ppbd?.decision === "add") &&
-      s.focal?.decision !== "cancel" &&
-      s.ppbd?.decision !== "cancel" &&
+      s.decision?.decision === "add" &&
       !existingSymbols.has(s.documentSymbol),
   );
 
@@ -1100,7 +1097,7 @@ function MandateSection({
   const addedMandates: Mandate[] = addedEntries.map((s) => {
     const meta = addedMetadata[s.documentSymbol];
     // Check for manual metadata in the decision
-    const manualMeta = s.focal?.manualMetadata || s.ppbd?.manualMetadata;
+    const manualMeta = s.decision?.manualMetadata;
     return {
       symbol: s.documentSymbol,
       title: manualMeta?.title || meta?.title || "",
@@ -1129,7 +1126,7 @@ function MandateSection({
   // Get update target symbol for metadata lookup
   const getUpdateTargetSymbol = (symbol: string) => {
     const s = states[stateKey(symbol)];
-    return s?.focal?.newSymbol || s?.ppbd?.newSymbol;
+    return s?.decision?.newSymbol;
   };
 
   return (
@@ -1147,7 +1144,7 @@ function MandateSection({
               mandate={{ ...m, entity }}
               state={states[stateKey(m.symbol)]}
               commentCount={totalComments[m.symbol] || 0}
-              userRole={userRole}
+              isReviewer={isReviewer}
               userEmail={userEmail}
               onDecision={(decision, newSymbol) =>
                 onDecision(m.symbol, decision, newSymbol)
@@ -1169,7 +1166,7 @@ function MandateSection({
             mandate={m}
             state={states[stateKey(m.symbol)]}
             commentCount={totalComments[m.symbol] || 0}
-            userRole={userRole}
+            isReviewer={isReviewer}
             userEmail={userEmail}
             onDecision={(decision) => onDecision(m.symbol, decision)}
             onApprove={onApprove}
@@ -1181,7 +1178,7 @@ function MandateSection({
         <AddEntryRow
           onAdd={onAdd}
           onAddManual={onAddManual}
-          disabled={!userRole}
+          disabled={false}
         />
       </div>
     </div>
@@ -1200,7 +1197,7 @@ export function EntityDetail({
   const [totalComments, setTotalComments] = useState<Record<string, number>>(
     {},
   );
-  const [userRole, setUserRole] = useState<UserRole | null>(null);
+  const [isReviewer, setIsReviewer] = useState(false);
   const [userEmail, setUserEmail] = useState<string | null>(null);
   const [addedMetadata, setAddedMetadata] = useState<
     Record<
@@ -1226,7 +1223,7 @@ export function EntityDetail({
       .then((r) => (r.ok ? r.json() : null))
       .then((data) => {
         if (data) {
-          setUserRole(data.role);
+          setIsReviewer(data.isReviewer ?? false);
           setUserEmail(data.email);
         }
       })
@@ -1261,7 +1258,7 @@ export function EntityDetail({
     const addedSymbols = Object.values(states)
       .filter(
         (s) =>
-          (s.focal?.decision === "add" || s.ppbd?.decision === "add") &&
+          s.decision?.decision === "add" &&
           !existingSymbols.has(s.documentSymbol),
       )
       .map((s) => s.documentSymbol)
@@ -1307,10 +1304,8 @@ export function EntityDetail({
   // Fetch metadata for update target documents
   useEffect(() => {
     const updateTargetSymbols = Object.values(states)
-      .filter(
-        (s) => s.focal?.decision === "update" || s.ppbd?.decision === "update",
-      )
-      .map((s) => s.focal?.newSymbol || s.ppbd?.newSymbol)
+      .filter((s) => s.decision?.decision === "update")
+      .map((s) => s.decision?.newSymbol)
       .filter((sym): sym is string => !!sym && !(sym in updateTargetMetadata));
 
     if (updateTargetSymbols.length === 0) return;
@@ -1350,10 +1345,10 @@ export function EntityDetail({
       decision: Decision,
       newSymbol?: string,
     ) => {
-      if (!userRole || !userEmail) return;
+      if (!userEmail) return;
       const key = `${symbol}:${subprogramme || ""}`;
       const now = new Date().toISOString();
-      const newDecision = {
+      const newDecision: MandateDecision = {
         id: "",
         documentSymbol: symbol,
         entity,
@@ -1363,7 +1358,6 @@ export function EntityDetail({
         userEmail,
         userEntity: null,
         createdAt: now,
-        role: userRole,
         approvedBy: null,
         approvedAt: null,
       };
@@ -1375,7 +1369,7 @@ export function EntityDetail({
           documentSymbol: symbol,
           entity,
           subprogramme,
-          [userRole]: newDecision,
+          decision: newDecision,
           decisions: [...(prev[key]?.decisions || []), newDecision],
         },
       }));
@@ -1397,7 +1391,7 @@ export function EntityDetail({
           ...prev,
           [key]: {
             ...prev[key],
-            [updated.role]: updated,
+            decision: updated,
             decisions: [
               ...(prev[key]?.decisions?.filter((d) => d.id) || []),
               updated,
@@ -1406,7 +1400,7 @@ export function EntityDetail({
         }));
       }
     },
-    [entity, userRole, userEmail],
+    [entity, userEmail],
   );
 
   const handleUpdateWithManual = useCallback(
@@ -1416,7 +1410,7 @@ export function EntityDetail({
       newSymbol: string,
       manualData: ManualEntryData,
     ) => {
-      if (!userRole || !userEmail) return;
+      if (!userEmail) return;
       const key = `${symbol}:${subprogramme || ""}`;
       const now = new Date().toISOString();
       const manualMetadata = {
@@ -1425,7 +1419,7 @@ export function EntityDetail({
         year: manualData.year ? parseInt(manualData.year) : undefined,
         link: manualData.link || undefined,
       };
-      const newDecision = {
+      const newDecision: MandateDecision = {
         id: "",
         documentSymbol: symbol,
         entity,
@@ -1436,7 +1430,6 @@ export function EntityDetail({
         userEmail,
         userEntity: null,
         createdAt: now,
-        role: userRole,
         approvedBy: null,
         approvedAt: null,
       };
@@ -1448,7 +1441,7 @@ export function EntityDetail({
           documentSymbol: symbol,
           entity,
           subprogramme,
-          [userRole]: newDecision,
+          decision: newDecision,
           decisions: [...(prev[key]?.decisions || []), newDecision],
         },
       }));
@@ -1480,7 +1473,7 @@ export function EntityDetail({
           ...prev,
           [key]: {
             ...prev[key],
-            [updated.role]: updated,
+            decision: updated,
             decisions: [
               ...(prev[key]?.decisions?.filter((d) => d.id) || []),
               updated,
@@ -1489,12 +1482,12 @@ export function EntityDetail({
         }));
       }
     },
-    [entity, userRole, userEmail],
+    [entity, userEmail],
   );
 
   const handleAddManual = useCallback(
     async (subprogramme: string | null, data: ManualEntryData) => {
-      if (!userRole || !userEmail) return;
+      if (!userEmail) return;
       const key = `${data.symbol}:${subprogramme || ""}`;
       const now = new Date().toISOString();
       const manualMetadata = {
@@ -1503,7 +1496,7 @@ export function EntityDetail({
         year: data.year ? parseInt(data.year) : undefined,
         link: data.link || undefined,
       };
-      const newDecision = {
+      const newDecision: MandateDecision = {
         id: "",
         documentSymbol: data.symbol,
         entity,
@@ -1514,7 +1507,6 @@ export function EntityDetail({
         userEmail,
         userEntity: null,
         createdAt: now,
-        role: userRole,
         approvedBy: null,
         approvedAt: null,
       };
@@ -1526,7 +1518,7 @@ export function EntityDetail({
           documentSymbol: data.symbol,
           entity,
           subprogramme,
-          [userRole]: newDecision,
+          decision: newDecision,
           decisions: [...(prev[key]?.decisions || []), newDecision],
         },
       }));
@@ -1558,7 +1550,7 @@ export function EntityDetail({
           ...prev,
           [key]: {
             ...prev[key],
-            [updated.role]: updated,
+            decision: updated,
             decisions: [
               ...(prev[key]?.decisions?.filter((d) => d.id) || []),
               updated,
@@ -1567,7 +1559,7 @@ export function EntityDetail({
         }));
       }
     },
-    [entity, userRole, userEmail],
+    [entity, userEmail],
   );
 
   const handleComment = useCallback(
@@ -1635,11 +1627,11 @@ export function EntityDetail({
         const newStates = { ...prev };
         for (const key of Object.keys(newStates)) {
           const s = newStates[key];
-          if (s?.focal?.id === decisionId) {
+          if (s?.decision?.id === decisionId) {
             newStates[key] = {
               ...s,
-              focal: {
-                ...s.focal,
+              decision: {
+                ...s.decision,
                 approvedBy: approved ? userEmail : null,
                 approvedAt: approved ? new Date().toISOString() : null,
               },
@@ -1769,7 +1761,7 @@ export function EntityDetail({
           totalComments={totalComments}
           addedMetadata={addedMetadata}
           updateTargetMetadata={updateTargetMetadata}
-          userRole={userRole}
+          isReviewer={isReviewer}
           userEmail={userEmail}
           onDecision={(symbol, decision, newSymbol) =>
             handleDecision(symbol, null, decision, newSymbol)
@@ -1797,7 +1789,7 @@ export function EntityDetail({
               totalComments={totalComments}
               addedMetadata={addedMetadata}
               updateTargetMetadata={updateTargetMetadata}
-              userRole={userRole}
+              isReviewer={isReviewer}
               userEmail={userEmail}
               onDecision={(symbol, decision, newSymbol) =>
                 handleDecision(symbol, subprog, decision, newSymbol)

@@ -49,21 +49,13 @@ export async function verifyMagicToken(token: string): Promise<string | null> {
   return rows[0]?.email || null;
 }
 
-export async function upsertUser(
-  email: string,
-  entity?: string,
-): Promise<string> {
+export async function upsertUser(email: string): Promise<string> {
   const rows = await query<{ id: string }>(
-    entity
-      ? `INSERT INTO mandates_housekeeping.users (email, entity, last_login_at) 
-         VALUES ($1, $2, NOW()) 
-         ON CONFLICT (email) DO UPDATE SET entity = COALESCE(mandates_housekeeping.users.entity, $2), last_login_at = NOW()
-         RETURNING id`
-      : `INSERT INTO mandates_housekeeping.users (email, last_login_at) 
-         VALUES ($1, NOW()) 
-         ON CONFLICT (email) DO UPDATE SET last_login_at = NOW()
-         RETURNING id`,
-    entity ? [email.toLowerCase(), entity] : [email.toLowerCase()],
+    `INSERT INTO mandates_housekeeping.users (email, last_login_at) 
+     VALUES ($1, NOW()) 
+     ON CONFLICT (email) DO UPDATE SET last_login_at = NOW()
+     RETURNING id`,
+    [email.toLowerCase()],
   );
   return rows[0].id;
 }
@@ -146,6 +138,6 @@ export async function getCurrentUser() {
     id: rows[0].id,
     email: rows[0].email,
     entity: rows[0].entity,
-    isPpbd: rows[0].entity === "DMSPC",
+    isReviewer: rows[0].entity?.toUpperCase() === "DMSPC",
   };
 }

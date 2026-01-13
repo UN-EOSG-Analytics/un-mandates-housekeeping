@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { verifyMagicToken, upsertUser, createSession } from "@/lib/auth";
 
 export async function POST(request: Request) {
-  const { token, entity } = await request.json();
+  const { token } = await request.json();
 
   if (!token) {
     return NextResponse.json({ error: "Missing token" }, { status: 400 });
@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const userId = await upsertUser(email, entity);
+  const userId = await upsertUser(email);
   await createSession(userId);
 
   return NextResponse.json({ ok: true });

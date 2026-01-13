@@ -6,9 +6,9 @@ export async function POST(req: NextRequest) {
   const user = await getCurrentUser();
   if (!user)
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-  if (!user.isPpbd)
+  if (!user.isReviewer)
     return NextResponse.json(
-      { error: "only PPBD can approve" },
+      { error: "only reviewers can approve" },
       { status: 403 },
     );
 

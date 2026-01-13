@@ -4,7 +4,7 @@ import { UserMenu } from "./UserMenu";
 import type { EntityOption } from "@/lib/data-service";
 
 interface Props {
-  user?: { email: string; entity?: string | null; isPpbd?: boolean } | null;
+  user?: { email: string; entity?: string | null; isReviewer?: boolean } | null;
   children?: React.ReactNode;
   entities?: EntityOption[];
 }
@@ -35,7 +35,7 @@ export function Header({ user, children, entities = [] }: Props) {
           <UserMenu
             email={user.email}
             entity={user.entity}
-            isPpbd={user.isPpbd}
+            isReviewer={user.isReviewer}
             entities={entities}
           />
         )}

@@ -10,7 +10,6 @@ import type {
     MandateDecision,
     MandateState,
     Paragraph,
-    UserRole,
 } from "@/types";
 import {
     AlertTriangle,
@@ -43,7 +42,7 @@ interface Props {
   isOpen?: boolean;
   onOpenChange?: (open: boolean) => void;
   state?: MandateState;
-  userRole?: UserRole | null;
+  isReviewer?: boolean;
   userEmail?: string | null;
   onDecision?: (decision: Decision, newSymbol?: string) => void;
   onApprove?: (decisionId: string, approved: boolean) => void;
@@ -438,7 +437,7 @@ export function DocumentSymbol({
   isOpen: controlledOpen,
   onOpenChange,
   state,
-  userRole,
+  isReviewer,
   userEmail,
   onDecision,
   onApprove,
@@ -499,7 +498,7 @@ export function DocumentSymbol({
   // Wrapper to update local state when decision is made
   const handleDecision = useCallback(
     (decision: Decision, newSymbol?: string) => {
-      if (!onDecision || !entity || !userRole) return;
+      if (!onDecision || !entity) return;
       // Optimistic update to local state
       const newDecision: MandateDecision = {
         id: "",
@@ -511,14 +510,13 @@ export function DocumentSymbol({
         userEmail: userEmail || "",
         userEntity: null,
         createdAt: new Date().toISOString(),
-        role: userRole,
         approvedBy: null,
         approvedAt: null,
       };
       setAllDecisions((prev) => [...prev, newDecision]);
       onDecision(decision, newSymbol);
     },
-    [onDecision, entity, userRole, userEmail, symbol],
+    [onDecision, entity, userEmail, symbol],
   );
 
   // Wrapper to update local state when comment is added
@@ -748,24 +746,17 @@ export function DocumentSymbol({
                               const entDecisions = allDecisions.filter(
                                 (d) => d.entity === ent,
                               );
-                              const latestFocal = entDecisions
-                                .filter((d) => d.role === "focal")
-                                .pop();
-                              const canEdit =
-                                isCurrentEntity &&
-                                (userRole === "focal" || userRole === "ppbd") &&
-                                onDecision;
+                              // Get latest decision for this entity (last in chronological order)
+                              const latestDecision = entDecisions[entDecisions.length - 1] || null;
+                              const canEdit = isCurrentEntity && onDecision;
+                              const currentDecision = isCurrentEntity ? state?.decision : latestDecision;
                               const canApprove =
                                 isCurrentEntity &&
-                                userRole === "ppbd" &&
+                                isReviewer &&
                                 onApprove &&
-                                latestFocal;
-                              const isApproved = !!(isCurrentEntity
-                                ? state?.focal?.approvedBy
-                                : latestFocal?.approvedBy);
-                              const decisionId = isCurrentEntity
-                                ? state?.focal?.id
-                                : latestFocal?.id;
+                                currentDecision;
+                              const isApproved = !!currentDecision?.approvedBy;
+                              const decisionId = currentDecision?.id;
 
                               return (
                                 <tr key={ent}>
@@ -776,11 +767,7 @@ export function DocumentSymbol({
                                   </td>
                                   <td className="px-1 py-1.5">
                                     <DecisionDropdown
-                                      decision={
-                                        isCurrentEntity
-                                          ? state?.focal?.decision || null
-                                          : latestFocal?.decision || null
-                                      }
+                                      decision={currentDecision?.decision || null}
                                       onChange={(decision) => {
                                         if (!canEdit) return;
                                         if (
@@ -794,14 +781,13 @@ export function DocumentSymbol({
                                       }}
                                       onUpdateClick={canEdit ? onUpdateClick : undefined}
                                       disabled={!canEdit}
-                                      userEmail={latestFocal?.userEmail}
-                                      createdAt={latestFocal?.createdAt}
+                                      userEmail={currentDecision?.userEmail}
+                                      createdAt={currentDecision?.createdAt}
                                       size="sm"
                                     />
                                   </td>
                                   <td className="px-1 py-1.5 text-center">
-                                    {latestFocal ||
-                                    (isCurrentEntity && state?.focal) ? (
+                                    {currentDecision ? (
                                       <button
                                         onClick={() => {
                                           if (canApprove && decisionId) {
@@ -811,7 +797,7 @@ export function DocumentSymbol({
                                         disabled={!canApprove}
                                         title={
                                           isApproved
-                                            ? `Approved by ${isCurrentEntity ? state?.focal?.approvedBy : latestFocal?.approvedBy}`
+                                            ? `Approved by ${currentDecision?.approvedBy}`
                                             : canApprove
                                               ? "Click to approve"
                                               : ""
@@ -996,11 +982,7 @@ export function DocumentSymbol({
                                           : "text-blue-700"
                                   }`}
                                 >
-                                  {(item.data as MandateDecision).role ===
-                                  "ppbd"
-                                    ? "PPBD"
-                                    : "Focal"}
-                                  : {item.data.decision}
+                                  {item.data.decision}
                                 </span>
                                 {(item.data as MandateDecision).newSymbol && (
                                   <span className="text-gray-500">

@@ -8,12 +8,12 @@ import type { EntityOption } from "@/lib/data-service";
 export function UserMenu({
   email,
   entity,
-  isPpbd,
+  isReviewer,
   entities,
 }: {
   email: string;
   entity?: string | null;
-  isPpbd?: boolean;
+  isReviewer?: boolean;
   entities: EntityOption[];
 }) {
   const router = useRouter();
@@ -38,9 +38,9 @@ export function UserMenu({
               {entity}
             </button>
           )}
-          {isPpbd && (
+          {isReviewer && (
             <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-700">
-              PPBD
+              Reviewer
             </span>
           )}
         </div>

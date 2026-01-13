@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { query } from "@/lib/db";
-import type { MandateDecision, MandateComment, UserRole } from "@/types";
+import type { MandateDecision, MandateComment } from "@/types";
 
 interface DecisionRow {
   id: string;
@@ -12,7 +12,6 @@ interface DecisionRow {
   user_email: string;
   user_entity: string | null;
   created_at: string;
-  role: UserRole;
   approved_by: string | null;
   approved_at: string | null;
 }
@@ -38,7 +37,6 @@ const toDecision = (row: DecisionRow): MandateDecision => ({
   userEmail: row.user_email,
   userEntity: row.user_entity,
   createdAt: row.created_at,
-  role: row.role,
   approvedBy: row.approved_by,
   approvedAt: row.approved_at,
 });
@@ -62,8 +60,7 @@ export async function GET(req: NextRequest) {
 
   const [decisionRows, commentRows] = await Promise.all([
     query<DecisionRow>(
-      `SELECT d.*, u.entity as user_entity,
-              CASE WHEN u.entity = 'DMSPC' THEN 'ppbd' ELSE 'focal' END as role
+      `SELECT d.*, u.entity as user_entity
        FROM mandates_housekeeping.mandate_decisions d
        LEFT JOIN mandates_housekeeping.users u ON d.user_email = u.email
        WHERE d.document_symbol = $1
