@@ -3,6 +3,7 @@
 
 import { getAgeIndicator } from "@/lib/services/age-indicator";
 import { fetchParagraphs } from "@/lib/services/client/client-data-service";
+import { getDocumentDecisionsAction } from "@/lib/services/housekeeping-actions";
 import type {
   Decision,
   EntityRelevance,
@@ -468,19 +469,18 @@ export function DocumentSymbol({
       const fetchData = async () => {
         setLoading(true);
 
-        const [parasData, activityData] = await Promise.all([
+        const [parasData, activityResult] = await Promise.all([
           fetchParagraphs(symbol),
-          fetch(
-            `/api/housekeeping/document?symbol=${encodeURIComponent(symbol)}`,
-          )
-            .then((res) =>
-              res.ok ? res.json() : { decisions: [], comments: [] },
-            )
-            .catch(() => ({ decisions: [], comments: [] })),
+          getDocumentDecisionsAction(symbol).catch(() => ({
+            success: false as const,
+            error: "Failed to load",
+          })),
         ]);
         setParagraphs(parasData || []);
-        setAllDecisions(activityData.decisions || []);
-        setAllComments(activityData.comments || []);
+        if (activityResult.success && activityResult.data) {
+          setAllDecisions(activityResult.data.decisions || []);
+          setAllComments(activityResult.data.comments || []);
+        }
         setLoading(false);
       };
       fetchData();

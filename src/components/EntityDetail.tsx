@@ -15,6 +15,13 @@ import { DocumentSymbol } from "./DocumentSymbol";
 import { Tooltip } from "./Tooltip";
 import { DecisionDropdown } from "./DecisionDropdown";
 import { getAgeIndicator } from "@/lib/services/age-indicator";
+import {
+  getUserRoleAction,
+  getEntityDecisionsAction,
+  createDecisionAction,
+  createCommentAction,
+  approveDecisionAction,
+} from "@/lib/services/housekeeping-actions";
 
 interface Props {
   entity: string;
@@ -1215,31 +1222,26 @@ export function EntityDetail({
 
   // Fetch user role and decisions on mount
   useEffect(() => {
-    fetch("/api/housekeeping/role")
-      .then((r) => (r.ok ? r.json() : null))
-      .then((data) => {
-        if (data) {
-          setIsReviewer(data.isReviewer ?? false);
-          setUserEmail(data.email);
+    getUserRoleAction()
+      .then((result) => {
+        if (result.success && result.data) {
+          setIsReviewer(result.data.isReviewer ?? false);
+          setUserEmail(result.data.email);
         }
       })
       .catch(() => {});
 
-    fetch(`/api/housekeeping/decisions?entity=${encodeURIComponent(entity)}`)
-      .then((r) => (r.ok ? r.json() : { states: [], totalComments: {} }))
-      .then(
-        (data: {
-          states: MandateState[];
-          totalComments: Record<string, number>;
-        }) => {
+    getEntityDecisionsAction(entity)
+      .then((result) => {
+        if (result.success && result.data) {
           const map: Record<string, MandateState> = {};
-          for (const s of data.states) {
+          for (const s of result.data.states) {
             map[`${s.documentSymbol}:${s.subprogramme || ""}`] = s;
           }
           setStates(map);
-          setTotalComments(data.totalComments);
-        },
-      )
+          setTotalComments(result.data.totalComments);
+        }
+      })
       .catch(() => {});
   }, [entity]);
 
@@ -1370,19 +1372,15 @@ export function EntityDetail({
         },
       }));
 
-      const res = await fetch("/api/housekeeping/decisions", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          documentSymbol: symbol,
-          entity,
-          subprogramme,
-          decision,
-          newSymbol,
-        }),
+      const result = await createDecisionAction({
+        documentSymbol: symbol,
+        entity,
+        subprogramme,
+        decision,
+        newSymbol,
       });
-      if (res.ok) {
-        const updated = await res.json();
+      if (result.success && result.data) {
+        const updated = result.data;
         setStates((prev) => ({
           ...prev,
           [key]: {
@@ -1451,20 +1449,16 @@ export function EntityDetail({
         },
       }));
 
-      const res = await fetch("/api/housekeeping/decisions", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          documentSymbol: symbol,
-          entity,
-          subprogramme,
-          decision: "update",
-          newSymbol,
-          manualMetadata,
-        }),
+      const result = await createDecisionAction({
+        documentSymbol: symbol,
+        entity,
+        subprogramme,
+        decision: "update",
+        newSymbol,
+        manualMetadata,
       });
-      if (res.ok) {
-        const updated = await res.json();
+      if (result.success && result.data) {
+        const updated = result.data;
         setStates((prev) => ({
           ...prev,
           [key]: {
@@ -1529,19 +1523,15 @@ export function EntityDetail({
         },
       }));
 
-      const res = await fetch("/api/housekeeping/decisions", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          documentSymbol: data.symbol,
-          entity,
-          subprogramme,
-          decision: "add",
-          manualMetadata,
-        }),
+      const result = await createDecisionAction({
+        documentSymbol: data.symbol,
+        entity,
+        subprogramme,
+        decision: "add",
+        manualMetadata,
       });
-      if (res.ok) {
-        const updated = await res.json();
+      if (result.success && result.data) {
+        const updated = result.data;
         setStates((prev) => ({
           ...prev,
           [key]: {
@@ -1589,18 +1579,14 @@ export function EntityDetail({
         [symbol]: (prev[symbol] || 0) + 1,
       }));
 
-      const res = await fetch("/api/housekeeping/comments", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          documentSymbol: symbol,
-          entity,
-          subprogramme,
-          comment,
-        }),
+      const result = await createCommentAction({
+        documentSymbol: symbol,
+        entity,
+        subprogramme,
+        comment,
       });
-      if (res.ok) {
-        const added: MandateComment = await res.json();
+      if (result.success && result.data) {
+        const added = result.data;
         setStates((prev) => ({
           ...prev,
           [key]: {
@@ -1638,11 +1624,7 @@ export function EntityDetail({
         return newStates;
       });
 
-      await fetch("/api/housekeeping/approve", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ decisionId, approved }),
-      });
+      await approveDecisionAction(decisionId, approved);
     },
     [userEmail],
   );
