@@ -553,6 +553,7 @@ function MandateRow({
           entity={mandate.entity}
           entityLong={mandate.entityLong}
           allEntities={mandate.allEntities}
+          entitySubprogrammes={mandate.entitySubprogrammes}
           entityLongMap={mandate.entityLongMap}
           allEntityRelevance={mandate.allEntityRelevance}
           isOpen={sidebarOpen}
@@ -587,6 +588,7 @@ function MandateRow({
             entity={newMandate.entity}
             entityLong={newMandate.entityLong}
             allEntities={newMandate.allEntities}
+            entitySubprogrammes={newMandate.entitySubprogrammes}
             entityLongMap={newMandate.entityLongMap}
             allEntityRelevance={newMandate.allEntityRelevance}
             isOpen={newDocSidebarOpen}
@@ -594,7 +596,7 @@ function MandateRow({
             state={state}
             isReviewer={isReviewer}
             userEmail={userEmail}
-          userEntity={userEntity}
+            userEntity={userEntity}
             onDecision={onDecision}
             onApprove={onApprove}
             onComment={onComment}
@@ -1208,6 +1210,7 @@ function MandateSection({
       isBackground: subprogramme === null,
       otherEntitiesCount: 0,
       allEntities: [entity],
+      entitySubprogrammes: subprogramme ? { [entity]: [subprogramme] } : {},
       entityLongMap: entityLong ? { [entity]: entityLong } : {},
       allEntityRelevance: {},
       metadataFromDb: !!meta,

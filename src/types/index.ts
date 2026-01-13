@@ -83,6 +83,7 @@ export interface Mandate {
   isBackground?: boolean;
   otherEntitiesCount: number;
   allEntities: string[];
+  entitySubprogrammes: Record<string, string[]>; // entity -> subprogrammes from PPB
   entityLongMap: Record<string, string>;
   allEntityRelevance: Record<string, EntityRelevance>;
   metadataFromDb?: boolean;

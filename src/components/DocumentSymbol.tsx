@@ -39,6 +39,7 @@ interface Props {
   entity?: string;
   entityLong?: string | null;
   allEntities?: string[];
+  entitySubprogrammes?: Record<string, string[]>; // entity -> subprogrammes from PPB
   entityLongMap?: Record<string, string>;
   allEntityRelevance: Record<string, EntityRelevance>;
   isOpen?: boolean;
@@ -87,13 +88,18 @@ function highlightEntity(
   });
 }
 
-function ActivityMeta({ userEmail, userEntity, createdAt, viaEntity, action }: {
+function ActivityMeta({ userEmail, userEntity, createdAt, viaEntity, subprogramme, showSubprogramme, action }: {
   userEmail: string;
   userEntity: string | null;
   createdAt: string;
   viaEntity: string;
+  subprogramme?: string | null;
+  showSubprogramme?: boolean;
   action: "decided" | "commented";
 }) {
+  const subLabel = showSubprogramme && subprogramme
+    ? ` / ${subprogramme.replace(/^Subprogramme \d+[.:]\s*/i, "Sub ")}`
+    : "";
   return (
     <div className="mt-1 flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-gray-400">
       <span>{userEmail}</span>
@@ -105,7 +111,7 @@ function ActivityMeta({ userEmail, userEntity, createdAt, viaEntity, action }: {
       <span>·</span>
       <span>{new Date(createdAt).toLocaleDateString()}</span>
       <span className="text-gray-500">
-        {action} on <span className="font-medium text-un-blue">{viaEntity}</span> citation
+        {action} on <span className="font-medium text-un-blue">{viaEntity}{subLabel}</span> citation
       </span>
     </div>
   );
@@ -460,6 +466,7 @@ export function DocumentSymbol({
   entity,
   entityLong: _entityLong,
   allEntities,
+  entitySubprogrammes,
   entityLongMap,
   allEntityRelevance,
   isOpen: controlledOpen,
@@ -747,19 +754,73 @@ export function DocumentSymbol({
               {/* Decisions table */}
               {(allEntities?.length || allDecisions.length > 0) &&
                 (() => {
-                  // Merge entities from PPB data + entities with decisions (for ADD)
-                  const entitiesFromDecisions = [...new Set(allDecisions.map((d) => d.entity))];
-                  const mergedEntities = [...new Set([...(allEntities || []), ...entitiesFromDecisions])];
-                  // Sort: current entity first, then others alphabetically
-                  const sortedEntities = [
-                    ...(entity ? [entity] : []),
-                    ...mergedEntities.filter((e) => e !== entity).sort(),
-                  ];
-                  const MAX_VISIBLE = 5; // current + 4 others
-                  const hasMore = sortedEntities.length > MAX_VISIBLE;
-                  const visibleEntities = entitiesExpanded
-                    ? sortedEntities
-                    : sortedEntities.slice(0, MAX_VISIBLE);
+                  // Merge subprogrammes from PPB data + decisions
+                  const subprogsByEntity = new Map<string, Set<string | null>>();
+                  // Add from PPB data
+                  for (const [ent, subprogs] of Object.entries(entitySubprogrammes || {})) {
+                    if (!subprogsByEntity.has(ent)) subprogsByEntity.set(ent, new Set());
+                    for (const sp of subprogs) subprogsByEntity.get(ent)!.add(sp);
+                  }
+                  // Add from decisions
+                  for (const d of allDecisions) {
+                    if (!subprogsByEntity.has(d.entity)) subprogsByEntity.set(d.entity, new Set());
+                    subprogsByEntity.get(d.entity)!.add(d.subprogramme);
+                  }
+                  const entitiesWithMultiSubprogs = new Set(
+                    [...subprogsByEntity.entries()].filter(([, subs]) => subs.size > 1).map(([e]) => e)
+                  );
+
+                  // Build unique rows: (entity, subprogramme) pairs from PPB + decisions
+                  const rowKeys = new Set<string>();
+                  const rows: { entity: string; subprogramme: string | null }[] = [];
+                  // Add from PPB data first
+                  for (const [ent, subprogs] of Object.entries(entitySubprogrammes || {})) {
+                    for (const sp of subprogs) {
+                      const key = `${ent}:${sp || ""}`;
+                      if (!rowKeys.has(key)) {
+                        rowKeys.add(key);
+                        rows.push({ entity: ent, subprogramme: sp });
+                      }
+                    }
+                  }
+                  // Add from decisions (might have ADDs or subprogs not in PPB)
+                  for (const d of allDecisions) {
+                    const key = `${d.entity}:${d.subprogramme || ""}`;
+                    if (!rowKeys.has(key)) {
+                      rowKeys.add(key);
+                      rows.push({ entity: d.entity, subprogramme: d.subprogramme });
+                    }
+                  }
+                  // Add entities from allEntities that have no subprogs yet
+                  for (const ent of allEntities || []) {
+                    if (!subprogsByEntity.has(ent)) {
+                      const key = `${ent}:`;
+                      if (!rowKeys.has(key)) {
+                        rowKeys.add(key);
+                        rows.push({ entity: ent, subprogramme: null });
+                      }
+                    }
+                  }
+
+                  // Sort: current entity first, then by entity name, then by subprogramme
+                  rows.sort((a, b) => {
+                    if (a.entity === entity && b.entity !== entity) return -1;
+                    if (b.entity === entity && a.entity !== entity) return 1;
+                    const entCmp = a.entity.localeCompare(b.entity);
+                    if (entCmp !== 0) return entCmp;
+                    return (a.subprogramme || "").localeCompare(b.subprogramme || "");
+                  });
+
+                  const MAX_VISIBLE = 6;
+                  const hasMore = rows.length > MAX_VISIBLE;
+                  const visibleRows = entitiesExpanded ? rows : rows.slice(0, MAX_VISIBLE);
+
+                  // Helper to format display name
+                  const formatRowName = (row: { entity: string; subprogramme: string | null }) => {
+                    if (!entitiesWithMultiSubprogs.has(row.entity)) return row.entity;
+                    const subLabel = row.subprogramme?.replace(/^Subprogramme \d+[.:]\s*/i, "Sub ") || "General";
+                    return `${row.entity} / ${subLabel}`;
+                  };
 
                   return (
                     <div className="mt-4 border-t pt-4">
@@ -782,52 +843,38 @@ export function DocumentSymbol({
                             </tr>
                           </thead>
                           <tbody>
-                            {visibleEntities.map((ent) => {
-                              const isCurrentEntity = ent === entity;
-                              const entDecisions = allDecisions.filter(
-                                (d) => d.entity === ent,
+                            {visibleRows.map((row) => {
+                              const isCurrentRow = row.entity === entity && row.subprogramme === (state?.subprogramme || null);
+                              const rowDecisions = allDecisions.filter(
+                                (d) => d.entity === row.entity && d.subprogramme === row.subprogramme,
                               );
-                              // Get latest decision for this entity (last in chronological order)
-                              const latestDecision =
-                                entDecisions[entDecisions.length - 1] || null;
-                              const canEdit = isCurrentEntity && onDecision;
-                              const currentDecision = isCurrentEntity
-                                ? state?.decision
-                                : latestDecision;
-                              const canApprove =
-                                isCurrentEntity &&
-                                isReviewer &&
-                                onApprove &&
-                                currentDecision;
+                              const latestDecision = rowDecisions[rowDecisions.length - 1] || null;
+                              const canEdit = isCurrentRow && onDecision;
+                              const currentDecision = isCurrentRow ? state?.decision : latestDecision;
+                              const canApprove = isCurrentRow && isReviewer && onApprove && currentDecision;
                               const isApproved = !!currentDecision?.approvedBy;
                               const decisionId = currentDecision?.id;
 
                               return (
-                                <tr key={ent}>
+                                <tr key={`${row.entity}:${row.subprogramme || ""}`}>
                                   <td
-                                    className={`py-1.5 pr-2 font-medium ${isCurrentEntity ? "text-un-blue" : "text-gray-600"}`}
+                                    className={`py-1.5 pr-2 font-medium ${isCurrentRow ? "text-un-blue" : "text-gray-600"}`}
+                                    title={row.subprogramme || undefined}
                                   >
-                                    {ent}
+                                    {formatRowName(row)}
                                   </td>
                                   <td className="px-1 py-1.5">
                                     <DecisionDropdown
-                                      decision={
-                                        currentDecision?.decision || null
-                                      }
+                                      decision={currentDecision?.decision || null}
                                       onChange={(decision) => {
                                         if (!canEdit) return;
-                                        if (
-                                          decision === "update" &&
-                                          onUpdateClick
-                                        ) {
+                                        if (decision === "update" && onUpdateClick) {
                                           onUpdateClick();
                                         } else {
                                           handleDecision(decision);
                                         }
                                       }}
-                                      onUpdateClick={
-                                        canEdit ? onUpdateClick : undefined
-                                      }
+                                      onUpdateClick={canEdit ? onUpdateClick : undefined}
                                       disabled={!canEdit}
                                       userEmail={currentDecision?.userEmail}
                                       createdAt={currentDecision?.createdAt}
@@ -858,9 +905,7 @@ export function DocumentSymbol({
                                               : "border border-gray-200 bg-gray-50"
                                         } ${!canApprove ? "cursor-default" : "cursor-pointer"}`}
                                       >
-                                        {isApproved && (
-                                          <Check className="h-4 w-4" />
-                                        )}
+                                        {isApproved && <Check className="h-4 w-4" />}
                                       </button>
                                     ) : (
                                       <span className="text-gray-300">—</span>
@@ -879,7 +924,7 @@ export function DocumentSymbol({
                         >
                           {entitiesExpanded
                             ? "Show less"
-                            : `Show ${sortedEntities.length - MAX_VISIBLE} more entities`}
+                            : `Show ${rows.length - MAX_VISIBLE} more`}
                         </button>
                       )}
                     </div>
@@ -974,36 +1019,39 @@ export function DocumentSymbol({
                       | { type: "comment"; data: MandateComment };
                     const items: ActivityItem[] = [];
                     const filteredDecisions = activityFilterEntity
-                      ? allDecisions.filter(
-                          (d) => d.entity === activityFilterEntity,
-                        )
+                      ? allDecisions.filter((d) => d.entity === activityFilterEntity)
                       : allDecisions;
                     const filteredComments = activityFilterEntity
-                      ? allComments.filter(
-                          (c) => c.entity === activityFilterEntity,
-                        )
+                      ? allComments.filter((c) => c.entity === activityFilterEntity)
                       : allComments;
-                    for (const d of filteredDecisions)
-                      items.push({ type: "decision", data: d });
-                    for (const c of filteredComments)
-                      items.push({ type: "comment", data: c });
-                    items.sort(
-                      (a, b) =>
-                        new Date(a.data.createdAt).getTime() -
-                        new Date(b.data.createdAt).getTime(),
+                    for (const d of filteredDecisions) items.push({ type: "decision", data: d });
+                    for (const c of filteredComments) items.push({ type: "comment", data: c });
+                    items.sort((a, b) => new Date(a.data.createdAt).getTime() - new Date(b.data.createdAt).getTime());
+
+                    // Track which entities have multiple subprogrammes (from PPB + activity)
+                    const subprogsByEntity = new Map<string, Set<string | null>>();
+                    // From PPB data
+                    for (const [ent, subprogs] of Object.entries(entitySubprogrammes || {})) {
+                      if (!subprogsByEntity.has(ent)) subprogsByEntity.set(ent, new Set());
+                      for (const sp of subprogs) subprogsByEntity.get(ent)!.add(sp);
+                    }
+                    // From activity items
+                    for (const item of items) {
+                      const e = item.data.entity;
+                      if (!subprogsByEntity.has(e)) subprogsByEntity.set(e, new Set());
+                      subprogsByEntity.get(e)!.add(item.data.subprogramme);
+                    }
+                    const entitiesWithMultiSubprogs = new Set(
+                      [...subprogsByEntity.entries()].filter(([, subs]) => subs.size > 1).map(([e]) => e)
                     );
 
                     if (items.length === 0) {
-                      return (
-                        <div className="text-sm text-gray-400">
-                          No activity yet
-                        </div>
-                      );
+                      return <div className="text-sm text-gray-400">No activity yet</div>;
                     }
 
                     return items.map((item, i) => {
                       const itemEntity = item.data.entity;
-                      const isCurrentEntity = itemEntity === entity;
+                      const showSubprog = entitiesWithMultiSubprogs.has(itemEntity);
                       return (
                         <div key={item.data.id || i} className="text-xs">
                           {item.type === "decision" ? (
@@ -1051,6 +1099,8 @@ export function DocumentSymbol({
                                 userEntity={(item.data as MandateDecision).userEntity}
                                 createdAt={item.data.createdAt}
                                 viaEntity={itemEntity}
+                                subprogramme={item.data.subprogramme}
+                                showSubprogramme={showSubprog}
                                 action="decided"
                               />
                             </div>
@@ -1064,6 +1114,8 @@ export function DocumentSymbol({
                                 userEntity={(item.data as MandateComment).userEntity}
                                 createdAt={item.data.createdAt}
                                 viaEntity={itemEntity}
+                                subprogramme={item.data.subprogramme}
+                                showSubprogramme={showSubprog}
                                 action="commented"
                               />
                             </div>

@@ -63,11 +63,19 @@ export function transformPPBData(
     const docType = rec.type;
     const metadataFromDb = rec.metadata_from_db ?? false;
 
-    // Build entity -> entityLong map from all citation_info
+    // Build entity -> entityLong map and entity -> subprogrammes from all citation_info
     const entityLongMap: Record<string, string> = {};
+    const entitySubprogrammes: Record<string, string[]> = {};
     for (const ci of rec.citation_info) {
       if (ci.entity && ci.entity_long) {
         entityLongMap[ci.entity] = ci.entity_long;
+      }
+      if (ci.entity) {
+        const subprog = ci["sub-programme"] || ci.component || null;
+        if (!entitySubprogrammes[ci.entity]) entitySubprogrammes[ci.entity] = [];
+        if (subprog && !entitySubprogrammes[ci.entity].includes(subprog)) {
+          entitySubprogrammes[ci.entity].push(subprog);
+        }
       }
     }
 
@@ -101,16 +109,12 @@ export function transformPPBData(
         entityLong,
         isBackground,
         otherEntitiesCount: Math.max(0, rec.num_entities - 1),
-        allEntities: (rec.entities || []).filter(
-          (e): e is string => e !== null,
-        ),
+        allEntities: (rec.entities || []).filter((e): e is string => e !== null),
+        entitySubprogrammes,
         entityLongMap,
         allEntityRelevance: rec.entity_relevance || {},
         metadataFromDb,
-        // Use document_symbol (from public.documents) for newer version lookup
-        newerVersion: rec.document_symbol
-          ? newerVersions?.get(rec.document_symbol)
-          : undefined,
+        newerVersion: rec.document_symbol ? newerVersions?.get(rec.document_symbol) : undefined,
       };
 
       const meta = metaByName[budgetPart.toLowerCase()] || null;
