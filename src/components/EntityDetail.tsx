@@ -367,6 +367,7 @@ function MandateRow({
   commentCount,
   isReviewer,
   userEmail,
+  userEntity,
   onDecision,
   onApprove,
   onUpdateWithManual,
@@ -379,6 +380,7 @@ function MandateRow({
   commentCount: number;
   isReviewer: boolean;
   userEmail: string | null;
+  userEntity: string | null;
   onDecision: (decision: Decision, newSymbol?: string) => void;
   onApprove: (decisionId: string, approved: boolean) => void;
   onUpdateWithManual: (newSymbol: string, manualData: ManualEntryData) => void;
@@ -500,6 +502,7 @@ function MandateRow({
           state={state}
           isReviewer={isReviewer}
           userEmail={userEmail}
+          userEntity={userEntity}
           onDecision={onDecision}
           onApprove={onApprove}
           onComment={onComment}
@@ -532,6 +535,7 @@ function MandateRow({
             state={state}
             isReviewer={isReviewer}
             userEmail={userEmail}
+          userEntity={userEntity}
             onDecision={onDecision}
             onApprove={onApprove}
             onComment={onComment}
@@ -1050,6 +1054,7 @@ function MandateSection({
   updateTargetMetadata,
   isReviewer,
   userEmail,
+  userEntity,
   onDecision,
   onApprove,
   onUpdateWithManual,
@@ -1079,6 +1084,7 @@ function MandateSection({
   >;
   isReviewer: boolean;
   userEmail: string | null;
+  userEntity: string | null;
   onDecision: (symbol: string, decision: Decision, newSymbol?: string) => void;
   onApprove: (decisionId: string, approved: boolean) => void;
   onUpdateWithManual: (
@@ -1153,6 +1159,7 @@ function MandateSection({
               commentCount={totalComments[m.symbol] || 0}
               isReviewer={isReviewer}
               userEmail={userEmail}
+          userEntity={userEntity}
               onDecision={(decision, newSymbol) =>
                 onDecision(m.symbol, decision, newSymbol)
               }
@@ -1175,6 +1182,7 @@ function MandateSection({
             commentCount={totalComments[m.symbol] || 0}
             isReviewer={isReviewer}
             userEmail={userEmail}
+          userEntity={userEntity}
             onDecision={(decision) => onDecision(m.symbol, decision)}
             onApprove={onApprove}
             onUpdateWithManual={() => {}}
@@ -1202,6 +1210,7 @@ export function EntityDetail({
   );
   const [isReviewer, setIsReviewer] = useState(false);
   const [userEmail, setUserEmail] = useState<string | null>(null);
+  const [userEntity, setUserEntity] = useState<string | null>(null);
   const [addedMetadata, setAddedMetadata] = useState<
     Record<
       string,
@@ -1227,6 +1236,7 @@ export function EntityDetail({
         if (result.success && result.data) {
           setIsReviewer(result.data.isReviewer ?? false);
           setUserEmail(result.data.email);
+          setUserEntity(result.data.entity ?? null);
         }
       })
       .catch(() => {});
@@ -1354,7 +1364,7 @@ export function EntityDetail({
         decision,
         newSymbol: newSymbol || null,
         userEmail,
-        userEntity: null,
+        userEntity,
         createdAt: now,
         approvedBy: null,
         approvedAt: null,
@@ -1422,7 +1432,7 @@ export function EntityDetail({
         newSymbol,
         manualMetadata,
         userEmail,
-        userEntity: null,
+        userEntity,
         createdAt: now,
         approvedBy: null,
         approvedAt: null,
@@ -1495,7 +1505,7 @@ export function EntityDetail({
         newSymbol: null,
         manualMetadata,
         userEmail,
-        userEntity: null,
+        userEntity,
         createdAt: now,
         approvedBy: null,
         approvedAt: null,
@@ -1560,7 +1570,7 @@ export function EntityDetail({
         subprogramme,
         comment,
         userEmail,
-        userEntity: null, // Will be populated from server response
+        userEntity,
         createdAt: now,
       };
       // Optimistic update
@@ -1741,6 +1751,7 @@ export function EntityDetail({
           updateTargetMetadata={updateTargetMetadata}
           isReviewer={isReviewer}
           userEmail={userEmail}
+          userEntity={userEntity}
           onDecision={(symbol, decision, newSymbol) =>
             handleDecision(symbol, null, decision, newSymbol)
           }
@@ -1769,6 +1780,7 @@ export function EntityDetail({
               updateTargetMetadata={updateTargetMetadata}
               isReviewer={isReviewer}
               userEmail={userEmail}
+          userEntity={userEntity}
               onDecision={(symbol, decision, newSymbol) =>
                 handleDecision(symbol, subprog, decision, newSymbol)
               }

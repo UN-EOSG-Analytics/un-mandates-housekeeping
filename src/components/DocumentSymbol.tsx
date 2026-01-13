@@ -45,6 +45,7 @@ interface Props {
   state?: MandateState;
   isReviewer?: boolean;
   userEmail?: string | null;
+  userEntity?: string | null;
   onDecision?: (decision: Decision, newSymbol?: string) => void;
   onApprove?: (decisionId: string, approved: boolean) => void;
   onComment?: (comment: string) => void;
@@ -82,6 +83,30 @@ function highlightEntity(
       part
     );
   });
+}
+
+function ActivityMeta({ userEmail, userEntity, createdAt, viaEntity, action }: {
+  userEmail: string;
+  userEntity: string | null;
+  createdAt: string;
+  viaEntity: string;
+  action: "decided" | "commented";
+}) {
+  return (
+    <div className="mt-1 flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-gray-400">
+      <span>{userEmail}</span>
+      {userEntity && (
+        <span className="rounded bg-gray-100 px-1 py-0.5 text-[10px] font-medium text-gray-500">
+          {userEntity}
+        </span>
+      )}
+      <span>·</span>
+      <span>{new Date(createdAt).toLocaleDateString()}</span>
+      <span className="text-gray-500">
+        {action} on <span className="font-medium text-un-blue">{viaEntity}</span> citation
+      </span>
+    </div>
+  );
 }
 
 function ParaBox({
@@ -440,6 +465,7 @@ export function DocumentSymbol({
   state,
   isReviewer,
   userEmail,
+  userEntity,
   onDecision,
   onApprove,
   onComment,
@@ -508,7 +534,7 @@ export function DocumentSymbol({
         decision,
         newSymbol: newSymbol || null,
         userEmail: userEmail || "",
-        userEntity: null,
+        userEntity: userEntity ?? null,
         createdAt: new Date().toISOString(),
         approvedBy: null,
         approvedAt: null,
@@ -516,7 +542,7 @@ export function DocumentSymbol({
       setAllDecisions((prev) => [...prev, newDecision]);
       onDecision(decision, newSymbol);
     },
-    [onDecision, entity, userEmail, symbol],
+    [onDecision, entity, userEmail, userEntity, symbol],
   );
 
   // Wrapper to update local state when comment is added
@@ -531,13 +557,13 @@ export function DocumentSymbol({
         subprogramme: null,
         comment,
         userEmail: userEmail || "",
-        userEntity: null,
+        userEntity: userEntity ?? null,
         createdAt: new Date().toISOString(),
       };
       setAllComments((prev) => [...prev, newComment]);
       onComment(comment);
     },
-    [onComment, entity, userEmail, symbol],
+    [onComment, entity, userEmail, userEntity, symbol],
   );
 
   const isTruncated = symbol.length > 18;
@@ -1005,58 +1031,26 @@ export function DocumentSymbol({
                                   </span>
                                 )}
                               </div>
-                              <div className="mt-0.5 flex items-center gap-1.5 text-gray-400">
-                                <span
-                                  className={`rounded px-1 py-0.5 text-[10px] font-medium ${
-                                    isCurrentEntity
-                                      ? "bg-un-blue/20 text-un-blue"
-                                      : "bg-gray-200 text-gray-500"
-                                  }`}
-                                >
-                                  {itemEntity}
-                                </span>
-                                {(item.data as MandateDecision).userEntity && (
-                                  <span className="rounded bg-gray-100 px-1 py-0.5 text-[10px] font-medium text-gray-500">
-                                    {(item.data as MandateDecision).userEntity}
-                                  </span>
-                                )}
-                                <span>{item.data.userEmail}</span>
-                                <span>·</span>
-                                <span>
-                                  {new Date(
-                                    item.data.createdAt,
-                                  ).toLocaleDateString()}
-                                </span>
-                              </div>
+                              <ActivityMeta
+                                userEmail={item.data.userEmail}
+                                userEntity={(item.data as MandateDecision).userEntity}
+                                createdAt={item.data.createdAt}
+                                viaEntity={itemEntity}
+                                action="decided"
+                              />
                             </div>
                           ) : (
                             <div className="rounded bg-white p-2 shadow-sm">
                               <div className="text-gray-700">
                                 {(item.data as MandateComment).comment}
                               </div>
-                              <div className="mt-0.5 flex items-center gap-1.5 text-gray-400">
-                                <span
-                                  className={`rounded px-1 py-0.5 text-[10px] font-medium ${
-                                    isCurrentEntity
-                                      ? "bg-un-blue/20 text-un-blue"
-                                      : "bg-gray-200 text-gray-500"
-                                  }`}
-                                >
-                                  {itemEntity}
-                                </span>
-                                {(item.data as MandateComment).userEntity && (
-                                  <span className="rounded bg-gray-100 px-1 py-0.5 text-[10px] font-medium text-gray-500">
-                                    {(item.data as MandateComment).userEntity}
-                                  </span>
-                                )}
-                                <span>{item.data.userEmail}</span>
-                                <span>·</span>
-                                <span>
-                                  {new Date(
-                                    item.data.createdAt,
-                                  ).toLocaleDateString()}
-                                </span>
-                              </div>
+                              <ActivityMeta
+                                userEmail={item.data.userEmail}
+                                userEntity={(item.data as MandateComment).userEntity}
+                                createdAt={item.data.createdAt}
+                                viaEntity={itemEntity}
+                                action="commented"
+                              />
                             </div>
                           )}
                         </div>
