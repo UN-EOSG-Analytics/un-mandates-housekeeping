@@ -1,25 +1,27 @@
+// Modal is client-side
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
-import {
-  X,
-  ChevronDown,
-  Loader2,
-  Sparkles,
-  AlertTriangle,
-  Check,
-} from "lucide-react";
-import type {
-  Paragraph,
-  EntityRelevance,
-  MandateState,
-  MandateDecision,
-  MandateComment,
-  Decision,
-  UserRole,
-} from "@/types";
-import { Tooltip } from "./Tooltip";
 import { getAgeIndicator } from "@/lib/age-indicator";
+import { fetchParagraphs } from "@/lib/client-data-service";
+import type {
+    Decision,
+    EntityRelevance,
+    MandateComment,
+    MandateDecision,
+    MandateState,
+    Paragraph,
+    UserRole,
+} from "@/types";
+import {
+    AlertTriangle,
+    Check,
+    ChevronDown,
+    Loader2,
+    Sparkles,
+    X,
+} from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
+import { Tooltip } from "./Tooltip";
 
 interface Props {
   symbol: string;
@@ -465,13 +467,12 @@ export function DocumentSymbol({
     if (open && !paragraphs && !loading) {
       const fetchData = async () => {
         setLoading(true);
-        const safeSymbol = symbol.replace(/\//g, "_").replace(/ /g, "_");
 
         const [parasData, activityData] = await Promise.all([
-          fetch(`/data/paragraphs/${safeSymbol}.json`)
-            .then((res) => (res.ok ? res.json() : null))
-            .catch(() => null),
-          fetch(`/api/housekeeping/document?symbol=${encodeURIComponent(symbol)}`)
+          fetchParagraphs(symbol),
+          fetch(
+            `/api/housekeeping/document?symbol=${encodeURIComponent(symbol)}`,
+          )
             .then((res) =>
               res.ok ? res.json() : { decisions: [], comments: [] },
             )
@@ -486,10 +487,13 @@ export function DocumentSymbol({
     }
   }, [open, paragraphs, loading, symbol]);
 
-  const handleClick = useCallback((e: React.MouseEvent) => {
-    e.preventDefault();
-    setOpen(true);
-  }, [setOpen]);
+  const handleClick = useCallback(
+    (e: React.MouseEvent) => {
+      e.preventDefault();
+      setOpen(true);
+    },
+    [setOpen],
+  );
 
   // Wrapper to update local state when decision is made
   const handleDecision = useCallback(

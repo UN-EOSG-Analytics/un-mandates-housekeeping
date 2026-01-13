@@ -238,7 +238,7 @@ async def run_analysis(
     print(f"  Loaded {len(ppb_data)} entities")
 
     ppb_augmented_path = (
-        Path(__file__).parent.parent / "public" / "data" / "ppb2026_augmented.json"
+        Path(__file__).parent.parent / "data" / "output" / "ppb2026_augmented.json"
     )
     print("Loading entity-mandate mappings...")
     entity_mandates = get_entity_mandates(ppb_augmented_path)

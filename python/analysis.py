@@ -295,5 +295,5 @@ for record in ppb:
 
 print(f"Records with entity relevance: {relevance_count}")
 
-with open("public/data/ppb2026_augmented.json", "w") as f:
+with open("data/output/ppb2026_augmented.json", "w") as f:
     json.dump(ppb, f, indent=2, ensure_ascii=False)

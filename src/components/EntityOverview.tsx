@@ -142,18 +142,22 @@ export function EntityOverview({ parts, userEntity }: Props) {
         <div key={partData.part}>
           <div className="mb-3 flex items-baseline gap-2">
             {partData.numeral && (
-              <span className="text-sm font-medium text-gray-400">
+              <span className="text-base font-medium text-gray-400">
                 {partData.numeral}.
               </span>
             )}
-            <span className="text-sm font-medium text-gray-500">
+            <span className="text-base font-medium text-gray-500">
               {partData.part}
             </span>
           </div>
 
           <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {partData.entities.map((entityData) => (
-              <EntityCard key={entityData.entity} entityData={entityData} />
+              <EntityCard 
+                key={entityData.entity} 
+                entityData={entityData}
+                highlight={userEntity === entityData.entity}
+              />
             ))}
           </div>
         </div>
