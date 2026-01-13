@@ -53,6 +53,12 @@ export async function GET(req: NextRequest) {
   const uniqueSymbols = [...new Set(allSymbols)];
 
   const placeholders = uniqueSymbols.map((_, i) => `$${i + 1}`).join(",");
+  const placeholders2 = uniqueSymbols.map((_, i) => `$${i + 1 + uniqueSymbols.length}`).join(",");
+  const placeholders3 = uniqueSymbols.map((_, i) => `$${i + 1 + uniqueSymbols.length * 2}`).join(",");
+  
+  // Query both source_documents and public.documents to handle:
+  // 1. Documents in PPB source data (with optional metadata enrichment)
+  // 2. Documents only in public.documents (new resolutions not yet in PPB)
   const rows = await query<DocumentRow>(
     `SELECT 
        COALESCE(doc.symbol, sd.ppb_full_document_symbol) as symbol,
@@ -78,8 +84,33 @@ export async function GET(req: NextRequest) {
      LEFT JOIN ppb2026.source_documents_metadata_clean m
        ON sd.ppb_full_document_symbol = m.ppb_full_document_symbol
      WHERE sd.ppb_full_document_symbol IN (${placeholders})
-        OR doc.symbol IN (${placeholders})`,
-    [...uniqueSymbols, ...uniqueSymbols],
+        OR doc.symbol IN (${placeholders2})
+     
+     UNION ALL
+     
+     -- Also query public.documents directly for documents not in source_documents
+     SELECT 
+       doc.symbol,
+       doc.proper_title as doc_proper_title,
+       doc.date_year as doc_date_year,
+       doc.issuing_body as doc_issuing_body,
+       doc.document_type as doc_document_type,
+       NULL as meta_title,
+       NULL as meta_proper_title,
+       NULL as meta_date_year,
+       NULL as meta_issuing_body,
+       NULL as meta_document_type,
+       NULL as ppb_description,
+       NULL as ppb_year,
+       NULL as ppb_body,
+       NULL as ppb_type
+     FROM public.documents doc
+     WHERE doc.symbol IN (${placeholders3})
+       AND NOT EXISTS (
+         SELECT 1 FROM ppb2026.source_documents sd 
+         WHERE REGEXP_REPLACE(sd.ppb_full_document_symbol, '(\\d) ([A-Z])$', '\\1\\2') = doc.symbol
+       )`,
+    [...uniqueSymbols, ...uniqueSymbols, ...uniqueSymbols],
   );
 
   const result: Record<
