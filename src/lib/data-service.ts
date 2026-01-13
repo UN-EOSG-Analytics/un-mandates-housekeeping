@@ -137,7 +137,9 @@ export async function fetchPPBRecords(): Promise<PPBRecord[]> {
       // 1. public.documents (doc_*) - for new/updated documents
       // 2. source_documents_metadata_clean (meta_*) - for existing citations
       // 3. source_documents (ppb_*) - final fallback
-      const hasDbMetadata = row.doc_symbol !== null;
+      const hasDbMetadata = row.doc_symbol !== null || 
+                             row.meta_title !== null || 
+                             row.meta_proper_title !== null;
 
       // Title: doc.proper_title > meta.title > meta.proper_title > ppb_description
       const title =

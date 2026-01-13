@@ -9,6 +9,7 @@ import {
   X,
 } from "lucide-react";
 import { EntityHeader } from "./EntityHeader";
+import { getMandateWarnings } from "@/lib/mandate-warnings";
 import type {
   Mandate,
   MandateState,
@@ -96,7 +97,7 @@ function PhaseTracker() {
 }
 
 const GRID_COLS =
-  "grid-cols-[140px_1fr_50px_55px_45px_60px_25px_130px_45px_50px]";
+  "grid-cols-[140px_1fr_50px_55px_45px_60px_25px_40px_130px_45px_50px]";
 
 function ColumnHeaders() {
   return (
@@ -110,6 +111,7 @@ function ColumnHeaders() {
       <div>Age</div>
       <div>Others</div>
       <div></div>
+      <div>Notes</div>
       <div>Decision</div>
       <div>
         <MessageSquare className="h-3 w-3" />
@@ -232,6 +234,26 @@ function MandateRowContent({
         </span>
       </Tooltip>
       <div></div>
+      <Tooltip
+        content={
+          getMandateWarnings(mandate)
+            .map((w) => w.message)
+            .join("; ") || ""
+        }
+      >
+        <div className="flex items-center justify-center">
+          {getMandateWarnings(mandate).length > 0 && (
+            <span className="text-amber-500 text-xs cursor-help">
+              ⚠
+              {getMandateWarnings(mandate).length > 1 && (
+                <sup className="ml-0.5 text-[9px]">
+                  {getMandateWarnings(mandate).length}
+                </sup>
+              )}
+            </span>
+          )}
+        </div>
+      </Tooltip>
       <div onClick={(e) => e.stopPropagation()}>
         {isUpdateTarget ? (
           <span className="text-xs text-gray-400">—</span>
