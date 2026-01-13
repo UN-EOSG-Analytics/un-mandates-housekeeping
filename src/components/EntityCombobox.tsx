@@ -37,17 +37,30 @@ export function EntityCombobox({
   const [open, setOpen] = React.useState(false);
 
   const allEntities = React.useMemo(() => {
-    const items = [
-      { value: "PPBD", label: "PPBD", searchTerms: "ppbd" },
-      ...entities.map((e) => ({
-        value: e.entity,
-        label: e.entity,
-        longName: e.entity_long,
-        searchTerms: `${e.entity.toLowerCase()} ${e.entity_long?.toLowerCase() || ""}`
-      })),
-      { value: "Other", label: "Other", searchTerms: "other" },
+    // Regular entities from database (with citations)
+    const entityItems = entities.map((e) => ({
+      value: e.entity,
+      label: e.entity,
+      longName: e.entity_long,
+      searchTerms: `${e.entity.toLowerCase()} ${e.entity_long?.toLowerCase() || ""}`
+    }));
+
+    // Special non-entity options
+    const specialOptions = [
+      { 
+        value: "Other – PPBD", 
+        label: "Other – PPBD", 
+        longName: "Programme Planning and Budget Division",
+        searchTerms: "other ppbd programme planning budget division" 
+      },
+      { 
+        value: "Other – Please Specify", 
+        label: "Other – Please Specify", 
+        searchTerms: "other please specify" 
+      },
     ];
-    return items;
+
+    return [...entityItems, ...specialOptions];
   }, [entities]);
 
   const displayValue = React.useMemo(() => {

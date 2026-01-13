@@ -57,7 +57,7 @@ export function VerifyForm({ entities }: VerifyFormProps) {
 
     const entity = hasExistingEntity
       ? undefined
-      : selectedEntity === "Other"
+      : selectedEntity === "Other – Please Specify"
         ? otherEntity.trim()
         : selectedEntity;
 
@@ -129,7 +129,7 @@ export function VerifyForm({ entities }: VerifyFormProps) {
         />
       </div>
 
-      {selectedEntity === "Other" && (
+      {selectedEntity === "Other – Please Specify" && (
         <input
           type="text"
           placeholder="Enter your organisational entity"
@@ -146,7 +146,7 @@ export function VerifyForm({ entities }: VerifyFormProps) {
         disabled={
           loading ||
           !selectedEntity ||
-          (selectedEntity === "Other" && !otherEntity.trim())
+          (selectedEntity === "Other – Please Specify" && !otherEntity.trim())
         }
         className="w-full rounded-lg bg-un-blue px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
       >

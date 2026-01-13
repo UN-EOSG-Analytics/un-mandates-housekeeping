@@ -35,7 +35,7 @@ export function EntityChangeDialog({
 
   const handleSubmit = async () => {
     const entity =
-      selectedEntity === "Other" ? otherEntity.trim() : selectedEntity;
+      selectedEntity === "Other – Please Specify" ? otherEntity.trim() : selectedEntity;
 
     if (!entity) {
       setError("Please select an entity");
@@ -101,7 +101,7 @@ export function EntityChangeDialog({
             />
           </div>
 
-          {selectedEntity === "Other" && (
+          {selectedEntity === "Other – Please Specify" && (
             <input
               type="text"
               placeholder="Enter your organisational entity"
@@ -125,7 +125,7 @@ export function EntityChangeDialog({
               disabled={
                 loading ||
                 !selectedEntity ||
-                (selectedEntity === "Other" && !otherEntity.trim())
+                (selectedEntity === "Other – Please Specify" && !otherEntity.trim())
               }
               className="flex-1 rounded-lg bg-un-blue px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
             >
