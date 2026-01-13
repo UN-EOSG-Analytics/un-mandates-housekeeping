@@ -60,6 +60,13 @@ export interface MandateAction {
   newerSymbol: string;
 }
 
+export interface NewerVersion {
+  symbol: string;
+  title: string | null;
+  year: number;
+  body: string | null;
+}
+
 export interface Mandate {
   symbol: string;
   title: string;
@@ -80,6 +87,7 @@ export interface Mandate {
   allEntityRelevance: Record<string, EntityRelevance>;
   metadataFromDb?: boolean;
   isAdded?: boolean;
+  newerVersion?: NewerVersion;
 }
 
 export interface EntityData {

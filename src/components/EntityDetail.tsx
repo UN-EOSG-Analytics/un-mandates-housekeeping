@@ -133,6 +133,7 @@ function MandateRowContent({
   onDecision,
   onApprove,
   onUpdateClick,
+  suggestedUpdateSymbol,
 }: {
   mandate: Mandate;
   state?: MandateState;
@@ -144,6 +145,7 @@ function MandateRowContent({
   onDecision: (decision: Decision, newSymbol?: string) => void;
   onApprove?: (decisionId: string, approved: boolean) => void;
   onUpdateClick?: () => void;
+  suggestedUpdateSymbol?: string; // Pre-fill for update search (e.g., from newer-available warning)
 }) {
   const ageInfo = getAgeIndicator(mandate.year);
 
@@ -173,7 +175,7 @@ function MandateRowContent({
           <span className="mr-1 text-xs text-amber-500">↳</span>
         )}
         <Tooltip
-          content={mandate.symbol.length > 18 ? mandate.symbol : undefined}
+          content={mandate.symbol.length > 18 ? mandate.symbol : ""}
         >
           <a
             href={mandate.link || "#"}
@@ -242,16 +244,46 @@ function MandateRowContent({
         }
       >
         <div className="flex items-center justify-center">
-          {getMandateWarnings(mandate).length > 0 && (
-            <span className="text-amber-500 text-xs cursor-help">
-              ⚠
-              {getMandateWarnings(mandate).length > 1 && (
-                <sup className="ml-0.5 text-[9px]">
-                  {getMandateWarnings(mandate).length}
-                </sup>
-              )}
-            </span>
-          )}
+          {(() => {
+            const warnings = getMandateWarnings(mandate);
+            const newerAvailable = warnings.find((w) => w.id === "newer-available");
+            const otherWarnings = warnings.filter((w) => w.id !== "newer-available");
+            
+            if (warnings.length === 0) return null;
+            
+            // If there's a newer-available warning and user can interact, make it clickable
+            if (newerAvailable && onUpdateClick && userRole) {
+              return (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onUpdateClick();
+                  }}
+                  className="text-blue-500 text-xs cursor-pointer hover:text-blue-700 transition-colors"
+                  title="Click to update to newer version"
+                >
+                  ℹ
+                  {otherWarnings.length > 0 && (
+                    <sup className="ml-0.5 text-[9px] text-amber-500">
+                      +{otherWarnings.length}
+                    </sup>
+                  )}
+                </button>
+              );
+            }
+            
+            // Default warning icon
+            return (
+              <span className="text-amber-500 text-xs cursor-help">
+                ⚠
+                {warnings.length > 1 && (
+                  <sup className="ml-0.5 text-[9px]">
+                    {warnings.length}
+                  </sup>
+                )}
+              </span>
+            );
+          })()}
         </div>
       </Tooltip>
       <div onClick={(e) => e.stopPropagation()}>
@@ -361,6 +393,10 @@ function MandateRow({
   const [newDocSidebarOpen, setNewDocSidebarOpen] = useState(false);
   const [showUpdateSearch, setShowUpdateSearch] = useState(false);
 
+  // Get suggested update symbol from warnings (for newer-available)
+  const warnings = getMandateWarnings(mandate);
+  const suggestedUpdateSymbol = warnings.find((w) => w.suggestedUpdate)?.suggestedUpdate;
+
   // Check if there's a completed update (has newSymbol)
   const currentUserDecision = state?.focal ?? state?.ppbd;
   const hasCompletedUpdate =
@@ -422,6 +458,7 @@ function MandateRow({
             submitLabel="Update"
             formTitle="Enter replacement document manually"
             compact
+            initialQuery={suggestedUpdateSymbol}
           />
         </div>
       )}
@@ -556,6 +593,7 @@ function DocumentSearchInput({
   submitLabel,
   formTitle,
   compact,
+  initialQuery,
 }: {
   onSelect: (symbol: string) => void;
   onManualSubmit: (data: ManualEntryData) => void;
@@ -564,8 +602,9 @@ function DocumentSearchInput({
   submitLabel?: string;
   formTitle?: string;
   compact?: boolean;
+  initialQuery?: string;
 }) {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(initialQuery || "");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [searching, setSearching] = useState(false);
   const [searchDone, setSearchDone] = useState(false);
@@ -605,6 +644,13 @@ function DocumentSearchInput({
       })
       .finally(() => setSearching(false));
   }, []);
+
+  // Auto-search when initialQuery is provided
+  useEffect(() => {
+    if (initialQuery && initialQuery.length >= 2) {
+      search(initialQuery);
+    }
+  }, [initialQuery, search]);
 
   const handleInputChange = (value: string) => {
     setQuery(value);

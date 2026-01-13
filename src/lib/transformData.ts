@@ -4,6 +4,7 @@ import type {
   Mandate,
   MandateAction,
   BudgetPartMeta,
+  NewerVersion,
 } from "@/types";
 
 function getActionForEntity(
@@ -30,6 +31,7 @@ function cleanTitle(title: string): string {
 export function transformPPBData(
   records: PPBRecord[],
   budgetPartsMeta: BudgetPartMeta[],
+  newerVersions?: Map<string, NewerVersion>,
 ): PartData[] {
   // Build lookup from name to meta
   const metaByName: Record<string, BudgetPartMeta> = {};
@@ -105,6 +107,8 @@ export function transformPPBData(
         entityLongMap,
         allEntityRelevance: rec.entity_relevance || {},
         metadataFromDb,
+        // Use document_symbol (from public.documents) for newer version lookup
+        newerVersion: rec.document_symbol ? newerVersions?.get(rec.document_symbol) : undefined,
       };
 
       const meta = metaByName[budgetPart.toLowerCase()] || null;

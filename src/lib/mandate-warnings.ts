@@ -9,13 +9,17 @@ export interface MandateWarning {
   id: string;
   message: string;
   severity: "error" | "warning" | "info";
+  /** For newer-available warning: the symbol to pre-select for update */
+  suggestedUpdate?: string;
 }
 
 interface WarningDefinition {
   id: string;
-  message: string;
+  message: string | ((mandate: Mandate) => string);
   severity: "error" | "warning" | "info";
   condition: (mandate: Mandate) => boolean;
+  /** Extract suggested update symbol from mandate */
+  getSuggestedUpdate?: (mandate: Mandate) => string | undefined;
 }
 
 /**
@@ -29,20 +33,18 @@ const WARNING_DEFINITIONS: WarningDefinition[] = [
     severity: "warning",
     condition: (mandate) => !mandate.link && !mandate.metadataFromDb,
   },
-  // Add more warnings here as needed, for example:
-  // {
-  //   id: "missing-year",
-  //   message: "Missing year information",
-  //   severity: "info",
-  //   condition: (mandate) => !mandate.year,
-  // },
-  // {
-  //   id: "outdated",
-  //   message: "Document older than 20 years",
-  //   severity: "warning",
-  //   condition: (mandate) =>
-  //     mandate.year !== null && new Date().getFullYear() - mandate.year > 20,
-  // },
+  {
+    id: "newer-available",
+    message: (mandate) => {
+      const nv = mandate.newerVersion;
+      return nv
+        ? `Newer version available: ${nv.symbol} (${nv.year})`
+        : "Newer version available";
+    },
+    severity: "info",
+    condition: (mandate) => !!mandate.newerVersion,
+    getSuggestedUpdate: (mandate) => mandate.newerVersion?.symbol,
+  },
 ];
 
 /**
@@ -52,8 +54,10 @@ export function getMandateWarnings(mandate: Mandate): MandateWarning[] {
   return WARNING_DEFINITIONS.filter((def) => def.condition(mandate)).map(
     (def) => ({
       id: def.id,
-      message: def.message,
+      message:
+        typeof def.message === "function" ? def.message(mandate) : def.message,
       severity: def.severity,
+      suggestedUpdate: def.getSuggestedUpdate?.(mandate),
     }),
   );
 }
