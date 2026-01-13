@@ -63,10 +63,9 @@ export async function GET(req: NextRequest) {
   const [decisionRows, commentRows] = await Promise.all([
     query<DecisionRow>(
       `SELECT d.*, u.entity as user_entity,
-              CASE WHEN p.email IS NOT NULL THEN 'ppbd' ELSE 'focal' END as role
+              CASE WHEN u.entity = 'DMSPC' THEN 'ppbd' ELSE 'focal' END as role
        FROM mandates_housekeeping.mandate_decisions d
        LEFT JOIN mandates_housekeeping.users u ON d.user_email = u.email
-       LEFT JOIN mandates_housekeeping.ppbd_reviewers p ON d.user_email = p.email
        WHERE d.document_symbol = $1
        ORDER BY d.created_at`,
       [symbol],

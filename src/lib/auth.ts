@@ -137,12 +137,8 @@ export async function getCurrentUser() {
     id: string;
     email: string;
     entity: string | null;
-    is_ppbd: boolean;
   }>(
-    `SELECT u.id, u.email, u.entity, (p.email IS NOT NULL) as is_ppbd
-     FROM mandates_housekeeping.users u
-     LEFT JOIN mandates_housekeeping.ppbd_reviewers p ON u.email = p.email
-     WHERE u.id = $1`,
+    `SELECT id, email, entity FROM mandates_housekeeping.users WHERE id = $1`,
     [session.userId],
   );
   if (!rows[0]) return null;
@@ -150,6 +146,6 @@ export async function getCurrentUser() {
     id: rows[0].id,
     email: rows[0].email,
     entity: rows[0].entity,
-    isPpbd: rows[0].is_ppbd,
+    isPpbd: rows[0].entity === "DMSPC",
   };
 }

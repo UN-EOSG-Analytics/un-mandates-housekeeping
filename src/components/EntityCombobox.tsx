@@ -35,6 +35,7 @@ export function EntityCombobox({
   className,
 }: EntityComboboxProps) {
   const [open, setOpen] = React.useState(false);
+  const listRef = React.useRef<HTMLDivElement>(null);
 
   const allEntities = React.useMemo(() => {
     // Regular entities from database (with citations)
@@ -47,12 +48,6 @@ export function EntityCombobox({
 
     // Special non-entity options
     const specialOptions = [
-      { 
-        value: "Other – PPBD", 
-        label: "Other – PPBD", 
-        longName: "Programme Planning and Budget Division",
-        searchTerms: "other ppbd programme planning budget division" 
-      },
       { 
         value: "Other – Please Specify", 
         label: "Other – Please Specify", 
@@ -96,8 +91,9 @@ export function EntityCombobox({
             placeholder="Search entity..." 
             className="h-9 focus:ring-0 border-b border-un-blue/10"
             value={open ? undefined : displayValue}
+            onValueChange={() => listRef.current?.scrollTo(0, 0)}
           />
-          <CommandList>
+          <CommandList ref={listRef}>
             <CommandEmpty className="py-6 text-sm text-gray-500">No entity found.</CommandEmpty>
             <CommandGroup>
               {allEntities.map((entity) => (
