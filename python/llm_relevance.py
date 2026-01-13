@@ -21,6 +21,9 @@ from tqdm.asyncio import tqdm_asyncio
 # Load environment variables
 load_dotenv()
 
+
+# FIXME: should use SQL DB for entity and section data!!
+
 # Paths
 DATA_DIR = Path(__file__).parent.parent / "data"
 PPB_ENTITIES_DIR = DATA_DIR / "intermediate" / "ppb2026" / "json_by_entity"

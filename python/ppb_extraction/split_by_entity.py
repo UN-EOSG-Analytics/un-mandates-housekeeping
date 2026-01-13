@@ -6,6 +6,7 @@ from pathlib import Path
 from natsort import natsorted
 from tqdm import tqdm
 
+# FIXME: should use SQL DB for entity and section data!!
 
 def load_section_to_entity_mapping(csv_path: str) -> dict[str, str]:
     """Load section title to entity long name mapping from CSV."""
