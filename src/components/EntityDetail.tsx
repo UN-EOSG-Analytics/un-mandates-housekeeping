@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef, useMemo } from "react";
-import { Plus, Loader2, Check, MessageSquare, X, Star, ChevronUp, ChevronDown } from "lucide-react";
+import { Plus, Loader2, Check, MessageSquare, X, Star, ChevronUp, ChevronDown, FileText } from "lucide-react";
 import { EntityHeader } from "./EntityHeader";
 import { getMandateWarnings } from "@/lib/services/mandate-warnings";
 import type {
@@ -22,6 +22,7 @@ import {
   createCommentAction,
   approveDecisionAction,
 } from "@/lib/services/housekeeping-actions";
+import { ManualDocumentForm, type ManualEntryData } from "./ManualDocumentForm";
 
 interface Props {
   entity: string;
@@ -645,14 +646,6 @@ interface SearchResult {
   body: string | null;
 }
 
-interface ManualEntryData {
-  symbol: string;
-  title: string;
-  body: string;
-  year: string;
-  link: string;
-}
-
 // Reusable document search input component
 function DocumentSearchInput({
   onSelect,
@@ -681,16 +674,6 @@ function DocumentSearchInput({
   const [focused, setFocused] = useState(false);
   const [highlighted, setHighlighted] = useState(-1);
   const [showManualForm, setShowManualForm] = useState(false);
-  const [manualData, setManualData] = useState<ManualEntryData>({
-    symbol: "",
-    title: "",
-    body: "",
-    year: "",
-    link: "",
-  });
-  const [bodySuggestions, setBodySuggestions] = useState<string[]>([]);
-  const [showBodySuggestions, setShowBodySuggestions] = useState(false);
-  const [linkError, setLinkError] = useState("");
   const debounceRef = useRef<NodeJS.Timeout | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -737,33 +720,8 @@ function DocumentSearchInput({
   };
 
   const handleOpenManualForm = () => {
-    setManualData({ symbol: query, title: "", body: "", year: "", link: "" });
     setShowManualForm(true);
     setOpen(false);
-    fetch("/api/documents/bodies")
-      .then((r) => r.json())
-      .then(setBodySuggestions)
-      .catch(() => {});
-  };
-
-  const isFormValid =
-    manualData.symbol.trim() &&
-    manualData.title.trim() &&
-    manualData.body.trim() &&
-    manualData.year.trim() &&
-    manualData.link.trim() &&
-    /^\d{4}$/.test(manualData.year) &&
-    parseInt(manualData.year) >= 1945 &&
-    parseInt(manualData.year) <= 2100 &&
-    /^https?:\/\/.+/.test(manualData.link);
-
-  const handleManualSubmit = () => {
-    if (!isFormValid) return;
-    onManualSubmit(manualData);
-    setShowManualForm(false);
-    setManualData({ symbol: "", title: "", body: "", year: "", link: "" });
-    setQuery("");
-    setLinkError("");
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -812,7 +770,6 @@ function DocumentSearchInput({
         !containerRef.current.contains(e.target as Node)
       ) {
         setOpen(false);
-        setShowBodySuggestions(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -820,210 +777,72 @@ function DocumentSearchInput({
   }, []);
 
   if (showManualForm) {
-    const filteredBodies = bodySuggestions
-      .filter((b) => b.toLowerCase().includes(manualData.body.toLowerCase()))
-      .slice(0, 8);
-
     return (
-      <div
-        className={`rounded-lg border border-gray-200 bg-white p-4 shadow-sm ${compact ? "p-3" : ""}`}
-      >
-        <div className="mb-3 flex items-center justify-between">
-          <span className="text-sm font-medium text-gray-700">
-            {formTitle || "Add document manually"}
-          </span>
-          <button
-            onClick={() => {
-              setShowManualForm(false);
-              onCancel?.();
-            }}
-            className="text-gray-400 hover:text-gray-600"
-          >
-            <X className="h-4 w-4" />
-          </button>
-        </div>
-        <div className="space-y-3">
-          <div>
-            <label className="mb-1 block text-xs text-gray-500">
-              Symbol <span className="text-red-400">*</span>
-            </label>
-            <input
-              type="text"
-              value={manualData.symbol}
-              onChange={(e) =>
-                setManualData((d) => ({ ...d, symbol: e.target.value }))
-              }
-              className="w-full rounded border border-gray-200 px-2 py-1.5 text-sm focus:border-un-blue focus:outline-none"
-              placeholder="e.g. A/RES/78/123"
-            />
-          </div>
-          <div>
-            <label className="mb-1 block text-xs text-gray-500">
-              Title <span className="text-red-400">*</span>
-            </label>
-            <input
-              type="text"
-              value={manualData.title}
-              onChange={(e) =>
-                setManualData((d) => ({ ...d, title: e.target.value }))
-              }
-              className="w-full rounded border border-gray-200 px-2 py-1.5 text-sm focus:border-un-blue focus:outline-none"
-              placeholder="Document title"
-            />
-          </div>
-          <div className="relative">
-            <label className="mb-1 block text-xs text-gray-500">
-              Issuing body <span className="text-red-400">*</span>
-            </label>
-            <input
-              type="text"
-              value={manualData.body}
-              onChange={(e) =>
-                setManualData((d) => ({ ...d, body: e.target.value }))
-              }
-              onFocus={() => setShowBodySuggestions(true)}
-              onBlur={() =>
-                setTimeout(() => setShowBodySuggestions(false), 150)
-              }
-              className="w-full rounded border border-gray-200 px-2 py-1.5 text-sm focus:border-un-blue focus:outline-none"
-              placeholder="e.g. General Assembly"
-            />
-            {showBodySuggestions && filteredBodies.length > 0 && (
-              <div className="absolute top-full right-0 left-0 z-10 mt-1 max-h-40 overflow-y-auto rounded border border-gray-200 bg-white shadow-lg">
-                {filteredBodies.map((b) => (
-                  <button
-                    key={b}
-                    onMouseDown={(e) => e.preventDefault()}
-                    onClick={() => {
-                      setManualData((d) => ({ ...d, body: b }));
-                      setShowBodySuggestions(false);
-                    }}
-                    className="w-full px-2 py-1.5 text-left text-sm hover:bg-gray-50"
-                  >
-                    {b}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-          <div>
-            <label className="mb-1 block text-xs text-gray-500">
-              Year <span className="text-red-400">*</span>
-            </label>
-            <input
-              type="number"
-              value={manualData.year}
-              onChange={(e) =>
-                setManualData((d) => ({ ...d, year: e.target.value }))
-              }
-              className={`w-full rounded border px-2 py-1.5 text-sm focus:outline-none ${
-                manualData.year &&
-                (!/^\d{4}$/.test(manualData.year) ||
-                  parseInt(manualData.year) < 1945 ||
-                  parseInt(manualData.year) > 2100)
-                  ? "border-red-300 focus:border-red-400"
-                  : "border-gray-200 focus:border-un-blue"
-              }`}
-              placeholder="e.g. 2024"
-              min="1945"
-              max="2100"
-            />
-            {manualData.year &&
-              (!/^\d{4}$/.test(manualData.year) ||
-                parseInt(manualData.year) < 1945 ||
-                parseInt(manualData.year) > 2100) && (
-                <p className="mt-1 text-xs text-red-500">
-                  Year must be 4 digits between 1945-2100
-                </p>
-              )}
-          </div>
-          <div>
-            <label className="mb-1 block text-xs text-gray-500">
-              Link <span className="text-red-400">*</span>
-            </label>
-            <input
-              type="url"
-              value={manualData.link}
-              onChange={(e) => {
-                setManualData((d) => ({ ...d, link: e.target.value }));
-                setLinkError("");
-              }}
-              className={`w-full rounded border px-2 py-1.5 text-sm focus:outline-none ${
-                linkError ||
-                (manualData.link && !/^https?:\/\/.+/.test(manualData.link))
-                  ? "border-red-300 focus:border-red-400"
-                  : "border-gray-200 focus:border-un-blue"
-              }`}
-              placeholder="https://..."
-            />
-            {(linkError ||
-              (manualData.link && !/^https?:\/\/.+/.test(manualData.link))) && (
-              <p className="mt-1 text-xs text-red-500">
-                {linkError || "Link must start with http:// or https://"}
-              </p>
-            )}
-          </div>
-          <p className="text-xs text-gray-400">All fields are required</p>
-          <div className="flex justify-end gap-2 pt-2">
-            <button
-              onClick={() => {
-                setShowManualForm(false);
-                onCancel?.();
-              }}
-              className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-800"
-            >
-              Cancel
-            </button>
-            <button
-              onClick={handleManualSubmit}
-              disabled={!isFormValid}
-              className="rounded bg-un-blue px-3 py-1.5 text-sm text-white hover:bg-un-blue/90 disabled:cursor-not-allowed disabled:opacity-50"
-            >
-              {submitLabel || "Add"}
-            </button>
-          </div>
-        </div>
-      </div>
+      <ManualDocumentForm
+        onSubmit={(data) => {
+          onManualSubmit(data);
+          setShowManualForm(false);
+          setQuery("");
+        }}
+        onCancel={() => {
+          setShowManualForm(false);
+          onCancel?.();
+        }}
+        initialSymbol={query}
+        submitLabel={submitLabel}
+        formTitle={formTitle}
+        compact={compact}
+      />
     );
   }
 
   return (
     <div ref={containerRef} className="relative">
-      <div
-        className={`flex items-center gap-2 rounded-lg border-2 border-dashed py-2 px-3 transition-colors ${
-          focused
-            ? "border-un-blue/40 bg-blue-50/30"
-            : "border-gray-200 bg-gray-50/50"
-        }`}
-      >
-        <Plus
-          className={`h-4 w-4 ${focused ? "text-un-blue" : "text-gray-400"}`}
-        />
-        <input
-          type="text"
-          value={query}
-          onChange={(e) => handleInputChange(e.target.value)}
-          onFocus={() => {
-            setFocused(true);
-            if (searchDone) setOpen(true);
-          }}
-          onBlur={() => setFocused(false)}
-          onKeyDown={handleKeyDown}
-          placeholder={placeholder || "Search by symbol or title..."}
-          className="flex-1 bg-transparent text-sm text-gray-700 placeholder:text-gray-400 focus:outline-none"
-          autoFocus={compact}
-        />
-        {searching && (
-          <Loader2 className="h-4 w-4 animate-spin text-gray-400" />
-        )}
-        {onCancel && (
-          <button
-            onClick={onCancel}
-            className="text-gray-400 hover:text-gray-600"
-          >
-            <X className="h-4 w-4" />
-          </button>
-        )}
+      <div className="flex items-center gap-2">
+        <div
+          className={`flex flex-1 items-center gap-2 rounded-lg border-2 border-dashed py-2 px-3 transition-colors ${
+            focused
+              ? "border-un-blue/40 bg-blue-50/30"
+              : "border-gray-200 bg-gray-50/50"
+          }`}
+        >
+          <Plus
+            className={`h-4 w-4 ${focused ? "text-un-blue" : "text-gray-400"}`}
+          />
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => handleInputChange(e.target.value)}
+            onFocus={() => {
+              setFocused(true);
+              if (searchDone) setOpen(true);
+            }}
+            onBlur={() => setFocused(false)}
+            onKeyDown={handleKeyDown}
+            placeholder={placeholder || "Search by symbol or title..."}
+            className="flex-1 bg-transparent text-sm text-gray-700 placeholder:text-gray-400 focus:outline-none"
+            autoFocus={compact}
+          />
+          {searching && (
+            <Loader2 className="h-4 w-4 animate-spin text-gray-400" />
+          )}
+          {onCancel && (
+            <button
+              onClick={onCancel}
+              className="text-gray-400 hover:text-gray-600"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          )}
+        </div>
+        <button
+          onClick={handleOpenManualForm}
+          className="flex shrink-0 items-center gap-1.5 rounded-lg bg-un-blue px-3 py-2 text-sm font-medium text-white transition-all hover:bg-un-blue/90 hover:shadow-md"
+          title="Add document manually"
+        >
+          <FileText className="h-4 w-4" />
+          Add manually
+        </button>
       </div>
 
       {open && (
