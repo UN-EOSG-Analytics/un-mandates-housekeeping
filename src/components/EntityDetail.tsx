@@ -1776,14 +1776,20 @@ export function EntityDetail({
       {/* Co-citing entities filter */}
       {coCitingEntities.length > 0 && (
         <div className="px-3">
-          <span className="mb-2 block text-xs font-medium text-gray-400 uppercase">
-            Show mandate documents cross-cited by other entities:
-          </span>
+          <div className="mb-2 flex items-center gap-2">
+            <span className="text-xs font-medium text-gray-400 uppercase">
+              Filter by shared citations
+            </span>
+            <span className="text-xs text-gray-400">
+              — click an entity to show only mandates cited by both {entity} and that entity
+            </span>
+          </div>
           <div className="flex flex-wrap items-center gap-1.5">
             {coCitingEntities.map(({ entity: e, count }) => (
               <button
                 key={e}
                 onClick={() => setFilterEntity(filterEntity === e ? null : e)}
+                title={`Show ${count} mandates cited by both ${entity} and ${e}`}
                 className={`rounded-full px-2 py-0.5 text-xs transition-colors ${
                   filterEntity === e
                     ? "bg-un-blue text-white"
@@ -1805,10 +1811,15 @@ export function EntityDetail({
                 onClick={() => setFilterEntity(null)}
                 className="rounded-full bg-gray-300 px-2 py-0.5 text-xs text-gray-600 hover:bg-gray-400"
               >
-                Clear
+                Clear filter
               </button>
             )}
           </div>
+          {filterEntity && (
+            <p className="mt-2 text-xs text-un-blue">
+              Showing {filteredTotal} mandate{filteredTotal !== 1 ? "s" : ""} cited by both <strong>{entity}</strong> and <strong>{filterEntity}</strong>
+            </p>
+          )}
         </div>
       )}
 
