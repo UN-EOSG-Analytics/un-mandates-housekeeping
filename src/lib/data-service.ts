@@ -56,25 +56,30 @@ interface DBCitationRow {
   programme: number | null;
   programme_title: string | null;
   component: string | null;
-  // Joined from public.documents (preferred source)
+  // Joined from public.documents (preferred source for new/updated)
   doc_symbol: string | null;
   doc_proper_title: string | null;
   doc_date_year: number | null;
   doc_issuing_body: string | null;
   doc_document_type: string | null;
-  // Joined from source_documents_metadata_clean (fallback)
+  // Joined from source_documents_metadata_clean (existing citations)
   meta_title: string | null;
   meta_proper_title: string | null;
   meta_date_year: number | null;
   meta_issuing_body: string | null;
   meta_document_type: string | null;
-  // Joined from source_documents (link only)
+  // Joined from source_documents (ppb_ fallback fields)
   ppb_link: string | null;
+  ppb_description: string | null;
+  ppb_year: number | null;
+  ppb_body: string | null;
+  ppb_type: string | null;
 }
 
 /**
  * Fetch all PPB records from database
- * Joins with public.documents for authoritative metadata, falls back to ppb2026 tables
+ * Joins with public.documents for authoritative metadata, 
+ * falls back to source_documents_metadata_clean, then to ppb_ fields
  */
 export async function fetchPPBRecords(): Promise<PPBRecord[]> {
   const rows = await query<DBCitationRow>(`
@@ -100,10 +105,14 @@ export async function fetchPPBRecords(): Promise<PPBRecord[]> {
       doc.document_type as doc_document_type,
       m.title as meta_title,
       m.proper_title as meta_proper_title,
-      m.date_year as meta_date_year,
+      m.date_year::integer as meta_date_year,
       m.issuing_body as meta_issuing_body,
       m.document_type as meta_document_type,
-      d.ppb_link
+      d.ppb_link,
+      d.ppb_description,
+      d.ppb_year,
+      d.ppb_body,
+      d.ppb_type
     FROM ppb2026.source_document_citations c
     LEFT JOIN systemchart.entities e
       ON c.entity = e.entity
@@ -124,15 +133,28 @@ export async function fetchPPBRecords(): Promise<PPBRecord[]> {
     const symbol = row.ppb_full_document_symbol;
 
     if (!recordsMap.has(symbol)) {
-      // Prefer public.documents data, fall back to source_documents_metadata_clean
+      // Three-tier fallback:
+      // 1. public.documents (doc_*) - for new/updated documents
+      // 2. source_documents_metadata_clean (meta_*) - for existing citations
+      // 3. source_documents (ppb_*) - final fallback
       const hasDbMetadata = row.doc_symbol !== null;
 
-      // Title priority: doc.proper_title > meta.title > meta.proper_title
+      // Title: doc.proper_title > meta.title > meta.proper_title > ppb_description
       const title =
-        row.doc_proper_title || row.meta_title || row.meta_proper_title || null;
-      const year = row.doc_date_year ?? row.meta_date_year ?? null;
-      const body = row.doc_issuing_body || row.meta_issuing_body || null;
-      const docType = row.doc_document_type || row.meta_document_type || null;
+        row.doc_proper_title ||
+        row.meta_title ||
+        row.meta_proper_title ||
+        row.ppb_description ||
+        null;
+      
+      // Year: doc_date_year > meta_date_year > ppb_year
+      const year = row.doc_date_year ?? row.meta_date_year ?? row.ppb_year ?? null;
+      
+      // Body: doc_issuing_body > meta_issuing_body > ppb_body
+      const body = row.doc_issuing_body || row.meta_issuing_body || row.ppb_body || null;
+      
+      // Type: doc_document_type > meta_document_type > ppb_type
+      const docType = row.doc_document_type || row.meta_document_type || row.ppb_type || null;
 
       recordsMap.set(symbol, {
         full_document_symbol: symbol,

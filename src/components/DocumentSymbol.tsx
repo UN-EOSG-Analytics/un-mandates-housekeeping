@@ -705,12 +705,6 @@ export function DocumentSymbol({
                     </a>
                   </div>
                 )}
-                {!metadataFromDb && (
-                  <div className="mt-3 flex items-center gap-2 rounded bg-amber-50 p-2 text-xs text-amber-700">
-                    <AlertTriangle className="h-4 w-4 flex-shrink-0" />
-                    <span>Metadata not found in documents database</span>
-                  </div>
-                )}
               </div>
 
               {/* Decisions table */}

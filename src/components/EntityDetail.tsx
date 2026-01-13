@@ -7,9 +7,7 @@ import {
   Check,
   MessageSquare,
   X,
-  AlertTriangle,
 } from "lucide-react";
-import { ExportDropdown } from "./ExportDropdown";
 import { EntityHeader } from "./EntityHeader";
 import type {
   Mandate,
@@ -172,19 +170,25 @@ function MandateRowContent({
         {isUpdateTarget && (
           <span className="mr-1 text-xs text-amber-500">↳</span>
         )}
-        <a
-          href={mandate.link || "#"}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`inline-block rounded px-2 py-0.5 text-xs font-medium whitespace-nowrap transition-colors ${
-            contentGreyed
-              ? "bg-gray-100 text-gray-400"
-              : "bg-blue-50 text-un-blue hover:bg-blue-100"
-          }`}
-          onClick={(e) => !mandate.link && e.preventDefault()}
+        <Tooltip
+          content={mandate.symbol.length > 18 ? mandate.symbol : undefined}
         >
-          {mandate.symbol}
-        </a>
+          <a
+            href={mandate.link || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-block rounded px-2 py-0.5 text-xs font-medium whitespace-nowrap transition-colors ${
+              contentGreyed
+                ? "bg-gray-100 text-gray-400"
+                : "bg-blue-50 text-un-blue hover:bg-blue-100"
+            }`}
+            onClick={(e) => !mandate.link && e.preventDefault()}
+          >
+            {mandate.symbol.length > 18
+              ? `${mandate.symbol.slice(0, 18)}…`
+              : mandate.symbol}
+          </a>
+        </Tooltip>
       </div>
       <div
         className={`cursor-help truncate ${contentGreyed ? "text-gray-400" : "text-gray-600"}`}
@@ -227,13 +231,7 @@ function MandateRowContent({
             : "—"}
         </span>
       </Tooltip>
-      <div>
-        {!mandate.metadataFromDb && (
-          <Tooltip content="Metadata not found in documents database">
-            <AlertTriangle className="h-4 w-4 text-amber-500" />
-          </Tooltip>
-        )}
-      </div>
+      <div></div>
       <div onClick={(e) => e.stopPropagation()}>
         {isUpdateTarget ? (
           <span className="text-xs text-gray-400">—</span>

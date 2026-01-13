@@ -1,0 +1,1 @@
+optimize the metadata handling to properly use the fallback chain: public.documents → ppb2026.source_documents_metadata_clean → ppb2026.source_documents `ppb_` fields.
