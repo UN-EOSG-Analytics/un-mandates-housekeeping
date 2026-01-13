@@ -784,6 +784,11 @@ function DocumentSearchInput({
           setShowManualForm(false);
           setQuery("");
         }}
+        onSelect={(symbol) => {
+          onSelect(symbol);
+          setShowManualForm(false);
+          setQuery("");
+        }}
         onCancel={() => {
           setShowManualForm(false);
           onCancel?.();
