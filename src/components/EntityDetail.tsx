@@ -1,7 +1,15 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef, useMemo } from "react";
-import { Plus, Loader2, Check, MessageSquare, X, Star, ChevronUp, ChevronDown, FileText } from "lucide-react";
+import { useState, useEffect, useCallback, useMemo } from "react";
+import {
+  Check,
+  MessageSquare,
+  X,
+  Star,
+  ChevronUp,
+  ChevronDown,
+  Search,
+} from "lucide-react";
 import { EntityHeader } from "./EntityHeader";
 import { getMandateWarnings } from "@/lib/services/mandate-warnings";
 import type {
@@ -22,7 +30,8 @@ import {
   createCommentAction,
   approveDecisionAction,
 } from "@/lib/services/housekeeping-actions";
-import { ManualDocumentForm, type ManualEntryData } from "./ManualDocumentForm";
+import type { ManualEntryData } from "./ManualDocumentForm";
+import { DocumentSearchInput } from "./DocumentSearchInput";
 
 interface Props {
   entity: string;
@@ -121,7 +130,7 @@ function SortableHeader({
   return (
     <button
       onClick={() => onSort(column)}
-      className="flex items-center gap-0.5 uppercase hover:text-gray-600 transition-colors"
+      className="flex items-center gap-0.5 uppercase transition-colors hover:text-gray-600"
     >
       <span>{label}</span>
       {isActive ? (
@@ -151,13 +160,43 @@ function ColumnHeaders({
       className={`grid ${GRID_COLS} items-center gap-x-2 py-1.5 text-[10px] font-medium tracking-wider text-gray-400 uppercase`}
     >
       <div className="pl-3">
-        <SortableHeader column="symbol" label="Symbol" sortColumn={sortColumn} sortDirection={sortDirection} onSort={onSort} />
+        <SortableHeader
+          column="symbol"
+          label="Symbol"
+          sortColumn={sortColumn}
+          sortDirection={sortDirection}
+          onSort={onSort}
+        />
       </div>
-      <SortableHeader column="title" label="Title" sortColumn={sortColumn} sortDirection={sortDirection} onSort={onSort} />
-      <SortableHeader column="body" label="Body" sortColumn={sortColumn} sortDirection={sortDirection} onSort={onSort} />
-      <SortableHeader column="year" label="Year" sortColumn={sortColumn} sortDirection={sortDirection} onSort={onSort} />
+      <SortableHeader
+        column="title"
+        label="Title"
+        sortColumn={sortColumn}
+        sortDirection={sortDirection}
+        onSort={onSort}
+      />
+      <SortableHeader
+        column="body"
+        label="Body"
+        sortColumn={sortColumn}
+        sortDirection={sortDirection}
+        onSort={onSort}
+      />
+      <SortableHeader
+        column="year"
+        label="Year"
+        sortColumn={sortColumn}
+        sortDirection={sortDirection}
+        onSort={onSort}
+      />
       <span>Age</span>
-      <SortableHeader column="others" label="Others" sortColumn={sortColumn} sortDirection={sortDirection} onSort={onSort} />
+      <SortableHeader
+        column="others"
+        label="Others"
+        sortColumn={sortColumn}
+        sortDirection={sortDirection}
+        onSort={onSort}
+      />
       <span></span>
       <span>Notes</span>
       <span>Decision</span>
@@ -222,7 +261,10 @@ function MandateRowContent({
       } ${readOnly ? "opacity-60" : ""}`}
       onClick={onOpenSidebar}
     >
-      <div onClick={(e) => e.stopPropagation()} className="flex items-center gap-1 pl-3">
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="flex items-center gap-1 pl-3"
+      >
         {isUpdateTarget && (
           <span className="mr-1 text-xs text-amber-500">↳</span>
         )}
@@ -638,275 +680,6 @@ function AddBadge({
   );
 }
 
-interface SearchResult {
-  symbol: string;
-  title: string | null;
-  type: string | null;
-  year: number | null;
-  body: string | null;
-}
-
-// Reusable document search input component
-function DocumentSearchInput({
-  onSelect,
-  onManualSubmit,
-  onCancel,
-  placeholder,
-  submitLabel,
-  formTitle,
-  compact,
-  initialQuery,
-}: {
-  onSelect: (symbol: string) => void;
-  onManualSubmit: (data: ManualEntryData) => void;
-  onCancel?: () => void;
-  placeholder?: string;
-  submitLabel?: string;
-  formTitle?: string;
-  compact?: boolean;
-  initialQuery?: string;
-}) {
-  const [query, setQuery] = useState(initialQuery || "");
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [searching, setSearching] = useState(false);
-  const [searchDone, setSearchDone] = useState(false);
-  const [open, setOpen] = useState(false);
-  const [focused, setFocused] = useState(false);
-  const [highlighted, setHighlighted] = useState(-1);
-  const [showManualForm, setShowManualForm] = useState(false);
-  const debounceRef = useRef<NodeJS.Timeout | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const search = useCallback((q: string) => {
-    if (q.length < 2) {
-      setResults([]);
-      setOpen(false);
-      setSearchDone(false);
-      return;
-    }
-    setSearching(true);
-    setSearchDone(false);
-    fetch(`/api/documents/search?q=${encodeURIComponent(q)}`)
-      .then((r) => r.json())
-      .then((data) => {
-        setResults(data);
-        setOpen(true);
-        setSearchDone(true);
-        setHighlighted(data.length > 0 ? 0 : -1);
-      })
-      .finally(() => setSearching(false));
-  }, []);
-
-  // Auto-search when initialQuery is provided
-  useEffect(() => {
-    if (initialQuery && initialQuery.length >= 2) {
-      search(initialQuery);
-    }
-  }, [initialQuery, search]);
-
-  const handleInputChange = (value: string) => {
-    setQuery(value);
-    if (debounceRef.current) clearTimeout(debounceRef.current);
-    debounceRef.current = setTimeout(() => search(value), 200);
-  };
-
-  const handleSelect = (doc: SearchResult) => {
-    onSelect(doc.symbol);
-    setQuery("");
-    setResults([]);
-    setOpen(false);
-    setHighlighted(-1);
-    setSearchDone(false);
-  };
-
-  const handleOpenManualForm = () => {
-    setShowManualForm(true);
-    setOpen(false);
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (!open) {
-      if (e.key === "Escape") {
-        setQuery("");
-        onCancel?.();
-      }
-      return;
-    }
-    const totalItems = results.length + (searchDone ? 1 : 0);
-    if (totalItems === 0) return;
-
-    switch (e.key) {
-      case "ArrowDown":
-        e.preventDefault();
-        setHighlighted((i) => (i + 1) % totalItems);
-        break;
-      case "ArrowUp":
-        e.preventDefault();
-        setHighlighted((i) => (i - 1 + totalItems) % totalItems);
-        break;
-      case "Enter":
-        e.preventDefault();
-        if (highlighted >= 0 && highlighted < results.length) {
-          handleSelect(results[highlighted]);
-        } else if (
-          highlighted === results.length ||
-          (results.length === 0 && highlighted === 0)
-        ) {
-          handleOpenManualForm();
-        }
-        break;
-      case "Escape":
-        setOpen(false);
-        setHighlighted(-1);
-        onCancel?.();
-        break;
-    }
-  };
-
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (
-        containerRef.current &&
-        !containerRef.current.contains(e.target as Node)
-      ) {
-        setOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  if (showManualForm) {
-    return (
-      <ManualDocumentForm
-        onSubmit={(data) => {
-          onManualSubmit(data);
-          setShowManualForm(false);
-          setQuery("");
-        }}
-        onSelect={(symbol) => {
-          onSelect(symbol);
-          setShowManualForm(false);
-          setQuery("");
-        }}
-        onCancel={() => {
-          setShowManualForm(false);
-          onCancel?.();
-        }}
-        initialSymbol={query}
-        submitLabel={submitLabel}
-        formTitle={formTitle}
-        compact={compact}
-      />
-    );
-  }
-
-  return (
-    <div ref={containerRef} className="relative">
-      <div className="flex items-center gap-2">
-        <div
-          className={`flex flex-1 items-center gap-2 rounded-lg border-2 border-dashed py-2 px-3 transition-colors ${
-            focused
-              ? "border-un-blue/40 bg-blue-50/30"
-              : "border-gray-200 bg-gray-50/50"
-          }`}
-        >
-          <Plus
-            className={`h-4 w-4 ${focused ? "text-un-blue" : "text-gray-400"}`}
-          />
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => handleInputChange(e.target.value)}
-            onFocus={() => {
-              setFocused(true);
-              if (searchDone) setOpen(true);
-            }}
-            onBlur={() => setFocused(false)}
-            onKeyDown={handleKeyDown}
-            placeholder={placeholder || "Search by symbol or title..."}
-            className="flex-1 bg-transparent text-sm text-gray-700 placeholder:text-gray-400 focus:outline-none"
-            autoFocus={compact}
-          />
-          {searching && (
-            <Loader2 className="h-4 w-4 animate-spin text-gray-400" />
-          )}
-          {onCancel && (
-            <button
-              onClick={onCancel}
-              className="text-gray-400 hover:text-gray-600"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          )}
-        </div>
-        <button
-          onClick={handleOpenManualForm}
-          className="flex shrink-0 items-center gap-1.5 rounded-lg bg-un-blue px-3 py-2 text-sm font-medium text-white transition-all hover:bg-un-blue/90 hover:shadow-md"
-          title="Add document manually"
-        >
-          <FileText className="h-4 w-4" />
-          Add manually
-        </button>
-      </div>
-
-      {open && (
-        <div className="absolute top-full right-0 left-0 z-20 mt-1 max-h-72 overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg">
-          {results.map((doc, i) => (
-            <button
-              key={doc.symbol}
-              onMouseDown={(e) => e.preventDefault()}
-              onClick={() => handleSelect(doc)}
-              onMouseEnter={() => setHighlighted(i)}
-              className={`w-full border-b border-gray-100 px-3 py-2 text-left ${
-                i === highlighted ? "bg-un-blue/10" : "hover:bg-gray-50"
-              }`}
-            >
-              <div className="flex items-baseline gap-2">
-                <span className="text-sm font-medium text-un-blue">
-                  {doc.symbol}
-                </span>
-                <span className="text-xs text-gray-400">
-                  {[doc.body, doc.year].filter(Boolean).join(" · ")}
-                </span>
-              </div>
-              {doc.title && (
-                <div className="mt-0.5 truncate text-xs text-gray-600">
-                  {doc.title}
-                </div>
-              )}
-            </button>
-          ))}
-          {searchDone && results.length === 0 && (
-            <div className="px-3 py-2 text-sm text-gray-500">
-              No documents found
-            </div>
-          )}
-          {searchDone && (
-            <button
-              onMouseDown={(e) => e.preventDefault()}
-              onClick={handleOpenManualForm}
-              onMouseEnter={() => setHighlighted(results.length)}
-              className={`w-full border-t border-gray-100 px-3 py-2 text-left text-sm ${
-                highlighted === results.length
-                  ? "bg-un-blue/10"
-                  : "hover:bg-gray-50"
-              }`}
-            >
-              <span className="text-un-blue">+ Add manually...</span>
-              {query && (
-                <span className="ml-1 text-gray-400">
-                  &ldquo;{query}&rdquo;
-                </span>
-              )}
-            </button>
-          )}
-        </div>
-      )}
-    </div>
-  );
-}
-
 // Wrapper for the "Add" row at bottom of sections
 function AddEntryRow({
   onAdd,
@@ -950,6 +723,7 @@ function MandateSection({
   onComment,
   onAdd,
   onAddManual,
+  searchQuery = "",
 }: {
   title: string;
   mandates: Mandate[];
@@ -986,6 +760,7 @@ function MandateSection({
   onComment: (symbol: string, comment: string) => void;
   onAdd: (symbol: string) => void;
   onAddManual: (data: ManualEntryData) => void;
+  searchQuery?: string;
 }) {
   const [sortColumn, setSortColumn] = useState<SortColumn | null>(null);
   const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
@@ -1044,8 +819,6 @@ function MandateSection({
     };
   });
 
-  if (mandates.length === 0 && addedMandates.length === 0) return null;
-
   // Get update target symbol for metadata lookup
   const getUpdateTargetSymbol = (symbol: string) => {
     const s = states[stateKey(symbol)];
@@ -1054,9 +827,22 @@ function MandateSection({
 
   // Sort mandates based on current sort state
   const sortedMandates = useMemo(() => {
-    if (!sortColumn) return mandates;
+    let filtered = mandates;
 
-    return [...mandates].sort((a, b) => {
+    // Apply search filter
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      filtered = mandates.filter(
+        (m) =>
+          m.symbol.toLowerCase().includes(query) ||
+          m.title?.toLowerCase().includes(query) ||
+          m.body?.toLowerCase().includes(query),
+      );
+    }
+
+    if (!sortColumn) return filtered;
+
+    return [...filtered].sort((a, b) => {
       let comparison = 0;
 
       switch (sortColumn) {
@@ -1080,19 +866,24 @@ function MandateSection({
           break;
         case "year":
           // Null years sort last
-          if (a.year === null && b.year !== null) return sortDirection === "asc" ? 1 : -1;
-          if (a.year !== null && b.year === null) return sortDirection === "asc" ? -1 : 1;
+          if (a.year === null && b.year !== null)
+            return sortDirection === "asc" ? 1 : -1;
+          if (a.year !== null && b.year === null)
+            return sortDirection === "asc" ? -1 : 1;
           if (a.year === null && b.year === null) return 0;
           comparison = (a.year ?? 0) - (b.year ?? 0);
           break;
         case "others":
-          comparison = (a.otherEntitiesCount ?? 0) - (b.otherEntitiesCount ?? 0);
+          comparison =
+            (a.otherEntitiesCount ?? 0) - (b.otherEntitiesCount ?? 0);
           break;
       }
 
       return sortDirection === "asc" ? comparison : -comparison;
     });
-  }, [mandates, sortColumn, sortDirection]);
+  }, [mandates, sortColumn, sortDirection, searchQuery]);
+
+  if (mandates.length === 0 && addedMandates.length === 0) return null;
 
   return (
     <div>
@@ -1104,13 +895,15 @@ function MandateSection({
           {title}
         </h3>
         {readOnly && (
-          <span className="text-xs text-gray-400">
-            — reference only
-          </span>
+          <span className="text-xs text-gray-400">— reference only</span>
         )}
       </div>
       <div className="space-y-1.5">
-        <ColumnHeaders sortColumn={sortColumn} sortDirection={sortDirection} onSort={handleSort} />
+        <ColumnHeaders
+          sortColumn={sortColumn}
+          sortDirection={sortDirection}
+          onSort={handleSort}
+        />
         {sortedMandates.map((m) => {
           const targetSymbol = getUpdateTargetSymbol(m.symbol);
           return (
@@ -1156,7 +949,11 @@ function MandateSection({
             />
           ))}
         {!readOnly && (
-          <AddEntryRow onAdd={onAdd} onAddManual={onAddManual} disabled={false} />
+          <AddEntryRow
+            onAdd={onAdd}
+            onAddManual={onAddManual}
+            disabled={false}
+          />
         )}
       </div>
     </div>
@@ -1171,6 +968,7 @@ export function EntityDetail({
   legislativeMandates,
 }: Props) {
   const [filterEntity, setFilterEntity] = useState<string | null>(null);
+  const [globalSearchQuery, setGlobalSearchQuery] = useState("");
   const [states, setStates] = useState<Record<string, MandateState>>({});
   const [totalComments, setTotalComments] = useState<Record<string, number>>(
     {},
@@ -1209,7 +1007,12 @@ export function EntityDetail({
 
   // Set of legislative mandate symbols (for highlighting in background section)
   const legislativeSymbols = useMemo(
-    () => new Set(Object.values(legislativeMandates).flat().map((m) => m.symbol)),
+    () =>
+      new Set(
+        Object.values(legislativeMandates)
+          .flat()
+          .map((m) => m.symbol),
+      ),
     [legislativeMandates],
   );
 
@@ -1703,7 +1506,11 @@ export function EntityDetail({
       {!isOwnEntity && userEntity && (
         <div className="border-l-4 border-un-blue bg-gray-50 px-6 py-3">
           <p className="text-sm text-gray-600">
-            You are viewing <span className="font-medium text-un-blue">{entity}</span> but your entity is <span className="font-medium text-un-blue">{userEntity}</span>. You can only make housekeeping decisions for your own entity.
+            You are viewing{" "}
+            <span className="font-medium text-un-blue">{entity}</span> but your
+            entity is{" "}
+            <span className="font-medium text-un-blue">{userEntity}</span>. You
+            can only make housekeeping decisions for your own entity.
           </p>
         </div>
       )}
@@ -1728,7 +1535,8 @@ export function EntityDetail({
               Filter by shared citations
             </span>
             <span className="text-xs text-gray-400">
-              — click an entity to show only documents cited by both {entity} and that entity
+              — click an entity to show only documents cited by both {entity}{" "}
+              and that entity
             </span>
           </div>
           <div className="flex flex-wrap items-center gap-1.5">
@@ -1764,11 +1572,35 @@ export function EntityDetail({
           </div>
           {filterEntity && (
             <p className="mt-2 text-xs text-un-blue">
-              Showing {filteredTotal} mandate{filteredTotal !== 1 ? "s" : ""} cited by both <strong>{entity}</strong> and <strong>{filterEntity}</strong>
+              Showing {filteredTotal} mandate{filteredTotal !== 1 ? "s" : ""}{" "}
+              cited by both <strong>{entity}</strong> and{" "}
+              <strong>{filterEntity}</strong>
             </p>
           )}
         </div>
       )}
+
+      {/* Global Search */}
+      <div className="mb-6">
+        <div className="relative">
+          <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-gray-400" />
+          <input
+            type="text"
+            placeholder="Search across all mandates by symbol, title, or body..."
+            value={globalSearchQuery}
+            onChange={(e) => setGlobalSearchQuery(e.target.value)}
+            className="w-full rounded-lg border border-gray-300 py-2 pr-10 pl-10 text-sm focus:border-un-blue focus:ring-1 focus:ring-un-blue focus:outline-none"
+          />
+          {globalSearchQuery && (
+            <button
+              onClick={() => setGlobalSearchQuery("")}
+              className="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          )}
+        </div>
+      </div>
 
       {/* Mandates List */}
       <div className="space-y-8">
@@ -1783,6 +1615,7 @@ export function EntityDetail({
               subprogramme={subprog}
               foundationalSymbols={foundationalSymbols}
               readOnly={!isOwnEntity}
+              searchQuery={globalSearchQuery}
               {...sharedSectionProps}
               {...makeSubprogHandlers(subprog)}
             />
@@ -1795,6 +1628,7 @@ export function EntityDetail({
           subprogramme={null}
           readOnly
           foundationalSymbols={legislativeSymbols}
+          searchQuery={globalSearchQuery}
           {...sharedSectionProps}
           {...makeSubprogHandlers(null)}
         />

@@ -26,7 +26,9 @@ export async function GET(req: NextRequest) {
      WHERE symbol ILIKE $1 || '%'
         OR proper_title ILIKE '%' || $1 || '%'
      ORDER BY 
+       CASE WHEN UPPER(symbol) = UPPER($1) THEN 0 ELSE 1 END,
        CASE WHEN symbol ILIKE $1 || '%' THEN 0 ELSE 1 END,
+       LENGTH(symbol),
        date_year DESC NULLS LAST
      LIMIT 20`,
     [q],
