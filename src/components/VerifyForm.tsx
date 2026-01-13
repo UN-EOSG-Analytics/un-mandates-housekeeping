@@ -4,6 +4,10 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { EntityCombobox } from "@/components/EntityCombobox";
 import type { EntityOption } from "@/lib/services/data-service";
+import {
+  checkEntityForTokenAction,
+  verifyMagicTokenAction,
+} from "@/lib/auth/actions";
 
 interface VerifyFormProps {
   entities: EntityOption[];
@@ -28,20 +32,15 @@ export function VerifyForm({ entities }: VerifyFormProps) {
       return;
     }
 
-    fetch("/api/auth/check-entity", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ token }),
-    })
-      .then((r) => r.json())
-      .then((data) => {
-        if (data.error) {
-          setError(data.error);
-        } else {
-          setUserEmail(data.email);
-          setHasExistingEntity(data.hasEntity);
-          if (data.entity) {
-            setSelectedEntity(data.entity);
+    checkEntityForTokenAction(token)
+      .then((result) => {
+        if (!result.success) {
+          setError(result.error);
+        } else if (result.data) {
+          setUserEmail(result.data.email);
+          setHasExistingEntity(result.data.hasEntity);
+          if (result.data.entity) {
+            setSelectedEntity(result.data.entity);
           }
         }
         setChecking(false);
@@ -68,32 +67,12 @@ export function VerifyForm({ entities }: VerifyFormProps) {
 
     setLoading(true);
 
-    // First verify the token and create session
-    const verifyRes = await fetch("/api/auth/verify", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ token }),
-    });
-    if (!verifyRes.ok) {
-      const data = await verifyRes.json();
-      setError(data.error || "Verification failed");
+    const result = await verifyMagicTokenAction(token, entity);
+
+    if (!result.success) {
+      setError(result.error);
       setLoading(false);
       return;
-    }
-
-    // If new user, set their entity
-    if (!hasExistingEntity && entity) {
-      const entityRes = await fetch("/api/auth/update-entity", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ entity }),
-      });
-      if (!entityRes.ok) {
-        const data = await entityRes.json();
-        setError(data.error || "Failed to set entity");
-        setLoading(false);
-        return;
-      }
     }
 
     router.push("/");

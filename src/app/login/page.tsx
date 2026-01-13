@@ -3,6 +3,7 @@
 import { SITE_TITLE } from "@/components/Header";
 import Image from "next/image";
 import { useState } from "react";
+import { requestMagicLinkAction } from "@/lib/auth/actions";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -16,17 +17,12 @@ export default function LoginPage() {
     setStatus("loading");
     setErrorMsg("");
 
-    const res = await fetch("/api/auth/request", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email }),
-    });
+    const result = await requestMagicLinkAction(email);
 
-    if (res.ok) {
+    if (result.success) {
       setStatus("sent");
     } else {
-      const data = await res.json();
-      setErrorMsg(data.error || "Something went wrong");
+      setErrorMsg(result.error);
       setStatus("error");
     }
   }

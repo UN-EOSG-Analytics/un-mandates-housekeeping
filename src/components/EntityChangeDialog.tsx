@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
 import { EntityCombobox } from "./EntityCombobox";
 import type { EntityOption } from "@/lib/services/data-service";
+import { updateEntityAction } from "@/lib/auth/actions";
 
 interface EntityChangeDialogProps {
   isOpen: boolean;
@@ -48,18 +49,13 @@ export function EntityChangeDialog({
     setError(null);
 
     try {
-      const res = await fetch("/api/auth/update-entity", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ entity }),
-      });
+      const result = await updateEntityAction(entity);
 
-      if (res.ok) {
+      if (result.success) {
         router.refresh();
         onClose();
       } else {
-        const data = await res.json();
-        setError(data.error || "Failed to update entity");
+        setError(result.error);
       }
     } catch {
       setError("Failed to update entity");

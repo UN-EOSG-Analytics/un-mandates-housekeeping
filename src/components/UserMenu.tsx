@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { EntityChangeDialog } from "./EntityChangeDialog";
 import type { EntityOption } from "@/lib/services/data-service";
+import { logoutAction } from "@/lib/auth/actions";
 
 export function UserMenu({
   email,
@@ -16,12 +16,10 @@ export function UserMenu({
   isReviewer?: boolean;
   entities: EntityOption[];
 }) {
-  const router = useRouter();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   async function handleLogout() {
-    await fetch("/api/auth/logout", { method: "POST" });
-    router.push("/login");
+    await logoutAction();
   }
 
   return (
