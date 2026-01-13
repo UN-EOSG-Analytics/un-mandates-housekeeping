@@ -18,6 +18,7 @@ import {
   ChevronDown,
   Loader2,
   Sparkles,
+  Star,
   X,
 } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
@@ -46,6 +47,7 @@ interface Props {
   isReviewer?: boolean;
   userEmail?: string | null;
   userEntity?: string | null;
+  isFoundational?: boolean;
   onDecision?: (decision: Decision, newSymbol?: string) => void;
   onApprove?: (decisionId: string, approved: boolean) => void;
   onComment?: (comment: string) => void;
@@ -466,6 +468,7 @@ export function DocumentSymbol({
   isReviewer,
   userEmail,
   userEntity,
+  isFoundational,
   onDecision,
   onApprove,
   onComment,
@@ -665,6 +668,16 @@ export function DocumentSymbol({
                   {title && (
                     <div className="mt-1 text-sm text-gray-600">{title}</div>
                   )}
+                  {isFoundational && (
+                    <Tooltip content="This mandate appears in both the legislative mandates and the foundational Mandates and Background section">
+                      <div className="mt-2 flex items-center gap-1.5 text-amber-600">
+                        <Star className="h-4 w-4 fill-amber-400" strokeWidth={0} />
+                        <span className="text-sm font-medium">
+                          Foundational mandate
+                        </span>
+                      </div>
+                    </Tooltip>
+                  )}
                 </div>
                 <button
                   onClick={() => setOpen(false)}
@@ -751,7 +764,7 @@ export function DocumentSymbol({
                       <div className="mb-2 text-xs font-medium text-gray-500 uppercase">
                         Decisions
                       </div>
-                      <div className="max-h-48 overflow-y-auto">
+                      <div className="max-h-56 overflow-y-auto">
                         <table className="w-full text-xs">
                           <thead className="sticky top-0 bg-gray-50">
                             <tr className="text-gray-400">

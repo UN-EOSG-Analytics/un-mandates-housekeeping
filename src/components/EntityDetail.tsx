@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
-import { Plus, Loader2, Check, MessageSquare, X } from "lucide-react";
+import { useState, useEffect, useCallback, useRef, useMemo } from "react";
+import { Plus, Loader2, Check, MessageSquare, X, Star } from "lucide-react";
 import { EntityHeader } from "./EntityHeader";
 import { getMandateWarnings } from "@/lib/services/mandate-warnings";
 import type {
@@ -130,6 +130,8 @@ function MandateRowContent({
   isReviewer,
   isAdded,
   isUpdateTarget,
+  readOnly,
+  isFoundational,
   onOpenSidebar,
   onDecision,
   onApprove,
@@ -142,6 +144,8 @@ function MandateRowContent({
   isReviewer: boolean;
   isAdded?: boolean;
   isUpdateTarget?: boolean; // True for the "new" row in update view (no dropdowns)
+  readOnly?: boolean; // True for background section (no interactivity)
+  isFoundational?: boolean; // True if mandate is also in background mandates
   onOpenSidebar: () => void;
   onDecision: (decision: Decision, newSymbol?: string) => void;
   onApprove?: (decisionId: string, approved: boolean) => void;
@@ -168,30 +172,34 @@ function MandateRowContent({
     <div
       className={`grid ${GRID_COLS} cursor-pointer items-center gap-x-2 gap-y-1.5 px-3 py-2.5 text-sm transition-colors ${
         isUpdateTarget ? "bg-amber-50/50" : "hover:bg-gray-50"
-      }`}
+      } ${readOnly ? "opacity-60" : ""}`}
       onClick={onOpenSidebar}
     >
-      <div onClick={(e) => e.stopPropagation()}>
+      <div onClick={(e) => e.stopPropagation()} className="flex items-center gap-1">
         {isUpdateTarget && (
           <span className="mr-1 text-xs text-amber-500">↳</span>
         )}
-        <Tooltip content={mandate.symbol.length > 18 ? mandate.symbol : ""}>
-          <a
-            href={mandate.link || "#"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`inline-block rounded px-2 py-0.5 text-xs font-medium whitespace-nowrap transition-colors ${
-              contentGreyed
-                ? "bg-gray-100 text-gray-400"
-                : "bg-blue-50 text-un-blue hover:bg-blue-100"
-            }`}
-            onClick={(e) => !mandate.link && e.preventDefault()}
-          >
-            {mandate.symbol.length > 18
-              ? `${mandate.symbol.slice(0, 18)}…`
-              : mandate.symbol}
-          </a>
-        </Tooltip>
+        <a
+          href={mandate.link || "#"}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={mandate.symbol.length > 18 ? mandate.symbol : undefined}
+          className={`inline-block rounded px-2 py-0.5 text-xs font-medium whitespace-nowrap transition-colors ${
+            contentGreyed
+              ? "bg-gray-100 text-gray-400"
+              : "bg-blue-50 text-un-blue hover:bg-blue-100"
+          }`}
+          onClick={(e) => !mandate.link && e.preventDefault()}
+        >
+          {mandate.symbol.length > 18
+            ? `${mandate.symbol.slice(0, 18)}…`
+            : mandate.symbol}
+        </a>
+        {isFoundational && (
+          <Tooltip content="Foundational mandate — also cited in Mandates and Background">
+            <Star className="h-3.5 w-3.5 fill-amber-400" strokeWidth={0} />
+          </Tooltip>
+        )}
       </div>
       <div
         className={`cursor-help truncate ${contentGreyed ? "text-gray-400" : "text-gray-600"}`}
@@ -288,7 +296,7 @@ function MandateRowContent({
         </div>
       </Tooltip>
       <div onClick={(e) => e.stopPropagation()}>
-        {isUpdateTarget ? (
+        {isUpdateTarget || readOnly ? (
           <span className="text-xs text-gray-400">—</span>
         ) : isAdded ? (
           <AddBadge
@@ -322,7 +330,7 @@ function MandateRowContent({
         onClick={(e) => e.stopPropagation()}
         className="flex items-center justify-center"
       >
-        {isUpdateTarget ? (
+        {isUpdateTarget || readOnly ? (
           <span className="inline-flex h-6 w-6 items-center justify-center text-xs text-gray-400">
             —
           </span>
@@ -373,6 +381,8 @@ function MandateRow({
   onUpdateWithManual,
   onComment,
   isAdded,
+  readOnly,
+  isFoundational,
   updateTargetMetadata,
 }: {
   mandate: Mandate;
@@ -386,6 +396,8 @@ function MandateRow({
   onUpdateWithManual: (newSymbol: string, manualData: ManualEntryData) => void;
   onComment: (comment: string) => void;
   isAdded?: boolean;
+  readOnly?: boolean;
+  isFoundational?: boolean;
   updateTargetMetadata?: {
     title: string | null;
     year: number | null;
@@ -442,6 +454,8 @@ function MandateRow({
         commentCount={commentCount}
         isReviewer={isReviewer}
         isAdded={isAdded}
+        readOnly={readOnly}
+        isFoundational={isFoundational}
         onOpenSidebar={() => setSidebarOpen(true)}
         onDecision={onDecision}
         onApprove={onApprove}
@@ -449,7 +463,7 @@ function MandateRow({
       />
 
       {/* Update search input (shown when user selects "update" from dropdown) */}
-      {showUpdateSearch && !hasCompletedUpdate && (
+      {!readOnly && showUpdateSearch && !hasCompletedUpdate && (
         <div className="border-t border-gray-100 bg-amber-50/30 px-3 py-2">
           <div className="mb-2 text-xs font-medium text-amber-600">
             Select replacement document:
@@ -503,6 +517,7 @@ function MandateRow({
           isReviewer={isReviewer}
           userEmail={userEmail}
           userEntity={userEntity}
+          isFoundational={isFoundational}
           onDecision={onDecision}
           onApprove={onApprove}
           onComment={onComment}
@@ -1055,6 +1070,8 @@ function MandateSection({
   isReviewer,
   userEmail,
   userEntity,
+  readOnly,
+  foundationalSymbols,
   onDecision,
   onApprove,
   onUpdateWithManual,
@@ -1085,6 +1102,8 @@ function MandateSection({
   isReviewer: boolean;
   userEmail: string | null;
   userEntity: string | null;
+  readOnly?: boolean;
+  foundationalSymbols?: Set<string>;
   onDecision: (symbol: string, decision: Decision, newSymbol?: string) => void;
   onApprove: (decisionId: string, approved: boolean) => void;
   onUpdateWithManual: (
@@ -1144,9 +1163,19 @@ function MandateSection({
 
   return (
     <div>
-      <h3 className="mb-3 px-3 text-sm font-semibold tracking-wide text-gray-600 uppercase">
-        {title}
-      </h3>
+      {readOnly && (
+        <div className="mb-6 border-t border-dashed border-gray-300 pt-6" />
+      )}
+      <div className="mb-3 flex items-baseline gap-2 px-3">
+        <h3 className="text-sm font-semibold tracking-wide text-gray-600 uppercase">
+          {title}
+        </h3>
+        {readOnly && (
+          <span className="text-xs text-gray-400">
+            — reference only
+          </span>
+        )}
+      </div>
       <div className="space-y-1.5">
         <ColumnHeaders />
         {mandates.map((m) => {
@@ -1159,7 +1188,9 @@ function MandateSection({
               commentCount={totalComments[m.symbol] || 0}
               isReviewer={isReviewer}
               userEmail={userEmail}
-          userEntity={userEntity}
+              userEntity={userEntity}
+              readOnly={readOnly}
+              isFoundational={foundationalSymbols?.has(m.symbol)}
               onDecision={(decision, newSymbol) =>
                 onDecision(m.symbol, decision, newSymbol)
               }
@@ -1174,23 +1205,26 @@ function MandateSection({
             />
           );
         })}
-        {addedMandates.map((m) => (
-          <MandateRow
-            key={m.symbol}
-            mandate={m}
-            state={states[stateKey(m.symbol)]}
-            commentCount={totalComments[m.symbol] || 0}
-            isReviewer={isReviewer}
-            userEmail={userEmail}
-          userEntity={userEntity}
-            onDecision={(decision) => onDecision(m.symbol, decision)}
-            onApprove={onApprove}
-            onUpdateWithManual={() => {}}
-            onComment={(comment) => onComment(m.symbol, comment)}
-            isAdded
-          />
-        ))}
-        <AddEntryRow onAdd={onAdd} onAddManual={onAddManual} disabled={false} />
+        {!readOnly &&
+          addedMandates.map((m) => (
+            <MandateRow
+              key={m.symbol}
+              mandate={m}
+              state={states[stateKey(m.symbol)]}
+              commentCount={totalComments[m.symbol] || 0}
+              isReviewer={isReviewer}
+              userEmail={userEmail}
+              userEntity={userEntity}
+              onDecision={(decision) => onDecision(m.symbol, decision)}
+              onApprove={onApprove}
+              onUpdateWithManual={() => {}}
+              onComment={(comment) => onComment(m.symbol, comment)}
+              isAdded
+            />
+          ))}
+        {!readOnly && (
+          <AddEntryRow onAdd={onAdd} onAddManual={onAddManual} disabled={false} />
+        )}
       </div>
     </div>
   );
@@ -1228,6 +1262,18 @@ export function EntityDetail({
       { title: string | null; year: number | null; body: string | null } | null
     >
   >({});
+
+  // Set of background mandate symbols (for foundational highlighting in legislative sections)
+  const foundationalSymbols = useMemo(
+    () => new Set(backgroundMandates.map((m) => m.symbol)),
+    [backgroundMandates],
+  );
+
+  // Set of legislative mandate symbols (for highlighting in background section)
+  const legislativeSymbols = useMemo(
+    () => new Set(Object.values(legislativeMandates).flat().map((m) => m.symbol)),
+    [legislativeMandates],
+  );
 
   // Fetch user role and decisions on mount
   useEffect(() => {
@@ -1684,6 +1730,35 @@ export function EntityDetail({
       0,
     );
 
+  // Shared props for all MandateSection instances
+  const sharedSectionProps = {
+    entity,
+    entityLong,
+    states,
+    totalComments,
+    addedMetadata,
+    updateTargetMetadata,
+    isReviewer,
+    userEmail,
+    userEntity,
+    onApprove: handleApprove,
+  };
+
+  // Create handlers for a specific subprogramme
+  const makeSubprogHandlers = (subprog: string | null) => ({
+    onDecision: (symbol: string, decision: Decision, newSymbol?: string) =>
+      handleDecision(symbol, subprog, decision, newSymbol),
+    onUpdateWithManual: (
+      symbol: string,
+      newSymbol: string,
+      manualData: ManualEntryData,
+    ) => handleUpdateWithManual(symbol, subprog, newSymbol, manualData),
+    onComment: (symbol: string, comment: string) =>
+      handleComment(symbol, subprog, comment),
+    onAdd: (symbol: string) => handleDecision(symbol, subprog, "add"),
+    onAddManual: (data: ManualEntryData) => handleAddManual(subprog, data),
+  });
+
   return (
     <div className="space-y-5">
       <EntityHeader
@@ -1739,31 +1814,7 @@ export function EntityDetail({
 
       {/* Mandates List */}
       <div className="space-y-8">
-        <MandateSection
-          title="Mandates and background"
-          mandates={filteredBackground}
-          entity={entity}
-          entityLong={entityLong}
-          subprogramme={null}
-          states={states}
-          totalComments={totalComments}
-          addedMetadata={addedMetadata}
-          updateTargetMetadata={updateTargetMetadata}
-          isReviewer={isReviewer}
-          userEmail={userEmail}
-          userEntity={userEntity}
-          onDecision={(symbol, decision, newSymbol) =>
-            handleDecision(symbol, null, decision, newSymbol)
-          }
-          onApprove={handleApprove}
-          onUpdateWithManual={(symbol, newSymbol, manualData) =>
-            handleUpdateWithManual(symbol, null, newSymbol, manualData)
-          }
-          onComment={(symbol, comment) => handleComment(symbol, null, comment)}
-          onAdd={(symbol) => handleDecision(symbol, null, "add")}
-          onAddManual={(data) => handleAddManual(null, data)}
-        />
-
+        {/* Legislative mandates (interactive) */}
         {Object.entries(filteredLegislative)
           .sort(([a], [b]) => a.localeCompare(b))
           .map(([subprog, mandates]) => (
@@ -1771,30 +1822,23 @@ export function EntityDetail({
               key={subprog}
               title={subprog}
               mandates={mandates}
-              entity={entity}
-              entityLong={entityLong}
               subprogramme={subprog}
-              states={states}
-              totalComments={totalComments}
-              addedMetadata={addedMetadata}
-              updateTargetMetadata={updateTargetMetadata}
-              isReviewer={isReviewer}
-              userEmail={userEmail}
-          userEntity={userEntity}
-              onDecision={(symbol, decision, newSymbol) =>
-                handleDecision(symbol, subprog, decision, newSymbol)
-              }
-              onApprove={handleApprove}
-              onUpdateWithManual={(symbol, newSymbol, manualData) =>
-                handleUpdateWithManual(symbol, subprog, newSymbol, manualData)
-              }
-              onComment={(symbol, comment) =>
-                handleComment(symbol, subprog, comment)
-              }
-              onAdd={(symbol) => handleDecision(symbol, subprog, "add")}
-              onAddManual={(data) => handleAddManual(subprog, data)}
+              foundationalSymbols={foundationalSymbols}
+              {...sharedSectionProps}
+              {...makeSubprogHandlers(subprog)}
             />
           ))}
+
+        {/* Mandates and background (read-only reference) */}
+        <MandateSection
+          title="Mandates and background"
+          mandates={filteredBackground}
+          subprogramme={null}
+          readOnly
+          foundationalSymbols={legislativeSymbols}
+          {...sharedSectionProps}
+          {...makeSubprogHandlers(null)}
+        />
 
         {filteredTotal === 0 && filterEntity && (
           <div className="rounded-lg bg-gray-50 p-8 text-center text-gray-400">
