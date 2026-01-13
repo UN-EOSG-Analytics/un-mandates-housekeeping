@@ -33,16 +33,16 @@ export function ExportDropdown({ entity, label = "Export" }: Props) {
     <div ref={ref} className="relative inline-flex">
       <button
         onClick={() => setOpen(!open)}
-        className={`inline-flex items-center gap-2 rounded-md border px-3.5 py-2 text-sm font-medium transition-all ${
+        className={`inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1.5 text-xs font-medium transition-all ${
           open
             ? "border-gray-300 bg-gray-50 text-gray-900 shadow-sm"
             : "border-gray-200 bg-white text-gray-700 hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm"
         }`}
       >
-        <Download className="h-4 w-4" />
+        <Download className="h-3.5 w-3.5" />
         {label}
         <ChevronDown
-          className={`h-3.5 w-3.5 text-gray-400 transition-transform ${open ? "rotate-180" : ""}`}
+          className={`h-3 w-3 text-gray-400 transition-transform ${open ? "rotate-180" : ""}`}
         />
       </button>
       {open && (

@@ -10,6 +10,7 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import { ExportDropdown } from "./ExportDropdown";
+import { EntityHeader } from "./EntityHeader";
 import type {
   Mandate,
   MandateState,
@@ -116,7 +117,7 @@ function PhaseTracker() {
 
   return (
     <div className="rounded-lg border border-gray-200 bg-white px-4 py-3 shadow-sm">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-6">
         <span className="text-xs font-medium text-gray-500 uppercase">
           Review phases
         </span>
@@ -125,7 +126,7 @@ function PhaseTracker() {
             <div key={phase.id} className="flex items-center">
               {i > 0 && <div className="mx-1 h-px w-6 bg-gray-200" />}
               <div
-                className={`flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium transition-colors ${
+                className={`flex items-center gap-1.5 rounded-full ${i === 0 ? 'pl-5 pr-3' : 'px-3'} py-1 text-xs font-medium transition-colors ${
                   phase.id < currentPhase
                     ? "bg-green-100 text-green-700"
                     : phase.id === currentPhase
@@ -1669,70 +1670,54 @@ export function EntityDetail({
 
   return (
     <div className="space-y-5">
-      {/* Entity Header */}
-      <div className="rounded-xl border border-gray-200 bg-white px-3 py-4 shadow-sm">
-        <div className="flex items-start justify-between">
-          <div>
-            <h2 className="text-3xl font-bold text-foreground">{entity}</h2>
-            {entityLong && (
-              <p className="mt-1 text-lg text-gray-500">{entityLong}</p>
-            )}
-            {partName && (
-              <p className="mt-2 text-sm text-gray-400">{partName}</p>
-            )}
-          </div>
-          <div className="text-right">
-            <div className="text-4xl font-bold text-un-blue">
-              {filterEntity ? filteredTotal : totalMandates}
-            </div>
-            <div className="text-sm text-gray-500">
-              {filterEntity ? `of ${totalMandates} ` : ""}mandate
-              {totalMandates !== 1 ? "s" : ""}
-            </div>
-            <div className="mt-3">
-              <ExportDropdown entity={entity} />
-            </div>
-          </div>
-        </div>
-      </div>
+      <EntityHeader
+        entity={entity}
+        entityLong={entityLong}
+        partName={partName}
+        filterEntity={filterEntity}
+        filteredTotal={filteredTotal}
+        totalMandates={totalMandates}
+      />
 
       {/* Phase Tracker */}
       <PhaseTracker />
 
       {/* Co-citing entities filter */}
       {coCitingEntities.length > 0 && (
-        <div className="flex flex-wrap items-center gap-1.5 px-3">
-          <span className="mr-2 text-[10px] font-medium text-gray-400 uppercase">
-            Filter mandate documents by cross-citing entities:
+        <div className="px-3">
+          <span className="mb-2 block text-xs font-medium text-gray-400 uppercase">
+            Show mandate documents cross-cited by other entities:
           </span>
-          {coCitingEntities.map(({ entity: e, count }) => (
-            <button
-              key={e}
-              onClick={() => setFilterEntity(filterEntity === e ? null : e)}
-              className={`rounded-full px-2 py-0.5 text-xs transition-colors ${
-                filterEntity === e
-                  ? "bg-un-blue text-white"
-                  : "bg-gray-100 text-gray-500 hover:bg-gray-200"
-              }`}
-            >
-              {e}{" "}
-              <span
-                className={
-                  filterEntity === e ? "text-white/60" : "text-gray-400"
-                }
+          <div className="flex flex-wrap items-center gap-1.5">
+            {coCitingEntities.map(({ entity: e, count }) => (
+              <button
+                key={e}
+                onClick={() => setFilterEntity(filterEntity === e ? null : e)}
+                className={`rounded-full px-2 py-0.5 text-xs transition-colors ${
+                  filterEntity === e
+                    ? "bg-un-blue text-white"
+                    : "bg-gray-100 text-gray-500 hover:bg-gray-200"
+                }`}
               >
-                {count}
-              </span>
-            </button>
-          ))}
-          {filterEntity && (
-            <button
-              onClick={() => setFilterEntity(null)}
-              className="rounded-full bg-gray-300 px-2 py-0.5 text-xs text-gray-600 hover:bg-gray-400"
-            >
-              Clear
-            </button>
-          )}
+                {e}{" "}
+                <span
+                  className={
+                    filterEntity === e ? "text-white/60" : "text-gray-400"
+                  }
+                >
+                  {count}
+                </span>
+              </button>
+            ))}
+            {filterEntity && (
+              <button
+                onClick={() => setFilterEntity(null)}
+                className="rounded-full bg-gray-300 px-2 py-0.5 text-xs text-gray-600 hover:bg-gray-400"
+              >
+                Clear
+              </button>
+            )}
+          </div>
         </div>
       )}
 
