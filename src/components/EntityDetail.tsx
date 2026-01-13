@@ -57,7 +57,7 @@ function PhaseTracker() {
   const currentPhase = 1; // Mockup: always phase 1
 
   return (
-    <div className="rounded-lg border border-gray-200 bg-white px-4 py-3 shadow-sm">
+    <div className="rounded-lg border border-gray-200 bg-white px-6 py-3 shadow-sm">
       <div className="flex items-center gap-6">
         <span className="text-xs font-medium text-gray-500 uppercase">
           Review phases
@@ -147,9 +147,11 @@ function ColumnHeaders({
 }) {
   return (
     <div
-      className={`grid ${GRID_COLS} items-center gap-x-2 px-3 py-1.5 text-[10px] font-medium tracking-wider text-gray-400 uppercase`}
+      className={`grid ${GRID_COLS} items-center gap-x-2 py-1.5 text-[10px] font-medium tracking-wider text-gray-400 uppercase`}
     >
-      <SortableHeader column="symbol" label="Symbol" sortColumn={sortColumn} sortDirection={sortDirection} onSort={onSort} />
+      <div className="pl-3">
+        <SortableHeader column="symbol" label="Symbol" sortColumn={sortColumn} sortDirection={sortDirection} onSort={onSort} />
+      </div>
       <SortableHeader column="title" label="Title" sortColumn={sortColumn} sortDirection={sortDirection} onSort={onSort} />
       <SortableHeader column="body" label="Body" sortColumn={sortColumn} sortDirection={sortDirection} onSort={onSort} />
       <SortableHeader column="year" label="Year" sortColumn={sortColumn} sortDirection={sortDirection} onSort={onSort} />
@@ -214,12 +216,12 @@ function MandateRowContent({
 
   return (
     <div
-      className={`grid ${GRID_COLS} cursor-pointer items-center gap-x-2 gap-y-1.5 px-3 py-2.5 text-sm transition-colors ${
+      className={`grid ${GRID_COLS} cursor-pointer items-center gap-x-2 gap-y-1.5 py-2.5 text-sm transition-colors ${
         isUpdateTarget ? "bg-amber-50/50" : "hover:bg-gray-50"
       } ${readOnly ? "opacity-60" : ""}`}
       onClick={onOpenSidebar}
     >
-      <div onClick={(e) => e.stopPropagation()} className="flex items-center gap-1">
+      <div onClick={(e) => e.stopPropagation()} className="flex items-center gap-1 pl-3">
         {isUpdateTarget && (
           <span className="mr-1 text-xs text-amber-500">↳</span>
         )}
@@ -508,7 +510,7 @@ function MandateRow({
 
       {/* Update search input (shown when user selects "update" from dropdown) */}
       {!readOnly && showUpdateSearch && !hasCompletedUpdate && (
-        <div className="border-t border-gray-100 bg-amber-50/30 px-3 py-2">
+        <div className="border-t border-gray-100 bg-amber-50/30 py-2">
           <div className="mb-2 text-xs font-medium text-amber-600">
             Select replacement document:
           </div>
@@ -988,7 +990,7 @@ function DocumentSearchInput({
   return (
     <div ref={containerRef} className="relative">
       <div
-        className={`flex items-center gap-2 rounded-lg border-2 border-dashed px-3 py-2 transition-colors ${
+        className={`flex items-center gap-2 rounded-lg border-2 border-dashed py-2 transition-colors ${
           focused
             ? "border-un-blue/40 bg-blue-50/30"
             : "border-gray-200 bg-gray-50/50"
@@ -1273,7 +1275,7 @@ function MandateSection({
       {readOnly && (
         <div className="mb-6 border-t border-dashed border-gray-300 pt-6" />
       )}
-      <div className="mb-3 flex items-baseline gap-2 px-3">
+      <div className="mb-3 flex items-baseline gap-2">
         <h3 className="text-sm font-semibold tracking-wide text-gray-600 uppercase">
           {title}
         </h3>
@@ -1369,6 +1371,11 @@ export function EntityDetail({
       { title: string | null; year: number | null; body: string | null } | null
     >
   >({});
+
+  // Check if user owns this entity (can edit)
+  const isOwnEntity = useMemo(() => {
+    return userEntity === entity;
+  }, [userEntity, entity]);
 
   // Set of background mandate symbols (for foundational highlighting in legislative sections)
   const foundationalSymbols = useMemo(
@@ -1868,6 +1875,15 @@ export function EntityDetail({
 
   return (
     <div className="space-y-5">
+      {/* Read-only notice */}
+      {!isOwnEntity && userEntity && (
+        <div className="border-l-4 border-un-blue bg-gray-50 px-6 py-3">
+          <p className="text-sm text-gray-600">
+            You are viewing <span className="font-medium text-un-blue">{entity}</span> but your entity is <span className="font-medium text-un-blue">{userEntity}</span>. You can only make housekeeping decisions for your own entity.
+          </p>
+        </div>
+      )}
+
       <EntityHeader
         entity={entity}
         entityLong={entityLong}
@@ -1878,11 +1894,11 @@ export function EntityDetail({
       />
 
       {/* Phase Tracker */}
-      <PhaseTracker />
+      {/* <PhaseTracker /> */}
 
       {/* Co-citing entities filter */}
       {coCitingEntities.length > 0 && (
-        <div className="px-3">
+        <div>
           <div className="mb-2 flex items-center gap-2">
             <span className="text-xs font-medium text-gray-400 uppercase">
               Filter by shared citations
@@ -1932,7 +1948,7 @@ export function EntityDetail({
 
       {/* Mandates List */}
       <div className="space-y-8">
-        {/* Legislative mandates (interactive) */}
+        {/* Legislative mandates (interactive only if user owns entity) */}
         {Object.entries(filteredLegislative)
           .sort(([a], [b]) => a.localeCompare(b))
           .map(([subprog, mandates]) => (
@@ -1942,6 +1958,7 @@ export function EntityDetail({
               mandates={mandates}
               subprogramme={subprog}
               foundationalSymbols={foundationalSymbols}
+              readOnly={!isOwnEntity}
               {...sharedSectionProps}
               {...makeSubprogHandlers(subprog)}
             />

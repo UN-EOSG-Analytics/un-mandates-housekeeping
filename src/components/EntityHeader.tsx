@@ -18,7 +18,7 @@ export function EntityHeader({
   totalMandates,
 }: Props) {
   return (
-    <div className="rounded-xl border border-gray-200 bg-white px-3 py-4 shadow-sm">
+    <div className="rounded-xl border border-gray-200 bg-white px-6 py-4 shadow-sm">
       <div className="flex items-start justify-between">
         <div>
           <h2 className="text-3xl font-bold text-foreground">{entity}</h2>

@@ -249,6 +249,11 @@ export async function createDecisionAction(params: {
     return { success: false, error: "invalid request" };
   }
 
+  // Only allow users to edit their own entity
+  if (user.entity !== entity) {
+    return { success: false, error: "You can only make decisions for your own entity" };
+  }
+
   if (!["retain", "remove", "add", "update", "cancel"].includes(decision)) {
     return { success: false, error: "invalid decision" };
   }
@@ -307,6 +312,11 @@ export async function createCommentAction(params: {
 
   if (!documentSymbol || !entity || !comment?.trim()) {
     return { success: false, error: "invalid request" };
+  }
+
+  // Only allow users to comment on their own entity
+  if (user.entity !== entity) {
+    return { success: false, error: "You can only comment on your own entity" };
   }
 
   const rows = await query<CommentRow>(
