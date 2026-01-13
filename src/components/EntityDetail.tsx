@@ -990,7 +990,7 @@ function DocumentSearchInput({
   return (
     <div ref={containerRef} className="relative">
       <div
-        className={`flex items-center gap-2 rounded-lg border-2 border-dashed py-2 transition-colors ${
+        className={`flex items-center gap-2 rounded-lg border-2 border-dashed py-2 px-3 transition-colors ${
           focused
             ? "border-un-blue/40 bg-blue-50/30"
             : "border-gray-200 bg-gray-50/50"

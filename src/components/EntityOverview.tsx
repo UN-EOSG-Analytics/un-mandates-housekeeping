@@ -4,6 +4,7 @@ import type { EntityData, PartData } from "@/types";
 import { ChevronRight, Search, Star, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { ExportDropdown } from "./ExportDropdown";
 
 interface Props {
   parts: PartData[];
@@ -111,31 +112,34 @@ export function EntityOverview({ parts, userEntity }: Props) {
       )}
 
       {/* Search box */}
-      <div>
-        <div className="relative">
-          <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-gray-400" />
-          <input
-            type="text"
-            placeholder="Search entities..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full rounded-lg border border-gray-300 py-2 pr-4 pl-10 text-sm focus:border-un-blue focus:ring-1 focus:ring-un-blue focus:outline-none"
-          />
+      <div className="flex items-start justify-between gap-4">
+        <div className="w-[40%]">
+          <div className="relative">
+            <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-gray-400" />
+            <input
+              type="text"
+              placeholder="Search entities..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full rounded-lg border border-gray-300 py-2 pr-4 pl-10 text-sm focus:border-un-blue focus:ring-1 focus:ring-un-blue focus:outline-none"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery("")}
+                className="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            )}
+          </div>
           {searchQuery && (
-            <button
-              onClick={() => setSearchQuery("")}
-              className="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400 hover:text-gray-600"
-            >
-              <X className="h-4 w-4" />
-            </button>
+            <div className="mt-2 text-xs text-gray-500">
+              Found {totalMatchingEntities} entit
+              {totalMatchingEntities !== 1 ? "ies" : "y"}
+            </div>
           )}
         </div>
-        {searchQuery && (
-          <div className="mt-2 text-xs text-gray-500">
-            Found {totalMatchingEntities} entit
-            {totalMatchingEntities !== 1 ? "ies" : "y"}
-          </div>
-        )}
+        <ExportDropdown label="Export All" />
       </div>
 
       {filteredParts.map((partData) => (

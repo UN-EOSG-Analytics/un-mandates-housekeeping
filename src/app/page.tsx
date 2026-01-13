@@ -36,9 +36,7 @@ export default async function Home() {
   return (
     <div className="min-h-screen bg-background">
       <main className="mx-auto max-w-7xl px-3 py-8 sm:px-4">
-        <Header user={user} entities={entities}>
-          <ExportDropdown label="Export All" />
-        </Header>
+        <Header user={user} entities={entities} />
         <EntityOverview parts={parts} userEntity={user?.entity} />
       </main>
       <Footer />
