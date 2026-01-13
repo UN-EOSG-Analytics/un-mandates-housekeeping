@@ -10,6 +10,10 @@
                 "shadcn@latest",
                 "mcp"
             ]
+        },
+        "mermaid-mcp": {
+            "url": "https://mcp.mermaidchart.com/mcp",
+            "type": "http"
         }
     }
 }

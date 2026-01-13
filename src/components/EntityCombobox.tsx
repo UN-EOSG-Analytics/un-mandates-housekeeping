@@ -17,11 +17,12 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import type { EntityOption } from "@/lib/data-service";
 
 interface EntityComboboxProps {
   value: string;
   onChange: (value: string) => void;
-  entities: string[];
+  entities: EntityOption[];
   placeholder?: string;
   className?: string;
 }
@@ -37,9 +38,14 @@ export function EntityCombobox({
 
   const allEntities = React.useMemo(() => {
     const items = [
-      { value: "PPBD", label: "PPBD" },
-      ...entities.map((e) => ({ value: e, label: e })),
-      { value: "Other", label: "Other" },
+      { value: "PPBD", label: "PPBD", searchTerms: "ppbd" },
+      ...entities.map((e) => ({
+        value: e.entity,
+        label: e.entity,
+        longName: e.entity_long,
+        searchTerms: `${e.entity.toLowerCase()} ${e.entity_long?.toLowerCase() || ""}`
+      })),
+      { value: "Other", label: "Other", searchTerms: "other" },
     ];
     return items;
   }, [entities]);
@@ -84,17 +90,24 @@ export function EntityCombobox({
               {allEntities.map((entity) => (
                 <CommandItem
                   key={entity.value}
-                  value={entity.value}
-                  onSelect={(currentValue) => {
-                    onChange(currentValue === value ? "" : currentValue);
+                  value={entity.searchTerms}
+                  onSelect={() => {
+                    onChange(entity.value);
                     setOpen(false);
                   }}
                   className="aria-selected:bg-un-blue/5 aria-selected:text-un-blue"
                 >
-                  {entity.label}
+                  <div className="flex min-w-0 flex-1 flex-col">
+                    <span className="font-medium">{entity.label}</span>
+                    {"longName" in entity && entity.longName && (
+                      <span className="truncate text-xs text-gray-500">
+                        {entity.longName}
+                      </span>
+                    )}
+                  </div>
                   <Check
                     className={cn(
-                      "ml-auto h-4 w-4 text-un-blue",
+                      "ml-2 h-4 w-4 shrink-0 text-un-blue",
                       value === entity.value ? "opacity-100" : "opacity-0",
                     )}
                   />

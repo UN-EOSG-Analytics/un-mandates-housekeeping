@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import type { EntityData, PartData } from "@/types";
+import { ChevronRight, Search, Star, X } from "lucide-react";
 import Link from "next/link";
-import { X, Search, ChevronRight, Star } from "lucide-react";
-import type { PartData, EntityData } from "@/types";
+import { useState } from "react";
 
 interface Props {
   parts: PartData[];

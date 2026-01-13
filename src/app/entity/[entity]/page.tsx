@@ -2,7 +2,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { transformPPBData } from "@/lib/transformData";
-import { fetchPPBRecords, getBudgetPartsMeta } from "@/lib/data-service";
+import {
+  fetchPPBRecords,
+  getBudgetPartsMeta,
+  fetchEntities,
+} from "@/lib/data-service";
 import { EntityDetail } from "@/components/EntityDetail";
 import { Header } from "@/components/Header";
 import { getCurrentUser } from "@/lib/auth";
@@ -21,7 +25,11 @@ async function getData() {
 export default async function EntityPage({ params }: PageProps) {
   const { entity: entityParam } = await params;
   const entityCode = decodeURIComponent(entityParam);
-  const [parts, user] = await Promise.all([getData(), getCurrentUser()]);
+  const [parts, user, entities] = await Promise.all([
+    getData(),
+    getCurrentUser(),
+    fetchEntities(),
+  ]);
 
   // Find the entity across all parts
   let entityData: EntityData | null = null;
@@ -43,7 +51,7 @@ export default async function EntityPage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-background">
       <main className="mx-auto max-w-7xl px-3 py-8 sm:px-4">
-        <Header user={user} />
+        <Header user={user} entities={entities} />
         <Link
           href="/"
           className="mb-6 inline-flex items-center gap-2 text-sm text-gray-500 transition-colors hover:text-un-blue"

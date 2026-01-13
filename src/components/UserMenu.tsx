@@ -3,15 +3,18 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { EntityChangeDialog } from "./EntityChangeDialog";
+import type { EntityOption } from "@/lib/data-service";
 
 export function UserMenu({
   email,
   entity,
   isPpbd,
+  entities,
 }: {
   email: string;
   entity?: string | null;
   isPpbd?: boolean;
+  entities: EntityOption[];
 }) {
   const router = useRouter();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -54,6 +57,7 @@ export function UserMenu({
         isOpen={isDialogOpen}
         onClose={() => setIsDialogOpen(false)}
         currentEntity={entity || null}
+        entities={entities}
       />
     </>
   );

@@ -1,10 +1,7 @@
 import { NextResponse } from "next/server";
-import { query } from "@/lib/db";
+import { fetchEntities } from "@/lib/data-service";
 
 export async function GET() {
-  const rows = await query<{ entity: string }>(
-    `SELECT DISTINCT entity FROM ppb2026.source_document_citations WHERE entity IS NOT NULL ORDER BY entity`,
-  );
-  const entities = rows.map((r) => r.entity);
+  const entities = await fetchEntities();
   return NextResponse.json({ entities });
 }

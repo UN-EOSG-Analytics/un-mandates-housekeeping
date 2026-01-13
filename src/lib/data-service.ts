@@ -6,6 +6,11 @@
 import { query } from "./db";
 import type { PPBRecord, CitationInfo, BudgetPartMeta } from "@/types";
 
+export interface EntityOption {
+  entity: string;
+  entity_long: string | null;
+}
+
 // Budget parts metadata (static - matches budget_parts.json)
 export const BUDGET_PARTS_META: BudgetPartMeta[] = [
   {
@@ -76,7 +81,7 @@ export async function fetchPPBRecords(): Promise<PPBRecord[]> {
     SELECT 
       c.ppb_full_document_symbol,
       c.entity,
-      c.entity_long,
+      e.entity_long,
       c.origin_document,
       c.part_in_document,
       c.section,
@@ -100,6 +105,8 @@ export async function fetchPPBRecords(): Promise<PPBRecord[]> {
       m.document_type as meta_document_type,
       d.ppb_link
     FROM ppb2026.source_document_citations c
+    LEFT JOIN systemchart.entities e
+      ON c.entity = e.entity
     LEFT JOIN public.documents doc 
       ON REGEXP_REPLACE(c.ppb_full_document_symbol, '(\\d) ([A-Z])$', '\\1\\2') = doc.symbol
     LEFT JOIN ppb2026.source_documents_metadata_clean m
@@ -184,6 +191,25 @@ export async function fetchPPBRecords(): Promise<PPBRecord[]> {
   }
 
   return Array.from(recordsMap.values());
+}
+
+export interface EntityOption {
+  entity: string;
+  entity_long: string | null;
+}
+
+/**
+ * Fetch entities that are referenced in PPB 2026 citations
+ * Only returns entities actually used in the current budget cycle
+ */
+export async function fetchEntities(): Promise<EntityOption[]> {
+  const rows = await query<EntityOption>(
+    `SELECT DISTINCT e.entity, e.entity_long
+     FROM systemchart.entities e
+     INNER JOIN ppb2026.source_document_citations c ON e.entity = c.entity
+     ORDER BY e.entity`,
+  );
+  return rows;
 }
 
 /**

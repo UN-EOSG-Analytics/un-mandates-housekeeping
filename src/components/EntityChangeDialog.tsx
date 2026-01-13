@@ -4,20 +4,22 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
 import { EntityCombobox } from "./EntityCombobox";
+import type { EntityOption } from "@/lib/data-service";
 
 interface EntityChangeDialogProps {
   isOpen: boolean;
   onClose: () => void;
   currentEntity: string | null;
+  entities: EntityOption[];
 }
 
 export function EntityChangeDialog({
   isOpen,
   onClose,
   currentEntity,
+  entities,
 }: EntityChangeDialogProps) {
   const router = useRouter();
-  const [entities, setEntities] = useState<string[]>([]);
   const [selectedEntity, setSelectedEntity] = useState("");
   const [otherEntity, setOtherEntity] = useState("");
   const [loading, setLoading] = useState(false);
@@ -25,9 +27,6 @@ export function EntityChangeDialog({
 
   useEffect(() => {
     if (isOpen) {
-      fetch("/api/entities")
-        .then((r) => r.json())
-        .then((d) => setEntities(d.entities || []));
       setSelectedEntity(currentEntity || "");
       setOtherEntity("");
       setError(null);

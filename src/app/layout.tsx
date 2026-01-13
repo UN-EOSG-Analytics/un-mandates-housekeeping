@@ -1,7 +1,7 @@
+import { SITE_SUBTITLE, SITE_TITLE } from "@/components/Header";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
 import { Roboto } from "next/font/google";
-import { SITE_TITLE, SITE_SUBTITLE } from "@/components/Header";
 import "./globals.css";
 
 // https://fonts.google.com/specimen/Roboto

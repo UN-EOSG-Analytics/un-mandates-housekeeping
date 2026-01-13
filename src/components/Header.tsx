@@ -1,17 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { UserMenu } from "./UserMenu";
+import type { EntityOption } from "@/lib/data-service";
 
 interface Props {
   user?: { email: string; entity?: string | null; isPpbd?: boolean } | null;
   children?: React.ReactNode;
+  entities?: EntityOption[];
 }
 
 export const SITE_TITLE = "Mandate Housekeeping Platform";
 export const SITE_SUBTITLE =
   "Analytics and Collaborative Review of Mandate Citations for PPB 2027";
 
-export function Header({ user, children }: Props) {
+export function Header({ user, children, entities = [] }: Props) {
   return (
     <div className="mb-6 flex items-center justify-between">
       <Link href="/" className="flex items-center gap-4 hover:opacity-90">
@@ -34,6 +36,7 @@ export function Header({ user, children }: Props) {
             email={user.email}
             entity={user.entity}
             isPpbd={user.isPpbd}
+            entities={entities}
           />
         )}
         {children}

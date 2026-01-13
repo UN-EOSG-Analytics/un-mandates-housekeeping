@@ -1,178 +1,33 @@
-"use client";
-import { useSearchParams, useRouter } from "next/navigation";
-import { useState, useEffect, Suspense } from "react";
-import { EntityCombobox } from "@/components/EntityCombobox";
+import { Suspense } from "react";
+import Image from "next/image";
+import { VerifyForm } from "@/components/VerifyForm";
+import { fetchEntities } from "@/lib/data-service";
+import { SITE_TITLE } from "@/components/Header";
 
-function VerifyContent() {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const token = searchParams.get("token");
-  const [loading, setLoading] = useState(false);
-  const [checking, setChecking] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [entities, setEntities] = useState<string[]>([]);
-  const [selectedEntity, setSelectedEntity] = useState("");
-  const [otherEntity, setOtherEntity] = useState("");
-  const [hasExistingEntity, setHasExistingEntity] = useState(false);
-  const [userEmail, setUserEmail] = useState<string | null>(null);
+export default async function VerifyPage() {
+  const entities = await fetchEntities();
 
-  // Check if user already has entity set
-  useEffect(() => {
-    if (!token) {
-      // Use functional update pattern to avoid synchronous setState warning
-      queueMicrotask(() => setChecking(false));
-      return;
-    }
-
-    fetch("/api/auth/check-entity", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ token }),
-    })
-      .then((r) => r.json())
-      .then((data) => {
-        if (data.error) {
-          setError(data.error);
-        } else {
-          setUserEmail(data.email);
-          setHasExistingEntity(data.hasEntity);
-          if (data.entity) {
-            setSelectedEntity(data.entity);
-          }
-        }
-        setChecking(false);
-      })
-      .catch(() => {
-        setError("Failed to verify token");
-        setChecking(false);
-      });
-  }, [token]);
-
-  // Fetch entities list only if user doesn't have one
-  useEffect(() => {
-    if (!hasExistingEntity && !checking) {
-      fetch("/api/entities")
-        .then((r) => r.json())
-        .then((d) => setEntities(d.entities || []));
-    }
-  }, [hasExistingEntity, checking]);
-
-  const handleVerify = async () => {
-    if (!token) return;
-
-    // If user already has entity, don't require selection
-    const entity = hasExistingEntity
-      ? undefined
-      : selectedEntity === "Other"
-        ? otherEntity.trim()
-        : selectedEntity;
-
-    if (!hasExistingEntity && !entity) {
-      setError("Please select your organisational entity");
-      return;
-    }
-
-    setLoading(true);
-    const res = await fetch("/api/auth/verify", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ token, entity }),
-    });
-    if (res.ok) {
-      router.push("/");
-    } else {
-      const data = await res.json();
-      setError(data.error || "Verification failed");
-      setLoading(false);
-    }
-  };
-
-  if (!token) {
-    return <p className="text-red-600">Missing verification token.</p>;
-  }
-
-  if (checking) {
-    return <p className="text-gray-500">Verifying...</p>;
-  }
-
-  // User already has entity - simple sign in
-  if (hasExistingEntity) {
-    return (
-      <div className="space-y-6">
-        <p className="text-sm text-gray-600">
-          Signing in as <span className="font-medium">{userEmail}</span>
-        </p>
-        {error && <p className="text-sm text-red-600">{error}</p>}
-        <button
-          onClick={handleVerify}
-          disabled={loading}
-          className="w-full rounded-lg bg-un-blue px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
-        >
-          {loading ? "Signing in..." : "Complete sign-in"}
-        </button>
-      </div>
-    );
-  }
-
-  // New user or no entity - show entity selection
   return (
-    <div className="space-y-6">
-      {userEmail && (
-        <p className="text-sm text-gray-600">
-          Signing in as <span className="font-medium">{userEmail}</span>
-        </p>
-      )}
-
-      <div>
-        <label className="mb-2 block text-sm font-medium text-gray-700">
-          Select your organisational entity
-        </label>
-        <EntityCombobox
-          value={selectedEntity}
-          onChange={setSelectedEntity}
-          entities={entities}
-          placeholder="Choose entity..."
-        />
-      </div>
-
-      {selectedEntity === "Other" && (
-        <input
-          type="text"
-          placeholder="Enter your organisational entity"
-          value={otherEntity}
-          onChange={(e) => setOtherEntity(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm focus:border-un-blue focus:ring-1 focus:ring-un-blue focus:outline-none"
-        />
-      )}
-
-      {error && <p className="text-sm text-red-600">{error}</p>}
-
-      <button
-        onClick={handleVerify}
-        disabled={
-          loading ||
-          !selectedEntity ||
-          (selectedEntity === "Other" && !otherEntity.trim())
-        }
-        className="w-full rounded-lg bg-un-blue px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
-      >
-        {loading ? "Signing in..." : "Complete sign-in"}
-      </button>
-    </div>
-  );
-}
-
-export default function VerifyPage() {
-  return (
-    <main className="flex min-h-screen items-center justify-center bg-white">
-      <div className="w-full max-w-sm px-6">
-        <h1 className="mb-6 text-xl font-bold text-gray-900">
-          Complete sign-in
-        </h1>
+    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+      <div className="w-full max-w-sm">
+        <div className="mb-8 flex flex-col items-start">
+          <Image
+            src="/images/UN_Logo_Stacked_Colour_English.svg"
+            alt="UN Logo"
+            width={120}
+            height={120}
+            className="mb-4"
+          />
+          <h1 className="text-xl font-semibold text-foreground">
+            {SITE_TITLE}
+          </h1>
+          <p className="text-sm text-gray-500">Complete sign-in</p>
+        </div>
+        
         <Suspense fallback={<p className="text-gray-500">Loading...</p>}>
-          <VerifyContent />
+          <VerifyForm entities={entities} />
         </Suspense>
       </div>
-    </main>
+    </div>
   );
 }
