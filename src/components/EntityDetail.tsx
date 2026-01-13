@@ -20,6 +20,7 @@ import type {
 } from "@/types";
 import { DocumentSymbol } from "./DocumentSymbol";
 import { Tooltip } from "./Tooltip";
+import { DecisionDropdown } from "./DecisionDropdown";
 import { getAgeIndicator } from "@/lib/age-indicator";
 
 interface Props {
@@ -44,66 +45,6 @@ const BODY_ABBREVS: Record<string, string> = {
 function abbreviateBody(body: string | null): string | null {
   if (!body) return null;
   return BODY_ABBREVS[body] ?? body;
-}
-
-function DecisionSelect({
-  decision,
-  newSymbol: _,
-  userEmail,
-  createdAt,
-  onChange,
-  onUpdateClick,
-  disabled,
-}: {
-  decision: Decision | null;
-  newSymbol: string | null;
-  userEmail: string | null;
-  createdAt: string | null;
-  onChange: (decision: Decision, newSymbol?: string) => void;
-  onUpdateClick?: () => void; // Callback to show search UI
-  disabled?: boolean;
-}) {
-  const tooltipContent =
-    userEmail && createdAt
-      ? `Set by ${userEmail} at ${new Date(createdAt).toLocaleDateString()}`
-      : null;
-
-  const select = (
-    <select
-      value={decision || ""}
-      onChange={(e) => {
-        const v = e.target.value as Decision | "";
-        if (v === "update") {
-          // Trigger search UI instead of immediate onChange
-          if (onUpdateClick) onUpdateClick();
-          else onChange(v);
-        } else if (v) {
-          onChange(v);
-        }
-      }}
-      disabled={disabled}
-      className={`h-7 w-20 rounded border border-gray-200 px-1 text-xs ${
-        decision === "retain"
-          ? "bg-green-50 text-green-700"
-          : decision === "remove"
-            ? "bg-red-50 text-red-700"
-            : decision === "update"
-              ? "bg-amber-50 text-amber-700"
-              : "bg-white text-gray-500"
-      }`}
-    >
-      <option value="">—</option>
-      <option value="retain">Retain</option>
-      <option value="remove">Remove</option>
-      <option value="update">Update</option>
-    </select>
-  );
-
-  return tooltipContent ? (
-    <Tooltip content={tooltipContent}>{select}</Tooltip>
-  ) : (
-    select
-  );
 }
 
 function PhaseTracker() {
@@ -303,9 +244,8 @@ function MandateRowContent({
             onCancel={() => onDecision("cancel")}
           />
         ) : (
-          <DecisionSelect
+          <DecisionDropdown
             decision={state?.focal?.decision ?? null}
-            newSymbol={state?.focal?.newSymbol ?? null}
             userEmail={state?.focal?.userEmail ?? null}
             createdAt={state?.focal?.createdAt ?? null}
             onChange={onDecision}
@@ -398,6 +338,7 @@ function MandateRow({
   } | null;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [newDocSidebarOpen, setNewDocSidebarOpen] = useState(false);
   const [showUpdateSearch, setShowUpdateSearch] = useState(false);
 
   // Check if there's a completed update (has newSymbol)
@@ -473,7 +414,7 @@ function MandateRow({
           commentCount={0}
           userRole={null}
           isUpdateTarget
-          onOpenSidebar={() => {}}
+          onOpenSidebar={() => setNewDocSidebarOpen(true)}
           onDecision={() => {}}
         />
       )}
@@ -510,6 +451,35 @@ function MandateRow({
           metadataFromDb={mandate.metadataFromDb}
           docType={mandate.docType}
         />
+        {/* Sidebar for replacement document */}
+        {hasCompletedUpdate && newMandate && (
+          <DocumentSymbol
+            symbol={newMandate.symbol}
+            link={newMandate.link}
+            title={newMandate.title}
+            year={newMandate.year}
+            body={newMandate.body}
+            otherEntitiesCount={newMandate.otherEntitiesCount}
+            relevanceCount={newMandate.relevanceCount}
+            relevanceIndices={newMandate.relevanceIndices}
+            aiComments={newMandate.aiComments}
+            entity={newMandate.entity}
+            entityLong={newMandate.entityLong}
+            allEntities={newMandate.allEntities}
+            entityLongMap={newMandate.entityLongMap}
+            allEntityRelevance={newMandate.allEntityRelevance}
+            isOpen={newDocSidebarOpen}
+            onOpenChange={setNewDocSidebarOpen}
+            state={state}
+            userRole={userRole}
+            userEmail={userEmail}
+            onDecision={onDecision}
+            onApprove={onApprove}
+            onComment={onComment}
+            metadataFromDb={newMandate.metadataFromDb}
+            docType={newMandate.docType}
+          />
+        )}
       </div>
     </div>
   );

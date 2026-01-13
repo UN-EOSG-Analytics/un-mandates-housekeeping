@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { Tooltip } from "./Tooltip";
+import { DecisionDropdown } from "./DecisionDropdown";
 
 interface Props {
   symbol: string;
@@ -780,59 +781,29 @@ export function DocumentSymbol({
                                     {ent}
                                   </td>
                                   <td className="px-1 py-1.5">
-                                    <select
-                                      value={
+                                    <DecisionDropdown
+                                      decision={
                                         isCurrentEntity
-                                          ? state?.focal?.decision || ""
-                                          : latestFocal?.decision || ""
+                                          ? state?.focal?.decision || null
+                                          : latestFocal?.decision || null
                                       }
-                                      onChange={(e) => {
-                                        if (!canEdit || !e.target.value) return;
+                                      onChange={(decision) => {
+                                        if (!canEdit) return;
                                         if (
-                                          e.target.value === "update" &&
+                                          decision === "update" &&
                                           onUpdateClick
                                         ) {
                                           onUpdateClick();
                                         } else {
-                                          handleDecision(
-                                            e.target.value as Decision,
-                                          );
+                                          handleDecision(decision);
                                         }
                                       }}
+                                      onUpdateClick={canEdit ? onUpdateClick : undefined}
                                       disabled={!canEdit}
-                                      title={
-                                        latestFocal
-                                          ? `${latestFocal.userEmail} · ${new Date(latestFocal.createdAt).toLocaleDateString()}`
-                                          : undefined
-                                      }
-                                      className={`h-6 w-full rounded border px-1 text-xs ${
-                                        (isCurrentEntity
-                                          ? state?.focal?.decision
-                                          : latestFocal?.decision) === "retain"
-                                          ? "border-green-200 bg-green-50 text-green-700"
-                                          : (isCurrentEntity
-                                                ? state?.focal?.decision
-                                                : latestFocal?.decision) ===
-                                              "remove"
-                                            ? "border-red-200 bg-red-50 text-red-700"
-                                            : (isCurrentEntity
-                                                  ? state?.focal?.decision
-                                                  : latestFocal?.decision) ===
-                                                "update"
-                                              ? "border-amber-200 bg-amber-50 text-amber-700"
-                                              : (isCurrentEntity
-                                                    ? state?.focal?.decision
-                                                    : latestFocal?.decision) ===
-                                                  "add"
-                                                ? "border-blue-200 bg-blue-50 text-blue-700"
-                                                : "border-gray-200 bg-white text-gray-400"
-                                      } ${!canEdit ? "cursor-default opacity-60" : ""}`}
-                                    >
-                                      <option value="">—</option>
-                                      <option value="retain">Retain</option>
-                                      <option value="remove">Remove</option>
-                                      <option value="update">Update</option>
-                                    </select>
+                                      userEmail={latestFocal?.userEmail}
+                                      createdAt={latestFocal?.createdAt}
+                                      size="sm"
+                                    />
                                   </td>
                                   <td className="px-1 py-1.5 text-center">
                                     {latestFocal ||
