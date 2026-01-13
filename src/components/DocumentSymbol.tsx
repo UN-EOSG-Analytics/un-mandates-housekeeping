@@ -745,13 +745,15 @@ export function DocumentSymbol({
               </div>
 
               {/* Decisions table */}
-              {allEntities &&
-                allEntities.length > 0 &&
+              {(allEntities?.length || allDecisions.length > 0) &&
                 (() => {
+                  // Merge entities from PPB data + entities with decisions (for ADD)
+                  const entitiesFromDecisions = [...new Set(allDecisions.map((d) => d.entity))];
+                  const mergedEntities = [...new Set([...(allEntities || []), ...entitiesFromDecisions])];
                   // Sort: current entity first, then others alphabetically
                   const sortedEntities = [
                     ...(entity ? [entity] : []),
-                    ...allEntities.filter((e) => e !== entity).sort(),
+                    ...mergedEntities.filter((e) => e !== entity).sort(),
                   ];
                   const MAX_VISIBLE = 5; // current + 4 others
                   const hasMore = sortedEntities.length > MAX_VISIBLE;
