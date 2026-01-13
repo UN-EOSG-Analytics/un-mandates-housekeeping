@@ -108,7 +108,9 @@ export function transformPPBData(
         allEntityRelevance: rec.entity_relevance || {},
         metadataFromDb,
         // Use document_symbol (from public.documents) for newer version lookup
-        newerVersion: rec.document_symbol ? newerVersions?.get(rec.document_symbol) : undefined,
+        newerVersion: rec.document_symbol
+          ? newerVersions?.get(rec.document_symbol)
+          : undefined,
       };
 
       const meta = metaByName[budgetPart.toLowerCase()] || null;

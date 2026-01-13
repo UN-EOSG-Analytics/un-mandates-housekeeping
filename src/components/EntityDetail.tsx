@@ -1,15 +1,9 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import {
-  Plus,
-  Loader2,
-  Check,
-  MessageSquare,
-  X,
-} from "lucide-react";
+import { Plus, Loader2, Check, MessageSquare, X } from "lucide-react";
 import { EntityHeader } from "./EntityHeader";
-import { getMandateWarnings } from "@/lib/mandate-warnings";
+import { getMandateWarnings } from "@/lib/services/mandate-warnings";
 import type {
   Mandate,
   MandateState,
@@ -20,7 +14,7 @@ import type {
 import { DocumentSymbol } from "./DocumentSymbol";
 import { Tooltip } from "./Tooltip";
 import { DecisionDropdown } from "./DecisionDropdown";
-import { getAgeIndicator } from "@/lib/age-indicator";
+import { getAgeIndicator } from "@/lib/services/age-indicator";
 
 interface Props {
   entity: string;
@@ -66,7 +60,7 @@ function PhaseTracker() {
             <div key={phase.id} className="flex items-center">
               {i > 0 && <div className="mx-1 h-px w-6 bg-gray-200" />}
               <div
-                className={`flex items-center gap-1.5 rounded-full ${i === 0 ? 'pl-5 pr-3' : 'px-3'} py-1 text-xs font-medium transition-colors ${
+                className={`flex items-center gap-1.5 rounded-full ${i === 0 ? "pr-3 pl-5" : "px-3"} py-1 text-xs font-medium transition-colors ${
                   phase.id < currentPhase
                     ? "bg-green-100 text-green-700"
                     : phase.id === currentPhase
@@ -160,7 +154,8 @@ function MandateRowContent({
   // Approval state - only reviewers can approve, and only if there's a decision
   const hasDecision = !!currentDecision;
   const isApproved = !!currentDecision?.approvedBy;
-  const canApprove = isReviewer && onApprove && hasDecision && currentDecision?.id;
+  const canApprove =
+    isReviewer && onApprove && hasDecision && currentDecision?.id;
 
   return (
     <div
@@ -173,9 +168,7 @@ function MandateRowContent({
         {isUpdateTarget && (
           <span className="mr-1 text-xs text-amber-500">↳</span>
         )}
-        <Tooltip
-          content={mandate.symbol.length > 18 ? mandate.symbol : ""}
-        >
+        <Tooltip content={mandate.symbol.length > 18 ? mandate.symbol : ""}>
           <a
             href={mandate.link || "#"}
             target="_blank"
@@ -245,11 +238,15 @@ function MandateRowContent({
         <div className="flex items-center justify-center">
           {(() => {
             const warnings = getMandateWarnings(mandate);
-            const newerAvailable = warnings.find((w) => w.id === "newer-available");
-            const otherWarnings = warnings.filter((w) => w.id !== "newer-available");
-            
+            const newerAvailable = warnings.find(
+              (w) => w.id === "newer-available",
+            );
+            const otherWarnings = warnings.filter(
+              (w) => w.id !== "newer-available",
+            );
+
             if (warnings.length === 0) return null;
-            
+
             // If there's a newer-available warning, make it clickable
             if (newerAvailable && onUpdateClick) {
               return (
@@ -258,7 +255,7 @@ function MandateRowContent({
                     e.stopPropagation();
                     onUpdateClick();
                   }}
-                  className="text-blue-500 text-xs cursor-pointer hover:text-blue-700 transition-colors"
+                  className="cursor-pointer text-xs text-blue-500 transition-colors hover:text-blue-700"
                   title="Click to update to newer version"
                 >
                   ℹ
@@ -270,15 +267,13 @@ function MandateRowContent({
                 </button>
               );
             }
-            
+
             // Default warning icon
             return (
-              <span className="text-amber-500 text-xs cursor-help">
+              <span className="cursor-help text-xs text-amber-500">
                 ⚠
                 {warnings.length > 1 && (
-                  <sup className="ml-0.5 text-[9px]">
-                    {warnings.length}
-                  </sup>
+                  <sup className="ml-0.5 text-[9px]">{warnings.length}</sup>
                 )}
               </span>
             );
@@ -394,13 +389,14 @@ function MandateRow({
 
   // Get suggested update symbol from warnings (for newer-available)
   const warnings = getMandateWarnings(mandate);
-  const suggestedUpdateSymbol = warnings.find((w) => w.suggestedUpdate)?.suggestedUpdate;
+  const suggestedUpdateSymbol = warnings.find(
+    (w) => w.suggestedUpdate,
+  )?.suggestedUpdate;
 
   // Check if there's a completed update (has newSymbol)
   const currentDecision = state?.decision;
   const hasCompletedUpdate =
-    currentDecision?.decision === "update" &&
-    currentDecision?.newSymbol;
+    currentDecision?.decision === "update" && currentDecision?.newSymbol;
   const newSymbol = currentDecision?.newSymbol;
 
   // Create a fake mandate object for the "new" row in update view
@@ -1000,7 +996,11 @@ function DocumentSearchInput({
               }`}
             >
               <span className="text-un-blue">+ Add manually...</span>
-              {query && <span className="ml-1 text-gray-400">&ldquo;{query}&rdquo;</span>}
+              {query && (
+                <span className="ml-1 text-gray-400">
+                  &ldquo;{query}&rdquo;
+                </span>
+              )}
             </button>
           )}
         </div>
@@ -1175,11 +1175,7 @@ function MandateSection({
             isAdded
           />
         ))}
-        <AddEntryRow
-          onAdd={onAdd}
-          onAddManual={onAddManual}
-          disabled={false}
-        />
+        <AddEntryRow onAdd={onAdd} onAddManual={onAddManual} disabled={false} />
       </div>
     </div>
   );

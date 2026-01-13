@@ -50,7 +50,7 @@ export function DecisionDropdown({
 
         // Always update the decision state first
         onChange(v);
-        
+
         // Then trigger the search UI for update
         if (v === "update" && onUpdateClick) {
           onUpdateClick();

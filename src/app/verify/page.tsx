@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import Image from "next/image";
 import { VerifyForm } from "@/components/VerifyForm";
-import { fetchEntities } from "@/lib/data-service";
+import { fetchEntities } from "@/lib/services/data-service";
 import { SITE_TITLE } from "@/components/Header";
 
 export default async function VerifyPage() {
@@ -23,7 +23,7 @@ export default async function VerifyPage() {
           </h1>
           <p className="text-sm text-gray-500">Complete sign-in</p>
         </div>
-        
+
         <Suspense fallback={<p className="text-gray-500">Loading...</p>}>
           <VerifyForm entities={entities} />
         </Suspense>

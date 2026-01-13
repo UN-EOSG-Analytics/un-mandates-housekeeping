@@ -3,7 +3,7 @@
  * Based on normalized_title within the same issuing_body
  */
 
-import { query } from "./db";
+import { query } from "../db/db";
 import type { NewerVersion } from "@/types";
 
 interface NewerVersionRow {
@@ -19,7 +19,7 @@ interface NewerVersionRow {
  * Returns a map of current symbol -> newer version info
  */
 export async function fetchNewerVersions(
-  symbols: string[]
+  symbols: string[],
 ): Promise<Map<string, NewerVersion>> {
   if (symbols.length === 0) {
     return new Map();
@@ -55,7 +55,7 @@ export async function fetchNewerVersions(
       ORDER BY c.symbol, d.date_year DESC
     )
     SELECT * FROM latest_versions`,
-    [symbols]
+    [symbols],
   );
 
   const result = new Map<string, NewerVersion>();
@@ -75,7 +75,7 @@ export async function fetchNewerVersions(
  * Check if a single document has a newer version
  */
 export async function hasNewerVersion(
-  symbol: string
+  symbol: string,
 ): Promise<NewerVersion | null> {
   const versions = await fetchNewerVersions([symbol]);
   return versions.get(symbol) || null;

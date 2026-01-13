@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getCurrentUser } from "@/lib/auth";
-import { query } from "@/lib/db";
+import { getCurrentUser } from "@/lib/auth/auth";
+import { query } from "@/lib/db/db";
 
 export async function POST(req: NextRequest) {
   const user = await getCurrentUser();
@@ -10,10 +10,7 @@ export async function POST(req: NextRequest) {
 
   const { entity } = await req.json();
   if (!entity || typeof entity !== "string" || !entity.trim()) {
-    return NextResponse.json(
-      { error: "Entity is required" },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: "Entity is required" }, { status: 400 });
   }
 
   await query(

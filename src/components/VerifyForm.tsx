@@ -3,7 +3,7 @@
 import { useSearchParams, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { EntityCombobox } from "@/components/EntityCombobox";
-import type { EntityOption } from "@/lib/data-service";
+import type { EntityOption } from "@/lib/services/data-service";
 
 interface VerifyFormProps {
   entities: EntityOption[];
@@ -67,7 +67,7 @@ export function VerifyForm({ entities }: VerifyFormProps) {
     }
 
     setLoading(true);
-    
+
     // First verify the token and create session
     const verifyRes = await fetch("/api/auth/verify", {
       method: "POST",

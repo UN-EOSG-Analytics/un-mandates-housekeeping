@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { EntityChangeDialog } from "./EntityChangeDialog";
-import type { EntityOption } from "@/lib/data-service";
+import type { EntityOption } from "@/lib/services/data-service";
 
 export function UserMenu({
   email,

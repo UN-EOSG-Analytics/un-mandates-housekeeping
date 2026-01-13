@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { isValidUnEmail, createMagicToken } from "@/lib/auth";
-import { sendMagicLink } from "@/lib/mail";
+import { isValidUnEmail, createMagicToken } from "@/lib/auth/auth";
+import { sendMagicLink } from "@/lib/auth/mail";
 
 export async function POST(request: Request) {
   let email: unknown;

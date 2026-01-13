@@ -3,7 +3,7 @@
  * Fetches data from PostgreSQL database
  */
 
-import { query } from "./db";
+import { query } from "../db/db";
 import type { PPBRecord, CitationInfo, BudgetPartMeta } from "@/types";
 
 export interface EntityOption {
@@ -78,7 +78,7 @@ interface DBCitationRow {
 
 /**
  * Fetch all PPB records from database
- * Joins with public.documents for authoritative metadata, 
+ * Joins with public.documents for authoritative metadata,
  * falls back to source_documents_metadata_clean, then to ppb_ fields
  */
 export async function fetchPPBRecords(): Promise<PPBRecord[]> {
@@ -137,9 +137,10 @@ export async function fetchPPBRecords(): Promise<PPBRecord[]> {
       // 1. public.documents (doc_*) - for new/updated documents
       // 2. source_documents_metadata_clean (meta_*) - for existing citations
       // 3. source_documents (ppb_*) - final fallback
-      const hasDbMetadata = row.doc_symbol !== null || 
-                             row.meta_title !== null || 
-                             row.meta_proper_title !== null;
+      const hasDbMetadata =
+        row.doc_symbol !== null ||
+        row.meta_title !== null ||
+        row.meta_proper_title !== null;
 
       // Title: doc.proper_title > meta.title > meta.proper_title > ppb_description
       const title =
@@ -148,15 +149,18 @@ export async function fetchPPBRecords(): Promise<PPBRecord[]> {
         row.meta_proper_title ||
         row.ppb_description ||
         null;
-      
+
       // Year: doc_date_year > meta_date_year > ppb_year
-      const year = row.doc_date_year ?? row.meta_date_year ?? row.ppb_year ?? null;
-      
+      const year =
+        row.doc_date_year ?? row.meta_date_year ?? row.ppb_year ?? null;
+
       // Body: doc_issuing_body > meta_issuing_body > ppb_body
-      const body = row.doc_issuing_body || row.meta_issuing_body || row.ppb_body || null;
-      
+      const body =
+        row.doc_issuing_body || row.meta_issuing_body || row.ppb_body || null;
+
       // Type: doc_document_type > meta_document_type > ppb_type
-      const docType = row.doc_document_type || row.meta_document_type || row.ppb_type || null;
+      const docType =
+        row.doc_document_type || row.meta_document_type || row.ppb_type || null;
 
       recordsMap.set(symbol, {
         full_document_symbol: symbol,

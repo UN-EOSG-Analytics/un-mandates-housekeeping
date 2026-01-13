@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { exportEntityToDocx } from "@/lib/export-docx";
-import { exportToCsv, exportToXlsx } from "@/lib/export-data";
+import { exportEntityToDocx } from "@/lib/services/export/export-docx";
+import { exportToCsv, exportToXlsx } from "@/lib/services/export/export-data";
 
 const CONTENT_TYPES = {
   docx: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",

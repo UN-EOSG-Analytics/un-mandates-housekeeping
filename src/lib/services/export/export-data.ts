@@ -1,5 +1,5 @@
 import ExcelJS from "exceljs";
-import { fetchPPBRecords } from "./data-service";
+import { fetchPPBRecords } from "../data-service";
 
 interface MandateRow {
   symbol: string;

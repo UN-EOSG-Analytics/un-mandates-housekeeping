@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { query } from "@/lib/db";
-import { getCurrentUser } from "@/lib/auth";
+import { query } from "@/lib/db/db";
+import { getCurrentUser } from "@/lib/auth/auth";
 
 export async function POST(req: NextRequest) {
   const user = await getCurrentUser();

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
 import { EntityCombobox } from "./EntityCombobox";
-import type { EntityOption } from "@/lib/data-service";
+import type { EntityOption } from "@/lib/services/data-service";
 
 interface EntityChangeDialogProps {
   isOpen: boolean;
@@ -35,7 +35,9 @@ export function EntityChangeDialog({
 
   const handleSubmit = async () => {
     const entity =
-      selectedEntity === "Other – Please Specify" ? otherEntity.trim() : selectedEntity;
+      selectedEntity === "Other – Please Specify"
+        ? otherEntity.trim()
+        : selectedEntity;
 
     if (!entity) {
       setError("Please select an entity");
@@ -75,11 +77,9 @@ export function EntityChangeDialog({
         onClick={onClose}
         aria-hidden="true"
       />
-      <div className="fixed left-1/2 top-1/2 z-50 w-full max-w-sm -translate-x-1/2 -translate-y-1/2 rounded-lg bg-white p-6 shadow-xl">
+      <div className="fixed top-1/2 left-1/2 z-50 w-full max-w-sm -translate-x-1/2 -translate-y-1/2 rounded-lg bg-white p-6 shadow-xl">
         <div className="mb-4 flex items-center justify-between">
-          <h2 className="text-lg font-semibold text-gray-900">
-            Update Entity
-          </h2>
+          <h2 className="text-lg font-semibold text-gray-900">Update Entity</h2>
           <button
             onClick={onClose}
             className="rounded-lg p-1 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600"
@@ -107,7 +107,7 @@ export function EntityChangeDialog({
               placeholder="Enter your organisational entity"
               value={otherEntity}
               onChange={(e) => setOtherEntity(e.target.value)}
-              className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm focus:border-un-blue focus:outline-none focus:ring-1 focus:ring-un-blue"
+              className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm focus:border-un-blue focus:ring-1 focus:ring-un-blue focus:outline-none"
             />
           )}
 
@@ -125,7 +125,8 @@ export function EntityChangeDialog({
               disabled={
                 loading ||
                 !selectedEntity ||
-                (selectedEntity === "Other – Please Specify" && !otherEntity.trim())
+                (selectedEntity === "Other – Please Specify" &&
+                  !otherEntity.trim())
               }
               className="flex-1 rounded-lg bg-un-blue px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
             >

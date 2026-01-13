@@ -22,9 +22,7 @@ export function EntityHeader({
       <div className="flex items-start justify-between">
         <div>
           <h2 className="text-3xl font-bold text-foreground">{entity}</h2>
-          {entityLong && (
-            <p className="text-lg text-gray-500">{entityLong}</p>
-          )}
+          {entityLong && <p className="text-lg text-gray-500">{entityLong}</p>}
           {partName && <p className="mt-1 text-sm text-gray-400">{partName}</p>}
         </div>
         <div className="text-right">

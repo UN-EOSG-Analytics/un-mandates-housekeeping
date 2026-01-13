@@ -153,8 +153,8 @@ export function EntityOverview({ parts, userEntity }: Props) {
 
           <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {partData.entities.map((entityData) => (
-              <EntityCard 
-                key={entityData.entity} 
+              <EntityCard
+                key={entityData.entity}
                 entityData={entityData}
                 highlight={userEntity === entityData.entity}
               />

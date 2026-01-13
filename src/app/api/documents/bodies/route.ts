@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { query } from "@/lib/db";
+import { query } from "@/lib/db/db";
 
 export async function GET() {
   const rows = await query<{ issuing_body: string }>(

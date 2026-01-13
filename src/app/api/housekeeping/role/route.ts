@@ -1,13 +1,13 @@
 import { NextResponse } from "next/server";
-import { getCurrentUser } from "@/lib/auth";
+import { getCurrentUser } from "@/lib/auth/auth";
 
 export async function GET() {
   const user = await getCurrentUser();
   if (!user)
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
 
-  return NextResponse.json({ 
-    email: user.email, 
+  return NextResponse.json({
+    email: user.email,
     entity: user.entity,
     isReviewer: user.isReviewer,
   });

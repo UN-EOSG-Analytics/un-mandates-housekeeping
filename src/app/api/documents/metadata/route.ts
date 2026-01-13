@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { query } from "@/lib/db";
+import { query } from "@/lib/db/db";
 
 interface DocumentRow {
   symbol: string;
@@ -98,31 +98,22 @@ export async function GET(req: NextRequest) {
       // 1. public.documents (doc_*) - for new/updated documents
       // 2. source_documents_metadata_clean (meta_*) - for existing citations
       // 3. source_documents (ppb_*) - final fallback
-      const title = 
+      const title =
         cleanTitle(row.doc_proper_title) ||
         row.meta_title ||
         row.meta_proper_title ||
         row.ppb_description ||
         null;
-      
-      const year = 
-        row.doc_date_year ??
-        row.meta_date_year ??
-        row.ppb_year ??
-        null;
-      
-      const body = 
-        row.doc_issuing_body ||
-        row.meta_issuing_body ||
-        row.ppb_body ||
-        null;
-      
-      const docType = 
-        row.doc_document_type ||
-        row.meta_document_type ||
-        row.ppb_type ||
-        null;
-      
+
+      const year =
+        row.doc_date_year ?? row.meta_date_year ?? row.ppb_year ?? null;
+
+      const body =
+        row.doc_issuing_body || row.meta_issuing_body || row.ppb_body || null;
+
+      const docType =
+        row.doc_document_type || row.meta_document_type || row.ppb_type || null;
+
       result[originalSymbol] = {
         title,
         year,

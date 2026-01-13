@@ -1,23 +1,23 @@
 // Modal is client-side
 "use client";
 
-import { getAgeIndicator } from "@/lib/age-indicator";
-import { fetchParagraphs } from "@/lib/client-data-service";
+import { getAgeIndicator } from "@/lib/services/age-indicator";
+import { fetchParagraphs } from "@/lib/services/client/client-data-service";
 import type {
-    Decision,
-    EntityRelevance,
-    MandateComment,
-    MandateDecision,
-    MandateState,
-    Paragraph,
+  Decision,
+  EntityRelevance,
+  MandateComment,
+  MandateDecision,
+  MandateState,
+  Paragraph,
 } from "@/types";
 import {
-    AlertTriangle,
-    Check,
-    ChevronDown,
-    Loader2,
-    Sparkles,
-    X,
+  AlertTriangle,
+  Check,
+  ChevronDown,
+  Loader2,
+  Sparkles,
+  X,
 } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { Tooltip } from "./Tooltip";
@@ -747,9 +747,12 @@ export function DocumentSymbol({
                                 (d) => d.entity === ent,
                               );
                               // Get latest decision for this entity (last in chronological order)
-                              const latestDecision = entDecisions[entDecisions.length - 1] || null;
+                              const latestDecision =
+                                entDecisions[entDecisions.length - 1] || null;
                               const canEdit = isCurrentEntity && onDecision;
-                              const currentDecision = isCurrentEntity ? state?.decision : latestDecision;
+                              const currentDecision = isCurrentEntity
+                                ? state?.decision
+                                : latestDecision;
                               const canApprove =
                                 isCurrentEntity &&
                                 isReviewer &&
@@ -767,7 +770,9 @@ export function DocumentSymbol({
                                   </td>
                                   <td className="px-1 py-1.5">
                                     <DecisionDropdown
-                                      decision={currentDecision?.decision || null}
+                                      decision={
+                                        currentDecision?.decision || null
+                                      }
                                       onChange={(decision) => {
                                         if (!canEdit) return;
                                         if (
@@ -779,7 +784,9 @@ export function DocumentSymbol({
                                           handleDecision(decision);
                                         }
                                       }}
-                                      onUpdateClick={canEdit ? onUpdateClick : undefined}
+                                      onUpdateClick={
+                                        canEdit ? onUpdateClick : undefined
+                                      }
                                       disabled={!canEdit}
                                       userEmail={currentDecision?.userEmail}
                                       createdAt={currentDecision?.createdAt}

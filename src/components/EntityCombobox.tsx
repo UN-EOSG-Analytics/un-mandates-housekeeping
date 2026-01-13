@@ -17,7 +17,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import type { EntityOption } from "@/lib/data-service";
+import type { EntityOption } from "@/lib/services/data-service";
 
 interface EntityComboboxProps {
   value: string;
@@ -43,15 +43,15 @@ export function EntityCombobox({
       value: e.entity,
       label: e.entity,
       longName: e.entity_long,
-      searchTerms: `${e.entity.toLowerCase()} ${e.entity_long?.toLowerCase() || ""}`
+      searchTerms: `${e.entity.toLowerCase()} ${e.entity_long?.toLowerCase() || ""}`,
     }));
 
     // Special non-entity options
     const specialOptions = [
-      { 
-        value: "Other – Please Specify", 
-        label: "Other – Please Specify", 
-        searchTerms: "other please specify" 
+      {
+        value: "Other – Please Specify",
+        label: "Other – Please Specify",
+        searchTerms: "other please specify",
       },
     ];
 
@@ -79,22 +79,29 @@ export function EntityCombobox({
           )}
         >
           {displayValue}
-          <ChevronsUpDown className={cn(
-            "ml-2 h-4 w-4 shrink-0 transition-colors",
-            open ? "text-un-blue" : "opacity-50"
-          )} />
+          <ChevronsUpDown
+            className={cn(
+              "ml-2 h-4 w-4 shrink-0 transition-colors",
+              open ? "text-un-blue" : "opacity-50",
+            )}
+          />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-(--radix-popover-trigger-width) p-0 border-un-blue/20" align="start">
+      <PopoverContent
+        className="w-(--radix-popover-trigger-width) border-un-blue/20 p-0"
+        align="start"
+      >
         <Command>
-          <CommandInput 
-            placeholder="Search entity..." 
-            className="h-9 focus:ring-0 border-b border-un-blue/10"
+          <CommandInput
+            placeholder="Search entity..."
+            className="h-9 border-b border-un-blue/10 focus:ring-0"
             value={open ? undefined : displayValue}
             onValueChange={() => listRef.current?.scrollTo(0, 0)}
           />
           <CommandList ref={listRef}>
-            <CommandEmpty className="py-6 text-sm text-gray-500">No entity found.</CommandEmpty>
+            <CommandEmpty className="py-6 text-sm text-gray-500">
+              No entity found.
+            </CommandEmpty>
             <CommandGroup>
               {allEntities.map((entity) => (
                 <CommandItem
@@ -108,11 +115,11 @@ export function EntityCombobox({
                 >
                   <div className="flex min-w-0 flex-1 flex-col">
                     <span className="font-medium">{entity.label}</span>
-                    {"longName" in entity && entity.longName && (
+                    {"longName" in entity && entity.longName ? (
                       <span className="truncate text-xs text-gray-500">
-                        {entity.longName}
+                        {String(entity.longName)}
                       </span>
-                    )}
+                    ) : null}
                   </div>
                   <Check
                     className={cn(
