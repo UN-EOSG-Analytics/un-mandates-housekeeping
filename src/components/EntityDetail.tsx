@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef, useMemo } from "react";
-import { Plus, Loader2, Check, MessageSquare, X, Star } from "lucide-react";
+import { Plus, Loader2, Check, MessageSquare, X, Star, ChevronUp, ChevronDown } from "lucide-react";
 import { EntityHeader } from "./EntityHeader";
 import { getMandateWarnings } from "@/lib/services/mandate-warnings";
 import type {
@@ -100,24 +100,68 @@ function PhaseTracker() {
 const GRID_COLS =
   "grid-cols-[140px_1fr_50px_55px_45px_60px_25px_40px_130px_45px_50px]";
 
-function ColumnHeaders() {
+type SortColumn = "symbol" | "title" | "body" | "year" | "others";
+type SortDirection = "asc" | "desc";
+
+function SortableHeader({
+  column,
+  label,
+  sortColumn,
+  sortDirection,
+  onSort,
+}: {
+  column: SortColumn;
+  label: string;
+  sortColumn: SortColumn | null;
+  sortDirection: SortDirection;
+  onSort: (column: SortColumn) => void;
+}) {
+  const isActive = sortColumn === column;
+  return (
+    <button
+      onClick={() => onSort(column)}
+      className="flex items-center gap-0.5 uppercase hover:text-gray-600 transition-colors"
+    >
+      <span>{label}</span>
+      {isActive ? (
+        sortDirection === "asc" ? (
+          <ChevronUp className="h-2.5 w-2.5" />
+        ) : (
+          <ChevronDown className="h-2.5 w-2.5" />
+        )
+      ) : (
+        <ChevronDown className="h-2.5 w-2.5 opacity-30 hover:opacity-60" />
+      )}
+    </button>
+  );
+}
+
+function ColumnHeaders({
+  sortColumn,
+  sortDirection,
+  onSort,
+}: {
+  sortColumn: SortColumn | null;
+  sortDirection: SortDirection;
+  onSort: (column: SortColumn) => void;
+}) {
   return (
     <div
       className={`grid ${GRID_COLS} items-center gap-x-2 px-3 py-1.5 text-[10px] font-medium tracking-wider text-gray-400 uppercase`}
     >
-      <div>Symbol</div>
-      <div>Title</div>
-      <div>Body</div>
-      <div>Year</div>
-      <div>Age</div>
-      <div>Others</div>
-      <div></div>
-      <div>Notes</div>
-      <div>Decision</div>
-      <div>
+      <SortableHeader column="symbol" label="Symbol" sortColumn={sortColumn} sortDirection={sortDirection} onSort={onSort} />
+      <SortableHeader column="title" label="Title" sortColumn={sortColumn} sortDirection={sortDirection} onSort={onSort} />
+      <SortableHeader column="body" label="Body" sortColumn={sortColumn} sortDirection={sortDirection} onSort={onSort} />
+      <SortableHeader column="year" label="Year" sortColumn={sortColumn} sortDirection={sortDirection} onSort={onSort} />
+      <span>Age</span>
+      <SortableHeader column="others" label="Others" sortColumn={sortColumn} sortDirection={sortDirection} onSort={onSort} />
+      <span></span>
+      <span>Notes</span>
+      <span>Decision</span>
+      <span>
         <MessageSquare className="h-3 w-3" />
-      </div>
-      <div>OK</div>
+      </span>
+      <span>OK</span>
     </div>
   );
 }
@@ -1115,6 +1159,24 @@ function MandateSection({
   onAdd: (symbol: string) => void;
   onAddManual: (data: ManualEntryData) => void;
 }) {
+  const [sortColumn, setSortColumn] = useState<SortColumn | null>(null);
+  const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
+
+  const handleSort = (column: SortColumn) => {
+    if (sortColumn === column) {
+      // Toggle direction or clear if already desc
+      if (sortDirection === "asc") {
+        setSortDirection("desc");
+      } else {
+        setSortColumn(null);
+        setSortDirection("asc");
+      }
+    } else {
+      setSortColumn(column);
+      setSortDirection("asc");
+    }
+  };
+
   const stateKey = (symbol: string) => `${symbol}:${subprogramme || ""}`;
   const existingSymbols = new Set(mandates.map((m) => m.symbol));
   // Find user-added entries (decision === "add", excluding cancelled, not already in mandates)
@@ -1161,6 +1223,48 @@ function MandateSection({
     return s?.decision?.newSymbol;
   };
 
+  // Sort mandates based on current sort state
+  const sortedMandates = useMemo(() => {
+    if (!sortColumn) return mandates;
+
+    return [...mandates].sort((a, b) => {
+      let comparison = 0;
+
+      switch (sortColumn) {
+        case "symbol":
+          comparison = a.symbol.localeCompare(b.symbol);
+          break;
+        case "title":
+          // Empty titles sort last
+          const titleA = a.title || "";
+          const titleB = b.title || "";
+          if (!titleA && titleB) return sortDirection === "asc" ? 1 : -1;
+          if (titleA && !titleB) return sortDirection === "asc" ? -1 : 1;
+          comparison = titleA.localeCompare(titleB);
+          break;
+        case "body":
+          const bodyA = a.body || "";
+          const bodyB = b.body || "";
+          if (!bodyA && bodyB) return sortDirection === "asc" ? 1 : -1;
+          if (bodyA && !bodyB) return sortDirection === "asc" ? -1 : 1;
+          comparison = bodyA.localeCompare(bodyB);
+          break;
+        case "year":
+          // Null years sort last
+          if (a.year === null && b.year !== null) return sortDirection === "asc" ? 1 : -1;
+          if (a.year !== null && b.year === null) return sortDirection === "asc" ? -1 : 1;
+          if (a.year === null && b.year === null) return 0;
+          comparison = (a.year ?? 0) - (b.year ?? 0);
+          break;
+        case "others":
+          comparison = (a.otherEntitiesCount ?? 0) - (b.otherEntitiesCount ?? 0);
+          break;
+      }
+
+      return sortDirection === "asc" ? comparison : -comparison;
+    });
+  }, [mandates, sortColumn, sortDirection]);
+
   return (
     <div>
       {readOnly && (
@@ -1177,8 +1281,8 @@ function MandateSection({
         )}
       </div>
       <div className="space-y-1.5">
-        <ColumnHeaders />
-        {mandates.map((m) => {
+        <ColumnHeaders sortColumn={sortColumn} sortDirection={sortDirection} onSort={handleSort} />
+        {sortedMandates.map((m) => {
           const targetSymbol = getUpdateTargetSymbol(m.symbol);
           return (
             <MandateRow
@@ -1781,7 +1885,7 @@ export function EntityDetail({
               Filter by shared citations
             </span>
             <span className="text-xs text-gray-400">
-              — click an entity to show only mandates cited by both {entity} and that entity
+              — click an entity to show only documents cited by both {entity} and that entity
             </span>
           </div>
           <div className="flex flex-wrap items-center gap-1.5">
