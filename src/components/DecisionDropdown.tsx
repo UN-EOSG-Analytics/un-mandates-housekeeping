@@ -34,7 +34,7 @@ export function DecisionDropdown({
       ? `Set by ${userEmail} at ${new Date(createdAt).toLocaleDateString()}`
       : null;
 
-  const sizeClasses = size === "sm" ? "h-6 w-full text-xs" : "h-7 w-20 text-xs";
+  const sizeClasses = size === "sm" ? "h-6 w-24 text-xs" : "h-7 w-20 text-xs";
 
   const select = (
     <select
@@ -67,7 +67,7 @@ export function DecisionDropdown({
               : decision === "add"
                 ? "border-blue-200 bg-blue-50 text-blue-700"
                 : "border-gray-200 bg-white text-gray-500"
-      } ${disabled ? "cursor-default opacity-60" : "cursor-pointer hover:border-gray-300"} ${className || ""}`}
+      } ${disabled ? "cursor-default opacity-60 appearance-none" : "cursor-pointer hover:border-gray-300"} ${className || ""}`}
     >
       <option value="">—</option>
       <option value="retain">Retain</option>

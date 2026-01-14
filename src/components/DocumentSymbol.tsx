@@ -88,7 +88,15 @@ function highlightEntity(
   });
 }
 
-function ActivityMeta({ userEmail, userEntity, createdAt, viaEntity, subprogramme, showSubprogramme, action }: {
+function ActivityMeta({
+  userEmail,
+  userEntity,
+  createdAt,
+  viaEntity,
+  subprogramme,
+  showSubprogramme,
+  action,
+}: {
   userEmail: string;
   userEntity: string | null;
   createdAt: string;
@@ -97,9 +105,10 @@ function ActivityMeta({ userEmail, userEntity, createdAt, viaEntity, subprogramm
   showSubprogramme?: boolean;
   action: "decided" | "commented";
 }) {
-  const subLabel = showSubprogramme && subprogramme
-    ? ` / ${subprogramme.replace(/^Subprogramme \d+[.:]\s*/i, "Sub ")}`
-    : "";
+  const subLabel =
+    showSubprogramme && subprogramme
+      ? ` / ${subprogramme.replace(/^Subprogramme \d+[.:]\s*/i, "Sub ")}`
+      : "";
   return (
     <div className="mt-1 flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-gray-400">
       <span>{userEmail}</span>
@@ -111,7 +120,12 @@ function ActivityMeta({ userEmail, userEntity, createdAt, viaEntity, subprogramm
       <span>·</span>
       <span>{new Date(createdAt).toLocaleDateString()}</span>
       <span className="text-gray-500">
-        {action} on <span className="font-medium text-un-blue">{viaEntity}{subLabel}</span> citation
+        {action} on{" "}
+        <span className="font-medium text-un-blue">
+          {viaEntity}
+          {subLabel}
+        </span>{" "}
+        citation
       </span>
     </div>
   );
@@ -497,7 +511,6 @@ export function DocumentSymbol({
   );
   const [allDecisions, setAllDecisions] = useState<MandateDecision[]>([]);
   const [allComments, setAllComments] = useState<MandateComment[]>([]);
-  const [entitiesExpanded, setEntitiesExpanded] = useState(false);
 
   // Fetch paragraphs and document-wide activity when sidebar opens
   useEffect(() => {
@@ -666,19 +679,22 @@ export function DocumentSymbol({
           />
 
           <div className="relative flex h-full w-full max-w-lg cursor-default flex-col bg-white shadow-xl">
-            <div className="border-b p-4">
+            <div className="border-b p-4 pb-3">
               <div className="flex items-start justify-between">
                 <div className="min-w-0 flex-1">
                   <div className="text-lg font-semibold text-foreground">
                     {symbol}
                   </div>
                   {title && (
-                    <div className="mt-1 text-sm text-gray-600">{title}</div>
+                    <div className="text-sm text-gray-600">{title}</div>
                   )}
                   {isFoundational && (
                     <Tooltip content="This mandate appears in both the legislative mandates and the foundational Mandates and Background section">
                       <div className="mt-2 flex items-center gap-1.5 text-amber-600">
-                        <Star className="h-4 w-4 fill-amber-400" strokeWidth={0} />
+                        <Star
+                          className="h-4 w-4 fill-amber-400"
+                          strokeWidth={0}
+                        />
                         <span className="text-sm font-medium">
                           Foundational mandate
                         </span>
@@ -755,26 +771,41 @@ export function DocumentSymbol({
               {(allEntities?.length || allDecisions.length > 0) &&
                 (() => {
                   // Merge subprogrammes from PPB data + decisions
-                  const subprogsByEntity = new Map<string, Set<string | null>>();
+                  const subprogsByEntity = new Map<
+                    string,
+                    Set<string | null>
+                  >();
                   // Add from PPB data
-                  for (const [ent, subprogs] of Object.entries(entitySubprogrammes || {})) {
-                    if (!subprogsByEntity.has(ent)) subprogsByEntity.set(ent, new Set());
-                    for (const sp of subprogs) subprogsByEntity.get(ent)!.add(sp);
+                  for (const [ent, subprogs] of Object.entries(
+                    entitySubprogrammes || {},
+                  )) {
+                    if (!subprogsByEntity.has(ent))
+                      subprogsByEntity.set(ent, new Set());
+                    for (const sp of subprogs)
+                      subprogsByEntity.get(ent)!.add(sp);
                   }
                   // Add from decisions
                   for (const d of allDecisions) {
-                    if (!subprogsByEntity.has(d.entity)) subprogsByEntity.set(d.entity, new Set());
+                    if (!subprogsByEntity.has(d.entity))
+                      subprogsByEntity.set(d.entity, new Set());
                     subprogsByEntity.get(d.entity)!.add(d.subprogramme);
                   }
                   const entitiesWithMultiSubprogs = new Set(
-                    [...subprogsByEntity.entries()].filter(([, subs]) => subs.size > 1).map(([e]) => e)
+                    [...subprogsByEntity.entries()]
+                      .filter(([, subs]) => subs.size > 1)
+                      .map(([e]) => e),
                   );
 
                   // Build unique rows: (entity, subprogramme) pairs from PPB + decisions
                   const rowKeys = new Set<string>();
-                  const rows: { entity: string; subprogramme: string | null }[] = [];
+                  const rows: {
+                    entity: string;
+                    subprogramme: string | null;
+                  }[] = [];
                   // Add from PPB data first
-                  for (const [ent, subprogs] of Object.entries(entitySubprogrammes || {})) {
+                  for (const [ent, subprogs] of Object.entries(
+                    entitySubprogrammes || {},
+                  )) {
                     for (const sp of subprogs) {
                       const key = `${ent}:${sp || ""}`;
                       if (!rowKeys.has(key)) {
@@ -788,7 +819,10 @@ export function DocumentSymbol({
                     const key = `${d.entity}:${d.subprogramme || ""}`;
                     if (!rowKeys.has(key)) {
                       rowKeys.add(key);
-                      rows.push({ entity: d.entity, subprogramme: d.subprogramme });
+                      rows.push({
+                        entity: d.entity,
+                        subprogramme: d.subprogramme,
+                      });
                     }
                   }
                   // Add entities from allEntities that have no subprogs yet
@@ -802,23 +836,31 @@ export function DocumentSymbol({
                     }
                   }
 
-                  // Sort: current entity first, then by entity name, then by subprogramme
+                  // Sort: user's entity first, then by entity name, then by subprogramme
                   rows.sort((a, b) => {
-                    if (a.entity === entity && b.entity !== entity) return -1;
-                    if (b.entity === entity && a.entity !== entity) return 1;
+                    if (a.entity === userEntity && b.entity !== userEntity)
+                      return -1;
+                    if (b.entity === userEntity && a.entity !== userEntity)
+                      return 1;
                     const entCmp = a.entity.localeCompare(b.entity);
                     if (entCmp !== 0) return entCmp;
-                    return (a.subprogramme || "").localeCompare(b.subprogramme || "");
+                    return (a.subprogramme || "").localeCompare(
+                      b.subprogramme || "",
+                    );
                   });
 
-                  const MAX_VISIBLE = 6;
-                  const hasMore = rows.length > MAX_VISIBLE;
-                  const visibleRows = entitiesExpanded ? rows : rows.slice(0, MAX_VISIBLE);
-
                   // Helper to format display name
-                  const formatRowName = (row: { entity: string; subprogramme: string | null }) => {
-                    if (!entitiesWithMultiSubprogs.has(row.entity)) return row.entity;
-                    const subLabel = row.subprogramme?.replace(/^Subprogramme \d+[.:]\s*/i, "Sub ") || "General";
+                  const formatRowName = (row: {
+                    entity: string;
+                    subprogramme: string | null;
+                  }) => {
+                    if (!entitiesWithMultiSubprogs.has(row.entity))
+                      return row.entity;
+                    const subLabel =
+                      row.subprogramme?.replace(
+                        /^Subprogramme \d+[.:]\s*/i,
+                        "Sub ",
+                      ) || "General";
                     return `${row.entity} / ${subLabel}`;
                   };
 
@@ -827,61 +869,83 @@ export function DocumentSymbol({
                       <div className="mb-2 text-xs font-medium text-gray-500 uppercase">
                         Decisions
                       </div>
-                      <div className="max-h-56 overflow-y-auto">
+                      <div className="scrollbar-thin max-h-56 overflow-x-visible overflow-y-auto">
                         <table className="w-full text-xs">
-                          <thead className="sticky top-0 bg-gray-50">
-                            <tr className="text-gray-400">
-                              <th className="pb-1 text-left font-medium">
+                          <thead className="sticky top-0 z-10 border-b border-gray-200 bg-white shadow-sm">
+                            <tr className="text-gray-500">
+                              <th className="pt-2 pb-2 text-left text-[10px] font-semibold tracking-wider uppercase">
                                 Entity
                               </th>
-                              <th className="w-24 pb-1 text-center font-medium">
+                              <th className="w-32 pt-2 pb-2 pl-3 text-left text-[10px] font-semibold tracking-wider uppercase">
                                 Decision
                               </th>
-                              <th className="w-12 pb-1 text-center font-medium">
-                                Approved
+                              <th className="w-16 pt-2 pb-2 pl-3 text-left text-[10px] font-semibold tracking-wider uppercase">
+                                OK
                               </th>
                             </tr>
                           </thead>
                           <tbody>
-                            {visibleRows.map((row) => {
-                              const isCurrentRow = row.entity === entity && row.subprogramme === (state?.subprogramme || null);
+                            {rows.map((row) => {
+                              const isCurrentRow =
+                                row.entity === entity &&
+                                row.subprogramme ===
+                                  (state?.subprogramme || null);
+                              const isUserEntity = row.entity === userEntity;
                               const rowDecisions = allDecisions.filter(
-                                (d) => d.entity === row.entity && d.subprogramme === row.subprogramme,
+                                (d) =>
+                                  d.entity === row.entity &&
+                                  d.subprogramme === row.subprogramme,
                               );
-                              const latestDecision = rowDecisions[rowDecisions.length - 1] || null;
-                              const canEdit = isCurrentRow && onDecision;
-                              const currentDecision = isCurrentRow ? state?.decision : latestDecision;
-                              const canApprove = isCurrentRow && isReviewer && onApprove && currentDecision;
+                              const latestDecision =
+                                rowDecisions[rowDecisions.length - 1] || null;
+                              const canEdit = isUserEntity && onDecision;
+                              const currentDecision = isCurrentRow
+                                ? state?.decision
+                                : latestDecision;
+                              const canApprove =
+                                isUserEntity &&
+                                isReviewer &&
+                                onApprove &&
+                                currentDecision;
                               const isApproved = !!currentDecision?.approvedBy;
                               const decisionId = currentDecision?.id;
 
                               return (
-                                <tr key={`${row.entity}:${row.subprogramme || ""}`}>
+                                <tr
+                                  key={`${row.entity}:${row.subprogramme || ""}`}
+                                >
                                   <td
-                                    className={`py-1.5 pr-2 font-medium ${isCurrentRow ? "text-un-blue" : "text-gray-600"}`}
+                                    className={`py-1.5 pr-3 font-medium ${isUserEntity ? "text-un-blue" : "text-gray-600"}`}
                                     title={row.subprogramme || undefined}
                                   >
                                     {formatRowName(row)}
                                   </td>
-                                  <td className="px-1 py-1.5">
+                                  <td className="py-1.5 pl-3">
                                     <DecisionDropdown
-                                      decision={currentDecision?.decision || null}
+                                      decision={
+                                        currentDecision?.decision || null
+                                      }
                                       onChange={(decision) => {
                                         if (!canEdit) return;
-                                        if (decision === "update" && onUpdateClick) {
+                                        if (
+                                          decision === "update" &&
+                                          onUpdateClick
+                                        ) {
                                           onUpdateClick();
                                         } else {
                                           handleDecision(decision);
                                         }
                                       }}
-                                      onUpdateClick={canEdit ? onUpdateClick : undefined}
+                                      onUpdateClick={
+                                        canEdit ? onUpdateClick : undefined
+                                      }
                                       disabled={!canEdit}
                                       userEmail={currentDecision?.userEmail}
                                       createdAt={currentDecision?.createdAt}
                                       size="sm"
                                     />
                                   </td>
-                                  <td className="px-1 py-1.5 text-center">
+                                  <td className="py-1.5 pl-3">
                                     {currentDecision ? (
                                       <button
                                         onClick={() => {
@@ -905,7 +969,9 @@ export function DocumentSymbol({
                                               : "border border-gray-200 bg-gray-50"
                                         } ${!canApprove ? "cursor-default" : "cursor-pointer"}`}
                                       >
-                                        {isApproved && <Check className="h-4 w-4" />}
+                                        {isApproved && (
+                                          <Check className="h-4 w-4" />
+                                        )}
                                       </button>
                                     ) : (
                                       <span className="text-gray-300">—</span>
@@ -917,16 +983,6 @@ export function DocumentSymbol({
                           </tbody>
                         </table>
                       </div>
-                      {hasMore && (
-                        <button
-                          onClick={() => setEntitiesExpanded(!entitiesExpanded)}
-                          className="mt-2 text-xs text-un-blue hover:underline"
-                        >
-                          {entitiesExpanded
-                            ? "Show less"
-                            : `Show ${rows.length - MAX_VISIBLE} more`}
-                        </button>
-                      )}
                     </div>
                   );
                 })()}
@@ -1019,39 +1075,64 @@ export function DocumentSymbol({
                       | { type: "comment"; data: MandateComment };
                     const items: ActivityItem[] = [];
                     const filteredDecisions = activityFilterEntity
-                      ? allDecisions.filter((d) => d.entity === activityFilterEntity)
+                      ? allDecisions.filter(
+                          (d) => d.entity === activityFilterEntity,
+                        )
                       : allDecisions;
                     const filteredComments = activityFilterEntity
-                      ? allComments.filter((c) => c.entity === activityFilterEntity)
+                      ? allComments.filter(
+                          (c) => c.entity === activityFilterEntity,
+                        )
                       : allComments;
-                    for (const d of filteredDecisions) items.push({ type: "decision", data: d });
-                    for (const c of filteredComments) items.push({ type: "comment", data: c });
-                    items.sort((a, b) => new Date(a.data.createdAt).getTime() - new Date(b.data.createdAt).getTime());
+                    for (const d of filteredDecisions)
+                      items.push({ type: "decision", data: d });
+                    for (const c of filteredComments)
+                      items.push({ type: "comment", data: c });
+                    items.sort(
+                      (a, b) =>
+                        new Date(a.data.createdAt).getTime() -
+                        new Date(b.data.createdAt).getTime(),
+                    );
 
                     // Track which entities have multiple subprogrammes (from PPB + activity)
-                    const subprogsByEntity = new Map<string, Set<string | null>>();
+                    const subprogsByEntity = new Map<
+                      string,
+                      Set<string | null>
+                    >();
                     // From PPB data
-                    for (const [ent, subprogs] of Object.entries(entitySubprogrammes || {})) {
-                      if (!subprogsByEntity.has(ent)) subprogsByEntity.set(ent, new Set());
-                      for (const sp of subprogs) subprogsByEntity.get(ent)!.add(sp);
+                    for (const [ent, subprogs] of Object.entries(
+                      entitySubprogrammes || {},
+                    )) {
+                      if (!subprogsByEntity.has(ent))
+                        subprogsByEntity.set(ent, new Set());
+                      for (const sp of subprogs)
+                        subprogsByEntity.get(ent)!.add(sp);
                     }
                     // From activity items
                     for (const item of items) {
                       const e = item.data.entity;
-                      if (!subprogsByEntity.has(e)) subprogsByEntity.set(e, new Set());
+                      if (!subprogsByEntity.has(e))
+                        subprogsByEntity.set(e, new Set());
                       subprogsByEntity.get(e)!.add(item.data.subprogramme);
                     }
                     const entitiesWithMultiSubprogs = new Set(
-                      [...subprogsByEntity.entries()].filter(([, subs]) => subs.size > 1).map(([e]) => e)
+                      [...subprogsByEntity.entries()]
+                        .filter(([, subs]) => subs.size > 1)
+                        .map(([e]) => e),
                     );
 
                     if (items.length === 0) {
-                      return <div className="text-sm text-gray-400">No activity yet</div>;
+                      return (
+                        <div className="text-sm text-gray-400">
+                          No activity yet
+                        </div>
+                      );
                     }
 
                     return items.map((item, i) => {
                       const itemEntity = item.data.entity;
-                      const showSubprog = entitiesWithMultiSubprogs.has(itemEntity);
+                      const showSubprog =
+                        entitiesWithMultiSubprogs.has(itemEntity);
                       return (
                         <div key={item.data.id || i} className="text-xs">
                           {item.type === "decision" ? (
@@ -1096,7 +1177,9 @@ export function DocumentSymbol({
                               </div>
                               <ActivityMeta
                                 userEmail={item.data.userEmail}
-                                userEntity={(item.data as MandateDecision).userEntity}
+                                userEntity={
+                                  (item.data as MandateDecision).userEntity
+                                }
                                 createdAt={item.data.createdAt}
                                 viaEntity={itemEntity}
                                 subprogramme={item.data.subprogramme}
@@ -1111,7 +1194,9 @@ export function DocumentSymbol({
                               </div>
                               <ActivityMeta
                                 userEmail={item.data.userEmail}
-                                userEntity={(item.data as MandateComment).userEntity}
+                                userEntity={
+                                  (item.data as MandateComment).userEntity
+                                }
                                 createdAt={item.data.createdAt}
                                 viaEntity={itemEntity}
                                 subprogramme={item.data.subprogramme}
