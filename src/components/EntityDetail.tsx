@@ -914,9 +914,6 @@ function MandateSection({
           // Use natural sort for symbols (handles A/RES/79/1, A/RES/79/10, A/RES/79/2 correctly)
           const symbolsOrdered = orderBy([a, b], [(v) => v.symbol], [sortDirection === "asc" ? "asc" : "desc"]);
           return symbolsOrdered[0] === a ? -1 : 1;
-        case "symbol-old":
-          comparison = a.symbol.localeCompare(b.symbol);
-          break;
         case "title":
           // Empty titles sort last
           const titleA = a.title || "";
