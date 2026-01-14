@@ -150,10 +150,14 @@ function ColumnHeaders({
   sortColumn,
   sortDirection,
   onSort,
+  isReviewer,
+  onApproveAll,
 }: {
   sortColumn: SortColumn | null;
   sortDirection: SortDirection;
   onSort: (column: SortColumn) => void;
+  isReviewer?: boolean;
+  onApproveAll?: () => void;
 }) {
   return (
     <div
@@ -203,7 +207,22 @@ function ColumnHeaders({
       <span>
         <MessageSquare className="h-3 w-3" />
       </span>
-      <span>OK</span>
+      <div className="flex items-center justify-center">
+        {isReviewer && onApproveAll ? (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onApproveAll();
+            }}
+            className="text-[10px] font-medium tracking-wider text-gray-400 uppercase hover:text-emerald-600 transition-colors"
+            title="Approve all decisions in this section"
+          >
+            OK ✓
+          </button>
+        ) : (
+          <span>OK</span>
+        )}
+      </div>
     </div>
   );
 }
@@ -284,19 +303,23 @@ function MandateRowContent({
             ? `${mandate.symbol.slice(0, 18)}…`
             : mandate.symbol}
         </a>
-        {isFoundational && (
-          <Tooltip content="Foundational mandate — also cited in Mandates and Background">
-            <Star className="h-3.5 w-3.5 fill-amber-400" strokeWidth={0} />
-          </Tooltip>
-        )}
       </div>
       <div
-        className={`cursor-help truncate ${contentGreyed ? "text-gray-400" : "text-gray-600"}`}
+        className={`flex items-center gap-1.5 cursor-help min-w-0 ${contentGreyed ? "text-gray-400" : "text-gray-600"}`}
         title={mandate.title || undefined}
       >
-        {mandate.title || (
-          <span className="text-gray-400 italic">No title</span>
-        )}
+        <span className="inline-flex w-4 shrink-0 items-center justify-center">
+          {isFoundational && (
+            <Tooltip content="Foundational mandate — also cited in Mandates and Background">
+              <Star className="h-4 w-4 fill-un-blue text-un-blue" strokeWidth={0.5} />
+            </Tooltip>
+          )}
+        </span>
+        <span className="min-w-0 flex-1 truncate">
+          {mandate.title || (
+            <span className="text-gray-400 italic">No title</span>
+          )}
+        </span>
       </div>
       <div
         className={`text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`}
@@ -534,6 +557,14 @@ function MandateRow({
     setShowUpdateSearch(false);
   };
 
+  const handleCancelUpdate = () => {
+    setShowUpdateSearch(false);
+    // If update wasn't completed (no newSymbol), revert the decision
+    if (!hasCompletedUpdate) {
+      onDecision("cancel");
+    }
+  };
+
   return (
     <div className="rounded-lg bg-white shadow-sm">
       {/* Original row */}
@@ -553,14 +584,14 @@ function MandateRow({
 
       {/* Update search input (shown when user selects "update" from dropdown) */}
       {!readOnly && showUpdateSearch && !hasCompletedUpdate && (
-        <div className="border-t border-gray-100 bg-amber-50/30 py-2">
-          <div className="mb-2 text-xs font-medium text-amber-600">
+        <div className="border-t border-gray-100 bg-amber-50/30 px-4 py-3">
+          <div className="mb-3 text-xs font-medium text-amber-600">
             Select replacement document:
           </div>
           <DocumentSearchInput
             onSelect={handleUpdateSelect}
             onManualSubmit={handleUpdateManual}
-            onCancel={() => setShowUpdateSearch(false)}
+            onCancel={handleCancelUpdate}
             placeholder="Search for replacement document..."
             submitLabel="Update"
             formTitle="Enter replacement document manually"
@@ -903,6 +934,25 @@ function MandateSection({
           sortColumn={sortColumn}
           sortDirection={sortDirection}
           onSort={handleSort}
+          isReviewer={isReviewer}
+          onApproveAll={() => {
+            // Get all decisions in this section
+            const allDecisions = [
+              ...sortedMandates.map((m) => states[stateKey(m.symbol)]),
+              ...addedMandates.map((m) => states[stateKey(m.symbol)]),
+            ].filter((s) => s?.decision);
+            
+            // Check if all are approved
+            const allApproved = allDecisions.every((s) => s!.decision!.approvedBy);
+            
+            // Toggle: if all approved, unapprove all; otherwise approve all
+            allDecisions.forEach((s) => {
+              const id = s!.decision!.id;
+              if (id) {
+                onApprove(id, !allApproved);
+              }
+            });
+          }}
         />
         {sortedMandates.map((m) => {
           const targetSymbol = getUpdateTargetSymbol(m.symbol);
