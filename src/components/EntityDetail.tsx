@@ -108,7 +108,7 @@ function PhaseTracker() {
 }
 
 const GRID_COLS =
-  "grid-cols-[140px_1fr_50px_55px_45px_60px_25px_40px_130px_45px_50px]";
+  "grid-cols-[140px_1fr_50px_50px_45px_25px_30px_70px_120px_35px_45px]";
 
 type SortColumn = "symbol" | "title" | "body" | "year" | "others";
 type SortDirection = "asc" | "desc";
@@ -172,13 +172,15 @@ function ColumnHeaders({
           onSort={onSort}
         />
       </div>
-      <SortableHeader
-        column="title"
-        label="Title"
-        sortColumn={sortColumn}
-        sortDirection={sortDirection}
-        onSort={onSort}
-      />
+      <div className="pl-6">
+        <SortableHeader
+          column="title"
+          label="Title"
+          sortColumn={sortColumn}
+          sortDirection={sortDirection}
+          onSort={onSort}
+        />
+      </div>
       <SortableHeader
         column="body"
         label="Body"
@@ -237,6 +239,7 @@ function MandateRowContent({
   isUpdateTarget,
   readOnly,
   isFoundational,
+  newerVersionAlreadyCited,
   onOpenSidebar,
   onDecision,
   onApprove,
@@ -251,6 +254,7 @@ function MandateRowContent({
   isUpdateTarget?: boolean; // True for the "new" row in update view (no dropdowns)
   readOnly?: boolean; // True for background section (no interactivity)
   isFoundational?: boolean; // True if mandate is also in background mandates
+  newerVersionAlreadyCited?: boolean; // True if newer version is already in the list
   onOpenSidebar: () => void;
   onDecision: (decision: Decision, newSymbol?: string) => void;
   onApprove?: (decisionId: string, approved: boolean) => void;
@@ -355,58 +359,98 @@ function MandateRowContent({
         </span>
       </Tooltip>
       <div></div>
-      <Tooltip
-        content={
-          getMandateWarnings(mandate)
-            .map((w) => w.message)
-            .join("; ") || ""
-        }
-      >
-        <div className="flex items-center justify-center">
-          {(() => {
-            const warnings = getMandateWarnings(mandate);
-            const newerAvailable = warnings.find(
-              (w) => w.id === "newer-available",
-            );
-            const otherWarnings = warnings.filter(
-              (w) => w.id !== "newer-available",
-            );
+      <div className="flex items-center justify-start pr-2">
+        {!isUpdateTarget && (() => {
+          const warnings = getMandateWarnings(mandate);
+          const newerAvailable = warnings.find(
+            (w) => w.id === "newer-available",
+          );
+          const otherWarnings = warnings.filter(
+            (w) => w.id !== "newer-available",
+          );
 
-            if (warnings.length === 0) return null;
+          if (warnings.length === 0) return null;
 
-            // If there's a newer-available warning, make it clickable
-            if (newerAvailable && onUpdateClick) {
+          // If there's a newer-available warning, show appropriate action
+          if (newerAvailable && onUpdateClick) {
+            const isAddressed = currentDecision?.decision === "update" || currentDecision?.decision === "remove";
+            
+            // If newer version is already cited, suggest removing this older one
+            if (newerVersionAlreadyCited) {
               return (
+                <Tooltip
+                  content={`Newer version ${mandate.newerVersion?.symbol || ''} is already cited — consider removing this older version`}
+                >
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onDecision("remove");
+                    }}
+                    className={`group relative inline-flex h-5 w-5 items-center justify-center rounded-full text-sm transition-all hover:shadow-sm ${
+                      isAddressed
+                        ? "bg-gray-100 text-gray-400 cursor-default"
+                        : "bg-red-50 text-red-600 hover:bg-red-600 hover:text-white"
+                    }`}
+                    disabled={isAddressed}
+                  >
+                    <span>×</span>
+                    {otherWarnings.length > 0 && (
+                      <span className="absolute -right-1 -top-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-amber-500 text-[9px] text-white">
+                        {otherWarnings.length}
+                      </span>
+                    )}
+                  </button>
+                </Tooltip>
+              );
+            }
+            
+            // Otherwise, suggest updating to newer version
+            return (
+              <Tooltip
+                content={`Newer version available from ${mandate.newerVersion?.year || ''}: ${mandate.newerVersion?.symbol || ''}`}
+              >
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
                     onUpdateClick();
                   }}
-                  className="cursor-pointer text-xs text-blue-500 transition-colors hover:text-blue-700"
-                  title="Click to update to newer version"
+                  className={`group relative inline-flex h-5 w-5 items-center justify-center rounded-full text-sm transition-all hover:shadow-sm ${
+                    isAddressed
+                      ? "bg-gray-100 text-gray-400 cursor-default"
+                      : "bg-un-blue/10 text-un-blue hover:bg-un-blue hover:text-white"
+                  }`}
+                  disabled={isAddressed}
                 >
-                  ℹ
+                  <span>↑</span>
                   {otherWarnings.length > 0 && (
-                    <sup className="ml-0.5 text-[9px] text-amber-500">
-                      +{otherWarnings.length}
-                    </sup>
+                    <span className="absolute -right-1 -top-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-amber-500 text-[9px] text-white">
+                      {otherWarnings.length}
+                    </span>
                   )}
                 </button>
-              );
-            }
+              </Tooltip>
+            );
+          }
 
-            // Default warning icon
-            return (
-              <span className="cursor-help text-xs text-amber-500">
+          // Default warning icon with tooltip
+          return (
+            <Tooltip
+              content={
+                warnings
+                  .map((w) => w.message)
+                  .join("; ") || ""
+              }
+            >
+              <span className="inline-flex h-5 items-center justify-center rounded-full bg-amber-50 px-2 text-xs font-medium text-amber-600">
                 ⚠
                 {warnings.length > 1 && (
-                  <sup className="ml-0.5 text-[9px]">{warnings.length}</sup>
+                  <span className="ml-1 text-[10px]">{warnings.length}</span>
                 )}
               </span>
-            );
-          })()}
-        </div>
-      </Tooltip>
+            </Tooltip>
+          );
+        })()}
+      </div>
       <div onClick={(e) => e.stopPropagation()}>
         {isUpdateTarget || readOnly ? (
           <span className="text-xs text-gray-400">—</span>
@@ -496,6 +540,7 @@ function MandateRow({
   readOnly,
   isFoundational,
   updateTargetMetadata,
+  newerVersionAlreadyCited,
 }: {
   mandate: Mandate;
   state?: MandateState;
@@ -515,6 +560,7 @@ function MandateRow({
     year: number | null;
     body: string | null;
   } | null;
+  newerVersionAlreadyCited?: boolean;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [newDocSidebarOpen, setNewDocSidebarOpen] = useState(false);
@@ -576,6 +622,7 @@ function MandateRow({
         isAdded={isAdded}
         readOnly={readOnly}
         isFoundational={isFoundational}
+        newerVersionAlreadyCited={newerVersionAlreadyCited}
         onOpenSidebar={() => setSidebarOpen(true)}
         onDecision={onDecision}
         onApprove={onApprove}
@@ -956,6 +1003,11 @@ function MandateSection({
         />
         {sortedMandates.map((m) => {
           const targetSymbol = getUpdateTargetSymbol(m.symbol);
+          // Check if newer version is already in the list
+          const newerVersionAlreadyCited = m.newerVersion?.symbol
+            ? mandates.some((mandate) => mandate.symbol === m.newerVersion?.symbol) ||
+              addedMandates.some((mandate) => mandate.symbol === m.newerVersion?.symbol)
+            : false;
           return (
             <MandateRow
               key={m.symbol}
@@ -967,6 +1019,7 @@ function MandateSection({
               userEntity={userEntity}
               readOnly={readOnly}
               isFoundational={foundationalSymbols?.has(m.symbol)}
+              newerVersionAlreadyCited={newerVersionAlreadyCited}
               onDecision={(decision, newSymbol) =>
                 onDecision(m.symbol, decision, newSymbol)
               }
