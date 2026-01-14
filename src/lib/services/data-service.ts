@@ -162,12 +162,25 @@ export async function fetchPPBRecords(): Promise<PPBRecord[]> {
       const docType =
         row.doc_document_type || row.meta_document_type || row.ppb_type || null;
 
+      // Link: construct from docs.un.org if in public.documents or metadata_clean, else ppb_link
+      let link: string | null = null;
+      if (row.doc_symbol) {
+        // Document is in public.documents - construct link
+        link = `https://docs.un.org/en/${row.doc_symbol.toUpperCase()}`;
+      } else if (row.meta_title !== null || row.meta_proper_title !== null) {
+        // Document is in metadata_clean - construct link from ppb symbol
+        link = `https://docs.un.org/en/${symbol.toUpperCase()}`;
+      } else {
+        // Fall back to original ppb_link
+        link = row.ppb_link;
+      }
+
       recordsMap.set(symbol, {
         full_document_symbol: symbol,
         num_citations: 0,
         num_entities: 0,
         entities: [],
-        link: row.ppb_link,
+        link,
         priority_area: row.priority_area,
         year,
         body,
