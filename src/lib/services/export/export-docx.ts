@@ -48,6 +48,10 @@ function escapeXml(text: string | null | undefined): string {
     .replace(/'/g, "&apos;");
 }
 
+function cleanTitle(title: string): string {
+  return title.replace(/[\s:]+$/, "");
+}
+
 // Style IDs from UN template: H1 = "_ H_1", H23 = "_ H_2/3", H4 = "_ H_4"
 
 // Generate paragraph XML with UN style
@@ -150,7 +154,7 @@ export async function exportEntityToDocx(
       const title = rec.description || rec.uniform_title || "";
       bodyMap.get(body)!.push({
         symbol: rec.full_document_symbol,
-        title,
+        title: cleanTitle(title),
         link: rec.link,
         body,
       });
