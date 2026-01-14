@@ -268,9 +268,10 @@ function MandateRowContent({
   const isAddedDecision = isAdded && currentDecision?.decision === "add";
   const canCancel = isAdded && isAddedDecision;
 
-  // Check if this row has an update decision (to grey out content)
+  // Check if this row has an update or remove decision (to grey out content)
   const hasUpdate = currentDecision?.decision === "update";
-  const contentGreyed = hasUpdate && !isUpdateTarget;
+  const hasRemove = currentDecision?.decision === "remove";
+  const contentGreyed = (hasUpdate || hasRemove) && !isUpdateTarget;
 
   // Approval state - only reviewers can approve, and only if there's a decision
   const hasDecision = !!currentDecision;
@@ -278,11 +279,25 @@ function MandateRowContent({
   const canApprove =
     isReviewer && onApprove && hasDecision && currentDecision?.id;
 
+  // Determine background color based on decision
+  let bgColorClass = "";
+  if (isUpdateTarget) {
+    bgColorClass = "bg-amber-50/50";
+  } else if (currentDecision?.decision === "remove") {
+    bgColorClass = "bg-red-50/30";
+  } else if (currentDecision?.decision === "update") {
+    bgColorClass = "bg-amber-50/40";
+  } else if (currentDecision?.decision === "add") {
+    bgColorClass = "bg-emerald-50/30";
+  } else if (currentDecision?.decision === "retain") {
+    bgColorClass = "bg-blue-50/20";
+  }
+
   return (
     <div
       className={`grid ${GRID_COLS} cursor-pointer items-center gap-x-2 gap-y-1.5 py-2.5 text-sm transition-colors ${
-        isUpdateTarget ? "bg-amber-50/50" : "hover:bg-gray-50"
-      } ${readOnly ? "opacity-60" : ""}`}
+        bgColorClass || "hover:bg-gray-50"
+      } ${readOnly ? "opacity-60" : ""} ${!isUpdateTarget && !bgColorClass ? "hover:bg-gray-50" : ""}`}
       onClick={onOpenSidebar}
     >
       <div
