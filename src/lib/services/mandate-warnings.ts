@@ -40,6 +40,17 @@ interface WarningDefinition {
  */
 const WARNING_DEFINITIONS: WarningDefinition[] = [
   {
+    id: "no-metadata",
+    message:
+      "Document symbol not found in UN Library metadata – data may be incomplete or symbol may be incorrect. Consider updating with the correct symbol",
+    severity: "warning",
+    condition: (mandate) => mandate.metadataFromDb === false,
+    getSuggestedUpdate: (mandate) => mandate.symbol,
+    action: "update",
+    icon: "?",
+    colorScheme: "amber",
+  },
+  {
     id: "missing-link",
     message:
       "This citation is missing a link to the document's fulltext – please consider updating with the correct document symbol or manually add with the correct link.",
