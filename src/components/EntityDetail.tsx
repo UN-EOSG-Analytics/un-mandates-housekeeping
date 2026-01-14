@@ -10,6 +10,7 @@ import {
   ChevronDown,
   Search,
 } from "lucide-react";
+import { orderBy } from "natural-orderby";
 import { EntityHeader } from "./EntityHeader";
 import { getMandateWarnings } from "@/lib/services/mandate-warnings";
 import type {
@@ -407,7 +408,7 @@ function MandateRowContent({
             // Otherwise, suggest updating to newer version
             return (
               <Tooltip
-                content={`Newer version available from ${mandate.newerVersion?.year || ''}: ${mandate.newerVersion?.symbol || ''}`}
+                content={`Newer version available from ${mandate.newerVersion?.year || ''}: ${mandate.newerVersion?.symbol || ''} – consider updating`}
               >
                 <button
                   onClick={(e) => {
@@ -840,7 +841,7 @@ function MandateSection({
   onAddManual: (data: ManualEntryData) => void;
   searchQuery?: string;
 }) {
-  const [sortColumn, setSortColumn] = useState<SortColumn | null>(null);
+  const [sortColumn, setSortColumn] = useState<SortColumn | null>("title");
   const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
 
   const handleSort = (column: SortColumn) => {
@@ -925,6 +926,10 @@ function MandateSection({
 
       switch (sortColumn) {
         case "symbol":
+          // Use natural sort for symbols (handles A/RES/79/1, A/RES/79/10, A/RES/79/2 correctly)
+          const symbolsOrdered = orderBy([a, b], [(v) => v.symbol], [sortDirection === "asc" ? "asc" : "desc"]);
+          return symbolsOrdered[0] === a ? -1 : 1;
+        case "symbol-old":
           comparison = a.symbol.localeCompare(b.symbol);
           break;
         case "title":
@@ -934,6 +939,21 @@ function MandateSection({
           if (!titleA && titleB) return sortDirection === "asc" ? 1 : -1;
           if (titleA && !titleB) return sortDirection === "asc" ? -1 : 1;
           comparison = titleA.localeCompare(titleB);
+          
+          // Secondary sort by year when titles are equal
+          if (comparison === 0) {
+            if (a.year === null && b.year !== null) comparison = 1;
+            else if (a.year !== null && b.year === null) comparison = -1;
+            else if (a.year !== null && b.year !== null) {
+              comparison = (a.year ?? 0) - (b.year ?? 0);
+            }
+            
+            // Tertiary sort by symbol (natural sort) when year is also equal
+            if (comparison === 0) {
+              const symbolsOrdered = orderBy([a, b], [(v) => v.symbol], ["asc"]);
+              comparison = symbolsOrdered[0] === a ? -1 : 1;
+            }
+          }
           break;
         case "body":
           const bodyA = a.body || "";
@@ -950,6 +970,13 @@ function MandateSection({
             return sortDirection === "asc" ? -1 : 1;
           if (a.year === null && b.year === null) return 0;
           comparison = (a.year ?? 0) - (b.year ?? 0);
+          
+          // Secondary sort by title when years are equal
+          if (comparison === 0) {
+            const titleA = a.title || "";
+            const titleB = b.title || "";
+            comparison = titleA.localeCompare(titleB);
+          }
           break;
         case "others":
           comparison =
