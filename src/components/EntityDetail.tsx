@@ -240,7 +240,7 @@ function MandateRowContent({
   isUpdateTarget,
   readOnly,
   isFoundational,
-  newerVersionAlreadyCited,
+  allSymbols,
   onOpenSidebar,
   onDecision,
   onApprove,
@@ -255,7 +255,7 @@ function MandateRowContent({
   isUpdateTarget?: boolean; // True for the "new" row in update view (no dropdowns)
   readOnly?: boolean; // True for background section (no interactivity)
   isFoundational?: boolean; // True if mandate is also in background mandates
-  newerVersionAlreadyCited?: boolean; // True if newer version is already in the list
+  allSymbols?: Set<string>; // All symbols in current section for warning system
   onOpenSidebar: () => void;
   onDecision: (decision: Decision, newSymbol?: string) => void;
   onApprove?: (decisionId: string, approved: boolean) => void;
@@ -377,70 +377,46 @@ function MandateRowContent({
       <div></div>
       <div className="flex items-center justify-start pr-2">
         {!isUpdateTarget && (() => {
-          const warnings = getMandateWarnings(mandate);
-          const newerAvailable = warnings.find(
-            (w) => w.id === "newer-available",
-          );
-          const otherWarnings = warnings.filter(
-            (w) => w.id !== "newer-available",
-          );
-
+          const warnings = getMandateWarnings(mandate, allSymbols);
           if (warnings.length === 0) return null;
 
-          // If there's a newer-available warning, show appropriate action
-          if (newerAvailable && onUpdateClick) {
-            const isAddressed = currentDecision?.decision === "update" || currentDecision?.decision === "remove";
+          const actionableWarnings = warnings.filter((w) => w.action);
+          const isAddressed = currentDecision?.decision === "update" || currentDecision?.decision === "remove";
+
+          // Actionable warnings (have action type) → show interactive button
+          if (actionableWarnings.length > 0 && (onUpdateClick || onDecision)) {
+            const primaryWarning = actionableWarnings[0];
+            const icon = primaryWarning.icon || "⚠";
+            const colorScheme = primaryWarning.colorScheme || "blue";
             
-            // If newer version is already cited, suggest removing this older one
-            if (newerVersionAlreadyCited) {
-              return (
-                <Tooltip
-                  content={`Newer version ${mandate.newerVersion?.symbol || ''} is already cited — consider removing this older version`}
-                >
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onDecision("remove");
-                    }}
-                    className={`group relative inline-flex h-5 w-5 items-center justify-center rounded-full text-sm transition-all hover:shadow-sm ${
-                      isAddressed
-                        ? "bg-gray-100 text-gray-400 cursor-default"
-                        : "bg-red-50 text-red-600 hover:bg-red-600 hover:text-white"
-                    }`}
-                    disabled={isAddressed}
-                  >
-                    <span>×</span>
-                    {otherWarnings.length > 0 && (
-                      <span className="absolute -right-1 -top-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-amber-500 text-[9px] text-white">
-                        {otherWarnings.length}
-                      </span>
-                    )}
-                  </button>
-                </Tooltip>
-              );
-            }
-            
-            // Otherwise, suggest updating to newer version
+            const colorClasses = {
+              blue: "bg-un-blue/10 text-un-blue hover:bg-un-blue hover:text-white",
+              red: "bg-red-50 text-red-600 hover:bg-red-600 hover:text-white",
+              amber: "bg-amber-50 text-amber-600 hover:bg-amber-600 hover:text-white",
+            };
+
             return (
-              <Tooltip
-                content={`Newer version available from ${mandate.newerVersion?.year || ''}: ${mandate.newerVersion?.symbol || ''} – consider updating`}
-              >
+              <Tooltip content={warnings.map((w) => w.message).join("; ")}>
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
-                    onUpdateClick();
+                    if (primaryWarning.action === "remove") {
+                      onDecision("remove");
+                    } else if (primaryWarning.action === "update" && onUpdateClick) {
+                      onUpdateClick();
+                    }
                   }}
                   className={`group relative inline-flex h-5 w-5 items-center justify-center rounded-full text-sm transition-all hover:shadow-sm ${
                     isAddressed
                       ? "bg-gray-100 text-gray-400 cursor-default"
-                      : "bg-un-blue/10 text-un-blue hover:bg-un-blue hover:text-white"
+                      : colorClasses[colorScheme]
                   }`}
                   disabled={isAddressed}
                 >
-                  <span>↑</span>
-                  {otherWarnings.length > 0 && (
+                  <span>{icon}</span>
+                  {warnings.length > 1 && (
                     <span className="absolute -right-1 -top-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-amber-500 text-[9px] text-white">
-                      {otherWarnings.length}
+                      {warnings.length}
                     </span>
                   )}
                 </button>
@@ -448,15 +424,9 @@ function MandateRowContent({
             );
           }
 
-          // Default warning icon with tooltip
+          // Default: non-actionable warnings → show static icon
           return (
-            <Tooltip
-              content={
-                warnings
-                  .map((w) => w.message)
-                  .join("; ") || ""
-              }
-            >
+            <Tooltip content={warnings.map((w) => w.message).join("; ")}>
               <span className="inline-flex h-5 items-center justify-center rounded-full bg-amber-50 px-2 text-xs font-medium text-amber-600">
                 ⚠
                 {warnings.length > 1 && (
@@ -556,7 +526,7 @@ function MandateRow({
   readOnly,
   isFoundational,
   updateTargetMetadata,
-  newerVersionAlreadyCited,
+  allSymbols,
 }: {
   mandate: Mandate;
   state?: MandateState;
@@ -576,7 +546,7 @@ function MandateRow({
     year: number | null;
     body: string | null;
   } | null;
-  newerVersionAlreadyCited?: boolean;
+  allSymbols?: Set<string>;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [newDocSidebarOpen, setNewDocSidebarOpen] = useState(false);
@@ -638,7 +608,7 @@ function MandateRow({
         isAdded={isAdded}
         readOnly={readOnly}
         isFoundational={isFoundational}
-        newerVersionAlreadyCited={newerVersionAlreadyCited}
+        allSymbols={allSymbols}
         onOpenSidebar={() => setSidebarOpen(true)}
         onDecision={onDecision}
         onApprove={onApprove}
@@ -1003,6 +973,16 @@ function MandateSection({
     });
   }, [mandates, sortColumn, sortDirection, searchQuery]);
 
+  // Build set of all symbols for warning system (to detect newer-already-cited)
+  const allSymbols = useMemo(
+    () =>
+      new Set([
+        ...mandates.map((m) => m.symbol),
+        ...addedMandates.map((m) => m.symbol),
+      ]),
+    [mandates, addedMandates],
+  );
+
   if (mandates.length === 0 && addedMandates.length === 0) return null;
 
   return (
@@ -1045,11 +1025,6 @@ function MandateSection({
         />
         {sortedMandates.map((m) => {
           const targetSymbol = getUpdateTargetSymbol(m.symbol);
-          // Check if newer version is already in the list
-          const newerVersionAlreadyCited = m.newerVersion?.symbol
-            ? mandates.some((mandate) => mandate.symbol === m.newerVersion?.symbol) ||
-              addedMandates.some((mandate) => mandate.symbol === m.newerVersion?.symbol)
-            : false;
           return (
             <MandateRow
               key={m.symbol}
@@ -1061,7 +1036,7 @@ function MandateSection({
               userEntity={userEntity}
               readOnly={readOnly}
               isFoundational={foundationalSymbols?.has(m.symbol)}
-              newerVersionAlreadyCited={newerVersionAlreadyCited}
+              allSymbols={allSymbols}
               onDecision={(decision, newSymbol) =>
                 onDecision(m.symbol, decision, newSymbol)
               }
@@ -1086,6 +1061,7 @@ function MandateSection({
               isReviewer={isReviewer}
               userEmail={userEmail}
               userEntity={userEntity}
+              allSymbols={allSymbols}
               onDecision={(decision) => onDecision(m.symbol, decision)}
               onApprove={onApprove}
               onUpdateWithManual={() => {}}
