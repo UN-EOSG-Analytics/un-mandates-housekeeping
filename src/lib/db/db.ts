@@ -4,10 +4,22 @@ const globalForDb = global as unknown as {
   pool: Pool | undefined;
 };
 
+// Ensure sslmode=verify-full is explicit to avoid pg security warning
+function getConnectionString(): string {
+  const url = process.env.DATABASE_URL || "";
+  if (!url) return url;
+  // Replace any sslmode with verify-full, or add it if not present
+  if (url.includes("sslmode=verify-full")) return url;
+  if (url.includes("sslmode=")) {
+    return url.replace(/sslmode=[^&]+/, "sslmode=verify-full");
+  }
+  return url + (url.includes("?") ? "&" : "?") + "sslmode=verify-full";
+}
+
 export const pool =
   globalForDb.pool ||
   new Pool({
-    connectionString: process.env.DATABASE_URL,
+    connectionString: getConnectionString(),
     max: 2, // Vercel Serverless Functions, no PgBouncer on Azure
     idleTimeoutMillis: 30000,
     connectionTimeoutMillis: 2000,

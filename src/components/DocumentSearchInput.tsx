@@ -91,10 +91,14 @@ export function DocumentSearchInput({
       .finally(() => setSearching(false));
   }, []);
 
-  // Auto-search when initialQuery is provided
+  // Auto-search when initialQuery is provided (using ref to avoid setState in effect)
+  const initialSearchDone = useRef(false);
   useEffect(() => {
-    if (initialQuery && initialQuery.length >= 2) {
-      search(initialQuery);
+    if (initialQuery && initialQuery.length >= 2 && !initialSearchDone.current) {
+      initialSearchDone.current = true;
+      // Defer to next tick to avoid synchronous setState in effect
+      const timer = setTimeout(() => search(initialQuery), 0);
+      return () => clearTimeout(timer);
     }
   }, [initialQuery, search]);
 

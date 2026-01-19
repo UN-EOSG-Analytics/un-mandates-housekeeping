@@ -67,55 +67,56 @@ function formatSubprogrammeName(subprog: string): string {
   return subprog;
 }
 
-function PhaseTracker() {
-  const phases = [
-    { id: 1, name: "Internal Review", type: "internal" },
-    { id: 2, name: "OPPFB Review", type: "ppbd" },
-    { id: 3, name: "Internal Review", type: "internal" },
-    { id: 4, name: "OPPFB Review", type: "ppbd" },
-  ];
-  const currentPhase = 1; // Mockup: always phase 1
-
-  return (
-    <div className="rounded-lg border border-gray-200 bg-white px-6 py-3 shadow-sm">
-      <div className="flex items-center gap-6">
-        <span className="text-xs font-medium text-gray-500 uppercase">
-          Review phases
-        </span>
-        <div className="flex flex-1 items-center gap-1">
-          {phases.map((phase, i) => (
-            <div key={phase.id} className="flex items-center">
-              {i > 0 && <div className="mx-1 h-px w-6 bg-gray-200" />}
-              <div
-                className={`flex items-center gap-1.5 rounded-full ${i === 0 ? "pr-3 pl-5" : "px-3"} py-1 text-xs font-medium transition-colors ${
-                  phase.id < currentPhase
-                    ? "bg-green-100 text-green-700"
-                    : phase.id === currentPhase
-                      ? phase.type === "internal"
-                        ? "bg-un-blue text-white"
-                        : "bg-amber-500 text-white"
-                      : "bg-gray-100 text-gray-400"
-                }`}
-              >
-                {phase.id < currentPhase && <Check className="h-3 w-3" />}
-                <span className="tabular-nums">{phase.id}.</span>
-                {phase.name}
-              </div>
-            </div>
-          ))}
-        </div>
-        {currentPhase <= phases.length && (
-          <button
-            onClick={() => alert("Phase completion not yet implemented")}
-            className="rounded bg-un-blue px-3 py-1 text-xs font-medium text-white hover:bg-un-blue/90"
-          >
-            Complete Phase {currentPhase}
-          </button>
-        )}
-      </div>
-    </div>
-  );
-}
+// PhaseTracker component commented out - for future use
+// function PhaseTracker() {
+//   const phases = [
+//     { id: 1, name: "Internal Review", type: "internal" },
+//     { id: 2, name: "OPPFB Review", type: "ppbd" },
+//     { id: 3, name: "Internal Review", type: "internal" },
+//     { id: 4, name: "OPPFB Review", type: "ppbd" },
+//   ];
+//   const currentPhase = 1; // Mockup: always phase 1
+//
+//   return (
+//     <div className="rounded-lg border border-gray-200 bg-white px-6 py-3 shadow-sm">
+//       <div className="flex items-center gap-6">
+//         <span className="text-xs font-medium text-gray-500 uppercase">
+//           Review phases
+//         </span>
+//         <div className="flex flex-1 items-center gap-1">
+//           {phases.map((phase, i) => (
+//             <div key={phase.id} className="flex items-center">
+//               {i > 0 && <div className="mx-1 h-px w-6 bg-gray-200" />}
+//               <div
+//                 className={`flex items-center gap-1.5 rounded-full ${i === 0 ? "pr-3 pl-5" : "px-3"} py-1 text-xs font-medium transition-colors ${
+//                   phase.id < currentPhase
+//                     ? "bg-green-100 text-green-700"
+//                     : phase.id === currentPhase
+//                       ? phase.type === "internal"
+//                         ? "bg-un-blue text-white"
+//                         : "bg-amber-500 text-white"
+//                       : "bg-gray-100 text-gray-400"
+//                 }`}
+//               >
+//                 {phase.id < currentPhase && <Check className="h-3 w-3" />}
+//                 <span className="tabular-nums">{phase.id}.</span>
+//                 {phase.name}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//         {currentPhase <= phases.length && (
+//           <button
+//             onClick={() => alert("Phase completion not yet implemented")}
+//             className="rounded bg-un-blue px-3 py-1 text-xs font-medium text-white hover:bg-un-blue/90"
+//           >
+//             Complete Phase {currentPhase}
+//           </button>
+//         )}
+//       </div>
+//     </div>
+//   );
+// }
 
 const GRID_COLS =
   "grid-cols-[140px_1fr_50px_50px_45px_25px_30px_70px_120px_35px_45px]";
@@ -254,7 +255,6 @@ function MandateRowContent({
   onDecision,
   onApprove,
   onUpdateClick,
-  suggestedUpdateSymbol,
 }: {
   mandate: Mandate;
   state?: MandateState;
@@ -269,7 +269,6 @@ function MandateRowContent({
   onDecision: (decision: Decision, newSymbol?: string) => void;
   onApprove?: (decisionId: string, approved: boolean) => void;
   onUpdateClick?: () => void;
-  suggestedUpdateSymbol?: string; // Pre-fill for update search (e.g., from newer-available warning)
 }) {
   const ageInfo = getAgeIndicator(mandate.year);
   const currentDecision = state?.decision;

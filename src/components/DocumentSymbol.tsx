@@ -477,11 +477,7 @@ export function DocumentSymbol({
   body,
   docType,
   otherEntitiesCount,
-  relevanceCount: _relevanceCount,
-  relevanceIndices: _relevanceIndices,
-  aiComments: _aiComments,
   entity,
-  entityLong: _entityLong,
   allEntities,
   entitySubprogrammes,
   entityLongMap,
@@ -498,7 +494,6 @@ export function DocumentSymbol({
   onApprove,
   onComment,
   onUpdateClick,
-  metadataFromDb,
 }: Props) {
   const [internalOpen, setInternalOpen] = useState(false);
   const open = controlledOpen ?? internalOpen;

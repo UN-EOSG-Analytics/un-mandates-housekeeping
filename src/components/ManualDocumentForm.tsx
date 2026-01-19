@@ -61,10 +61,13 @@ export function ManualDocumentForm({
 
   useEffect(() => {
     if (!manualData.symbol.trim()) {
-      setSymbolExists(false);
-      setOverrideDuplicate(false);
-      setExistingDoc(null);
-      return;
+      // Defer state updates to next tick to avoid synchronous setState in effect
+      const clearTimer = setTimeout(() => {
+        setSymbolExists(false);
+        setOverrideDuplicate(false);
+        setExistingDoc(null);
+      }, 0);
+      return () => clearTimeout(clearTimer);
     }
 
     const timer = setTimeout(() => {
