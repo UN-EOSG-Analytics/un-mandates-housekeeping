@@ -46,6 +46,7 @@ interface Props {
   onOpenChange?: (open: boolean) => void;
   state?: MandateState;
   isReviewer?: boolean;
+  canReviewAnyEntity?: boolean;
   userEmail?: string | null;
   userEntity?: string | null;
   isFoundational?: boolean;
@@ -151,7 +152,7 @@ function ParaBox({
       <div className="rounded-lg bg-gray-100 p-4">
         <div className="flex gap-3">
           {label && (
-            <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-un-blue text-xs font-medium text-white">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-un-blue text-xs font-medium text-white">
               {label}
             </span>
           )}
@@ -160,7 +161,7 @@ function ParaBox({
           </p>
           {aiComment && (
             <Tooltip content={aiComment}>
-              <Sparkles className="h-4 w-4 flex-shrink-0 cursor-help text-amber-500" />
+              <Sparkles className="h-4 w-4 shrink-0 cursor-help text-amber-500" />
             </Tooltip>
           )}
         </div>
@@ -487,6 +488,7 @@ export function DocumentSymbol({
   onOpenChange,
   state,
   isReviewer,
+  canReviewAnyEntity,
   userEmail,
   userEntity,
   isFoundational,
@@ -898,12 +900,12 @@ export function DocumentSymbol({
                               );
                               const latestDecision =
                                 rowDecisions[rowDecisions.length - 1] || null;
-                              const canEdit = isUserEntity && onDecision;
+                              const canEdit = (isUserEntity || canReviewAnyEntity) && onDecision;
                               const currentDecision = isCurrentRow
                                 ? state?.decision
                                 : latestDecision;
                               const canApprove =
-                                isUserEntity &&
+                                (isUserEntity || canReviewAnyEntity) &&
                                 isReviewer &&
                                 onApprove &&
                                 currentDecision;

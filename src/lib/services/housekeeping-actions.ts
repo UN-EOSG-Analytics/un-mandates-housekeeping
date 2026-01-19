@@ -73,7 +73,12 @@ const toComment = (row: CommentRow): MandateComment => ({
  * Get current user's role information
  */
 export async function getUserRoleAction(): Promise<
-  ActionResult<{ email: string; entity: string | null; isReviewer: boolean }>
+  ActionResult<{ 
+    email: string; 
+    entity: string | null; 
+    isReviewer: boolean;
+    canReviewAnyEntity: boolean;
+  }>
 > {
   const user = await getCurrentUser();
   if (!user) {
@@ -86,6 +91,7 @@ export async function getUserRoleAction(): Promise<
       email: user.email,
       entity: user.entity,
       isReviewer: user.isReviewer,
+      canReviewAnyEntity: user.canReviewAnyEntity || false,
     },
   };
 }
@@ -249,9 +255,13 @@ export async function createDecisionAction(params: {
     return { success: false, error: "invalid request" };
   }
 
-  // Only allow users to edit their own entity
-  if (user.entity !== entity) {
+  // DMSPC users can review/edit any entity, others can only edit their own entity
+  if (!user.canReviewAnyEntity && user.entity !== entity) {
     return { success: false, error: "You can only make decisions for your own entity" };
+  }
+
+  if (!user.entity && !user.canReviewAnyEntity) {
+    return { success: false, error: "You must have an entity assigned" };
   }
 
   if (!["retain", "remove", "add", "update", "cancel"].includes(decision)) {
@@ -314,9 +324,13 @@ export async function createCommentAction(params: {
     return { success: false, error: "invalid request" };
   }
 
-  // Only allow users to comment on their own entity
-  if (user.entity !== entity) {
+  // DMSPC users can comment on any entity, others can only comment on their own entity
+  if (!user.canReviewAnyEntity && user.entity !== entity) {
     return { success: false, error: "You can only comment on your own entity" };
+  }
+
+  if (!user.entity && !user.canReviewAnyEntity) {
+    return { success: false, error: "You must have an entity assigned" };
   }
 
   const rows = await query<CommentRow>(

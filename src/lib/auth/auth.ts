@@ -129,15 +129,23 @@ export async function getCurrentUser() {
     id: string;
     email: string;
     entity: string | null;
+    role: string | null;
   }>(
-    `SELECT id, email, entity FROM mandates_housekeeping.users WHERE id = $1`,
+    `SELECT id, email, entity, role FROM mandates_housekeeping.users WHERE id = $1`,
     [session.userId],
   );
   if (!rows[0]) return null;
+  
+  const role = rows[0].role || 'user';
+  const entity = rows[0].entity;
+  
   return {
     id: rows[0].id,
     email: rows[0].email,
-    entity: rows[0].entity,
-    isReviewer: rows[0].entity?.toUpperCase() === "DMSPC",
+    entity: entity,
+    role: role,
+    isReviewer: role === 'reviewer' || role === 'admin',
+    isDMSPC: entity?.toUpperCase() === "DMSPC",
+    canReviewAnyEntity: entity?.toUpperCase() === "DMSPC",
   };
 }

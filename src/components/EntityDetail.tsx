@@ -1,38 +1,38 @@
 "use client";
 
-import { useState, useEffect, useCallback, useMemo } from "react";
-import {
-  Check,
-  MessageSquare,
-  X,
-  Star,
-  ChevronUp,
-  ChevronDown,
-  Search,
-} from "lucide-react";
-import { orderBy } from "natural-orderby";
-import { EntityHeader } from "./EntityHeader";
-import { getMandateWarnings } from "@/lib/services/mandate-warnings";
-import type {
-  Mandate,
-  MandateState,
-  MandateComment,
-  MandateDecision,
-  Decision,
-} from "@/types";
-import { DocumentSymbol } from "./DocumentSymbol";
-import { Tooltip } from "./Tooltip";
-import { DecisionDropdown } from "./DecisionDropdown";
 import { getAgeIndicator } from "@/lib/services/age-indicator";
 import {
-  getUserRoleAction,
-  getEntityDecisionsAction,
-  createDecisionAction,
-  createCommentAction,
-  approveDecisionAction,
+    approveDecisionAction,
+    createCommentAction,
+    createDecisionAction,
+    getEntityDecisionsAction,
+    getUserRoleAction,
 } from "@/lib/services/housekeeping-actions";
-import type { ManualEntryData } from "./ManualDocumentForm";
+import { getMandateWarnings } from "@/lib/services/mandate-warnings";
+import type {
+    Decision,
+    Mandate,
+    MandateComment,
+    MandateDecision,
+    MandateState,
+} from "@/types";
+import {
+    Check,
+    ChevronDown,
+    ChevronUp,
+    MessageSquare,
+    Search,
+    Star,
+    X,
+} from "lucide-react";
+import { orderBy } from "natural-orderby";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { DecisionDropdown } from "./DecisionDropdown";
 import { DocumentSearchInput } from "./DocumentSearchInput";
+import { DocumentSymbol } from "./DocumentSymbol";
+import { EntityHeader } from "./EntityHeader";
+import type { ManualEntryData } from "./ManualDocumentForm";
+import { Tooltip } from "./Tooltip";
 
 interface Props {
   entity: string;
@@ -225,7 +225,7 @@ function ColumnHeaders({
               e.stopPropagation();
               onApproveAll();
             }}
-            className="text-[10px] font-medium tracking-wider text-gray-400 uppercase hover:text-emerald-600 transition-colors"
+            className="text-[10px] font-medium tracking-wider text-gray-400 uppercase transition-colors hover:text-emerald-600"
             title="Approve all decisions in this section"
           >
             OK ✓
@@ -333,13 +333,16 @@ function MandateRowContent({
         </a>
       </div>
       <div
-        className={`flex items-center gap-1.5 cursor-help min-w-0 ${contentGreyed ? "text-gray-400" : "text-gray-600"}`}
+        className={`flex min-w-0 cursor-help items-center gap-1.5 ${contentGreyed ? "text-gray-400" : "text-gray-600"}`}
         title={mandate.title || undefined}
       >
         <span className="inline-flex w-4 shrink-0 items-center justify-center">
           {isFoundational && (
             <Tooltip content="Foundational mandate — also cited in Mandates and Background">
-              <Star className="h-4 w-4 fill-un-blue text-un-blue" strokeWidth={0.5} />
+              <Star
+                className="h-4 w-4 fill-un-blue text-un-blue"
+                strokeWidth={0.5}
+              />
             </Tooltip>
           )}
         </span>
@@ -384,66 +387,76 @@ function MandateRowContent({
       </Tooltip>
       <div></div>
       <div className="flex items-center justify-start pr-2">
-        {!isUpdateTarget && (() => {
-          const warnings = getMandateWarnings(mandate, allSymbols);
-          if (warnings.length === 0) return null;
+        {!isUpdateTarget &&
+          (() => {
+            const warnings = getMandateWarnings(mandate, allSymbols);
+            if (warnings.length === 0) return null;
 
-          const actionableWarnings = warnings.filter((w) => w.action);
-          const isAddressed = currentDecision?.decision === "update" || currentDecision?.decision === "remove";
+            const actionableWarnings = warnings.filter((w) => w.action);
+            const isAddressed =
+              currentDecision?.decision === "update" ||
+              currentDecision?.decision === "remove";
 
-          // Actionable warnings (have action type) → show interactive button
-          if (actionableWarnings.length > 0 && (onUpdateClick || onDecision)) {
-            const primaryWarning = actionableWarnings[0];
-            const icon = primaryWarning.icon || "⚠";
-            const colorScheme = primaryWarning.colorScheme || "blue";
-            
-            const colorClasses = {
-              blue: "bg-un-blue/10 text-un-blue hover:bg-un-blue hover:text-white",
-              red: "bg-red-50 text-red-600 hover:bg-red-600 hover:text-white",
-              amber: "bg-amber-50 text-amber-600 hover:bg-amber-600 hover:text-white",
-            };
+            // Actionable warnings (have action type) → show interactive button
+            if (
+              actionableWarnings.length > 0 &&
+              (onUpdateClick || onDecision)
+            ) {
+              const primaryWarning = actionableWarnings[0];
+              const icon = primaryWarning.icon || "⚠";
+              const colorScheme = primaryWarning.colorScheme || "blue";
 
+              const colorClasses = {
+                blue: "bg-un-blue/10 text-un-blue hover:bg-un-blue hover:text-white",
+                red: "bg-red-50 text-red-600 hover:bg-red-600 hover:text-white",
+                amber:
+                  "bg-amber-50 text-amber-600 hover:bg-amber-600 hover:text-white",
+              };
+
+              return (
+                <Tooltip content={warnings.map((w) => w.message).join("; ")}>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      if (primaryWarning.action === "remove") {
+                        onDecision("remove");
+                      } else if (
+                        primaryWarning.action === "update" &&
+                        onUpdateClick
+                      ) {
+                        onUpdateClick();
+                      }
+                    }}
+                    className={`group relative inline-flex h-5 w-5 items-center justify-center rounded-full text-sm transition-all hover:shadow-sm ${
+                      isAddressed
+                        ? "cursor-default bg-gray-100 text-gray-400"
+                        : colorClasses[colorScheme]
+                    }`}
+                    disabled={isAddressed}
+                  >
+                    <span>{icon}</span>
+                    {warnings.length > 1 && (
+                      <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-amber-500 text-[9px] text-white">
+                        {warnings.length}
+                      </span>
+                    )}
+                  </button>
+                </Tooltip>
+              );
+            }
+
+            // Default: non-actionable warnings → show static icon
             return (
               <Tooltip content={warnings.map((w) => w.message).join("; ")}>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    if (primaryWarning.action === "remove") {
-                      onDecision("remove");
-                    } else if (primaryWarning.action === "update" && onUpdateClick) {
-                      onUpdateClick();
-                    }
-                  }}
-                  className={`group relative inline-flex h-5 w-5 items-center justify-center rounded-full text-sm transition-all hover:shadow-sm ${
-                    isAddressed
-                      ? "bg-gray-100 text-gray-400 cursor-default"
-                      : colorClasses[colorScheme]
-                  }`}
-                  disabled={isAddressed}
-                >
-                  <span>{icon}</span>
+                <span className="inline-flex h-5 items-center justify-center rounded-full bg-amber-50 px-2 text-xs font-medium text-amber-600">
+                  ⚠
                   {warnings.length > 1 && (
-                    <span className="absolute -right-1 -top-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-amber-500 text-[9px] text-white">
-                      {warnings.length}
-                    </span>
+                    <span className="ml-1 text-[10px]">{warnings.length}</span>
                   )}
-                </button>
+                </span>
               </Tooltip>
             );
-          }
-
-          // Default: non-actionable warnings → show static icon
-          return (
-            <Tooltip content={warnings.map((w) => w.message).join("; ")}>
-              <span className="inline-flex h-5 items-center justify-center rounded-full bg-amber-50 px-2 text-xs font-medium text-amber-600">
-                ⚠
-                {warnings.length > 1 && (
-                  <span className="ml-1 text-[10px]">{warnings.length}</span>
-                )}
-              </span>
-            </Tooltip>
-          );
-        })()}
+          })()}
       </div>
       <div onClick={(e) => e.stopPropagation()}>
         {isUpdateTarget || readOnly ? (
@@ -524,6 +537,7 @@ function MandateRow({
   state,
   commentCount,
   isReviewer,
+  canReviewAnyEntity,
   userEmail,
   userEntity,
   onDecision,
@@ -540,6 +554,7 @@ function MandateRow({
   state?: MandateState;
   commentCount: number;
   isReviewer: boolean;
+  canReviewAnyEntity?: boolean;
   userEmail: string | null;
   userEntity: string | null;
   onDecision: (decision: Decision, newSymbol?: string) => void;
@@ -677,6 +692,7 @@ function MandateRow({
           onOpenChange={setSidebarOpen}
           state={state}
           isReviewer={isReviewer}
+          canReviewAnyEntity={canReviewAnyEntity}
           userEmail={userEmail}
           userEntity={userEntity}
           isFoundational={isFoundational}
@@ -712,6 +728,7 @@ function MandateRow({
             onOpenChange={setNewDocSidebarOpen}
             state={state}
             isReviewer={isReviewer}
+            canReviewAnyEntity={canReviewAnyEntity}
             userEmail={userEmail}
             userEntity={userEntity}
             onDecision={onDecision}
@@ -785,6 +802,7 @@ function MandateSection({
   addedMetadata,
   updateTargetMetadata,
   isReviewer,
+  canReviewAnyEntity,
   userEmail,
   userEntity,
   readOnly,
@@ -818,6 +836,7 @@ function MandateSection({
     { title: string | null; year: number | null; body: string | null } | null
   >;
   isReviewer: boolean;
+  canReviewAnyEntity?: boolean;
   userEmail: string | null;
   userEntity: string | null;
   readOnly?: boolean;
@@ -920,7 +939,11 @@ function MandateSection({
       switch (sortColumn) {
         case "symbol":
           // Use natural sort for symbols (handles A/RES/79/1, A/RES/79/10, A/RES/79/2 correctly)
-          const symbolsOrdered = orderBy([a, b], [(v) => v.symbol], [sortDirection === "asc" ? "asc" : "desc"]);
+          const symbolsOrdered = orderBy(
+            [a, b],
+            [(v) => v.symbol],
+            [sortDirection === "asc" ? "asc" : "desc"],
+          );
           return symbolsOrdered[0] === a ? -1 : 1;
         case "title":
           // Empty titles sort last
@@ -929,7 +952,7 @@ function MandateSection({
           if (!titleA && titleB) return sortDirection === "asc" ? 1 : -1;
           if (titleA && !titleB) return sortDirection === "asc" ? -1 : 1;
           comparison = titleA.localeCompare(titleB);
-          
+
           // Secondary sort by year when titles are equal
           if (comparison === 0) {
             if (a.year === null && b.year !== null) comparison = 1;
@@ -937,10 +960,14 @@ function MandateSection({
             else if (a.year !== null && b.year !== null) {
               comparison = (a.year ?? 0) - (b.year ?? 0);
             }
-            
+
             // Tertiary sort by symbol (natural sort) when year is also equal
             if (comparison === 0) {
-              const symbolsOrdered = orderBy([a, b], [(v) => v.symbol], ["asc"]);
+              const symbolsOrdered = orderBy(
+                [a, b],
+                [(v) => v.symbol],
+                ["asc"],
+              );
               comparison = symbolsOrdered[0] === a ? -1 : 1;
             }
           }
@@ -960,7 +987,7 @@ function MandateSection({
             return sortDirection === "asc" ? -1 : 1;
           if (a.year === null && b.year === null) return 0;
           comparison = (a.year ?? 0) - (b.year ?? 0);
-          
+
           // Secondary sort by title when years are equal
           if (comparison === 0) {
             const titleA = a.title || "";
@@ -1015,10 +1042,12 @@ function MandateSection({
               ...sortedMandates.map((m) => states[stateKey(m.symbol)]),
               ...addedMandates.map((m) => states[stateKey(m.symbol)]),
             ].filter((s) => s?.decision);
-            
+
             // Check if all are approved
-            const allApproved = allDecisions.every((s) => s!.decision!.approvedBy);
-            
+            const allApproved = allDecisions.every(
+              (s) => s!.decision!.approvedBy,
+            );
+
             // Toggle: if all approved, unapprove all; otherwise approve all
             allDecisions.forEach((s) => {
               const id = s!.decision!.id;
@@ -1037,6 +1066,7 @@ function MandateSection({
               state={states[stateKey(m.symbol)]}
               commentCount={totalComments[m.symbol] || 0}
               isReviewer={isReviewer}
+              canReviewAnyEntity={canReviewAnyEntity}
               userEmail={userEmail}
               userEntity={userEntity}
               readOnly={readOnly}
@@ -1064,6 +1094,7 @@ function MandateSection({
               state={states[stateKey(m.symbol)]}
               commentCount={totalComments[m.symbol] || 0}
               isReviewer={isReviewer}
+              canReviewAnyEntity={canReviewAnyEntity}
               userEmail={userEmail}
               userEntity={userEntity}
               allSymbols={allSymbols}
@@ -1100,6 +1131,7 @@ export function EntityDetail({
     {},
   );
   const [isReviewer, setIsReviewer] = useState(false);
+  const [canReviewAnyEntity, setCanReviewAnyEntity] = useState(false);
   const [userEmail, setUserEmail] = useState<string | null>(null);
   const [userEntity, setUserEntity] = useState<string | null>(null);
   const [addedMetadata, setAddedMetadata] = useState<
@@ -1120,10 +1152,10 @@ export function EntityDetail({
     >
   >({});
 
-  // Check if user owns this entity (can edit)
+  // Check if user owns this entity (can edit) or can review any entity (DMSPC)
   const isOwnEntity = useMemo(() => {
-    return userEntity === entity;
-  }, [userEntity, entity]);
+    return userEntity === entity || canReviewAnyEntity;
+  }, [userEntity, entity, canReviewAnyEntity]);
 
   // Set of background mandate symbols (for foundational highlighting in legislative sections)
   const foundationalSymbols = useMemo(
@@ -1148,6 +1180,7 @@ export function EntityDetail({
       .then((result) => {
         if (result.success && result.data) {
           setIsReviewer(result.data.isReviewer ?? false);
+          setCanReviewAnyEntity(result.data.canReviewAnyEntity ?? false);
           setUserEmail(result.data.email);
           setUserEntity(result.data.entity ?? null);
         }
@@ -1606,6 +1639,7 @@ export function EntityDetail({
     addedMetadata,
     updateTargetMetadata,
     isReviewer,
+    canReviewAnyEntity,
     userEmail,
     userEntity,
     onApprove: handleApprove,
@@ -1629,7 +1663,7 @@ export function EntityDetail({
   return (
     <div className="space-y-5">
       {/* Read-only notice */}
-      {!isOwnEntity && userEntity && (
+      {!isOwnEntity && userEntity && !canReviewAnyEntity && (
         <div className="border-l-4 border-un-blue bg-gray-50 px-6 py-3">
           <p className="text-sm text-gray-600">
             You are viewing{" "}
@@ -1637,6 +1671,16 @@ export function EntityDetail({
             entity is{" "}
             <span className="font-medium text-un-blue">{userEntity}</span>. You
             can only make housekeeping decisions for your own entity.
+          </p>
+        </div>
+      )}
+      {canReviewAnyEntity && userEntity !== entity && (
+        <div className="border-l-4 border-amber-500 bg-amber-50 px-6 py-3">
+          <p className="text-sm text-gray-700">
+            <span className="font-medium text-amber-700">Reviewer Mode:</span>{" "}
+            You are reviewing{" "}
+            <span className="font-medium text-un-blue">{entity}</span>. As a
+            reviewer, you can make decisions and approve them for any entity.
           </p>
         </div>
       )}
