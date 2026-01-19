@@ -1,5 +1,4 @@
 import { EntityDetail } from "@/components/EntityDetail";
-import Footer from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { getCurrentUser } from "@/lib/auth/auth";
 import {
@@ -60,25 +59,22 @@ export default async function EntityPage({ params }: PageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      <main className="mx-auto max-w-7xl px-3 py-8 sm:px-4">
-        <Header user={user} entities={entities} />
-        <Link
-          href="/"
-          className="mb-6 inline-flex items-center gap-2 text-sm text-gray-500 transition-colors hover:text-un-blue"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          <span>Back to all entities</span>
-        </Link>
-        <EntityDetail
-          entity={entityData.entity}
-          entityLong={entityData.entityLong}
-          partName={partName}
-          backgroundMandates={entityData.backgroundMandates}
-          legislativeMandates={entityData.legislativeMandates}
-        />
-      </main>
-      <Footer />
-    </div>
+    <main className="mx-auto max-w-7xl px-3 py-8 sm:px-4">
+      <Header user={user} entities={entities} />
+      <Link
+        href="/"
+        className="mb-6 inline-flex items-center gap-2 text-sm text-gray-500 transition-colors hover:text-un-blue"
+      >
+        <ArrowLeft className="h-4 w-4" />
+        <span>Back to all entities</span>
+      </Link>
+      <EntityDetail
+        entity={entityData.entity}
+        entityLong={entityData.entityLong}
+        partName={partName}
+        backgroundMandates={entityData.backgroundMandates}
+        legislativeMandates={entityData.legislativeMandates}
+      />
+    </main>
   );
 }

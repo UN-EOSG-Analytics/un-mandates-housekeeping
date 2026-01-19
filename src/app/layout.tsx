@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import { SITE_SUBTITLE, SITE_TITLE } from "@/components/Header";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
@@ -35,8 +36,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${roboto.className} antialiased`}>
-      <body>
-        {children}
+      <body className="flex min-h-screen flex-col bg-background">
+        <div className="flex-1">{children}</div>
+        <Footer />
         <GoogleAnalytics gaId="G-XYZ" />
       </body>
     </html>

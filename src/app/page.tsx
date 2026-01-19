@@ -1,5 +1,4 @@
 import { EntityOverview } from "@/components/EntityOverview";
-import Footer from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { getCurrentUser } from "@/lib/auth/auth";
 import {
@@ -33,12 +32,9 @@ export default async function Home() {
   ]);
 
   return (
-    <div className="min-h-screen bg-background">
-      <main className="mx-auto max-w-7xl px-3 py-8 sm:px-4">
-        <Header user={user} entities={entities} />
-        <EntityOverview parts={parts} userEntity={user?.entity} />
-      </main>
-      <Footer />
-    </div>
+    <main className="mx-auto max-w-7xl px-3 py-8 sm:px-4">
+      <Header user={user} entities={entities} />
+      <EntityOverview parts={parts} userEntity={user?.entity} />
+    </main>
   );
 }
