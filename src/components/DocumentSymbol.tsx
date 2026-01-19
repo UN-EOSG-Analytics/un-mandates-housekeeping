@@ -104,7 +104,7 @@ function ActivityMeta({
   viaEntity: string;
   subprogramme?: string | null;
   showSubprogramme?: boolean;
-  action: "decided" | "commented";
+  action: "decided" | "commented" | "approved";
 }) {
   const subLabel =
     showSubprogramme && subprogramme
@@ -1074,7 +1074,8 @@ export function DocumentSymbol({
                   {(() => {
                     type ActivityItem =
                       | { type: "decision"; data: MandateDecision }
-                      | { type: "comment"; data: MandateComment };
+                      | { type: "comment"; data: MandateComment }
+                      | { type: "approval"; data: MandateDecision };
                     const items: ActivityItem[] = [];
                     const filteredDecisions = activityFilterEntity
                       ? allDecisions.filter(
@@ -1086,14 +1087,25 @@ export function DocumentSymbol({
                           (c) => c.entity === activityFilterEntity,
                         )
                       : allComments;
-                    for (const d of filteredDecisions)
+                    for (const d of filteredDecisions) {
                       items.push({ type: "decision", data: d });
+                      // Add approval as separate activity item if decision is approved
+                      if (d.approvedBy && d.approvedAt) {
+                        items.push({ type: "approval", data: d });
+                      }
+                    }
                     for (const c of filteredComments)
                       items.push({ type: "comment", data: c });
                     items.sort(
-                      (a, b) =>
-                        new Date(a.data.createdAt).getTime() -
-                        new Date(b.data.createdAt).getTime(),
+                      (a, b) => {
+                        const aTime = a.type === "approval" 
+                          ? new Date((a.data as MandateDecision).approvedAt!).getTime()
+                          : new Date(a.data.createdAt).getTime();
+                        const bTime = b.type === "approval"
+                          ? new Date((b.data as MandateDecision).approvedAt!).getTime()
+                          : new Date(b.data.createdAt).getTime();
+                        return aTime - bTime;
+                      }
                     );
 
                     // Track which entities have multiple subprogrammes (from PPB + activity)
@@ -1161,19 +1173,11 @@ export function DocumentSymbol({
                                           : "text-blue-700"
                                   }`}
                                 >
-                                  {item.data.decision}
+                                  {item.data.decision.charAt(0).toUpperCase() + item.data.decision.slice(1)}
                                 </span>
                                 {(item.data as MandateDecision).newSymbol && (
                                   <span className="text-gray-500">
                                     → {(item.data as MandateDecision).newSymbol}
-                                  </span>
-                                )}
-                                {(item.data as MandateDecision).approvedBy && (
-                                  <span
-                                    className="ml-auto flex items-center gap-0.5 text-emerald-600"
-                                    title={`Approved by ${(item.data as MandateDecision).approvedBy}`}
-                                  >
-                                    <Check className="h-3.5 w-3.5" />
                                   </span>
                                 )}
                               </div>
@@ -1189,9 +1193,43 @@ export function DocumentSymbol({
                                 action="decided"
                               />
                             </div>
+                          ) : item.type === "approval" ? (
+                            <div className="rounded bg-emerald-50 p-2 border border-emerald-200">
+                              <div className="flex items-center gap-1">
+                                <Check className="h-3.5 w-3.5 text-emerald-600" />
+                                <span className="font-medium text-emerald-700">
+                                  Approved
+                                </span>
+                                <span className="text-gray-500">
+                                  {item.data.decision.charAt(0).toUpperCase() + item.data.decision.slice(1)}
+                                </span>
+                                {(item.data as MandateDecision).newSymbol && (
+                                  <span className="text-gray-500">
+                                    → {(item.data as MandateDecision).newSymbol}
+                                  </span>
+                                )}
+                              </div>
+                              <ActivityMeta
+                                userEmail={(item.data as MandateDecision).approvedBy!}
+                                userEntity={null}
+                                createdAt={(item.data as MandateDecision).approvedAt!}
+                                viaEntity={itemEntity}
+                                subprogramme={item.data.subprogramme}
+                                showSubprogramme={showSubprog}
+                                action="approved"
+                              />
+                            </div>
                           ) : (
-                            <div className="rounded bg-white p-2 shadow-sm">
-                              <div className="text-gray-700">
+                            <div className={`rounded p-2 shadow-sm ${
+                              (item.data as MandateComment).userEntity?.toUpperCase() === 'DMSPC'
+                                ? 'bg-amber-50 border border-amber-200'
+                                : 'bg-white'
+                            }`}>
+                              <div className={`${
+                                (item.data as MandateComment).userEntity?.toUpperCase() === 'DMSPC'
+                                  ? 'text-gray-800 font-medium'
+                                  : 'text-gray-700'
+                              }`}>
                                 {(item.data as MandateComment).comment}
                               </div>
                               <ActivityMeta

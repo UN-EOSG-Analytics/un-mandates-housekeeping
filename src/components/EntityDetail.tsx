@@ -274,7 +274,6 @@ function MandateRowContent({
   const currentDecision = state?.decision;
 
   const isAddedDecision = isAdded && currentDecision?.decision === "add";
-  const canCancel = isAdded && isAddedDecision;
 
   // Check if this row has an update or remove decision (to grey out content)
   const hasUpdate = currentDecision?.decision === "update";
@@ -464,8 +463,6 @@ function MandateRowContent({
         ) : isAdded ? (
           <AddBadge
             show={!!isAddedDecision}
-            canCancel={!!canCancel}
-            onCancel={() => onDecision("cancel")}
           />
         ) : (
           <DecisionDropdown
@@ -745,26 +742,13 @@ function MandateRow({
 
 function AddBadge({
   show,
-  canCancel,
-  onCancel,
 }: {
   show: boolean;
-  canCancel: boolean;
-  onCancel: () => void;
 }) {
   if (!show) return <span className="text-xs text-gray-400">—</span>;
   return (
-    <span className="inline-flex h-7 w-20 items-center rounded border border-blue-200 bg-blue-50 pr-px pl-2 text-xs text-blue-700">
-      <span className="flex-1">Add</span>
-      {canCancel && (
-        <button
-          onClick={onCancel}
-          className="rounded p-0.5 hover:bg-blue-100"
-          title="Cancel"
-        >
-          <X className="h-3 w-3" />
-        </button>
-      )}
+    <span className="inline-flex h-7 w-20 items-center justify-center rounded border border-blue-200 bg-blue-50 px-2 text-xs text-blue-700">
+      <span>Add</span>
     </span>
   );
 }
@@ -1350,7 +1334,7 @@ export function EntityDetail({
         }));
       }
     },
-    [entity, userEmail],
+    [entity, userEmail, userEntity],
   );
 
   const handleUpdateWithManual = useCallback(
@@ -1428,7 +1412,7 @@ export function EntityDetail({
         }));
       }
     },
-    [entity, userEmail],
+    [entity, userEmail, userEntity],
   );
 
   const handleAddManual = useCallback(
@@ -1501,7 +1485,7 @@ export function EntityDetail({
         }));
       }
     },
-    [entity, userEmail],
+    [entity, userEmail, userEntity],
   );
 
   const handleComment = useCallback(
@@ -1555,7 +1539,7 @@ export function EntityDetail({
         }));
       }
     },
-    [entity, userEmail],
+    [entity, userEmail, userEntity],
   );
 
   const handleApprove = useCallback(
