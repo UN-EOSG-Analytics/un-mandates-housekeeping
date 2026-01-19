@@ -1297,6 +1297,7 @@ export function EntityDetail({
         userEntity,
         createdAt: now,
         approvedBy: null,
+        approvedByEntity: null,
         approvedAt: null,
       };
       // Optimistic update
@@ -1365,6 +1366,7 @@ export function EntityDetail({
         userEntity,
         createdAt: now,
         approvedBy: null,
+        approvedByEntity: null,
         approvedAt: null,
       };
       // Optimistic update
@@ -1438,6 +1440,7 @@ export function EntityDetail({
         userEntity,
         createdAt: now,
         approvedBy: null,
+        approvedByEntity: null,
         approvedAt: null,
       };
       // Optimistic update
@@ -1502,6 +1505,8 @@ export function EntityDetail({
         userEmail,
         userEntity,
         createdAt: now,
+        resolvedAt: null,
+        resolvedBy: null,
       };
       // Optimistic update
       setStates((prev) => ({

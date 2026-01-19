@@ -3,7 +3,7 @@
 
 import { getAgeIndicator } from "@/lib/services/age-indicator";
 import { fetchParagraphs } from "@/lib/services/client/client-data-service";
-import { getDocumentDecisionsAction } from "@/lib/services/housekeeping-actions";
+import { getDocumentDecisionsAction, resolveCommentAction } from "@/lib/services/housekeeping-actions";
 import type {
   Decision,
   EntityRelevance,
@@ -15,8 +15,10 @@ import type {
 import {
   AlertTriangle,
   Check,
+  CheckCircle2,
   ChevronDown,
   Loader2,
+  MessageSquare,
   Sparkles,
   Star,
   X,
@@ -111,16 +113,16 @@ function ActivityMeta({
       ? ` / ${subprogramme.replace(/^Subprogramme \d+[.:]\s*/i, "Sub ")}`
       : "";
   return (
-    <div className="mt-1 flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-gray-400">
-      <span>{userEmail}</span>
+    <div className="mt-1.5 flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[11px] text-gray-400">
+      <span className="font-medium text-gray-500">{userEmail}</span>
       {userEntity && (
-        <span className="rounded bg-gray-100 px-1 py-0.5 text-[10px] font-medium text-gray-500">
+        <span className="rounded bg-gray-100 px-1.5 py-0.5 text-[10px] font-medium text-gray-500">
           {userEntity}
         </span>
       )}
-      <span>·</span>
+      <span className="text-gray-300">·</span>
       <span>{new Date(createdAt).toLocaleDateString()}</span>
-      <span className="text-gray-500">
+      <span className="text-gray-400">
         {action} on{" "}
         <span className="font-medium text-un-blue">
           {viaEntity}
@@ -505,6 +507,9 @@ export function DocumentSymbol({
   const [activityFilterEntity, setActivityFilterEntity] = useState<
     string | null
   >(null);
+  const [activityFilterType, setActivityFilterType] = useState<
+    "all" | "comments"
+  >("all");
   const [paragraphs, setParagraphs] = useState<Paragraph[] | null>(null);
   const [loading, setLoading] = useState(false);
   const [commentText, setCommentText] = useState("");
@@ -562,6 +567,7 @@ export function DocumentSymbol({
         userEntity: userEntity ?? null,
         createdAt: new Date().toISOString(),
         approvedBy: null,
+        approvedByEntity: null,
         approvedAt: null,
       };
       setAllDecisions((prev) => [...prev, newDecision]);
@@ -584,6 +590,8 @@ export function DocumentSymbol({
         userEmail: userEmail || "",
         userEntity: userEntity ?? null,
         createdAt: new Date().toISOString(),
+        resolvedAt: null,
+        resolvedBy: null,
       };
       setAllComments((prev) => [...prev, newComment]);
       onComment(comment);
@@ -952,7 +960,19 @@ export function DocumentSymbol({
                                       <button
                                         onClick={() => {
                                           if (canApprove && decisionId) {
-                                            onApprove(decisionId, !isApproved);
+                                            const newApproved = !isApproved;
+                                            // Update local state for activity display
+                                            setAllDecisions(prev => prev.map(d => 
+                                              d.id === decisionId 
+                                                ? {
+                                                    ...d,
+                                                    approvedBy: newApproved ? userEmail || null : null,
+                                                    approvedByEntity: newApproved ? userEntity || null : null,
+                                                    approvedAt: newApproved ? new Date().toISOString() : null,
+                                                  }
+                                                : d
+                                            ));
+                                            onApprove(decisionId, newApproved);
                                           }
                                         }}
                                         disabled={!canApprove}
@@ -1070,12 +1090,41 @@ export function DocumentSymbol({
                       </div>
                     </div>
                   )}
+                  {/* Type filter toggle */}
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => setActivityFilterType("all")}
+                      className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
+                        activityFilterType === "all"
+                          ? "bg-gray-700 text-white"
+                          : "bg-white text-gray-500 hover:bg-gray-100"
+                      }`}
+                    >
+                      All activity
+                    </button>
+                    <button
+                      onClick={() => setActivityFilterType("comments")}
+                      className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-medium transition-colors ${
+                        activityFilterType === "comments"
+                          ? "bg-amber-500 text-white"
+                          : "bg-white text-gray-500 hover:bg-gray-100"
+                      }`}
+                    >
+                      <MessageSquare className="h-3 w-3" />
+                      Comments only
+                      {allComments.length > 0 && (
+                        <span className={activityFilterType === "comments" ? "text-white/70" : "text-gray-400"}>
+                          ({allComments.length})
+                        </span>
+                      )}
+                    </button>
+                  </div>
                   {/* Activity log (all decisions + comments interleaved) */}
                   {(() => {
                     type ActivityItem =
-                      | { type: "decision"; data: MandateDecision }
+                      | { type: "decision"; data: MandateDecision; isSuperseded: boolean }
                       | { type: "comment"; data: MandateComment }
-                      | { type: "approval"; data: MandateDecision };
+                      | { type: "approval"; data: MandateDecision; isSuperseded: boolean };
                     const items: ActivityItem[] = [];
                     const filteredDecisions = activityFilterEntity
                       ? allDecisions.filter(
@@ -1087,11 +1136,30 @@ export function DocumentSymbol({
                           (c) => c.entity === activityFilterEntity,
                         )
                       : allComments;
-                    for (const d of filteredDecisions) {
-                      items.push({ type: "decision", data: d });
-                      // Add approval as separate activity item if decision is approved
-                      if (d.approvedBy && d.approvedAt) {
-                        items.push({ type: "approval", data: d });
+                    
+                    // Track latest decision per entity/subprogramme to identify superseded ones
+                    const latestDecisionByKey = new Map<string, string>();
+                    // Sort by createdAt descending to find latest
+                    const sortedDecisions = [...filteredDecisions].sort(
+                      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+                    );
+                    for (const d of sortedDecisions) {
+                      const key = `${d.entity}:${d.subprogramme || ""}`;
+                      if (!latestDecisionByKey.has(key)) {
+                        latestDecisionByKey.set(key, d.id);
+                      }
+                    }
+                    
+                    // Only add decisions/approvals if not filtering to comments only
+                    if (activityFilterType === "all") {
+                      for (const d of filteredDecisions) {
+                        const key = `${d.entity}:${d.subprogramme || ""}`;
+                        const isSuperseded = latestDecisionByKey.get(key) !== d.id || d.decision === "cancel";
+                        items.push({ type: "decision", data: d, isSuperseded });
+                        // Add approval as separate activity item if decision is approved
+                        if (d.approvedBy && d.approvedAt) {
+                          items.push({ type: "approval", data: d, isSuperseded });
+                        }
                       }
                     }
                     for (const c of filteredComments)
@@ -1138,7 +1206,9 @@ export function DocumentSymbol({
                     if (items.length === 0) {
                       return (
                         <div className="text-sm text-gray-400">
-                          No activity yet
+                          {activityFilterType === "comments" 
+                            ? "No comments yet" 
+                            : "No activity yet"}
                         </div>
                       );
                     }
@@ -1147,136 +1217,216 @@ export function DocumentSymbol({
                       const itemEntity = item.data.entity;
                       const showSubprog =
                         entitiesWithMultiSubprogs.has(itemEntity);
-                      return (
-                        <div key={item.data.id || i} className="text-xs">
-                          {item.type === "decision" ? (
+                      
+                      // Decision items (retain, remove, update, etc.)
+                      if (item.type === "decision") {
+                        const decision = item.data as MandateDecision;
+                        const isSuperseded = item.isSuperseded;
+                        return (
+                          <div key={decision.id || i} className={`text-xs ${isSuperseded ? 'opacity-50' : ''}`}>
                             <div
-                              className={`rounded p-2 ${
-                                item.data.decision === "retain"
-                                  ? "bg-green-50"
-                                  : item.data.decision === "remove"
-                                    ? "bg-red-50"
-                                    : item.data.decision === "update"
-                                      ? "bg-amber-50"
-                                      : "bg-blue-50"
+                              className={`rounded-lg border-l-4 p-3 ${
+                                decision.decision === "retain"
+                                  ? "border-l-green-500 bg-green-50/50"
+                                  : decision.decision === "remove"
+                                    ? "border-l-red-500 bg-red-50/50"
+                                    : decision.decision === "update"
+                                      ? "border-l-amber-500 bg-amber-50/50"
+                                      : decision.decision === "cancel"
+                                        ? "border-l-gray-400 bg-gray-50"
+                                        : "border-l-blue-500 bg-blue-50/50"
                               }`}
                             >
-                              <div className="flex items-center gap-1">
+                              <div className="flex items-center gap-2">
                                 <span
-                                  className={`font-medium ${
-                                    item.data.decision === "retain"
+                                  className={`text-sm font-semibold ${
+                                    decision.decision === "retain"
                                       ? "text-green-700"
-                                      : item.data.decision === "remove"
+                                      : decision.decision === "remove"
                                         ? "text-red-700"
-                                        : item.data.decision === "update"
+                                        : decision.decision === "update"
                                           ? "text-amber-700"
-                                          : "text-blue-700"
+                                          : decision.decision === "cancel"
+                                            ? "text-gray-500"
+                                            : "text-blue-700"
                                   }`}
                                 >
-                                  {item.data.decision.charAt(0).toUpperCase() + item.data.decision.slice(1)}
+                                  {decision.decision.charAt(0).toUpperCase() + decision.decision.slice(1)}
                                 </span>
-                                {(item.data as MandateDecision).newSymbol && (
+                                {decision.newSymbol && (
                                   <span className="text-gray-500">
-                                    → {(item.data as MandateDecision).newSymbol}
+                                    → {decision.newSymbol}
                                   </span>
                                 )}
                               </div>
                               <ActivityMeta
-                                userEmail={item.data.userEmail}
-                                userEntity={
-                                  (item.data as MandateDecision).userEntity
-                                }
-                                createdAt={item.data.createdAt}
+                                userEmail={decision.userEmail}
+                                userEntity={decision.userEntity}
+                                createdAt={decision.createdAt}
                                 viaEntity={itemEntity}
-                                subprogramme={item.data.subprogramme}
+                                subprogramme={decision.subprogramme}
                                 showSubprogramme={showSubprog}
                                 action="decided"
                               />
                             </div>
-                          ) : item.type === "approval" ? (
-                            <div className="rounded bg-emerald-50 p-2 border border-emerald-200">
-                              <div className="flex items-center gap-1">
-                                <Check className="h-3.5 w-3.5 text-emerald-600" />
-                                <span className="font-medium text-emerald-700">
+                          </div>
+                        );
+                      }
+                      
+                      // Approval items
+                      if (item.type === "approval") {
+                        const decision = item.data as MandateDecision;
+                        const isSuperseded = item.isSuperseded;
+                        return (
+                          <div key={`approval-${decision.id}`} className={`text-xs ${isSuperseded ? 'opacity-50' : ''}`}>
+                            <div className="rounded-lg border border-emerald-200 bg-emerald-50/50 p-3">
+                              <div className="flex items-center gap-2">
+                                <div className={`flex h-5 w-5 items-center justify-center rounded-full ${isSuperseded ? 'bg-emerald-400' : 'bg-emerald-500'}`}>
+                                  <Check className="h-3 w-3 text-white" />
+                                </div>
+                                <span className="text-sm font-semibold text-emerald-700">
                                   Approved
                                 </span>
                                 <span className="text-gray-500">
-                                  {item.data.decision.charAt(0).toUpperCase() + item.data.decision.slice(1)}
+                                  {decision.decision.charAt(0).toUpperCase() + decision.decision.slice(1)}
                                 </span>
-                                {(item.data as MandateDecision).newSymbol && (
+                                {decision.newSymbol && (
                                   <span className="text-gray-500">
-                                    → {(item.data as MandateDecision).newSymbol}
+                                    → {decision.newSymbol}
                                   </span>
                                 )}
                               </div>
                               <ActivityMeta
-                                userEmail={(item.data as MandateDecision).approvedBy!}
-                                userEntity={null}
-                                createdAt={(item.data as MandateDecision).approvedAt!}
+                                userEmail={decision.approvedBy!}
+                                userEntity={decision.approvedByEntity}
+                                createdAt={decision.approvedAt!}
                                 viaEntity={itemEntity}
-                                subprogramme={item.data.subprogramme}
+                                subprogramme={decision.subprogramme}
                                 showSubprogramme={showSubprog}
                                 action="approved"
                               />
                             </div>
-                          ) : (
-                            <div className={`rounded p-2 shadow-sm ${
-                              (item.data as MandateComment).userEntity?.toUpperCase() === 'DMSPC'
-                                ? 'bg-amber-50 border border-amber-200'
-                                : 'bg-white'
-                            }`}>
-                              <div className={`${
-                                (item.data as MandateComment).userEntity?.toUpperCase() === 'DMSPC'
-                                  ? 'text-gray-800 font-medium'
-                                  : 'text-gray-700'
-                              }`}>
-                                {(item.data as MandateComment).comment}
+                          </div>
+                        );
+                      }
+                      
+                      // Comment items
+                      const comment = item.data as MandateComment;
+                      const isReviewerComment = comment.userEntity?.toUpperCase() === 'DMSPC';
+                      const isResolved = !!comment.resolvedAt;
+                      
+                      return (
+                        <div key={comment.id || i} className="text-xs">
+                          <div className={`rounded-lg border p-3 transition-all ${
+                            isResolved
+                              ? 'border-gray-200 bg-gray-50 opacity-60'
+                              : isReviewerComment
+                                ? 'border-amber-300 bg-amber-50/70 shadow-sm'
+                                : 'border-gray-200 bg-white'
+                          }`}>
+                            <div className="flex items-start gap-2">
+                              <MessageSquare className={`mt-0.5 h-4 w-4 shrink-0 ${
+                                isResolved
+                                  ? 'text-gray-400'
+                                  : isReviewerComment
+                                    ? 'text-amber-500'
+                                    : 'text-gray-400'
+                              }`} />
+                              <div className="min-w-0 flex-1">
+                                <div className={`leading-relaxed ${
+                                  isResolved
+                                    ? 'text-gray-500 line-through'
+                                    : isReviewerComment
+                                      ? 'text-gray-800 font-medium'
+                                      : 'text-gray-700'
+                                }`}>
+                                  {comment.comment}
+                                </div>
+                                <ActivityMeta
+                                  userEmail={comment.userEmail}
+                                  userEntity={comment.userEntity}
+                                  createdAt={comment.createdAt}
+                                  viaEntity={itemEntity}
+                                  subprogramme={comment.subprogramme}
+                                  showSubprogramme={showSubprog}
+                                  action="commented"
+                                />
+                                {/* Mark as resolved button for reviewer comments */}
+                                {isReviewerComment && !isResolved && (
+                                  <button
+                                    onClick={async () => {
+                                      const result = await resolveCommentAction(comment.id, true);
+                                      if (result.success && result.data) {
+                                        // Update the comment in local state
+                                        setAllComments(prev => prev.map(c => 
+                                          c.id === comment.id ? result.data! : c
+                                        ));
+                                      }
+                                    }}
+                                    className="mt-2 inline-flex items-center gap-1 rounded-md bg-amber-100 px-2 py-1 text-[10px] font-medium text-amber-700 hover:bg-amber-200 transition-colors"
+                                  >
+                                    <CheckCircle2 className="h-3 w-3" />
+                                    Mark as resolved
+                                  </button>
+                                )}
+                                {isResolved && (
+                                  <div className="mt-2 flex items-center gap-2">
+                                    <span className="inline-flex items-center gap-1 text-[10px] text-gray-400">
+                                      <CheckCircle2 className="h-3 w-3" />
+                                      Resolved by {comment.resolvedBy} on {new Date(comment.resolvedAt!).toLocaleDateString()}
+                                    </span>
+                                    <button
+                                      onClick={async () => {
+                                        const result = await resolveCommentAction(comment.id, false);
+                                        if (result.success && result.data) {
+                                          setAllComments(prev => prev.map(c => 
+                                            c.id === comment.id ? result.data! : c
+                                          ));
+                                        }
+                                      }}
+                                      className="text-[10px] text-gray-400 underline hover:text-gray-600 transition-colors"
+                                    >
+                                      Reopen
+                                    </button>
+                                  </div>
+                                )}
                               </div>
-                              <ActivityMeta
-                                userEmail={item.data.userEmail}
-                                userEntity={
-                                  (item.data as MandateComment).userEntity
-                                }
-                                createdAt={item.data.createdAt}
-                                viaEntity={itemEntity}
-                                subprogramme={item.data.subprogramme}
-                                showSubprogramme={showSubprog}
-                                action="commented"
-                              />
                             </div>
-                          )}
+                          </div>
                         </div>
                       );
                     });
                   })()}
                   {/* Add comment input */}
                   {onComment && (
-                    <div className="flex gap-2 pt-2">
-                      <input
-                        type="text"
-                        value={commentText}
-                        onChange={(e) => setCommentText(e.target.value)}
-                        onKeyDown={(e) => {
-                          if (e.key === "Enter" && commentText.trim()) {
-                            handleComment(commentText.trim());
-                            setCommentText("");
-                          }
-                        }}
-                        placeholder={`Add a comment for ${entity}...`}
-                        className="flex-1 rounded border border-gray-200 bg-white px-2 py-1.5 text-xs"
-                      />
-                      <button
-                        onClick={() => {
-                          if (commentText.trim()) {
-                            handleComment(commentText.trim());
-                            setCommentText("");
-                          }
-                        }}
-                        disabled={!commentText.trim()}
-                        className="rounded bg-un-blue px-3 py-1.5 text-xs text-white disabled:opacity-50"
-                      >
-                        Send
-                      </button>
+                    <div className="mt-4 rounded-lg border border-gray-200 bg-white p-3">
+                      <div className="flex gap-2">
+                        <input
+                          type="text"
+                          value={commentText}
+                          onChange={(e) => setCommentText(e.target.value)}
+                          onKeyDown={(e) => {
+                            if (e.key === "Enter" && commentText.trim()) {
+                              handleComment(commentText.trim());
+                              setCommentText("");
+                            }
+                          }}
+                          placeholder={`Add a comment for ${entity}...`}
+                          className="flex-1 rounded-md border border-gray-200 bg-gray-50 px-3 py-2 text-xs placeholder:text-gray-400 focus:border-un-blue focus:bg-white focus:outline-none focus:ring-1 focus:ring-un-blue"
+                        />
+                        <button
+                          onClick={() => {
+                            if (commentText.trim()) {
+                              handleComment(commentText.trim());
+                              setCommentText("");
+                            }
+                          }}
+                          disabled={!commentText.trim()}
+                          className="rounded-md bg-un-blue px-4 py-2 text-xs font-medium text-white transition-colors hover:bg-un-blue/90 disabled:opacity-50"
+                        >
+                          Send
+                        </button>
+                      </div>
                     </div>
                   )}
                 </div>

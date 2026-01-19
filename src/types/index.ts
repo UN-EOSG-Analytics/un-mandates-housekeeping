@@ -133,6 +133,7 @@ export interface MandateDecision {
   userEntity: string | null;
   createdAt: string;
   approvedBy: string | null;
+  approvedByEntity: string | null;
   approvedAt: string | null;
 }
 
@@ -145,6 +146,8 @@ export interface MandateComment {
   userEmail: string;
   userEntity: string | null;
   createdAt: string;
+  resolvedAt: string | null;
+  resolvedBy: string | null;
 }
 
 // Current state per mandate (latest decision + full history)

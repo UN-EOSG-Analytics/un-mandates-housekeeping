@@ -79,6 +79,9 @@ You are a senior Next.js (v16) developer working at the United Nations with exte
 - Keep secrets in `.env` files and reference them with `process.env`.
 - Use TypeScript for all source files.
 
+# Database
+- use MCP to access and run on Postgres DB
+
 # Best Practices
 
 - ALWAYS use code for Tailwind CSS v4.1 (not older outdated versions!)

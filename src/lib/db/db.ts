@@ -11,6 +11,9 @@ export const pool =
     max: 2, // Vercel Serverless Functions, no PgBouncer on Azure
     idleTimeoutMillis: 30000,
     connectionTimeoutMillis: 2000,
+    ssl: {
+      rejectUnauthorized: true, // equivalent to sslmode=verify-full
+    },
   });
 
 if (process.env.NODE_ENV !== "production") {

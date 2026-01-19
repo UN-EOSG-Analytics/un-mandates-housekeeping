@@ -29,6 +29,7 @@ interface DecisionRow {
   user_entity: string | null;
   created_at: string;
   approved_by: string | null;
+  approved_by_entity: string | null;
   approved_at: string | null;
 }
 
@@ -41,6 +42,8 @@ interface CommentRow {
   user_email: string;
   user_entity: string | null;
   created_at: string;
+  resolved_at: string | null;
+  resolved_by: string | null;
 }
 
 const toDecision = (row: DecisionRow): MandateDecision => ({
@@ -55,6 +58,7 @@ const toDecision = (row: DecisionRow): MandateDecision => ({
   userEntity: row.user_entity,
   createdAt: row.created_at,
   approvedBy: row.approved_by,
+  approvedByEntity: row.approved_by_entity,
   approvedAt: row.approved_at,
 });
 
@@ -67,6 +71,8 @@ const toComment = (row: CommentRow): MandateComment => ({
   userEmail: row.user_email,
   userEntity: row.user_entity,
   createdAt: row.created_at,
+  resolvedAt: row.resolved_at,
+  resolvedBy: row.resolved_by,
 });
 
 /**
@@ -112,9 +118,10 @@ export async function getEntityDecisionsAction(entity: string): Promise<
   // Get all decisions, comments, and total comment counts per document
   const [decisionRows, commentRows, totalCommentRows] = await Promise.all([
     query<DecisionRow>(
-      `SELECT d.*, u.entity as user_entity
+      `SELECT d.*, u.entity as user_entity, approver.entity as approved_by_entity
        FROM mandates_housekeeping.mandate_decisions d
        LEFT JOIN mandates_housekeeping.users u ON d.user_email = u.email
+       LEFT JOIN mandates_housekeeping.users approver ON d.approved_by = approver.email
        WHERE d.entity = $1
        ORDER BY d.created_at`,
       [entity],
@@ -200,9 +207,10 @@ export async function getDocumentDecisionsAction(
 
   const [decisionRows, commentRows] = await Promise.all([
     query<DecisionRow>(
-      `SELECT d.*, u.entity as user_entity
+      `SELECT d.*, u.entity as user_entity, approver.entity as approved_by_entity
        FROM mandates_housekeeping.mandate_decisions d
        LEFT JOIN mandates_housekeeping.users u ON d.user_email = u.email
+       LEFT JOIN mandates_housekeeping.users approver ON d.approved_by = approver.email
        WHERE d.document_symbol = $1
        ORDER BY d.created_at`,
       [symbol],
@@ -285,7 +293,7 @@ export async function createDecisionAction(params: {
       VALUES ($1, $2, $3, $4, $5, $6, $7)
       RETURNING *
     )
-    SELECT i.*, u.entity as user_entity
+    SELECT i.*, u.entity as user_entity, NULL::text as approved_by_entity
     FROM inserted i
     LEFT JOIN mandates_housekeeping.users u ON i.user_email = u.email`,
     [
@@ -347,6 +355,60 @@ export async function createCommentAction(params: {
   );
 
   revalidatePath(`/entity/${entity}`);
+
+  return { success: true, data: toComment(rows[0]) };
+}
+
+/**
+ * Resolve or unresolve a comment
+ */
+export async function resolveCommentAction(
+  commentId: string,
+  resolved: boolean,
+): Promise<ActionResult<MandateComment>> {
+  const user = await getCurrentUser();
+  if (!user) {
+    return { success: false, error: "unauthorized" };
+  }
+
+  if (!commentId) {
+    return { success: false, error: "commentId required" };
+  }
+
+  // Get the comment to check permissions
+  const existingRows = await query<CommentRow>(
+    `SELECT c.*, u.entity as user_entity
+     FROM mandates_housekeeping.mandate_comments c
+     LEFT JOIN mandates_housekeeping.users u ON c.user_email = u.email
+     WHERE c.id = $1`,
+    [commentId],
+  );
+
+  if (existingRows.length === 0) {
+    return { success: false, error: "Comment not found" };
+  }
+
+  const existing = existingRows[0];
+
+  // Only DMSPC (reviewers) can resolve comments, or the entity can resolve their own comments
+  if (!user.canReviewAnyEntity && user.entity !== existing.entity) {
+    return { success: false, error: "Not authorized to resolve this comment" };
+  }
+
+  const rows = await query<CommentRow>(
+    `WITH updated AS (
+      UPDATE mandates_housekeeping.mandate_comments 
+      SET resolved_at = $2, resolved_by = $3
+      WHERE id = $1
+      RETURNING *
+    )
+    SELECT u2.*, users.entity as user_entity
+    FROM updated u2
+    LEFT JOIN mandates_housekeeping.users users ON u2.user_email = users.email`,
+    [commentId, resolved ? new Date().toISOString() : null, resolved ? user.email : null],
+  );
+
+  revalidatePath(`/entity/${existing.entity}`);
 
   return { success: true, data: toComment(rows[0]) };
 }
