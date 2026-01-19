@@ -513,8 +513,8 @@ export function DocumentSymbol({
   const [paragraphs, setParagraphs] = useState<Paragraph[] | null>(null);
   const [loading, setLoading] = useState(false);
   const [commentText, setCommentText] = useState("");
-  const [activeTab, setActiveTab] = useState<"activity" | "paragraphs">(
-    "activity",
+  const [activeTab, setActiveTab] = useState<"info" | "decisions" | "activity" | "paragraphs">(
+    "info",
   );
   const [allDecisions, setAllDecisions] = useState<MandateDecision[]>([]);
   const [allComments, setAllComments] = useState<MandateComment[]>([]);
@@ -688,98 +688,158 @@ export function DocumentSymbol({
             onClick={() => setOpen(false)}
           />
 
-          <div className="relative flex h-full w-full max-w-lg cursor-default flex-col bg-white shadow-xl">
-            <div className="border-b p-4 pb-3">
+          <div className="relative flex h-full w-full max-w-xl cursor-default flex-col bg-white shadow-xl">
+            <div className="border-b p-5 pb-0">
               <div className="flex items-start justify-between">
                 <div className="min-w-0 flex-1">
-                  <div className="text-lg font-semibold text-foreground">
-                    {symbol}
+                  <div className="flex items-center gap-3">
+                    <h2 className="text-xl font-semibold text-foreground">
+                      {symbol}
+                    </h2>
+                    {isFoundational && (
+                      <Tooltip content="Also cited in the Mandates and Background section">
+                        <span className="inline-flex items-center gap-1 rounded-full bg-un-blue/10 px-2.5 py-0.5 text-xs font-medium text-un-blue">
+                          <Star
+                            className="h-3 w-3 fill-un-blue"
+                            strokeWidth={0}
+                          />
+                          Foundational
+                        </span>
+                      </Tooltip>
+                    )}
                   </div>
                   {title && (
-                    <div className="text-sm text-gray-600">{title}</div>
-                  )}
-                  {isFoundational && (
-                    <Tooltip content="This mandate appears in both the legislative mandates and the foundational Mandates and Background section">
-                      <div className="mt-2 flex items-center gap-1.5 text-amber-600">
-                        <Star
-                          className="h-4 w-4 fill-amber-400"
-                          strokeWidth={0}
-                        />
-                        <span className="text-sm font-medium">
-                          Foundational mandate
-                        </span>
-                      </div>
-                    </Tooltip>
+                    <p className="mt-1 text-sm text-gray-500">{title}</p>
                   )}
                 </div>
                 <button
                   onClick={() => setOpen(false)}
-                  className="ml-2 rounded p-1 hover:bg-gray-100"
+                  className="ml-2 rounded-lg p-1.5 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600"
                 >
-                  <X className="h-4 w-4 text-gray-500" />
+                  <X className="h-5 w-5" />
                 </button>
               </div>
 
-              {/* Metadata */}
-              <div className="mt-4 space-y-2 text-sm">
-                {year &&
-                  (() => {
-                    const ageInfo = getAgeIndicator(year);
-                    return (
-                      <div className="flex items-center justify-between">
-                        <span className="text-gray-500">Year</span>
-                        <span className="flex items-center gap-2">
-                          <span className="text-gray-700">{year}</span>
-                          <Tooltip content={ageInfo.tooltip}>
-                            <span
-                              className={`rounded px-1.5 py-0.5 text-xs font-medium ${ageInfo.color} ${ageInfo.bgColor}`}
-                            >
-                              {ageInfo.label}
-                            </span>
-                          </Tooltip>
-                        </span>
-                      </div>
-                    );
-                  })()}
-                {body && (
-                  <div className="flex justify-between">
-                    <span className="text-gray-500">Issuing body</span>
-                    <span className="text-gray-700">{body}</span>
-                  </div>
-                )}
-                {docType && (
-                  <div className="flex justify-between">
-                    <span className="text-gray-500">Document type</span>
-                    <span className="text-gray-700">{docType}</span>
-                  </div>
-                )}
-                {otherEntitiesCount !== undefined && otherEntitiesCount > 0 && (
-                  <div className="flex justify-between">
-                    <span className="text-gray-500">Also cited by</span>
-                    <span className="text-gray-700">
-                      {otherEntitiesCount} other{" "}
-                      {otherEntitiesCount === 1 ? "entity" : "entities"}
+              {/* Tabs */}
+              <div className="mt-5 flex gap-1">
+                <button
+                  onClick={() => setActiveTab("info")}
+                  className={`rounded-t-lg px-4 py-2.5 text-sm font-medium transition-colors ${
+                    activeTab === "info"
+                      ? "bg-gray-100 text-gray-900"
+                      : "text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                  }`}
+                >
+                  Info
+                </button>
+                <button
+                  onClick={() => setActiveTab("decisions")}
+                  className={`rounded-t-lg px-4 py-2.5 text-sm font-medium transition-colors ${
+                    activeTab === "decisions"
+                      ? "bg-gray-100 text-gray-900"
+                      : "text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                  }`}
+                >
+                  Decisions
+                </button>
+                <button
+                  onClick={() => setActiveTab("activity")}
+                  className={`rounded-t-lg px-4 py-2.5 text-sm font-medium transition-colors ${
+                    activeTab === "activity"
+                      ? "bg-gray-100 text-gray-900"
+                      : "text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                  }`}
+                >
+                  Activity
+                  {allDecisions.length + allComments.length > 0 && (
+                    <span className="ml-1.5 rounded-full bg-gray-200 px-1.5 py-0.5 text-xs text-gray-600">
+                      {allDecisions.length + allComments.length}
                     </span>
-                  </div>
-                )}
-                {link && (
-                  <div className="flex justify-between">
-                    <span className="text-gray-500">Source</span>
-                    <a
-                      href={link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-un-blue hover:underline"
-                    >
-                      View PDF →
-                    </a>
-                  </div>
-                )}
+                  )}
+                </button>
+                <button
+                  onClick={() => setActiveTab("paragraphs")}
+                  className={`rounded-t-lg px-4 py-2.5 text-sm font-medium transition-colors ${
+                    activeTab === "paragraphs"
+                      ? "bg-gray-100 text-gray-900"
+                      : "text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                  }`}
+                >
+                  Paragraphs
+                  {paragraphs && paragraphs.length > 0 && (
+                    <span className="ml-1.5 rounded-full bg-gray-200 px-1.5 py-0.5 text-xs text-gray-600">
+                      {paragraphs.length}
+                    </span>
+                  )}
+                </button>
               </div>
+            </div>
 
-              {/* Decisions table */}
-              {(allEntities?.length || allDecisions.length > 0) &&
-                (() => {
+            <div className="flex-1 overflow-y-auto bg-gray-100 p-5">
+              {/* Info Tab */}
+              {activeTab === "info" && (
+                <div className="space-y-4">
+                  <div className="rounded-xl bg-white p-5 shadow-sm">
+                    <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-400">Document Details</h3>
+                      <dl className="space-y-3">
+                        {year && (() => {
+                          const ageInfo = getAgeIndicator(year);
+                          return (
+                            <div className="flex items-center justify-between py-2 border-b border-gray-100">
+                              <dt className="text-gray-500">Year</dt>
+                              <dd className="flex items-center gap-2 font-medium text-gray-900">
+                                {year}
+                                <Tooltip content={ageInfo.tooltip}>
+                                  <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${ageInfo.color} ${ageInfo.bgColor}`}>
+                                    {ageInfo.label}
+                                  </span>
+                                </Tooltip>
+                              </dd>
+                            </div>
+                          );
+                        })()}
+                        {body && (
+                          <div className="flex items-center justify-between py-2 border-b border-gray-100">
+                            <dt className="text-gray-500">Issuing body</dt>
+                            <dd className="font-medium text-gray-900">{body}</dd>
+                          </div>
+                        )}
+                        {docType && (
+                          <div className="flex items-center justify-between py-2 border-b border-gray-100">
+                            <dt className="text-gray-500">Document type</dt>
+                            <dd className="font-medium text-gray-900">{docType}</dd>
+                          </div>
+                        )}
+                        {otherEntitiesCount !== undefined && otherEntitiesCount > 0 && (
+                          <div className="flex items-center justify-between py-2 border-b border-gray-100">
+                            <dt className="text-gray-500">Also cited by</dt>
+                            <dd className="font-medium text-gray-900">
+                              {otherEntitiesCount} other {otherEntitiesCount === 1 ? "entity" : "entities"}
+                            </dd>
+                          </div>
+                        )}
+                        {link && (
+                          <div className="flex items-center justify-between py-2">
+                            <dt className="text-gray-500">Source</dt>
+                            <dd>
+                              <a
+                                href={link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1 font-medium text-un-blue hover:underline"
+                              >
+                                View PDF →
+                              </a>
+                            </dd>
+                          </div>
+                        )}
+                      </dl>
+                    </div>
+                </div>
+              )}
+
+              {/* Decisions Tab */}
+              {activeTab === "decisions" && (allEntities?.length || allDecisions.length > 0) && (() => {
                   // Merge subprogrammes from PPB data + decisions
                   const subprogsByEntity = new Map<
                     string,
@@ -875,22 +935,20 @@ export function DocumentSymbol({
                   };
 
                   return (
-                    <div className="mt-4 border-t pt-4">
-                      <div className="mb-2 text-xs font-medium text-gray-500 uppercase">
-                        Decisions
-                      </div>
-                      <div className="scrollbar-thin max-h-56 overflow-x-visible overflow-y-auto">
-                        <table className="w-full text-xs">
-                          <thead className="sticky top-0 z-10 border-b border-gray-200 bg-white shadow-sm">
+                    <div className="rounded-xl bg-white p-5 shadow-sm">
+                      <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-400">Entity Decisions</h3>
+                      <div className="scrollbar-thin overflow-x-visible overflow-y-auto">
+                        <table className="w-full text-sm">
+                          <thead className="border-b border-gray-200">
                             <tr className="text-gray-500">
-                              <th className="pt-2 pb-2 text-left text-[10px] font-semibold tracking-wider uppercase">
+                              <th className="pb-3 text-left text-xs font-semibold uppercase tracking-wider">
                                 Entity
                               </th>
-                              <th className="w-32 pt-2 pb-2 pl-3 text-left text-[10px] font-semibold tracking-wider uppercase">
+                              <th className="w-36 pb-3 pl-3 text-left text-xs font-semibold uppercase tracking-wider">
                                 Decision
                               </th>
-                              <th className="w-16 pt-2 pb-2 pl-3 text-left text-[10px] font-semibold tracking-wider uppercase">
-                                OK
+                              <th className="w-20 pb-3 pl-3 text-left text-xs font-semibold uppercase tracking-wider">
+                                Approved
                               </th>
                             </tr>
                           </thead>
@@ -923,14 +981,15 @@ export function DocumentSymbol({
                               return (
                                 <tr
                                   key={`${row.entity}:${row.subprogramme || ""}`}
+                                  className="border-b border-gray-100 last:border-0"
                                 >
                                   <td
-                                    className={`py-1.5 pr-3 font-medium ${isUserEntity ? "text-un-blue" : "text-gray-600"}`}
+                                    className={`py-3 pr-3 font-medium ${isUserEntity ? "text-un-blue" : "text-gray-700"}`}
                                     title={row.subprogramme || undefined}
                                   >
                                     {formatRowName(row)}
                                   </td>
-                                  <td className="py-1.5 pl-3">
+                                  <td className="py-3 pl-3">
                                     <DecisionDropdown
                                       decision={
                                         currentDecision?.decision || null
@@ -955,13 +1014,12 @@ export function DocumentSymbol({
                                       size="sm"
                                     />
                                   </td>
-                                  <td className="py-1.5 pl-3">
+                                  <td className="py-3 pl-3">
                                     {currentDecision ? (
                                       <button
                                         onClick={() => {
                                           if (canApprove && decisionId) {
                                             const newApproved = !isApproved;
-                                            // Update local state for activity display
                                             setAllDecisions(prev => prev.map(d => 
                                               d.id === decisionId 
                                                 ? {
@@ -983,12 +1041,12 @@ export function DocumentSymbol({
                                               ? "Click to approve"
                                               : ""
                                         }
-                                        className={`inline-flex h-6 w-6 items-center justify-center rounded transition-colors ${
+                                        className={`inline-flex h-7 w-7 items-center justify-center rounded-lg transition-colors ${
                                           isApproved
-                                            ? "bg-emerald-600 text-white"
+                                            ? "bg-emerald-500 text-white"
                                             : canApprove
-                                              ? "border border-gray-300 bg-white hover:border-emerald-400 hover:bg-emerald-50"
-                                              : "border border-gray-200 bg-gray-50"
+                                              ? "border border-gray-200 bg-white hover:border-emerald-400 hover:bg-emerald-50"
+                                              : "border border-gray-100 bg-gray-50"
                                         } ${!canApprove ? "cursor-default" : "cursor-pointer"}`}
                                       >
                                         {isApproved && (
@@ -1009,115 +1067,91 @@ export function DocumentSymbol({
                   );
                 })()}
 
-              {/* Tabs */}
-              <div className="mt-4 flex gap-1 border-t pt-3">
-                <button
-                  onClick={() => setActiveTab("activity")}
-                  className={`rounded-t px-3 py-1.5 text-xs font-medium transition-colors ${
-                    activeTab === "activity"
-                      ? "bg-gray-100 text-gray-900"
-                      : "text-gray-500 hover:text-gray-700"
-                  }`}
-                >
-                  Activity{" "}
-                  {allDecisions.length + allComments.length > 0 && (
-                    <span className="ml-1 text-gray-400">
-                      ({allDecisions.length + allComments.length})
-                    </span>
-                  )}
-                </button>
-                <button
-                  onClick={() => setActiveTab("paragraphs")}
-                  className={`rounded-t px-3 py-1.5 text-xs font-medium transition-colors ${
-                    activeTab === "paragraphs"
-                      ? "bg-gray-100 text-gray-900"
-                      : "text-gray-500 hover:text-gray-700"
-                  }`}
-                >
-                  Paragraphs
-                </button>
-              </div>
-            </div>
-
-            <div className="flex-1 overflow-y-auto bg-gray-50 p-4">
-              {activeTab === "activity" ? (
-                <div className="space-y-3">
-                  {/* Entity filter pills */}
-                  {allEntities && allEntities.length > 1 && (
-                    <div className="mb-3">
-                      <div className="flex flex-wrap items-center gap-1.5">
-                        <button
-                          onClick={() => setActivityFilterEntity(null)}
-                          className={`rounded px-2 py-0.5 text-xs transition-colors ${
-                            !activityFilterEntity
-                              ? "bg-gray-600 text-white"
-                              : "bg-white text-gray-500 hover:bg-gray-100"
-                          }`}
-                        >
-                          All entities
-                        </button>
-                        {allEntities.map((ent) => {
-                          const isCurrentEntity = ent === entity;
-                          const count =
-                            allDecisions.filter((d) => d.entity === ent)
-                              .length +
-                            allComments.filter((c) => c.entity === ent).length;
-                          return (
-                            <button
-                              key={ent}
-                              onClick={() => setActivityFilterEntity(ent)}
-                              className={`rounded px-2 py-0.5 text-xs transition-colors ${
-                                activityFilterEntity === ent
-                                  ? "bg-un-blue text-white"
-                                  : isCurrentEntity
-                                    ? "bg-un-blue/20 text-un-blue hover:bg-un-blue/30"
-                                    : "bg-white text-gray-600 hover:bg-gray-100"
-                              }`}
-                            >
-                              {ent}{" "}
-                              <span
-                                className={
+              {/* Activity Tab */}
+              {activeTab === "activity" && (
+                <div className="space-y-4">
+                  {/* Filters */}
+                  <div className="rounded-xl bg-white p-4 shadow-sm">
+                    {/* Entity filter pills */}
+                    {allEntities && allEntities.length > 1 && (
+                      <div className="mb-4">
+                        <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                          Filter by citing entity
+                        </div>
+                        <div className="flex flex-wrap items-center gap-2">
+                          <button
+                            onClick={() => setActivityFilterEntity(null)}
+                            className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
+                              !activityFilterEntity
+                                ? "bg-gray-700 text-white"
+                                : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                            }`}
+                          >
+                            All entities
+                          </button>
+                          {allEntities.map((ent) => {
+                            const isCurrentEntity = ent === entity;
+                            const count =
+                              allDecisions.filter((d) => d.entity === ent)
+                                .length +
+                              allComments.filter((c) => c.entity === ent).length;
+                            return (
+                              <button
+                                key={ent}
+                                onClick={() => setActivityFilterEntity(ent)}
+                                className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
                                   activityFilterEntity === ent
-                                    ? "text-white/70"
-                                    : "text-gray-400"
-                                }
+                                    ? "bg-un-blue text-white"
+                                    : isCurrentEntity
+                                      ? "bg-un-blue/20 text-un-blue hover:bg-un-blue/30"
+                                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                                }`}
                               >
-                                ({count})
-                              </span>
-                            </button>
-                          );
-                        })}
+                                {ent}{" "}
+                                <span
+                                  className={
+                                    activityFilterEntity === ent
+                                      ? "text-white/70"
+                                      : "text-gray-400"
+                                  }
+                                >
+                                  ({count})
+                                </span>
+                              </button>
+                            );
+                          })}
+                        </div>
                       </div>
+                    )}
+                    {/* Type filter toggle */}
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => setActivityFilterType("all")}
+                        className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
+                          activityFilterType === "all"
+                            ? "bg-gray-700 text-white"
+                            : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                        }`}
+                      >
+                        All activity
+                      </button>
+                      <button
+                        onClick={() => setActivityFilterType("comments")}
+                        className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
+                          activityFilterType === "comments"
+                            ? "bg-amber-500 text-white"
+                            : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                        }`}
+                      >
+                        <MessageSquare className="h-3 w-3" />
+                        Comments only
+                        {allComments.length > 0 && (
+                          <span className={activityFilterType === "comments" ? "text-white/70" : "text-gray-400"}>
+                            ({allComments.length})
+                          </span>
+                        )}
+                      </button>
                     </div>
-                  )}
-                  {/* Type filter toggle */}
-                  <div className="flex items-center gap-2">
-                    <button
-                      onClick={() => setActivityFilterType("all")}
-                      className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
-                        activityFilterType === "all"
-                          ? "bg-gray-700 text-white"
-                          : "bg-white text-gray-500 hover:bg-gray-100"
-                      }`}
-                    >
-                      All activity
-                    </button>
-                    <button
-                      onClick={() => setActivityFilterType("comments")}
-                      className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-medium transition-colors ${
-                        activityFilterType === "comments"
-                          ? "bg-amber-500 text-white"
-                          : "bg-white text-gray-500 hover:bg-gray-100"
-                      }`}
-                    >
-                      <MessageSquare className="h-3 w-3" />
-                      Comments only
-                      {allComments.length > 0 && (
-                        <span className={activityFilterType === "comments" ? "text-white/70" : "text-gray-400"}>
-                          ({allComments.length})
-                        </span>
-                      )}
-                    </button>
                   </div>
                   {/* Activity log (all decisions + comments interleaved) */}
                   {(() => {
@@ -1205,15 +1239,19 @@ export function DocumentSymbol({
 
                     if (items.length === 0) {
                       return (
-                        <div className="text-sm text-gray-400">
-                          {activityFilterType === "comments" 
-                            ? "No comments yet" 
-                            : "No activity yet"}
+                        <div className="rounded-xl bg-white p-8 shadow-sm text-center">
+                          <div className="text-sm text-gray-400">
+                            {activityFilterType === "comments" 
+                              ? "No comments yet" 
+                              : "No activity yet"}
+                          </div>
                         </div>
                       );
                     }
 
-                    return items.map((item, i) => {
+                    return (
+                      <div className="space-y-3">
+                        {items.map((item, i) => {
                       const itemEntity = item.data.entity;
                       const showSubprog =
                         entitiesWithMultiSubprogs.has(itemEntity);
@@ -1395,12 +1433,14 @@ export function DocumentSymbol({
                           </div>
                         </div>
                       );
-                    });
+                    })}
+                      </div>
+                    );
                   })()}
                   {/* Add comment input */}
                   {onComment && (
-                    <div className="mt-4 rounded-lg border border-gray-200 bg-white p-3">
-                      <div className="flex gap-2">
+                    <div className="mt-4 rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+                      <div className="flex gap-3">
                         <input
                           type="text"
                           value={commentText}
@@ -1412,7 +1452,7 @@ export function DocumentSymbol({
                             }
                           }}
                           placeholder={`Add a comment for ${entity}...`}
-                          className="flex-1 rounded-md border border-gray-200 bg-gray-50 px-3 py-2 text-xs placeholder:text-gray-400 focus:border-un-blue focus:bg-white focus:outline-none focus:ring-1 focus:ring-un-blue"
+                          className="flex-1 rounded-lg border border-gray-200 bg-gray-50 px-4 py-2.5 text-sm placeholder:text-gray-400 focus:border-un-blue focus:bg-white focus:outline-none focus:ring-2 focus:ring-un-blue/20"
                         />
                         <button
                           onClick={() => {
@@ -1422,7 +1462,7 @@ export function DocumentSymbol({
                             }
                           }}
                           disabled={!commentText.trim()}
-                          className="rounded-md bg-un-blue px-4 py-2 text-xs font-medium text-white transition-colors hover:bg-un-blue/90 disabled:opacity-50"
+                          className="rounded-lg bg-un-blue px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-un-blue/90 disabled:opacity-50"
                         >
                           Send
                         </button>
@@ -1430,20 +1470,23 @@ export function DocumentSymbol({
                     </div>
                   )}
                 </div>
-              ) : (
-                <>
+              )}
+
+              {/* Paragraphs Tab */}
+              {activeTab === "paragraphs" && (
+                <div className="space-y-4">
                   {allEntities && allEntities.length > 0 && (
-                    <div className="mb-4">
-                      <div className="mb-1.5 text-xs text-gray-500">
-                        Filter by entity
+                    <div className="rounded-xl bg-white p-4 shadow-sm">
+                      <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                        Filter by mentioned entity (Experimental)
                       </div>
-                      <div className="flex flex-wrap items-center gap-1.5">
+                      <div className="flex flex-wrap items-center gap-2">
                         <button
                           onClick={() => setSelectedEntity(null)}
-                          className={`rounded px-2 py-0.5 text-xs transition-colors ${
+                          className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
                             !selectedEntity
-                              ? "bg-gray-600 text-white"
-                              : "bg-white text-gray-500 hover:bg-gray-100"
+                              ? "bg-gray-700 text-white"
+                              : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                           }`}
                         >
                           All
@@ -1454,10 +1497,10 @@ export function DocumentSymbol({
                             <button
                               key={e}
                               onClick={() => setSelectedEntity(e)}
-                              className={`rounded px-2 py-0.5 text-xs transition-colors ${
+                              className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
                                 selectedEntity === e
                                   ? "bg-un-blue text-white"
-                                  : "bg-white text-gray-600 hover:bg-gray-100"
+                                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                               }`}
                             >
                               {e}{" "}
@@ -1476,28 +1519,44 @@ export function DocumentSymbol({
                       </div>
                     </div>
                   )}
-                  {loading ? (
-                    <div className="flex items-center justify-center py-8">
-                      <Loader2 className="h-6 w-6 animate-spin text-gray-400" />
-                    </div>
-                  ) : paragraphs && paragraphs.length > 0 ? (
-                    selectedEntity ? (
-                      <FilteredParagraphTree
-                        paragraphs={paragraphs}
-                        relevantIndices={selectedRelevance.indices}
-                        aiComments={selectedRelevance.aiComments}
-                        entity={selectedEntity}
-                        entityLong={selectedEntityLong || null}
-                      />
+                  <div className="rounded-xl bg-white p-5 shadow-sm">
+                    {loading ? (
+                      <div className="flex items-center justify-center py-12">
+                        <Loader2 className="h-8 w-8 animate-spin text-gray-300" />
+                      </div>
+                    ) : paragraphs && paragraphs.length > 0 ? (
+                      selectedEntity ? (
+                        <FilteredParagraphTree
+                          paragraphs={paragraphs}
+                          relevantIndices={selectedRelevance.indices}
+                          aiComments={selectedRelevance.aiComments}
+                          entity={selectedEntity}
+                          entityLong={selectedEntityLong || null}
+                        />
+                      ) : (
+                        <FullParagraphTree paragraphs={paragraphs} />
+                      )
                     ) : (
-                      <FullParagraphTree paragraphs={paragraphs} />
-                    )
-                  ) : (
-                    <div className="text-sm text-gray-400">
-                      No paragraph data available
-                    </div>
-                  )}
-                </>
+                      <div className="py-12 text-center">
+                        <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
+                          <AlertTriangle className="h-6 w-6 text-gray-400" />
+                        </div>
+                        <p className="text-sm font-medium text-gray-600">No fulltext available</p>
+                        <p className="mt-1 text-xs text-gray-400">The parsed document text is not available in our database</p>
+                        {link && (
+                          <a
+                            href={link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-un-blue hover:underline"
+                          >
+                            View original PDF →
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </div>
               )}
             </div>
           </div>
