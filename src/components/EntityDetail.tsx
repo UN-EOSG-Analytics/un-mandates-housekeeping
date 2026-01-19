@@ -58,6 +58,14 @@ function abbreviateBody(body: string | null): string | null {
   return BODY_ABBREVS[body] ?? body;
 }
 
+// Transform subprogramme name for display
+function formatSubprogrammeName(subprog: string): string {
+  if (subprog.toLowerCase().includes("all subprogramme")) {
+    return "PROGRAMME LEVEL";
+  }
+  return subprog;
+}
+
 function PhaseTracker() {
   const phases = [
     { id: 1, name: "Internal Review", type: "internal" },
@@ -1724,11 +1732,18 @@ export function EntityDetail({
       <div className="space-y-8">
         {/* Legislative mandates (interactive only if user owns entity) */}
         {Object.entries(filteredLegislative)
-          .sort(([a], [b]) => a.localeCompare(b))
+          .sort(([a], [b]) => {
+            // Sort "All Subprogrammes" (PROGRAMME LEVEL) first
+            const aIsAll = a.toLowerCase().includes("all subprogramme");
+            const bIsAll = b.toLowerCase().includes("all subprogramme");
+            if (aIsAll && !bIsAll) return -1;
+            if (!aIsAll && bIsAll) return 1;
+            return a.localeCompare(b);
+          })
           .map(([subprog, mandates]) => (
             <MandateSection
               key={subprog}
-              title={subprog}
+              title={formatSubprogrammeName(subprog)}
               mandates={mandates}
               subprogramme={subprog}
               foundationalSymbols={foundationalSymbols}
