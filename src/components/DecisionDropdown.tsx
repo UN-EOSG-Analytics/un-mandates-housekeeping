@@ -71,6 +71,7 @@ export function DecisionDropdown({
     >
       <option value="">—</option>
       <option value="retain">Retain</option>
+      <option value="remove">Remove</option>
       <option value="update">Update</option>
     </select>
   );

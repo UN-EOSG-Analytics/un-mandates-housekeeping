@@ -17,6 +17,8 @@ export interface MandateWarning {
   icon?: string;
   /** Button color scheme */
   colorScheme?: "blue" | "red" | "amber";
+  /** Document symbol to display as external link */
+  linkedSymbol?: string;
 }
 
 interface WarningDefinition {
@@ -32,6 +34,8 @@ interface WarningDefinition {
   icon?: string;
   /** Button color scheme */
   colorScheme?: "blue" | "red" | "amber";
+  /** Extract symbol to display as external link */
+  getLinkedSymbol?: (mandate: Mandate) => string | undefined;
 }
 
 /**
@@ -66,12 +70,13 @@ const WARNING_DEFINITIONS: WarningDefinition[] = [
     message: (mandate) => {
       const nv = mandate.newerVersion;
       return nv
-        ? `Newer version available from ${nv.year}: ${nv.symbol}`
+        ? `Newer version available from ${nv.year}:`
         : "Newer version available";
     },
     severity: "info",
     condition: (mandate) => !!mandate.newerVersion,
     getSuggestedUpdate: (mandate) => mandate.newerVersion?.symbol,
+    getLinkedSymbol: (mandate) => mandate.newerVersion?.symbol,
     action: "update",
     icon: "↑",
     colorScheme: "blue",
@@ -97,8 +102,9 @@ export function getMandateWarnings(
     return [
       {
         id: "newer-already-cited",
-        message: `Newer version ${mandate.newerVersion?.symbol || ""} is already cited — consider removing this older version`,
+        message: "Newer version is already cited — consider removing this older version:",
         severity: "warning",
+        linkedSymbol: mandate.newerVersion?.symbol,
         action: "remove",
         icon: "×",
         colorScheme: "red",
@@ -117,6 +123,7 @@ export function getMandateWarnings(
         action: def.action,
         icon: def.icon,
         colorScheme: def.colorScheme,
+        linkedSymbol: def.getLinkedSymbol?.(mandate),
       })),
     ];
   }
@@ -131,6 +138,7 @@ export function getMandateWarnings(
       action: def.action,
       icon: def.icon,
       colorScheme: def.colorScheme,
+      linkedSymbol: def.getLinkedSymbol?.(mandate),
     }),
   );
 }

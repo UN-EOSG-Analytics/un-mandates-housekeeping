@@ -33,6 +33,7 @@ import { DocumentSymbol } from "./DocumentSymbol";
 import { EntityHeader } from "./EntityHeader";
 import type { ManualEntryData } from "./ManualDocumentForm";
 import { Tooltip } from "./Tooltip";
+import { WarningTooltip } from "./WarningTooltip";
 
 interface Props {
   entity: string;
@@ -396,64 +397,54 @@ function MandateRowContent({
               currentDecision?.decision === "update" ||
               currentDecision?.decision === "remove";
 
-            // Actionable warnings (have action type) → show interactive button
-            if (
-              actionableWarnings.length > 0 &&
-              (onUpdateClick || onDecision)
-            ) {
-              const primaryWarning = actionableWarnings[0];
-              const icon = primaryWarning.icon || "⚠";
-              const colorScheme = primaryWarning.colorScheme || "blue";
+            const primaryWarning = actionableWarnings[0] || warnings[0];
+            const icon = primaryWarning.icon || "⚠";
+            const colorScheme = primaryWarning.colorScheme || "amber";
 
-              const colorClasses = {
-                blue: "bg-un-blue/10 text-un-blue hover:bg-un-blue hover:text-white",
-                red: "bg-red-50 text-red-600 hover:bg-red-600 hover:text-white",
-                amber:
-                  "bg-amber-50 text-amber-600 hover:bg-amber-600 hover:text-white",
-              };
+            const colorClasses = {
+              blue: "bg-un-blue/10 text-un-blue hover:bg-un-blue/20",
+              red: "bg-red-50 text-red-600 hover:bg-red-100",
+              amber: "bg-amber-50 text-amber-600 hover:bg-amber-100",
+            };
 
-              return (
-                <Tooltip content={warnings.map((w) => w.message).join("; ")}>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      if (primaryWarning.action === "remove") {
-                        onDecision("remove");
-                      } else if (
-                        primaryWarning.action === "update" &&
-                        onUpdateClick
-                      ) {
-                        onUpdateClick();
-                      }
-                    }}
-                    className={`group relative inline-flex h-5 w-5 items-center justify-center rounded-full text-sm transition-all hover:shadow-sm ${
-                      isAddressed
-                        ? "cursor-default bg-gray-100 text-gray-400"
-                        : colorClasses[colorScheme]
-                    }`}
-                    disabled={isAddressed}
-                  >
-                    <span>{icon}</span>
-                    {warnings.length > 1 && (
-                      <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-amber-500 text-[9px] text-white">
-                        {warnings.length}
-                      </span>
-                    )}
-                  </button>
-                </Tooltip>
-              );
-            }
+            const handleAction = (warning: typeof primaryWarning) => {
+              if (warning.action === "remove") {
+                onDecision("remove");
+              } else if (warning.action === "update" && onUpdateClick) {
+                onUpdateClick();
+              }
+            };
 
-            // Default: non-actionable warnings → show static icon
+            const handlePrimaryClick = () => {
+              if (primaryWarning.action === "remove") {
+                onDecision("remove");
+              } else if (primaryWarning.action === "update" && onUpdateClick) {
+                onUpdateClick();
+              }
+            };
+
             return (
-              <Tooltip content={warnings.map((w) => w.message).join("; ")}>
-                <span className="inline-flex h-5 items-center justify-center rounded-full bg-amber-50 px-2 text-xs font-medium text-amber-600">
-                  ⚠
+              <WarningTooltip
+                warnings={warnings}
+                onAction={handleAction}
+                onPrimaryClick={handlePrimaryClick}
+                disabled={isAddressed}
+              >
+                <button
+                  className={`group relative inline-flex h-6 min-w-6 items-center justify-center rounded-full text-sm transition-all ${
+                    isAddressed
+                      ? "cursor-default bg-gray-100 text-gray-400"
+                      : colorClasses[colorScheme]
+                  }`}
+                >
+                  <span className="px-1">{icon}</span>
                   {warnings.length > 1 && (
-                    <span className="ml-1 text-[10px]">{warnings.length}</span>
+                    <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-amber-500 text-[10px] font-medium text-white shadow-sm">
+                      {warnings.length}
+                    </span>
                   )}
-                </span>
-              </Tooltip>
+                </button>
+              </WarningTooltip>
             );
           })()}
       </div>
