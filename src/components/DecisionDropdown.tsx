@@ -20,6 +20,10 @@ interface DecisionDropdownProps {
   reason?: string | null;
   otherReason?: string | null;
   onReasonChange?: (reason: string | null, otherReason: string | null) => void;
+  symbol?: string;
+  // External control of reason popup
+  showReasonPopup?: boolean;
+  onReasonPopupClose?: () => void;
 }
 
 // Shared color scheme for decisions - exported for use in ReasonDropdown
@@ -73,10 +77,22 @@ export function DecisionDropdown({
   reason,
   otherReason,
   onReasonChange,
+  symbol,
+  showReasonPopup: externalShowReasonPopup,
+  onReasonPopupClose,
 }: DecisionDropdownProps) {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [showReasonPopup, setShowReasonPopup] = React.useState(false);
+  const [internalShowReasonPopup, setInternalShowReasonPopup] = React.useState(false);
   const containerRef = React.useRef<HTMLDivElement>(null);
+
+  // Use external control if provided, otherwise use internal state
+  const showReasonPopup = externalShowReasonPopup ?? internalShowReasonPopup;
+  const setShowReasonPopup = (value: boolean) => {
+    setInternalShowReasonPopup(value);
+    if (!value && onReasonPopupClose) {
+      onReasonPopupClose();
+    }
+  };
 
   // Get reason display label for tooltip
   const reasonLabel =
@@ -154,9 +170,10 @@ export function DecisionDropdown({
     }
   };
 
-  const displayLabel = decision
-    ? decision.charAt(0).toUpperCase() + decision.slice(1)
-    : "—";
+  const displayLabel =
+    decision && decision !== "cancel"
+      ? decision.charAt(0).toUpperCase() + decision.slice(1)
+      : "—";
 
   const options: { value: Decision | ""; label: string }[] = [
     { value: "", label: "—" },
@@ -172,12 +189,11 @@ export function DecisionDropdown({
     <button
       onClick={() => !disabled && setIsOpen(!isOpen)}
       disabled={disabled}
-      className={`flex w-full items-center justify-between gap-1 rounded border px-2 font-medium transition-colors ${sizeClasses} ${colors.bg} ${colors.border} ${colors.text} ${
+      className={`flex w-[5.25rem] items-center justify-between gap-1 rounded border px-2 font-medium transition-colors ${sizeClasses} ${colors.bg} ${colors.border} ${colors.text} ${
         disabled
           ? "cursor-default opacity-60"
           : `cursor-pointer ${colors.hover}`
       } ${className || ""}`}
-      style={{ minWidth: "5rem" }}
     >
       <span className="flex items-center gap-1">
         {displayLabel}
@@ -196,7 +212,7 @@ export function DecisionDropdown({
       )}
 
       {isOpen && !disabled && (
-        <div className="absolute top-full left-0 z-50 mt-1 min-w-[5rem] rounded border border-gray-200 bg-white py-0.5 shadow-lg">
+        <div className="absolute top-full left-0 z-50 mt-1 w-[5.25rem] rounded border border-gray-200 bg-white py-0.5 shadow-lg">
           {options.map((opt) => {
             const optColors =
               opt.value && opt.value in DECISION_COLORS
@@ -233,6 +249,7 @@ export function DecisionDropdown({
             onChange={handleReasonChange}
             onClose={() => setShowReasonPopup(false)}
             isOpen={showReasonPopup}
+            symbol={symbol}
           />
         )}
     </div>

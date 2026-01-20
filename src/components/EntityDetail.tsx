@@ -257,6 +257,8 @@ function MandateRowContent({
   onReasonChange,
   onApprove,
   onUpdateClick,
+  showReasonPopup,
+  onReasonPopupClose,
 }: {
   mandate: Mandate;
   state?: MandateState;
@@ -272,6 +274,8 @@ function MandateRowContent({
   onReasonChange?: (reason: string | null, otherReason: string | null) => void;
   onApprove?: (decisionId: string, approved: boolean) => void;
   onUpdateClick?: () => void;
+  showReasonPopup?: boolean;
+  onReasonPopupClose?: () => void;
 }) {
   const ageInfo = getAgeIndicator(mandate.year);
   const currentDecision = state?.decision;
@@ -472,6 +476,9 @@ function MandateRowContent({
             reason={currentDecision?.decisionReason}
             otherReason={currentDecision?.otherReason}
             onReasonChange={onReasonChange}
+            symbol={mandate.symbol}
+            showReasonPopup={showReasonPopup}
+            onReasonPopupClose={onReasonPopupClose}
           />
         )}
       </div>
@@ -573,6 +580,7 @@ function MandateRow({
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [newDocSidebarOpen, setNewDocSidebarOpen] = useState(false);
   const [showUpdateSearch, setShowUpdateSearch] = useState(false);
+  const [showReasonPopup, setShowReasonPopup] = useState(false);
 
   // Get suggested update symbol from warnings (for newer-available)
   const warnings = getMandateWarnings(mandate);
@@ -604,11 +612,13 @@ function MandateRow({
   const handleUpdateSelect = (symbol: string) => {
     onDecision("update", symbol);
     setShowUpdateSearch(false);
+    setShowReasonPopup(true);
   };
 
   const handleUpdateManual = (data: ManualEntryData) => {
     onUpdateWithManual(data.symbol, data);
     setShowUpdateSearch(false);
+    setShowReasonPopup(true);
   };
 
   const handleCancelUpdate = () => {
@@ -636,6 +646,8 @@ function MandateRow({
         onReasonChange={onReasonChange}
         onApprove={onApprove}
         onUpdateClick={() => setShowUpdateSearch(true)}
+        showReasonPopup={showReasonPopup}
+        onReasonPopupClose={() => setShowReasonPopup(false)}
       />
 
       {/* Update search input (shown when user selects "update" from dropdown) */}
