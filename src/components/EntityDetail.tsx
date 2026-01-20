@@ -337,7 +337,7 @@ function MandateRowContent({
       >
         <span className="inline-flex w-4 shrink-0 items-center justify-center">
           {isFoundational && (
-            <Tooltip content="Foundational mandate — also cited in Mandates and Background">
+            <Tooltip content={readOnly ? "Foundational mandate" : "Foundational mandate — also cited in Mandates and Background"}>
               <Star
                 className="h-4 w-4 fill-un-blue text-un-blue"
                 strokeWidth={0.5}
@@ -1783,7 +1783,7 @@ export function EntityDetail({
           mandates={filteredBackground}
           subprogramme={null}
           readOnly
-          foundationalSymbols={legislativeSymbols}
+          foundationalSymbols={foundationalSymbols}
           searchQuery={globalSearchQuery}
           {...sharedSectionProps}
           {...makeSubprogHandlers(null)}
