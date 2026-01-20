@@ -151,19 +151,19 @@ function ParaBox({
 
   return (
     <div style={{ marginLeft: indent }}>
-      <div className="rounded-lg bg-gray-100 p-4">
-        <div className="flex gap-3">
+      <div className="rounded-lg bg-gray-100 p-3">
+        <div className="flex gap-2">
           {label && (
-            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-un-blue text-xs font-medium text-white">
+            <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-un-blue text-[10px] font-medium text-white">
               {label}
             </span>
           )}
-          <p className="flex-1 leading-relaxed text-gray-700">
+          <p className="flex-1 text-sm leading-relaxed text-gray-700">
             {highlightEntity(p.text, entity, entityLong)}
           </p>
           {aiComment && (
             <Tooltip content={aiComment}>
-              <Sparkles className="h-4 w-4 shrink-0 cursor-help text-amber-500" />
+              <Sparkles className="h-3.5 w-3.5 shrink-0 cursor-help text-amber-500" />
             </Tooltip>
           )}
         </div>
@@ -174,8 +174,8 @@ function ParaBox({
 
 function getIndent(p: Paragraph) {
   if (p.paragraph_level && p.paragraph_level > 1)
-    return (p.paragraph_level - 1) * 24;
-  if (p.heading_level && p.heading_level > 1) return (p.heading_level - 1) * 16;
+    return (p.paragraph_level - 1) * 16;
+  if (p.heading_level && p.heading_level > 1) return (p.heading_level - 1) * 12;
   return 0;
 }
 
@@ -299,15 +299,15 @@ function FilteredParagraphTree({
   );
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-2">
       {preamble.length > 0 && (
         <>
           <button
             onClick={() => setShowPreamble(!showPreamble)}
-            className="flex items-center gap-2 py-2 text-sm text-gray-500 hover:text-gray-700"
+            className="flex items-center gap-2 py-1.5 text-xs text-gray-500 hover:text-gray-700"
           >
             <ChevronDown
-              className={`h-4 w-4 transition-transform ${showPreamble ? "" : "-rotate-90"}`}
+              className={`h-3.5 w-3.5 transition-transform ${showPreamble ? "" : "-rotate-90"}`}
             />
             {showPreamble ? "Hide" : "Show"} {preamble.length} preambular
             paragraph{preamble.length !== 1 && "s"}
@@ -318,7 +318,7 @@ function FilteredParagraphTree({
             )}
           </button>
           {showPreamble && (
-            <div className="space-y-3">
+            <div className="space-y-2">
               {preamble.map(({ p, origIdx }, i) => (
                 <ParaBox
                   key={`pp-${i}`}
@@ -340,13 +340,13 @@ function FilteredParagraphTree({
             if (p.type === "heading") {
               const indent =
                 p.heading_level && p.heading_level > 1
-                  ? (p.heading_level - 1) * 16
+                  ? (p.heading_level - 1) * 12
                   : 0;
               return (
                 <div
                   key={`seg-${i}-${j}`}
                   style={{ marginLeft: indent }}
-                  className={`font-semibold text-foreground ${p.heading_level === 1 ? "mt-4 text-base" : "mt-2 text-sm"}`}
+                  className={`font-semibold text-foreground ${p.heading_level === 1 ? "mt-3 text-sm" : "mt-1.5 text-xs"}`}
                 >
                   {p.text}
                 </div>
@@ -375,18 +375,18 @@ function FilteredParagraphTree({
               onToggle={() => toggleGap(seg.gapIndex!)}
             />
             {expanded && (
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {seg.items.map(({ p }, j) => {
                   if (p.type === "heading") {
                     const indent =
                       p.heading_level && p.heading_level > 1
-                        ? (p.heading_level - 1) * 16
+                        ? (p.heading_level - 1) * 12
                         : 0;
                     return (
                       <div
                         key={`gap-${seg.gapIndex}-${j}`}
                         style={{ marginLeft: indent }}
-                        className={`font-semibold text-foreground ${p.heading_level === 1 ? "mt-4 text-base" : "mt-2 text-sm"}`}
+                        className={`font-semibold text-foreground ${p.heading_level === 1 ? "mt-3 text-sm" : "mt-1.5 text-xs"}`}
                       >
                         {p.text}
                       </div>
@@ -421,21 +421,21 @@ function FullParagraphTree({ paragraphs }: { paragraphs: Paragraph[] }) {
   const operative = content.filter((p) => p.paragraph_type !== "preambular");
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-2">
       {preamble.length > 0 && (
         <>
           <button
             onClick={() => setShowPreamble(!showPreamble)}
-            className="flex items-center gap-2 py-2 text-sm text-gray-500 hover:text-gray-700"
+            className="flex items-center gap-2 py-1.5 text-xs text-gray-500 hover:text-gray-700"
           >
             <ChevronDown
-              className={`h-4 w-4 transition-transform ${showPreamble ? "" : "-rotate-90"}`}
+              className={`h-3.5 w-3.5 transition-transform ${showPreamble ? "" : "-rotate-90"}`}
             />
             {showPreamble ? "Hide" : "Show"} {preamble.length} preambular
             paragraph{preamble.length !== 1 && "s"}
           </button>
           {showPreamble && (
-            <div className="space-y-3">
+            <div className="space-y-2">
               {preamble.map((p, i) => (
                 <ParaBox key={`pp-${i}`} p={p} indent={getIndent(p)} />
               ))}
@@ -448,13 +448,13 @@ function FullParagraphTree({ paragraphs }: { paragraphs: Paragraph[] }) {
         if (p.type === "heading") {
           const indent =
             p.heading_level && p.heading_level > 1
-              ? (p.heading_level - 1) * 16
+              ? (p.heading_level - 1) * 12
               : 0;
           return (
             <div
               key={`op-${i}`}
               style={{ marginLeft: indent }}
-              className={`font-semibold text-foreground ${p.heading_level === 1 ? "mt-4 text-base" : "mt-2 text-sm"}`}
+              className={`font-semibold text-foreground ${p.heading_level === 1 ? "mt-3 text-sm" : "mt-1.5 text-xs"}`}
             >
               {p.text}
             </div>
@@ -776,18 +776,18 @@ export function DocumentSymbol({
               {/* Info Tab */}
               {activeTab === "info" && (
                 <div className="space-y-4">
-                  <div className="rounded-xl bg-white p-5 shadow-sm">
-                    <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-400">Document Details</h3>
-                      <dl className="space-y-3">
+                  <div className="rounded-xl bg-white p-4 shadow-sm">
+                    <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">Document Details</h3>
+                      <dl className="space-y-2 text-sm">
                         {year && (() => {
                           const ageInfo = getAgeIndicator(year);
                           return (
-                            <div className="flex items-center justify-between py-2 border-b border-gray-100">
+                            <div className="flex items-center justify-between py-1.5 border-b border-gray-100">
                               <dt className="text-gray-500">Year</dt>
                               <dd className="flex items-center gap-2 font-medium text-gray-900">
                                 {year}
                                 <Tooltip content={ageInfo.tooltip}>
-                                  <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${ageInfo.color} ${ageInfo.bgColor}`}>
+                                  <span className={`rounded-full px-1.5 py-0.5 text-[10px] font-medium ${ageInfo.color} ${ageInfo.bgColor}`}>
                                     {ageInfo.label}
                                   </span>
                                 </Tooltip>
@@ -796,19 +796,19 @@ export function DocumentSymbol({
                           );
                         })()}
                         {body && (
-                          <div className="flex items-center justify-between py-2 border-b border-gray-100">
+                          <div className="flex items-center justify-between py-1.5 border-b border-gray-100">
                             <dt className="text-gray-500">Issuing body</dt>
                             <dd className="font-medium text-gray-900">{body}</dd>
                           </div>
                         )}
                         {docType && (
-                          <div className="flex items-center justify-between py-2 border-b border-gray-100">
+                          <div className="flex items-center justify-between py-1.5 border-b border-gray-100">
                             <dt className="text-gray-500">Document type</dt>
                             <dd className="font-medium text-gray-900">{docType}</dd>
                           </div>
                         )}
                         {otherEntitiesCount !== undefined && otherEntitiesCount > 0 && (
-                          <div className="flex items-center justify-between py-2 border-b border-gray-100">
+                          <div className="flex items-center justify-between py-1.5 border-b border-gray-100">
                             <dt className="text-gray-500">Also cited by</dt>
                             <dd className="font-medium text-gray-900">
                               {otherEntitiesCount} other {otherEntitiesCount === 1 ? "entity" : "entities"}
@@ -816,7 +816,7 @@ export function DocumentSymbol({
                           </div>
                         )}
                         {link && (
-                          <div className="flex items-center justify-between py-2">
+                          <div className="flex items-center justify-between py-1.5">
                             <dt className="text-gray-500">Source</dt>
                             <dd>
                               <a
@@ -1071,17 +1071,17 @@ export function DocumentSymbol({
                   <div className="rounded-xl bg-white p-4 shadow-sm">
                     {/* Entity filter pills */}
                     {allEntities && allEntities.length > 1 && (
-                      <div className="mb-4">
+                      <div className="mb-3">
                         <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-400">
                           Filter by citing entity
                         </div>
-                        <div className="flex flex-wrap items-center gap-2">
+                        <div className="flex flex-wrap items-center gap-1.5">
                           <button
                             onClick={() => setActivityFilterEntity(null)}
-                            className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
+                            className={`rounded-full px-2 py-0.5 text-xs font-medium transition-colors ${
                               !activityFilterEntity
                                 ? "bg-gray-700 text-white"
-                                : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                                : "bg-gray-100 text-gray-500 hover:bg-gray-200"
                             }`}
                           >
                             All entities
@@ -1096,19 +1096,19 @@ export function DocumentSymbol({
                               <button
                                 key={ent}
                                 onClick={() => setActivityFilterEntity(ent)}
-                                className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
+                                className={`rounded-full px-2 py-0.5 text-xs font-medium transition-colors ${
                                   activityFilterEntity === ent
                                     ? "bg-un-blue text-white"
                                     : isCurrentEntity
                                       ? "bg-un-blue/20 text-un-blue hover:bg-un-blue/30"
-                                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                                      : "bg-gray-100 text-gray-500 hover:bg-gray-200"
                                 }`}
                               >
                                 {ent}{" "}
                                 <span
                                   className={
                                     activityFilterEntity === ent
-                                      ? "text-white/70"
+                                      ? "text-white/60"
                                       : "text-gray-400"
                                   }
                                 >
@@ -1121,23 +1121,23 @@ export function DocumentSymbol({
                       </div>
                     )}
                     {/* Type filter toggle */}
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1.5">
                       <button
                         onClick={() => setActivityFilterType("all")}
-                        className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
+                        className={`rounded-full px-2 py-0.5 text-xs font-medium transition-colors ${
                           activityFilterType === "all"
                             ? "bg-gray-700 text-white"
-                            : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                            : "bg-gray-100 text-gray-500 hover:bg-gray-200"
                         }`}
                       >
                         All activity
                       </button>
                       <button
                         onClick={() => setActivityFilterType("comments")}
-                        className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
+                        className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium transition-colors ${
                           activityFilterType === "comments"
                             ? "bg-amber-500 text-white"
-                            : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                            : "bg-gray-100 text-gray-500 hover:bg-gray-200"
                         }`}
                       >
                         <MessageSquare className="h-3 w-3" />
@@ -1477,13 +1477,13 @@ export function DocumentSymbol({
                       <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-400">
                         Filter by mentioned entity (Experimental)
                       </div>
-                      <div className="flex flex-wrap items-center gap-2">
+                      <div className="flex flex-wrap items-center gap-1.5">
                         <button
                           onClick={() => setSelectedEntity(null)}
-                          className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
+                          className={`rounded-full px-2 py-0.5 text-xs font-medium transition-colors ${
                             !selectedEntity
                               ? "bg-gray-700 text-white"
-                              : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                              : "bg-gray-100 text-gray-500 hover:bg-gray-200"
                           }`}
                         >
                           All
@@ -1494,17 +1494,17 @@ export function DocumentSymbol({
                             <button
                               key={e}
                               onClick={() => setSelectedEntity(e)}
-                              className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
+                              className={`rounded-full px-2 py-0.5 text-xs font-medium transition-colors ${
                                 selectedEntity === e
                                   ? "bg-un-blue text-white"
-                                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                                  : "bg-gray-100 text-gray-500 hover:bg-gray-200"
                               }`}
                             >
                               {e}{" "}
                               <span
                                 className={
                                   selectedEntity === e
-                                    ? "text-white/70"
+                                    ? "text-white/60"
                                     : "text-gray-400"
                                 }
                               >
