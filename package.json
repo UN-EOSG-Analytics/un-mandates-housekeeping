@@ -35,7 +35,8 @@
     "primereact": "^10.9.7",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "tailwind-merge": "^3.3.1"
+    "tailwind-merge": "^3.3.1",
+    "undifferent": "github:un-fck/undifferent#b5689037d755f194db6777b38f02750bf45e1a90"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

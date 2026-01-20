@@ -34,6 +34,13 @@ export function DocumentSearchInput({
   initialQuery,
 }: Props) {
   const [query, setQuery] = useState(initialQuery || "");
+  
+  // Update query when initialQuery changes
+  useEffect(() => {
+    if (initialQuery) {
+      setQuery(initialQuery);
+    }
+  }, [initialQuery]);
   const [results, setResults] = useState<SearchResult[]>([]);
   const [searching, setSearching] = useState(false);
   const [searchDone, setSearchDone] = useState(false);
@@ -43,6 +50,7 @@ export function DocumentSearchInput({
   const [showManualForm, setShowManualForm] = useState(false);
   const debounceRef = useRef<NodeJS.Timeout | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const search = useCallback((q: string) => {
     if (q.length < 2) {
@@ -91,17 +99,17 @@ export function DocumentSearchInput({
       .finally(() => setSearching(false));
   }, []);
 
-  // Auto-search when initialQuery is provided (using ref to avoid setState in effect)
-  const initialSearchDone = useRef(false);
+  // Auto-search when initialQuery is provided
+  const lastInitialQuery = useRef<string | undefined>(undefined);
   useEffect(() => {
-    if (
-      initialQuery &&
-      initialQuery.length >= 2 &&
-      !initialSearchDone.current
-    ) {
-      initialSearchDone.current = true;
-      // Defer to next tick to avoid synchronous setState in effect
-      const timer = setTimeout(() => search(initialQuery), 0);
+    // Only trigger if initialQuery changed and is valid
+    if (initialQuery && initialQuery.length >= 2 && initialQuery !== lastInitialQuery.current) {
+      lastInitialQuery.current = initialQuery;
+      // Focus the input and trigger search
+      const timer = setTimeout(() => {
+        inputRef.current?.focus();
+        search(initialQuery);
+      }, 50); // Small delay to ensure component is mounted
       return () => clearTimeout(timer);
     }
   }, [initialQuery, search]);
@@ -217,12 +225,18 @@ export function DocumentSearchInput({
             className={`h-4 w-4 ${focused ? "text-un-blue" : "text-gray-400"}`}
           />
           <input
+            ref={inputRef}
             type="text"
             value={query}
             onChange={(e) => handleInputChange(e.target.value)}
             onFocus={() => {
               setFocused(true);
-              if (searchDone) setOpen(true);
+              // Open dropdown if search is done, or trigger search if we have a query
+              if (searchDone) {
+                setOpen(true);
+              } else if (query.length >= 2 && !searching) {
+                search(query);
+              }
             }}
             onBlur={() => setFocused(false)}
             onKeyDown={handleKeyDown}

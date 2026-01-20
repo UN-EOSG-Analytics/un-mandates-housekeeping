@@ -19,6 +19,8 @@ export interface MandateWarning {
   colorScheme?: "blue" | "red" | "amber";
   /** Document symbol to display as external link */
   linkedSymbol?: string;
+  /** Year of the linked symbol (for diff comparisons) */
+  linkedYear?: number;
 }
 
 interface WarningDefinition {
@@ -36,6 +38,8 @@ interface WarningDefinition {
   colorScheme?: "blue" | "red" | "amber";
   /** Extract symbol to display as external link */
   getLinkedSymbol?: (mandate: Mandate) => string | undefined;
+  /** Extract year of linked symbol */
+  getLinkedYear?: (mandate: Mandate) => number | undefined;
 }
 
 /**
@@ -77,6 +81,7 @@ const WARNING_DEFINITIONS: WarningDefinition[] = [
     condition: (mandate) => !!mandate.newerVersion,
     getSuggestedUpdate: (mandate) => mandate.newerVersion?.symbol,
     getLinkedSymbol: (mandate) => mandate.newerVersion?.symbol,
+    getLinkedYear: (mandate) => mandate.newerVersion?.year,
     action: "update",
     icon: "↑",
     colorScheme: "blue",
@@ -106,6 +111,7 @@ export function getMandateWarnings(
           "Newer version is already cited — consider removing this older version:",
         severity: "warning",
         linkedSymbol: mandate.newerVersion?.symbol,
+        linkedYear: mandate.newerVersion?.year,
         action: "remove",
         icon: "×",
         colorScheme: "red",
@@ -125,6 +131,7 @@ export function getMandateWarnings(
         icon: def.icon,
         colorScheme: def.colorScheme,
         linkedSymbol: def.getLinkedSymbol?.(mandate),
+        linkedYear: def.getLinkedYear?.(mandate),
       })),
     ];
   }
@@ -140,6 +147,7 @@ export function getMandateWarnings(
       icon: def.icon,
       colorScheme: def.colorScheme,
       linkedSymbol: def.getLinkedSymbol?.(mandate),
+      linkedYear: def.getLinkedYear?.(mandate),
     }),
   );
 }

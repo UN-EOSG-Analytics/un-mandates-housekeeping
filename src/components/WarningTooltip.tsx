@@ -7,6 +7,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import type { MandateWarning } from "@/lib/services/mandate-warnings";
+import { ArrowLeftRight } from "lucide-react";
 
 interface WarningTooltipProps {
   warnings: MandateWarning[];
@@ -14,6 +15,12 @@ interface WarningTooltipProps {
   onAction?: (warning: MandateWarning) => void;
   onPrimaryClick?: () => void;
   disabled?: boolean;
+  /** Current document symbol for diff comparison */
+  currentSymbol?: string;
+  /** Current document year for diff comparison */
+  currentYear?: number;
+  /** Callback when diff is requested */
+  onDiff?: (originalSymbol: string, originalYear: number, compareSymbol: string, compareYear: number) => void;
 }
 
 const severityStyles = {
@@ -40,6 +47,9 @@ export function WarningTooltip({
   onAction,
   onPrimaryClick,
   disabled,
+  currentSymbol,
+  currentYear,
+  onDiff,
 }: WarningTooltipProps) {
   const [open, setOpen] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -109,7 +119,7 @@ export function WarningTooltip({
                         <>
                           {" "}
                           <a
-                            href={`https://undocs.org/en/${warning.linkedSymbol}`}
+                            href={`https://docs.un.org/en/${warning.linkedSymbol}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="font-medium text-un-blue hover:underline"
@@ -117,6 +127,19 @@ export function WarningTooltip({
                           >
                             {warning.linkedSymbol}
                           </a>
+                          {onDiff && currentSymbol && currentYear && warning.linkedYear && (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                onDiff(currentSymbol, currentYear, warning.linkedSymbol!, warning.linkedYear!);
+                                setOpen(false);
+                              }}
+                              className="ml-2 inline-flex items-center gap-1 rounded bg-blue-50 px-2 py-0.5 text-xs font-medium text-un-blue hover:bg-blue-100 transition-colors"
+                            >
+                              <ArrowLeftRight className="h-3 w-3" />
+                              Compare
+                            </button>
+                          )}
                         </>
                       )}
                     </p>
