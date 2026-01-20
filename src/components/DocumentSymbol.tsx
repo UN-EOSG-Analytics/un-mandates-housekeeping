@@ -193,10 +193,10 @@ function CollapsedGap({
   return (
     <button
       onClick={onToggle}
-      className="flex w-full items-center gap-2 py-2 text-sm text-gray-400 hover:text-gray-600"
+      className="flex w-full items-center gap-2 py-1.5 text-xs text-gray-400 hover:text-gray-600"
     >
       <ChevronDown
-        className={`h-4 w-4 transition-transform ${expanded ? "" : "-rotate-90"}`}
+        className={`h-3.5 w-3.5 transition-transform ${expanded ? "" : "-rotate-90"}`}
       />
       {expanded ? "Hide" : "Show"} {count} paragraph{count !== 1 && "s"} not
       mentioning {entity}
@@ -1260,16 +1260,16 @@ export function DocumentSymbol({
                         return (
                           <div key={decision.id || i} className={`text-xs ${isSuperseded ? 'opacity-50' : ''}`}>
                             <div
-                              className={`rounded-lg border-l-4 p-3 ${
+                              className={`rounded-lg border p-3 ${
                                 decision.decision === "retain"
-                                  ? "border-l-green-500 bg-green-50/50"
+                                  ? "border-green-200 bg-green-50/50"
                                   : decision.decision === "remove"
-                                    ? "border-l-red-500 bg-red-50/50"
+                                    ? "border-red-200 bg-red-50/50"
                                     : decision.decision === "update"
-                                      ? "border-l-amber-500 bg-amber-50/50"
+                                      ? "border-amber-200 bg-amber-50/50"
                                       : decision.decision === "cancel"
-                                        ? "border-l-gray-400 bg-gray-50"
-                                        : "border-l-blue-500 bg-blue-50/50"
+                                        ? "border-gray-200 bg-gray-50"
+                                        : "border-blue-200 bg-blue-50/50"
                               }`}
                             >
                               <div className="flex items-center gap-2">
@@ -1436,34 +1436,32 @@ export function DocumentSymbol({
                   })()}
                   {/* Add comment input */}
                   {onComment && (
-                    <div className="mt-4 rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
-                      <div className="flex gap-3">
-                        <input
-                          type="text"
-                          value={commentText}
-                          onChange={(e) => setCommentText(e.target.value)}
-                          onKeyDown={(e) => {
-                            if (e.key === "Enter" && commentText.trim()) {
-                              handleComment(commentText.trim());
-                              setCommentText("");
-                            }
-                          }}
-                          placeholder={`Add a comment for ${entity}...`}
-                          className="flex-1 rounded-lg border border-gray-200 bg-gray-50 px-4 py-2.5 text-sm placeholder:text-gray-400 focus:border-un-blue focus:bg-white focus:outline-none focus:ring-2 focus:ring-un-blue/20"
-                        />
-                        <button
-                          onClick={() => {
-                            if (commentText.trim()) {
-                              handleComment(commentText.trim());
-                              setCommentText("");
-                            }
-                          }}
-                          disabled={!commentText.trim()}
-                          className="rounded-lg bg-un-blue px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-un-blue/90 disabled:opacity-50"
-                        >
-                          Send
-                        </button>
-                      </div>
+                    <div className="mt-4 flex gap-2">
+                      <input
+                        type="text"
+                        value={commentText}
+                        onChange={(e) => setCommentText(e.target.value)}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter" && commentText.trim()) {
+                            handleComment(commentText.trim());
+                            setCommentText("");
+                          }
+                        }}
+                        placeholder={`Add a comment for ${entity}...`}
+                        className="flex-1 rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:border-un-blue focus:outline-none focus:ring-2 focus:ring-un-blue/20"
+                      />
+                      <button
+                        onClick={() => {
+                          if (commentText.trim()) {
+                            handleComment(commentText.trim());
+                            setCommentText("");
+                          }
+                        }}
+                        disabled={!commentText.trim()}
+                        className="rounded-lg bg-un-blue px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-un-blue/90 disabled:opacity-50"
+                      >
+                        Send
+                      </button>
                     </div>
                   )}
                 </div>
