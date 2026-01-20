@@ -1,9 +1,12 @@
 // Modal is client-side
 "use client";
 
+import React from "react";
 import { getAgeIndicator } from "@/lib/services/age-indicator";
 import { fetchParagraphs } from "@/lib/services/client/client-data-service";
-import { getDocumentDecisionsAction, resolveCommentAction } from "@/lib/services/housekeeping-actions";
+import { getDocumentDecisionsAction, getDocumentVersionsAction, resolveCommentAction } from "@/lib/services/housekeeping-actions";
+import type { DocumentVersion } from "@/lib/services/document-versions";
+import { DiffModal } from "./DiffModal";
 import type {
   Decision,
   EntityRelevance,
@@ -14,9 +17,12 @@ import type {
 } from "@/types";
 import {
   AlertTriangle,
+  ArrowLeftRight,
+  ArrowRight,
   Check,
   CheckCircle2,
   ChevronDown,
+  ExternalLink,
   Loader2,
   MessageSquare,
   Sparkles,
@@ -55,7 +61,7 @@ interface Props {
   onDecision?: (decision: Decision, newSymbol?: string) => void;
   onApprove?: (decisionId: string, approved: boolean) => void;
   onComment?: (comment: string) => void;
-  onUpdateClick?: () => void; // Called when user selects "update" from sidebar
+  onUpdateClick?: (prefillSymbol?: string) => void; // Called when user selects "update" from sidebar
   metadataFromDb?: boolean;
 }
 
@@ -513,16 +519,24 @@ export function DocumentSymbol({
   );
   const [allDecisions, setAllDecisions] = useState<MandateDecision[]>([]);
   const [allComments, setAllComments] = useState<MandateComment[]>([]);
+  const [documentVersions, setDocumentVersions] = useState<DocumentVersion[]>([]);
+  const [diffModalOpen, setDiffModalOpen] = useState(false);
+  const [diffCompareSymbol, setDiffCompareSymbol] = useState<{ symbol: string; year: number; title?: string | null } | null>(null);
+  const [diffOriginalOverride, setDiffOriginalOverride] = useState<{ symbol: string; year: number; title?: string | null } | null>(null);
 
-  // Fetch paragraphs and document-wide activity when sidebar opens
+  // Fetch paragraphs, activity, and versions when sidebar opens
   useEffect(() => {
     if (open && !paragraphs && !loading) {
       const fetchData = async () => {
         setLoading(true);
 
-        const [parasData, activityResult] = await Promise.all([
+        const [parasData, activityResult, versionsResult] = await Promise.all([
           fetchParagraphs(symbol),
           getDocumentDecisionsAction(symbol).catch(() => ({
+            success: false as const,
+            error: "Failed to load",
+          })),
+          getDocumentVersionsAction(symbol).catch(() => ({
             success: false as const,
             error: "Failed to load",
           })),
@@ -531,6 +545,9 @@ export function DocumentSymbol({
         if (activityResult.success && activityResult.data) {
           setAllDecisions(activityResult.data.decisions || []);
           setAllComments(activityResult.data.comments || []);
+        }
+        if (versionsResult.success && versionsResult.data) {
+          setDocumentVersions(versionsResult.data);
         }
         setLoading(false);
       };
@@ -832,6 +849,120 @@ export function DocumentSymbol({
                         )}
                       </dl>
                     </div>
+
+                  {/* Newer Versions */}
+                  {!loading && (() => {
+                    // Find current document index
+                    const currentIndex = documentVersions.findIndex(v => v.symbol === symbol);
+                    // Only show versions newer than current (after current index in the sorted list)
+                    const newerVersions = currentIndex >= 0 
+                      ? documentVersions.slice(currentIndex + 1) 
+                      : [];
+                    
+                    if (newerVersions.length > 0) {
+                      return (
+                        <div className="rounded-xl bg-white p-4 shadow-sm">
+                          <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                            Newer Versions ({newerVersions.length})
+                          </h3>
+                          {/* Header row */}
+                          <div className="grid grid-cols-[auto_1fr_auto_auto_auto_auto] items-center gap-x-3 gap-y-2 text-xs">
+                            <span className="font-medium text-gray-500">Year</span>
+                            <span className="font-medium text-gray-500">Symbol</span>
+                            <span className="font-medium text-gray-500 text-center">vs Original</span>
+                            <span className="font-medium text-gray-500 text-center">vs Previous</span>
+                            <span className="font-medium text-gray-500">PDF</span>
+                            <span className="font-medium text-gray-500">Action</span>
+                            
+                            {newerVersions.map((version, idx) => {
+                              // Previous version is either the one before in newerVersions, or the current document
+                              const previousSymbol = idx === 0 ? symbol : newerVersions[idx - 1].symbol;
+                              const previousYear = idx === 0 ? (year ?? 0) : newerVersions[idx - 1].year;
+                              
+                              return (
+                                <React.Fragment key={version.symbol}>
+                                  {/* Year */}
+                                  <span className="text-sm text-gray-700">
+                                    {version.year}
+                                  </span>
+                                  
+                                  {/* Symbol */}
+                                  <span className="text-sm font-medium text-gray-900 truncate">
+                                    {version.symbol}
+                                  </span>
+                                  
+                                  {/* Compare with Original */}
+                                  <button
+                                    onClick={() => {
+                                      setDiffOriginalOverride(null); // Use main document as original
+                                      setDiffCompareSymbol({ symbol: version.symbol, year: version.year, title: version.title });
+                                      setDiffModalOpen(true);
+                                    }}
+                                    className="inline-flex items-center justify-center gap-1 rounded bg-blue-50 px-2 py-1 text-xs font-medium text-un-blue hover:bg-blue-100 transition-colors"
+                                    title={`Compare ${version.symbol} with ${symbol}`}
+                                  >
+                                    <ArrowLeftRight className="h-3 w-3" />
+                                  </button>
+                                  
+                                  {/* Compare with Previous */}
+                                  <button
+                                    onClick={() => {
+                                      // For comparing with previous version
+                                      setDiffOriginalOverride({ 
+                                        symbol: previousSymbol, 
+                                        year: previousYear, 
+                                        title: idx === 0 ? title : newerVersions[idx - 1].title 
+                                      });
+                                      setDiffCompareSymbol({ symbol: version.symbol, year: version.year, title: version.title });
+                                      setDiffModalOpen(true);
+                                    }}
+                                    className={`inline-flex items-center justify-center gap-1 rounded px-2 py-1 text-xs font-medium transition-colors ${
+                                      idx === 0 
+                                        ? "bg-gray-100 text-gray-400 cursor-not-allowed" 
+                                        : "bg-blue-50 text-un-blue hover:bg-blue-100"
+                                    }`}
+                                    title={idx === 0 ? "Same as original" : `Compare ${version.symbol} with ${previousSymbol}`}
+                                    disabled={idx === 0}
+                                  >
+                                    <ArrowLeftRight className="h-3 w-3" />
+                                  </button>
+                                  
+                                  {/* View PDF */}
+                                  <a
+                                    href={`https://docs.un.org/en/${version.symbol}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center justify-center rounded bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600 hover:bg-gray-200 transition-colors"
+                                    title="View PDF in ODS in a new tab"
+                                  >
+                                    <ExternalLink className="h-3 w-3" />
+                                  </a>
+                                  
+                                  {/* Update To */}
+                                  {(entity === userEntity || canReviewAnyEntity) && onUpdateClick ? (
+                                    <button
+                                      onClick={() => {
+                                        onUpdateClick(version.symbol);
+                                      }}
+                                      className="inline-flex items-center gap-1 rounded bg-amber-50 px-2 py-1 text-xs font-medium text-amber-700 hover:bg-amber-100 transition-colors"
+                                      title="Update the mandate citation to this newer version"
+                                    >
+                                      <ArrowRight className="h-3 w-3" />
+                                      Update
+                                    </button>
+                                  ) : (
+                                    <span className="text-xs text-gray-400">—</span>
+                                  )}
+                                </React.Fragment>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      );
+                    }
+                    
+                    return null;
+                  })()}
                 </div>
               )}
 
@@ -1556,6 +1687,24 @@ export function DocumentSymbol({
             </div>
           </div>
         </div>
+      )}
+
+      {/* Diff Modal */}
+      {diffCompareSymbol && (
+        <DiffModal
+          isOpen={diffModalOpen}
+          onClose={() => {
+            setDiffModalOpen(false);
+            setDiffCompareSymbol(null);
+            setDiffOriginalOverride(null);
+          }}
+          originalSymbol={diffOriginalOverride?.symbol ?? symbol}
+          originalYear={diffOriginalOverride?.year ?? (year ?? 0)}
+          originalTitle={diffOriginalOverride?.title ?? title}
+          compareSymbol={diffCompareSymbol.symbol}
+          compareYear={diffCompareSymbol.year}
+          compareTitle={diffCompareSymbol.title ?? undefined}
+        />
       )}
     </>
   );

@@ -29,6 +29,7 @@ import {
 import { orderBy } from "natural-orderby";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { DecisionDropdown } from "./DecisionDropdown";
+import { DiffModal } from "./DiffModal";
 import { DocumentSearchInput } from "./DocumentSearchInput";
 import { DocumentSymbol } from "./DocumentSymbol";
 import { EntityHeader } from "./EntityHeader";
@@ -257,6 +258,7 @@ function MandateRowContent({
   onReasonChange,
   onApprove,
   onUpdateClick,
+  onDiff,
 }: {
   mandate: Mandate;
   state?: MandateState;
@@ -271,7 +273,8 @@ function MandateRowContent({
   onDecision: (decision: Decision, newSymbol?: string) => void;
   onReasonChange?: (reason: string | null, otherReason: string | null) => void;
   onApprove?: (decisionId: string, approved: boolean) => void;
-  onUpdateClick?: () => void;
+  onUpdateClick?: (prefillSymbol?: string) => void;
+  onDiff?: (originalSymbol: string, originalYear: number, compareSymbol: string, compareYear: number) => void;
 }) {
   const ageInfo = getAgeIndicator(mandate.year);
   const currentDecision = state?.decision;
@@ -431,6 +434,9 @@ function MandateRowContent({
                 onAction={handleAction}
                 onPrimaryClick={handlePrimaryClick}
                 disabled={isAddressed}
+                currentSymbol={mandate.symbol}
+                currentYear={mandate.year ?? undefined}
+                onDiff={onDiff}
               >
                 <button
                   className={`group relative inline-flex h-6 min-w-6 items-center justify-center rounded-full text-sm transition-all ${
@@ -569,6 +575,19 @@ function MandateRow({
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [newDocSidebarOpen, setNewDocSidebarOpen] = useState(false);
   const [showUpdateSearch, setShowUpdateSearch] = useState(false);
+  const [updatePrefillSymbol, setUpdatePrefillSymbol] = useState<string | undefined>(undefined);
+  const [diffModalOpen, setDiffModalOpen] = useState(false);
+  const [diffParams, setDiffParams] = useState<{
+    originalSymbol: string;
+    originalYear: number;
+    compareSymbol: string;
+    compareYear: number;
+  } | null>(null);
+
+  const handleDiff = (originalSymbol: string, originalYear: number, compareSymbol: string, compareYear: number) => {
+    setDiffParams({ originalSymbol, originalYear, compareSymbol, compareYear });
+    setDiffModalOpen(true);
+  };
 
   // Get suggested update symbol from warnings (for newer-available)
   const warnings = getMandateWarnings(mandate);
@@ -600,15 +619,18 @@ function MandateRow({
   const handleUpdateSelect = (symbol: string) => {
     onDecision("update", symbol);
     setShowUpdateSearch(false);
+    setUpdatePrefillSymbol(undefined);
   };
 
   const handleUpdateManual = (data: ManualEntryData) => {
     onUpdateWithManual(data.symbol, data);
     setShowUpdateSearch(false);
+    setUpdatePrefillSymbol(undefined);
   };
 
   const handleCancelUpdate = () => {
     setShowUpdateSearch(false);
+    setUpdatePrefillSymbol(undefined);
     // If update wasn't completed (no newSymbol), revert the decision
     if (!hasCompletedUpdate) {
       onDecision("cancel");
@@ -631,7 +653,11 @@ function MandateRow({
         onDecision={onDecision}
         onReasonChange={onReasonChange}
         onApprove={onApprove}
-        onUpdateClick={() => setShowUpdateSearch(true)}
+        onUpdateClick={(prefillSymbol) => {
+          setUpdatePrefillSymbol(prefillSymbol);
+          setShowUpdateSearch(true);
+        }}
+        onDiff={handleDiff}
       />
 
       {/* Update search input (shown when user selects "update" from dropdown) */}
@@ -648,7 +674,7 @@ function MandateRow({
             submitLabel="Update"
             formTitle="Enter replacement document manually"
             compact
-            initialQuery={suggestedUpdateSymbol}
+            initialQuery={updatePrefillSymbol || suggestedUpdateSymbol}
           />
         </div>
       )}
@@ -695,8 +721,9 @@ function MandateRow({
           onDecision={onDecision}
           onApprove={onApprove}
           onComment={onComment}
-          onUpdateClick={() => {
+          onUpdateClick={(prefillSymbol) => {
             setSidebarOpen(false);
+            setUpdatePrefillSymbol(prefillSymbol);
             setShowUpdateSearch(true);
           }}
           metadataFromDb={mandate.metadataFromDb}
@@ -735,6 +762,21 @@ function MandateRow({
           />
         )}
       </div>
+
+      {/* Diff Modal */}
+      {diffParams && (
+        <DiffModal
+          isOpen={diffModalOpen}
+          onClose={() => {
+            setDiffModalOpen(false);
+            setDiffParams(null);
+          }}
+          originalSymbol={diffParams.originalSymbol}
+          originalYear={diffParams.originalYear}
+          compareSymbol={diffParams.compareSymbol}
+          compareYear={diffParams.compareYear}
+        />
+      )}
     </div>
   );
 }
