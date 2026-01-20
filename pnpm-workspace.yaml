@@ -1,0 +1,8 @@
+ignoredBuiltDependencies:
+  - canvas
+  - esbuild
+  - sharp
+  - unrs-resolver
+
+onlyBuiltDependencies:
+  - undifferent

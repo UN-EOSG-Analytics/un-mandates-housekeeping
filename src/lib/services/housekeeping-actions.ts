@@ -610,22 +610,34 @@ export async function computeDocumentDiffAction(
     ]);
 
     if (!originalDoc || !originalDoc.lines.length) {
-      return { success: false, error: `Could not fetch document: ${originalSymbol}` };
+      return {
+        success: false,
+        error: `Could not fetch document: ${originalSymbol}`,
+      };
     }
     if (!compareDoc || !compareDoc.lines.length) {
-      return { success: false, error: `Could not fetch document: ${compareSymbol}` };
+      return {
+        success: false,
+        error: `Could not fetch document: ${compareSymbol}`,
+      };
     }
 
-    const diffResult = diff(originalDoc.lines, compareDoc.lines, { threshold: 0.8 });
+    const diffResult = diff(originalDoc.lines, compareDoc.lines, {
+      threshold: 0.8,
+    });
     return { success: true, data: diffResult };
   } catch (error) {
     console.error("Error computing document diff:", error);
-    const errorMsg = error instanceof Error ? error.message : "Failed to compute document diff";
+    const errorMsg =
+      error instanceof Error
+        ? error.message
+        : "Failed to compute document diff";
     // Provide more helpful error message
     if (errorMsg.includes("No available format")) {
-      return { 
-        success: false, 
-        error: "Document not available on UN ODS. Older or variant resolutions may not have downloadable files." 
+      return {
+        success: false,
+        error:
+          "Document not available on UN ODS. Older or variant resolutions may not have downloadable files.",
       };
     }
     return { success: false, error: errorMsg };

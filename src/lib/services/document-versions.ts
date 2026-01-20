@@ -27,7 +27,10 @@ export async function fetchAllVersions(
   symbol: string,
 ): Promise<DocumentVersion[]> {
   // First, get the normalized_title and issuing_body for the current document
-  const currentDoc = await query<{ normalized_title: string; issuing_body: string }>(
+  const currentDoc = await query<{
+    normalized_title: string;
+    issuing_body: string;
+  }>(
     `SELECT normalized_title, issuing_body
      FROM public.documents
      WHERE symbol = $1

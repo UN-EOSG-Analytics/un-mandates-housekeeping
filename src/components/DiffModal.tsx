@@ -1,7 +1,7 @@
 "use client";
 
 import { X, Loader2 } from "lucide-react";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 import { computeDocumentDiffAction } from "@/lib/services/housekeeping-actions";
 import { DiffViewer } from "undifferent/react";
 import type { DiffResult } from "undifferent/core";
@@ -27,47 +27,47 @@ export function DiffModal({
   compareYear,
   compareTitle,
 }: Props) {
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [diffResult, setDiffResult] = useState<DiffResult | null>(null);
-
-  const loadDiff = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-
-    try {
-      const result = await computeDocumentDiffAction(originalSymbol, compareSymbol);
-
-      if (!result.success) {
-        setError(result.error);
-        setLoading(false);
-        return;
-      }
-
-      setDiffResult(result.data ?? null);
-    } catch (err) {
-      setError("Failed to compute diff");
-      console.error(err);
-    }
-
-    setLoading(false);
-  }, [originalSymbol, compareSymbol]);
+  const [state, setState] = useState<{
+    loading: boolean;
+    error: string | null;
+    diffResult: DiffResult | null;
+  }>({ loading: true, error: null, diffResult: null });
 
   useEffect(() => {
-    if (isOpen) {
-      loadDiff();
-    }
-  }, [isOpen, loadDiff]);
+    if (!isOpen) return;
+
+    let cancelled = false;
+
+    computeDocumentDiffAction(originalSymbol, compareSymbol)
+      .then((result) => {
+        if (cancelled) return;
+        if (!result.success) {
+          setState({ loading: false, error: result.error, diffResult: null });
+        } else {
+          setState({ loading: false, error: null, diffResult: result.data ?? null });
+        }
+      })
+      .catch((err) => {
+        if (cancelled) return;
+        console.error(err);
+        setState({ loading: false, error: "Failed to compute diff", diffResult: null });
+      });
+
+    return () => {
+      cancelled = true;
+      // Reset state for next open
+      setState({ loading: true, error: null, diffResult: null });
+    };
+  }, [isOpen, originalSymbol, compareSymbol]);
+
+  const { loading, error, diffResult } = state;
 
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       {/* Backdrop */}
-      <div
-        className="absolute inset-0 bg-black/50"
-        onClick={onClose}
-      />
+      <div className="absolute inset-0 bg-black/50" onClick={onClose} />
 
       {/* Modal */}
       <div className="relative z-10 flex max-h-[90vh] w-full max-w-5xl flex-col rounded-xl bg-white shadow-2xl">
@@ -77,8 +77,11 @@ export function DiffModal({
             <h2 className="text-lg font-semibold text-gray-900">
               Compare Document Versions
             </h2>
+            <p className="mt-1 truncate text-sm text-gray-500">
+              {originalSymbol} ({originalYear}) → {compareSymbol} ({compareYear})
+            </p>
             {(originalTitle || compareTitle) && (
-              <p className="mt-1 truncate text-sm text-gray-500">
+              <p className="truncate text-xs text-gray-400">
                 {originalTitle || compareTitle}
               </p>
             )}
@@ -107,14 +110,16 @@ export function DiffModal({
           ) : diffResult ? (
             <div
               className="p-6"
-              style={{
-                "--diff-item-bg": "#ffffff",
-                "--diff-added-bg": "#dcfce7",
-                "--diff-removed-bg": "#fee2e2",
-                "--diff-moved-bg": "#fefce8",
-                "--diff-aligned-bg": "#eff6ff",
-                "--diff-score-color": "#009edb",
-              } as React.CSSProperties}
+              style={
+                {
+                  "--diff-item-bg": "#ffffff",
+                  "--diff-added-bg": "#dcfce7",
+                  "--diff-removed-bg": "#fee2e2",
+                  "--diff-moved-bg": "#fefce8",
+                  "--diff-aligned-bg": "#eff6ff",
+                  "--diff-score-color": "#009edb",
+                } as React.CSSProperties
+              }
             >
               <DiffViewer
                 data={diffResult}

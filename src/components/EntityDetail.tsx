@@ -278,7 +278,12 @@ function MandateRowContent({
   onUpdateClick?: (prefillSymbol?: string) => void;
   showReasonPopup?: boolean;
   onReasonPopupClose?: () => void;
-  onDiff?: (originalSymbol: string, originalYear: number, compareSymbol: string, compareYear: number) => void;
+  onDiff?: (
+    originalSymbol: string,
+    originalYear: number,
+    compareSymbol: string,
+    compareYear: number,
+  ) => void;
 }) {
   const ageInfo = getAgeIndicator(mandate.year);
   const currentDecision = state?.decision;
@@ -587,7 +592,9 @@ function MandateRow({
   const [newDocSidebarOpen, setNewDocSidebarOpen] = useState(false);
   const [showUpdateSearch, setShowUpdateSearch] = useState(false);
   const [showReasonPopup, setShowReasonPopup] = useState(false);
-  const [updatePrefillSymbol, setUpdatePrefillSymbol] = useState<string | undefined>(undefined);
+  const [updatePrefillSymbol, setUpdatePrefillSymbol] = useState<
+    string | undefined
+  >(undefined);
   const [diffModalOpen, setDiffModalOpen] = useState(false);
   const [diffParams, setDiffParams] = useState<{
     originalSymbol: string;
@@ -596,7 +603,12 @@ function MandateRow({
     compareYear: number;
   } | null>(null);
 
-  const handleDiff = (originalSymbol: string, originalYear: number, compareSymbol: string, compareYear: number) => {
+  const handleDiff = (
+    originalSymbol: string,
+    originalYear: number,
+    compareSymbol: string,
+    compareYear: number,
+  ) => {
     setDiffParams({ originalSymbol, originalYear, compareSymbol, compareYear });
     setDiffModalOpen(true);
   };
@@ -1394,7 +1406,8 @@ export function EntityDetail({
         console.error("Failed to save decision:", result.error);
         setStates((prev) => {
           const prevDecisions = prev[key]?.decisions?.filter((d) => d.id) || [];
-          const lastValidDecision = prevDecisions[prevDecisions.length - 1] || null;
+          const lastValidDecision =
+            prevDecisions[prevDecisions.length - 1] || null;
           return {
             ...prev,
             [key]: {

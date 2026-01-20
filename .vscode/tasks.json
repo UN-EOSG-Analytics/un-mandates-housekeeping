@@ -4,8 +4,50 @@
 		{
 			"label": "Install Dependencies",
 			"type": "shell",
-			"command": "uv sync && npm install",
+			"command": "uv sync && pnpm install",
 			"group": "build"
+		},
+		{
+			"label": "pnpm dev",
+			"type": "shell",
+			"command": "pnpm dev",
+			"isBackground": true,
+			"problemMatcher": ["$nextjs"]
+		},
+		{
+			"label": "pnpm build",
+			"type": "shell",
+			"command": "pnpm build",
+			"group": "build",
+			"problemMatcher": ["$nextjs"]
+		},
+		{
+			"label": "pnpm start",
+			"type": "shell",
+			"command": "pnpm start",
+			"isBackground": true
+		},
+		{
+			"label": "pnpm lint",
+			"type": "shell",
+			"command": "pnpm lint",
+			"problemMatcher": ["$eslint-stylish"]
+		},
+		{
+			"label": "pnpm typecheck",
+			"type": "shell",
+			"command": "pnpm typecheck",
+			"problemMatcher": ["$tsc"]
+		},
+		{
+			"label": "pnpm format",
+			"type": "shell",
+			"command": "pnpm format"
+		},
+		{
+			"label": "pnpm format:check",
+			"type": "shell",
+			"command": "pnpm format:check"
 		}
 	]
 }

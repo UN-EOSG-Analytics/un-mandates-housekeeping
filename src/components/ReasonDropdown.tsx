@@ -155,7 +155,7 @@ export function ReasonPopup({
     >
       <div
         ref={containerRef}
-        className="mx-4 max-w-lg rounded-lg border border-gray-200 bg-white shadow-xl animate-in fade-in zoom-in-95 duration-150"
+        className="mx-4 max-w-lg animate-in rounded-lg border border-gray-200 bg-white shadow-xl duration-150 zoom-in-95 fade-in"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}

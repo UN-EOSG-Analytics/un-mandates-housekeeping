@@ -20,7 +20,12 @@ interface WarningTooltipProps {
   /** Current document year for diff comparison */
   currentYear?: number;
   /** Callback when diff is requested */
-  onDiff?: (originalSymbol: string, originalYear: number, compareSymbol: string, compareYear: number) => void;
+  onDiff?: (
+    originalSymbol: string,
+    originalYear: number,
+    compareSymbol: string,
+    compareYear: number,
+  ) => void;
 }
 
 const severityStyles = {
@@ -39,12 +44,6 @@ const severityStyles = {
     border: "border-un-blue/20",
     text: "text-gray-700",
   },
-};
-
-const colorSchemeStyles = {
-  red: "bg-red-100 text-red-600",
-  amber: "bg-amber-100 text-amber-600",
-  blue: "bg-un-blue/10 text-un-blue",
 };
 
 export function WarningTooltip({
@@ -133,19 +132,27 @@ export function WarningTooltip({
                           >
                             {warning.linkedSymbol}
                           </a>
-                          {onDiff && currentSymbol && currentYear && warning.linkedYear && (
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                onDiff(currentSymbol, currentYear, warning.linkedSymbol!, warning.linkedYear!);
-                                setOpen(false);
-                              }}
-                              className="ml-2 inline-flex items-center gap-1 rounded bg-blue-50 px-2 py-0.5 text-xs font-medium text-un-blue hover:bg-blue-100 transition-colors"
-                            >
-                              <ArrowLeftRight className="h-3 w-3" />
-                              Compare
-                            </button>
-                          )}
+                          {onDiff &&
+                            currentSymbol &&
+                            currentYear &&
+                            warning.linkedYear && (
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  onDiff(
+                                    currentSymbol,
+                                    currentYear,
+                                    warning.linkedSymbol!,
+                                    warning.linkedYear!,
+                                  );
+                                  setOpen(false);
+                                }}
+                                className="ml-2 inline-flex items-center gap-1 rounded bg-blue-50 px-2 py-0.5 text-xs font-medium text-un-blue transition-colors hover:bg-blue-100"
+                              >
+                                <ArrowLeftRight className="h-3 w-3" />
+                                Compare
+                              </button>
+                            )}
                         </>
                       )}
                     </p>

@@ -34,13 +34,6 @@ export function DocumentSearchInput({
   initialQuery,
 }: Props) {
   const [query, setQuery] = useState(initialQuery || "");
-  
-  // Update query when initialQuery changes
-  useEffect(() => {
-    if (initialQuery) {
-      setQuery(initialQuery);
-    }
-  }, [initialQuery]);
   const [results, setResults] = useState<SearchResult[]>([]);
   const [searching, setSearching] = useState(false);
   const [searchDone, setSearchDone] = useState(false);
@@ -103,7 +96,11 @@ export function DocumentSearchInput({
   const lastInitialQuery = useRef<string | undefined>(undefined);
   useEffect(() => {
     // Only trigger if initialQuery changed and is valid
-    if (initialQuery && initialQuery.length >= 2 && initialQuery !== lastInitialQuery.current) {
+    if (
+      initialQuery &&
+      initialQuery.length >= 2 &&
+      initialQuery !== lastInitialQuery.current
+    ) {
       lastInitialQuery.current = initialQuery;
       // Focus the input and trigger search
       const timer = setTimeout(() => {

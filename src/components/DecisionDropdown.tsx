@@ -82,7 +82,8 @@ export function DecisionDropdown({
   onReasonPopupClose,
 }: DecisionDropdownProps) {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [internalShowReasonPopup, setInternalShowReasonPopup] = React.useState(false);
+  const [internalShowReasonPopup, setInternalShowReasonPopup] =
+    React.useState(false);
   const containerRef = React.useRef<HTMLDivElement>(null);
 
   // Show popup if either internal or external says to show it
