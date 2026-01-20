@@ -8,6 +8,8 @@ import type { Mandate } from "@/types";
 export interface MandateWarning {
   id: string;
   message: string;
+  /** Optional suffix to display after linkedSymbol */
+  messageSuffix?: string;
   severity: "error" | "warning" | "info";
   /** For update warnings: the symbol to pre-select for update */
   suggestedUpdate?: string;
@@ -107,8 +109,8 @@ export function getMandateWarnings(
     return [
       {
         id: "newer-already-cited",
-        message:
-          "Newer version is already cited — consider removing this older version:",
+        message: "Newer version",
+        messageSuffix: "already cited — consider removing this older version.",
         severity: "warning",
         linkedSymbol: mandate.newerVersion?.symbol,
         linkedYear: mandate.newerVersion?.year,

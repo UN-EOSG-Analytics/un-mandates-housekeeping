@@ -150,11 +150,13 @@ export function ReasonPopup({
   const modal = (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-[1px]"
+      style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0 }}
       onClick={handleBackdropClick}
     >
       <div
         ref={containerRef}
-        className="w-full max-w-lg rounded-lg border border-gray-200 bg-white shadow-xl animate-in fade-in zoom-in-95 duration-150"
+        className="mx-4 max-w-lg rounded-lg border border-gray-200 bg-white shadow-xl animate-in fade-in zoom-in-95 duration-150"
+        onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div

@@ -41,6 +41,12 @@ const severityStyles = {
   },
 };
 
+const colorSchemeStyles = {
+  red: "bg-red-100 text-red-600",
+  amber: "bg-amber-100 text-amber-600",
+  blue: "bg-un-blue/10 text-un-blue",
+};
+
 export function WarningTooltip({
   warnings,
   children,
@@ -85,7 +91,7 @@ export function WarningTooltip({
       </PopoverTrigger>
       <PopoverContent
         className="w-80 overflow-hidden p-0"
-        align="start"
+        side="left"
         sideOffset={8}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -153,7 +159,7 @@ export function WarningTooltip({
                         className={`mt-2 rounded-md px-2.5 py-1 text-xs font-medium transition-colors ${
                           warning.action === "remove"
                             ? "bg-red-100 text-red-700 hover:bg-red-200"
-                            : "bg-un-blue/10 text-un-blue hover:bg-un-blue/20"
+                            : "bg-amber-100 text-amber-700 hover:bg-amber-200"
                         }`}
                       >
                         {warning.action === "remove"

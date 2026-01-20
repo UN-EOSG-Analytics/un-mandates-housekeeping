@@ -85,8 +85,9 @@ export function DecisionDropdown({
   const [internalShowReasonPopup, setInternalShowReasonPopup] = React.useState(false);
   const containerRef = React.useRef<HTMLDivElement>(null);
 
-  // Use external control if provided, otherwise use internal state
-  const showReasonPopup = externalShowReasonPopup ?? internalShowReasonPopup;
+  // Show popup if either internal or external says to show it
+  // (external is used for "update" flow, internal for "retain"/"remove")
+  const showReasonPopup = externalShowReasonPopup || internalShowReasonPopup;
   const setShowReasonPopup = (value: boolean) => {
     setInternalShowReasonPopup(value);
     if (!value && onReasonPopupClose) {
@@ -142,18 +143,22 @@ export function DecisionDropdown({
 
     if (!value) {
       onChange("cancel");
-      // Clear reason when canceling
-      if (onReasonChange) {
-        onReasonChange(null, null);
-      }
+      // Just close the popup - the new "cancel" decision won't have a reason.
+      // Don't call onReasonChange here as it would update the OLD decision
+      // and cause the state to revert.
+      setShowReasonPopup(false);
+      return;
+    }
+
+    // For "update", don't call onChange yet - the decision will be created
+    // after the user selects a replacement document in the update search panel.
+    // Calling onChange("update") without a newSymbol would be rejected by the server.
+    if (value === "update" && onUpdateClick) {
+      onUpdateClick();
       return;
     }
 
     onChange(value);
-
-    if (value === "update" && onUpdateClick) {
-      onUpdateClick();
-    }
 
     // Show reason popup after selecting a decision (except for cancel/add)
     if (value && value !== "cancel" && value !== "add" && onReasonChange) {
@@ -218,8 +223,10 @@ export function DecisionDropdown({
               opt.value && opt.value in DECISION_COLORS
                 ? DECISION_COLORS[opt.value as keyof typeof DECISION_COLORS]
                 : DECISION_COLORS.default;
+            // "—" option is selected when decision is null, undefined, or "cancel"
             const isSelected =
-              decision === opt.value || (!decision && opt.value === "");
+              decision === opt.value ||
+              ((!decision || decision === "cancel") && opt.value === "");
             return (
               <button
                 key={opt.value || "empty"}

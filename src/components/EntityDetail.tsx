@@ -1389,6 +1389,21 @@ export function EntityDetail({
             ],
           },
         }));
+      } else if (!result.success) {
+        // Revert optimistic update on failure
+        console.error("Failed to save decision:", result.error);
+        setStates((prev) => {
+          const prevDecisions = prev[key]?.decisions?.filter((d) => d.id) || [];
+          const lastValidDecision = prevDecisions[prevDecisions.length - 1] || null;
+          return {
+            ...prev,
+            [key]: {
+              ...prev[key],
+              decision: lastValidDecision,
+              decisions: prevDecisions,
+            },
+          };
+        });
       }
     },
     [entity, userEmail, userEntity],
