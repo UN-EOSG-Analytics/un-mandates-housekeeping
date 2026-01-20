@@ -47,6 +47,8 @@ export function transformPPBData(
         string,
         {
           entityLong: string | null;
+          section: string | null;
+          sectionTitle: string | null;
           backgroundMandates: Mandate[];
           legislativeMandates: Record<string, Mandate[]>;
         }
@@ -131,6 +133,8 @@ export function transformPPBData(
       if (!structure[budgetPart].entities[entity]) {
         structure[budgetPart].entities[entity] = {
           entityLong,
+          section: ci.section,
+          sectionTitle: ci.section_title,
           backgroundMandates: [],
           legislativeMandates: {},
         };
@@ -168,10 +172,19 @@ export function transformPPBData(
       numeral: data.meta?.numeral || "",
       order: data.meta?.order ?? 999,
       entities: Object.entries(data.entities)
+        .sort(([, a], [, b]) => {
+          // Sort by section first (nulls last), then by entity name
+          const sectionA = a.section ?? "\uffff";
+          const sectionB = b.section ?? "\uffff";
+          if (sectionA !== sectionB) return sectionA.localeCompare(sectionB);
+          return 0; // Keep original order within section
+        })
         .sort(([a], [b]) => a.localeCompare(b))
         .map(([entity, entityData]) => ({
           entity,
           entityLong: entityData.entityLong,
+          section: entityData.section,
+          sectionTitle: entityData.sectionTitle,
           backgroundMandates: entityData.backgroundMandates,
           legislativeMandates: entityData.legislativeMandates,
         })),

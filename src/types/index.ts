@@ -94,6 +94,8 @@ export interface Mandate {
 export interface EntityData {
   entity: string;
   entityLong: string | null;
+  section: string | null;
+  sectionTitle: string | null;
   backgroundMandates: Mandate[];
   legislativeMandates: Record<string, Mandate[]>;
 }
