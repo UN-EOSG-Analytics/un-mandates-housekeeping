@@ -135,16 +135,16 @@ export async function getCurrentUser() {
     [session.userId],
   );
   if (!rows[0]) return null;
-  
-  const role = rows[0].role || 'user';
+
+  const role = rows[0].role || "user";
   const entity = rows[0].entity;
-  
+
   return {
     id: rows[0].id,
     email: rows[0].email,
     entity: entity,
     role: role,
-    isReviewer: role === 'reviewer' || role === 'admin',
+    isReviewer: role === "reviewer" || role === "admin",
     isDMSPC: entity?.toUpperCase() === "DMSPC",
     canReviewAnyEntity: entity?.toUpperCase() === "DMSPC",
   };

@@ -15,6 +15,9 @@ export default function Footer() {
             for 2026
           </a>
           .
+          <br />
+          Only showing parts, sections, and entities that include
+          &apos;Legislative mandates&apos;.
         </p>
       </div>
       <div className="border-t border-gray-200 py-8">

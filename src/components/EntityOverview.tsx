@@ -147,7 +147,7 @@ export function EntityOverview({ parts, userEntity }: Props) {
           <div className="mb-3 flex items-baseline gap-2">
             {partData.numeral && (
               <span className="text-base font-medium text-gray-400">
-                {partData.numeral}.
+                PART {partData.numeral}.
               </span>
             )}
             <span className="text-base font-medium text-gray-500">

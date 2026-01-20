@@ -76,7 +76,7 @@ export function ManualDocumentForm({
         .then((r) => r.json())
         .then((results) => {
           const exactMatch = results.find(
-            (doc: { symbol: string }) => doc.symbol === manualData.symbol
+            (doc: { symbol: string }) => doc.symbol === manualData.symbol,
           );
           if (exactMatch) {
             setSymbolExists(true);
@@ -164,9 +164,7 @@ export function ManualDocumentForm({
                 <div className="mb-1 text-xs font-medium text-un-blue">
                   {existingDoc.symbol}
                 </div>
-                <div className="text-sm text-gray-700">
-                  {existingDoc.title}
-                </div>
+                <div className="text-sm text-gray-700">{existingDoc.title}</div>
                 <div className="mt-1 text-xs text-gray-500">
                   {[existingDoc.body, existingDoc.year]
                     .filter(Boolean)

@@ -99,9 +99,10 @@ export interface EntityData {
 }
 
 export interface BudgetPartMeta {
+  key: string; // matches database budget_part value
   numeral: string;
   order: number;
-  name: string;
+  label: string; // display label with "PART X -" prefix
 }
 
 export interface PartData {

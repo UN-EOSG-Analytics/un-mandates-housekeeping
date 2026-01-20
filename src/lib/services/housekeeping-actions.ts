@@ -83,9 +83,9 @@ const toComment = (row: CommentRow): MandateComment => ({
  * Get current user's role information
  */
 export async function getUserRoleAction(): Promise<
-  ActionResult<{ 
-    email: string; 
-    entity: string | null; 
+  ActionResult<{
+    email: string;
+    entity: string | null;
     isReviewer: boolean;
     canReviewAnyEntity: boolean;
   }>
@@ -269,7 +269,10 @@ export async function createDecisionAction(params: {
 
   // DMSPC users can review/edit any entity, others can only edit their own entity
   if (!user.canReviewAnyEntity && user.entity !== entity) {
-    return { success: false, error: "You can only make decisions for your own entity" };
+    return {
+      success: false,
+      error: "You can only make decisions for your own entity",
+    };
   }
 
   if (!user.entity && !user.canReviewAnyEntity) {
@@ -411,7 +414,11 @@ export async function resolveCommentAction(
     SELECT u2.*, users.entity as user_entity
     FROM updated u2
     LEFT JOIN mandates_housekeeping.users users ON u2.user_email = users.email`,
-    [commentId, resolved ? new Date().toISOString() : null, resolved ? user.email : null],
+    [
+      commentId,
+      resolved ? new Date().toISOString() : null,
+      resolved ? user.email : null,
+    ],
   );
 
   revalidatePath(`/entity/${existing.entity}`);
@@ -516,7 +523,10 @@ export async function updateDecisionReasonAction(params: {
 
   // DMSPC users can update any entity, others can only update their own entity
   if (!user.canReviewAnyEntity && user.entity !== existing.entity) {
-    return { success: false, error: "You can only update reasons for your own entity" };
+    return {
+      success: false,
+      error: "You can only update reasons for your own entity",
+    };
   }
 
   // Update the decision reason
@@ -531,7 +541,11 @@ export async function updateDecisionReasonAction(params: {
     FROM updated u
     LEFT JOIN mandates_housekeeping.users users ON u.user_email = users.email
     LEFT JOIN mandates_housekeeping.users approver ON u.approved_by = approver.email`,
-    [decisionId, decisionReason, decisionReason === "other" ? otherReason : null],
+    [
+      decisionId,
+      decisionReason,
+      decisionReason === "other" ? otherReason : null,
+    ],
   );
 
   revalidatePath(`/entity/${existing.entity}`);

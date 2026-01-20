@@ -79,9 +79,14 @@ export function DecisionDropdown({
   const containerRef = React.useRef<HTMLDivElement>(null);
 
   // Get reason display label for tooltip
-  const reasonLabel = decision && decision !== "cancel" && decision !== "add"
-    ? getReasonDisplayLabel(decision as DecisionType, reason ?? null, otherReason ?? null)
-    : null;
+  const reasonLabel =
+    decision && decision !== "cancel" && decision !== "add"
+      ? getReasonDisplayLabel(
+          decision as DecisionType,
+          reason ?? null,
+          otherReason ?? null,
+        )
+      : null;
 
   // Build tooltip content
   const tooltipParts: string[] = [];
@@ -89,19 +94,26 @@ export function DecisionDropdown({
     tooltipParts.push(reasonLabel);
   }
   if (userEmail && createdAt) {
-    tooltipParts.push(`Set by ${userEmail} at ${new Date(createdAt).toLocaleDateString()}`);
+    tooltipParts.push(
+      `Set by ${userEmail} at ${new Date(createdAt).toLocaleDateString()}`,
+    );
   }
-  const tooltipContent = tooltipParts.length > 0 ? tooltipParts.join("\n\n") : null;
+  const tooltipContent =
+    tooltipParts.length > 0 ? tooltipParts.join("\n\n") : null;
 
-  const colors = decision && decision in DECISION_COLORS 
-    ? DECISION_COLORS[decision as keyof typeof DECISION_COLORS] 
-    : DECISION_COLORS.default;
+  const colors =
+    decision && decision in DECISION_COLORS
+      ? DECISION_COLORS[decision as keyof typeof DECISION_COLORS]
+      : DECISION_COLORS.default;
   const sizeClasses = size === "sm" ? "h-6 text-[11px]" : "h-6 text-[11px]";
 
   // Close dropdown when clicking outside
   React.useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     }
@@ -111,7 +123,7 @@ export function DecisionDropdown({
 
   const handleSelect = (value: Decision | "") => {
     setIsOpen(false);
-    
+
     if (!value) {
       onChange("cancel");
       // Clear reason when canceling
@@ -133,13 +145,16 @@ export function DecisionDropdown({
     }
   };
 
-  const handleReasonChange = (newReason: string | null, newOtherReason: string | null) => {
+  const handleReasonChange = (
+    newReason: string | null,
+    newOtherReason: string | null,
+  ) => {
     if (onReasonChange) {
       onReasonChange(newReason, newOtherReason);
     }
   };
 
-  const displayLabel = decision 
+  const displayLabel = decision
     ? decision.charAt(0).toUpperCase() + decision.slice(1)
     : "—";
 
@@ -158,7 +173,9 @@ export function DecisionDropdown({
       onClick={() => !disabled && setIsOpen(!isOpen)}
       disabled={disabled}
       className={`flex w-full items-center justify-between gap-1 rounded border px-2 font-medium transition-colors ${sizeClasses} ${colors.bg} ${colors.border} ${colors.text} ${
-        disabled ? "cursor-default opacity-60" : `cursor-pointer ${colors.hover}`
+        disabled
+          ? "cursor-default opacity-60"
+          : `cursor-pointer ${colors.hover}`
       } ${className || ""}`}
       style={{ minWidth: "5rem" }}
     >
@@ -181,17 +198,19 @@ export function DecisionDropdown({
       {isOpen && !disabled && (
         <div className="absolute top-full left-0 z-50 mt-1 min-w-[5rem] rounded border border-gray-200 bg-white py-0.5 shadow-lg">
           {options.map((opt) => {
-            const optColors = opt.value && opt.value in DECISION_COLORS 
-              ? DECISION_COLORS[opt.value as keyof typeof DECISION_COLORS] 
-              : DECISION_COLORS.default;
-            const isSelected = decision === opt.value || (!decision && opt.value === "");
+            const optColors =
+              opt.value && opt.value in DECISION_COLORS
+                ? DECISION_COLORS[opt.value as keyof typeof DECISION_COLORS]
+                : DECISION_COLORS.default;
+            const isSelected =
+              decision === opt.value || (!decision && opt.value === "");
             return (
               <button
                 key={opt.value || "empty"}
                 onClick={() => handleSelect(opt.value)}
                 className={`flex w-full items-center px-2.5 py-1 text-[11px] font-medium transition-colors ${
-                  isSelected 
-                    ? `${optColors.bg} ${optColors.text}` 
+                  isSelected
+                    ? `${optColors.bg} ${optColors.text}`
                     : "text-gray-600 hover:bg-gray-50"
                 }`}
               >
@@ -203,16 +222,19 @@ export function DecisionDropdown({
       )}
 
       {/* Reason popup - appears after making a decision */}
-      {decision && decision !== "cancel" && decision !== "add" && onReasonChange && (
-        <ReasonPopup
-          decision={decision as DecisionType}
-          reason={reason ?? null}
-          otherReason={otherReason ?? null}
-          onChange={handleReasonChange}
-          onClose={() => setShowReasonPopup(false)}
-          isOpen={showReasonPopup}
-        />
-      )}
+      {decision &&
+        decision !== "cancel" &&
+        decision !== "add" &&
+        onReasonChange && (
+          <ReasonPopup
+            decision={decision as DecisionType}
+            reason={reason ?? null}
+            otherReason={otherReason ?? null}
+            onChange={handleReasonChange}
+            onClose={() => setShowReasonPopup(false)}
+            isOpen={showReasonPopup}
+          />
+        )}
     </div>
   );
 }

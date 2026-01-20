@@ -2,29 +2,29 @@
 
 import { getAgeIndicator } from "@/lib/services/age-indicator";
 import {
-    approveDecisionAction,
-    createCommentAction,
-    createDecisionAction,
-    getEntityDecisionsAction,
-    getUserRoleAction,
-    updateDecisionReasonAction,
+  approveDecisionAction,
+  createCommentAction,
+  createDecisionAction,
+  getEntityDecisionsAction,
+  getUserRoleAction,
+  updateDecisionReasonAction,
 } from "@/lib/services/housekeeping-actions";
 import { getMandateWarnings } from "@/lib/services/mandate-warnings";
 import type {
-    Decision,
-    Mandate,
-    MandateComment,
-    MandateDecision,
-    MandateState,
+  Decision,
+  Mandate,
+  MandateComment,
+  MandateDecision,
+  MandateState,
 } from "@/types";
 import {
-    Check,
-    ChevronDown,
-    ChevronUp,
-    MessageSquare,
-    Search,
-    Star,
-    X,
+  Check,
+  ChevronDown,
+  ChevronUp,
+  MessageSquare,
+  Search,
+  Star,
+  X,
 } from "lucide-react";
 import { orderBy } from "natural-orderby";
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -340,7 +340,13 @@ function MandateRowContent({
       >
         <span className="inline-flex w-4 shrink-0 items-center justify-center">
           {isFoundational && (
-            <Tooltip content={readOnly ? "Foundational mandate" : "Foundational mandate — also cited in Mandates and Background"}>
+            <Tooltip
+              content={
+                readOnly
+                  ? "Foundational mandate"
+                  : "Foundational mandate — also cited in Mandates and Background"
+              }
+            >
               <Star
                 className="h-4 w-4 fill-un-blue text-un-blue"
                 strokeWidth={0.5}
@@ -454,9 +460,7 @@ function MandateRowContent({
         {isUpdateTarget || readOnly ? (
           <span className="text-xs text-gray-400">—</span>
         ) : isAdded ? (
-          <AddBadge
-            show={!!isAddedDecision}
-          />
+          <AddBadge show={!!isAddedDecision} />
         ) : (
           <DecisionDropdown
             decision={currentDecision?.decision ?? null}
@@ -739,11 +743,7 @@ function MandateRow({
   );
 }
 
-function AddBadge({
-  show,
-}: {
-  show: boolean;
-}) {
+function AddBadge({ show }: { show: boolean }) {
   if (!show) return <span className="text-xs text-gray-400">—</span>;
   return (
     <span className="inline-flex h-7 w-20 items-center justify-center rounded border border-blue-200 bg-blue-50 px-2 text-xs text-blue-700">
@@ -1158,17 +1158,6 @@ export function EntityDetail({
     [backgroundMandates],
   );
 
-  // Set of legislative mandate symbols (for highlighting in background section)
-  const legislativeSymbols = useMemo(
-    () =>
-      new Set(
-        Object.values(legislativeMandates)
-          .flat()
-          .map((m) => m.symbol),
-      ),
-    [legislativeMandates],
-  );
-
   // Fetch user role and decisions on mount
   useEffect(() => {
     getUserRoleAction()
@@ -1361,7 +1350,7 @@ export function EntityDetail({
       const key = `${symbol}:${subprogramme || ""}`;
       const currentState = states[key];
       const decisionId = currentState?.decision?.id;
-      
+
       if (!decisionId) return;
 
       // Optimistic update
@@ -1392,9 +1381,10 @@ export function EntityDetail({
           [key]: {
             ...prev[key],
             decision: updated,
-            decisions: prev[key]?.decisions?.map((d) =>
-              d.id === updated.id ? updated : d,
-            ) || [],
+            decisions:
+              prev[key]?.decisions?.map((d) =>
+                d.id === updated.id ? updated : d,
+              ) || [],
           },
         }));
       }

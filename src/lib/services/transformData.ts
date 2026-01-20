@@ -33,10 +33,10 @@ export function transformPPBData(
   budgetPartsMeta: BudgetPartMeta[],
   newerVersions?: Map<string, NewerVersion>,
 ): PartData[] {
-  // Build lookup from name to meta
-  const metaByName: Record<string, BudgetPartMeta> = {};
+  // Build lookup from key (database budget_part value) to meta
+  const metaByKey: Record<string, BudgetPartMeta> = {};
   for (const meta of budgetPartsMeta) {
-    metaByName[meta.name.toLowerCase()] = meta;
+    metaByKey[meta.key.toLowerCase()] = meta;
   }
 
   const structure: Record<
@@ -72,7 +72,8 @@ export function transformPPBData(
       }
       if (ci.entity) {
         const subprog = ci["sub-programme"] || ci.component || null;
-        if (!entitySubprogrammes[ci.entity]) entitySubprogrammes[ci.entity] = [];
+        if (!entitySubprogrammes[ci.entity])
+          entitySubprogrammes[ci.entity] = [];
         if (subprog && !entitySubprogrammes[ci.entity].includes(subprog)) {
           entitySubprogrammes[ci.entity].push(subprog);
         }
@@ -109,15 +110,19 @@ export function transformPPBData(
         entityLong,
         isBackground,
         otherEntitiesCount: Math.max(0, rec.num_entities - 1),
-        allEntities: (rec.entities || []).filter((e): e is string => e !== null),
+        allEntities: (rec.entities || []).filter(
+          (e): e is string => e !== null,
+        ),
         entitySubprogrammes,
         entityLongMap,
         allEntityRelevance: rec.entity_relevance || {},
         metadataFromDb,
-        newerVersion: rec.document_symbol ? newerVersions?.get(rec.document_symbol) : undefined,
+        newerVersion: rec.document_symbol
+          ? newerVersions?.get(rec.document_symbol)
+          : undefined,
       };
 
-      const meta = metaByName[budgetPart.toLowerCase()] || null;
+      const meta = metaByKey[budgetPart.toLowerCase()] || null;
 
       if (!structure[budgetPart]) {
         structure[budgetPart] = { meta, entities: {} };
@@ -159,7 +164,7 @@ export function transformPPBData(
       return aOrder - bOrder;
     })
     .map(([part, data]) => ({
-      part,
+      part: data.meta?.label || part,
       numeral: data.meta?.numeral || "",
       order: data.meta?.order ?? 999,
       entities: Object.entries(data.entities)

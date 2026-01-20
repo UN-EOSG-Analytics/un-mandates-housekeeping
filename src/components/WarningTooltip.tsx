@@ -74,36 +74,36 @@ export function WarningTooltip({
         {children}
       </PopoverTrigger>
       <PopoverContent
-        className="w-80 p-0 overflow-hidden"
+        className="w-80 overflow-hidden p-0"
         align="start"
         sideOffset={8}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="bg-gray-50 border-b border-gray-200 px-3 py-2">
-          <h4 className="text-xs font-medium text-gray-500 uppercase tracking-wide">
+        <div className="border-b border-gray-200 bg-gray-50 px-3 py-2">
+          <h4 className="text-xs font-medium tracking-wide text-gray-500 uppercase">
             {warnings.length === 1
               ? "Suggestion"
               : `${warnings.length} Suggestions`}
           </h4>
         </div>
-        <div className="divide-y divide-gray-100 max-h-64 overflow-y-auto">
+        <div className="max-h-64 divide-y divide-gray-100 overflow-y-auto">
           {warnings.map((warning, index) => {
             const styles = severityStyles[warning.severity];
             return (
               <div
                 key={warning.id || index}
-                className="px-3 py-2.5 hover:bg-gray-50/50 transition-colors"
+                className="px-3 py-2.5 transition-colors hover:bg-gray-50/50"
               >
                 <div className="flex gap-2.5">
                   <span
-                    className={`shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm ${styles.icon}`}
+                    className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-sm ${styles.icon}`}
                   >
                     {warning.icon || "⚠"}
                   </span>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm text-gray-700 leading-relaxed">
+                  <div className="min-w-0 flex-1">
+                    <p className="text-sm leading-relaxed text-gray-700">
                       {warning.message}
                       {warning.linkedSymbol && (
                         <>
@@ -112,7 +112,7 @@ export function WarningTooltip({
                             href={`https://undocs.org/en/${warning.linkedSymbol}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-un-blue hover:underline font-medium"
+                            className="font-medium text-un-blue hover:underline"
                             onClick={(e) => e.stopPropagation()}
                           >
                             {warning.linkedSymbol}
@@ -127,7 +127,7 @@ export function WarningTooltip({
                           onAction(warning);
                           setOpen(false);
                         }}
-                        className={`mt-2 text-xs font-medium px-2.5 py-1 rounded-md transition-colors ${
+                        className={`mt-2 rounded-md px-2.5 py-1 text-xs font-medium transition-colors ${
                           warning.action === "remove"
                             ? "bg-red-100 text-red-700 hover:bg-red-200"
                             : "bg-un-blue/10 text-un-blue hover:bg-un-blue/20"

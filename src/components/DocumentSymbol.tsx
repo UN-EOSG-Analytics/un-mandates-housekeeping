@@ -3,7 +3,10 @@
 
 import { getAgeIndicator } from "@/lib/services/age-indicator";
 import { fetchParagraphs } from "@/lib/services/client/client-data-service";
-import { getDocumentDecisionsAction, resolveCommentAction } from "@/lib/services/housekeeping-actions";
+import {
+  getDocumentDecisionsAction,
+  resolveCommentAction,
+} from "@/lib/services/housekeeping-actions";
 import type {
   Decision,
   EntityRelevance,
@@ -508,9 +511,9 @@ export function DocumentSymbol({
   const [paragraphs, setParagraphs] = useState<Paragraph[] | null>(null);
   const [loading, setLoading] = useState(false);
   const [commentText, setCommentText] = useState("");
-  const [activeTab, setActiveTab] = useState<"info" | "decisions" | "activity" | "paragraphs">(
-    "info",
-  );
+  const [activeTab, setActiveTab] = useState<
+    "info" | "decisions" | "activity" | "paragraphs"
+  >("info");
   const [allDecisions, setAllDecisions] = useState<MandateDecision[]>([]);
   const [allComments, setAllComments] = useState<MandateComment[]>([]);
 
@@ -777,17 +780,22 @@ export function DocumentSymbol({
               {activeTab === "info" && (
                 <div className="space-y-4">
                   <div className="rounded-xl bg-white p-4 shadow-sm">
-                    <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">Document Details</h3>
-                      <dl className="space-y-2 text-sm">
-                        {year && (() => {
+                    <h3 className="mb-3 text-xs font-semibold tracking-wider text-gray-400 uppercase">
+                      Document Details
+                    </h3>
+                    <dl className="space-y-2 text-sm">
+                      {year &&
+                        (() => {
                           const ageInfo = getAgeIndicator(year);
                           return (
-                            <div className="flex items-center justify-between py-1.5 border-b border-gray-100">
+                            <div className="flex items-center justify-between border-b border-gray-100 py-1.5">
                               <dt className="text-gray-500">Year</dt>
                               <dd className="flex items-center gap-2 font-medium text-gray-900">
                                 {year}
                                 <Tooltip content={ageInfo.tooltip}>
-                                  <span className={`rounded-full px-1.5 py-0.5 text-[10px] font-medium ${ageInfo.color} ${ageInfo.bgColor}`}>
+                                  <span
+                                    className={`rounded-full px-1.5 py-0.5 text-[10px] font-medium ${ageInfo.color} ${ageInfo.bgColor}`}
+                                  >
                                     {ageInfo.label}
                                   </span>
                                 </Tooltip>
@@ -795,48 +803,54 @@ export function DocumentSymbol({
                             </div>
                           );
                         })()}
-                        {body && (
-                          <div className="flex items-center justify-between py-1.5 border-b border-gray-100">
-                            <dt className="text-gray-500">Issuing body</dt>
-                            <dd className="font-medium text-gray-900">{body}</dd>
-                          </div>
-                        )}
-                        {docType && (
-                          <div className="flex items-center justify-between py-1.5 border-b border-gray-100">
-                            <dt className="text-gray-500">Document type</dt>
-                            <dd className="font-medium text-gray-900">{docType}</dd>
-                          </div>
-                        )}
-                        {otherEntitiesCount !== undefined && otherEntitiesCount > 0 && (
-                          <div className="flex items-center justify-between py-1.5 border-b border-gray-100">
+                      {body && (
+                        <div className="flex items-center justify-between border-b border-gray-100 py-1.5">
+                          <dt className="text-gray-500">Issuing body</dt>
+                          <dd className="font-medium text-gray-900">{body}</dd>
+                        </div>
+                      )}
+                      {docType && (
+                        <div className="flex items-center justify-between border-b border-gray-100 py-1.5">
+                          <dt className="text-gray-500">Document type</dt>
+                          <dd className="font-medium text-gray-900">
+                            {docType}
+                          </dd>
+                        </div>
+                      )}
+                      {otherEntitiesCount !== undefined &&
+                        otherEntitiesCount > 0 && (
+                          <div className="flex items-center justify-between border-b border-gray-100 py-1.5">
                             <dt className="text-gray-500">Also cited by</dt>
                             <dd className="font-medium text-gray-900">
-                              {otherEntitiesCount} other {otherEntitiesCount === 1 ? "entity" : "entities"}
+                              {otherEntitiesCount} other{" "}
+                              {otherEntitiesCount === 1 ? "entity" : "entities"}
                             </dd>
                           </div>
                         )}
-                        {link && (
-                          <div className="flex items-center justify-between py-1.5">
-                            <dt className="text-gray-500">Source</dt>
-                            <dd>
-                              <a
-                                href={link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 font-medium text-un-blue hover:underline"
-                              >
-                                View PDF →
-                              </a>
-                            </dd>
-                          </div>
-                        )}
-                      </dl>
-                    </div>
+                      {link && (
+                        <div className="flex items-center justify-between py-1.5">
+                          <dt className="text-gray-500">Source</dt>
+                          <dd>
+                            <a
+                              href={link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 font-medium text-un-blue hover:underline"
+                            >
+                              View PDF →
+                            </a>
+                          </dd>
+                        </div>
+                      )}
+                    </dl>
+                  </div>
                 </div>
               )}
 
               {/* Decisions Tab */}
-              {activeTab === "decisions" && (allEntities?.length || allDecisions.length > 0) && (() => {
+              {activeTab === "decisions" &&
+                (allEntities?.length || allDecisions.length > 0) &&
+                (() => {
                   // Merge subprogrammes from PPB data + decisions
                   const subprogsByEntity = new Map<
                     string,
@@ -933,18 +947,20 @@ export function DocumentSymbol({
 
                   return (
                     <div className="rounded-xl bg-white p-5 shadow-sm">
-                      <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-400">Entity Decisions</h3>
+                      <h3 className="mb-4 text-xs font-semibold tracking-wider text-gray-400 uppercase">
+                        Entity Decisions
+                      </h3>
                       <div className="scrollbar-thin overflow-x-visible overflow-y-auto">
                         <table className="w-full text-sm">
                           <thead className="border-b border-gray-200">
                             <tr className="text-gray-500">
-                              <th className="pb-3 text-left text-xs font-semibold uppercase tracking-wider">
+                              <th className="pb-3 text-left text-xs font-semibold tracking-wider uppercase">
                                 Entity
                               </th>
-                              <th className="w-36 pb-3 pl-3 text-left text-xs font-semibold uppercase tracking-wider">
+                              <th className="w-36 pb-3 pl-3 text-left text-xs font-semibold tracking-wider uppercase">
                                 Decision
                               </th>
-                              <th className="w-20 pb-3 pl-3 text-left text-xs font-semibold uppercase tracking-wider">
+                              <th className="w-20 pb-3 pl-3 text-left text-xs font-semibold tracking-wider uppercase">
                                 Approved
                               </th>
                             </tr>
@@ -963,7 +979,9 @@ export function DocumentSymbol({
                               );
                               const latestDecision =
                                 rowDecisions[rowDecisions.length - 1] || null;
-                              const canEdit = (isUserEntity || canReviewAnyEntity) && onDecision;
+                              const canEdit =
+                                (isUserEntity || canReviewAnyEntity) &&
+                                onDecision;
                               const currentDecision = isCurrentRow
                                 ? state?.decision
                                 : latestDecision;
@@ -1017,16 +1035,25 @@ export function DocumentSymbol({
                                         onClick={() => {
                                           if (canApprove && decisionId) {
                                             const newApproved = !isApproved;
-                                            setAllDecisions(prev => prev.map(d => 
-                                              d.id === decisionId 
-                                                ? {
-                                                    ...d,
-                                                    approvedBy: newApproved ? userEmail || null : null,
-                                                    approvedByEntity: newApproved ? userEntity || null : null,
-                                                    approvedAt: newApproved ? new Date().toISOString() : null,
-                                                  }
-                                                : d
-                                            ));
+                                            setAllDecisions((prev) =>
+                                              prev.map((d) =>
+                                                d.id === decisionId
+                                                  ? {
+                                                      ...d,
+                                                      approvedBy: newApproved
+                                                        ? userEmail || null
+                                                        : null,
+                                                      approvedByEntity:
+                                                        newApproved
+                                                          ? userEntity || null
+                                                          : null,
+                                                      approvedAt: newApproved
+                                                        ? new Date().toISOString()
+                                                        : null,
+                                                    }
+                                                  : d,
+                                              ),
+                                            );
                                             onApprove(decisionId, newApproved);
                                           }
                                         }}
@@ -1072,7 +1099,7 @@ export function DocumentSymbol({
                     {/* Entity filter pills */}
                     {allEntities && allEntities.length > 1 && (
                       <div className="mb-3">
-                        <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                        <div className="mb-2 text-xs font-semibold tracking-wider text-gray-400 uppercase">
                           Filter by citing entity
                         </div>
                         <div className="flex flex-wrap items-center gap-1.5">
@@ -1091,7 +1118,8 @@ export function DocumentSymbol({
                             const count =
                               allDecisions.filter((d) => d.entity === ent)
                                 .length +
-                              allComments.filter((c) => c.entity === ent).length;
+                              allComments.filter((c) => c.entity === ent)
+                                .length;
                             return (
                               <button
                                 key={ent}
@@ -1143,7 +1171,13 @@ export function DocumentSymbol({
                         <MessageSquare className="h-3 w-3" />
                         Comments only
                         {allComments.length > 0 && (
-                          <span className={activityFilterType === "comments" ? "text-white/70" : "text-gray-400"}>
+                          <span
+                            className={
+                              activityFilterType === "comments"
+                                ? "text-white/70"
+                                : "text-gray-400"
+                            }
+                          >
                             ({allComments.length})
                           </span>
                         )}
@@ -1153,9 +1187,17 @@ export function DocumentSymbol({
                   {/* Activity log (all decisions + comments interleaved) */}
                   {(() => {
                     type ActivityItem =
-                      | { type: "decision"; data: MandateDecision; isSuperseded: boolean }
+                      | {
+                          type: "decision";
+                          data: MandateDecision;
+                          isSuperseded: boolean;
+                        }
                       | { type: "comment"; data: MandateComment }
-                      | { type: "approval"; data: MandateDecision; isSuperseded: boolean };
+                      | {
+                          type: "approval";
+                          data: MandateDecision;
+                          isSuperseded: boolean;
+                        };
                     const items: ActivityItem[] = [];
                     const filteredDecisions = activityFilterEntity
                       ? allDecisions.filter(
@@ -1167,12 +1209,14 @@ export function DocumentSymbol({
                           (c) => c.entity === activityFilterEntity,
                         )
                       : allComments;
-                    
+
                     // Track latest decision per entity/subprogramme to identify superseded ones
                     const latestDecisionByKey = new Map<string, string>();
                     // Sort by createdAt descending to find latest
                     const sortedDecisions = [...filteredDecisions].sort(
-                      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+                      (a, b) =>
+                        new Date(b.createdAt).getTime() -
+                        new Date(a.createdAt).getTime(),
                     );
                     for (const d of sortedDecisions) {
                       const key = `${d.entity}:${d.subprogramme || ""}`;
@@ -1180,32 +1224,42 @@ export function DocumentSymbol({
                         latestDecisionByKey.set(key, d.id);
                       }
                     }
-                    
+
                     // Only add decisions/approvals if not filtering to comments only
                     if (activityFilterType === "all") {
                       for (const d of filteredDecisions) {
                         const key = `${d.entity}:${d.subprogramme || ""}`;
-                        const isSuperseded = latestDecisionByKey.get(key) !== d.id || d.decision === "cancel";
+                        const isSuperseded =
+                          latestDecisionByKey.get(key) !== d.id ||
+                          d.decision === "cancel";
                         items.push({ type: "decision", data: d, isSuperseded });
                         // Add approval as separate activity item if decision is approved
                         if (d.approvedBy && d.approvedAt) {
-                          items.push({ type: "approval", data: d, isSuperseded });
+                          items.push({
+                            type: "approval",
+                            data: d,
+                            isSuperseded,
+                          });
                         }
                       }
                     }
                     for (const c of filteredComments)
                       items.push({ type: "comment", data: c });
-                    items.sort(
-                      (a, b) => {
-                        const aTime = a.type === "approval" 
-                          ? new Date((a.data as MandateDecision).approvedAt!).getTime()
+                    items.sort((a, b) => {
+                      const aTime =
+                        a.type === "approval"
+                          ? new Date(
+                              (a.data as MandateDecision).approvedAt!,
+                            ).getTime()
                           : new Date(a.data.createdAt).getTime();
-                        const bTime = b.type === "approval"
-                          ? new Date((b.data as MandateDecision).approvedAt!).getTime()
+                      const bTime =
+                        b.type === "approval"
+                          ? new Date(
+                              (b.data as MandateDecision).approvedAt!,
+                            ).getTime()
                           : new Date(b.data.createdAt).getTime();
-                        return aTime - bTime;
-                      }
-                    );
+                      return aTime - bTime;
+                    });
 
                     // Track which entities have multiple subprogrammes (from PPB + activity)
                     const subprogsByEntity = new Map<
@@ -1236,10 +1290,10 @@ export function DocumentSymbol({
 
                     if (items.length === 0) {
                       return (
-                        <div className="rounded-xl bg-white p-8 shadow-sm text-center">
+                        <div className="rounded-xl bg-white p-8 text-center shadow-sm">
                           <div className="text-sm text-gray-400">
-                            {activityFilterType === "comments" 
-                              ? "No comments yet" 
+                            {activityFilterType === "comments"
+                              ? "No comments yet"
                               : "No activity yet"}
                           </div>
                         </div>
@@ -1249,188 +1303,230 @@ export function DocumentSymbol({
                     return (
                       <div className="space-y-3">
                         {items.map((item, i) => {
-                      const itemEntity = item.data.entity;
-                      const showSubprog =
-                        entitiesWithMultiSubprogs.has(itemEntity);
-                      
-                      // Decision items (retain, remove, update, etc.)
-                      if (item.type === "decision") {
-                        const decision = item.data as MandateDecision;
-                        const isSuperseded = item.isSuperseded;
-                        return (
-                          <div key={decision.id || i} className={`text-xs ${isSuperseded ? 'opacity-50' : ''}`}>
-                            <div
-                              className={`rounded-lg border p-3 ${
-                                decision.decision === "retain"
-                                  ? "border-green-200 bg-green-50/50"
-                                  : decision.decision === "remove"
-                                    ? "border-red-200 bg-red-50/50"
-                                    : decision.decision === "update"
-                                      ? "border-amber-200 bg-amber-50/50"
-                                      : decision.decision === "cancel"
-                                        ? "border-gray-200 bg-gray-50"
-                                        : "border-blue-200 bg-blue-50/50"
-                              }`}
-                            >
-                              <div className="flex items-center gap-2">
-                                <span
-                                  className={`text-sm font-semibold ${
+                          const itemEntity = item.data.entity;
+                          const showSubprog =
+                            entitiesWithMultiSubprogs.has(itemEntity);
+
+                          // Decision items (retain, remove, update, etc.)
+                          if (item.type === "decision") {
+                            const decision = item.data as MandateDecision;
+                            const isSuperseded = item.isSuperseded;
+                            return (
+                              <div
+                                key={decision.id || i}
+                                className={`text-xs ${isSuperseded ? "opacity-50" : ""}`}
+                              >
+                                <div
+                                  className={`rounded-lg border p-3 ${
                                     decision.decision === "retain"
-                                      ? "text-green-700"
+                                      ? "border-green-200 bg-green-50/50"
                                       : decision.decision === "remove"
-                                        ? "text-red-700"
+                                        ? "border-red-200 bg-red-50/50"
                                         : decision.decision === "update"
-                                          ? "text-amber-700"
+                                          ? "border-amber-200 bg-amber-50/50"
                                           : decision.decision === "cancel"
-                                            ? "text-gray-500"
-                                            : "text-blue-700"
+                                            ? "border-gray-200 bg-gray-50"
+                                            : "border-blue-200 bg-blue-50/50"
                                   }`}
                                 >
-                                  {decision.decision.charAt(0).toUpperCase() + decision.decision.slice(1)}
-                                </span>
-                                {decision.newSymbol && (
-                                  <span className="text-gray-500">
-                                    → {decision.newSymbol}
-                                  </span>
-                                )}
-                              </div>
-                              <ActivityMeta
-                                userEmail={decision.userEmail}
-                                userEntity={decision.userEntity}
-                                createdAt={decision.createdAt}
-                                viaEntity={itemEntity}
-                                subprogramme={decision.subprogramme}
-                                showSubprogramme={showSubprog}
-                                action="decided"
-                              />
-                            </div>
-                          </div>
-                        );
-                      }
-                      
-                      // Approval items
-                      if (item.type === "approval") {
-                        const decision = item.data as MandateDecision;
-                        const isSuperseded = item.isSuperseded;
-                        return (
-                          <div key={`approval-${decision.id}`} className={`text-xs ${isSuperseded ? 'opacity-50' : ''}`}>
-                            <div className="rounded-lg border border-emerald-200 bg-emerald-50/50 p-3">
-                              <div className="flex items-center gap-2">
-                                <div className={`flex h-5 w-5 items-center justify-center rounded-full ${isSuperseded ? 'bg-emerald-400' : 'bg-emerald-500'}`}>
-                                  <Check className="h-3 w-3 text-white" />
-                                </div>
-                                <span className="text-sm font-semibold text-emerald-700">
-                                  Approved
-                                </span>
-                                <span className="text-gray-500">
-                                  {decision.decision.charAt(0).toUpperCase() + decision.decision.slice(1)}
-                                </span>
-                                {decision.newSymbol && (
-                                  <span className="text-gray-500">
-                                    → {decision.newSymbol}
-                                  </span>
-                                )}
-                              </div>
-                              <ActivityMeta
-                                userEmail={decision.approvedBy!}
-                                userEntity={decision.approvedByEntity}
-                                createdAt={decision.approvedAt!}
-                                viaEntity={itemEntity}
-                                subprogramme={decision.subprogramme}
-                                showSubprogramme={showSubprog}
-                                action="approved"
-                              />
-                            </div>
-                          </div>
-                        );
-                      }
-                      
-                      // Comment items
-                      const comment = item.data as MandateComment;
-                      const isReviewerComment = comment.userEntity?.toUpperCase() === 'DMSPC';
-                      const isResolved = !!comment.resolvedAt;
-                      
-                      return (
-                        <div key={comment.id || i} className="text-xs">
-                          <div className={`rounded-lg border p-3 transition-all ${
-                            isResolved
-                              ? 'border-gray-200 bg-gray-50 opacity-60'
-                              : isReviewerComment
-                                ? 'border-amber-300 bg-amber-50/70 shadow-sm'
-                                : 'border-gray-200 bg-white'
-                          }`}>
-                            <div className="flex items-start gap-2">
-                              <MessageSquare className={`mt-0.5 h-4 w-4 shrink-0 ${
-                                isResolved
-                                  ? 'text-gray-400'
-                                  : isReviewerComment
-                                    ? 'text-amber-500'
-                                    : 'text-gray-400'
-                              }`} />
-                              <div className="min-w-0 flex-1">
-                                <div className={`leading-relaxed ${
-                                  isResolved
-                                    ? 'text-gray-500 line-through'
-                                    : isReviewerComment
-                                      ? 'text-gray-800 font-medium'
-                                      : 'text-gray-700'
-                                }`}>
-                                  {comment.comment}
-                                </div>
-                                <ActivityMeta
-                                  userEmail={comment.userEmail}
-                                  userEntity={comment.userEntity}
-                                  createdAt={comment.createdAt}
-                                  viaEntity={itemEntity}
-                                  subprogramme={comment.subprogramme}
-                                  showSubprogramme={showSubprog}
-                                  action="commented"
-                                />
-                                {/* Mark as resolved button for reviewer comments */}
-                                {isReviewerComment && !isResolved && (
-                                  <button
-                                    onClick={async () => {
-                                      const result = await resolveCommentAction(comment.id, true);
-                                      if (result.success && result.data) {
-                                        // Update the comment in local state
-                                        setAllComments(prev => prev.map(c => 
-                                          c.id === comment.id ? result.data! : c
-                                        ));
-                                      }
-                                    }}
-                                    className="mt-2 inline-flex items-center gap-1 rounded-md bg-amber-100 px-2 py-1 text-[10px] font-medium text-amber-700 hover:bg-amber-200 transition-colors"
-                                  >
-                                    <CheckCircle2 className="h-3 w-3" />
-                                    Mark as resolved
-                                  </button>
-                                )}
-                                {isResolved && (
-                                  <div className="mt-2 flex items-center gap-2">
-                                    <span className="inline-flex items-center gap-1 text-[10px] text-gray-400">
-                                      <CheckCircle2 className="h-3 w-3" />
-                                      Resolved by {comment.resolvedBy} on {new Date(comment.resolvedAt!).toLocaleDateString()}
-                                    </span>
-                                    <button
-                                      onClick={async () => {
-                                        const result = await resolveCommentAction(comment.id, false);
-                                        if (result.success && result.data) {
-                                          setAllComments(prev => prev.map(c => 
-                                            c.id === comment.id ? result.data! : c
-                                          ));
-                                        }
-                                      }}
-                                      className="text-[10px] text-gray-400 underline hover:text-gray-600 transition-colors"
+                                  <div className="flex items-center gap-2">
+                                    <span
+                                      className={`text-sm font-semibold ${
+                                        decision.decision === "retain"
+                                          ? "text-green-700"
+                                          : decision.decision === "remove"
+                                            ? "text-red-700"
+                                            : decision.decision === "update"
+                                              ? "text-amber-700"
+                                              : decision.decision === "cancel"
+                                                ? "text-gray-500"
+                                                : "text-blue-700"
+                                      }`}
                                     >
-                                      Reopen
-                                    </button>
+                                      {decision.decision
+                                        .charAt(0)
+                                        .toUpperCase() +
+                                        decision.decision.slice(1)}
+                                    </span>
+                                    {decision.newSymbol && (
+                                      <span className="text-gray-500">
+                                        → {decision.newSymbol}
+                                      </span>
+                                    )}
                                   </div>
-                                )}
+                                  <ActivityMeta
+                                    userEmail={decision.userEmail}
+                                    userEntity={decision.userEntity}
+                                    createdAt={decision.createdAt}
+                                    viaEntity={itemEntity}
+                                    subprogramme={decision.subprogramme}
+                                    showSubprogramme={showSubprog}
+                                    action="decided"
+                                  />
+                                </div>
+                              </div>
+                            );
+                          }
+
+                          // Approval items
+                          if (item.type === "approval") {
+                            const decision = item.data as MandateDecision;
+                            const isSuperseded = item.isSuperseded;
+                            return (
+                              <div
+                                key={`approval-${decision.id}`}
+                                className={`text-xs ${isSuperseded ? "opacity-50" : ""}`}
+                              >
+                                <div className="rounded-lg border border-emerald-200 bg-emerald-50/50 p-3">
+                                  <div className="flex items-center gap-2">
+                                    <div
+                                      className={`flex h-5 w-5 items-center justify-center rounded-full ${isSuperseded ? "bg-emerald-400" : "bg-emerald-500"}`}
+                                    >
+                                      <Check className="h-3 w-3 text-white" />
+                                    </div>
+                                    <span className="text-sm font-semibold text-emerald-700">
+                                      Approved
+                                    </span>
+                                    <span className="text-gray-500">
+                                      {decision.decision
+                                        .charAt(0)
+                                        .toUpperCase() +
+                                        decision.decision.slice(1)}
+                                    </span>
+                                    {decision.newSymbol && (
+                                      <span className="text-gray-500">
+                                        → {decision.newSymbol}
+                                      </span>
+                                    )}
+                                  </div>
+                                  <ActivityMeta
+                                    userEmail={decision.approvedBy!}
+                                    userEntity={decision.approvedByEntity}
+                                    createdAt={decision.approvedAt!}
+                                    viaEntity={itemEntity}
+                                    subprogramme={decision.subprogramme}
+                                    showSubprogramme={showSubprog}
+                                    action="approved"
+                                  />
+                                </div>
+                              </div>
+                            );
+                          }
+
+                          // Comment items
+                          const comment = item.data as MandateComment;
+                          const isReviewerComment =
+                            comment.userEntity?.toUpperCase() === "DMSPC";
+                          const isResolved = !!comment.resolvedAt;
+
+                          return (
+                            <div key={comment.id || i} className="text-xs">
+                              <div
+                                className={`rounded-lg border p-3 transition-all ${
+                                  isResolved
+                                    ? "border-gray-200 bg-gray-50 opacity-60"
+                                    : isReviewerComment
+                                      ? "border-amber-300 bg-amber-50/70 shadow-sm"
+                                      : "border-gray-200 bg-white"
+                                }`}
+                              >
+                                <div className="flex items-start gap-2">
+                                  <MessageSquare
+                                    className={`mt-0.5 h-4 w-4 shrink-0 ${
+                                      isResolved
+                                        ? "text-gray-400"
+                                        : isReviewerComment
+                                          ? "text-amber-500"
+                                          : "text-gray-400"
+                                    }`}
+                                  />
+                                  <div className="min-w-0 flex-1">
+                                    <div
+                                      className={`leading-relaxed ${
+                                        isResolved
+                                          ? "text-gray-500 line-through"
+                                          : isReviewerComment
+                                            ? "font-medium text-gray-800"
+                                            : "text-gray-700"
+                                      }`}
+                                    >
+                                      {comment.comment}
+                                    </div>
+                                    <ActivityMeta
+                                      userEmail={comment.userEmail}
+                                      userEntity={comment.userEntity}
+                                      createdAt={comment.createdAt}
+                                      viaEntity={itemEntity}
+                                      subprogramme={comment.subprogramme}
+                                      showSubprogramme={showSubprog}
+                                      action="commented"
+                                    />
+                                    {/* Mark as resolved button for reviewer comments */}
+                                    {isReviewerComment && !isResolved && (
+                                      <button
+                                        onClick={async () => {
+                                          const result =
+                                            await resolveCommentAction(
+                                              comment.id,
+                                              true,
+                                            );
+                                          if (result.success && result.data) {
+                                            // Update the comment in local state
+                                            setAllComments((prev) =>
+                                              prev.map((c) =>
+                                                c.id === comment.id
+                                                  ? result.data!
+                                                  : c,
+                                              ),
+                                            );
+                                          }
+                                        }}
+                                        className="mt-2 inline-flex items-center gap-1 rounded-md bg-amber-100 px-2 py-1 text-[10px] font-medium text-amber-700 transition-colors hover:bg-amber-200"
+                                      >
+                                        <CheckCircle2 className="h-3 w-3" />
+                                        Mark as resolved
+                                      </button>
+                                    )}
+                                    {isResolved && (
+                                      <div className="mt-2 flex items-center gap-2">
+                                        <span className="inline-flex items-center gap-1 text-[10px] text-gray-400">
+                                          <CheckCircle2 className="h-3 w-3" />
+                                          Resolved by {
+                                            comment.resolvedBy
+                                          } on{" "}
+                                          {new Date(
+                                            comment.resolvedAt!,
+                                          ).toLocaleDateString()}
+                                        </span>
+                                        <button
+                                          onClick={async () => {
+                                            const result =
+                                              await resolveCommentAction(
+                                                comment.id,
+                                                false,
+                                              );
+                                            if (result.success && result.data) {
+                                              setAllComments((prev) =>
+                                                prev.map((c) =>
+                                                  c.id === comment.id
+                                                    ? result.data!
+                                                    : c,
+                                                ),
+                                              );
+                                            }
+                                          }}
+                                          className="text-[10px] text-gray-400 underline transition-colors hover:text-gray-600"
+                                        >
+                                          Reopen
+                                        </button>
+                                      </div>
+                                    )}
+                                  </div>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
-                      );
-                    })}
+                          );
+                        })}
                       </div>
                     );
                   })()}
@@ -1448,7 +1544,7 @@ export function DocumentSymbol({
                           }
                         }}
                         placeholder={`Add a comment for ${entity}...`}
-                        className="flex-1 rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:border-un-blue focus:outline-none focus:ring-2 focus:ring-un-blue/20"
+                        className="flex-1 rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:border-un-blue focus:ring-2 focus:ring-un-blue/20 focus:outline-none"
                       />
                       <button
                         onClick={() => {
@@ -1472,7 +1568,7 @@ export function DocumentSymbol({
                 <div className="space-y-4">
                   {allEntities && allEntities.length > 0 && (
                     <div className="rounded-xl bg-white p-4 shadow-sm">
-                      <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                      <div className="mb-2 text-xs font-semibold tracking-wider text-gray-400 uppercase">
                         Filter by mentioned entity (Experimental)
                       </div>
                       <div className="flex flex-wrap items-center gap-1.5">
@@ -1536,8 +1632,13 @@ export function DocumentSymbol({
                         <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
                           <AlertTriangle className="h-6 w-6 text-gray-400" />
                         </div>
-                        <p className="text-sm font-medium text-gray-600">No fulltext available</p>
-                        <p className="mt-1 text-xs text-gray-400">The parsed document text is not available in our database</p>
+                        <p className="text-sm font-medium text-gray-600">
+                          No fulltext available
+                        </p>
+                        <p className="mt-1 text-xs text-gray-400">
+                          The parsed document text is not available in our
+                          database
+                        </p>
                         {link && (
                           <a
                             href={link}

@@ -5,41 +5,12 @@
 
 import { query } from "../db/db";
 import type { PPBRecord, CitationInfo, BudgetPartMeta } from "@/types";
+import { BUDGET_PARTS_META } from "@/lib/constants";
 
 export interface EntityOption {
   entity: string;
   entity_long: string | null;
 }
-
-// Budget parts metadata (static - matches budget_parts.json)
-export const BUDGET_PARTS_META: BudgetPartMeta[] = [
-  {
-    numeral: "I",
-    order: 1,
-    name: "Overall policymaking, direction and coordination",
-  },
-  { numeral: "II", order: 2, name: "Political affairs" },
-  { numeral: "III", order: 3, name: "International justice and law" },
-  {
-    numeral: "IV",
-    order: 4,
-    name: "International cooperation and development",
-  },
-  { numeral: "V", order: 5, name: "Regional cooperation and development" },
-  { numeral: "VI", order: 6, name: "Human rights and humanitarian affairs" },
-  { numeral: "VII", order: 7, name: "Global communications" },
-  { numeral: "VIII", order: 8, name: "Common support services" },
-  { numeral: "IX", order: 9, name: "Internal oversight" },
-  {
-    numeral: "X",
-    order: 10,
-    name: "Jointly financed administrative activities and special expenses",
-  },
-  { numeral: "XI", order: 11, name: "Capital expenditure" },
-  { numeral: "XII", order: 12, name: "Safety and security" },
-  { numeral: "XIII", order: 13, name: "Development account" },
-  { numeral: "XIV", order: 14, name: "Staff assessment" },
-];
 
 interface DBCitationRow {
   ppb_full_document_symbol: string;

@@ -102,7 +102,8 @@ export function getMandateWarnings(
     return [
       {
         id: "newer-already-cited",
-        message: "Newer version is already cited — consider removing this older version:",
+        message:
+          "Newer version is already cited — consider removing this older version:",
         severity: "warning",
         linkedSymbol: mandate.newerVersion?.symbol,
         action: "remove",

@@ -53,9 +53,13 @@ export async function GET(req: NextRequest) {
   const uniqueSymbols = [...new Set(allSymbols)];
 
   const placeholders = uniqueSymbols.map((_, i) => `$${i + 1}`).join(",");
-  const placeholders2 = uniqueSymbols.map((_, i) => `$${i + 1 + uniqueSymbols.length}`).join(",");
-  const placeholders3 = uniqueSymbols.map((_, i) => `$${i + 1 + uniqueSymbols.length * 2}`).join(",");
-  
+  const placeholders2 = uniqueSymbols
+    .map((_, i) => `$${i + 1 + uniqueSymbols.length}`)
+    .join(",");
+  const placeholders3 = uniqueSymbols
+    .map((_, i) => `$${i + 1 + uniqueSymbols.length * 2}`)
+    .join(",");
+
   // Query both source_documents and public.documents to handle:
   // 1. Documents in PPB source data (with optional metadata enrichment)
   // 2. Documents only in public.documents (new resolutions not yet in PPB)

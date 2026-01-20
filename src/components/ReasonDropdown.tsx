@@ -30,7 +30,9 @@ export function ReasonPopup({
   onClose,
   isOpen,
 }: ReasonPopupProps) {
-  const [localOtherReason, setLocalOtherReason] = React.useState(otherReason ?? "");
+  const [localOtherReason, setLocalOtherReason] = React.useState(
+    otherReason ?? "",
+  );
   const containerRef = React.useRef<HTMLDivElement>(null);
 
   const reasons = getReasonsForDecision(decision);
@@ -40,7 +42,10 @@ export function ReasonPopup({
   React.useEffect(() => {
     if (!isOpen) return;
     function handleClickOutside(event: MouseEvent) {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
         onClose();
       }
     }
@@ -76,12 +81,14 @@ export function ReasonPopup({
   const decisionLabel = decision.charAt(0).toUpperCase() + decision.slice(1);
 
   return (
-    <div 
+    <div
       ref={containerRef}
       className="absolute top-0 right-full z-50 mr-2 w-96 rounded-lg border border-gray-200 bg-white shadow-xl"
     >
       {/* Header */}
-      <div className={`flex items-center justify-between rounded-t-lg px-3 py-2 ${colors.bg} ${colors.border} border-b`}>
+      <div
+        className={`flex items-center justify-between rounded-t-lg px-3 py-2 ${colors.bg} ${colors.border} border-b`}
+      >
         <span className={`text-xs font-medium ${colors.text}`}>
           Why {decisionLabel.toLowerCase()}?
         </span>
@@ -100,8 +107,8 @@ export function ReasonPopup({
             key={r.id}
             onClick={() => handleReasonSelect(r.id)}
             className={`w-full px-3 py-2.5 text-left text-xs leading-relaxed transition-colors ${
-              reason === r.id 
-                ? `${colors.bg} ${colors.text} font-medium` 
+              reason === r.id
+                ? `${colors.bg} ${colors.text} font-medium`
                 : "text-gray-700 hover:bg-gray-50"
             }`}
           >
@@ -116,7 +123,9 @@ export function ReasonPopup({
           <textarea
             value={localOtherReason}
             onChange={(e) => handleOtherReasonChange(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && handleOtherSubmit()}
+            onKeyDown={(e) =>
+              e.key === "Enter" && !e.shiftKey && handleOtherSubmit()
+            }
             placeholder="Please specify the reason..."
             className="w-full resize-none rounded border border-gray-200 px-2.5 py-2 text-xs text-gray-700 placeholder:text-gray-400 focus:border-gray-300 focus:outline-none"
             rows={2}
