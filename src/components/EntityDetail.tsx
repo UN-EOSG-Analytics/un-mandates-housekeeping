@@ -7,6 +7,7 @@ import {
     createDecisionAction,
     getEntityDecisionsAction,
     getUserRoleAction,
+    updateDecisionReasonAction,
 } from "@/lib/services/housekeeping-actions";
 import { getMandateWarnings } from "@/lib/services/mandate-warnings";
 import type {
@@ -119,7 +120,7 @@ function formatSubprogrammeName(subprog: string): string {
 // }
 
 const GRID_COLS =
-  "grid-cols-[140px_1fr_50px_50px_45px_25px_30px_70px_120px_35px_45px]";
+  "grid-cols-[140px_1fr_50px_50px_45px_25px_30px_70px_100px_35px_45px]";
 
 type SortColumn = "symbol" | "title" | "body" | "year" | "others";
 type SortDirection = "asc" | "desc";
@@ -253,6 +254,7 @@ function MandateRowContent({
   allSymbols,
   onOpenSidebar,
   onDecision,
+  onReasonChange,
   onApprove,
   onUpdateClick,
 }: {
@@ -267,6 +269,7 @@ function MandateRowContent({
   allSymbols?: Set<string>; // All symbols in current section for warning system
   onOpenSidebar: () => void;
   onDecision: (decision: Decision, newSymbol?: string) => void;
+  onReasonChange?: (reason: string | null, otherReason: string | null) => void;
   onApprove?: (decisionId: string, approved: boolean) => void;
   onUpdateClick?: () => void;
 }) {
@@ -462,6 +465,9 @@ function MandateRowContent({
             onChange={onDecision}
             onUpdateClick={onUpdateClick}
             disabled={false}
+            reason={currentDecision?.decisionReason}
+            otherReason={currentDecision?.otherReason}
+            onReasonChange={onReasonChange}
           />
         )}
       </div>
@@ -528,6 +534,7 @@ function MandateRow({
   userEmail,
   userEntity,
   onDecision,
+  onReasonChange,
   onApprove,
   onUpdateWithManual,
   onComment,
@@ -545,6 +552,7 @@ function MandateRow({
   userEmail: string | null;
   userEntity: string | null;
   onDecision: (decision: Decision, newSymbol?: string) => void;
+  onReasonChange: (reason: string | null, otherReason: string | null) => void;
   onApprove: (decisionId: string, approved: boolean) => void;
   onUpdateWithManual: (newSymbol: string, manualData: ManualEntryData) => void;
   onComment: (comment: string) => void;
@@ -621,6 +629,7 @@ function MandateRow({
         allSymbols={allSymbols}
         onOpenSidebar={() => setSidebarOpen(true)}
         onDecision={onDecision}
+        onReasonChange={onReasonChange}
         onApprove={onApprove}
         onUpdateClick={() => setShowUpdateSearch(true)}
       />
@@ -782,6 +791,7 @@ function MandateSection({
   readOnly,
   foundationalSymbols,
   onDecision,
+  onReasonChange,
   onApprove,
   onUpdateWithManual,
   onComment,
@@ -816,6 +826,11 @@ function MandateSection({
   readOnly?: boolean;
   foundationalSymbols?: Set<string>;
   onDecision: (symbol: string, decision: Decision, newSymbol?: string) => void;
+  onReasonChange: (
+    symbol: string,
+    decisionReason: string | null,
+    otherReason: string | null,
+  ) => void;
   onApprove: (decisionId: string, approved: boolean) => void;
   onUpdateWithManual: (
     symbol: string,
@@ -1049,6 +1064,9 @@ function MandateSection({
               onDecision={(decision, newSymbol) =>
                 onDecision(m.symbol, decision, newSymbol)
               }
+              onReasonChange={(reason, otherReason) =>
+                onReasonChange(m.symbol, reason, otherReason)
+              }
               onApprove={onApprove}
               onUpdateWithManual={(newSymbol, manualData) =>
                 onUpdateWithManual(m.symbol, newSymbol, manualData)
@@ -1073,6 +1091,9 @@ function MandateSection({
               userEntity={userEntity}
               allSymbols={allSymbols}
               onDecision={(decision) => onDecision(m.symbol, decision)}
+              onReasonChange={(reason, otherReason) =>
+                onReasonChange(m.symbol, reason, otherReason)
+              }
               onApprove={onApprove}
               onUpdateWithManual={() => {}}
               onComment={(comment) => onComment(m.symbol, comment)}
@@ -1283,6 +1304,8 @@ export function EntityDetail({
         subprogramme,
         decision,
         newSymbol: newSymbol || null,
+        decisionReason: null,
+        otherReason: null,
         userEmail,
         userEntity,
         createdAt: now,
@@ -1328,6 +1351,57 @@ export function EntityDetail({
     [entity, userEmail, userEntity],
   );
 
+  const handleReasonChange = useCallback(
+    async (
+      symbol: string,
+      subprogramme: string | null,
+      decisionReason: string | null,
+      otherReason: string | null,
+    ) => {
+      const key = `${symbol}:${subprogramme || ""}`;
+      const currentState = states[key];
+      const decisionId = currentState?.decision?.id;
+      
+      if (!decisionId) return;
+
+      // Optimistic update
+      setStates((prev) => ({
+        ...prev,
+        [key]: {
+          ...prev[key],
+          decision: prev[key]?.decision
+            ? {
+                ...prev[key].decision!,
+                decisionReason,
+                otherReason: decisionReason === "other" ? otherReason : null,
+              }
+            : null,
+        },
+      }));
+
+      const result = await updateDecisionReasonAction({
+        decisionId,
+        decisionReason,
+        otherReason: decisionReason === "other" ? otherReason : null,
+      });
+
+      if (result.success && result.data) {
+        const updated = result.data;
+        setStates((prev) => ({
+          ...prev,
+          [key]: {
+            ...prev[key],
+            decision: updated,
+            decisions: prev[key]?.decisions?.map((d) =>
+              d.id === updated.id ? updated : d,
+            ) || [],
+          },
+        }));
+      }
+    },
+    [states],
+  );
+
   const handleUpdateWithManual = useCallback(
     async (
       symbol: string,
@@ -1352,6 +1426,8 @@ export function EntityDetail({
         decision: "update" as Decision,
         newSymbol,
         manualMetadata,
+        decisionReason: null,
+        otherReason: null,
         userEmail,
         userEntity,
         createdAt: now,
@@ -1426,6 +1502,8 @@ export function EntityDetail({
         decision: "add" as Decision,
         newSymbol: null,
         manualMetadata,
+        decisionReason: null,
+        otherReason: null,
         userEmail,
         userEntity,
         createdAt: now,
@@ -1628,6 +1706,11 @@ export function EntityDetail({
   const makeSubprogHandlers = (subprog: string | null) => ({
     onDecision: (symbol: string, decision: Decision, newSymbol?: string) =>
       handleDecision(symbol, subprog, decision, newSymbol),
+    onReasonChange: (
+      symbol: string,
+      decisionReason: string | null,
+      otherReason: string | null,
+    ) => handleReasonChange(symbol, subprog, decisionReason, otherReason),
     onUpdateWithManual: (
       symbol: string,
       newSymbol: string,

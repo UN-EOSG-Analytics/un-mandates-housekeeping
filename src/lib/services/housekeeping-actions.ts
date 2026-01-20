@@ -25,6 +25,8 @@ interface DecisionRow {
   decision: string;
   new_symbol: string | null;
   manual_metadata: ManualMetadata | null;
+  decision_reason: string | null;
+  other_reason: string | null;
   user_email: string;
   user_entity: string | null;
   created_at: string;
@@ -54,6 +56,8 @@ const toDecision = (row: DecisionRow): MandateDecision => ({
   decision: row.decision as MandateDecision["decision"],
   newSymbol: row.new_symbol,
   manualMetadata: row.manual_metadata,
+  decisionReason: row.decision_reason,
+  otherReason: row.other_reason,
   userEmail: row.user_email,
   userEntity: row.user_entity,
   createdAt: row.created_at,
@@ -289,8 +293,8 @@ export async function createDecisionAction(params: {
   const rows = await query<DecisionRow>(
     `WITH inserted AS (
       INSERT INTO mandates_housekeeping.mandate_decisions 
-        (document_symbol, entity, subprogramme, decision, new_symbol, manual_metadata, user_email)
-      VALUES ($1, $2, $3, $4, $5, $6, $7)
+        (document_symbol, entity, subprogramme, decision, new_symbol, manual_metadata, decision_reason, other_reason, user_email)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
       RETURNING *
     )
     SELECT i.*, u.entity as user_entity, NULL::text as approved_by_entity
@@ -303,6 +307,8 @@ export async function createDecisionAction(params: {
       decision,
       newSymbol || null,
       manualMetadata ? JSON.stringify(manualMetadata) : null,
+      null, // decision_reason - set later via updateDecisionReasonAction
+      null, // other_reason - set later via updateDecisionReasonAction
       user.email,
     ],
   );
@@ -471,4 +477,64 @@ export async function approveDecisionAction(
       approvedAt: rows[0].approved_at,
     },
   };
+}
+
+/**
+ * Update the reason for an existing decision
+ */
+export async function updateDecisionReasonAction(params: {
+  decisionId: string;
+  decisionReason: string | null;
+  otherReason: string | null;
+}): Promise<ActionResult<MandateDecision>> {
+  const user = await getCurrentUser();
+  if (!user) {
+    return { success: false, error: "unauthorized" };
+  }
+
+  const { decisionId, decisionReason, otherReason } = params;
+
+  if (!decisionId) {
+    return { success: false, error: "decisionId required" };
+  }
+
+  // Get the existing decision to check permissions
+  const existingRows = await query<DecisionRow>(
+    `SELECT d.*, u.entity as user_entity, approver.entity as approved_by_entity
+     FROM mandates_housekeeping.mandate_decisions d
+     LEFT JOIN mandates_housekeeping.users u ON d.user_email = u.email
+     LEFT JOIN mandates_housekeeping.users approver ON d.approved_by = approver.email
+     WHERE d.id = $1`,
+    [decisionId],
+  );
+
+  if (existingRows.length === 0) {
+    return { success: false, error: "Decision not found" };
+  }
+
+  const existing = existingRows[0];
+
+  // DMSPC users can update any entity, others can only update their own entity
+  if (!user.canReviewAnyEntity && user.entity !== existing.entity) {
+    return { success: false, error: "You can only update reasons for your own entity" };
+  }
+
+  // Update the decision reason
+  const rows = await query<DecisionRow>(
+    `WITH updated AS (
+      UPDATE mandates_housekeeping.mandate_decisions 
+      SET decision_reason = $2, other_reason = $3
+      WHERE id = $1
+      RETURNING *
+    )
+    SELECT u.*, users.entity as user_entity, approver.entity as approved_by_entity
+    FROM updated u
+    LEFT JOIN mandates_housekeeping.users users ON u.user_email = users.email
+    LEFT JOIN mandates_housekeeping.users approver ON u.approved_by = approver.email`,
+    [decisionId, decisionReason, decisionReason === "other" ? otherReason : null],
+  );
+
+  revalidatePath(`/entity/${existing.entity}`);
+
+  return { success: true, data: toDecision(rows[0]) };
 }

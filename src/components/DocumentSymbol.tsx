@@ -558,6 +558,8 @@ export function DocumentSymbol({
         subprogramme: null,
         decision,
         newSymbol: newSymbol || null,
+        decisionReason: null,
+        otherReason: null,
         userEmail: userEmail || "",
         userEntity: userEntity ?? null,
         createdAt: new Date().toISOString(),

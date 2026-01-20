@@ -129,6 +129,8 @@ export interface MandateDecision {
   decision: Decision;
   newSymbol: string | null;
   manualMetadata?: ManualMetadata | null;
+  decisionReason: string | null;
+  otherReason: string | null;
   userEmail: string;
   userEntity: string | null;
   createdAt: string;
