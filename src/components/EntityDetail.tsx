@@ -22,10 +22,18 @@ import {
   ChevronDown,
   ChevronUp,
   MessageSquare,
+  Pencil,
   Search,
   Star,
   X,
 } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { orderBy } from "natural-orderby";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { DecisionDropdown } from "./DecisionDropdown";
@@ -910,6 +918,7 @@ function MandateSection({
 }) {
   const [sortColumn, setSortColumn] = useState<SortColumn | null>("title");
   const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
+  const [showEditModal, setShowEditModal] = useState(false);
 
   const handleSort = (column: SortColumn) => {
     if (sortColumn === column) {
@@ -1081,10 +1090,37 @@ function MandateSection({
         <h3 className="text-sm font-semibold tracking-wide text-gray-600 uppercase">
           {title}
         </h3>
+        {!readOnly && (
+          <button
+            onClick={() => setShowEditModal(true)}
+            className="text-gray-400 hover:text-gray-600 transition-colors"
+            title="Edit subprogramme"
+          >
+            <Pencil className="h-3.5 w-3.5" />
+          </button>
+        )}
         {readOnly && (
           <span className="text-xs text-gray-400">— reference only</span>
         )}
       </div>
+
+      <Dialog open={showEditModal} onOpenChange={setShowEditModal}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Edit Subprogramme</DialogTitle>
+            <DialogDescription className="pt-2">
+              Editing subprogrammes is not yet supported. If changes are
+              necessary, please reach out to{" "}
+              <a
+                href="mailto:support@eosg.dev"
+                className="text-un-blue hover:underline"
+              >
+                support@eosg.dev
+              </a>
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
       <div className="space-y-1.5">
         <ColumnHeaders
           sortColumn={sortColumn}
