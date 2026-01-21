@@ -8,6 +8,7 @@ import {
   getDocumentDecisionsAction,
   getDocumentVersionsAction,
   resolveCommentAction,
+  updateDecisionReasonAction,
 } from "@/lib/services/housekeeping-actions";
 import type { DocumentVersion } from "@/lib/services/document-versions";
 import { DiffModal } from "./DiffModal";
@@ -40,6 +41,8 @@ import {
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Tooltip } from "./Tooltip";
 import { DecisionDropdown } from "./DecisionDropdown";
+import { getReasonDisplayLabel, renderReasonIcon } from "./ReasonDropdown";
+import type { DecisionType } from "@/lib/services/decision-reasons";
 
 interface Props {
   symbol: string;
@@ -1254,6 +1257,33 @@ export function DocumentSymbol({
                                       disabled={!canEdit}
                                       userEmail={currentDecision?.userEmail}
                                       createdAt={currentDecision?.createdAt}
+                                      reason={currentDecision?.decisionReason}
+                                      otherReason={currentDecision?.otherReason}
+                                      onReasonChange={canEdit ? async (reason, otherReason) => {
+                                        if (!currentDecision?.id) return;
+                                        // Optimistic update
+                                        setAllDecisions((prev) =>
+                                          prev.map((d) =>
+                                            d.id === currentDecision?.id
+                                              ? { ...d, decisionReason: reason, otherReason: reason === "other" ? otherReason : null }
+                                              : d
+                                          )
+                                        );
+                                        // Persist to database
+                                        const result = await updateDecisionReasonAction({
+                                          decisionId: currentDecision.id,
+                                          decisionReason: reason,
+                                          otherReason: reason === "other" ? otherReason : null,
+                                        });
+                                        if (result.success && result.data) {
+                                          setAllDecisions((prev) =>
+                                            prev.map((d) =>
+                                              d.id === result.data!.id ? result.data! : d
+                                            )
+                                          );
+                                        }
+                                      } : undefined}
+                                      symbol={symbol}
                                       size="sm"
                                     />
                                   </td>
@@ -1541,6 +1571,13 @@ export function DocumentSymbol({
                           if (item.type === "decision") {
                             const decision = item.data as MandateDecision;
                             const isSuperseded = item.isSuperseded;
+                            const reasonLabel = decision.decision !== "cancel" && decision.decision !== "add"
+                              ? getReasonDisplayLabel(
+                                  decision.decision as DecisionType,
+                                  decision.decisionReason,
+                                  decision.otherReason
+                                )
+                              : null;
                             return (
                               <div
                                 key={decision.id || i}
@@ -1549,28 +1586,28 @@ export function DocumentSymbol({
                                 <div
                                   className={`rounded-lg border p-3 ${
                                     decision.decision === "retain"
-                                      ? "border-green-200 bg-green-50/50"
+                                      ? "border-blue-200 bg-blue-50/50"
                                       : decision.decision === "remove"
                                         ? "border-red-200 bg-red-50/50"
                                         : decision.decision === "update"
                                           ? "border-amber-200 bg-amber-50/50"
                                           : decision.decision === "cancel"
                                             ? "border-gray-200 bg-gray-50"
-                                            : "border-blue-200 bg-blue-50/50"
+                                            : "border-emerald-200 bg-emerald-50/50"
                                   }`}
                                 >
                                   <div className="flex items-center gap-2">
                                     <span
                                       className={`text-sm font-semibold ${
                                         decision.decision === "retain"
-                                          ? "text-green-700"
+                                          ? "text-blue-700"
                                           : decision.decision === "remove"
                                             ? "text-red-700"
                                             : decision.decision === "update"
                                               ? "text-amber-700"
                                               : decision.decision === "cancel"
                                                 ? "text-gray-500"
-                                                : "text-blue-700"
+                                                : "text-emerald-700"
                                       }`}
                                     >
                                       {decision.decision
@@ -1584,6 +1621,42 @@ export function DocumentSymbol({
                                       </span>
                                     )}
                                   </div>
+                                  {/* Reason display */}
+                                  {reasonLabel && (
+                                    <div className={`mt-2 flex items-start gap-2 rounded-md px-2.5 py-2 ${
+                                      decision.decision === "retain"
+                                        ? "bg-blue-100/60"
+                                        : decision.decision === "remove"
+                                          ? "bg-red-100/60"
+                                          : decision.decision === "update"
+                                            ? "bg-amber-100/60"
+                                            : "bg-gray-100/60"
+                                    }`}>
+                                      {decision.decisionReason && renderReasonIcon(
+                                        decision.decisionReason,
+                                        `mt-0.5 h-3.5 w-3.5 shrink-0 ${
+                                          decision.decision === "retain"
+                                            ? "text-blue-600"
+                                            : decision.decision === "remove"
+                                              ? "text-red-600"
+                                              : decision.decision === "update"
+                                                ? "text-amber-600"
+                                                : "text-gray-500"
+                                        }`
+                                      )}
+                                      <span className={`text-[11px] leading-relaxed ${
+                                        decision.decision === "retain"
+                                          ? "text-blue-700"
+                                          : decision.decision === "remove"
+                                            ? "text-red-700"
+                                            : decision.decision === "update"
+                                              ? "text-amber-700"
+                                              : "text-gray-600"
+                                      }`}>
+                                        {reasonLabel}
+                                      </span>
+                                    </div>
+                                  )}
                                   <ActivityMeta
                                     userEmail={decision.userEmail}
                                     userEntity={decision.userEntity}

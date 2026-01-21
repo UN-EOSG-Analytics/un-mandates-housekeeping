@@ -39,6 +39,49 @@ interface ReasonPopupProps {
   symbol?: string;
 }
 
+// Exported icon mapping for use in other components
+const REASON_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
+  // Retain reasons
+  action_applicable: CheckCircle2,
+  ongoing_lt_5y: Clock,
+  foundational: Building2,
+  continuing_no_end: RefreshCw,
+  recent_relevant: CalendarCheck,
+  ongoing_gt_5y: Timer,
+  comparative_advantage: Award,
+  // Update reasons
+  superseded: Replace,
+  updated_citation: Edit3,
+  // Remove reasons
+  consolidated: Layers,
+  activity_concluded: CheckSquare,
+  completed_process: Calendar,
+  delivered: Package,
+  old_not_foundational: Archive,
+  no_action_request: FileX,
+  subsidiary_removed: Building,
+  no_comparative_advantage: Award,
+  // Other
+  other: MessageSquare,
+};
+
+/**
+ * Get the icon component for a reason ID
+ */
+export function getReasonIcon(reasonId: string | null): React.ComponentType<{ className?: string }> | null {
+  if (!reasonId) return null;
+  return REASON_ICONS[reasonId] || MessageSquare;
+}
+
+/**
+ * Render a reason icon as a React node
+ */
+export function renderReasonIcon(reasonId: string | null, className?: string): React.ReactNode {
+  if (!reasonId) return null;
+  const IconComponent = REASON_ICONS[reasonId] || MessageSquare;
+  return <IconComponent className={className} />;
+}
+
 /**
  * Modal dialog for selecting a reason after a decision has been made.
  * Renders centered on screen with a backdrop.
@@ -61,30 +104,10 @@ export function ReasonPopup({
   const reasons = getReasonsForDecision(decision);
   const colors = DECISION_COLORS[decision];
 
-  // Icons for each reason ID
-  const reasonIcons: Record<string, React.ReactNode> = {
-    // Retain reasons
-    action_applicable: <CheckCircle2 className="h-4 w-4" />,
-    ongoing_lt_5y: <Clock className="h-4 w-4" />,
-    foundational: <Building2 className="h-4 w-4" />,
-    continuing_no_end: <RefreshCw className="h-4 w-4" />,
-    recent_relevant: <CalendarCheck className="h-4 w-4" />,
-    ongoing_gt_5y: <Timer className="h-4 w-4" />,
-    comparative_advantage: <Award className="h-4 w-4" />,
-    // Update reasons
-    superseded: <Replace className="h-4 w-4" />,
-    updated_citation: <Edit3 className="h-4 w-4" />,
-    // Remove reasons
-    consolidated: <Layers className="h-4 w-4" />,
-    activity_concluded: <CheckSquare className="h-4 w-4" />,
-    completed_process: <Calendar className="h-4 w-4" />,
-    delivered: <Package className="h-4 w-4" />,
-    old_not_foundational: <Archive className="h-4 w-4" />,
-    no_action_request: <FileX className="h-4 w-4" />,
-    subsidiary_removed: <Building className="h-4 w-4" />,
-    no_comparative_advantage: <Award className="h-4 w-4" />,
-    // Other
-    other: <MessageSquare className="h-4 w-4" />,
+  // Get icon for a reason ID
+  const getIconForReason = (reasonId: string) => {
+    const IconComponent = REASON_ICONS[reasonId] || MessageSquare;
+    return <IconComponent className="h-4 w-4" />;
   };
 
   // Client-side only rendering for portal
@@ -191,7 +214,7 @@ export function ReasonPopup({
               <span
                 className={`mt-0.5 shrink-0 opacity-60 ${reason === r.id ? colors.text : "text-gray-400"}`}
               >
-                {reasonIcons[r.id] || <MessageSquare className="h-4 w-4" />}
+                {getIconForReason(r.id)}
               </span>
               <span className="text-[13px] leading-relaxed">{r.label}</span>
             </button>

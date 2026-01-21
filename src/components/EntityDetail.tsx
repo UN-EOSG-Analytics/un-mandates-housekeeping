@@ -131,7 +131,7 @@ function formatSubprogrammeName(subprog: string): string {
 // }
 
 const GRID_COLS =
-  "grid-cols-[140px_1fr_50px_50px_45px_25px_30px_70px_100px_35px_45px]";
+  "grid-cols-[140px_1fr_50px_50px_45px_25px_30px_70px_120px_35px_45px]";
 
 type SortColumn = "symbol" | "title" | "body" | "year" | "others";
 type SortDirection = "asc" | "desc";

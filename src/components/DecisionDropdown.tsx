@@ -2,9 +2,8 @@
 
 import * as React from "react";
 import type { Decision } from "@/types";
-import { Tooltip } from "./Tooltip";
-import { ChevronDown, MessageSquare } from "lucide-react";
-import { ReasonPopup, getReasonDisplayLabel } from "./ReasonDropdown";
+import { ChevronDown, MessageCircle, Pencil } from "lucide-react";
+import { ReasonPopup, getReasonDisplayLabel, renderReasonIcon } from "./ReasonDropdown";
 import type { DecisionType } from "@/lib/services/decision-reasons";
 
 interface DecisionDropdownProps {
@@ -106,19 +105,6 @@ export function DecisionDropdown({
         )
       : null;
 
-  // Build tooltip content
-  const tooltipParts: string[] = [];
-  if (reasonLabel) {
-    tooltipParts.push(reasonLabel);
-  }
-  if (userEmail && createdAt) {
-    tooltipParts.push(
-      `Set by ${userEmail} at ${new Date(createdAt).toLocaleDateString()}`,
-    );
-  }
-  const tooltipContent =
-    tooltipParts.length > 0 ? tooltipParts.join("\n\n") : null;
-
   const colors =
     decision && decision in DECISION_COLORS
       ? DECISION_COLORS[decision as keyof typeof DECISION_COLORS]
@@ -191,30 +177,71 @@ export function DecisionDropdown({
   // Show indicator if reason is set
   const hasReason = reason && reason !== "";
 
-  const button = (
-    <button
-      onClick={() => !disabled && setIsOpen(!isOpen)}
-      disabled={disabled}
-      className={`flex w-[5.25rem] items-center justify-between gap-1 rounded border px-2 font-medium transition-colors ${sizeClasses} ${colors.bg} ${colors.border} ${colors.text} ${
-        disabled
-          ? "cursor-default opacity-60"
-          : `cursor-pointer ${colors.hover}`
-      } ${className || ""}`}
-    >
-      <span className="flex items-center gap-1">
-        {displayLabel}
-        {hasReason && <MessageSquare className="h-2.5 w-2.5 opacity-60" />}
-      </span>
-      {!disabled && <ChevronDown className="h-3 w-3 shrink-0 opacity-60" />}
-    </button>
-  );
-
   return (
-    <div ref={containerRef} className="relative">
-      {tooltipContent ? (
-        <Tooltip content={tooltipContent}>{button}</Tooltip>
-      ) : (
-        button
+    <div ref={containerRef} className="relative flex items-center gap-0.5">
+      {/* Main decision dropdown button */}
+      <div className="group relative">
+        <button
+          onClick={() => !disabled && setIsOpen(!isOpen)}
+          disabled={disabled}
+          className={`flex w-[5.25rem] items-center justify-between gap-1 rounded border px-2 font-medium transition-colors ${sizeClasses} ${colors.bg} ${colors.border} ${colors.text} ${
+            disabled
+              ? "cursor-default opacity-60"
+              : `cursor-pointer ${colors.hover}`
+          } ${className || ""}`}
+        >
+          <span>{displayLabel}</span>
+          {!disabled && <ChevronDown className="h-3 w-3 shrink-0 opacity-60" />}
+        </button>
+        {/* Tooltip on hover */}
+        {decision && decision !== "cancel" && (
+          <div className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 opacity-0 transition-opacity duration-150 group-hover:opacity-100">
+            <div className="rounded-lg bg-gray-800 px-3 py-2 text-white shadow-lg">
+              <div className="w-72 space-y-2 text-left">
+                {reasonLabel ? (
+                  <div className="flex items-start gap-2">
+                    {reason && renderReasonIcon(reason, "mt-0.5 h-3.5 w-3.5 shrink-0 opacity-70")}
+                    <span className="text-[11px] leading-relaxed">{reasonLabel}</span>
+                  </div>
+                ) : (
+                  <div className="text-[11px] italic text-gray-300">No reason provided</div>
+                )}
+                {userEmail && createdAt && (
+                  <div className="border-t border-white/10 pt-1.5 text-[10px] text-gray-300">
+                    by {userEmail.split("@")[0]} · {new Date(createdAt).toLocaleDateString()}
+                  </div>
+                )}
+              </div>
+              <div className="absolute left-1/2 top-full -translate-x-1/2 border-4 border-transparent border-t-gray-800" />
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Reason indicator/edit button */}
+      {decision && decision !== "cancel" && decision !== "add" && onReasonChange && (
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            setShowReasonPopup(true);
+          }}
+          className={`group/reason relative flex h-6 items-center justify-center rounded border transition-all ${
+            hasReason
+              ? `w-6 ${colors.bg} ${colors.border} ${colors.text} ${colors.hover}`
+              : "w-6 border-dashed border-gray-300 bg-white text-gray-400 hover:border-gray-400 hover:bg-gray-50"
+          }`}
+          title={hasReason ? "Edit reason" : "Add reason"}
+        >
+          {hasReason ? (
+            reason ? (
+              renderReasonIcon(reason, "h-3.5 w-3.5")
+            ) : (
+              <MessageCircle className="h-3.5 w-3.5" />
+            )
+          ) : (
+            <Pencil className="h-3 w-3" />
+          )}
+        </button>
       )}
 
       {isOpen && !disabled && (

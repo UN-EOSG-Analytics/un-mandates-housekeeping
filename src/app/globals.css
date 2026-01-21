@@ -164,14 +164,13 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/* Accessible focus indicators */
+/* Accessible focus indicators - subtle styling */
 *:focus {
   outline: none;
 }
 
 *:focus-visible {
-  outline: 2px solid #009edb;
-  outline-offset: 2px;
+  outline: none;
 }
 
 
