@@ -8,12 +8,13 @@ interface Props {
   children?: React.ReactNode;
   entities?: EntityOption[];
   maxWidth?: "6xl" | "7xl";
+  hideAbout?: boolean;
 }
 
 export const SITE_TITLE = "Mandate Housekeeping Platform";
 export const SITE_SUBTITLE = "PPB 2027 Mandate Review";
 
-export function Header({ user, children, entities = [], maxWidth = "7xl" }: Props) {
+export function Header({ user, children, entities = [], maxWidth = "7xl", hideAbout = false }: Props) {
   const isLoggedIn = !!user;
   const widthClass = maxWidth === "6xl" ? "max-w-6xl" : "max-w-7xl";
 
@@ -38,6 +39,14 @@ export function Header({ user, children, entities = [], maxWidth = "7xl" }: Prop
           </div>
         </Link>
         <div className="flex items-center gap-4">
+          {!hideAbout && (
+            <Link
+              href="/about"
+              className="text-sm font-medium text-gray-700 transition-colors hover:text-un-blue"
+            >
+              About
+            </Link>
+          )}
           {isLoggedIn ? (
             <UserMenu
               email={user.email}
@@ -54,12 +63,6 @@ export function Header({ user, children, entities = [], maxWidth = "7xl" }: Prop
             </Link>
           )}
           {children}
-          <Link
-            href="/about"
-            className="text-sm text-gray-500 transition-colors hover:text-un-blue"
-          >
-            About
-          </Link>
         </div>
       </div>
     </header>

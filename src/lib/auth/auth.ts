@@ -18,9 +18,12 @@ export function generateToken(): string {
 }
 
 export async function recentTokenExists(email: string): Promise<boolean> {
+  // Only block if there's an unused token sent in the last 2 minutes
+  // Used tokens don't block - allows re-login after logout
+  // Token expires 15 min after creation, so "created < 2 min ago" = expires_at > NOW() + 13 min
   const rows = await query<{ count: string }>(
     `SELECT COUNT(*) as count FROM mandates_housekeeping.magic_tokens 
-     WHERE email = $1 AND expires_at > NOW() - INTERVAL '14 minutes'`,
+     WHERE email = $1 AND used_at IS NULL AND expires_at > NOW() + INTERVAL '13 minutes'`,
     [email.toLowerCase()],
   );
   return parseInt(rows[0]?.count || "0") > 0;

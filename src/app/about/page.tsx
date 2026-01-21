@@ -116,7 +116,7 @@ export default async function AboutPage() {
 
   return (
     <>
-      <Header user={user} maxWidth="6xl" />
+      <Header user={user} maxWidth="6xl" hideAbout />
       <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
 
       {/* Hero */}
@@ -148,7 +148,7 @@ export default async function AboutPage() {
 
       {/* Feature grid */}
       <section id="features" className="mx-auto max-w-6xl px-4 pb-20">
-        <h3 className="mb-8 text-center text-sm font-semibold tracking-wider text-gray-400 uppercase">
+        <h3 className="mb-8 text-left text-sm font-semibold tracking-wider text-gray-400 uppercase">
           Platform Features
         </h3>
 
@@ -214,7 +214,7 @@ export default async function AboutPage() {
           <FeatureCard
             icon={Search}
             title="Search the Official Document System"
-            description="Add or update mandate citations using validated data from ODS. Search by symbol or title to get metadata including title, year, issuing body, and PDF link."
+            description="Add or update mandate citations using validated data from the UN Digital Library and ODS. Search by symbol or title to get metadata including title, year, issuing body, and PDF link."
           >
             <div className="space-y-2">
               <div className="flex items-center gap-2 rounded-lg border-2 border-dashed border-gray-200 px-3 py-2">
