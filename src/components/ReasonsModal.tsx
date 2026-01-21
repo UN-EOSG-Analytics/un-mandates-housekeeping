@@ -39,6 +39,23 @@ interface ReasonPopupProps {
   symbol?: string;
 }
 
+/**
+ * Parse a label with **bold** markers and render as React nodes
+ */
+function renderLabelWithBold(label: string): React.ReactNode {
+  const parts = label.split(/(\*\*[^*]+\*\*)/);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <span key={i} className="font-semibold">
+          {part.slice(2, -2)}
+        </span>
+      );
+    }
+    return part;
+  });
+}
+
 // Exported icon mapping for use in other components
 const REASON_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   // Retain reasons
@@ -235,7 +252,7 @@ export function ReasonPopup({
               >
                 {getIconForReason(r.id)}
               </span>
-              <span className="text-[13px] leading-relaxed">{r.label}</span>
+              <span className="text-[13px] leading-relaxed">{renderLabelWithBold(r.label)}</span>
             </button>
           ))}
         </div>
