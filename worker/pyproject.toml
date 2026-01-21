@@ -1,5 +1,5 @@
 [project]
-name = "un80-docx-worker"
+name = "ppb-docx-worker"
 version = "0.1.0"
 requires-python = ">=3.13"
 dependencies = [
@@ -10,4 +10,4 @@ dependencies = [
 ]
 
 [project.scripts]
-un80-docx-worker = "un80-docx-worker.main:cli"
+ppb-docx-worker = "ppb-docx-worker.main:cli"

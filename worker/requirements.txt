@@ -7,10 +7,10 @@ azure-core==1.38.0 \
 azure-storage-blob==12.28.0 \
     --hash=sha256:00fb1db28bf6a7b7ecaa48e3b1d5c83bfadacc5a678b77826081304bd87d6461 \
     --hash=sha256:e7d98ea108258d29aa0efbfd591b2e2075fa1722a2fae8699f0b3c9de11eff41
-    # via un80-docx-worker
-certifi==2025.11.12 \
-    --hash=sha256:97de8790030bbd5c2d96b7ec782fc2f7820ef8dba6db909ccf95449f2d062d4b \
-    --hash=sha256:d8ab5478f2ecd78af242878415affce761ca6bc54a22a27e026d7c25357c3316
+    # via ppb-docx-worker
+certifi==2026.1.4 \
+    --hash=sha256:9943707519e4add1115f44c2bc244f782c0249876bf51b6599fee1ffbedd685c \
+    --hash=sha256:ac726dd470482006e014ad384921ed6438c457018f4b3d204aea4281258b2120
     # via requests
 cffi==2.0.0 ; platform_python_implementation != 'PyPy' \
     --hash=sha256:00bdf7acc5f795150faa6957054fbbca2439db2f775ce831222b66f192f03beb \
@@ -201,7 +201,7 @@ lxml==6.0.2 \
 psycopg==3.3.2 \
     --hash=sha256:3e94bc5f4690247d734599af56e51bae8e0db8e4311ea413f801fef82b14a99b \
     --hash=sha256:707a67975ee214d200511177a6a80e56e654754c9afca06a7194ea6bbfde9ca7
-    # via un80-docx-worker
+    # via ppb-docx-worker
 psycopg-binary==3.3.2 ; implementation_name != 'pypy' \
     --hash=sha256:03b7cd73fb8c45d272a34ae7249713e32492891492681e3cf11dff9531cf37e9 \
     --hash=sha256:04bb2de4ba69d6f8395b446ede795e8884c040ec71d01dd07ac2b2d18d4153d1 \
@@ -233,7 +233,7 @@ pycparser==2.23 ; implementation_name != 'PyPy' and platform_python_implementati
 python-docx==1.2.0 \
     --hash=sha256:3fd478f3250fbbbfd3b94fe1e985955737c145627498896a8a6bf81f4baf66c7 \
     --hash=sha256:7bc9d7b7d8a69c9c02ca09216118c86552704edc23bac179283f2e38f86220ce
-    # via un80-docx-worker
+    # via ppb-docx-worker
 requests==2.32.5 \
     --hash=sha256:2462f94637a34fd532264295e186976db0f5d453d1cdd31473c85a6a161affb6 \
     --hash=sha256:dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf
@@ -245,11 +245,11 @@ typing-extensions==4.15.0 \
     #   azure-core
     #   azure-storage-blob
     #   python-docx
-tzdata==2025.2 ; sys_platform == 'win32' \
-    --hash=sha256:1a403fada01ff9221ca8044d701868fa132215d84beb92242d9acd2147f667a8 \
-    --hash=sha256:b60a638fcc0daffadf82fe0f57e53d06bdec2f36c4df66280ae79bce6bd6f2b9
+tzdata==2025.3 ; sys_platform == 'win32' \
+    --hash=sha256:06a47e5700f3081aab02b2e513160914ff0694bce9947d6b76ebd6bf57cfc5d1 \
+    --hash=sha256:de39c2ca5dc7b0344f2eba86f49d614019d29f060fc4ebc8a417896a620b56a7
     # via psycopg
-urllib3==2.6.2 \
-    --hash=sha256:016f9c98bb7e98085cb2b4b17b87d2c702975664e4f060c6532e64d1c1a5e797 \
-    --hash=sha256:ec21cddfe7724fc7cb4ba4bea7aa8e2ef36f607a4bab81aa6ce42a13dc3f03dd
+urllib3==2.6.3 \
+    --hash=sha256:1b62b6884944a57dbe321509ab94fd4d3b307075e0c2eae991ac71ee15ad38ed \
+    --hash=sha256:bf272323e553dfb2e87d9bfd225ca7b0f467b919d7bbd355436d3fd37cb0acd4
     # via requests
