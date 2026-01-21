@@ -11,22 +11,15 @@ import { DECISION_COLORS } from "./DecisionDropdown";
 import {
   X,
   CheckCircle2,
-  Clock,
   Building2,
   RefreshCw,
-  CalendarCheck,
-  Timer,
-  Award,
   Replace,
-  Edit3,
   Layers,
-  CheckSquare,
-  Calendar,
   Package,
-  Archive,
-  FileX,
   Building,
   MessageSquare,
+  Lightbulb,
+  Users,
 } from "lucide-react";
 
 interface ReasonPopupProps {
@@ -57,27 +50,23 @@ export function renderLabelWithBold(label: string): React.ReactNode {
 }
 
 // Exported icon mapping for use in other components
-const REASON_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
-  // Retain reasons
-  action_applicable: CheckCircle2,
-  ongoing_lt_5y: Clock,
+const REASON_ICONS: Record<
+  string,
+  React.ComponentType<{ className?: string }>
+> = {
+  // Add & Retain reasons
+  direct_request: CheckCircle2,
+  influences_work: Lightbulb,
   foundational: Building2,
-  continuing_no_end: RefreshCw,
-  recent_relevant: CalendarCheck,
-  ongoing_gt_5y: Timer,
-  comparative_advantage: Award,
+  foundational_amend: Building2,
   // Update reasons
-  superseded: Replace,
-  updated_citation: Edit3,
+  superseded_identical: Replace,
+  superseded_different: RefreshCw,
   // Remove reasons
-  consolidated: Layers,
-  activity_concluded: CheckSquare,
-  completed_process: Calendar,
   delivered: Package,
-  old_not_foundational: Archive,
-  no_action_request: FileX,
+  other_entity_advantage: Users,
   subsidiary_removed: Building,
-  no_comparative_advantage: Award,
+  consolidated: Layers,
   // Other
   other: MessageSquare,
 };
@@ -85,7 +74,9 @@ const REASON_ICONS: Record<string, React.ComponentType<{ className?: string }>> 
 /**
  * Get the icon component for a reason ID
  */
-export function getReasonIcon(reasonId: string | null): React.ComponentType<{ className?: string }> | null {
+export function getReasonIcon(
+  reasonId: string | null,
+): React.ComponentType<{ className?: string }> | null {
   if (!reasonId) return null;
   return REASON_ICONS[reasonId] || MessageSquare;
 }
@@ -93,7 +84,10 @@ export function getReasonIcon(reasonId: string | null): React.ComponentType<{ cl
 /**
  * Render a reason icon as a React node
  */
-export function renderReasonIcon(reasonId: string | null, className?: string): React.ReactNode {
+export function renderReasonIcon(
+  reasonId: string | null,
+  className?: string,
+): React.ReactNode {
   if (!reasonId) return null;
   const IconComponent = REASON_ICONS[reasonId] || MessageSquare;
   return <IconComponent className={className} />;
@@ -135,7 +129,7 @@ export function ReasonPopup({
   // Lock body scroll when modal is open (comprehensive solution for all browsers including iOS)
   React.useEffect(() => {
     if (!isOpen) return;
-    
+
     const scrollY = window.scrollY;
     const originalStyles = {
       overflow: document.body.style.overflow,
@@ -143,13 +137,13 @@ export function ReasonPopup({
       top: document.body.style.top,
       width: document.body.style.width,
     };
-    
+
     // Apply scroll lock
     document.body.style.overflow = "hidden";
     document.body.style.position = "fixed";
     document.body.style.top = `-${scrollY}px`;
     document.body.style.width = "100%";
-    
+
     return () => {
       // Restore original styles
       document.body.style.overflow = originalStyles.overflow;
@@ -252,7 +246,9 @@ export function ReasonPopup({
               >
                 {getIconForReason(r.id)}
               </span>
-              <span className="text-[13px] leading-5">{renderLabelWithBold(r.label)}</span>
+              <span className="text-[13px] leading-5">
+                {renderLabelWithBold(r.label)}
+              </span>
             </button>
           ))}
         </div>

@@ -3,7 +3,12 @@
 import * as React from "react";
 import type { Decision } from "@/types";
 import { ChevronDown, MessageCircle, Pencil } from "lucide-react";
-import { ReasonPopup, getReasonDisplayLabel, renderReasonIcon, renderLabelWithBold } from "./ReasonsModal";
+import {
+  ReasonPopup,
+  getReasonDisplayLabel,
+  renderReasonIcon,
+  renderLabelWithBold,
+} from "./ReasonsModal";
 import {
   Popover,
   PopoverContent,
@@ -16,6 +21,7 @@ interface DecisionDropdownProps {
   onChange: (decision: Decision, newSymbol?: string) => void;
   onUpdateClick?: () => void;
   disabled?: boolean;
+  locked?: boolean; // Prevents changing decision but keeps full styling (used for 'add' decisions)
   userEmail?: string | null;
   createdAt?: string | null;
   className?: string;
@@ -79,6 +85,7 @@ export function DecisionDropdown({
   onChange,
   onUpdateClick,
   disabled,
+  locked,
   userEmail,
   createdAt,
   className,
@@ -111,7 +118,7 @@ export function DecisionDropdown({
 
   // Get reason display label for tooltip
   const reasonLabel =
-    decision && decision !== "cancel" && decision !== "add"
+    decision && decision !== "cancel"
       ? getReasonDisplayLabel(
           decision as DecisionType,
           reason ?? null,
@@ -161,8 +168,8 @@ export function DecisionDropdown({
 
     onChange(value);
 
-    // Show reason popup after selecting a decision (except for cancel/add)
-    if (value && value !== "cancel" && value !== "add" && onReasonChange) {
+    // Show reason popup after selecting a decision (except for cancel)
+    if (value && value !== "cancel" && onReasonChange) {
       setShowReasonPopup(true);
     }
   };
@@ -195,26 +202,37 @@ export function DecisionDropdown({
     <div ref={containerRef} className="relative flex items-center gap-0.5">
       {/* Main decision dropdown button */}
       {decision && decision !== "cancel" && userEmail && createdAt ? (
-        <Popover open={decisionTooltipOpen} onOpenChange={setDecisionTooltipOpen}>
+        <Popover
+          open={decisionTooltipOpen}
+          onOpenChange={setDecisionTooltipOpen}
+        >
           <PopoverTrigger asChild>
             <button
-              onClick={() => !disabled && setIsOpen(!isOpen)}
+              onClick={() => !disabled && !locked && setIsOpen(!isOpen)}
               onMouseEnter={() => {
-                if (decisionTooltipTimeoutRef.current) clearTimeout(decisionTooltipTimeoutRef.current);
+                if (decisionTooltipTimeoutRef.current)
+                  clearTimeout(decisionTooltipTimeoutRef.current);
                 setDecisionTooltipOpen(true);
               }}
               onMouseLeave={() => {
-                decisionTooltipTimeoutRef.current = setTimeout(() => setDecisionTooltipOpen(false), 150);
+                decisionTooltipTimeoutRef.current = setTimeout(
+                  () => setDecisionTooltipOpen(false),
+                  150,
+                );
               }}
               disabled={disabled}
               className={`flex w-[5.25rem] items-center justify-between gap-1 rounded border px-2 font-medium transition-colors ${sizeClasses} ${colors.bg} ${colors.border} ${colors.text} ${
                 disabled
                   ? "cursor-default opacity-60"
-                  : `cursor-pointer ${colors.hover}`
+                  : locked
+                    ? "cursor-default"
+                    : `cursor-pointer ${colors.hover}`
               } ${className || ""}`}
             >
               <span>{displayLabel}</span>
-              {!disabled && <ChevronDown className="h-3 w-3 shrink-0 opacity-60" />}
+              {!disabled && !locked && (
+                <ChevronDown className="h-3 w-3 shrink-0 opacity-60" />
+              )}
             </button>
           </PopoverTrigger>
           <PopoverContent
@@ -222,38 +240,49 @@ export function DecisionDropdown({
             side="top"
             sideOffset={8}
             onMouseEnter={() => {
-              if (decisionTooltipTimeoutRef.current) clearTimeout(decisionTooltipTimeoutRef.current);
+              if (decisionTooltipTimeoutRef.current)
+                clearTimeout(decisionTooltipTimeoutRef.current);
               setDecisionTooltipOpen(true);
             }}
             onMouseLeave={() => {
-              decisionTooltipTimeoutRef.current = setTimeout(() => setDecisionTooltipOpen(false), 150);
+              decisionTooltipTimeoutRef.current = setTimeout(
+                () => setDecisionTooltipOpen(false),
+                150,
+              );
             }}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="px-3 py-2">
               <p className="text-sm text-gray-700">
-                <span className={`font-medium ${colors.text}`}>{displayLabel}</span> by {userEmail} · {new Date(createdAt).toLocaleDateString()}
+                <span className={`font-medium ${colors.text}`}>
+                  {displayLabel}
+                </span>{" "}
+                by {userEmail} · {new Date(createdAt).toLocaleDateString()}
               </p>
             </div>
           </PopoverContent>
         </Popover>
       ) : (
         <button
-          onClick={() => !disabled && setIsOpen(!isOpen)}
+          onClick={() => !disabled && !locked && setIsOpen(!isOpen)}
           disabled={disabled}
           className={`flex w-[5.25rem] items-center justify-between gap-1 rounded border px-2 font-medium transition-colors ${sizeClasses} ${colors.bg} ${colors.border} ${colors.text} ${
             disabled
               ? "cursor-default opacity-60"
-              : `cursor-pointer ${colors.hover}`
+              : locked
+                ? "cursor-default"
+                : `cursor-pointer ${colors.hover}`
           } ${className || ""}`}
         >
           <span>{displayLabel}</span>
-          {!disabled && <ChevronDown className="h-3 w-3 shrink-0 opacity-60" />}
+          {!disabled && !locked && (
+            <ChevronDown className="h-3 w-3 shrink-0 opacity-60" />
+          )}
         </button>
       )}
 
       {/* Reason indicator/edit button with hover tooltip */}
-      {decision && decision !== "cancel" && decision !== "add" && onReasonChange && (
+      {decision && decision !== "cancel" && onReasonChange && (
         <Popover open={reasonTooltipOpen} onOpenChange={setReasonTooltipOpen}>
           <PopoverTrigger asChild>
             <button
@@ -262,11 +291,15 @@ export function DecisionDropdown({
                 setShowReasonPopup(true);
               }}
               onMouseEnter={() => {
-                if (reasonTooltipTimeoutRef.current) clearTimeout(reasonTooltipTimeoutRef.current);
+                if (reasonTooltipTimeoutRef.current)
+                  clearTimeout(reasonTooltipTimeoutRef.current);
                 setReasonTooltipOpen(true);
               }}
               onMouseLeave={() => {
-                reasonTooltipTimeoutRef.current = setTimeout(() => setReasonTooltipOpen(false), 150);
+                reasonTooltipTimeoutRef.current = setTimeout(
+                  () => setReasonTooltipOpen(false),
+                  150,
+                );
               }}
               className={`group/reason flex h-6 items-center justify-center rounded border transition-all ${
                 hasReason
@@ -290,11 +323,15 @@ export function DecisionDropdown({
             side="top"
             sideOffset={8}
             onMouseEnter={() => {
-              if (reasonTooltipTimeoutRef.current) clearTimeout(reasonTooltipTimeoutRef.current);
+              if (reasonTooltipTimeoutRef.current)
+                clearTimeout(reasonTooltipTimeoutRef.current);
               setReasonTooltipOpen(true);
             }}
             onMouseLeave={() => {
-              reasonTooltipTimeoutRef.current = setTimeout(() => setReasonTooltipOpen(false), 150);
+              reasonTooltipTimeoutRef.current = setTimeout(
+                () => setReasonTooltipOpen(false),
+                150,
+              );
             }}
             onClick={(e) => e.stopPropagation()}
           >
@@ -306,7 +343,9 @@ export function DecisionDropdown({
             <div className="px-3 py-2.5">
               <div className="flex gap-2.5">
                 {reason && (
-                  <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${colors.bg} ${colors.text}`}>
+                  <span
+                    className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${colors.bg} ${colors.text}`}
+                  >
                     {renderReasonIcon(reason, "h-3.5 w-3.5")}
                   </span>
                 )}
@@ -316,7 +355,9 @@ export function DecisionDropdown({
                       {renderLabelWithBold(reasonLabel)}
                     </p>
                   ) : (
-                    <p className="text-sm italic text-gray-400">No reason provided</p>
+                    <p className="text-sm text-gray-400 italic">
+                      No reason provided
+                    </p>
                   )}
                 </div>
               </div>
@@ -325,7 +366,7 @@ export function DecisionDropdown({
         </Popover>
       )}
 
-      {isOpen && !disabled && (
+      {isOpen && !disabled && !locked && (
         <div className="absolute top-full left-0 z-50 mt-1 w-[5.25rem] rounded border border-gray-200 bg-white py-0.5 shadow-lg">
           {options.map((opt) => {
             const optColors =
@@ -354,20 +395,17 @@ export function DecisionDropdown({
       )}
 
       {/* Reason popup - appears after making a decision */}
-      {decision &&
-        decision !== "cancel" &&
-        decision !== "add" &&
-        onReasonChange && (
-          <ReasonPopup
-            decision={decision as DecisionType}
-            reason={reason ?? null}
-            otherReason={otherReason ?? null}
-            onChange={handleReasonChange}
-            onClose={() => setShowReasonPopup(false)}
-            isOpen={showReasonPopup}
-            symbol={symbol}
-          />
-        )}
+      {decision && decision !== "cancel" && onReasonChange && (
+        <ReasonPopup
+          decision={decision as DecisionType}
+          reason={reason ?? null}
+          otherReason={otherReason ?? null}
+          onChange={handleReasonChange}
+          onClose={() => setShowReasonPopup(false)}
+          isOpen={showReasonPopup}
+          symbol={symbol}
+        />
+      )}
     </div>
   );
 }

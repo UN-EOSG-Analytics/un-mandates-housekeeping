@@ -44,13 +44,21 @@ export function DiffModal({
         if (!result.success) {
           setState({ loading: false, error: result.error, diffResult: null });
         } else {
-          setState({ loading: false, error: null, diffResult: result.data ?? null });
+          setState({
+            loading: false,
+            error: null,
+            diffResult: result.data ?? null,
+          });
         }
       })
       .catch((err) => {
         if (cancelled) return;
         console.error(err);
-        setState({ loading: false, error: "Failed to compute diff", diffResult: null });
+        setState({
+          loading: false,
+          error: "Failed to compute diff",
+          diffResult: null,
+        });
       });
 
     return () => {
@@ -78,7 +86,8 @@ export function DiffModal({
               Compare Document Versions
             </h2>
             <p className="mt-1 truncate text-sm text-gray-500">
-              {originalSymbol} ({originalYear}) → {compareSymbol} ({compareYear})
+              {originalSymbol} ({originalYear}) → {compareSymbol} ({compareYear}
+              )
             </p>
             {(originalTitle || compareTitle) && (
               <p className="truncate text-xs text-gray-400">

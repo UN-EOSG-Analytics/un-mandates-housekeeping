@@ -41,7 +41,11 @@ import {
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Tooltip } from "./Tooltip";
 import { DecisionDropdown } from "./DecisionDropdown";
-import { getReasonDisplayLabel, renderReasonIcon, renderLabelWithBold } from "./ReasonsModal";
+import {
+  getReasonDisplayLabel,
+  renderReasonIcon,
+  renderLabelWithBold,
+} from "./ReasonsModal";
 import type { DecisionType } from "@/lib/services/decision-reasons";
 
 interface Props {
@@ -736,18 +740,21 @@ export function DocumentSymbol({
             onClick={() => setOpen(false)}
           />
 
-            <div
-              ref={sidebarRef}
-              role="dialog"
-              aria-modal="true"
-              aria-labelledby="sidebar-title"
-              className="relative flex h-full w-full max-w-xl cursor-default flex-col bg-white shadow-xl"
-            >
+          <div
+            ref={sidebarRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="sidebar-title"
+            className="relative flex h-full w-full max-w-xl cursor-default flex-col bg-white shadow-xl"
+          >
             <div className="border-b p-5 pb-0">
               <div className="flex items-start justify-between">
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-3">
-                    <h2 id="sidebar-title" className="text-xl font-semibold text-foreground">
+                    <h2
+                      id="sidebar-title"
+                      className="text-xl font-semibold text-foreground"
+                    >
                       {symbol}
                     </h2>
                     {isFoundational && (
@@ -1259,30 +1266,53 @@ export function DocumentSymbol({
                                       createdAt={currentDecision?.createdAt}
                                       reason={currentDecision?.decisionReason}
                                       otherReason={currentDecision?.otherReason}
-                                      onReasonChange={canEdit ? async (reason, otherReason) => {
-                                        if (!currentDecision?.id) return;
-                                        // Optimistic update
-                                        setAllDecisions((prev) =>
-                                          prev.map((d) =>
-                                            d.id === currentDecision?.id
-                                              ? { ...d, decisionReason: reason, otherReason: reason === "other" ? otherReason : null }
-                                              : d
-                                          )
-                                        );
-                                        // Persist to database
-                                        const result = await updateDecisionReasonAction({
-                                          decisionId: currentDecision.id,
-                                          decisionReason: reason,
-                                          otherReason: reason === "other" ? otherReason : null,
-                                        });
-                                        if (result.success && result.data) {
-                                          setAllDecisions((prev) =>
-                                            prev.map((d) =>
-                                              d.id === result.data!.id ? result.data! : d
-                                            )
-                                          );
-                                        }
-                                      } : undefined}
+                                      onReasonChange={
+                                        canEdit
+                                          ? async (reason, otherReason) => {
+                                              if (!currentDecision?.id) return;
+                                              // Optimistic update
+                                              setAllDecisions((prev) =>
+                                                prev.map((d) =>
+                                                  d.id === currentDecision?.id
+                                                    ? {
+                                                        ...d,
+                                                        decisionReason: reason,
+                                                        otherReason:
+                                                          reason === "other"
+                                                            ? otherReason
+                                                            : null,
+                                                      }
+                                                    : d,
+                                                ),
+                                              );
+                                              // Persist to database
+                                              const result =
+                                                await updateDecisionReasonAction(
+                                                  {
+                                                    decisionId:
+                                                      currentDecision.id,
+                                                    decisionReason: reason,
+                                                    otherReason:
+                                                      reason === "other"
+                                                        ? otherReason
+                                                        : null,
+                                                  },
+                                                );
+                                              if (
+                                                result.success &&
+                                                result.data
+                                              ) {
+                                                setAllDecisions((prev) =>
+                                                  prev.map((d) =>
+                                                    d.id === result.data!.id
+                                                      ? result.data!
+                                                      : d,
+                                                  ),
+                                                );
+                                              }
+                                            }
+                                          : undefined
+                                      }
                                       symbol={symbol}
                                       size="sm"
                                     />
@@ -1571,13 +1601,15 @@ export function DocumentSymbol({
                           if (item.type === "decision") {
                             const decision = item.data as MandateDecision;
                             const isSuperseded = item.isSuperseded;
-                            const reasonLabel = decision.decision !== "cancel" && decision.decision !== "add"
-                              ? getReasonDisplayLabel(
-                                  decision.decision as DecisionType,
-                                  decision.decisionReason,
-                                  decision.otherReason
-                                )
-                              : null;
+                            const reasonLabel =
+                              decision.decision !== "cancel" &&
+                              decision.decision !== "add"
+                                ? getReasonDisplayLabel(
+                                    decision.decision as DecisionType,
+                                    decision.decisionReason,
+                                    decision.otherReason,
+                                  )
+                                : null;
                             return (
                               <div
                                 key={decision.id || i}
@@ -1623,36 +1655,41 @@ export function DocumentSymbol({
                                   </div>
                                   {/* Reason display */}
                                   {reasonLabel && (
-                                    <div className={`mt-2 flex items-start gap-2 rounded-md px-2.5 py-2 ${
-                                      decision.decision === "retain"
-                                        ? "bg-blue-100/60"
-                                        : decision.decision === "remove"
-                                          ? "bg-red-100/60"
-                                          : decision.decision === "update"
-                                            ? "bg-amber-100/60"
-                                            : "bg-gray-100/60"
-                                    }`}>
-                                      {decision.decisionReason && renderReasonIcon(
-                                        decision.decisionReason,
-                                        `mt-0.5 h-3.5 w-3.5 shrink-0 ${
-                                          decision.decision === "retain"
-                                            ? "text-blue-600"
-                                            : decision.decision === "remove"
-                                              ? "text-red-600"
-                                              : decision.decision === "update"
-                                                ? "text-amber-600"
-                                                : "text-gray-500"
-                                        }`
-                                      )}
-                                      <span className={`text-[11px] leading-relaxed ${
+                                    <div
+                                      className={`mt-2 flex items-start gap-2 rounded-md px-2.5 py-2 ${
                                         decision.decision === "retain"
-                                          ? "text-blue-700"
+                                          ? "bg-blue-100/60"
                                           : decision.decision === "remove"
-                                            ? "text-red-700"
+                                            ? "bg-red-100/60"
                                             : decision.decision === "update"
-                                              ? "text-amber-700"
-                                              : "text-gray-600"
-                                      }`}>
+                                              ? "bg-amber-100/60"
+                                              : "bg-gray-100/60"
+                                      }`}
+                                    >
+                                      {decision.decisionReason &&
+                                        renderReasonIcon(
+                                          decision.decisionReason,
+                                          `mt-0.5 h-3.5 w-3.5 shrink-0 ${
+                                            decision.decision === "retain"
+                                              ? "text-blue-600"
+                                              : decision.decision === "remove"
+                                                ? "text-red-600"
+                                                : decision.decision === "update"
+                                                  ? "text-amber-600"
+                                                  : "text-gray-500"
+                                          }`,
+                                        )}
+                                      <span
+                                        className={`text-[11px] leading-relaxed ${
+                                          decision.decision === "retain"
+                                            ? "text-blue-700"
+                                            : decision.decision === "remove"
+                                              ? "text-red-700"
+                                              : decision.decision === "update"
+                                                ? "text-amber-700"
+                                                : "text-gray-600"
+                                        }`}
+                                      >
                                         {renderLabelWithBold(reasonLabel)}
                                       </span>
                                     </div>

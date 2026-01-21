@@ -165,7 +165,9 @@ export function hasWarnings(mandate: Mandate): boolean {
 /**
  * Get warning icon based on severity
  */
-export function getWarningIcon(severity: MandateWarning["severity"]): WarningIconType {
+export function getWarningIcon(
+  severity: MandateWarning["severity"],
+): WarningIconType {
   switch (severity) {
     case "error":
       return "x-circle";

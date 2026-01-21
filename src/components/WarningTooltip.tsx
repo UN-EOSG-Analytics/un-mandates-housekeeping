@@ -126,7 +126,9 @@ export function WarningTooltip({
                   <span
                     className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${iconStyle}`}
                   >
-                    <WarningIcon icon={warning.icon || getWarningIcon(warning.severity)} />
+                    <WarningIcon
+                      icon={warning.icon || getWarningIcon(warning.severity)}
+                    />
                   </span>
                   <div className="min-w-0 flex-1">
                     <p className="text-sm leading-relaxed text-gray-700">

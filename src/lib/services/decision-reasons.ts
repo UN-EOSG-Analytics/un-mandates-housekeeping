@@ -8,104 +8,89 @@ export interface DecisionReason {
   label: string;
 }
 
-export const RETAIN_REASONS: DecisionReason[] = [
+export const ADD_REASONS: DecisionReason[] = [
   {
-    id: "action_applicable",
+    id: "direct_request",
     label:
-      "**Request for action remains applicable** to the programme/subprogramme.",
+      "**Direct request for action** remains applicable to the programme/subprogramme.",
   },
   {
-    id: "ongoing_lt_5y",
-    label: "Mandated **activity or service is ongoing** (less than 5 years old).",
+    id: "influences_work",
+    label:
+      "**Influences the programme of work** without constituting a direct request for action for the entity.",
+  },
+  {
+    id: "foundational_amend",
+    label:
+      "**Foundational mandate** establishing or amending the entity or core function.",
+  },
+  { id: "other", label: "Other." },
+];
+
+export const RETAIN_REASONS: DecisionReason[] = [
+  {
+    id: "direct_request",
+    label:
+      "**Direct request for action** remains applicable to the programme/subprogramme.",
+  },
+  {
+    id: "influences_work",
+    label:
+      "**Influences the programme of work** without constituting a direct request for action for the entity.",
   },
   {
     id: "foundational",
     label: "**Foundational mandate** establishing the entity or core function.",
   },
-  {
-    id: "continuing_no_end",
-    label:
-      "Continuing mandate with **no end date** (e.g. recurring reporting requirement).",
-  },
-  {
-    id: "recent_relevant",
-    label: "Mandate **adopted within the last five years** and remains relevant.",
-  },
-  {
-    id: "ongoing_gt_5y",
-    label:
-      "**Mandated activity or service is ongoing** (more than 5 years old) and not superseded or reflected by a more recent resolution.",
-  },
-  {
-    id: "comparative_advantage",
-    label:
-      "Entity has a demonstrable **comparative advantage** in implementing the mandate.",
-  },
-  { id: "other", label: "Other" },
+  { id: "other", label: "Other." },
 ];
 
 export const UPDATE_REASONS: DecisionReason[] = [
   {
-    id: "superseded",
+    id: "superseded_identical",
     label:
-      "**Superseded** by a more recent resolution with identical or similar requests.",
+      "**Superseded** by a more recent resolution with identical or **similar requests**.",
   },
   {
-    id: "updated_citation",
+    id: "superseded_different",
     label:
-      "**Updated citation** needed to reflect current mandate language or scope.",
+      "**Superseded** by a more recent resolution with **different requests**.",
   },
-  { id: "other", label: "Other" },
+  { id: "other", label: "Other." },
 ];
 
 export const REMOVE_REASONS: DecisionReason[] = [
   {
-    id: "consolidated",
-    label:
-      "**Duplicate citation** consolidated across **multiple subprogrammes** to programme level.",
-  },
-  {
-    id: "activity_concluded",
-    label: "Mandated **activity or service has concluded**.",
-  },
-  {
-    id: "completed_process",
-    label:
-      "Mandate linked to a **completed intergovernmental process or one-off event**.",
-  },
-  {
     id: "delivered",
     label:
-      "Mandated activity/service/report etc has been **delivered** and no further action is required.",
+      "Mandated activity and service has been **delivered** and no further action is required.",
   },
   {
-    id: "old_not_foundational",
+    id: "other_entity_advantage",
     label:
-      "Mandate is **older than five years** and is neither foundational nor continuing.",
-  },
-  {
-    id: "no_action_request",
-    label: "**No current request** for action relevant to the programme of work.",
+      "**Other entity** has comparative advantage in implementing the mandate.",
   },
   {
     id: "subsidiary_removed",
     label:
-      "**Subsidiary body** mandate removed in favour of a **principal organ resolution**.",
+      "**Subsidiary body** mandate removed in favour of a principal organ resolution.",
   },
   {
-    id: "no_comparative_advantage",
+    id: "consolidated",
     label:
-      "Entity **no longer has a comparative advantage** in implementing the mandate.",
+      "**Duplicate citation** consolidated across multiple subprogrammes to programme level.",
   },
-  { id: "other", label: "Other" },
+  { id: "other", label: "Other." },
 ];
 
-export type DecisionType = "retain" | "update" | "remove";
+export type DecisionType = "add" | "retain" | "update" | "remove";
 
 export function getReasonsForDecision(
   decision: DecisionType,
 ): DecisionReason[] {
   switch (decision) {
+    case "add":
+      return ADD_REASONS;
     case "retain":
       return RETAIN_REASONS;
     case "update":

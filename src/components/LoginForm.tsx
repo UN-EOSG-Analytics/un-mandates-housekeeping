@@ -5,7 +5,9 @@ import { requestMagicLinkAction } from "@/lib/auth/actions";
 
 export function LoginForm() {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "sent" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "sent" | "error">(
+    "idle",
+  );
   const [errorMsg, setErrorMsg] = useState("");
 
   async function handleSubmit(e: React.FormEvent) {
@@ -43,7 +45,9 @@ export function LoginForm() {
             required
             className="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-un-blue focus:ring-1 focus:ring-un-blue focus:outline-none"
           />
-          {status === "error" && <p className="text-sm text-red-600">{errorMsg}</p>}
+          {status === "error" && (
+            <p className="text-sm text-red-600">{errorMsg}</p>
+          )}
           <button
             type="submit"
             disabled={status === "loading"}

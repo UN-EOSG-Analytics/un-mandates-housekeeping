@@ -15,7 +15,10 @@ export type WarningIconType =
   | "x"
   | "x-circle";
 
-const iconMap: Record<WarningIconType, React.ComponentType<{ className?: string }>> = {
+const iconMap: Record<
+  WarningIconType,
+  React.ComponentType<{ className?: string }>
+> = {
   alert: AlertTriangle,
   "arrow-up": ArrowUp,
   help: HelpCircle,

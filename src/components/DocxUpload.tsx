@@ -182,7 +182,7 @@ export function DocxUpload({
           />
           <p className="text-sm text-gray-600">
             Drop DOCX file here or{" "}
-            <span className="text-un-blue font-medium">browse</span>
+            <span className="font-medium text-un-blue">browse</span>
           </p>
           <p className="mt-1 text-xs text-gray-400">Max 50MB</p>
         </div>
@@ -216,7 +216,7 @@ export function DocxUpload({
             <button
               onClick={handleUpload}
               disabled={state === "uploading"}
-              className="bg-un-blue hover:bg-un-blue/90 flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-white transition-colors disabled:opacity-50"
+              className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-un-blue px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-un-blue/90 disabled:opacity-50"
             >
               {state === "uploading" ? (
                 <>

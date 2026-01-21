@@ -8,7 +8,11 @@ interface Props {
   onEndReview?: () => void;
 }
 
-export function ReviewModeBanner({ startedBy, isReviewer, onEndReview }: Props) {
+export function ReviewModeBanner({
+  startedBy,
+  isReviewer,
+  onEndReview,
+}: Props) {
   return (
     <div className="border-l-4 border-amber-500 bg-amber-50 px-6 py-3">
       <div className="flex items-center justify-between">
@@ -19,7 +23,8 @@ export function ReviewModeBanner({ startedBy, isReviewer, onEndReview }: Props) 
               This submission is currently under review
             </p>
             <p className="text-xs text-amber-600">
-              Changes by entity users are temporarily disabled and will not be saved. However, you can continue exploring all features.
+              Changes by entity users are temporarily disabled and will not be
+              saved. However, you can continue exploring all features.
               {isReviewer && startedBy && (
                 <span className="ml-1">
                   Review started by{" "}

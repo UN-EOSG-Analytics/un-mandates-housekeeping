@@ -173,7 +173,6 @@ body::-webkit-scrollbar {
   outline: none;
 }
 
-
 /* Custom scrollbar styling for small containers */
 .scrollbar-thin {
   scrollbar-width: thin;

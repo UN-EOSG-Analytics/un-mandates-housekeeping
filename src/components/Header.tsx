@@ -14,13 +14,21 @@ interface Props {
 export const SITE_TITLE = "Mandate Housekeeping Platform";
 export const SITE_SUBTITLE = "PPB 2027 Mandate Submissions";
 
-export function Header({ user, children, entities = [], maxWidth = "7xl", hideAbout = false }: Props) {
+export function Header({
+  user,
+  children,
+  entities = [],
+  maxWidth = "7xl",
+  hideAbout = false,
+}: Props) {
   const isLoggedIn = !!user;
   const widthClass = maxWidth === "6xl" ? "max-w-6xl" : "max-w-7xl";
 
   return (
     <header className="border-b border-gray-200 bg-white">
-      <div className={`mx-auto flex ${widthClass} items-center justify-between px-3 py-4 sm:px-4`}>
+      <div
+        className={`mx-auto flex ${widthClass} items-center justify-between px-3 py-4 sm:px-4`}
+      >
         <Link
           href={isLoggedIn ? "/" : "/about"}
           className="flex items-center gap-3 hover:opacity-90"

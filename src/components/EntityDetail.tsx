@@ -304,8 +304,6 @@ function MandateRowContent({
   const ageInfo = getAgeIndicator(mandate.year);
   const currentDecision = state?.decision;
 
-  const isAddedDecision = isAdded && currentDecision?.decision === "add";
-
   // Check if this row has an update or remove decision (to grey out content)
   const hasUpdate = currentDecision?.decision === "update";
   const hasRemove = currentDecision?.decision === "remove";
@@ -434,7 +432,8 @@ function MandateRowContent({
               currentDecision.decision !== "cancel";
 
             const primaryWarning = actionableWarnings[0] || warnings[0];
-            const icon = primaryWarning.icon || getWarningIcon(primaryWarning.severity);
+            const icon =
+              primaryWarning.icon || getWarningIcon(primaryWarning.severity);
             const colorScheme = primaryWarning.colorScheme || "amber";
 
             const colorClasses = {
@@ -476,7 +475,9 @@ function MandateRowContent({
                       : colorClasses[colorScheme]
                   }`}
                 >
-                  <span className="px-1"><WarningIcon icon={icon} /></span>
+                  <span className="px-1">
+                    <WarningIcon icon={icon} />
+                  </span>
                   {warnings.length > 1 && (
                     <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-amber-500 text-[10px] font-medium text-white shadow-sm">
                       {warnings.length}
@@ -490,8 +491,6 @@ function MandateRowContent({
       <div onClick={(e) => e.stopPropagation()}>
         {isUpdateTarget || readOnly ? (
           <span className="text-xs text-gray-400">—</span>
-        ) : isAdded ? (
-          <AddBadge show={!!isAddedDecision} />
         ) : (
           <DecisionDropdown
             decision={currentDecision?.decision ?? null}
@@ -500,6 +499,7 @@ function MandateRowContent({
             onChange={onDecision}
             onUpdateClick={onUpdateClick}
             disabled={false}
+            locked={isAdded}
             reason={currentDecision?.decisionReason}
             otherReason={currentDecision?.otherReason}
             onReasonChange={onReasonChange}
@@ -825,15 +825,6 @@ function MandateRow({
   );
 }
 
-function AddBadge({ show }: { show: boolean }) {
-  if (!show) return <span className="text-xs text-gray-400">—</span>;
-  return (
-    <span className="inline-flex h-7 w-20 items-center justify-center rounded border border-blue-200 bg-blue-50 px-2 text-xs text-blue-700">
-      <span>Add</span>
-    </span>
-  );
-}
-
 // Wrapper for the "Add" row at bottom of sections
 function AddEntryRow({
   onAdd,
@@ -1101,7 +1092,7 @@ function MandateSection({
         {!readOnly && title !== "PROGRAMME LEVEL" && (
           <button
             onClick={() => setShowEditModal(true)}
-            className="text-gray-400 hover:text-gray-600 transition-colors"
+            className="text-gray-400 transition-colors hover:text-gray-600"
             title="Edit subprogramme"
           >
             <Pencil className="h-3.5 w-3.5" />
@@ -1687,7 +1678,10 @@ export function EntityDetail({
       if (isReviewBlocked) {
         setPendingReviewChanges((prev) => {
           if (prev.some((c) => c.key === key)) return prev;
-          return [...prev, { key, originalState: states[key], updateMetadataKey: newSymbol }];
+          return [
+            ...prev,
+            { key, originalState: states[key], updateMetadataKey: newSymbol },
+          ];
         });
       }
 
@@ -1778,7 +1772,10 @@ export function EntityDetail({
       if (isReviewBlocked) {
         setPendingReviewChanges((prev) => {
           if (prev.some((c) => c.key === key)) return prev;
-          return [...prev, { key, originalState: states[key], addedMetadataKey: data.symbol }];
+          return [
+            ...prev,
+            { key, originalState: states[key], addedMetadataKey: data.symbol },
+          ];
         });
       }
 
