@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { exportToCsv, exportToXlsx } from "@/lib/services/export/export-data";
 import { exportAllToDocx } from "@/lib/services/export/export-docx";
+import { getISOTimestamp } from "@/lib/utils";
 
 const CONTENT_TYPES = {
   docx: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
@@ -33,10 +34,11 @@ export async function GET(
       contentType = CONTENT_TYPES.csv;
     }
 
+    const timestamp = getISOTimestamp();
     return new NextResponse(new Uint8Array(buffer), {
       headers: {
         "Content-Type": contentType,
-        "Content-Disposition": `attachment; filename="all_mandates.${format}"`,
+        "Content-Disposition": `attachment; filename="${timestamp}_all_legislative_mandates.${format}"`,
       },
     });
   } catch (error) {

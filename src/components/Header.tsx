@@ -38,6 +38,7 @@ export function Header({
             alt="UN Logo"
             width={50}
             height={50}
+            priority
             className="h-12 w-auto select-none"
             draggable={false}
           />
