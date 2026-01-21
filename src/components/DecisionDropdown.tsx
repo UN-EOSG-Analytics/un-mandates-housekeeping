@@ -3,7 +3,7 @@
 import * as React from "react";
 import type { Decision } from "@/types";
 import { ChevronDown, MessageCircle, Pencil } from "lucide-react";
-import { ReasonPopup, getReasonDisplayLabel, renderReasonIcon } from "./ReasonDropdown";
+import { ReasonPopup, getReasonDisplayLabel, renderReasonIcon } from "./ReasonsModal";
 import type { DecisionType } from "@/lib/services/decision-reasons";
 
 interface DecisionDropdownProps {

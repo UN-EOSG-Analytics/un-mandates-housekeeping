@@ -41,7 +41,7 @@ import {
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Tooltip } from "./Tooltip";
 import { DecisionDropdown } from "./DecisionDropdown";
-import { getReasonDisplayLabel, renderReasonIcon } from "./ReasonDropdown";
+import { getReasonDisplayLabel, renderReasonIcon } from "./ReasonsModal";
 import type { DecisionType } from "@/lib/services/decision-reasons";
 
 interface Props {

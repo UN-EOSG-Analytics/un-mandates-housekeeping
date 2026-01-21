@@ -115,13 +115,32 @@ export function ReasonPopup({
     setMounted(true);
   }, []);
 
-  // Lock body scroll when modal is open
+  // Lock body scroll when modal is open (comprehensive solution for all browsers including iOS)
   React.useEffect(() => {
     if (!isOpen) return;
-    const originalOverflow = document.body.style.overflow;
+    
+    const scrollY = window.scrollY;
+    const originalStyles = {
+      overflow: document.body.style.overflow,
+      position: document.body.style.position,
+      top: document.body.style.top,
+      width: document.body.style.width,
+    };
+    
+    // Apply scroll lock
     document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = "100%";
+    
     return () => {
-      document.body.style.overflow = originalOverflow;
+      // Restore original styles
+      document.body.style.overflow = originalStyles.overflow;
+      document.body.style.position = originalStyles.position;
+      document.body.style.top = originalStyles.top;
+      document.body.style.width = originalStyles.width;
+      // Restore scroll position
+      window.scrollTo(0, scrollY);
     };
   }, [isOpen]);
 
