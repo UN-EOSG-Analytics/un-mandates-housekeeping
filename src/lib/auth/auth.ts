@@ -63,8 +63,8 @@ export async function upsertUser(email: string): Promise<string> {
 function signSession(userId: string): string {
   const payload = JSON.stringify({
     userId,
-    exp: Date.now() + 7 * 24 * 60 * 60 * 1000,
-  }); // 7 days
+    exp: Date.now() + 30 * 24 * 60 * 60 * 1000,
+  }); // 30 days
   const sig = createHmac("sha256", SECRET).update(payload).digest("hex");
   return Buffer.from(payload).toString("base64") + "." + sig;
 }
@@ -104,7 +104,7 @@ export async function createSession(userId: string) {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "lax",
-    maxAge: 7 * 24 * 60 * 60, // 7 days
+    maxAge: 30 * 24 * 60 * 60, // 30 days
     path: "/",
   });
 }

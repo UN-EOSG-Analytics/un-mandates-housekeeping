@@ -4,6 +4,7 @@
  */
 
 import type { Mandate } from "@/types";
+import type { WarningIconType } from "@/components/WarningIcon";
 
 export interface MandateWarning {
   id: string;
@@ -16,7 +17,7 @@ export interface MandateWarning {
   /** Action type: 'update' (opens search) or 'remove' (direct action) */
   action?: "update" | "remove";
   /** Icon to display for this warning */
-  icon?: string;
+  icon?: WarningIconType;
   /** Button color scheme */
   colorScheme?: "blue" | "red" | "amber";
   /** Document symbol to display as external link */
@@ -35,7 +36,7 @@ interface WarningDefinition {
   /** Action type for this warning */
   action?: "update" | "remove";
   /** Icon to display */
-  icon?: string;
+  icon?: WarningIconType;
   /** Button color scheme */
   colorScheme?: "blue" | "red" | "amber";
   /** Extract symbol to display as external link */
@@ -57,7 +58,7 @@ const WARNING_DEFINITIONS: WarningDefinition[] = [
     condition: (mandate) => mandate.metadataFromDb === false,
     getSuggestedUpdate: (mandate) => mandate.symbol,
     action: "update",
-    icon: "?",
+    icon: "help",
     colorScheme: "amber",
   },
   {
@@ -68,7 +69,7 @@ const WARNING_DEFINITIONS: WarningDefinition[] = [
     condition: (mandate) => !mandate.link,
     getSuggestedUpdate: (mandate) => mandate.symbol,
     action: "update",
-    icon: "⚠",
+    icon: "alert",
     colorScheme: "amber",
   },
   {
@@ -85,7 +86,7 @@ const WARNING_DEFINITIONS: WarningDefinition[] = [
     getLinkedSymbol: (mandate) => mandate.newerVersion?.symbol,
     getLinkedYear: (mandate) => mandate.newerVersion?.year,
     action: "update",
-    icon: "↑",
+    icon: "arrow-up",
     colorScheme: "blue",
   },
 ];
@@ -115,7 +116,7 @@ export function getMandateWarnings(
         linkedSymbol: mandate.newerVersion?.symbol,
         linkedYear: mandate.newerVersion?.year,
         action: "remove",
-        icon: "×",
+        icon: "x",
         colorScheme: "red",
       },
       // Include other warnings that aren't newer-available
@@ -164,14 +165,14 @@ export function hasWarnings(mandate: Mandate): boolean {
 /**
  * Get warning icon based on severity
  */
-export function getWarningIcon(severity: MandateWarning["severity"]): string {
+export function getWarningIcon(severity: MandateWarning["severity"]): WarningIconType {
   switch (severity) {
     case "error":
-      return "❌";
+      return "x-circle";
     case "warning":
-      return "⚠";
+      return "alert";
     case "info":
-      return "ℹ";
+      return "info";
   }
 }
 

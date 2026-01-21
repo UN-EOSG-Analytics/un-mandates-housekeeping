@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { X } from "lucide-react";
+import { X, Info } from "lucide-react";
 import { Tooltip } from "./Tooltip";
 
 export interface ManualEntryData {
@@ -138,7 +138,7 @@ export function ManualDocumentForm({
           <label className="mb-1 block text-xs text-gray-500">
             Symbol <span className="text-red-400">*</span>
             <Tooltip content="Official UN document symbol">
-              <span className="ml-1 cursor-help text-gray-400">ⓘ</span>
+              <Info className="ml-1 inline h-3.5 w-3.5 cursor-help text-gray-400" />
             </Tooltip>
           </label>
           <input
@@ -185,7 +185,7 @@ export function ManualDocumentForm({
           <label className="mb-1 block text-xs text-gray-500">
             Title <span className="text-red-400">*</span>
             <Tooltip content="Full official title of the document">
-              <span className="ml-1 cursor-help text-gray-400">ⓘ</span>
+              <Info className="ml-1 inline h-3.5 w-3.5 cursor-help text-gray-400" />
             </Tooltip>
           </label>
           <input
@@ -202,7 +202,7 @@ export function ManualDocumentForm({
           <label className="mb-1 block text-xs text-gray-500">
             Issuing body <span className="text-red-400">*</span>
             <Tooltip content="The UN body that issued this document (e.g., General Assembly, Security Council, Economic and Social Council)">
-              <span className="ml-1 cursor-help text-gray-400">ⓘ</span>
+              <Info className="ml-1 inline h-3.5 w-3.5 cursor-help text-gray-400" />
             </Tooltip>
           </label>
           <input
@@ -261,7 +261,7 @@ export function ManualDocumentForm({
           <label className="mb-1 block text-xs text-gray-500">
             Year <span className="text-red-400">*</span>
             <Tooltip content="Year the document was published (1945-2100)">
-              <span className="ml-1 cursor-help text-gray-400">ⓘ</span>
+              <Info className="ml-1 inline h-3.5 w-3.5 cursor-help text-gray-400" />
             </Tooltip>
           </label>
           <input
@@ -295,7 +295,7 @@ export function ManualDocumentForm({
           <label className="mb-1 block text-xs text-gray-500">
             Fulltext Link <span className="text-red-400">*</span>
             <Tooltip content="URL to the official document on digitallibrary.un.org or undocs.org">
-              <span className="ml-1 cursor-help text-gray-400">ⓘ</span>
+              <Info className="ml-1 inline h-3.5 w-3.5 cursor-help text-gray-400" />
             </Tooltip>
           </label>
           <input

@@ -37,7 +37,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${roboto.className} antialiased`}>
       <body className="flex min-h-screen flex-col bg-background">
-        <div className="flex flex-1 flex-col">{children}</div>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:rounded-br focus:bg-un-blue focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-white"
+        >
+          Skip to main content
+        </a>
+        <div id="main-content" className="flex flex-1 flex-col">{children}</div>
         <Footer />
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />

@@ -43,6 +43,8 @@ import { DocumentSymbol } from "./DocumentSymbol";
 import { EntityHeader } from "./EntityHeader";
 import type { ManualEntryData } from "./ManualDocumentForm";
 import { Tooltip } from "./Tooltip";
+import { WarningIcon } from "./WarningIcon";
+import { getWarningIcon } from "@/lib/services/mandate-warnings";
 import { WarningTooltip } from "./WarningTooltip";
 
 interface Props {
@@ -240,7 +242,7 @@ function ColumnHeaders({
             className="text-[10px] font-medium tracking-wider text-gray-400 uppercase transition-colors hover:text-emerald-600"
             title="Approve all decisions in this section"
           >
-            OK ✓
+            OK <Check className="inline h-3 w-3" />
           </button>
         ) : (
           <span>OK</span>
@@ -426,7 +428,7 @@ function MandateRowContent({
               currentDecision?.decision === "remove";
 
             const primaryWarning = actionableWarnings[0] || warnings[0];
-            const icon = primaryWarning.icon || "⚠";
+            const icon = primaryWarning.icon || getWarningIcon(primaryWarning.severity);
             const colorScheme = primaryWarning.colorScheme || "amber";
 
             const colorClasses = {
@@ -462,13 +464,13 @@ function MandateRowContent({
                 onDiff={onDiff}
               >
                 <button
-                  className={`group relative inline-flex h-6 min-w-6 items-center justify-center rounded-full text-sm transition-all ${
+                  className={`group relative inline-flex h-6 min-w-6 items-center justify-center rounded-full transition-all ${
                     isAddressed
                       ? "cursor-default bg-gray-100 text-gray-400"
                       : colorClasses[colorScheme]
                   }`}
                 >
-                  <span className="px-1">{icon}</span>
+                  <span className="px-1"><WarningIcon icon={icon} /></span>
                   {warnings.length > 1 && (
                     <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-amber-500 text-[10px] font-medium text-white shadow-sm">
                       {warnings.length}

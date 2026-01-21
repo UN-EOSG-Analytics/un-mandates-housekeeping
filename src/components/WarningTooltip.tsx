@@ -7,7 +7,9 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import type { MandateWarning } from "@/lib/services/mandate-warnings";
+import { getWarningIcon } from "@/lib/services/mandate-warnings";
 import { ArrowLeftRight } from "lucide-react";
+import { WarningIcon } from "./WarningIcon";
 
 interface WarningTooltipProps {
   warnings: MandateWarning[];
@@ -113,9 +115,9 @@ export function WarningTooltip({
               >
                 <div className="flex gap-2.5">
                   <span
-                    className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-sm ${styles.icon}`}
+                    className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${styles.icon}`}
                   >
-                    {warning.icon || "⚠"}
+                    <WarningIcon icon={warning.icon || getWarningIcon(warning.severity)} />
                   </span>
                   <div className="min-w-0 flex-1">
                     <p className="text-sm leading-relaxed text-gray-700">

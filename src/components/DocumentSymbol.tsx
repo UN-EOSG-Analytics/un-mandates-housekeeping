@@ -33,7 +33,7 @@ import {
   Star,
   X,
 } from "lucide-react";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Tooltip } from "./Tooltip";
 import { DecisionDropdown } from "./DecisionDropdown";
 
@@ -537,6 +537,19 @@ export function DocumentSymbol({
     year: number;
     title?: string | null;
   } | null>(null);
+  const sidebarRef = useRef<HTMLDivElement>(null);
+
+  // Close on Escape key
+  useEffect(() => {
+    if (!open) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [open, setOpen]);
 
   // Fetch paragraphs, activity, and versions when sidebar opens
   useEffect(() => {
@@ -716,12 +729,18 @@ export function DocumentSymbol({
             onClick={() => setOpen(false)}
           />
 
-          <div className="relative flex h-full w-full max-w-xl cursor-default flex-col bg-white shadow-xl">
+            <div
+              ref={sidebarRef}
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="sidebar-title"
+              className="relative flex h-full w-full max-w-xl cursor-default flex-col bg-white shadow-xl"
+            >
             <div className="border-b p-5 pb-0">
               <div className="flex items-start justify-between">
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-3">
-                    <h2 className="text-xl font-semibold text-foreground">
+                    <h2 id="sidebar-title" className="text-xl font-semibold text-foreground">
                       {symbol}
                     </h2>
                     {isFoundational && (
@@ -742,6 +761,7 @@ export function DocumentSymbol({
                 </div>
                 <button
                   onClick={() => setOpen(false)}
+                  aria-label="Close sidebar"
                   className="ml-2 rounded-lg p-1.5 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600"
                 >
                   <X className="h-5 w-5" />

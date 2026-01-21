@@ -3,7 +3,7 @@
 import type { EntityData, PartData } from "@/types";
 import { Building2, ChevronRight, Layers, Search, X } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ExportDropdown } from "./ExportDropdown";
 
 interface Props {
@@ -71,7 +71,16 @@ function EntityCard({
 
 export function EntityOverview({ parts, userEntity }: Props) {
   const [searchQuery, setSearchQuery] = useState("");
-  const [showSections, setShowSections] = useState(false);
+  const [showSections, setShowSections] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("showSections") === "true";
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("showSections", String(showSections));
+  }, [showSections]);
 
   // Find user's entity data
   const myEntityData = userEntity
