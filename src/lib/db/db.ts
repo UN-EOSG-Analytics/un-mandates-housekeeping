@@ -22,7 +22,7 @@ export const pool =
     connectionString: getConnectionString(),
     max: 2, // Vercel Serverless Functions, no PgBouncer on Azure
     idleTimeoutMillis: 30000,
-    connectionTimeoutMillis: 2000,
+    connectionTimeoutMillis: 10000,
     ssl: {
       rejectUnauthorized: true, // equivalent to sslmode=verify-full
     },
