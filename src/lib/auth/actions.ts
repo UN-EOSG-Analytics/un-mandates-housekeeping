@@ -3,7 +3,7 @@
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import {
-  isValidUnEmail,
+  isAllowedDomain,
   createMagicToken,
   verifyMagicToken,
   upsertUser,
@@ -33,8 +33,8 @@ export async function requestMagicLinkAction(
 
   const trimmedEmail = email.trim();
 
-  if (!isValidUnEmail(trimmedEmail)) {
-    return { success: false, error: "Only @un.org emails allowed" };
+  if (!(await isAllowedDomain(trimmedEmail))) {
+    return { success: false, error: "Email domain not allowed" };
   }
 
   // Check for recent token to prevent spam

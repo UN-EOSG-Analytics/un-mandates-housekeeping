@@ -13,6 +13,17 @@ export function isValidUnEmail(email: string): boolean {
   return email.toLowerCase().endsWith("@un.org");
 }
 
+export async function isAllowedDomain(email: string): Promise<boolean> {
+  const domain = email.toLowerCase().split("@")[1];
+  if (!domain) return false;
+
+  const rows = await query<{ count: string }>(
+    `SELECT COUNT(*) as count FROM mandates_housekeeping.allowed_domains WHERE domain = $1`,
+    [domain],
+  );
+  return parseInt(rows[0]?.count || "0") > 0;
+}
+
 export function generateToken(): string {
   return randomBytes(32).toString("hex");
 }

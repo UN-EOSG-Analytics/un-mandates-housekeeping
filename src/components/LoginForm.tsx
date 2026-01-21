@@ -25,7 +25,7 @@ export function LoginForm() {
     <div className="w-full max-w-sm">
       <h2 className="mb-2 text-xl font-semibold text-foreground">Sign In</h2>
       <p className="mb-6 text-sm text-gray-500">
-        Enter your UN e-mail address to receive a sign-in link
+        Enter your UN or entity e-mail address to receive a sign-in link
       </p>
 
       {status === "sent" ? (
