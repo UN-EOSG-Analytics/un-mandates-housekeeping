@@ -7,46 +7,61 @@ interface Props {
   user?: { email: string; entity?: string | null; isReviewer?: boolean } | null;
   children?: React.ReactNode;
   entities?: EntityOption[];
+  maxWidth?: "6xl" | "7xl";
 }
 
 export const SITE_TITLE = "Mandate Housekeeping Platform";
-export const SITE_SUBTITLE =
-  "Analytics and Collaborative Review of Mandate Citations for PPB 2027";
+export const SITE_SUBTITLE = "PPB 2027 Mandate Review";
 
-export function Header({ user, children, entities = [] }: Props) {
+export function Header({ user, children, entities = [], maxWidth = "7xl" }: Props) {
+  const isLoggedIn = !!user;
+  const widthClass = maxWidth === "6xl" ? "max-w-6xl" : "max-w-7xl";
+
   return (
-    <div className="mb-6 flex items-center justify-between">
-      <Link href="/" className="flex items-center gap-4 hover:opacity-90">
-        <Image
-          src="/images/UN_Logo_Stacked_Colour_English.svg"
-          alt="UN Logo"
-          width={60}
-          height={60}
-          className="h-14 w-auto select-none"
-          draggable={false}
-        />
-        <div>
-          <h1 className="text-2xl font-bold text-foreground">{SITE_TITLE}</h1>
-          <p className="text-sm text-gray-500">{SITE_SUBTITLE}</p>
-        </div>
-      </Link>
-      <div className="flex items-center gap-4">
+    <header className="border-b border-gray-200 bg-white">
+      <div className={`mx-auto flex ${widthClass} items-center justify-between px-3 py-4 sm:px-4`}>
         <Link
-          href="/about"
-          className="text-sm text-gray-500 transition-colors hover:text-un-blue"
+          href={isLoggedIn ? "/" : "/about"}
+          className="flex items-center gap-3 hover:opacity-90"
         >
-          About
-        </Link>
-        {user && (
-          <UserMenu
-            email={user.email}
-            entity={user.entity}
-            isReviewer={user.isReviewer}
-            entities={entities}
+          <Image
+            src="/images/UN_Logo_Stacked_Colour_English.svg"
+            alt="UN Logo"
+            width={50}
+            height={50}
+            className="h-12 w-auto select-none"
+            draggable={false}
           />
-        )}
-        {children}
+          <div>
+            <h1 className="text-xl font-bold text-gray-900">{SITE_TITLE}</h1>
+            <p className="text-xs text-gray-500">{SITE_SUBTITLE}</p>
+          </div>
+        </Link>
+        <div className="flex items-center gap-4">
+          {isLoggedIn ? (
+            <UserMenu
+              email={user.email}
+              entity={user.entity}
+              isReviewer={user.isReviewer}
+              entities={entities}
+            />
+          ) : (
+            <Link
+              href="/login"
+              className="rounded-lg bg-un-blue px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-un-blue/90"
+            >
+              Sign In
+            </Link>
+          )}
+          {children}
+          <Link
+            href="/about"
+            className="text-sm text-gray-500 transition-colors hover:text-un-blue"
+          >
+            About
+          </Link>
+        </div>
       </div>
-    </div>
+    </header>
   );
 }

@@ -7,7 +7,6 @@ import {
   Check,
   ChevronDown,
   Download,
-  ExternalLink,
   FileText,
   Layers,
   Mail,
@@ -18,6 +17,8 @@ import {
   Star,
   Users,
 } from "lucide-react";
+import { getCurrentUser } from "@/lib/auth/auth";
+import { Header } from "@/components/Header";
 
 // Feature card component
 function FeatureCard({
@@ -118,33 +119,15 @@ function MockAgeBadge({ label, color }: { label: string; color: string }) {
   return <span className={`rounded px-1.5 py-0.5 text-[10px] font-medium ${colors[color]}`}>{label}</span>;
 }
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const user = await getCurrentUser();
+  const isLoggedIn = !!user;
+  const ctaHref = isLoggedIn ? "/" : "/login";
+
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Header */}
-      <header className="border-b border-gray-200 bg-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-          <Link href="/" className="flex items-center gap-3">
-            <Image
-              src="/images/UN_Logo_Stacked_Colour_English.svg"
-              alt="UN Logo"
-              width={50}
-              height={50}
-              className="h-12 w-auto"
-            />
-            <div>
-              <h1 className="text-xl font-bold text-gray-900">Mandate Housekeeping Platform</h1>
-              <p className="text-xs text-gray-500">PPB 2027 Mandate Review</p>
-            </div>
-          </Link>
-          <Link
-            href="/login"
-            className="rounded-lg bg-un-blue px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-un-blue/90"
-          >
-            Sign In
-          </Link>
-        </div>
-      </header>
+    <>
+      <Header user={user} maxWidth="6xl" />
+      <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
 
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-4 py-16 text-center">
@@ -158,10 +141,10 @@ export default function AboutPage() {
         </p>
         <div className="flex items-center justify-center gap-4">
           <Link
-            href="/login"
+            href={ctaHref}
             className="inline-flex items-center gap-2 rounded-lg bg-un-blue px-6 py-3 font-medium text-white transition-colors hover:bg-un-blue/90"
           >
-            Get Started
+            {isLoggedIn ? "Go to Dashboard" : "Get Started"}
             <ArrowRight className="h-4 w-4" />
           </Link>
           <a
@@ -514,41 +497,15 @@ export default function AboutPage() {
             </div>
           </div>
           <Link
-            href="/login"
+            href={ctaHref}
             className="mt-10 inline-flex items-center gap-2 rounded-lg bg-un-blue px-6 py-3 font-medium text-white transition-colors hover:bg-un-blue/90"
           >
-            Start Your Review
+            {isLoggedIn ? "Go to Dashboard" : "Start Your Review"}
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </section>
-
-      {/* Contact Section */}
-      <section className="border-t border-gray-200 bg-white py-8">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <div className="flex items-center gap-3">
-              <Image
-                src="/images/UN_Logo_Stacked_Colour_English.svg"
-                alt="UN Logo"
-                width={40}
-                height={40}
-                className="h-10 w-auto opacity-50"
-              />
-              <span className="text-sm text-gray-500">Mandate Housekeeping Platform</span>
-            </div>
-            <div className="flex items-center gap-6 text-sm text-gray-500">
-              <a href="mailto:support@eosg.dev" className="hover:text-un-blue">
-                support@eosg.dev
-              </a>
-              <a href="https://docs.un.org" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-un-blue">
-                UN ODS
-                <ExternalLink className="h-3 w-3" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+      </main>
+    </>
   );
 }

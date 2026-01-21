@@ -64,7 +64,7 @@ export async function proxy(request: NextRequest) {
   // Check for valid auth cookie
   const session = request.cookies.get("auth_session")?.value;
   if (!session || !(await verifySessionToken(session))) {
-    return NextResponse.redirect(new URL("/login", request.url));
+    return NextResponse.redirect(new URL("/about", request.url));
   }
 
   return NextResponse.next();

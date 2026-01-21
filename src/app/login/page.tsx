@@ -1,85 +1,13 @@
-"use client";
-
-import { SITE_TITLE } from "@/components/Header";
-import Image from "next/image";
-import { useState } from "react";
-import { requestMagicLinkAction } from "@/lib/auth/actions";
+import { Header } from "@/components/Header";
+import { LoginForm } from "@/components/LoginForm";
 
 export default function LoginPage() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "sent" | "error">(
-    "idle",
-  );
-  const [errorMsg, setErrorMsg] = useState("");
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setStatus("loading");
-    setErrorMsg("");
-
-    const result = await requestMagicLinkAction(email);
-
-    if (result.success) {
-      setStatus("sent");
-    } else {
-      setErrorMsg(result.error);
-      setStatus("error");
-    }
-  }
-
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="w-full max-w-sm">
-        <div className="mb-8 flex flex-col items-start">
-          <Image
-            src="/images/UN_Logo_Stacked_Colour_English.svg"
-            alt="UN Logo"
-            width={120}
-            height={120}
-            className="mb-4"
-          />
-          <h1 className="text-xl font-semibold text-foreground">
-            {SITE_TITLE}
-          </h1>
-          <p className="text-sm text-gray-500">
-            Sign in with your UN e-mail address
-          </p>
-        </div>
-
-        {status === "sent" ? (
-          <div className="rounded-lg bg-green-50 p-4 text-green-800">
-            <p className="font-medium">Please check your e-mail</p>
-            <p className="mt-1 text-sm">
-              We have sent a sign-in link to {email}
-            </p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="your.name@un.org"
-                required
-                className="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-un-blue focus:ring-1 focus:ring-un-blue focus:outline-none"
-              />
-            </div>
-
-            {status === "error" && (
-              <p className="text-sm text-red-600">{errorMsg}</p>
-            )}
-
-            <button
-              type="submit"
-              disabled={status === "loading"}
-              className="w-full rounded-lg bg-un-blue px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-un-blue/90 disabled:opacity-50"
-            >
-              {status === "loading" ? "Sending..." : "Send sign-in link"}
-            </button>
-          </form>
-        )}
-      </div>
-    </div>
+    <>
+      <Header maxWidth="6xl" />
+      <main className="flex flex-1 items-center justify-center px-4">
+        <LoginForm />
+      </main>
+    </>
   );
 }
