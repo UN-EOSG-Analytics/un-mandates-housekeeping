@@ -142,13 +142,17 @@ export async function getCurrentUser() {
   const role = rows[0].role || "user";
   const entity = rows[0].entity;
 
+  const isReviewer = role === "reviewer" || role === "admin";
+  const isDMSPC = entity?.toUpperCase() === "DMSPC";
+
   return {
     id: rows[0].id,
     email: rows[0].email,
     entity: entity,
     role: role,
-    isReviewer: role === "reviewer" || role === "admin",
-    isDMSPC: entity?.toUpperCase() === "DMSPC",
-    canReviewAnyEntity: entity?.toUpperCase() === "DMSPC",
+    isReviewer: isReviewer,
+    isDMSPC: isDMSPC,
+    // Must be BOTH: logged in as DMSPC entity AND have reviewer/admin role (in allowed_reviewers table)
+    canReviewAnyEntity: isDMSPC && isReviewer,
   };
 }

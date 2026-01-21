@@ -267,7 +267,7 @@ export async function createDecisionAction(params: {
     return { success: false, error: "invalid request" };
   }
 
-  // DMSPC users can review/edit any entity, others can only edit their own entity
+  // Reviewers (DMSPC entity + in allowed_reviewers list) can edit any entity
   if (!user.canReviewAnyEntity && user.entity !== entity) {
     return {
       success: false,
@@ -341,7 +341,7 @@ export async function createCommentAction(params: {
     return { success: false, error: "invalid request" };
   }
 
-  // DMSPC users can comment on any entity, others can only comment on their own entity
+  // Reviewers (DMSPC entity + in allowed_reviewers list) can comment on any entity
   if (!user.canReviewAnyEntity && user.entity !== entity) {
     return { success: false, error: "You can only comment on your own entity" };
   }

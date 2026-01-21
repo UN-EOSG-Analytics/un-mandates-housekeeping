@@ -21,19 +21,34 @@ CREATE TABLE IF NOT EXISTS mandates_housekeeping.magic_tokens (
 
 CREATE INDEX IF NOT EXISTS idx_magic_tokens_expires ON mandates_housekeeping.magic_tokens (expires_at);
 
--- Automatically set role based on entity
--- DMSPC users are reviewers, all others are regular users
+-- Table to store allowed reviewer emails (allowlist)
+-- Only users with emails in this table AND logged in as DMSPC can review any entity
+CREATE TABLE IF NOT EXISTS mandates_housekeeping.allowed_reviewers (
+    email TEXT PRIMARY KEY,
+    added_at TIMESTAMPTZ DEFAULT NOW(),
+    added_by TEXT,
+    notes TEXT
+);
+
+-- Automatically set role based on allowed_reviewers table
+-- Users must be in the allowlist to get reviewer role
 CREATE OR REPLACE FUNCTION mandates_housekeeping.set_user_role()
 RETURNS TRIGGER AS $$
 BEGIN
-  IF NEW.entity IS NOT NULL THEN
-    IF UPPER(NEW.entity) = 'DMSPC' THEN
-      NEW.role := 'reviewer';
+    -- Check if user's email is in the allowed_reviewers list
+    IF EXISTS (
+        SELECT 1 
+        FROM mandates_housekeeping.allowed_reviewers 
+        WHERE LOWER(email) = LOWER(NEW.email)
+    ) THEN
+        NEW.role := 'reviewer';
     ELSE
-      NEW.role := 'user';
+        -- Default to 'user' if not in allowlist
+        IF NEW.role IS NULL OR NEW.role = 'reviewer' THEN
+            NEW.role := 'user';
+        END IF;
     END IF;
-  END IF;
-  RETURN NEW;
+    RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
 
