@@ -1092,7 +1092,7 @@ function MandateSection({
         <h3 className="text-sm font-semibold tracking-wide text-gray-600 uppercase">
           {title}
         </h3>
-        {!readOnly && (
+        {!readOnly && title !== "PROGRAMME LEVEL" && (
           <button
             onClick={() => setShowEditModal(true)}
             className="text-gray-400 hover:text-gray-600 transition-colors"
