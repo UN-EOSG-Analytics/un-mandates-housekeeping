@@ -424,8 +424,8 @@ function MandateRowContent({
 
             const actionableWarnings = warnings.filter((w) => w.action);
             const isAddressed =
-              currentDecision?.decision === "update" ||
-              currentDecision?.decision === "remove";
+              currentDecision?.decision != null &&
+              currentDecision.decision !== "cancel";
 
             const primaryWarning = actionableWarnings[0] || warnings[0];
             const icon = primaryWarning.icon || getWarningIcon(primaryWarning.severity);

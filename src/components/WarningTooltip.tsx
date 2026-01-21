@@ -97,7 +97,7 @@ export function WarningTooltip({
         {children}
       </PopoverTrigger>
       <PopoverContent
-        className="w-80 overflow-hidden p-0"
+        className={`w-80 overflow-hidden p-0 ${disabled ? "grayscale" : ""}`}
         side="left"
         sideOffset={8}
         onMouseEnter={handleMouseEnter}
