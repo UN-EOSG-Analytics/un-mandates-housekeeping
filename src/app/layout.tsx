@@ -37,9 +37,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${roboto.className} antialiased`}>
       <body className="flex min-h-screen flex-col bg-background">
-        <div className="flex-1">{children}</div>
+        <div className="flex flex-1 flex-col">{children}</div>
         <Footer />
-        <GoogleAnalytics gaId="G-XYZ" />
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
       </body>
     </html>
   );

@@ -1,5 +1,3 @@
-const currentYear = new Date().getFullYear();
-
 export interface AgeIndicator {
   color: string;
   bgColor: string;
@@ -16,7 +14,7 @@ export function getAgeIndicator(year: number | null): AgeIndicator {
       tooltip: "Year unknown",
     };
 
-  const age = currentYear - year;
+  const age = new Date().getFullYear() - year;
 
   if (age < 5) {
     return {

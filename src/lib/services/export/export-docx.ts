@@ -287,7 +287,7 @@ function buildEntityContent(
 
       bodyMap.get(body)!.push({
         symbol: rec.full_document_symbol,
-        title: rec.description || rec.uniform_title || "",
+        title: cleanTitle(rec.description || rec.uniform_title || ""),
         link: rec.link,
         body,
       });

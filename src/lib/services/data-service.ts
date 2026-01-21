@@ -205,11 +205,6 @@ export async function fetchPPBRecords(): Promise<PPBRecord[]> {
   return Array.from(recordsMap.values());
 }
 
-export interface EntityOption {
-  entity: string;
-  entity_long: string | null;
-}
-
 /**
  * Fetch entities that are referenced in PPB 2026 citations
  * Only returns entities actually used in the current budget cycle
