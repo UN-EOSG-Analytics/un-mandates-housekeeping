@@ -34,7 +34,7 @@ export default async function Home() {
   return (
     <>
       <Header user={user} entities={entities} />
-      <main className="mx-auto max-w-7xl px-3 py-8 sm:px-4">
+      <main className="mx-auto w-full max-w-7xl px-3 py-8 sm:px-4">
         <EntityOverview parts={parts} userEntity={user?.entity} />
       </main>
     </>

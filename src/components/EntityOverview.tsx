@@ -128,7 +128,7 @@ export function EntityOverview({ parts, userEntity }: Props) {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="min-w-full space-y-6">
       {/* My Entity card - shown for non-reviewer users */}
       {myEntityData && !searchQuery && (
         <div className="mb-8">
@@ -143,7 +143,7 @@ export function EntityOverview({ parts, userEntity }: Props) {
       )}
 
       {/* Search box and controls */}
-      <div className="flex items-start justify-between gap-4">
+      <div className="flex w-full items-start justify-between gap-4">
         <div className="flex items-start gap-3">
           <div className="w-80">
             <div className="relative">
