@@ -41,7 +41,7 @@ import {
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Tooltip } from "./Tooltip";
 import { DecisionDropdown } from "./DecisionDropdown";
-import { getReasonDisplayLabel, renderReasonIcon } from "./ReasonsModal";
+import { getReasonDisplayLabel, renderReasonIcon, renderLabelWithBold } from "./ReasonsModal";
 import type { DecisionType } from "@/lib/services/decision-reasons";
 
 interface Props {
@@ -1653,7 +1653,7 @@ export function DocumentSymbol({
                                               ? "text-amber-700"
                                               : "text-gray-600"
                                       }`}>
-                                        {reasonLabel}
+                                        {renderLabelWithBold(reasonLabel)}
                                       </span>
                                     </div>
                                   )}

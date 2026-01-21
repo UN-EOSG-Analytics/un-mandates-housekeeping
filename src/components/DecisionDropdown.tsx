@@ -3,7 +3,12 @@
 import * as React from "react";
 import type { Decision } from "@/types";
 import { ChevronDown, MessageCircle, Pencil } from "lucide-react";
-import { ReasonPopup, getReasonDisplayLabel, renderReasonIcon } from "./ReasonsModal";
+import { ReasonPopup, getReasonDisplayLabel, renderReasonIcon, renderLabelWithBold } from "./ReasonsModal";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import type { DecisionType } from "@/lib/services/decision-reasons";
 
 interface DecisionDropdownProps {
@@ -88,6 +93,10 @@ export function DecisionDropdown({
   const [isOpen, setIsOpen] = React.useState(false);
   const [internalShowReasonPopup, setInternalShowReasonPopup] =
     React.useState(false);
+  const [decisionTooltipOpen, setDecisionTooltipOpen] = React.useState(false);
+  const [reasonTooltipOpen, setReasonTooltipOpen] = React.useState(false);
+  const decisionTooltipTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
+  const reasonTooltipTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
   const containerRef = React.useRef<HTMLDivElement>(null);
 
   // Show popup if either internal or external says to show it
@@ -185,7 +194,50 @@ export function DecisionDropdown({
   return (
     <div ref={containerRef} className="relative flex items-center gap-0.5">
       {/* Main decision dropdown button */}
-      <div className="group relative">
+      {decision && decision !== "cancel" && userEmail && createdAt ? (
+        <Popover open={decisionTooltipOpen} onOpenChange={setDecisionTooltipOpen}>
+          <PopoverTrigger asChild>
+            <button
+              onClick={() => !disabled && setIsOpen(!isOpen)}
+              onMouseEnter={() => {
+                if (decisionTooltipTimeoutRef.current) clearTimeout(decisionTooltipTimeoutRef.current);
+                setDecisionTooltipOpen(true);
+              }}
+              onMouseLeave={() => {
+                decisionTooltipTimeoutRef.current = setTimeout(() => setDecisionTooltipOpen(false), 150);
+              }}
+              disabled={disabled}
+              className={`flex w-[5.25rem] items-center justify-between gap-1 rounded border px-2 font-medium transition-colors ${sizeClasses} ${colors.bg} ${colors.border} ${colors.text} ${
+                disabled
+                  ? "cursor-default opacity-60"
+                  : `cursor-pointer ${colors.hover}`
+              } ${className || ""}`}
+            >
+              <span>{displayLabel}</span>
+              {!disabled && <ChevronDown className="h-3 w-3 shrink-0 opacity-60" />}
+            </button>
+          </PopoverTrigger>
+          <PopoverContent
+            className="w-auto overflow-hidden p-0"
+            side="top"
+            sideOffset={8}
+            onMouseEnter={() => {
+              if (decisionTooltipTimeoutRef.current) clearTimeout(decisionTooltipTimeoutRef.current);
+              setDecisionTooltipOpen(true);
+            }}
+            onMouseLeave={() => {
+              decisionTooltipTimeoutRef.current = setTimeout(() => setDecisionTooltipOpen(false), 150);
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="px-3 py-2">
+              <p className="text-sm text-gray-700">
+                <span className={`font-medium ${colors.text}`}>{displayLabel}</span> by {userEmail} · {new Date(createdAt).toLocaleDateString()}
+              </p>
+            </div>
+          </PopoverContent>
+        </Popover>
+      ) : (
         <button
           onClick={() => !disabled && setIsOpen(!isOpen)}
           disabled={disabled}
@@ -198,55 +250,79 @@ export function DecisionDropdown({
           <span>{displayLabel}</span>
           {!disabled && <ChevronDown className="h-3 w-3 shrink-0 opacity-60" />}
         </button>
-        {/* Tooltip on hover */}
-        {decision && decision !== "cancel" && (
-          <div className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 opacity-0 transition-opacity duration-150 group-hover:opacity-100">
-            <div className="rounded-lg bg-gray-800 px-3 py-2 text-white shadow-lg">
-              <div className="w-72 space-y-2 text-left">
-                {reasonLabel ? (
-                  <div className="flex items-start gap-2">
-                    {reason && renderReasonIcon(reason, "mt-0.5 h-3.5 w-3.5 shrink-0 opacity-70")}
-                    <span className="text-[11px] leading-relaxed">{reasonLabel}</span>
-                  </div>
-                ) : (
-                  <div className="text-[11px] italic text-gray-300">No reason provided</div>
-                )}
-                {userEmail && createdAt && (
-                  <div className="border-t border-white/10 pt-1.5 text-[10px] text-gray-300">
-                    by {userEmail.split("@")[0]} · {new Date(createdAt).toLocaleDateString()}
-                  </div>
-                )}
-              </div>
-              <div className="absolute left-1/2 top-full -translate-x-1/2 border-4 border-transparent border-t-gray-800" />
-            </div>
-          </div>
-        )}
-      </div>
+      )}
 
-      {/* Reason indicator/edit button */}
+      {/* Reason indicator/edit button with hover tooltip */}
       {decision && decision !== "cancel" && decision !== "add" && onReasonChange && (
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            setShowReasonPopup(true);
-          }}
-          className={`group/reason relative flex h-6 items-center justify-center rounded border transition-all ${
-            hasReason
-              ? `w-6 ${colors.bg} ${colors.border} ${colors.text} ${colors.hover}`
-              : "w-6 border-dashed border-gray-300 bg-white text-gray-400 hover:border-gray-400 hover:bg-gray-50"
-          }`}
-          title={hasReason ? "Edit reason" : "Add reason"}
-        >
-          {hasReason ? (
-            reason ? (
-              renderReasonIcon(reason, "h-3.5 w-3.5")
-            ) : (
-              <MessageCircle className="h-3.5 w-3.5" />
-            )
-          ) : (
-            <Pencil className="h-3 w-3" />
-          )}
-        </button>
+        <Popover open={reasonTooltipOpen} onOpenChange={setReasonTooltipOpen}>
+          <PopoverTrigger asChild>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setShowReasonPopup(true);
+              }}
+              onMouseEnter={() => {
+                if (reasonTooltipTimeoutRef.current) clearTimeout(reasonTooltipTimeoutRef.current);
+                setReasonTooltipOpen(true);
+              }}
+              onMouseLeave={() => {
+                reasonTooltipTimeoutRef.current = setTimeout(() => setReasonTooltipOpen(false), 150);
+              }}
+              className={`group/reason flex h-6 items-center justify-center rounded border transition-all ${
+                hasReason
+                  ? `w-6 ${colors.bg} ${colors.border} ${colors.text} ${colors.hover}`
+                  : "w-6 border-dashed border-gray-300 bg-white text-gray-400 hover:border-gray-400 hover:bg-gray-50"
+              }`}
+            >
+              {hasReason ? (
+                reason ? (
+                  renderReasonIcon(reason, "h-3.5 w-3.5")
+                ) : (
+                  <MessageCircle className="h-3.5 w-3.5" />
+                )
+              ) : (
+                <Pencil className="h-3 w-3" />
+              )}
+            </button>
+          </PopoverTrigger>
+          <PopoverContent
+            className="w-80 overflow-hidden p-0"
+            side="top"
+            sideOffset={8}
+            onMouseEnter={() => {
+              if (reasonTooltipTimeoutRef.current) clearTimeout(reasonTooltipTimeoutRef.current);
+              setReasonTooltipOpen(true);
+            }}
+            onMouseLeave={() => {
+              reasonTooltipTimeoutRef.current = setTimeout(() => setReasonTooltipOpen(false), 150);
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="border-b border-gray-200 bg-gray-50 px-3 py-2">
+              <h4 className="text-xs font-medium tracking-wide text-gray-500 uppercase">
+                Reason
+              </h4>
+            </div>
+            <div className="px-3 py-2.5">
+              <div className="flex gap-2.5">
+                {reason && (
+                  <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${colors.bg} ${colors.text}`}>
+                    {renderReasonIcon(reason, "h-3.5 w-3.5")}
+                  </span>
+                )}
+                <div className="min-w-0 flex-1">
+                  {reasonLabel ? (
+                    <p className="text-sm leading-relaxed text-gray-700">
+                      {renderLabelWithBold(reasonLabel)}
+                    </p>
+                  ) : (
+                    <p className="text-sm italic text-gray-400">No reason provided</p>
+                  )}
+                </div>
+              </div>
+            </div>
+          </PopoverContent>
+        </Popover>
       )}
 
       {isOpen && !disabled && (

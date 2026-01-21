@@ -42,7 +42,7 @@ interface ReasonPopupProps {
 /**
  * Parse a label with **bold** markers and render as React nodes
  */
-function renderLabelWithBold(label: string): React.ReactNode {
+export function renderLabelWithBold(label: string): React.ReactNode {
   const parts = label.split(/(\*\*[^*]+\*\*)/);
   return parts.map((part, i) => {
     if (part.startsWith("**") && part.endsWith("**")) {
