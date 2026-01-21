@@ -12,7 +12,7 @@ interface Props {
 }
 
 export const SITE_TITLE = "Mandate Housekeeping Platform";
-export const SITE_SUBTITLE = "PPB 2027 Mandate Review";
+export const SITE_SUBTITLE = "PPB 2027 Mandate Submissions";
 
 export function Header({ user, children, entities = [], maxWidth = "7xl", hideAbout = false }: Props) {
   const isLoggedIn = !!user;

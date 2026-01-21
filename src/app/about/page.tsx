@@ -122,7 +122,7 @@ export default async function AboutPage() {
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-4 py-16 text-center">
         <h2 className="mb-4 text-4xl font-bold tracking-tight text-gray-900">
-          Streamline Your Mandate Review
+          Streamline Your Mandate Submission
         </h2>
         <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600">
           The Mandate Housekeeping Platform helps programme officers review, update, and manage
@@ -190,7 +190,7 @@ export default async function AboutPage() {
           <FeatureCard
             icon={Check}
             title="Mark Your Housekeeping Decisions"
-            description="For each mandate, decide whether to Retain, Remove, or Update. Add a reason for your decision to help reviewers understand your rationale."
+            description="For each mandate, decide whether to Retain, Remove, or Update. Add a reason for your decision to help PPBD reviewers understand your rationale."
           >
             <div className="flex flex-wrap items-center gap-3">
               <div className="flex items-center gap-2">
@@ -440,7 +440,7 @@ export default async function AboutPage() {
           <FeatureCard
             icon={Mail}
             title="Magic Link Sign-In"
-            description="Sign in with your UN email—we'll send you a secure link. Focal points can also invite colleagues to collaborate on the review."
+            description="Sign in with your UN email—we'll send you a secure link. Focal points can also invite colleagues to collaborate on the submission."
           >
             <div className="flex items-center gap-2">
               <div className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-xs text-gray-400">
