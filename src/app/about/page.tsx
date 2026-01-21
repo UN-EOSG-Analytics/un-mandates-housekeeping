@@ -33,8 +33,8 @@ function FeatureCard({
   children?: React.ReactNode;
 }) {
   return (
-    <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
-      <div className="p-6">
+    <div className="flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-gray-50/50 shadow-sm">
+      <div className="bg-white p-6">
         <div className="mb-3 flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-un-blue/10">
             <Icon className="h-5 w-5 text-un-blue" />
@@ -44,8 +44,8 @@ function FeatureCard({
         <p className="text-sm leading-relaxed text-gray-600">{description}</p>
       </div>
       {children && (
-        <div className="border-t border-gray-100 bg-gray-50/50 p-4">
-          {children}
+        <div className="flex flex-1 items-center border-t border-gray-100 p-4">
+          <div className="w-full">{children}</div>
         </div>
       )}
     </div>
@@ -109,16 +109,6 @@ function MockWarning({ icon, text }: { icon: string; text: string }) {
   );
 }
 
-// Mini mockup: Age badge
-function MockAgeBadge({ label, color }: { label: string; color: string }) {
-  const colors: Record<string, string> = {
-    green: "bg-green-100 text-green-700",
-    amber: "bg-amber-100 text-amber-700",
-    red: "bg-red-100 text-red-700",
-  };
-  return <span className={`rounded px-1.5 py-0.5 text-[10px] font-medium ${colors[color]}`}>{label}</span>;
-}
-
 export default async function AboutPage() {
   const user = await getCurrentUser();
   const isLoggedIn = !!user;
@@ -163,11 +153,11 @@ export default async function AboutPage() {
         </h3>
 
         <div className="grid gap-6 md:grid-cols-2">
-          {/* Entity Overview */}
+          {/* 1. Find Your Entity */}
           <FeatureCard
             icon={Building2}
             title="Find Your Entity Quickly"
-            description="Browse all entities organized by budget part. Search by name, view by section, or jump directly to your assigned entity with the My Entity shortcut."
+            description="Browse all entities organized by budget part. Search by name or jump directly to your assigned entity with the My Entity shortcut."
           >
             <div className="space-y-2">
               <div className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 py-2">
@@ -183,11 +173,11 @@ export default async function AboutPage() {
             </div>
           </FeatureCard>
 
-          {/* Mandate List */}
+          {/* 2. All Mandates at a Glance */}
           <FeatureCard
             icon={FileText}
             title="All Mandates at a Glance"
-            description="See every mandate citation for your entity, organized by subprogramme. Sort by symbol, title, body, year, or how many other entities cite the same document."
+            description="See every mandate for your entity in the familiar PPB structure. Sort by symbol, title, body, year, or how many other entities share the citation."
           >
             <div className="space-y-2">
               <div className="text-[10px] font-semibold tracking-wider text-gray-400 uppercase">Subprogramme 1</div>
@@ -196,25 +186,7 @@ export default async function AboutPage() {
             </div>
           </FeatureCard>
 
-          {/* Document Lookup */}
-          <FeatureCard
-            icon={Search}
-            title="Search the UN Library Database"
-            description="Add or update mandate citations using our built-in database. Search by symbol or title to get validated metadata including title, year, issuing body, and PDF link."
-          >
-            <div className="space-y-2">
-              <div className="flex items-center gap-2 rounded-lg border-2 border-dashed border-gray-200 bg-white px-3 py-2">
-                <Plus className="h-3.5 w-3.5 text-gray-400" />
-                <span className="text-xs text-gray-400">Add mandate — search by symbol or title...</span>
-              </div>
-              <div className="overflow-hidden rounded-lg border border-gray-200 bg-white">
-                <MockSearchResult symbol="A/RES/79/18" title="Weapons of mass destruction in outer space" />
-                <MockSearchResult symbol="A/RES/79/19" title="Preventing an arms race in outer space" />
-              </div>
-            </div>
-          </FeatureCard>
-
-          {/* Decision Making */}
+          {/* 3. Mark Your Housekeeping Decisions */}
           <FeatureCard
             icon={Check}
             title="Mark Your Housekeeping Decisions"
@@ -238,135 +210,29 @@ export default async function AboutPage() {
             </div>
           </FeatureCard>
 
-          {/* Version Alerts */}
+          {/* 4. Search the Official Document System */}
           <FeatureCard
-            icon={Sparkles}
-            title="Never Miss an Updated Resolution"
-            description="The platform automatically detects when newer versions of your cited documents exist. Smart alerts prompt you to update to the latest version."
+            icon={Search}
+            title="Search the Official Document System"
+            description="Add or update mandate citations using validated data from ODS. Search by symbol or title to get metadata including title, year, issuing body, and PDF link."
           >
             <div className="space-y-2">
-              <MockWarning icon="↑" text="Newer version available: A/RES/79/19" />
-              <div className="flex items-center gap-2 text-xs">
-                <span className="text-gray-500">Current:</span>
-                <span className="rounded bg-gray-100 px-1.5 py-0.5 font-medium text-gray-600">A/RES/78/20 (2023)</span>
-                <ArrowRight className="h-3 w-3 text-gray-400" />
-                <span className="rounded bg-un-blue/10 px-1.5 py-0.5 font-medium text-un-blue">A/RES/79/19 (2024)</span>
+              <div className="flex items-center gap-2 rounded-lg border-2 border-dashed border-gray-200 px-3 py-2">
+                <Plus className="h-3.5 w-3.5 text-gray-400" />
+                <span className="text-xs text-gray-400">Add mandate — search by symbol or title...</span>
+              </div>
+              <div className="overflow-hidden rounded-lg border border-gray-200">
+                <MockSearchResult symbol="A/RES/79/18" title="Weapons of mass destruction in outer space" />
+                <MockSearchResult symbol="A/RES/79/19" title="Preventing an arms race in outer space" />
               </div>
             </div>
           </FeatureCard>
 
-          {/* Diff Comparison */}
-          <FeatureCard
-            icon={ArrowLeftRight}
-            title="Compare Document Versions"
-            description="Not sure what changed? Use the built-in diff viewer to see exactly what text was added, removed, or modified between any two document versions."
-          >
-            <div className="grid grid-cols-2 gap-2 text-[10px]">
-              <div className="space-y-1.5">
-                <div className="text-center font-medium text-gray-500">A/RES/78/20</div>
-                <div className="rounded bg-gray-100 p-2 text-gray-600">
-                  <span className="bg-red-200 text-red-800">Calls upon</span> all States to refrain from...
-                </div>
-              </div>
-              <div className="space-y-1.5">
-                <div className="text-center font-medium text-gray-500">A/RES/79/19</div>
-                <div className="rounded bg-gray-100 p-2 text-gray-600">
-                  <span className="bg-green-200 text-green-800">Urges</span> all States to refrain from...
-                </div>
-                <div className="rounded bg-green-100 p-2 text-green-800">
-                  Reaffirms the importance of transparency
-                </div>
-              </div>
-            </div>
-          </FeatureCard>
-
-          {/* Cross-Entity */}
-          <FeatureCard
-            icon={Users}
-            title="Discover Shared Citations"
-            description="See which mandates are cited by multiple entities. Filter to show only documents shared with a specific entity—useful for coordination and consistency."
-          >
-            <div className="flex flex-wrap gap-1.5">
-              {["DPPA 12", "DPO 8", "OHCHR 5", "OIOS 4"].map((e) => (
-                <span key={e} className="rounded-full bg-gray-100 px-2 py-0.5 text-[10px] text-gray-600">
-                  {e}
-                </span>
-              ))}
-            </div>
-            <div className="mt-2 text-[10px] text-un-blue">
-              Showing 12 mandates shared with DPPA
-            </div>
-          </FeatureCard>
-
-          {/* Document Sidebar */}
-          <FeatureCard
-            icon={Layers}
-            title="Deep Dive Into Any Document"
-            description="Click any document to open a detailed sidebar with full metadata, version history, paragraph text, and all activity from across entities."
-          >
-            <div className="flex gap-1">
-              {["Info", "Decisions", "Activity", "Paragraphs"].map((tab, i) => (
-                <span
-                  key={tab}
-                  className={`rounded-t px-2 py-1 text-[10px] font-medium ${i === 0 ? "bg-gray-100 text-gray-700" : "text-gray-400"}`}
-                >
-                  {tab}
-                </span>
-              ))}
-            </div>
-            <div className="mt-2 rounded bg-white p-2 text-xs shadow-sm">
-              <div className="flex items-center justify-between text-gray-500">
-                <span>Year</span>
-                <span className="font-medium text-gray-700">2024</span>
-              </div>
-              <div className="mt-1 flex items-center justify-between text-gray-500">
-                <span>Issuing body</span>
-                <span className="font-medium text-gray-700">General Assembly</span>
-              </div>
-            </div>
-          </FeatureCard>
-
-          {/* Paragraph Analysis */}
-          <FeatureCard
-            icon={Sparkles}
-            title="Entity Mention Highlighting"
-            description="View the full document text with your entity name automatically highlighted. Collapse irrelevant paragraphs to focus on what matters."
-          >
-            <div className="space-y-2 text-xs">
-              <div className="rounded bg-gray-100 p-2 text-gray-600">
-                <span className="mr-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-un-blue text-[8px] text-white">1</span>
-                Requests the Secretary-General to ensure that <strong className="text-gray-900">OIOS</strong> has adequate resources...
-              </div>
-              <button className="flex items-center gap-1 text-[10px] text-gray-400">
-                <ChevronDown className="h-3 w-3 -rotate-90" />
-                Show 5 paragraphs not mentioning OIOS
-              </button>
-            </div>
-          </FeatureCard>
-
-          {/* Comments */}
-          <FeatureCard
-            icon={MessageSquare}
-            title="Discuss and Coordinate"
-            description="Add comments on any mandate to flag issues, ask questions, or coordinate with colleagues. Reviewer comments can be marked as resolved."
-          >
-            <div className="space-y-2">
-              <div className="flex items-start gap-2 rounded bg-white p-2 shadow-sm">
-                <MessageSquare className="mt-0.5 h-3 w-3 text-amber-500" />
-                <div>
-                  <p className="text-xs text-gray-700">Please verify this is the correct resolution number.</p>
-                  <p className="mt-1 text-[10px] text-gray-400">reviewer@un.org · Jan 15</p>
-                </div>
-              </div>
-              <button className="text-[10px] text-un-blue">Mark as resolved</button>
-            </div>
-          </FeatureCard>
-
-          {/* Approval Workflow */}
+          {/* 5. Built-In Review Process */}
           <FeatureCard
             icon={Check}
             title="Built-In Review Process"
-            description="DMSPC reviewers can approve entity decisions with a single click. Approval status is visible to all, ensuring transparency."
+            description="PPBD reviewers can approve entity decisions with a single click. Approval status is visible to all, ensuring transparency in the review cycle."
           >
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-2">
@@ -379,7 +245,108 @@ export default async function AboutPage() {
             </div>
           </FeatureCard>
 
-          {/* Smart Warnings */}
+          {/* 6. Discuss and Coordinate */}
+          <FeatureCard
+            icon={MessageSquare}
+            title="Discuss and Coordinate"
+            description="Add comments on any mandate to flag issues or coordinate. Comments work across entities sharing a mandate, enabling cross-entity coordination."
+          >
+            <div className="space-y-2">
+              <div className="flex items-start gap-2 rounded p-2 shadow-sm">
+                <MessageSquare className="mt-0.5 h-3 w-3 text-amber-500" />
+                <div>
+                  <p className="text-xs text-gray-700">Should we align our decision with DPPA on this shared mandate?</p>
+                  <p className="mt-1 text-[10px] text-gray-400">focal.point@un.org · Jan 15</p>
+                </div>
+              </div>
+            </div>
+          </FeatureCard>
+
+          {/* 7. Deep Dive Into Any Document */}
+          <FeatureCard
+            icon={Layers}
+            title="Deep Dive Into Any Document"
+            description="Click any document to open a detailed sidebar with full metadata, version history, paragraph text, and all activity from across entities."
+          >
+            <div className="space-y-2">
+              <div className="flex gap-1">
+                {["Info", "Decisions", "Activity", "Paragraphs"].map((tab, i) => (
+                  <span
+                    key={tab}
+                    className={`rounded-t px-2 py-1 text-[10px] font-medium ${i === 0 ? "bg-white text-gray-700" : "text-gray-400"}`}
+                  >
+                    {tab}
+                  </span>
+                ))}
+              </div>
+              <div className="rounded p-2 text-xs shadow-sm">
+                <div className="flex items-center justify-between text-gray-500">
+                  <span>Year</span>
+                  <span className="font-medium text-gray-700">2024</span>
+                </div>
+                <div className="mt-1 flex items-center justify-between text-gray-500">
+                  <span>Issuing body</span>
+                  <span className="font-medium text-gray-700">General Assembly</span>
+                </div>
+              </div>
+            </div>
+          </FeatureCard>
+
+          {/* 8. Entity Mention Highlighting */}
+          <FeatureCard
+            icon={Sparkles}
+            title="Entity Mention Highlighting"
+            description="View the full document text with your entity name automatically highlighted. Collapse irrelevant paragraphs to focus on what matters."
+          >
+            <div className="space-y-2 text-xs">
+              <div className="flex gap-1">
+                {["Info", "Decisions", "Activity", "Paragraphs"].map((tab, i) => (
+                  <span
+                    key={tab}
+                    className={`rounded-t px-2 py-1 text-[10px] font-medium ${i === 3 ? "bg-white text-gray-700" : "text-gray-400"}`}
+                  >
+                    {tab}
+                  </span>
+                ))}
+              </div>
+              <div className="rounded p-2 text-gray-600">
+                <span className="mr-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-un-blue text-[8px] text-white">1</span>
+                Requests the Secretary-General to ensure that <strong className="text-gray-900">OIOS</strong> has adequate resources...
+              </div>
+              <button className="flex items-center gap-1 text-[10px] text-gray-400">
+                <ChevronDown className="h-3 w-3 -rotate-90" />
+                Show 5 paragraphs not mentioning OIOS
+              </button>
+            </div>
+          </FeatureCard>
+
+          {/* 9. At-a-Glance Citation Age */}
+          <FeatureCard
+            icon={FileText}
+            title="At-a-Glance Citation Age"
+            description="Color-coded indicators show how old each mandate is at a glance, helping you prioritize which citations may need review or updating."
+          >
+            <div className="flex flex-wrap items-center gap-3">
+              <div className="flex items-center gap-1.5">
+                <span className="text-xs text-gray-600">2024</span>
+                <span className="rounded bg-green-100 px-1.5 py-0.5 text-[10px] font-medium text-green-600">&lt;5</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <span className="text-xs text-gray-600">2018</span>
+                <span className="rounded bg-yellow-100 px-1.5 py-0.5 text-[10px] font-medium text-yellow-600">&gt;5</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <span className="text-xs text-gray-600">2010</span>
+                <span className="rounded bg-orange-100 px-1.5 py-0.5 text-[10px] font-medium text-orange-600">&gt;10</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <span className="text-xs text-gray-600">1998</span>
+                <span className="rounded bg-red-100 px-1.5 py-0.5 text-[10px] font-medium text-red-600">&gt;20</span>
+              </div>
+            </div>
+          </FeatureCard>
+
+          {/* 10. Proactive Issue Detection */}
           <FeatureCard
             icon={Sparkles}
             title="Proactive Issue Detection"
@@ -397,53 +364,71 @@ export default async function AboutPage() {
             </div>
           </FeatureCard>
 
-          {/* Export */}
+          {/* 11. Never Miss an Updated Resolution */}
           <FeatureCard
-            icon={Download}
-            title="Export Your Data"
-            description="Export your entity's mandates and decisions to CSV, Excel, or Word format. Perfect for reports, offline review, or sharing."
+            icon={Sparkles}
+            title="Never Miss an Updated Resolution"
+            description="The platform automatically detects when newer versions of cited documents exist. Smart alerts prompt you to update to the latest version."
           >
-            <div className="flex items-center gap-2">
-              <button className="flex items-center gap-1.5 rounded border border-gray-200 bg-white px-2 py-1 text-xs text-gray-600">
-                <Download className="h-3 w-3" />
-                Export
-                <ChevronDown className="h-2.5 w-2.5" />
-              </button>
-              <div className="flex gap-1 text-[10px] text-gray-400">
-                <span className="rounded bg-gray-100 px-1.5 py-0.5">CSV</span>
-                <span className="rounded bg-gray-100 px-1.5 py-0.5">Excel</span>
-                <span className="rounded bg-gray-100 px-1.5 py-0.5">Word</span>
+            <div className="space-y-2">
+              <MockWarning icon="↑" text="Newer version available: A/RES/79/19" />
+              <div className="flex items-center gap-2 text-xs">
+                <span className="text-gray-500">Current:</span>
+                <span className="rounded bg-gray-200 px-1.5 py-0.5 font-medium text-gray-600">A/RES/78/20 (2023)</span>
+                <ArrowRight className="h-3 w-3 text-gray-400" />
+                <span className="rounded bg-un-blue/10 px-1.5 py-0.5 font-medium text-un-blue">A/RES/79/19 (2024)</span>
               </div>
             </div>
           </FeatureCard>
 
-          {/* Age Indicators */}
+          {/* 12. Compare Document Versions */}
           <FeatureCard
-            icon={FileText}
-            title="At-a-Glance Citation Age"
-            description="Color-coded badges show how old each mandate is: Fresh (≤5 years), Mature (6-10 years), or Aged (11+ years). Helps prioritize review."
+            icon={ArrowLeftRight}
+            title="Compare Document Versions"
+            description="Not sure what changed? Use the built-in diff viewer to see what text was added, removed, or modified between document versions."
           >
-            <div className="flex items-center gap-3">
-              <div className="flex items-center gap-1">
-                <span className="text-xs text-gray-500">2024</span>
-                <MockAgeBadge label="Fresh" color="green" />
+            <div className="grid grid-cols-2 gap-2 text-[10px]">
+              <div className="space-y-1.5">
+                <div className="text-center font-medium text-gray-500">A/RES/78/20</div>
+                <div className="rounded p-2 text-gray-600">
+                  <span className="bg-red-200 text-red-800">Calls upon</span> all States to refrain from...
+                </div>
               </div>
-              <div className="flex items-center gap-1">
-                <span className="text-xs text-gray-500">2018</span>
-                <MockAgeBadge label="Mature" color="amber" />
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="text-xs text-gray-500">2010</span>
-                <MockAgeBadge label="Aged" color="red" />
+              <div className="space-y-1.5">
+                <div className="text-center font-medium text-gray-500">A/RES/79/19</div>
+                <div className="rounded p-2 text-gray-600">
+                  <span className="bg-green-200 text-green-800">Urges</span> all States to refrain from...
+                </div>
+                <div className="rounded bg-green-100 p-2 text-green-800">
+                  Reaffirms the importance of transparency
+                </div>
               </div>
             </div>
           </FeatureCard>
 
-          {/* Foundational */}
+          {/* 13. Discover Shared Citations */}
+          <FeatureCard
+            icon={Users}
+            title="Discover Shared Citations"
+            description="See which mandates are cited by multiple entities. Useful for discussing which entity has a comparative advantage for a given mandate."
+          >
+            <div className="flex flex-wrap gap-1.5">
+              {["DPPA 12", "DPO 8", "OHCHR 5", "OIOS 4"].map((e) => (
+                <span key={e} className="rounded-full bg-gray-200 px-2 py-0.5 text-[10px] text-gray-600">
+                  {e}
+                </span>
+              ))}
+            </div>
+            <div className="mt-2 text-[10px] text-un-blue">
+              Showing 12 mandates shared with DPPA
+            </div>
+          </FeatureCard>
+
+          {/* 14. Foundational Mandates */}
           <FeatureCard
             icon={Star}
             title="Foundational Mandates"
-            description="Mandates that appear in both your subprogramme and the 'Mandates and Background' section are marked with a star. These deserve special attention."
+            description="Mandates that appear in both your subprogramme and Mandates and Background are marked with a star for easy identification."
           >
             <div className="flex items-center gap-2">
               <Star className="h-4 w-4 fill-un-blue text-un-blue" strokeWidth={0.5} />
@@ -451,19 +436,39 @@ export default async function AboutPage() {
             </div>
           </FeatureCard>
 
-          {/* Authentication */}
+          {/* 15. Magic Link Sign-In */}
           <FeatureCard
             icon={Mail}
             title="Magic Link Sign-In"
-            description="Sign in with your UN email address. We'll send you a secure link—click it and you're in. No passwords to remember."
+            description="Sign in with your UN email—we'll send you a secure link. Focal points can also invite colleagues to collaborate on the review."
           >
             <div className="flex items-center gap-2">
-              <div className="flex-1 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs text-gray-400">
+              <div className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-xs text-gray-400">
                 your.name@un.org
               </div>
               <button className="rounded-lg bg-un-blue px-3 py-2 text-xs font-medium text-white">
                 Send link
               </button>
+            </div>
+          </FeatureCard>
+
+          {/* 16. Export Your Data */}
+          <FeatureCard
+            icon={Download}
+            title="Export Your Data"
+            description="Export mandates and decisions to CSV, Excel, or Word. The Word format matches PPB publications for seamless workflow integration."
+          >
+            <div className="flex items-center gap-2">
+              <button className="flex items-center gap-1.5 rounded border border-gray-200 px-2 py-1 text-xs text-gray-600">
+                <Download className="h-3 w-3" />
+                Export
+                <ChevronDown className="h-2.5 w-2.5" />
+              </button>
+              <div className="flex gap-1 text-[10px] text-gray-400">
+                <span className="rounded bg-gray-200 px-1.5 py-0.5">CSV</span>
+                <span className="rounded bg-gray-200 px-1.5 py-0.5">Excel</span>
+                <span className="rounded bg-gray-200 px-1.5 py-0.5">Word</span>
+              </div>
             </div>
           </FeatureCard>
         </div>
