@@ -34,7 +34,12 @@ export function Header({ user, children, entities = [], maxWidth = "7xl", hideAb
             draggable={false}
           />
           <div>
-            <h1 className="text-xl font-bold text-gray-900">{SITE_TITLE}</h1>
+            <div className="flex items-start gap-1.5">
+              <h1 className="text-xl font-bold text-gray-900">{SITE_TITLE}</h1>
+              <span className="mt-0.5 rounded bg-gray-200 px-1 py-0.5 text-[10px] font-medium text-gray-500">
+                Beta
+              </span>
+            </div>
             <p className="text-xs text-gray-500">{SITE_SUBTITLE}</p>
           </div>
         </Link>
