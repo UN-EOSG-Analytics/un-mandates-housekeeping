@@ -48,6 +48,12 @@ const severityStyles = {
   },
 };
 
+const colorSchemeStyles = {
+  red: "bg-red-100 text-red-600",
+  amber: "bg-amber-100 text-amber-600",
+  blue: "bg-un-blue/10 text-un-blue",
+};
+
 export function WarningTooltip({
   warnings,
   children,
@@ -108,6 +114,9 @@ export function WarningTooltip({
         <div className="max-h-64 divide-y divide-gray-100 overflow-y-auto">
           {warnings.map((warning, index) => {
             const styles = severityStyles[warning.severity];
+            const iconStyle = warning.colorScheme
+              ? colorSchemeStyles[warning.colorScheme]
+              : styles.icon;
             return (
               <div
                 key={warning.id || index}
@@ -115,7 +124,7 @@ export function WarningTooltip({
               >
                 <div className="flex gap-2.5">
                   <span
-                    className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${styles.icon}`}
+                    className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${iconStyle}`}
                   >
                     <WarningIcon icon={warning.icon || getWarningIcon(warning.severity)} />
                   </span>
@@ -134,29 +143,31 @@ export function WarningTooltip({
                           >
                             {warning.linkedSymbol}
                           </a>
-                          {onDiff &&
-                            currentSymbol &&
-                            currentYear &&
-                            warning.linkedYear && (
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  onDiff(
-                                    currentSymbol,
-                                    currentYear,
-                                    warning.linkedSymbol!,
-                                    warning.linkedYear!,
-                                  );
-                                  setOpen(false);
-                                }}
-                                className="ml-2 inline-flex items-center gap-1 rounded bg-blue-50 px-2 py-0.5 text-xs font-medium text-un-blue transition-colors hover:bg-blue-100"
-                              >
-                                <ArrowLeftRight className="h-3 w-3" />
-                                Compare
-                              </button>
-                            )}
                         </>
                       )}
+                      {warning.messageSuffix && <> {warning.messageSuffix}</>}
+                      {onDiff &&
+                        currentSymbol &&
+                        currentYear &&
+                        warning.linkedSymbol &&
+                        warning.linkedYear && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onDiff(
+                                currentSymbol,
+                                currentYear,
+                                warning.linkedSymbol!,
+                                warning.linkedYear!,
+                              );
+                              setOpen(false);
+                            }}
+                            className="ml-2 inline-flex items-center gap-1 rounded bg-blue-50 px-2 py-0.5 text-xs font-medium text-un-blue transition-colors hover:bg-blue-100"
+                          >
+                            <ArrowLeftRight className="h-3 w-3" />
+                            Compare
+                          </button>
+                        )}
                     </p>
                     {warning.action && onAction && !disabled && (
                       <button

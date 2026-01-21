@@ -53,7 +53,7 @@ const WARNING_DEFINITIONS: WarningDefinition[] = [
   {
     id: "no-metadata",
     message:
-      "Document symbol not found in UN Library metadata – data may be incomplete or symbol may be incorrect. Consider updating with the correct symbol",
+      "Document symbol not found in UN Library metadata – data may be incomplete or symbol may be incorrect. Consider updating with the correct symbol.",
     severity: "warning",
     condition: (mandate) => mandate.metadataFromDb === false,
     getSuggestedUpdate: (mandate) => mandate.symbol,
@@ -111,7 +111,7 @@ export function getMandateWarnings(
       {
         id: "newer-already-cited",
         message: "Newer version",
-        messageSuffix: "already cited — consider removing this older version.",
+        messageSuffix: "already cited.",
         severity: "warning",
         linkedSymbol: mandate.newerVersion?.symbol,
         linkedYear: mandate.newerVersion?.year,
