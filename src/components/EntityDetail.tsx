@@ -5,9 +5,13 @@ import {
   approveDecisionAction,
   createCommentAction,
   createDecisionAction,
+  endReviewModeAction,
   getEntityDecisionsAction,
+  getReviewModeStatusAction,
   getUserRoleAction,
+  startReviewModeAction,
   updateDecisionReasonAction,
+  type ReviewModeStatus,
 } from "@/lib/services/housekeeping-actions";
 import { getMandateWarnings } from "@/lib/services/mandate-warnings";
 import type {
@@ -42,6 +46,8 @@ import { DocumentSearchInput } from "./DocumentSearchInput";
 import { DocumentSymbol } from "./DocumentModal";
 import { EntityHeader } from "./EntityHeader";
 import type { ManualEntryData } from "./ManualDocumentForm";
+import { ReviewBlockedDialog } from "./ReviewBlockedDialog";
+import { ReviewModeBanner } from "./ReviewModeBanner";
 import { Tooltip } from "./Tooltip";
 import { WarningIcon } from "./WarningIcon";
 import { getWarningIcon } from "@/lib/services/mandate-warnings";
@@ -1251,10 +1257,34 @@ export function EntityDetail({
     >
   >({});
 
+  // Review mode state
+  const [reviewModeStatus, setReviewModeStatus] = useState<ReviewModeStatus>({
+    isUnderReview: false,
+    startedBy: null,
+    startedByEntity: null,
+    startedAt: null,
+  });
+  const [showReviewBlockedDialog, setShowReviewBlockedDialog] = useState(false);
+  // Track pending changes made during review mode (to revert when user clicks "Continue Exploring")
+  const [pendingReviewChanges, setPendingReviewChanges] = useState<
+    Array<{
+      key: string;
+      originalState: MandateState | undefined;
+      addedMetadataKey?: string;
+      updateMetadataKey?: string;
+    }>
+  >([]);
+
   // Check if user owns this entity (can edit) or can review any entity (DMSPC)
   const isOwnEntity = useMemo(() => {
     return userEntity === entity || canReviewAnyEntity;
   }, [userEntity, entity, canReviewAnyEntity]);
+
+  // Check if entity is under review and user is NOT a reviewer
+  // In this case, decisions will be client-side only (mock) and dialog shown after reason change
+  const isReviewBlocked = useMemo(() => {
+    return reviewModeStatus.isUnderReview && !isReviewer;
+  }, [reviewModeStatus.isUnderReview, isReviewer]);
 
   // Set of background mandate symbols (for foundational highlighting in legislative sections)
   const foundationalSymbols = useMemo(
@@ -1287,6 +1317,31 @@ export function EntityDetail({
         }
       })
       .catch(() => {});
+
+    // Fetch review mode status
+    getReviewModeStatusAction(entity)
+      .then((result) => {
+        if (result.success && result.data) {
+          setReviewModeStatus(result.data);
+        }
+      })
+      .catch(() => {});
+  }, [entity]);
+
+  // Handle start review mode
+  const handleStartReview = useCallback(async () => {
+    const result = await startReviewModeAction(entity);
+    if (result.success && result.data) {
+      setReviewModeStatus(result.data);
+    }
+  }, [entity]);
+
+  // Handle end review mode
+  const handleEndReview = useCallback(async () => {
+    const result = await endReviewModeAction(entity);
+    if (result.success && result.data) {
+      setReviewModeStatus(result.data);
+    }
   }, [entity]);
 
   // Fetch metadata for added documents
@@ -1406,7 +1461,16 @@ export function EntityDetail({
         approvedByEntity: null,
         approvedAt: null,
       };
-      // Optimistic update
+      // If under review and not a reviewer, save original state for potential revert
+      // Only save if we haven't already tracked this key
+      if (isReviewBlocked) {
+        setPendingReviewChanges((prev) => {
+          if (prev.some((c) => c.key === key)) return prev;
+          return [...prev, { key, originalState: states[key] }];
+        });
+      }
+
+      // Client-side update (always done)
       setStates((prev) => ({
         ...prev,
         [key]: {
@@ -1418,6 +1482,20 @@ export function EntityDetail({
           decisions: [...(prev[key]?.decisions || []), newDecision],
         },
       }));
+
+      // If under review and not a reviewer, don't save to server
+      // For decisions that need a reason (retain, remove, update), wait for reason selection
+      // For decisions without reason (cancel, add), show dialog immediately
+      if (isReviewBlocked) {
+        const needsReason =
+          decision === "retain" ||
+          decision === "remove" ||
+          decision === "update";
+        if (!needsReason) {
+          setShowReviewBlockedDialog(true);
+        }
+        return;
+      }
 
       const result = await createDecisionAction({
         documentSymbol: symbol,
@@ -1457,8 +1535,51 @@ export function EntityDetail({
         });
       }
     },
-    [entity, userEmail, userEntity],
+    [entity, userEmail, userEntity, isReviewBlocked, states],
   );
+
+  // Revert all pending review changes when user clicks "Continue Exploring"
+  const handleRevertReviewChanges = useCallback(() => {
+    // Revert states
+    setStates((prev) => {
+      const newStates = { ...prev };
+      for (const change of pendingReviewChanges) {
+        if (change.originalState) {
+          newStates[change.key] = change.originalState;
+        } else {
+          // If there was no original state, remove the key
+          delete newStates[change.key];
+        }
+      }
+      return newStates;
+    });
+
+    // Revert added metadata
+    setAddedMetadata((prev) => {
+      const newMeta = { ...prev };
+      for (const change of pendingReviewChanges) {
+        if (change.addedMetadataKey) {
+          delete newMeta[change.addedMetadataKey];
+        }
+      }
+      return newMeta;
+    });
+
+    // Revert update target metadata
+    setUpdateTargetMetadata((prev) => {
+      const newMeta = { ...prev };
+      for (const change of pendingReviewChanges) {
+        if (change.updateMetadataKey) {
+          delete newMeta[change.updateMetadataKey];
+        }
+      }
+      return newMeta;
+    });
+
+    // Clear pending changes
+    setPendingReviewChanges([]);
+    setShowReviewBlockedDialog(false);
+  }, [pendingReviewChanges]);
 
   const handleReasonChange = useCallback(
     async (
@@ -1471,9 +1592,16 @@ export function EntityDetail({
       const currentState = states[key];
       const decisionId = currentState?.decision?.id;
 
-      if (!decisionId) return;
+      // If under review and not a reviewer, save original state for potential revert
+      // Only save if we haven't already tracked this key (e.g., from handleDecision)
+      if (isReviewBlocked) {
+        setPendingReviewChanges((prev) => {
+          if (prev.some((c) => c.key === key)) return prev;
+          return [...prev, { key, originalState: states[key] }];
+        });
+      }
 
-      // Optimistic update
+      // Client-side update (always done)
       setStates((prev) => ({
         ...prev,
         [key]: {
@@ -1487,6 +1615,15 @@ export function EntityDetail({
             : null,
         },
       }));
+
+      // If under review and not a reviewer, show the dialog and don't save to server
+      if (isReviewBlocked) {
+        setShowReviewBlockedDialog(true);
+        return;
+      }
+
+      // If no decision ID, can't update on server (shouldn't happen normally)
+      if (!decisionId) return;
 
       const result = await updateDecisionReasonAction({
         decisionId,
@@ -1509,7 +1646,7 @@ export function EntityDetail({
         }));
       }
     },
-    [states],
+    [states, isReviewBlocked],
   );
 
   const handleUpdateWithManual = useCallback(
@@ -1545,6 +1682,15 @@ export function EntityDetail({
         approvedByEntity: null,
         approvedAt: null,
       };
+      // If under review and not a reviewer, save original state for potential revert
+      // Only save if we haven't already tracked this key
+      if (isReviewBlocked) {
+        setPendingReviewChanges((prev) => {
+          if (prev.some((c) => c.key === key)) return prev;
+          return [...prev, { key, originalState: states[key], updateMetadataKey: newSymbol }];
+        });
+      }
+
       // Optimistic update
       setStates((prev) => ({
         ...prev,
@@ -1566,6 +1712,12 @@ export function EntityDetail({
           body: manualData.body || null,
         },
       }));
+
+      // If under review and not a reviewer, show dialog (client-side mock only)
+      if (isReviewBlocked) {
+        setShowReviewBlockedDialog(true);
+        return;
+      }
 
       const result = await createDecisionAction({
         documentSymbol: symbol,
@@ -1590,7 +1742,7 @@ export function EntityDetail({
         }));
       }
     },
-    [entity, userEmail, userEntity],
+    [entity, userEmail, userEntity, isReviewBlocked, states],
   );
 
   const handleAddManual = useCallback(
@@ -1621,6 +1773,15 @@ export function EntityDetail({
         approvedByEntity: null,
         approvedAt: null,
       };
+      // If under review and not a reviewer, save original state for potential revert
+      // Only save if we haven't already tracked this key
+      if (isReviewBlocked) {
+        setPendingReviewChanges((prev) => {
+          if (prev.some((c) => c.key === key)) return prev;
+          return [...prev, { key, originalState: states[key], addedMetadataKey: data.symbol }];
+        });
+      }
+
       // Optimistic update
       setStates((prev) => ({
         ...prev,
@@ -1644,6 +1805,12 @@ export function EntityDetail({
         },
       }));
 
+      // If under review and not a reviewer, show dialog (client-side mock only)
+      if (isReviewBlocked) {
+        setShowReviewBlockedDialog(true);
+        return;
+      }
+
       const result = await createDecisionAction({
         documentSymbol: data.symbol,
         entity,
@@ -1666,7 +1833,7 @@ export function EntityDetail({
         }));
       }
     },
-    [entity, userEmail, userEntity],
+    [entity, userEmail, userEntity, isReviewBlocked, states],
   );
 
   const handleComment = useCallback(
@@ -1702,6 +1869,7 @@ export function EntityDetail({
         [symbol]: (prev[symbol] || 0) + 1,
       }));
 
+      // Comments are always allowed, even during review mode
       const result = await createCommentAction({
         documentSymbol: symbol,
         entity,
@@ -1834,6 +2002,21 @@ export function EntityDetail({
 
   return (
     <div className="space-y-5">
+      {/* Review Mode Banner - shown when entity is under review */}
+      {reviewModeStatus.isUnderReview && (
+        <ReviewModeBanner
+          startedBy={reviewModeStatus.startedBy}
+          isReviewer={isReviewer}
+          onEndReview={isReviewer ? handleEndReview : undefined}
+        />
+      )}
+
+      {/* Review Blocked Dialog */}
+      <ReviewBlockedDialog
+        isOpen={showReviewBlockedDialog}
+        onClose={handleRevertReviewChanges}
+      />
+
       {/* Read-only notice */}
       {!isOwnEntity && userEntity && !canReviewAnyEntity && (
         <div className="border-l-4 border-un-blue bg-gray-50 px-6 py-3">
@@ -1865,6 +2048,8 @@ export function EntityDetail({
         filteredTotal={filteredTotal}
         totalMandates={totalMandates}
         isReviewer={isReviewer}
+        isUnderReview={reviewModeStatus.isUnderReview}
+        onStartReview={handleStartReview}
       />
 
       {/* Phase Tracker */}

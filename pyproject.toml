@@ -5,6 +5,8 @@ description = "UN Mandates Housekeeping"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "azure-identity>=1.25.1",
+    "azure-storage-queue>=12.15.0",
     "ipykernel>=7.1.0",
     "joblib>=1.4.0",
     "natsort>=8.4.0",

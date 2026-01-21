@@ -13,7 +13,9 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@azure/identity": "^4.13.0",
     "@azure/storage-blob": "^12.30.0",
+    "@azure/storage-queue": "^12.29.0",
     "@next/third-parties": "^16.1.3",
     "@prisma/adapter-pg": "^7.2.0",
     "@prisma/client": "^7.2.0",

@@ -3,6 +3,19 @@ The architecture in one sentence
 > Next.js is the control plane (auth, upload, orchestration, UX). Python is the ingestion engine (DOCX parsing + normalization). Postgres is the source of truth. Azure Blob is file storage.
 
 
+Best-simple choice: Next.js enqueues, Python worker consumes
+
+Upload docx to Blob (ideally via SAS direct upload)
+
+Next.js writes a row in Postgres: status='uploaded'
+
+Next.js sends a message to a queue with document_id (and blob path)
+
+Python worker picks it up, processes, writes result, updates Postgres
+
+
+
+> sync API call vs async job
 
 Upload architecture on Vercel (important)
 

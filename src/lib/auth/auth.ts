@@ -128,31 +128,41 @@ export async function getCurrentUser() {
   const session = await getSession();
   if (!session) return null;
 
+  // Join with allowed_reviewers to dynamically determine reviewer status
+  // This ensures removing someone from allowed_reviewers immediately revokes their reviewer access
   const rows = await query<{
     id: string;
     email: string;
     entity: string | null;
-    role: string | null;
+    is_allowed_reviewer: boolean;
   }>(
-    `SELECT id, email, entity, role FROM mandates_housekeeping.users WHERE id = $1`,
+    `SELECT 
+       u.id, 
+       u.email, 
+       u.entity,
+       (ar.email IS NOT NULL) as is_allowed_reviewer
+     FROM mandates_housekeeping.users u
+     LEFT JOIN mandates_housekeeping.allowed_reviewers ar 
+       ON LOWER(u.email) = LOWER(ar.email)
+     WHERE u.id = $1`,
     [session.userId],
   );
   if (!rows[0]) return null;
 
-  const role = rows[0].role || "user";
   const entity = rows[0].entity;
+  const isAllowedReviewer = rows[0].is_allowed_reviewer;
 
-  const isReviewer = role === "reviewer" || role === "admin";
+  // Reviewer status is determined solely by the allowed_reviewers table
+  const isReviewer = isAllowedReviewer;
   const isDMSPC = entity?.toUpperCase() === "DMSPC";
 
   return {
     id: rows[0].id,
     email: rows[0].email,
     entity: entity,
-    role: role,
     isReviewer: isReviewer,
     isDMSPC: isDMSPC,
-    // Must be BOTH: logged in as DMSPC entity AND have reviewer/admin role (in allowed_reviewers table)
+    // Must be BOTH: logged in as DMSPC entity AND be in allowed_reviewers
     canReviewAnyEntity: isDMSPC && isReviewer,
   };
 }

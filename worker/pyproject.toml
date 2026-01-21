@@ -6,6 +6,8 @@ dependencies = [
     "azure-storage-blob",
     "psycopg[binary]",
     "python-docx",
+    "azure-storage-queue",
+    "azure-identity",
     # add your existing pipeline deps here
 ]
 

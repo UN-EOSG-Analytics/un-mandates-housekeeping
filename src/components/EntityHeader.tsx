@@ -1,3 +1,4 @@
+import { Eye } from "lucide-react";
 import { ExportDropdown } from "./ExportDropdown";
 import { DocxUploadButton } from "./DocxUploadButton";
 
@@ -9,6 +10,8 @@ interface Props {
   filteredTotal: number;
   totalMandates: number;
   isReviewer?: boolean;
+  isUnderReview?: boolean;
+  onStartReview?: () => void;
 }
 
 export function EntityHeader({
@@ -19,6 +22,8 @@ export function EntityHeader({
   filteredTotal,
   totalMandates,
   isReviewer,
+  isUnderReview,
+  onStartReview,
 }: Props) {
   return (
     <div className="rounded-xl border border-gray-200 bg-white px-6 py-4 shadow-sm">
@@ -37,6 +42,16 @@ export function EntityHeader({
             {totalMandates !== 1 ? "s" : ""}
           </div>
           <div className="mt-3 flex items-center gap-2">
+            {isReviewer && !isUnderReview && onStartReview && (
+              <button
+                onClick={onStartReview}
+                className="flex items-center gap-1.5 rounded-md bg-amber-500 px-3 py-1.5 text-sm font-medium text-white transition-colors hover:bg-amber-600"
+                title="Start review mode - this will prevent entity users from making changes"
+              >
+                <Eye className="h-4 w-4" />
+                Start Review
+              </button>
+            )}
             {isReviewer && <DocxUploadButton entity={entity} />}
             <ExportDropdown entity={entity} />
           </div>
