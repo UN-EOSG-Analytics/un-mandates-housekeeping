@@ -170,5 +170,5 @@ export async function updateEntityAction(
  */
 export async function logoutAction(): Promise<void> {
   await clearSession();
-  redirect("/login");
+  redirect("/about");
 }
