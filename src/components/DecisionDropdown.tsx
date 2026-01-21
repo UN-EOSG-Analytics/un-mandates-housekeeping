@@ -32,30 +32,35 @@ export const DECISION_COLORS = {
     border: "border-blue-200",
     text: "text-blue-700",
     hover: "hover:border-blue-300",
+    hoverBg: "hover:bg-blue-50/50",
   },
   remove: {
     bg: "bg-red-50",
     border: "border-red-200",
     text: "text-red-700",
     hover: "hover:border-red-300",
+    hoverBg: "hover:bg-red-50/50",
   },
   update: {
     bg: "bg-amber-50",
     border: "border-amber-200",
     text: "text-amber-700",
     hover: "hover:border-amber-300",
+    hoverBg: "hover:bg-amber-50/50",
   },
   add: {
     bg: "bg-emerald-50",
     border: "border-emerald-200",
     text: "text-emerald-700",
     hover: "hover:border-emerald-300",
+    hoverBg: "hover:bg-emerald-50/50",
   },
   default: {
     bg: "bg-white",
     border: "border-gray-200",
     text: "text-gray-500",
     hover: "hover:border-gray-300",
+    hoverBg: "hover:bg-gray-50",
   },
 };
 

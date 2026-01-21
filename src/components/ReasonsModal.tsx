@@ -244,15 +244,15 @@ export function ReasonPopup({
               } ${
                 reason === r.id
                   ? `${colors.bg} ${colors.text}`
-                  : "text-gray-600 hover:bg-gray-50"
+                  : `text-gray-600 ${colors.hoverBg}`
               }`}
             >
               <span
-                className={`mt-0.5 shrink-0 opacity-60 ${reason === r.id ? colors.text : "text-gray-400"}`}
+                className={`mt-[3px] shrink-0 opacity-60 ${reason === r.id ? colors.text : "text-gray-400"}`}
               >
                 {getIconForReason(r.id)}
               </span>
-              <span className="text-[13px] leading-relaxed">{renderLabelWithBold(r.label)}</span>
+              <span className="text-[13px] leading-5">{renderLabelWithBold(r.label)}</span>
             </button>
           ))}
         </div>
