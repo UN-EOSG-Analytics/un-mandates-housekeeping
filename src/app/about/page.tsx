@@ -1,0 +1,554 @@
+import Image from "next/image";
+import Link from "next/link";
+import {
+  ArrowLeftRight,
+  ArrowRight,
+  Building2,
+  Check,
+  ChevronDown,
+  Download,
+  ExternalLink,
+  FileText,
+  Layers,
+  Mail,
+  MessageSquare,
+  Plus,
+  Search,
+  Sparkles,
+  Star,
+  Users,
+} from "lucide-react";
+
+// Feature card component
+function FeatureCard({
+  icon: Icon,
+  title,
+  description,
+  children,
+}: {
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  description: string;
+  children?: React.ReactNode;
+}) {
+  return (
+    <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+      <div className="p-6">
+        <div className="mb-3 flex items-center gap-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-un-blue/10">
+            <Icon className="h-5 w-5 text-un-blue" />
+          </div>
+          <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+        </div>
+        <p className="text-sm leading-relaxed text-gray-600">{description}</p>
+      </div>
+      {children && (
+        <div className="border-t border-gray-100 bg-gray-50/50 p-4">
+          {children}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// Mini mockup: Entity card
+function MockEntityCard({ name, count, highlight }: { name: string; count: number; highlight?: boolean }) {
+  return (
+    <div className={`flex items-center justify-between rounded-lg px-3 py-2 ${highlight ? "bg-un-blue/10 ring-1 ring-un-blue/30" : "bg-gray-100"}`}>
+      <span className="text-xs font-medium text-gray-700">{name}</span>
+      <span className="text-xs text-gray-400">{count}</span>
+    </div>
+  );
+}
+
+// Mini mockup: Decision dropdown
+function MockDecision({ decision, color }: { decision: string; color: string }) {
+  const colors: Record<string, string> = {
+    retain: "bg-blue-50 text-blue-700 border-blue-200",
+    remove: "bg-red-50 text-red-700 border-red-200",
+    update: "bg-amber-50 text-amber-700 border-amber-200",
+  };
+  return (
+    <div className={`inline-flex items-center gap-1 rounded border px-2 py-0.5 text-[10px] font-medium ${colors[color]}`}>
+      {decision}
+      <ChevronDown className="h-2.5 w-2.5 opacity-60" />
+    </div>
+  );
+}
+
+// Mini mockup: Mandate row
+function MockMandateRow({ symbol, title, year, decision }: { symbol: string; title: string; year: number; decision?: string }) {
+  return (
+    <div className="flex items-center gap-3 rounded-lg bg-white p-2 text-xs shadow-sm">
+      <span className="rounded bg-blue-50 px-1.5 py-0.5 font-medium text-un-blue">{symbol}</span>
+      <span className="flex-1 truncate text-gray-600">{title}</span>
+      <span className="text-gray-400">{year}</span>
+      {decision && <MockDecision decision={decision} color={decision.toLowerCase()} />}
+    </div>
+  );
+}
+
+// Mini mockup: Search result
+function MockSearchResult({ symbol, title }: { symbol: string; title: string }) {
+  return (
+    <div className="border-b border-gray-100 px-3 py-2 last:border-0 hover:bg-gray-50">
+      <span className="text-xs font-medium text-un-blue">{symbol}</span>
+      <div className="truncate text-[10px] text-gray-500">{title}</div>
+    </div>
+  );
+}
+
+// Mini mockup: Warning badge
+function MockWarning({ icon, text }: { icon: string; text: string }) {
+  return (
+    <div className="flex items-center gap-2 rounded-lg bg-amber-50 px-3 py-2">
+      <span className="flex h-5 w-5 items-center justify-center rounded-full bg-amber-100 text-xs">{icon}</span>
+      <span className="text-xs text-amber-700">{text}</span>
+    </div>
+  );
+}
+
+// Mini mockup: Age badge
+function MockAgeBadge({ label, color }: { label: string; color: string }) {
+  const colors: Record<string, string> = {
+    green: "bg-green-100 text-green-700",
+    amber: "bg-amber-100 text-amber-700",
+    red: "bg-red-100 text-red-700",
+  };
+  return <span className={`rounded px-1.5 py-0.5 text-[10px] font-medium ${colors[color]}`}>{label}</span>;
+}
+
+export default function AboutPage() {
+  return (
+    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      {/* Header */}
+      <header className="border-b border-gray-200 bg-white">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/images/UN_Logo_Stacked_Colour_English.svg"
+              alt="UN Logo"
+              width={50}
+              height={50}
+              className="h-12 w-auto"
+            />
+            <div>
+              <h1 className="text-xl font-bold text-gray-900">Mandate Housekeeping Platform</h1>
+              <p className="text-xs text-gray-500">PPB 2027 Mandate Review</p>
+            </div>
+          </Link>
+          <Link
+            href="/login"
+            className="rounded-lg bg-un-blue px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-un-blue/90"
+          >
+            Sign In
+          </Link>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section className="mx-auto max-w-6xl px-4 py-16 text-center">
+        <h2 className="mb-4 text-4xl font-bold tracking-tight text-gray-900">
+          Streamline Your Mandate Review
+        </h2>
+        <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600">
+          The Mandate Housekeeping Platform helps programme officers review, update, and manage
+          legislative mandate citations for the UN Programme Budget 2027. Work collaboratively
+          with validated data from the UN Library.
+        </p>
+        <div className="flex items-center justify-center gap-4">
+          <Link
+            href="/login"
+            className="inline-flex items-center gap-2 rounded-lg bg-un-blue px-6 py-3 font-medium text-white transition-colors hover:bg-un-blue/90"
+          >
+            Get Started
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+          <a
+            href="#features"
+            className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-6 py-3 font-medium text-gray-700 transition-colors hover:bg-gray-50"
+          >
+            Explore Features
+          </a>
+        </div>
+      </section>
+
+      {/* Feature grid */}
+      <section id="features" className="mx-auto max-w-6xl px-4 pb-20">
+        <h3 className="mb-8 text-center text-sm font-semibold tracking-wider text-gray-400 uppercase">
+          Platform Features
+        </h3>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {/* Entity Overview */}
+          <FeatureCard
+            icon={Building2}
+            title="Find Your Entity Quickly"
+            description="Browse all entities organized by budget part. Search by name, view by section, or jump directly to your assigned entity with the My Entity shortcut."
+          >
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 py-2">
+                <Search className="h-3.5 w-3.5 text-gray-400" />
+                <span className="text-xs text-gray-400">Search entities...</span>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                <MockEntityCard name="OIOS" count={42} highlight />
+                <MockEntityCard name="DPPA" count={38} />
+                <MockEntityCard name="DPO" count={67} />
+                <MockEntityCard name="OHCHR" count={54} />
+              </div>
+            </div>
+          </FeatureCard>
+
+          {/* Mandate List */}
+          <FeatureCard
+            icon={FileText}
+            title="All Mandates at a Glance"
+            description="See every mandate citation for your entity, organized by subprogramme. Sort by symbol, title, body, year, or how many other entities cite the same document."
+          >
+            <div className="space-y-2">
+              <div className="text-[10px] font-semibold tracking-wider text-gray-400 uppercase">Subprogramme 1</div>
+              <MockMandateRow symbol="A/RES/79/1" title="The Pact for the Future" year={2024} decision="Retain" />
+              <MockMandateRow symbol="A/RES/65/259" title="Programme budget for the biennium 2010-2011" year={2010} decision="Update" />
+            </div>
+          </FeatureCard>
+
+          {/* Document Lookup */}
+          <FeatureCard
+            icon={Search}
+            title="Search the UN Library Database"
+            description="Add or update mandate citations using our built-in database. Search by symbol or title to get validated metadata including title, year, issuing body, and PDF link."
+          >
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 rounded-lg border-2 border-dashed border-gray-200 bg-white px-3 py-2">
+                <Plus className="h-3.5 w-3.5 text-gray-400" />
+                <span className="text-xs text-gray-400">Add mandate — search by symbol or title...</span>
+              </div>
+              <div className="overflow-hidden rounded-lg border border-gray-200 bg-white">
+                <MockSearchResult symbol="A/RES/79/18" title="Weapons of mass destruction in outer space" />
+                <MockSearchResult symbol="A/RES/79/19" title="Preventing an arms race in outer space" />
+              </div>
+            </div>
+          </FeatureCard>
+
+          {/* Decision Making */}
+          <FeatureCard
+            icon={Check}
+            title="Mark Your Housekeeping Decisions"
+            description="For each mandate, decide whether to Retain, Remove, or Update. Add a reason for your decision to help reviewers understand your rationale."
+          >
+            <div className="flex flex-wrap items-center gap-3">
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-gray-500">Decision:</span>
+                <MockDecision decision="Retain" color="retain" />
+              </div>
+              <div className="flex items-center gap-2">
+                <MockDecision decision="Remove" color="remove" />
+              </div>
+              <div className="flex items-center gap-2">
+                <MockDecision decision="Update" color="update" />
+              </div>
+            </div>
+            <div className="mt-3 rounded-lg bg-blue-50/50 p-2 text-[10px] text-gray-500">
+              <MessageSquare className="mb-0.5 mr-1 inline h-3 w-3" />
+              Reason: Mandate continues to be relevant for the entity&apos;s work.
+            </div>
+          </FeatureCard>
+
+          {/* Version Alerts */}
+          <FeatureCard
+            icon={Sparkles}
+            title="Never Miss an Updated Resolution"
+            description="The platform automatically detects when newer versions of your cited documents exist. Smart alerts prompt you to update to the latest version."
+          >
+            <div className="space-y-2">
+              <MockWarning icon="↑" text="Newer version available: A/RES/79/19" />
+              <div className="flex items-center gap-2 text-xs">
+                <span className="text-gray-500">Current:</span>
+                <span className="rounded bg-gray-100 px-1.5 py-0.5 font-medium text-gray-600">A/RES/78/20 (2023)</span>
+                <ArrowRight className="h-3 w-3 text-gray-400" />
+                <span className="rounded bg-un-blue/10 px-1.5 py-0.5 font-medium text-un-blue">A/RES/79/19 (2024)</span>
+              </div>
+            </div>
+          </FeatureCard>
+
+          {/* Diff Comparison */}
+          <FeatureCard
+            icon={ArrowLeftRight}
+            title="Compare Document Versions"
+            description="Not sure what changed? Use the built-in diff viewer to see exactly what text was added, removed, or modified between any two document versions."
+          >
+            <div className="grid grid-cols-2 gap-2 text-[10px]">
+              <div className="space-y-1.5">
+                <div className="text-center font-medium text-gray-500">A/RES/78/20</div>
+                <div className="rounded bg-gray-100 p-2 text-gray-600">
+                  <span className="bg-red-200 text-red-800">Calls upon</span> all States to refrain from...
+                </div>
+              </div>
+              <div className="space-y-1.5">
+                <div className="text-center font-medium text-gray-500">A/RES/79/19</div>
+                <div className="rounded bg-gray-100 p-2 text-gray-600">
+                  <span className="bg-green-200 text-green-800">Urges</span> all States to refrain from...
+                </div>
+                <div className="rounded bg-green-100 p-2 text-green-800">
+                  Reaffirms the importance of transparency
+                </div>
+              </div>
+            </div>
+          </FeatureCard>
+
+          {/* Cross-Entity */}
+          <FeatureCard
+            icon={Users}
+            title="Discover Shared Citations"
+            description="See which mandates are cited by multiple entities. Filter to show only documents shared with a specific entity—useful for coordination and consistency."
+          >
+            <div className="flex flex-wrap gap-1.5">
+              {["DPPA 12", "DPO 8", "OHCHR 5", "OIOS 4"].map((e) => (
+                <span key={e} className="rounded-full bg-gray-100 px-2 py-0.5 text-[10px] text-gray-600">
+                  {e}
+                </span>
+              ))}
+            </div>
+            <div className="mt-2 text-[10px] text-un-blue">
+              Showing 12 mandates shared with DPPA
+            </div>
+          </FeatureCard>
+
+          {/* Document Sidebar */}
+          <FeatureCard
+            icon={Layers}
+            title="Deep Dive Into Any Document"
+            description="Click any document to open a detailed sidebar with full metadata, version history, paragraph text, and all activity from across entities."
+          >
+            <div className="flex gap-1">
+              {["Info", "Decisions", "Activity", "Paragraphs"].map((tab, i) => (
+                <span
+                  key={tab}
+                  className={`rounded-t px-2 py-1 text-[10px] font-medium ${i === 0 ? "bg-gray-100 text-gray-700" : "text-gray-400"}`}
+                >
+                  {tab}
+                </span>
+              ))}
+            </div>
+            <div className="mt-2 rounded bg-white p-2 text-xs shadow-sm">
+              <div className="flex items-center justify-between text-gray-500">
+                <span>Year</span>
+                <span className="font-medium text-gray-700">2024</span>
+              </div>
+              <div className="mt-1 flex items-center justify-between text-gray-500">
+                <span>Issuing body</span>
+                <span className="font-medium text-gray-700">General Assembly</span>
+              </div>
+            </div>
+          </FeatureCard>
+
+          {/* Paragraph Analysis */}
+          <FeatureCard
+            icon={Sparkles}
+            title="Entity Mention Highlighting"
+            description="View the full document text with your entity name automatically highlighted. Collapse irrelevant paragraphs to focus on what matters."
+          >
+            <div className="space-y-2 text-xs">
+              <div className="rounded bg-gray-100 p-2 text-gray-600">
+                <span className="mr-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-un-blue text-[8px] text-white">1</span>
+                Requests the Secretary-General to ensure that <strong className="text-gray-900">OIOS</strong> has adequate resources...
+              </div>
+              <button className="flex items-center gap-1 text-[10px] text-gray-400">
+                <ChevronDown className="h-3 w-3 -rotate-90" />
+                Show 5 paragraphs not mentioning OIOS
+              </button>
+            </div>
+          </FeatureCard>
+
+          {/* Comments */}
+          <FeatureCard
+            icon={MessageSquare}
+            title="Discuss and Coordinate"
+            description="Add comments on any mandate to flag issues, ask questions, or coordinate with colleagues. Reviewer comments can be marked as resolved."
+          >
+            <div className="space-y-2">
+              <div className="flex items-start gap-2 rounded bg-white p-2 shadow-sm">
+                <MessageSquare className="mt-0.5 h-3 w-3 text-amber-500" />
+                <div>
+                  <p className="text-xs text-gray-700">Please verify this is the correct resolution number.</p>
+                  <p className="mt-1 text-[10px] text-gray-400">reviewer@un.org · Jan 15</p>
+                </div>
+              </div>
+              <button className="text-[10px] text-un-blue">Mark as resolved</button>
+            </div>
+          </FeatureCard>
+
+          {/* Approval Workflow */}
+          <FeatureCard
+            icon={Check}
+            title="Built-In Review Process"
+            description="DMSPC reviewers can approve entity decisions with a single click. Approval status is visible to all, ensuring transparency."
+          >
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2">
+                <MockDecision decision="Retain" color="retain" />
+                <div className="flex h-6 w-6 items-center justify-center rounded bg-emerald-500 text-white">
+                  <Check className="h-3.5 w-3.5" />
+                </div>
+              </div>
+              <span className="text-xs text-gray-500">Approved by reviewer@un.org</span>
+            </div>
+          </FeatureCard>
+
+          {/* Smart Warnings */}
+          <FeatureCard
+            icon={Sparkles}
+            title="Proactive Issue Detection"
+            description="The platform flags potential issues: missing metadata, unavailable PDF links, or newer versions already cited. Each warning suggests an action."
+          >
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 rounded-lg bg-amber-50 px-2 py-1.5">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-amber-100 text-xs">?</span>
+                <span className="text-xs text-amber-700">Document not found in UN Library</span>
+              </div>
+              <div className="flex items-center gap-2 rounded-lg bg-red-50 px-2 py-1.5">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-red-100 text-xs">×</span>
+                <span className="text-xs text-red-700">Newer version already cited</span>
+              </div>
+            </div>
+          </FeatureCard>
+
+          {/* Export */}
+          <FeatureCard
+            icon={Download}
+            title="Export Your Data"
+            description="Export your entity's mandates and decisions to CSV, Excel, or Word format. Perfect for reports, offline review, or sharing."
+          >
+            <div className="flex items-center gap-2">
+              <button className="flex items-center gap-1.5 rounded border border-gray-200 bg-white px-2 py-1 text-xs text-gray-600">
+                <Download className="h-3 w-3" />
+                Export
+                <ChevronDown className="h-2.5 w-2.5" />
+              </button>
+              <div className="flex gap-1 text-[10px] text-gray-400">
+                <span className="rounded bg-gray-100 px-1.5 py-0.5">CSV</span>
+                <span className="rounded bg-gray-100 px-1.5 py-0.5">Excel</span>
+                <span className="rounded bg-gray-100 px-1.5 py-0.5">Word</span>
+              </div>
+            </div>
+          </FeatureCard>
+
+          {/* Age Indicators */}
+          <FeatureCard
+            icon={FileText}
+            title="At-a-Glance Citation Age"
+            description="Color-coded badges show how old each mandate is: Fresh (≤5 years), Mature (6-10 years), or Aged (11+ years). Helps prioritize review."
+          >
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-1">
+                <span className="text-xs text-gray-500">2024</span>
+                <MockAgeBadge label="Fresh" color="green" />
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="text-xs text-gray-500">2018</span>
+                <MockAgeBadge label="Mature" color="amber" />
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="text-xs text-gray-500">2010</span>
+                <MockAgeBadge label="Aged" color="red" />
+              </div>
+            </div>
+          </FeatureCard>
+
+          {/* Foundational */}
+          <FeatureCard
+            icon={Star}
+            title="Foundational Mandates"
+            description="Mandates that appear in both your subprogramme and the 'Mandates and Background' section are marked with a star. These deserve special attention."
+          >
+            <div className="flex items-center gap-2">
+              <Star className="h-4 w-4 fill-un-blue text-un-blue" strokeWidth={0.5} />
+              <span className="text-xs text-gray-600">A/RES/48/218 B is also cited in Mandates and Background</span>
+            </div>
+          </FeatureCard>
+
+          {/* Authentication */}
+          <FeatureCard
+            icon={Mail}
+            title="Magic Link Sign-In"
+            description="Sign in with your UN email address. We'll send you a secure link—click it and you're in. No passwords to remember."
+          >
+            <div className="flex items-center gap-2">
+              <div className="flex-1 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs text-gray-400">
+                your.name@un.org
+              </div>
+              <button className="rounded-lg bg-un-blue px-3 py-2 text-xs font-medium text-white">
+                Send link
+              </button>
+            </div>
+          </FeatureCard>
+        </div>
+      </section>
+
+      {/* Getting Started */}
+      <section className="border-t border-gray-200 bg-gray-50 py-16">
+        <div className="mx-auto max-w-4xl px-4 text-center">
+          <h3 className="mb-8 text-2xl font-bold text-gray-900">Get Started in 3 Steps</h3>
+          <div className="grid gap-8 md:grid-cols-3">
+            <div>
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-un-blue text-lg font-bold text-white">
+                1
+              </div>
+              <h4 className="mb-2 font-semibold text-gray-900">Sign In</h4>
+              <p className="text-sm text-gray-600">Enter your UN email and click the magic link we send you.</p>
+            </div>
+            <div>
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-un-blue text-lg font-bold text-white">
+                2
+              </div>
+              <h4 className="mb-2 font-semibold text-gray-900">Find Your Entity</h4>
+              <p className="text-sm text-gray-600">Search or browse to your assigned entity&apos;s mandate list.</p>
+            </div>
+            <div>
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-un-blue text-lg font-bold text-white">
+                3
+              </div>
+              <h4 className="mb-2 font-semibold text-gray-900">Review Mandates</h4>
+              <p className="text-sm text-gray-600">Mark each citation as Retain, Remove, or Update with a reason.</p>
+            </div>
+          </div>
+          <Link
+            href="/login"
+            className="mt-10 inline-flex items-center gap-2 rounded-lg bg-un-blue px-6 py-3 font-medium text-white transition-colors hover:bg-un-blue/90"
+          >
+            Start Your Review
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="border-t border-gray-200 bg-white py-8">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/images/UN_Logo_Stacked_Colour_English.svg"
+                alt="UN Logo"
+                width={40}
+                height={40}
+                className="h-10 w-auto opacity-50"
+              />
+              <span className="text-sm text-gray-500">Mandate Housekeeping Platform</span>
+            </div>
+            <div className="flex items-center gap-6 text-sm text-gray-500">
+              <a href="mailto:support@eosg.dev" className="hover:text-un-blue">
+                support@eosg.dev
+              </a>
+              <a href="https://docs.un.org" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-un-blue">
+                UN ODS
+                <ExternalLink className="h-3 w-3" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}

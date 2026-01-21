@@ -31,6 +31,12 @@ export function Header({ user, children, entities = [] }: Props) {
         </div>
       </Link>
       <div className="flex items-center gap-4">
+        <Link
+          href="/about"
+          className="text-sm text-gray-500 transition-colors hover:text-un-blue"
+        >
+          About
+        </Link>
         {user && (
           <UserMenu
             email={user.email}
