@@ -1,4 +1,5 @@
 import { ExportDropdown } from "./ExportDropdown";
+import { DocxUploadButton } from "./DocxUploadButton";
 
 interface Props {
   entity: string;
@@ -7,6 +8,7 @@ interface Props {
   filterEntity: string | null;
   filteredTotal: number;
   totalMandates: number;
+  isReviewer?: boolean;
 }
 
 export function EntityHeader({
@@ -16,6 +18,7 @@ export function EntityHeader({
   filterEntity,
   filteredTotal,
   totalMandates,
+  isReviewer,
 }: Props) {
   return (
     <div className="rounded-xl border border-gray-200 bg-white px-6 py-4 shadow-sm">
@@ -33,7 +36,8 @@ export function EntityHeader({
             {filterEntity ? `of ${totalMandates} ` : ""}Mandate
             {totalMandates !== 1 ? "s" : ""}
           </div>
-          <div className="mt-3">
+          <div className="mt-3 flex items-center gap-2">
+            {isReviewer && <DocxUploadButton entity={entity} />}
             <ExportDropdown entity={entity} />
           </div>
         </div>

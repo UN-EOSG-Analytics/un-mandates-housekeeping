@@ -1864,6 +1864,7 @@ export function EntityDetail({
         filterEntity={filterEntity}
         filteredTotal={filteredTotal}
         totalMandates={totalMandates}
+        isReviewer={isReviewer}
       />
 
       {/* Phase Tracker */}
