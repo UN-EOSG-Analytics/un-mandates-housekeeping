@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
 import { EntityCombobox } from "./EntityCombobox";
 import type { EntityOption } from "@/lib/services/data-service";
@@ -20,7 +19,6 @@ export function EntityChangeDialog({
   currentEntity,
   entities,
 }: EntityChangeDialogProps) {
-  const router = useRouter();
   const [selectedEntity, setSelectedEntity] = useState("");
   const [otherEntity, setOtherEntity] = useState("");
   const [loading, setLoading] = useState(false);
@@ -52,8 +50,9 @@ export function EntityChangeDialog({
       const result = await updateEntityAction(entity);
 
       if (result.success) {
-        router.refresh();
-        onClose();
+        // Full page reload to ensure all server components reflect the new entity
+        // (e.g., reviewer status, entity-specific data)
+        window.location.reload();
       } else {
         setError(result.error);
       }
