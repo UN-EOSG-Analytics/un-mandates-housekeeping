@@ -144,7 +144,7 @@ export function EntityOverview({ parts, userEntity }: Props) {
 
       {/* Search box and controls */}
       <div className="flex items-start justify-between gap-4">
-        <div className="flex items-center gap-3">
+        <div className="flex items-start gap-3">
           <div className="w-80">
             <div className="relative">
               <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-gray-400" />
