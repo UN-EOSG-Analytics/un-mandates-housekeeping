@@ -25,8 +25,12 @@ import {
   ArrowRight,
   Check,
   CheckCircle2,
+  CheckSquare,
   ChevronDown,
   ExternalLink,
+  FileText,
+  History,
+  Info,
   Loader2,
   MessageSquare,
   Sparkles,
@@ -772,50 +776,71 @@ export function DocumentSymbol({
               <div className="mt-5 flex gap-1">
                 <button
                   onClick={() => setActiveTab("info")}
-                  className={`rounded-t-lg px-4 py-2.5 text-sm font-medium transition-colors ${
+                  className={`flex items-center gap-1.5 rounded-t-lg px-4 py-2.5 text-sm font-medium transition-colors ${
                     activeTab === "info"
                       ? "bg-gray-100 text-gray-900"
                       : "text-gray-500 hover:bg-gray-50 hover:text-gray-700"
                   }`}
                 >
+                  <Info className="h-4 w-4" />
                   Info
                 </button>
                 <button
                   onClick={() => setActiveTab("decisions")}
-                  className={`rounded-t-lg px-4 py-2.5 text-sm font-medium transition-colors ${
+                  className={`flex items-center gap-1.5 rounded-t-lg px-4 py-2.5 text-sm font-medium transition-colors ${
                     activeTab === "decisions"
                       ? "bg-gray-100 text-gray-900"
                       : "text-gray-500 hover:bg-gray-50 hover:text-gray-700"
                   }`}
                 >
+                  <CheckSquare className="h-4 w-4" />
                   Decisions
+                  {(() => {
+                    // Count unique entity/subprogramme pairs with active decisions (not cancelled)
+                    // Group by entity/subprogramme and check if latest decision is not "cancel"
+                    const latestByKey = new Map<string, string>();
+                    for (const d of allDecisions) {
+                      const key = `${d.entity}:${d.subprogramme || ""}`;
+                      latestByKey.set(key, d.decision);
+                    }
+                    const activeCount = [...latestByKey.values()].filter(
+                      (decision) => decision !== "cancel",
+                    ).length;
+                    return activeCount > 0 ? (
+                      <span className="ml-1 rounded-full bg-gray-200 px-1.5 py-0.5 text-xs text-gray-600">
+                        {activeCount}
+                      </span>
+                    ) : null;
+                  })()}
                 </button>
                 <button
                   onClick={() => setActiveTab("activity")}
-                  className={`rounded-t-lg px-4 py-2.5 text-sm font-medium transition-colors ${
+                  className={`flex items-center gap-1.5 rounded-t-lg px-4 py-2.5 text-sm font-medium transition-colors ${
                     activeTab === "activity"
                       ? "bg-gray-100 text-gray-900"
                       : "text-gray-500 hover:bg-gray-50 hover:text-gray-700"
                   }`}
                 >
+                  <History className="h-4 w-4" />
                   Activity
                   {allDecisions.length + allComments.length > 0 && (
-                    <span className="ml-1.5 rounded-full bg-gray-200 px-1.5 py-0.5 text-xs text-gray-600">
+                    <span className="ml-1 rounded-full bg-gray-200 px-1.5 py-0.5 text-xs text-gray-600">
                       {allDecisions.length + allComments.length}
                     </span>
                   )}
                 </button>
                 <button
                   onClick={() => setActiveTab("paragraphs")}
-                  className={`rounded-t-lg px-4 py-2.5 text-sm font-medium transition-colors ${
+                  className={`flex items-center gap-1.5 rounded-t-lg px-4 py-2.5 text-sm font-medium transition-colors ${
                     activeTab === "paragraphs"
                       ? "bg-gray-100 text-gray-900"
                       : "text-gray-500 hover:bg-gray-50 hover:text-gray-700"
                   }`}
                 >
+                  <FileText className="h-4 w-4" />
                   Paragraphs
                   {paragraphs && paragraphs.length > 0 && (
-                    <span className="ml-1.5 rounded-full bg-gray-200 px-1.5 py-0.5 text-xs text-gray-600">
+                    <span className="ml-1 rounded-full bg-gray-200 px-1.5 py-0.5 text-xs text-gray-600">
                       {paragraphs.length}
                     </span>
                   )}
@@ -1199,15 +1224,15 @@ export function DocumentSymbol({
                               return (
                                 <tr
                                   key={`${row.entity}:${row.subprogramme || ""}`}
-                                  className="border-b border-gray-100 last:border-0"
+                                  className="h-14 border-b border-gray-100 last:border-0"
                                 >
                                   <td
-                                    className={`py-3 pr-3 font-medium ${isUserEntity ? "text-un-blue" : "text-gray-700"}`}
+                                    className={`py-3 pr-3 align-middle font-medium ${isUserEntity ? "text-un-blue" : "text-gray-700"}`}
                                     title={row.subprogramme || undefined}
                                   >
                                     {formatRowName(row)}
                                   </td>
-                                  <td className="py-3 pl-3">
+                                  <td className="py-3 pl-3 align-middle">
                                     <DecisionDropdown
                                       decision={
                                         currentDecision?.decision || null
@@ -1232,7 +1257,7 @@ export function DocumentSymbol({
                                       size="sm"
                                     />
                                   </td>
-                                  <td className="py-3 pl-3">
+                                  <td className="py-3 pl-3 align-middle">
                                     {currentDecision ? (
                                       <button
                                         onClick={() => {
@@ -1268,20 +1293,22 @@ export function DocumentSymbol({
                                               ? "Click to approve"
                                               : ""
                                         }
-                                        className={`inline-flex h-7 w-7 items-center justify-center rounded-lg transition-colors ${
+                                        className={`inline-flex h-6 w-6 items-center justify-center rounded border transition-colors ${
                                           isApproved
-                                            ? "bg-emerald-500 text-white"
+                                            ? "border-emerald-600 bg-emerald-600 text-white"
                                             : canApprove
-                                              ? "border border-gray-200 bg-white hover:border-emerald-400 hover:bg-emerald-50"
-                                              : "border border-gray-100 bg-gray-50"
+                                              ? "border-gray-300 bg-white hover:border-emerald-400 hover:bg-emerald-50"
+                                              : "border-gray-200 bg-gray-50"
                                         } ${!canApprove ? "cursor-default" : "cursor-pointer"}`}
                                       >
-                                        {isApproved && (
-                                          <Check className="h-4 w-4" />
-                                        )}
+                                        <Check
+                                          className={`h-4 w-4 ${isApproved ? "" : "invisible"}`}
+                                        />
                                       </button>
                                     ) : (
-                                      <span className="text-gray-300">—</span>
+                                      <span className="inline-flex h-6 w-6 items-center justify-center border border-transparent text-gray-300">
+                                        —
+                                      </span>
                                     )}
                                   </td>
                                 </tr>

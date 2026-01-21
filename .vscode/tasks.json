@@ -2,9 +2,9 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "Install Dependencies",
+			"label": "pnpm install",
 			"type": "shell",
-			"command": "uv sync && pnpm install",
+			"command": "pnpm install",
 			"group": "build"
 		},
 		{

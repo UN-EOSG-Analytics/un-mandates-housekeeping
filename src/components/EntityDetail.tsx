@@ -39,7 +39,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { DecisionDropdown } from "./DecisionDropdown";
 import { DiffModal } from "./DiffModal";
 import { DocumentSearchInput } from "./DocumentSearchInput";
-import { DocumentSymbol } from "./DocumentSymbol";
+import { DocumentSymbol } from "./DocumentModal";
 import { EntityHeader } from "./EntityHeader";
 import type { ManualEntryData } from "./ManualDocumentForm";
 import { Tooltip } from "./Tooltip";
@@ -537,15 +537,15 @@ function MandateRowContent({
                   ? "Click to approve"
                   : "No decision to approve"
             }
-            className={`inline-flex h-6 w-6 items-center justify-center rounded transition-colors ${
+            className={`inline-flex h-6 w-6 items-center justify-center rounded border transition-colors ${
               isApproved
-                ? "bg-emerald-600 text-white"
+                ? "border-emerald-600 bg-emerald-600 text-white"
                 : canApprove
-                  ? "border border-gray-300 bg-white hover:border-emerald-400 hover:bg-emerald-50"
-                  : "border border-gray-200 bg-gray-50"
+                  ? "border-gray-300 bg-white hover:border-emerald-400 hover:bg-emerald-50"
+                  : "border-gray-200 bg-gray-50"
             } ${!canApprove ? "cursor-default" : "cursor-pointer"}`}
           >
-            {isApproved && <Check className="h-4 w-4" />}
+            <Check className={`h-4 w-4 ${isApproved ? "" : "invisible"}`} />
           </button>
         ) : (
           <span className="inline-flex h-6 w-6 items-center justify-center text-xs text-gray-300">
