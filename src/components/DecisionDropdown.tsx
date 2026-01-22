@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { createPortal } from "react-dom";
 import type { Decision } from "@/types";
 import { ChevronDown, MessageCircle, Pencil } from "lucide-react";
 import {
@@ -37,6 +38,57 @@ interface DecisionDropdownProps {
 }
 
 // Shared color scheme for decisions - exported for use in ReasonDropdown
+function DropdownMenu({
+  containerRef,
+  options,
+  decision,
+  onSelect,
+}: {
+  containerRef: React.RefObject<HTMLDivElement | null>;
+  options: { value: Decision | ""; label: string }[];
+  decision: Decision | null;
+  onSelect: (value: Decision | "") => void;
+}) {
+  const [pos, setPos] = React.useState({ top: 0, left: 0 });
+
+  React.useLayoutEffect(() => {
+    if (containerRef.current) {
+      const rect = containerRef.current.getBoundingClientRect();
+      setPos({ top: rect.bottom + 4, left: rect.left });
+    }
+  }, [containerRef]);
+
+  return (
+    <div
+      className="fixed z-[9999] w-[5.25rem] rounded border border-gray-200 bg-white py-0.5 shadow-lg"
+      style={{ top: pos.top, left: pos.left }}
+    >
+      {options.map((opt) => {
+        const optColors =
+          opt.value && opt.value in DECISION_COLORS
+            ? DECISION_COLORS[opt.value as keyof typeof DECISION_COLORS]
+            : DECISION_COLORS.default;
+        const isSelected =
+          decision === opt.value ||
+          ((!decision || decision === "cancel") && opt.value === "");
+        return (
+          <button
+            key={opt.value || "empty"}
+            onClick={() => onSelect(opt.value)}
+            className={`flex w-full items-center px-2.5 py-1 text-[11px] font-medium transition-colors ${
+              isSelected
+                ? `${optColors.bg} ${optColors.text}`
+                : "text-gray-600 hover:bg-gray-50"
+            }`}
+          >
+            {opt.label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 export const DECISION_COLORS = {
   retain: {
     bg: "bg-blue-50",
@@ -366,33 +418,19 @@ export function DecisionDropdown({
         </Popover>
       )}
 
-      {isOpen && !disabled && !locked && (
-        <div className="absolute top-full left-0 z-50 mt-1 w-[5.25rem] rounded border border-gray-200 bg-white py-0.5 shadow-lg">
-          {options.map((opt) => {
-            const optColors =
-              opt.value && opt.value in DECISION_COLORS
-                ? DECISION_COLORS[opt.value as keyof typeof DECISION_COLORS]
-                : DECISION_COLORS.default;
-            // "—" option is selected when decision is null, undefined, or "cancel"
-            const isSelected =
-              decision === opt.value ||
-              ((!decision || decision === "cancel") && opt.value === "");
-            return (
-              <button
-                key={opt.value || "empty"}
-                onClick={() => handleSelect(opt.value)}
-                className={`flex w-full items-center px-2.5 py-1 text-[11px] font-medium transition-colors ${
-                  isSelected
-                    ? `${optColors.bg} ${optColors.text}`
-                    : "text-gray-600 hover:bg-gray-50"
-                }`}
-              >
-                {opt.label}
-              </button>
-            );
-          })}
-        </div>
-      )}
+      {isOpen &&
+        !disabled &&
+        !locked &&
+        typeof document !== "undefined" &&
+        createPortal(
+          <DropdownMenu
+            containerRef={containerRef}
+            options={options}
+            decision={decision}
+            onSelect={handleSelect}
+          />,
+          document.body,
+        )}
 
       {/* Reason popup - appears after making a decision */}
       {decision && decision !== "cancel" && onReasonChange && (

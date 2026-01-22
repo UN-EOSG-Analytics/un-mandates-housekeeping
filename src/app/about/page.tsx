@@ -164,10 +164,11 @@ export default async function AboutPage() {
             Streamline Your Mandate Submission
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600">
-            The Mandate Housekeeping Platform helps programme officers review,
+            The Mandate Housekeeping Platform helps programme officers verify,
             update, and manage legislative mandate citations for the UN
-            Programme Budget 2027. Work collaboratively with validated data from
-            the UN Library.
+            Programme Budget 2027.
+            <br />
+            Work collaboratively with validated document data.
           </p>
           <div className="flex items-center justify-center gap-4">
             <Link
@@ -269,7 +270,7 @@ export default async function AboutPage() {
             <FeatureCard
               icon={Search}
               title="Search the Official Document System"
-              description="Add or update mandate citations using validated data from the UN Digital Library and ODS. Search by symbol or title to get metadata including title, year, issuing body, and PDF link."
+              description="Add or update citations using validated data from the UN Digital Library and ODS. Search by symbol or title to get metadata and PDF links."
             >
               <div className="space-y-2">
                 <div className="flex items-center gap-2 rounded-lg border-2 border-dashed border-gray-200 px-3 py-2">
@@ -291,11 +292,11 @@ export default async function AboutPage() {
               </div>
             </FeatureCard>
 
-            {/* 5. Built-In Review Process */}
+            {/* 5. Built-In Approval Process */}
             <FeatureCard
               icon={Check}
-              title="Built-In Review Process"
-              description="PPBD reviewers can approve entity decisions with a single click. Approval status is visible to all, ensuring transparency in the review cycle."
+              title="Built-In Approval Process"
+              description="PPBD reviewers can approve entity decisions with a single click. Approval status is visible to all, ensuring transparency in the approval workflow."
             >
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-2">
@@ -404,7 +405,7 @@ export default async function AboutPage() {
             <FeatureCard
               icon={FileText}
               title="At-a-Glance Citation Age"
-              description="Color-coded indicators show how old each mandate is at a glance, helping you prioritize which citations may need review or updating."
+              description="Color-coded indicators show how old each mandate is at a glance, helping you prioritize which citations may need updating."
             >
               <div className="flex flex-wrap items-center gap-3">
                 <div className="flex items-center gap-1.5">
@@ -627,7 +628,7 @@ export default async function AboutPage() {
                   3
                 </div>
                 <h4 className="mb-2 font-semibold text-gray-900">
-                  Review Mandates
+                  Update Citations
                 </h4>
                 <p className="text-sm text-gray-600">
                   Mark each citation as Retain, Remove, or Update with a reason.
@@ -638,7 +639,7 @@ export default async function AboutPage() {
               href={ctaHref}
               className="mt-10 inline-flex items-center gap-2 rounded-lg bg-un-blue px-6 py-3 font-medium text-white transition-colors hover:bg-un-blue/90"
             >
-              {isLoggedIn ? "Go to Dashboard" : "Start Your Review"}
+              {isLoggedIn ? "Go to Dashboard" : "Get Started"}
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
