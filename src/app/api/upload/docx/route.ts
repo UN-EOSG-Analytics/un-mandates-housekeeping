@@ -46,6 +46,19 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Check if entity already has an upload
+    const existingUpload = await query<{ id: string }>(
+      `SELECT id FROM mandates_housekeeping.docx_uploads WHERE entity = $1 LIMIT 1`,
+      [entity],
+    );
+
+    if (existingUpload.length > 0) {
+      return NextResponse.json(
+        { error: "A DOCX submission already exists for this entity" },
+        { status: 409 },
+      );
+    }
+
     // Validate file type
     if (!ALLOWED_CONTENT_TYPES.includes(file.type)) {
       return NextResponse.json(
@@ -101,6 +114,7 @@ export async function POST(req: NextRequest) {
         size: file.size,
         entity,
         subprogramme,
+        userEmail: user.email,
         createdAt: result[0].created_at,
       },
     });

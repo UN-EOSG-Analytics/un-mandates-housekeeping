@@ -20,7 +20,7 @@ const FORMATS = [
   { id: "docx", label: "Word", icon: FileType },
 ] as const;
 
-export function ExportDropdown({ entity, label = "Export" }: Props) {
+export function ExportDropdown({ entity, label = "Export Mandates" }: Props) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
