@@ -571,36 +571,56 @@ export function DocumentSymbol({
     }
   }, [open, initialTab]);
 
-  // Fetch paragraphs, activity, and versions when sidebar opens
-  useEffect(() => {
-    if (open && !paragraphs && !loading) {
-      const fetchData = async () => {
-        setLoading(true);
+  // Track last fetched symbol to detect changes
+  const lastFetchedSymbolRef = useRef<string | null>(null);
 
-        const [parasData, activityResult, versionsResult] = await Promise.all([
-          fetchParagraphs(symbol),
-          getDocumentDecisionsAction(symbol).catch(() => ({
-            success: false as const,
-            error: "Failed to load",
-          })),
-          getDocumentVersionsAction(symbol).catch(() => ({
-            success: false as const,
-            error: "Failed to load",
-          })),
-        ]);
-        setParagraphs(parasData || []);
-        if (activityResult.success && activityResult.data) {
-          setAllDecisions(activityResult.data.decisions || []);
-          setAllComments(activityResult.data.comments || []);
-        }
-        if (versionsResult.success && versionsResult.data) {
-          setDocumentVersions(versionsResult.data);
-        }
-        setLoading(false);
-      };
-      fetchData();
-    }
-  }, [open, paragraphs, loading, symbol]);
+  // Fetch static data (paragraphs, versions) once per symbol
+  useEffect(() => {
+    if (!open || lastFetchedSymbolRef.current === symbol) return;
+    lastFetchedSymbolRef.current = symbol;
+    setLoading(true);
+
+    Promise.all([
+      fetchParagraphs(symbol),
+      getDocumentVersionsAction(symbol).catch(() => ({
+        success: false as const,
+        error: "Failed to load",
+      })),
+    ]).then(([parasData, versionsResult]) => {
+      setParagraphs(parasData || []);
+      if (versionsResult.success && versionsResult.data) {
+        setDocumentVersions(versionsResult.data);
+      }
+      setLoading(false);
+    });
+  }, [open, symbol]);
+
+  // Reset static data when symbol changes
+  useEffect(() => {
+    lastFetchedSymbolRef.current = null;
+    setParagraphs(null);
+    setDocumentVersions([]);
+  }, [symbol]);
+
+  // Poll activity data (decisions, comments) every 3s while open
+  useEffect(() => {
+    if (!open) return;
+
+    const fetchActivity = async () => {
+      const result = await getDocumentDecisionsAction(symbol).catch(() => ({
+        success: false as const,
+        error: "Failed to load",
+      }));
+      if (result.success && result.data) {
+        setAllDecisions(result.data.decisions || []);
+        setAllComments(result.data.comments || []);
+      }
+    };
+
+    fetchActivity(); // Initial fetch
+    const interval = setInterval(fetchActivity, 3000);
+    return () => clearInterval(interval);
+  }, [open, symbol]);
 
   const handleClick = useCallback(
     (e: React.MouseEvent) => {
@@ -610,54 +630,20 @@ export function DocumentSymbol({
     [setOpen],
   );
 
-  // Wrapper to update local state when decision is made
+  // Wrapper - just forward to parent, polling will update the list
   const handleDecision = useCallback(
     (decision: Decision, newSymbol?: string) => {
-      if (!onDecision || !entity) return;
-      // Optimistic update to local state
-      const newDecision: MandateDecision = {
-        id: "",
-        documentSymbol: symbol,
-        entity,
-        subprogramme: null,
-        decision,
-        newSymbol: newSymbol || null,
-        decisionReason: null,
-        otherReason: null,
-        userEmail: userEmail || "",
-        userEntity: userEntity ?? null,
-        createdAt: new Date().toISOString(),
-        approvedBy: null,
-        approvedByEntity: null,
-        approvedAt: null,
-      };
-      setAllDecisions((prev) => [...prev, newDecision]);
-      onDecision(decision, newSymbol);
+      onDecision?.(decision, newSymbol);
     },
-    [onDecision, entity, userEmail, userEntity, symbol],
+    [onDecision],
   );
 
-  // Wrapper to update local state when comment is added
+  // Wrapper - just forward to parent, polling will update the list
   const handleComment = useCallback(
     (comment: string) => {
-      if (!onComment || !entity) return;
-      // Optimistic update to local state
-      const newComment: MandateComment = {
-        id: "",
-        documentSymbol: symbol,
-        entity,
-        subprogramme: null,
-        comment,
-        userEmail: userEmail || "",
-        userEntity: userEntity ?? null,
-        createdAt: new Date().toISOString(),
-        resolvedAt: null,
-        resolvedBy: null,
-      };
-      setAllComments((prev) => [...prev, newComment]);
-      onComment(comment);
+      onComment?.(comment);
     },
-    [onComment, entity, userEmail, userEntity, symbol],
+    [onComment],
   );
 
   const isTruncated = symbol.length > 18;
