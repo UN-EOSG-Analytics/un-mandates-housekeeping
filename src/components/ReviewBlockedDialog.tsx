@@ -27,6 +27,7 @@ export function ReviewBlockedDialog({ isOpen, onClose }: Props) {
       }, 150);
     } else {
       // Reset showDialog when isOpen becomes false
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- Sync dialog state with isOpen prop
       setShowDialog(false);
     }
     return () => {

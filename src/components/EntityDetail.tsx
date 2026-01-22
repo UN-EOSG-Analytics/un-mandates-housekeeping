@@ -1373,7 +1373,7 @@ export function EntityDetail({
   );
 
   // Real-time sync via polling (works with Vercel serverless)
-  const { isConnected: realtimeConnected } = useRealtimeDecisions({
+  useRealtimeDecisions({
     entity,
     onRemoteChange: handleRemoteChange,
     enabled: true,

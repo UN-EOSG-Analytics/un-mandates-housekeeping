@@ -51,8 +51,6 @@ export function useRealtimeDecisions({
   const lastPollTimeRef = useRef<string>(new Date().toISOString());
   // Track IDs we've already processed to avoid duplicates
   const processedIdsRef = useRef<Set<string>>(new Set());
-  // Track IDs of changes we made locally (to filter out)
-  const localChangeIdsRef = useRef<Set<string>>(new Set());
   // Polling interval ref
   const pollIntervalRef = useRef<NodeJS.Timeout | null>(null);
   // Callback ref to avoid stale closures

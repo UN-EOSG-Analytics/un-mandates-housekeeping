@@ -564,9 +564,10 @@ export function DocumentSymbol({
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [open, setOpen]);
 
-  // Set initial tab when provided
+  // Set initial tab when modal opens with a specific tab
   useEffect(() => {
     if (open && initialTab) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- Sync state with props on modal open
       setActiveTab(initialTab);
     }
   }, [open, initialTab]);
@@ -578,6 +579,7 @@ export function DocumentSymbol({
   useEffect(() => {
     if (!open || lastFetchedSymbolRef.current === symbol) return;
     lastFetchedSymbolRef.current = symbol;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Legitimate async data fetching
     setLoading(true);
 
     Promise.all([
@@ -598,6 +600,7 @@ export function DocumentSymbol({
   // Reset static data when symbol changes
   useEffect(() => {
     lastFetchedSymbolRef.current = null;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Reset state when symbol prop changes
     setParagraphs(null);
     setDocumentVersions([]);
   }, [symbol]);
