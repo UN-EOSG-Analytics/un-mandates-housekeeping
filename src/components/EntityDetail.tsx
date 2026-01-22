@@ -7,6 +7,7 @@ import {
     DialogHeader,
     DialogTitle,
 } from "@/components/ui/dialog";
+import { useRealtimeDecisions, type RealtimeChange } from "@/lib/hooks/useRealtimeDecisions";
 import { getAgeIndicator } from "@/lib/services/age-indicator";
 import {
     approveDecisionAction,
@@ -15,6 +16,7 @@ import {
     endReviewModeAction,
     getEntityDecisionsAction,
     getReviewModeStatusAction,
+    getSingleMandateStateAction,
     getUserRoleAction,
     startReviewModeAction,
     updateDecisionReasonAction,
@@ -1307,6 +1309,49 @@ export function EntityDetail({
       .catch(() => {})
       .finally(() => setReviewModeLoaded(true));
   }, [entity]);
+
+  // Handle real-time changes from other users (via polling)
+  const handleRemoteChange = useCallback(
+    async (change: RealtimeChange) => {
+      // Fetch the updated state for this specific mandate
+      const result = await getSingleMandateStateAction({
+        documentSymbol: change.document_symbol,
+        entity,
+        subprogramme: change.subprogramme,
+      });
+
+      if (result.success) {
+        const key = `${change.document_symbol}:${change.subprogramme || ""}`;
+
+        if (result.data) {
+          // Update or add the state
+          setStates((prev) => ({
+            ...prev,
+            [key]: result.data!,
+          }));
+        }
+
+        // Update total comments count if it was a comment change
+        if (change.table === "mandate_comments") {
+          setTotalComments((prev) => ({
+            ...prev,
+            [change.document_symbol]:
+              (result.data?.comments?.length ?? prev[change.document_symbol]) ||
+              0,
+          }));
+        }
+      }
+    },
+    [entity],
+  );
+
+  // Real-time sync via polling (works with Vercel serverless)
+  const { isConnected: realtimeConnected } = useRealtimeDecisions({
+    entity,
+    onRemoteChange: handleRemoteChange,
+    enabled: true,
+    pollIntervalMs: 3000, // Poll every 3 seconds
+  });
 
   // Fetch metadata for added documents
   useEffect(() => {

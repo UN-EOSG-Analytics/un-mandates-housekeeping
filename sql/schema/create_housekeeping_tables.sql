@@ -1,6 +1,6 @@
 -- Housekeeping tables for mandate decisions
 -- Run this in your PostgreSQL database
--- All timestamps default to New York timezone
+-- All timestamps use UTC
 
 CREATE SCHEMA IF NOT EXISTS mandates_housekeeping;
 
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS mandates_housekeeping.mandate_decisions (
   other_reason TEXT,  -- freetext explanation when reason is "other"
   
   user_email TEXT NOT NULL,
-  created_at TIMESTAMPTZ DEFAULT (NOW() AT TIME ZONE 'America/New_York'),
+  created_at TIMESTAMPTZ DEFAULT NOW(),
   
   approved_by TEXT,  -- reviewer email who approved
   approved_at TIMESTAMPTZ
@@ -27,6 +27,10 @@ CREATE TABLE IF NOT EXISTS mandates_housekeeping.mandate_decisions (
 CREATE INDEX IF NOT EXISTS idx_mandate_decisions_lookup 
   ON mandates_housekeeping.mandate_decisions 
   (entity, document_symbol, COALESCE(subprogramme, ''), created_at DESC);
+
+-- Index optimized for real-time polling: WHERE entity = $1 AND created_at > $2
+CREATE INDEX IF NOT EXISTS idx_mandate_decisions_polling 
+  ON mandates_housekeeping.mandate_decisions (entity, created_at DESC);
 
 COMMENT ON COLUMN mandates_housekeeping.mandate_decisions.manual_metadata IS 
   'For manual add decisions: {title, body, year, link}';
@@ -44,7 +48,7 @@ CREATE TABLE IF NOT EXISTS mandates_housekeeping.mandate_comments (
   
   comment TEXT NOT NULL,
   user_email TEXT NOT NULL,
-  created_at TIMESTAMPTZ DEFAULT (NOW() AT TIME ZONE 'America/New_York'),
+  created_at TIMESTAMPTZ DEFAULT NOW(),
   
   resolved_at TIMESTAMPTZ,
   resolved_by TEXT
@@ -53,6 +57,10 @@ CREATE TABLE IF NOT EXISTS mandates_housekeeping.mandate_comments (
 CREATE INDEX IF NOT EXISTS idx_mandate_comments_lookup 
   ON mandates_housekeeping.mandate_comments 
   (entity, document_symbol, COALESCE(subprogramme, ''), created_at DESC);
+
+-- Index optimized for real-time polling: WHERE entity = $1 AND created_at > $2
+CREATE INDEX IF NOT EXISTS idx_mandate_comments_polling 
+  ON mandates_housekeeping.mandate_comments (entity, created_at DESC);
 
 -- DOCX uploads tracking
 CREATE TABLE IF NOT EXISTS mandates_housekeeping.docx_uploads (

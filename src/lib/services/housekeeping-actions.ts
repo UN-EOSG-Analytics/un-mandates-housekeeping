@@ -198,6 +198,73 @@ export async function getEntityDecisionsAction(entity: string): Promise<
 }
 
 /**
+ * Get state for a single mandate (document + entity + subprogramme)
+ * Used for granular real-time updates
+ */
+export async function getSingleMandateStateAction(params: {
+  documentSymbol: string;
+  entity: string;
+  subprogramme: string | null;
+}): Promise<ActionResult<MandateState | null>> {
+  const { documentSymbol, entity, subprogramme } = params;
+
+  if (!documentSymbol || !entity) {
+    return { success: false, error: "documentSymbol and entity required" };
+  }
+
+  const decisionSubprogrammeCondition = subprogramme
+    ? `AND d.subprogramme = $3`
+    : `AND d.subprogramme IS NULL`;
+
+  const commentSubprogrammeCondition = subprogramme
+    ? `AND c.subprogramme = $3`
+    : `AND c.subprogramme IS NULL`;
+
+  const queryParams = subprogramme
+    ? [documentSymbol, entity, subprogramme]
+    : [documentSymbol, entity];
+
+  const [decisionRows, commentRows] = await Promise.all([
+    query<DecisionRow>(
+      `SELECT d.*, u.entity as user_entity, approver.entity as approved_by_entity
+       FROM mandates_housekeeping.mandate_decisions d
+       LEFT JOIN mandates_housekeeping.users u ON d.user_email = u.email
+       LEFT JOIN mandates_housekeeping.users approver ON d.approved_by = approver.email
+       WHERE d.document_symbol = $1 AND d.entity = $2 ${decisionSubprogrammeCondition}
+       ORDER BY d.created_at`,
+      queryParams,
+    ),
+    query<CommentRow>(
+      `SELECT c.*, u.entity as user_entity
+       FROM mandates_housekeeping.mandate_comments c
+       LEFT JOIN mandates_housekeeping.users u ON c.user_email = u.email
+       WHERE c.document_symbol = $1 AND c.entity = $2 ${commentSubprogrammeCondition}
+       ORDER BY c.created_at`,
+      queryParams,
+    ),
+  ]);
+
+  if (decisionRows.length === 0 && commentRows.length === 0) {
+    return { success: true, data: null };
+  }
+
+  const decisions = decisionRows.map(toDecision);
+  const comments = commentRows.map(toComment);
+
+  return {
+    success: true,
+    data: {
+      documentSymbol,
+      entity,
+      subprogramme,
+      decision: decisions.length > 0 ? decisions[decisions.length - 1] : null,
+      decisions,
+      comments,
+    },
+  };
+}
+
+/**
  * Get all decisions and comments for a specific document across all entities
  */
 export async function getDocumentDecisionsAction(
