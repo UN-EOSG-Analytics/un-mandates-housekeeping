@@ -74,8 +74,8 @@ export async function POST(req: NextRequest) {
     // Record in database
     const result = await query<{ id: string; created_at: string }>(
       `INSERT INTO mandates_housekeeping.docx_uploads 
-       (filename, blob_url, blob_name, content_type, size_bytes, entity, subprogramme, user_email, user_entity, metadata)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+       (filename, blob_url, blob_name, content_type, size_bytes, entity, subprogramme, user_email, metadata)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
        RETURNING id, created_at`,
       [
         file.name,
@@ -86,7 +86,6 @@ export async function POST(req: NextRequest) {
         entity,
         subprogramme || null,
         user.email,
-        user.entity || null,
         JSON.stringify({
           uploadedAt: new Date().toISOString(),
           userAgent: req.headers.get("user-agent") || null,

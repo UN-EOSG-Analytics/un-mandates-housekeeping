@@ -85,7 +85,7 @@ export async function fetchPPBRecords(): Promise<PPBRecord[]> {
       d.ppb_body,
       d.ppb_type
     FROM ppb2026.source_document_citations c
-    LEFT JOIN systemchart.entities e
+    LEFT JOIN mandates_housekeeping.entities e
       ON c.entity = e.entity
     LEFT JOIN public.documents doc 
       ON REGEXP_REPLACE(c.ppb_full_document_symbol, '(\\d) ([A-Z])$', '\\1\\2') = doc.symbol
@@ -212,7 +212,7 @@ export async function fetchPPBRecords(): Promise<PPBRecord[]> {
 export async function fetchEntities(): Promise<EntityOption[]> {
   const rows = await query<EntityOption>(
     `SELECT DISTINCT e.entity, e.entity_long
-     FROM systemchart.entities e
+     FROM mandates_housekeeping.entities e
      INNER JOIN ppb2026.source_document_citations c ON e.entity = c.entity
      ORDER BY e.entity`,
   );

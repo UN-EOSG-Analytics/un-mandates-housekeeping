@@ -8,7 +8,7 @@ CREATE SCHEMA IF NOT EXISTS mandates_housekeeping;
 CREATE TABLE IF NOT EXISTS mandates_housekeeping.mandate_decisions (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   document_symbol TEXT NOT NULL,
-  entity TEXT NOT NULL,
+  entity TEXT NOT NULL REFERENCES mandates_housekeeping.entities(entity) ON DELETE RESTRICT,
   subprogramme TEXT,
   
   decision TEXT NOT NULL CHECK (decision IN ('retain', 'remove', 'add', 'update', 'cancel')),
@@ -17,10 +17,10 @@ CREATE TABLE IF NOT EXISTS mandates_housekeeping.mandate_decisions (
   decision_reason TEXT,  -- primary reason for the decision
   other_reason TEXT,  -- freetext explanation when reason is "other"
   
-  user_email TEXT NOT NULL,
+  user_email TEXT NOT NULL REFERENCES mandates_housekeeping.users(email) ON DELETE RESTRICT,
   created_at TIMESTAMPTZ DEFAULT NOW(),
   
-  approved_by TEXT,  -- reviewer email who approved
+  approved_by TEXT REFERENCES mandates_housekeeping.users(email) ON DELETE RESTRICT,
   approved_at TIMESTAMPTZ
 );
 
@@ -31,6 +31,10 @@ CREATE INDEX IF NOT EXISTS idx_mandate_decisions_lookup
 -- Index optimized for real-time polling: WHERE entity = $1 AND created_at > $2
 CREATE INDEX IF NOT EXISTS idx_mandate_decisions_polling 
   ON mandates_housekeeping.mandate_decisions (entity, created_at DESC);
+
+-- Index for document symbol lookup across all entities
+CREATE INDEX IF NOT EXISTS idx_mandate_decisions_symbol 
+  ON mandates_housekeeping.mandate_decisions (document_symbol);
 
 COMMENT ON COLUMN mandates_housekeeping.mandate_decisions.manual_metadata IS 
   'For manual add decisions: {title, body, year, link}';
@@ -43,15 +47,16 @@ COMMENT ON COLUMN mandates_housekeeping.mandate_decisions.other_reason IS
 CREATE TABLE IF NOT EXISTS mandates_housekeeping.mandate_comments (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   document_symbol TEXT NOT NULL,
-  entity TEXT NOT NULL,
+  entity TEXT NOT NULL REFERENCES mandates_housekeeping.entities(entity) ON DELETE RESTRICT,
   subprogramme TEXT,
   
   comment TEXT NOT NULL,
-  user_email TEXT NOT NULL,
+  user_email TEXT NOT NULL REFERENCES mandates_housekeeping.users(email) ON DELETE RESTRICT,
   created_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW(),
   
   resolved_at TIMESTAMPTZ,
-  resolved_by TEXT
+  resolved_by TEXT REFERENCES mandates_housekeeping.users(email) ON DELETE RESTRICT
 );
 
 CREATE INDEX IF NOT EXISTS idx_mandate_comments_lookup 
@@ -61,6 +66,11 @@ CREATE INDEX IF NOT EXISTS idx_mandate_comments_lookup
 -- Index optimized for real-time polling: WHERE entity = $1 AND created_at > $2
 CREATE INDEX IF NOT EXISTS idx_mandate_comments_polling 
   ON mandates_housekeeping.mandate_comments (entity, created_at DESC);
+
+-- Partial index for unresolved comments lookup
+CREATE INDEX IF NOT EXISTS idx_mandate_comments_unresolved
+  ON mandates_housekeeping.mandate_comments (entity, document_symbol)
+  WHERE resolved_at IS NULL;
 
 -- DOCX uploads tracking
 CREATE TABLE IF NOT EXISTS mandates_housekeeping.docx_uploads (
@@ -74,15 +84,14 @@ CREATE TABLE IF NOT EXISTS mandates_housekeeping.docx_uploads (
     size_bytes BIGINT,
     
     -- Context: which entity page was this uploaded from
-    entity TEXT NOT NULL,
+    entity TEXT NOT NULL REFERENCES mandates_housekeeping.entities(entity) ON DELETE RESTRICT,
     subprogramme TEXT,
-    
+
     -- User info
-    user_email TEXT NOT NULL,
-    user_entity TEXT,
+    user_email TEXT NOT NULL REFERENCES mandates_housekeeping.users(email) ON DELETE RESTRICT,
     
-    -- Timestamps (New York timezone)
-    created_at TIMESTAMPTZ DEFAULT (NOW() AT TIME ZONE 'America/New_York'),
+    -- Timestamps (UTC)
+    created_at TIMESTAMPTZ DEFAULT NOW(),
     
     -- Optional metadata
     metadata JSONB
@@ -102,11 +111,12 @@ COMMENT ON COLUMN mandates_housekeeping.docx_uploads.blob_name IS
 
 -- Entity review mode (locks entity for review)
 CREATE TABLE IF NOT EXISTS mandates_housekeeping.entity_review_mode (
-  entity TEXT PRIMARY KEY,
-  started_by TEXT NOT NULL REFERENCES mandates_housekeeping.users(email),
-  started_at TIMESTAMPTZ DEFAULT (NOW() AT TIME ZONE 'America/New_York'),
+  entity TEXT PRIMARY KEY REFERENCES mandates_housekeeping.entities(entity) ON DELETE RESTRICT,
+  started_by TEXT NOT NULL REFERENCES mandates_housekeeping.users(email) ON DELETE RESTRICT,
+  started_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW(),
   ended_at TIMESTAMPTZ,
-  ended_by TEXT REFERENCES mandates_housekeeping.users(email)
+  ended_by TEXT REFERENCES mandates_housekeeping.users(email) ON DELETE RESTRICT
 );
 
 CREATE INDEX IF NOT EXISTS idx_entity_review_mode_active 

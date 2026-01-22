@@ -1,7 +1,20 @@
 -- Auth tables for magic link login
 -- Run this in your PostgreSQL database
--- All timestamps default to New York timezone
+-- All timestamps use UTC (application handles timezone display)
 CREATE SCHEMA IF NOT EXISTS mandates_housekeeping;
+
+-- Entities reference table (local copy to avoid cross-schema coupling)
+-- Synced from systemchart.entities but independent for data integrity
+CREATE TABLE IF NOT EXISTS mandates_housekeeping.entities (
+    entity TEXT PRIMARY KEY,
+    entity_long TEXT,
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+COMMENT ON TABLE mandates_housekeeping.entities IS 'Local copy of UN entities. Sync from systemchart.entities';
+
+CREATE INDEX IF NOT EXISTS idx_entities_entity_long ON mandates_housekeeping.entities (entity_long);
 
 -- Users table: stores authenticated users
 -- Note: Role/reviewer status is determined dynamically by checking allowed_reviewers table
@@ -9,8 +22,9 @@ CREATE TABLE IF NOT EXISTS
     mandates_housekeeping.users (
         id UUID PRIMARY KEY DEFAULT gen_random_uuid (),
         email TEXT UNIQUE NOT NULL,
-        entity TEXT,
-        created_at TIMESTAMPTZ DEFAULT (NOW() AT TIME ZONE 'America/New_York'),
+        entity TEXT REFERENCES mandates_housekeeping.entities(entity) ON DELETE SET NULL,
+        created_at TIMESTAMPTZ DEFAULT NOW(),
+        updated_at TIMESTAMPTZ DEFAULT NOW(),
         last_login_at TIMESTAMPTZ
     );
 
@@ -24,6 +38,11 @@ CREATE TABLE IF NOT EXISTS
     );
 
 CREATE INDEX IF NOT EXISTS idx_magic_tokens_expires ON mandates_housekeeping.magic_tokens (expires_at);
+
+-- Index for cleanup queries (expired unused tokens)
+CREATE INDEX IF NOT EXISTS idx_magic_tokens_cleanup 
+    ON mandates_housekeeping.magic_tokens (expires_at) 
+    WHERE used_at IS NULL;
 
 -- Allowlist of emails that have reviewer privileges
 -- Reviewer status is checked dynamically at runtime by joining with this table
@@ -55,3 +74,14 @@ VALUES
     ('UNRWA', 'unrwa.org'),
     ('UN-Women', 'unwomen.org') ON CONFLICT
 DO NOTHING;
+
+-- ============================================================================
+-- Sync entities from systemchart (run after initial setup or periodically)
+-- This upserts entities from the shared systemchart.entities table
+-- ============================================================================
+INSERT INTO mandates_housekeeping.entities (entity, entity_long)
+SELECT entity, entity_long 
+FROM systemchart.entities
+ON CONFLICT (entity) DO UPDATE SET 
+    entity_long = EXCLUDED.entity_long,
+    updated_at = NOW();

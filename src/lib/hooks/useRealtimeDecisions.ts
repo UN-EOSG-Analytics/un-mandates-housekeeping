@@ -32,10 +32,10 @@ interface UseRealtimeDecisionsReturn {
 
 /**
  * Hook for real-time decision/comment sync via polling
- * 
+ *
  * Polls the server every few seconds for changes.
  * Designed to work with Vercel serverless functions.
- * 
+ *
  * Changes made by the current user are filtered out via timestamp comparison.
  */
 export function useRealtimeDecisions({
@@ -76,7 +76,7 @@ export function useRealtimeDecisions({
       }
 
       const data = await response.json();
-      
+
       // Update last poll time from server
       if (data.serverTime) {
         lastPollTimeRef.current = data.serverTime;

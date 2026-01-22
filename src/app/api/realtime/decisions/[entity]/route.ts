@@ -1,6 +1,6 @@
 /**
  * Polling endpoint for real-time decision/comment updates
- * 
+ *
  * Returns changes since `since` timestamp for efficient polling.
  * Designed for Vercel serverless (no long-lived connections).
  */
@@ -42,9 +42,9 @@ export async function GET(
   // Get `since` timestamp from query params (ISO string or epoch ms)
   const url = new URL(request.url);
   const sinceParam = url.searchParams.get("since");
-  
+
   // Default to 30 seconds ago if no timestamp provided
-  const since = sinceParam 
+  const since = sinceParam
     ? new Date(isNaN(Number(sinceParam)) ? sinceParam : Number(sinceParam))
     : new Date(Date.now() - 30000);
 
@@ -82,13 +82,16 @@ export async function GET(
 
     // Dedupe by document_symbol + subprogramme, keeping most recent
     const changesMap = new Map<string, ChangeRecord>();
-    
+
     for (const record of [...decisions, ...comments]) {
       const key = `${record.document_symbol}:${record.subprogramme || ""}`;
       const existing = changesMap.get(key);
-      
+
       // Keep the most recent change for each document
-      if (!existing || new Date(record.created_at) > new Date(existing.created_at)) {
+      if (
+        !existing ||
+        new Date(record.created_at) > new Date(existing.created_at)
+      ) {
         changesMap.set(key, record);
       }
     }
