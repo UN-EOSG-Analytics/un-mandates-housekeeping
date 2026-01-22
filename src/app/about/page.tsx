@@ -160,14 +160,10 @@ export default async function AboutPage() {
         {/* Hero */}
         <section className="mx-auto max-w-6xl px-4 py-16 text-center">
           <h2 className="mb-4 text-4xl font-bold tracking-tight text-gray-900">
-            Streamline Your Mandate Submission
+            Streamline Your Mandate Review and Submission
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600">
-            The Mandate Housekeeping Platform helps programme officers verify,
-            update, and manage legislative mandate citations for the UN
-            Programme Budget 2027.
-            <br />
-            Work collaboratively with validated document data.
+            The Mandate Housekeeping Platform is being tested as a pilot tool to support UN Secretariat entities review and update mandate citations for the 2027 Proposed Programme Budget (PPB) – Programme Plan.
           </p>
           <div className="flex items-center justify-center gap-4">
             <Link
@@ -196,8 +192,8 @@ export default async function AboutPage() {
             {/* 1. Find Your Entity */}
             <FeatureCard
               icon={Building2}
-              title="Find Your Entity Quickly"
-              description="Browse all entities organized by budget part. Search by name or jump directly to your assigned entity with the My Entity shortcut."
+              title="Find Your Entity"
+              description="Browse entities, search by name or use the My Entity shortcut."
             >
               <div className="space-y-2">
                 <div className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 py-2">
@@ -218,8 +214,8 @@ export default async function AboutPage() {
             {/* 2. All Mandates at a Glance */}
             <FeatureCard
               icon={FileText}
-              title="All Mandates at a Glance"
-              description="See every mandate for your entity in the familiar PPB structure. Sort by symbol, title, body, year, or how many other entities share the citation."
+              title="Mandates at a Glance"
+              description="View all mandates for your entity in the familiar PPB structure. Sort by symbol, title, body, year, or how many other entities share the citation."
             >
               <div className="space-y-2">
                 <div className="text-[10px] font-semibold tracking-wider text-gray-400 uppercase">
@@ -243,8 +239,8 @@ export default async function AboutPage() {
             {/* 3. Mark Your Housekeeping Decisions */}
             <FeatureCard
               icon={Check}
-              title="Mark Your Housekeeping Decisions"
-              description="For each mandate, decide whether to Retain, Remove, or Update. Add a reason for your decision to help PPBD reviewers understand your rationale."
+              title="Record Your Housekeeping Actions"
+              description="Record whether each mandate is retained, updated or removed and indicate a reason for your decision for review and validation."
             >
               <div className="flex flex-wrap items-center gap-3">
                 <div className="flex items-center gap-2">
@@ -268,8 +264,8 @@ export default async function AboutPage() {
             {/* 4. Search the Official Document System */}
             <FeatureCard
               icon={Search}
-              title="Search the Official Document System"
-              description="Add or update citations using validated data from the UN Digital Library and ODS. Search by symbol or title to get metadata and PDF links."
+              title="Search the UN's Official Document System (ODS)"
+              description="Add or update mandate citations using validated data from the UN Digital Library and ODS. Search by symbol or title to add a record and its metadata including title, year, issuing body and a PDF link."
             >
               <div className="space-y-2">
                 <div className="flex items-center gap-2 rounded-lg border-2 border-dashed border-gray-200 px-3 py-2">
@@ -294,8 +290,8 @@ export default async function AboutPage() {
             {/* 5. Built-In Approval Process */}
             <FeatureCard
               icon={Check}
-              title="Built-In Approval Process"
-              description="PPBD reviewers can approve entity decisions with a single click. Approval status is visible to all, ensuring transparency in the approval workflow."
+              title="Built-In Validation Process"
+              description="PPBD will help support a harmonization of approaches to mandate citations across all entities and validate that lists of legislative mandates are accurate and up-to-date. Validation status is visible to all, ensuring transparency in the review cycle."
             >
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-2">
@@ -313,8 +309,8 @@ export default async function AboutPage() {
             {/* 6. Discuss and Coordinate */}
             <FeatureCard
               icon={MessageSquare}
-              title="Discuss and Coordinate"
-              description="Add comments on any mandate to flag issues or coordinate. Comments work across entities sharing a mandate, enabling cross-entity coordination."
+              title="Mandate Coordination"
+              description="Add comments on a mandate to flag issues or support discussion and coordination among entities citing the same mandate."
             >
               <div className="space-y-2">
                 <div className="flex items-start gap-2 rounded p-2 shadow-sm">
@@ -335,8 +331,8 @@ export default async function AboutPage() {
             {/* 7. Deep Dive Into Any Document */}
             <FeatureCard
               icon={Layers}
-              title="Deep Dive Into Any Document"
-              description="Click any document to open a detailed sidebar with full metadata, version history, paragraph text, and all activity from across entities."
+              title="Deep Dive Into Document Details"
+              description="Click a document to open a detailed view with metadata, version history, full document text, and any recorded actions and comments from all entities."
             >
               <div className="space-y-2">
                 <div className="flex gap-1">
@@ -369,8 +365,8 @@ export default async function AboutPage() {
             {/* 8. Entity Mention Highlighting */}
             <FeatureCard
               icon={Sparkles}
-              title="Entity Mention Highlighting"
-              description="View the full document text with your entity name automatically highlighted. Collapse irrelevant paragraphs to focus on what matters."
+              title="Highlighted Entity References"
+              description="View the full document text and filter by mentions of your entity, highlighted for ease of reference."
             >
               <div className="space-y-2 text-xs">
                 <div className="flex gap-1">
@@ -403,8 +399,8 @@ export default async function AboutPage() {
             {/* 9. At-a-Glance Citation Age */}
             <FeatureCard
               icon={FileText}
-              title="At-a-Glance Citation Age"
-              description="Color-coded indicators show how old each mandate is at a glance, helping you prioritize which citations may need updating."
+              title="At-a-Glance Mandate Age"
+              description="Color-coded indicators show a mandate's age, helping you prioritize which citations may need review or updating."
             >
               <div className="flex flex-wrap items-center gap-3">
                 <div className="flex items-center gap-1.5">
@@ -437,8 +433,8 @@ export default async function AboutPage() {
             {/* 10. Proactive Issue Detection */}
             <FeatureCard
               icon={Sparkles}
-              title="Proactive Issue Detection"
-              description="The platform flags potential issues: missing metadata, unavailable PDF links, or newer versions already cited. Each warning suggests an action."
+              title="Issue Detection and Rectification"
+              description="The platform detects potential issues: missing metadata, unavailable PDF links, or newer versions already cited and suggests a recommended action to rectify a potential issue."
             >
               <div className="space-y-2">
                 <div className="flex items-center gap-2 rounded-lg bg-amber-50 px-2 py-1.5">
@@ -463,8 +459,8 @@ export default async function AboutPage() {
             {/* 11. Never Miss an Updated Resolution */}
             <FeatureCard
               icon={Sparkles}
-              title="Never Miss an Updated Resolution"
-              description="The platform automatically detects when newer versions of cited documents exist. Smart alerts prompt you to update to the latest version."
+              title="Never Miss an Updated Mandate"
+              description="Newer mandate citations are identified automatically. Smart alerts allow you to update to the latest version, where appropriate."
             >
               <div className="space-y-2">
                 <MockWarning
@@ -488,7 +484,7 @@ export default async function AboutPage() {
             <FeatureCard
               icon={ArrowLeftRight}
               title="Compare Document Versions"
-              description="Not sure what changed? Use the built-in diff viewer to see what text was added, removed, or modified between document versions."
+              description="Not sure what changed? Use the built-in comparison viewer to see what text was added, removed, or modified between document versions."
             >
               <div className="grid grid-cols-2 gap-2 text-[10px]">
                 <div className="space-y-1.5">
@@ -518,8 +514,8 @@ export default async function AboutPage() {
             {/* 13. Discover Shared Citations */}
             <FeatureCard
               icon={Users}
-              title="Discover Shared Citations"
-              description="See which mandates are cited by multiple entities. Useful for discussing which entity has a comparative advantage for a given mandate."
+              title="View Cross-entity Mandate Citations"
+              description="View which entities cite a mandate to inform potential discussion and coordination among entities."
             >
               <div className="flex flex-wrap gap-1.5">
                 {["DPPA 12", "DPO 8", "OHCHR 5", "OIOS 4"].map((e) => (
@@ -539,8 +535,8 @@ export default async function AboutPage() {
             {/* 14. Foundational Mandates */}
             <FeatureCard
               icon={Star}
-              title="Foundational Mandates"
-              description="Mandates that appear in both your subprogramme and Mandates and Background are marked with a star for easy identification."
+              title="Foundational and Background Mandates"
+              description="Mandates cited in the Mandates and Background are marked with a star for easy identification."
             >
               <div className="flex items-center gap-2">
                 <Star
@@ -557,7 +553,7 @@ export default async function AboutPage() {
             <FeatureCard
               icon={Mail}
               title="Magic Link Sign-In"
-              description="Sign in with your UN email—we'll send you a secure link. Focal points can also invite colleagues to collaborate on the submission."
+              description="Sign in with your UN email—we'll send you a secure link. You can also invite colleagues to collaborate on the submission."
             >
               <div className="flex items-center gap-2">
                 <div className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-xs text-gray-400">
@@ -573,7 +569,7 @@ export default async function AboutPage() {
             <FeatureCard
               icon={Download}
               title="Export Your Data"
-              description="Export mandates and decisions to CSV, Excel, or Word. The Word format matches PPB publications for seamless workflow integration."
+              description="Export mandate citations in CSV, Excel, or Word formats. The Word files are formatted in line with publication standards for seamless integration into the 2027 PPB (Programme Plan)."
             >
               <div className="flex items-center gap-2">
                 <button className="flex items-center gap-1.5 rounded border border-gray-200 px-2 py-1 text-xs text-gray-600">
@@ -608,7 +604,7 @@ export default async function AboutPage() {
                 </div>
                 <h4 className="mb-2 font-semibold text-gray-900">Sign In</h4>
                 <p className="text-sm text-gray-600">
-                  Enter your UN email and click the magic link we send you.
+                  Enter your UN email and click the magic link sent to your email.
                 </p>
               </div>
               <div>
@@ -619,7 +615,7 @@ export default async function AboutPage() {
                   Find Your Entity
                 </h4>
                 <p className="text-sm text-gray-600">
-                  Search or browse to your assigned entity&apos;s mandate list.
+                  Search or browse to your entity&apos;s mandate list.
                 </p>
               </div>
               <div>
@@ -630,7 +626,7 @@ export default async function AboutPage() {
                   Update Citations
                 </h4>
                 <p className="text-sm text-gray-600">
-                  Mark each citation as Retain, Remove, or Update with a reason.
+                  Record whether each mandate is retained, updated or removed with a reason.
                 </p>
               </div>
             </div>
