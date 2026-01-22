@@ -24,7 +24,9 @@ export function ReviewModeBanner({
             </p>
             <p className="text-xs text-amber-600">
               Changes by entity users are temporarily disabled and will not be
-              saved. However, you can continue exploring all features.
+              saved.
+              {!isReviewer &&
+                " However, you can continue exploring all features."}
               {isReviewer && startedBy && (
                 <span className="ml-1">
                   Review started by{" "}

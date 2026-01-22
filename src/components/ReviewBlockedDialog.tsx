@@ -24,7 +24,10 @@ export function ReviewBlockedDialog({ isOpen, onClose }: Props) {
     if (isOpen) {
       timerRef.current = setTimeout(() => {
         setShowDialog(true);
-      }, 800);
+      }, 150);
+    } else {
+      // Reset showDialog when isOpen becomes false
+      setShowDialog(false);
     }
     return () => {
       if (timerRef.current) {

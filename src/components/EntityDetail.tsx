@@ -1,50 +1,54 @@
 "use client";
 
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+} from "@/components/ui/dialog";
 import { getAgeIndicator } from "@/lib/services/age-indicator";
 import {
-  approveDecisionAction,
-  createCommentAction,
-  createDecisionAction,
-  getEntityDecisionsAction,
-  getUserRoleAction,
-  updateDecisionReasonAction,
+    approveDecisionAction,
+    createCommentAction,
+    createDecisionAction,
+    endReviewModeAction,
+    getEntityDecisionsAction,
+    getReviewModeStatusAction,
+    getUserRoleAction,
+    startReviewModeAction,
+    updateDecisionReasonAction,
 } from "@/lib/services/housekeeping-actions";
-import { getMandateWarnings } from "@/lib/services/mandate-warnings";
+import { getMandateWarnings, getWarningIcon } from "@/lib/services/mandate-warnings";
 import type {
-  Decision,
-  Mandate,
-  MandateComment,
-  MandateDecision,
-  MandateState,
+    Decision,
+    Mandate,
+    MandateComment,
+    MandateDecision,
+    MandateState,
 } from "@/types";
 import {
-  Check,
-  ChevronDown,
-  ChevronUp,
-  MessageSquare,
-  Pencil,
-  Search,
-  Star,
-  X,
+    Check,
+    ChevronDown,
+    ChevronUp,
+    MessageSquare,
+    Pencil,
+    Search,
+    Star,
+    X,
 } from "lucide-react";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
 import { orderBy } from "natural-orderby";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { DecisionDropdown } from "./DecisionDropdown";
 import { DiffModal } from "./DiffModal";
-import { DocumentSearchInput } from "./DocumentSearchInput";
 import { DocumentSymbol } from "./DocumentModal";
+import { DocumentSearchInput } from "./DocumentSearchInput";
 import { EntityHeader } from "./EntityHeader";
 import type { ManualEntryData } from "./ManualDocumentForm";
+import { ReviewBlockedDialog } from "./ReviewBlockedDialog";
+import { ReviewModeBanner } from "./ReviewModeBanner";
 import { Tooltip } from "./Tooltip";
 import { WarningIcon } from "./WarningIcon";
-import { getWarningIcon } from "@/lib/services/mandate-warnings";
 import { WarningTooltip } from "./WarningTooltip";
 
 interface Props {
@@ -668,12 +672,10 @@ function MandateRow({
   };
 
   const handleCancelUpdate = () => {
+    // Just close the update search UI - don't make any server call
+    // User's prior decision state (if any) remains unchanged
     setShowUpdateSearch(false);
     setUpdatePrefillSymbol(undefined);
-    // If update wasn't completed (no newSymbol), revert the decision
-    if (!hasCompletedUpdate) {
-      onDecision("cancel");
-    }
   };
 
   return (
@@ -1236,6 +1238,10 @@ export function EntityDetail({
   const [canReviewAnyEntity, setCanReviewAnyEntity] = useState(false);
   const [userEmail, setUserEmail] = useState<string | null>(null);
   const [userEntity, setUserEntity] = useState<string | null>(null);
+  const [isUnderReview, setIsUnderReview] = useState(false);
+  const [reviewModeLoaded, setReviewModeLoaded] = useState(false);
+  const [reviewStartedBy, setReviewStartedBy] = useState<string | null>(null);
+  const [showReviewBlockedDialog, setShowReviewBlockedDialog] = useState(false);
   const [addedMetadata, setAddedMetadata] = useState<
     Record<
       string,
@@ -1290,6 +1296,16 @@ export function EntityDetail({
         }
       })
       .catch(() => {});
+
+    getReviewModeStatusAction(entity)
+      .then((result) => {
+        if (result.success && result.data) {
+          setIsUnderReview(result.data.isUnderReview);
+          setReviewStartedBy(result.data.startedBy);
+        }
+      })
+      .catch(() => {})
+      .finally(() => setReviewModeLoaded(true));
   }, [entity]);
 
   // Fetch metadata for added documents
@@ -1443,7 +1459,15 @@ export function EntityDetail({
           },
         }));
       } else if (!result.success) {
-        // Revert optimistic update on failure
+        // Handle review mode blocked - let user explore, show dialog after delay
+        if (result.error === "review_mode_blocked") {
+          setTimeout(() => {
+            setShowReviewBlockedDialog(true);
+          }, 2000);
+          // Don't revert - let user continue exploring
+          return;
+        }
+        // Revert optimistic update on other failures
         console.error("Failed to save decision:", result.error);
         setStates((prev) => {
           const prevDecisions = prev[key]?.decisions?.filter((d) => d.id) || [];
@@ -1510,6 +1534,10 @@ export function EntityDetail({
               ) || [],
           },
         }));
+      } else if (!result.success && result.error === "review_mode_blocked") {
+        setTimeout(() => {
+          setShowReviewBlockedDialog(true);
+        }, 2000);
       }
     },
     [states],
@@ -1591,6 +1619,10 @@ export function EntityDetail({
             ],
           },
         }));
+      } else if (!result.success && result.error === "review_mode_blocked") {
+        setTimeout(() => {
+          setShowReviewBlockedDialog(true);
+        }, 2000);
       }
     },
     [entity, userEmail, userEntity],
@@ -1667,6 +1699,10 @@ export function EntityDetail({
             ],
           },
         }));
+      } else if (!result.success && result.error === "review_mode_blocked") {
+        setTimeout(() => {
+          setShowReviewBlockedDialog(true);
+        }, 2000);
       }
     },
     [entity, userEmail, userEntity],
@@ -1727,6 +1763,39 @@ export function EntityDetail({
     },
     [entity, userEmail, userEntity],
   );
+
+  const handleStartReview = useCallback(async () => {
+    const result = await startReviewModeAction(entity);
+    if (result.success && result.data) {
+      setIsUnderReview(result.data.isUnderReview);
+      setReviewStartedBy(result.data.startedBy);
+    } else if (!result.success) {
+      alert(`Failed to start review: ${result.error}`);
+    }
+  }, [entity]);
+
+  const handleEndReview = useCallback(async () => {
+    const result = await endReviewModeAction(entity);
+    if (result.success && result.data) {
+      setIsUnderReview(result.data.isUnderReview);
+      setReviewStartedBy(null);
+    } else if (!result.success) {
+      alert(`Failed to end review: ${result.error}`);
+    }
+  }, [entity]);
+
+  // Refresh decisions from server (used after review blocked dialog closes)
+  const refreshDecisions = useCallback(async () => {
+    const result = await getEntityDecisionsAction(entity);
+    if (result.success && result.data) {
+      const map: Record<string, MandateState> = {};
+      for (const s of result.data.states) {
+        map[`${s.documentSymbol}:${s.subprogramme || ""}`] = s;
+      }
+      setStates(map);
+      setTotalComments(result.data.totalComments);
+    }
+  }, [entity]);
 
   const handleApprove = useCallback(
     async (decisionId: string, approved: boolean) => {
@@ -1859,6 +1928,13 @@ export function EntityDetail({
           </p>
         </div>
       )}
+      {isUnderReview && (
+        <ReviewModeBanner
+          startedBy={reviewStartedBy}
+          isReviewer={isReviewer}
+          onEndReview={isReviewer ? handleEndReview : undefined}
+        />
+      )}
 
       <EntityHeader
         entity={entity}
@@ -1868,6 +1944,8 @@ export function EntityDetail({
         filteredTotal={filteredTotal}
         totalMandates={totalMandates}
         isReviewer={isReviewer}
+        isUnderReview={isUnderReview}
+        onStartReview={reviewModeLoaded ? handleStartReview : undefined}
       />
 
       {/* Phase Tracker */}
@@ -1992,6 +2070,15 @@ export function EntityDetail({
           </div>
         )}
       </div>
+
+      {/* Review blocked dialog - shown when user tries to save while under review */}
+      <ReviewBlockedDialog
+        isOpen={showReviewBlockedDialog}
+        onClose={() => {
+          setShowReviewBlockedDialog(false);
+          refreshDecisions();
+        }}
+      />
     </div>
   );
 }
