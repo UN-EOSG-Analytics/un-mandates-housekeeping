@@ -160,7 +160,7 @@ export default async function AboutPage() {
         {/* Hero */}
         <section className="mx-auto max-w-6xl px-4 py-16 text-center">
           <h2 className="mb-4 text-4xl font-bold tracking-tight text-gray-900">
-            Streamline Your Mandate Review and Submission
+            Streamline Your Mandate Citation Review
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600">
             The Mandate Housekeeping Platform is being tested as a pilot tool to support UN Secretariat entities review and update mandate citations for the 2027 Proposed Programme Budget (PPB) – Programme Plan.
