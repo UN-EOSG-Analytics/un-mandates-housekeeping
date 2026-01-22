@@ -78,6 +78,7 @@ interface Props {
   onComment?: (comment: string) => void;
   onUpdateClick?: (prefillSymbol?: string) => void; // Called when user selects "update" from sidebar
   metadataFromDb?: boolean;
+  initialTab?: "info" | "decisions" | "activity" | "paragraphs"; // Initial tab to open
 }
 
 function cleanPrefix(prefix: string) {
@@ -515,6 +516,7 @@ export function DocumentSymbol({
   onApprove,
   onComment,
   onUpdateClick,
+  initialTab,
 }: Props) {
   const [internalOpen, setInternalOpen] = useState(false);
   const open = controlledOpen ?? internalOpen;
@@ -531,7 +533,7 @@ export function DocumentSymbol({
   const [commentText, setCommentText] = useState("");
   const [activeTab, setActiveTab] = useState<
     "info" | "decisions" | "activity" | "paragraphs"
-  >("info");
+  >(initialTab ?? "info");
   const [allDecisions, setAllDecisions] = useState<MandateDecision[]>([]);
   const [allComments, setAllComments] = useState<MandateComment[]>([]);
   const [documentVersions, setDocumentVersions] = useState<DocumentVersion[]>(
@@ -561,6 +563,13 @@ export function DocumentSymbol({
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [open, setOpen]);
+
+  // Set initial tab when provided
+  useEffect(() => {
+    if (open && initialTab) {
+      setActiveTab(initialTab);
+    }
+  }, [open, initialTab]);
 
   // Fetch paragraphs, activity, and versions when sidebar opens
   useEffect(() => {

@@ -276,6 +276,7 @@ function MandateRowContent({
   isFoundational,
   allSymbols,
   onOpenSidebar,
+  onOpenActivityTab,
   onDecision,
   onReasonChange,
   onApprove,
@@ -293,7 +294,8 @@ function MandateRowContent({
   readOnly?: boolean; // True for background section (no interactivity)
   isFoundational?: boolean; // True if mandate is also in background mandates
   allSymbols?: Set<string>; // All symbols in current section for warning system
-  onOpenSidebar: () => void;
+  onOpenSidebar?: () => void;
+  onOpenActivityTab?: () => void;
   onDecision: (decision: Decision, newSymbol?: string) => void;
   onReasonChange?: (reason: string | null, otherReason: string | null) => void;
   onApprove?: (decisionId: string, approved: boolean) => void;
@@ -524,6 +526,10 @@ function MandateRowContent({
         }
       >
         <span
+          onClick={(e) => {
+            e.stopPropagation();
+            onOpenActivityTab?.();
+          }}
           className={`cursor-pointer text-xs ${commentCount > 0 ? "font-medium text-un-blue" : "text-gray-400"} ${contentGreyed ? "opacity-50" : ""}`}
         >
           {commentCount > 0 ? commentCount : "—"}
@@ -603,6 +609,7 @@ function MandateRow({
   onApprove: (decisionId: string, approved: boolean) => void;
   onUpdateWithManual: (newSymbol: string, manualData: ManualEntryData) => void;
   onComment: (comment: string) => void;
+  onOpenActivityTab?: () => void;
   isAdded?: boolean;
   readOnly?: boolean;
   isFoundational?: boolean;
@@ -614,6 +621,9 @@ function MandateRow({
   allSymbols?: Set<string>;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarInitialTab, setSidebarInitialTab] = useState<
+    "info" | "decisions" | "activity" | "paragraphs" | undefined
+  >(undefined);
   const [newDocSidebarOpen, setNewDocSidebarOpen] = useState(false);
   const [showUpdateSearch, setShowUpdateSearch] = useState(false);
   const [showReasonPopup, setShowReasonPopup] = useState(false);
@@ -698,7 +708,14 @@ function MandateRow({
         readOnly={readOnly}
         isFoundational={isFoundational}
         allSymbols={allSymbols}
-        onOpenSidebar={() => setSidebarOpen(true)}
+        onOpenSidebar={() => {
+          setSidebarInitialTab(undefined);
+          setSidebarOpen(true);
+        }}
+        onOpenActivityTab={() => {
+          setSidebarInitialTab("activity");
+          setSidebarOpen(true);
+        }}
         onDecision={onDecision}
         onReasonChange={onReasonChange}
         onApprove={onApprove}
@@ -762,7 +779,10 @@ function MandateRow({
           entityLongMap={mandate.entityLongMap}
           allEntityRelevance={mandate.allEntityRelevance}
           isOpen={sidebarOpen}
-          onOpenChange={setSidebarOpen}
+          onOpenChange={(open) => {
+            setSidebarOpen(open);
+            if (!open) setSidebarInitialTab(undefined);
+          }}
           state={state}
           isReviewer={isReviewer}
           canReviewAnyEntity={canReviewAnyEntity}
@@ -779,6 +799,7 @@ function MandateRow({
           }}
           metadataFromDb={mandate.metadataFromDb}
           docType={mandate.docType}
+          initialTab={sidebarInitialTab}
         />
         {/* Sidebar for replacement document */}
         {hasCompletedUpdate && newMandate && (
