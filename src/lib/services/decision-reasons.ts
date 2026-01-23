@@ -3,6 +3,9 @@
  * Maps each decision type to its available reason options
  */
 
+// LAST UPDATED
+// 23 – Jan – 2025
+
 export interface DecisionReason {
   id: string;
   label: string;
@@ -12,7 +15,7 @@ export const ADD_REASONS: DecisionReason[] = [
   {
     id: "direct_request",
     label:
-      "**Direct request for action** remains applicable to the programme/subprogramme.",
+      "**Direct request for action** to the programme/subprogramme",
   },
   {
     id: "influences_work",
