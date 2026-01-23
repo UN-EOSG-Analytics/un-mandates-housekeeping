@@ -244,12 +244,16 @@ export function DecisionDropdown({
       ? decision.charAt(0).toUpperCase() + decision.slice(1)
       : "—";
 
-  const options: { value: Decision | ""; label: string }[] = [
-    { value: "", label: "—" },
-    { value: "retain", label: "Retain" },
-    { value: "remove", label: "Remove" },
-    { value: "update", label: "Update" },
-  ];
+  // For "add" decisions, only show the cancel option
+  const options: { value: Decision | ""; label: string }[] =
+    decision === "add"
+      ? [{ value: "", label: "—" }]
+      : [
+          { value: "", label: "—" },
+          { value: "retain", label: "Retain" },
+          { value: "remove", label: "Remove" },
+          { value: "update", label: "Update" },
+        ];
 
   // Show indicator if reason is set
   const hasReason = reason && reason !== "";

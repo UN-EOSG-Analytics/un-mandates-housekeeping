@@ -270,7 +270,6 @@ function MandateRowContent({
   state,
   commentCount,
   isReviewer,
-  isAdded,
   isUpdateTarget,
   readOnly,
   isFoundational,
@@ -289,7 +288,6 @@ function MandateRowContent({
   state?: MandateState;
   commentCount: number;
   isReviewer: boolean;
-  isAdded?: boolean;
   isUpdateTarget?: boolean; // True for the "new" row in update view (no dropdowns)
   readOnly?: boolean; // True for background section (no interactivity)
   isFoundational?: boolean; // True if mandate is also in background mandates
@@ -311,8 +309,6 @@ function MandateRowContent({
 }) {
   const ageInfo = getAgeIndicator(mandate.year);
   const currentDecision = state?.decision;
-
-  const isAddedDecision = isAdded && currentDecision?.decision === "add";
 
   // Check if this row has an update or remove decision (to grey out content)
   const hasUpdate = currentDecision?.decision === "update";
@@ -501,8 +497,6 @@ function MandateRowContent({
       <div onClick={(e) => e.stopPropagation()}>
         {isUpdateTarget || readOnly ? (
           <span className="text-xs text-gray-400">—</span>
-        ) : isAdded ? (
-          <AddBadge show={!!isAddedDecision} />
         ) : (
           <DecisionDropdown
             decision={currentDecision?.decision ?? null}
@@ -626,7 +620,10 @@ function MandateRow({
   >(undefined);
   const [newDocSidebarOpen, setNewDocSidebarOpen] = useState(false);
   const [showUpdateSearch, setShowUpdateSearch] = useState(false);
-  const [showReasonPopup, setShowReasonPopup] = useState(false);
+  // For added mandates, start with popup open if no reason yet
+  const [showReasonPopup, setShowReasonPopup] = useState(
+    () => isAdded && !state?.decision?.decisionReason,
+  );
   const [updatePrefillSymbol, setUpdatePrefillSymbol] = useState<
     string | undefined
   >(undefined);
@@ -656,6 +653,7 @@ function MandateRow({
 
   // Check if there's a completed update (has newSymbol)
   const currentDecision = state?.decision;
+
   const hasCompletedUpdate =
     currentDecision?.decision === "update" && currentDecision?.newSymbol;
   const newSymbol = currentDecision?.newSymbol;
@@ -704,7 +702,6 @@ function MandateRow({
         state={state}
         commentCount={commentCount}
         isReviewer={isReviewer}
-        isAdded={isAdded}
         readOnly={readOnly}
         isFoundational={isFoundational}
         allSymbols={allSymbols}
@@ -853,14 +850,15 @@ function MandateRow({
   );
 }
 
-function AddBadge({ show }: { show: boolean }) {
-  if (!show) return <span className="text-xs text-gray-400">—</span>;
-  return (
-    <span className="inline-flex h-7 w-20 items-center justify-center rounded border border-blue-200 bg-blue-50 px-2 text-xs text-blue-700">
-      <span>Add</span>
-    </span>
-  );
-}
+// AddBadge is no longer used - added mandates now use DecisionDropdown with locked=true
+// function AddBadge({ show }: { show: boolean }) {
+//   if (!show) return <span className="text-xs text-gray-400">—</span>;
+//   return (
+//     <span className="inline-flex h-7 w-20 items-center justify-center rounded border border-blue-200 bg-blue-50 px-2 text-xs text-blue-700">
+//       <span>Add</span>
+//     </span>
+//   );
+// }
 
 // Wrapper for the "Add" row at bottom of sections
 function AddEntryRow({
