@@ -40,11 +40,13 @@ interface DecisionDropdownProps {
 // Shared color scheme for decisions - exported for use in ReasonDropdown
 function DropdownMenu({
   containerRef,
+  menuRef,
   options,
   decision,
   onSelect,
 }: {
   containerRef: React.RefObject<HTMLDivElement | null>;
+  menuRef: React.RefObject<HTMLDivElement | null>;
   options: { value: Decision | ""; label: string }[];
   decision: Decision | null;
   onSelect: (value: Decision | "") => void;
@@ -60,7 +62,8 @@ function DropdownMenu({
 
   return (
     <div
-      className="fixed z-[9999] w-[5.25rem] rounded border border-gray-200 bg-white py-0.5 shadow-lg"
+      ref={menuRef}
+      className="fixed z-9999 w-21 rounded border border-gray-200 bg-white py-0.5 shadow-lg"
       style={{ top: pos.top, left: pos.left }}
     >
       {options.map((opt) => {
@@ -157,6 +160,7 @@ export function DecisionDropdown({
   const decisionTooltipTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
   const reasonTooltipTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
   const containerRef = React.useRef<HTMLDivElement>(null);
+  const menuRef = React.useRef<HTMLDivElement>(null);
 
   // Show popup if either internal or external says to show it
   // (external is used for "update" flow, internal for "retain"/"remove")
@@ -187,10 +191,10 @@ export function DecisionDropdown({
   // Close dropdown when clicking outside
   React.useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (
-        containerRef.current &&
-        !containerRef.current.contains(event.target as Node)
-      ) {
+      const target = event.target as Node;
+      const isInsideContainer = containerRef.current?.contains(target);
+      const isInsideMenu = menuRef.current?.contains(target);
+      if (!isInsideContainer && !isInsideMenu) {
         setIsOpen(false);
       }
     }
@@ -273,7 +277,7 @@ export function DecisionDropdown({
                 );
               }}
               disabled={disabled}
-              className={`flex w-[5.25rem] items-center justify-between gap-1 rounded border px-2 font-medium transition-colors ${sizeClasses} ${colors.bg} ${colors.border} ${colors.text} ${
+              className={`flex w-21 items-center justify-between gap-1 rounded border px-2 font-medium transition-colors ${sizeClasses} ${colors.bg} ${colors.border} ${colors.text} ${
                 disabled
                   ? "cursor-default opacity-60"
                   : locked
@@ -318,7 +322,7 @@ export function DecisionDropdown({
         <button
           onClick={() => !disabled && !locked && setIsOpen(!isOpen)}
           disabled={disabled}
-          className={`flex w-[5.25rem] items-center justify-between gap-1 rounded border px-2 font-medium transition-colors ${sizeClasses} ${colors.bg} ${colors.border} ${colors.text} ${
+          className={`flex w-21 items-center justify-between gap-1 rounded border px-2 font-medium transition-colors ${sizeClasses} ${colors.bg} ${colors.border} ${colors.text} ${
             disabled
               ? "cursor-default opacity-60"
               : locked
@@ -425,6 +429,7 @@ export function DecisionDropdown({
         createPortal(
           <DropdownMenu
             containerRef={containerRef}
+            menuRef={menuRef}
             options={options}
             decision={decision}
             onSelect={handleSelect}
