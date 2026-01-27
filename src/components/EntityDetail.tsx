@@ -1134,7 +1134,7 @@ function MandateSection({
           </button>
         )}
         {readOnly && (
-          <span className="text-xs text-gray-400">— reference only</span>
+          <span className="text-xs text-gray-400">— for your reference (read-only)</span>
         )}
       </div>
 
@@ -1371,9 +1371,14 @@ export function EntityDetail({
   );
 
   // Real-time sync via polling (works with Vercel serverless)
+  // Polls both decisions/comments AND review mode status
   useRealtimeDecisions({
     entity,
     onRemoteChange: handleRemoteChange,
+    onReviewModeChange: (status) => {
+      setIsUnderReview(status.isUnderReview);
+      setReviewStartedBy(status.reviewStartedBy);
+    },
     enabled: true,
     pollIntervalMs: 3000, // Poll every 3 seconds
   });

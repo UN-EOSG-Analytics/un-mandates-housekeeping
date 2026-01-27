@@ -1,7 +1,7 @@
 /**
- * Polling endpoint for real-time decision/comment updates
+ * Polling endpoint for real-time decision/comment updates and review mode status
  *
- * Returns changes since `since` timestamp for efficient polling.
+ * Returns changes since `since` timestamp and current review mode status.
  * Designed for Vercel serverless (no long-lived connections).
  */
 
@@ -49,9 +49,9 @@ export async function GET(
     : new Date(Date.now() - 30000);
 
   try {
-    // Query for recent decisions and comments since the timestamp
+    // Query for recent decisions, comments, and review mode status in parallel
     // Uses indexed created_at column with TIMESTAMPTZ comparison
-    const [decisions, comments] = await Promise.all([
+    const [decisions, comments, reviewModeResult] = await Promise.all([
       query<ChangeRecord>(
         `SELECT 
           id, 
@@ -78,6 +78,12 @@ export async function GET(
         LIMIT 50`,
         [entity, since.toISOString()],
       ),
+      query<{ started_by: string | null; ended_at: string | null }>(
+        `SELECT started_by, ended_at
+        FROM mandates_housekeeping.entity_review_mode
+        WHERE entity = $1 AND ended_at IS NULL`,
+        [entity],
+      ),
     ]);
 
     // Dedupe by document_symbol + subprogramme, keeping most recent
@@ -99,11 +105,19 @@ export async function GET(
     const changes = Array.from(changesMap.values());
     const serverTime = new Date().toISOString();
 
+    // Extract review mode status
+    // If there's a row with ended_at IS NULL, review is active
+    const reviewMode = {
+      isUnderReview: reviewModeResult.length > 0,
+      reviewStartedBy: reviewModeResult[0]?.started_by ?? null,
+    };
+
     return NextResponse.json(
       {
         changes,
         serverTime,
         hasChanges: changes.length > 0,
+        reviewMode,
       },
       {
         headers: {
