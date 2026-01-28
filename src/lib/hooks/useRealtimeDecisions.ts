@@ -56,7 +56,8 @@ export function useRealtimeDecisions({
 }: UseRealtimeDecisionsOptions): UseRealtimeDecisionsReturn {
   const [isConnected, setIsConnected] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [reviewModeStatus, setReviewModeStatus] = useState<ReviewModeStatus | null>(null);
+  const [reviewModeStatus, setReviewModeStatus] =
+    useState<ReviewModeStatus | null>(null);
 
   // Track last poll time to only fetch new changes
   const lastPollTimeRef = useRef<string>(new Date().toISOString());

@@ -14,8 +14,7 @@ export interface DecisionReason {
 export const ADD_REASONS: DecisionReason[] = [
   {
     id: "direct_request",
-    label:
-      "**Direct request for action** to the programme/subprogramme",
+    label: "**Direct request for action** to the programme/subprogramme",
   },
   {
     id: "influences_work",

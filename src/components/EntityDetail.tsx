@@ -620,10 +620,8 @@ function MandateRow({
   >(undefined);
   const [newDocSidebarOpen, setNewDocSidebarOpen] = useState(false);
   const [showUpdateSearch, setShowUpdateSearch] = useState(false);
-  // For added mandates, start with popup open if no reason yet
-  const [showReasonPopup, setShowReasonPopup] = useState(
-    () => isAdded && !state?.decision?.decisionReason,
-  );
+  // Reason popup should only open when user actively makes a decision, not on mount
+  const [showReasonPopup, setShowReasonPopup] = useState(false);
   const [updatePrefillSymbol, setUpdatePrefillSymbol] = useState<
     string | undefined
   >(undefined);
@@ -1134,7 +1132,9 @@ function MandateSection({
           </button>
         )}
         {readOnly && (
-          <span className="text-xs text-gray-400">— for your reference (read-only)</span>
+          <span className="text-xs text-gray-400">
+            — for your reference (read-only)
+          </span>
         )}
       </div>
 
@@ -2018,7 +2018,7 @@ export function EntityDetail({
         filterEntity={filterEntity}
         filteredTotal={filteredTotal}
         totalMandates={totalMandates}
-        isReviewer={isReviewer}
+        canReviewAnyEntity={canReviewAnyEntity}
         isUnderReview={isUnderReview}
         onStartReview={reviewModeLoaded ? handleStartReview : undefined}
       />

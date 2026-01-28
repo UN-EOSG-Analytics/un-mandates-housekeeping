@@ -9,7 +9,7 @@ interface Props {
   filterEntity: string | null;
   filteredTotal: number;
   totalMandates: number;
-  isReviewer?: boolean;
+  canReviewAnyEntity?: boolean;
   isUnderReview?: boolean;
   onStartReview?: () => void;
 }
@@ -21,7 +21,7 @@ export function EntityHeader({
   filterEntity,
   filteredTotal,
   totalMandates,
-  isReviewer,
+  canReviewAnyEntity,
   isUnderReview,
   onStartReview,
 }: Props) {
@@ -42,7 +42,7 @@ export function EntityHeader({
             {totalMandates !== 1 ? "s" : ""}
           </div>
           <div className="mt-3 flex items-center gap-2">
-            {isReviewer && !isUnderReview && onStartReview && (
+            {canReviewAnyEntity && !isUnderReview && onStartReview && (
               <button
                 onClick={onStartReview}
                 className="flex items-center gap-1.5 rounded-md bg-amber-500 px-3 py-1.5 text-sm font-medium text-white transition-colors hover:bg-amber-600"
@@ -52,7 +52,7 @@ export function EntityHeader({
                 Start Review
               </button>
             )}
-            {isReviewer && <DocxUploadButton entity={entity} />}
+            {canReviewAnyEntity && <DocxUploadButton entity={entity} />}
             <ExportDropdown entity={entity} />
           </div>
         </div>
