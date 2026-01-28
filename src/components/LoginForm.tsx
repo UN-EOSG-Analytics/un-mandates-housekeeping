@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Banner } from "./Banner";
 import { requestMagicLinkAction } from "@/lib/auth/actions";
 
 export function LoginForm() {
@@ -31,10 +32,14 @@ export function LoginForm() {
       </p>
 
       {status === "sent" ? (
-        <div className="rounded-lg bg-green-50 p-4 text-green-800">
-          <p className="font-medium">Please check your e-mail</p>
-          <p className="mt-1 text-sm">We have sent a sign-in link to {email}</p>
-        </div>
+        <Banner variant="success" icon={false}>
+          <div>
+            <p className="font-medium">Please check your e-mail</p>
+            <p className="mt-1 text-sm">
+              We have sent a sign-in link to {email}
+            </p>
+          </div>
+        </Banner>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
           <input

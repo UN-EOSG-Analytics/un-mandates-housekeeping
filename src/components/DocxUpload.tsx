@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useRef, useCallback } from "react";
-import { Upload, FileText, X, Check, Loader2 } from "lucide-react";
+import { Upload, FileText, X, Loader2 } from "lucide-react";
+import { SuccessBanner } from "./Banner";
 
 interface DocxUploadProps {
   entity: string;
@@ -236,12 +237,7 @@ export function DocxUpload({
 
       {/* Success state */}
       {state === "success" && (
-        <div className="flex items-center gap-2 rounded-lg border border-green-200 bg-green-50 p-4">
-          <Check className="h-5 w-5 text-green-600" />
-          <span className="text-sm font-medium text-green-700">
-            File uploaded successfully
-          </span>
-        </div>
+        <SuccessBanner message="File uploaded successfully" />
       )}
 
       {/* Error message */}

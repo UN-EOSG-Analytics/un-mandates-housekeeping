@@ -54,7 +54,11 @@ import { DocumentSearchInput } from "./DocumentSearchInput";
 import { EntityHeader } from "./EntityHeader";
 import type { ManualEntryData } from "./ManualDocumentForm";
 import { ReviewBlockedDialog } from "./ReviewBlockedDialog";
-import { ReviewModeBanner } from "./ReviewModeBanner";
+import {
+  ReadOnlyNoticeBanner,
+  ReviewerModeBanner,
+  ReviewInProgressBanner,
+} from "./Banner";
 import { Tooltip } from "./Tooltip";
 import { WarningIcon } from "./WarningIcon";
 import { WarningTooltip } from "./WarningTooltip";
@@ -1983,28 +1987,13 @@ export function EntityDetail({
     <div className="space-y-5">
       {/* Read-only notice */}
       {!isOwnEntity && userEntity && !canReviewAnyEntity && (
-        <div className="border-l-4 border-un-blue bg-gray-50 px-6 py-3">
-          <p className="text-sm text-gray-600">
-            You are viewing{" "}
-            <span className="font-medium text-un-blue">{entity}</span> but your
-            entity is{" "}
-            <span className="font-medium text-un-blue">{userEntity}</span>. You
-            can only make housekeeping decisions for your own entity.
-          </p>
-        </div>
+        <ReadOnlyNoticeBanner viewingEntity={entity} userEntity={userEntity} />
       )}
       {canReviewAnyEntity && userEntity !== entity && (
-        <div className="border-l-4 border-amber-500 bg-amber-50 px-6 py-3">
-          <p className="text-sm text-gray-700">
-            <span className="font-medium text-amber-700">Reviewer Mode:</span>{" "}
-            You are reviewing{" "}
-            <span className="font-medium text-un-blue">{entity}</span>. As a
-            reviewer, you can make decisions and approve them for any entity.
-          </p>
-        </div>
+        <ReviewerModeBanner reviewingEntity={entity} />
       )}
       {isUnderReview && (
-        <ReviewModeBanner
+        <ReviewInProgressBanner
           startedBy={reviewStartedBy}
           isReviewer={isReviewer}
           onEndReview={isReviewer ? handleEndReview : undefined}
