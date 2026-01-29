@@ -10,11 +10,18 @@ export interface RealtimeChange {
   created_at: string;
 }
 
+export interface ReviewModeStatus {
+  isUnderReview: boolean;
+  reviewStartedBy: string | null;
+}
+
 interface UseRealtimeDecisionsOptions {
   /** Entity to subscribe to */
   entity: string;
   /** Called when a change is received from another user */
   onRemoteChange?: (change: RealtimeChange) => void;
+  /** Called when review mode status changes */
+  onReviewModeChange?: (status: ReviewModeStatus) => void;
   /** Whether the hook is enabled (default: true) */
   enabled?: boolean;
   /** Polling interval in ms (default: 3000 = 3 seconds) */
@@ -26,14 +33,16 @@ interface UseRealtimeDecisionsReturn {
   isConnected: boolean;
   /** Last error message, if any */
   error: string | null;
+  /** Current review mode status */
+  reviewModeStatus: ReviewModeStatus | null;
   /** Manually trigger a poll */
   refresh: () => void;
 }
 
 /**
- * Hook for real-time decision/comment sync via polling
+ * Hook for real-time decision/comment sync and review mode status via polling
  *
- * Polls the server every few seconds for changes.
+ * Polls the server every few seconds for changes and review mode updates.
  * Designed to work with Vercel serverless functions.
  *
  * Changes made by the current user are filtered out via timestamp comparison.
@@ -41,11 +50,14 @@ interface UseRealtimeDecisionsReturn {
 export function useRealtimeDecisions({
   entity,
   onRemoteChange,
+  onReviewModeChange,
   enabled = true,
   pollIntervalMs = 3000,
 }: UseRealtimeDecisionsOptions): UseRealtimeDecisionsReturn {
   const [isConnected, setIsConnected] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [reviewModeStatus, setReviewModeStatus] =
+    useState<ReviewModeStatus | null>(null);
 
   // Track last poll time to only fetch new changes
   const lastPollTimeRef = useRef<string>(new Date().toISOString());
@@ -53,13 +65,18 @@ export function useRealtimeDecisions({
   const processedIdsRef = useRef<Set<string>>(new Set());
   // Polling interval ref
   const pollIntervalRef = useRef<NodeJS.Timeout | null>(null);
-  // Callback ref to avoid stale closures
+  // Callback refs to avoid stale closures
   const onRemoteChangeRef = useRef(onRemoteChange);
+  const onReviewModeChangeRef = useRef(onReviewModeChange);
 
-  // Keep callback ref updated
+  // Keep callback refs updated
   useEffect(() => {
     onRemoteChangeRef.current = onRemoteChange;
   }, [onRemoteChange]);
+
+  useEffect(() => {
+    onReviewModeChangeRef.current = onReviewModeChange;
+  }, [onReviewModeChange]);
 
   const poll = useCallback(async () => {
     if (!enabled || !entity) return;
@@ -82,6 +99,16 @@ export function useRealtimeDecisions({
 
       setIsConnected(true);
       setError(null);
+
+      // Update review mode status if present
+      if (data.reviewMode) {
+        const newStatus: ReviewModeStatus = {
+          isUnderReview: data.reviewMode.isUnderReview,
+          reviewStartedBy: data.reviewMode.reviewStartedBy,
+        };
+        setReviewModeStatus(newStatus);
+        onReviewModeChangeRef.current?.(newStatus);
+      }
 
       // Process changes
       if (data.hasChanges && data.changes?.length > 0) {
@@ -133,6 +160,7 @@ export function useRealtimeDecisions({
   return {
     isConnected,
     error,
+    reviewModeStatus,
     refresh,
   };
 }

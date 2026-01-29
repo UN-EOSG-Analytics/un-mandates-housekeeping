@@ -54,7 +54,11 @@ import { DocumentSearchInput } from "./DocumentSearchInput";
 import { EntityHeader } from "./EntityHeader";
 import type { ManualEntryData } from "./ManualDocumentForm";
 import { ReviewBlockedDialog } from "./ReviewBlockedDialog";
-import { ReviewModeBanner } from "./ReviewModeBanner";
+import {
+  ReadOnlyNoticeBanner,
+  ReviewerModeBanner,
+  ReviewInProgressBanner,
+} from "./Banner";
 import { Tooltip } from "./Tooltip";
 import { WarningIcon } from "./WarningIcon";
 import { WarningTooltip } from "./WarningTooltip";
@@ -585,7 +589,6 @@ function MandateRow({
   onApprove,
   onUpdateWithManual,
   onComment,
-  isAdded,
   readOnly,
   isFoundational,
   updateTargetMetadata,
@@ -620,10 +623,8 @@ function MandateRow({
   >(undefined);
   const [newDocSidebarOpen, setNewDocSidebarOpen] = useState(false);
   const [showUpdateSearch, setShowUpdateSearch] = useState(false);
-  // For added mandates, start with popup open if no reason yet
-  const [showReasonPopup, setShowReasonPopup] = useState(
-    () => isAdded && !state?.decision?.decisionReason,
-  );
+  // Reason popup should only open when user actively makes a decision, not on mount
+  const [showReasonPopup, setShowReasonPopup] = useState(false);
   const [updatePrefillSymbol, setUpdatePrefillSymbol] = useState<
     string | undefined
   >(undefined);
@@ -1134,7 +1135,9 @@ function MandateSection({
           </button>
         )}
         {readOnly && (
-          <span className="text-xs text-gray-400">— reference only</span>
+          <span className="text-xs text-gray-400">
+            — for your reference (read-only)
+          </span>
         )}
       </div>
 
@@ -1371,9 +1374,14 @@ export function EntityDetail({
   );
 
   // Real-time sync via polling (works with Vercel serverless)
+  // Polls both decisions/comments AND review mode status
   useRealtimeDecisions({
     entity,
     onRemoteChange: handleRemoteChange,
+    onReviewModeChange: (status) => {
+      setIsUnderReview(status.isUnderReview);
+      setReviewStartedBy(status.reviewStartedBy);
+    },
     enabled: true,
     pollIntervalMs: 3000, // Poll every 3 seconds
   });
@@ -1939,6 +1947,21 @@ export function EntityDetail({
       0,
     );
 
+  // Calculate unique source documents (unique symbols)
+  const allMandatesForCounting = [
+    ...backgroundMandates,
+    ...Object.values(legislativeMandates).flat(),
+  ];
+  const totalUniqueDocuments = new Set(allMandatesForCounting.map((m) => m.symbol)).size;
+
+  const filteredMandatesForCounting = [
+    ...filteredBackground,
+    ...Object.values(filteredLegislative).flat(),
+  ];
+  const filteredUniqueDocuments = new Set(
+    filteredMandatesForCounting.map((m) => m.symbol),
+  ).size;
+
   // Shared props for all MandateSection instances
   const sharedSectionProps = {
     entity,
@@ -1978,28 +2001,13 @@ export function EntityDetail({
     <div className="space-y-5">
       {/* Read-only notice */}
       {!isOwnEntity && userEntity && !canReviewAnyEntity && (
-        <div className="border-l-4 border-un-blue bg-gray-50 px-6 py-3">
-          <p className="text-sm text-gray-600">
-            You are viewing{" "}
-            <span className="font-medium text-un-blue">{entity}</span> but your
-            entity is{" "}
-            <span className="font-medium text-un-blue">{userEntity}</span>. You
-            can only make housekeeping decisions for your own entity.
-          </p>
-        </div>
+        <ReadOnlyNoticeBanner viewingEntity={entity} userEntity={userEntity} />
       )}
       {canReviewAnyEntity && userEntity !== entity && (
-        <div className="border-l-4 border-amber-500 bg-amber-50 px-6 py-3">
-          <p className="text-sm text-gray-700">
-            <span className="font-medium text-amber-700">Reviewer Mode:</span>{" "}
-            You are reviewing{" "}
-            <span className="font-medium text-un-blue">{entity}</span>. As a
-            reviewer, you can make decisions and approve them for any entity.
-          </p>
-        </div>
+        <ReviewerModeBanner reviewingEntity={entity} />
       )}
       {isUnderReview && (
-        <ReviewModeBanner
+        <ReviewInProgressBanner
           startedBy={reviewStartedBy}
           isReviewer={isReviewer}
           onEndReview={isReviewer ? handleEndReview : undefined}
@@ -2011,9 +2019,11 @@ export function EntityDetail({
         entityLong={entityLong}
         partName={partName}
         filterEntity={filterEntity}
-        filteredTotal={filteredTotal}
-        totalMandates={totalMandates}
-        isReviewer={isReviewer}
+        filteredCitations={filteredTotal}
+        totalCitations={totalMandates}
+        filteredUniqueDocuments={filteredUniqueDocuments}
+        totalUniqueDocuments={totalUniqueDocuments}
+        canReviewAnyEntity={canReviewAnyEntity}
         isUnderReview={isUnderReview}
         onStartReview={reviewModeLoaded ? handleStartReview : undefined}
       />

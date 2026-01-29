@@ -163,7 +163,9 @@ export default async function AboutPage() {
             Streamline Your Mandate Citation Review
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600">
-            The Mandate Housekeeping Platform is being tested as a pilot tool to support UN Secretariat entities review and update mandate citations for the 2027 Proposed Programme Budget (PPB) – Programme Plan.
+            The Mandate Housekeeping Platform is being tested as a pilot tool to
+            support UN Secretariat entities review and update mandate citations
+            for the 2027 Proposed Programme Budget (PPB) – Programme Plan.
           </p>
           <div className="flex items-center justify-center gap-4">
             <Link
@@ -604,7 +606,8 @@ export default async function AboutPage() {
                 </div>
                 <h4 className="mb-2 font-semibold text-gray-900">Sign In</h4>
                 <p className="text-sm text-gray-600">
-                  Enter your UN email and click the magic link sent to your email.
+                  Enter your UN email and click the magic link sent to your
+                  email.
                 </p>
               </div>
               <div>
@@ -626,7 +629,8 @@ export default async function AboutPage() {
                   Update Citations
                 </h4>
                 <p className="text-sm text-gray-600">
-                  Record whether each mandate is retained, updated or removed with a reason.
+                  Record whether each mandate is retained, updated or removed
+                  with a reason.
                 </p>
               </div>
             </div>
