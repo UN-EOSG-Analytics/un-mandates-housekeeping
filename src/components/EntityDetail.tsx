@@ -589,7 +589,6 @@ function MandateRow({
   onApprove,
   onUpdateWithManual,
   onComment,
-  isAdded,
   readOnly,
   isFoundational,
   updateTargetMetadata,
@@ -1948,6 +1947,21 @@ export function EntityDetail({
       0,
     );
 
+  // Calculate unique source documents (unique symbols)
+  const allMandatesForCounting = [
+    ...backgroundMandates,
+    ...Object.values(legislativeMandates).flat(),
+  ];
+  const totalUniqueDocuments = new Set(allMandatesForCounting.map((m) => m.symbol)).size;
+
+  const filteredMandatesForCounting = [
+    ...filteredBackground,
+    ...Object.values(filteredLegislative).flat(),
+  ];
+  const filteredUniqueDocuments = new Set(
+    filteredMandatesForCounting.map((m) => m.symbol),
+  ).size;
+
   // Shared props for all MandateSection instances
   const sharedSectionProps = {
     entity,
@@ -2005,8 +2019,10 @@ export function EntityDetail({
         entityLong={entityLong}
         partName={partName}
         filterEntity={filterEntity}
-        filteredTotal={filteredTotal}
-        totalMandates={totalMandates}
+        filteredCitations={filteredTotal}
+        totalCitations={totalMandates}
+        filteredUniqueDocuments={filteredUniqueDocuments}
+        totalUniqueDocuments={totalUniqueDocuments}
         canReviewAnyEntity={canReviewAnyEntity}
         isUnderReview={isUnderReview}
         onStartReview={reviewModeLoaded ? handleStartReview : undefined}
