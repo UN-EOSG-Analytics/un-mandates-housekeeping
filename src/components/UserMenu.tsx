@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { LogOut } from "lucide-react";
 import { EntityChangeDialog } from "./EntityChangeDialog";
 import type { EntityOption } from "@/lib/services/data-service";
 import { logoutAction } from "@/lib/auth/actions";
@@ -42,12 +43,13 @@ export function UserMenu({
             </span>
           )}
         </div>
-        <div className="h-4 w-px bg-gray-200" />
+        <div className="h-6 w-px bg-gray-200" />
         <button
           onClick={handleLogout}
-          className="text-sm text-gray-500 transition-colors hover:text-gray-900"
+          className="flex items-center gap-1.5 text-sm text-gray-500 transition-colors hover:text-gray-900"
         >
           Logout
+          <LogOut className="h-4 w-4" />
         </button>
       </div>
 
