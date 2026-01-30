@@ -947,6 +947,7 @@ function MandateSection({
       year: number | null;
       body: string | null;
       docType: string | null;
+      link: string | null;
     } | null
   >;
   updateTargetMetadata: Record<
@@ -1014,7 +1015,7 @@ function MandateSection({
     return {
       symbol: s.documentSymbol,
       title: manualMeta?.title || meta?.title || "",
-      link: manualMeta?.link || null,
+      link: manualMeta?.link || meta?.link || null,
       year: manualMeta?.year || meta?.year || null,
       body: manualMeta?.body || meta?.body || null,
       docType: meta?.docType || null,
@@ -1334,6 +1335,7 @@ export function EntityDetail({
         year: number | null;
         body: string | null;
         docType: string | null;
+        link: string | null;
       } | null
     >
   >({});
@@ -1472,6 +1474,7 @@ export function EntityDetail({
               year: number | null;
               body: string | null;
               docType: string | null;
+              link: string | null;
             }
           >,
         ) => {
@@ -1483,6 +1486,7 @@ export function EntityDetail({
               year: number | null;
               body: string | null;
               docType: string | null;
+              link: string | null;
             } | null
           > = {};
           for (const sym of addedSymbols) {
@@ -1808,6 +1812,7 @@ export function EntityDetail({
           year: data.year ? parseInt(data.year) : null,
           body: data.body || null,
           docType: null,
+          link: data.link || null,
         },
       }));
 
