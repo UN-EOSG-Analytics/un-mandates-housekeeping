@@ -59,7 +59,7 @@ const WARNING_DEFINITIONS: WarningDefinition[] = [
     condition: (mandate) => mandate.metadataFromDb === false,
     getSuggestedUpdate: (mandate) => mandate.symbol,
     action: "update",
-    icon: "help",
+    icon: "file-question",
     colorScheme: "amber",
   },
   {
@@ -70,7 +70,7 @@ const WARNING_DEFINITIONS: WarningDefinition[] = [
     condition: (mandate) => !mandate.link,
     getSuggestedUpdate: (mandate) => mandate.symbol,
     action: "update",
-    icon: "alert",
+    icon: "file",
     colorScheme: "amber",
   },
   {
