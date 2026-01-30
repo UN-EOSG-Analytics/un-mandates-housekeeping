@@ -14,6 +14,7 @@ import {
 import { getAgeIndicator } from "@/lib/services/age-indicator";
 import {
   approveDecisionAction,
+  clearAllEntityDecisionsAction,
   createCommentAction,
   createDecisionAction,
   endReviewModeAction,
@@ -53,6 +54,7 @@ import { DocumentSymbol } from "./DocumentModal";
 import { DocumentSearchInput } from "./DocumentSearchInput";
 import { EntityHeader } from "./EntityHeader";
 import type { ManualEntryData } from "./ManualDocumentForm";
+import { ClearAllDecisionsDialog } from "./ClearAllDecisionsDialog";
 import { ReviewBlockedDialog } from "./ReviewBlockedDialog";
 import {
   ReadOnlyNoticeBanner,
@@ -1327,6 +1329,8 @@ export function EntityDetail({
   const [reviewModeLoaded, setReviewModeLoaded] = useState(false);
   const [reviewStartedBy, setReviewStartedBy] = useState<string | null>(null);
   const [showReviewBlockedDialog, setShowReviewBlockedDialog] = useState(false);
+  const [showClearAllDialog, setShowClearAllDialog] = useState(false);
+  const [isClearingAll, setIsClearingAll] = useState(false);
   const [addedMetadata, setAddedMetadata] = useState<
     Record<
       string,
@@ -1921,6 +1925,19 @@ export function EntityDetail({
     }
   }, [entity]);
 
+  const handleClearAll = useCallback(async () => {
+    const result = await clearAllEntityDecisionsAction(entity);
+    if (result.success && result.data) {
+      // Clear all local state
+      setStates({});
+      setTotalComments({});
+      setAddedMetadata({});
+      setUpdateTargetMetadata({});
+    } else if (!result.success) {
+      throw new Error(result.error);
+    }
+  }, [entity]);
+
   // Refresh decisions from server (used after review blocked dialog closes)
   const refreshDecisions = useCallback(async () => {
     const result = await getEntityDecisionsAction(entity);
@@ -2103,6 +2120,12 @@ export function EntityDetail({
         canReviewAnyEntity={canReviewAnyEntity}
         isUnderReview={isUnderReview}
         onStartReview={reviewModeLoaded ? handleStartReview : undefined}
+        onClearAll={
+          reviewModeLoaded && canReviewAnyEntity
+            ? () => setShowClearAllDialog(true)
+            : undefined
+        }
+        isClearingAll={isClearingAll}
       />
 
       {/* Phase Tracker */}
@@ -2235,6 +2258,15 @@ export function EntityDetail({
           setShowReviewBlockedDialog(false);
           refreshDecisions();
         }}
+      />
+
+      {/* Clear all decisions dialog - shown when reviewer clicks Clear All */}
+      <ClearAllDecisionsDialog
+        isOpen={showClearAllDialog}
+        onClose={() => setShowClearAllDialog(false)}
+        onConfirm={handleClearAll}
+        entityName={entity}
+        onClearingStateChange={setIsClearingAll}
       />
     </div>
   );
