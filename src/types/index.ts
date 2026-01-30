@@ -60,11 +60,18 @@ export interface MandateAction {
   newerSymbol: string;
 }
 
+export interface NewerVersionInfo {
+  symbol: string;
+  year: number;
+}
+
 export interface NewerVersion {
   symbol: string;
   title: string | null;
   year: number;
   body: string | null;
+  /** All newer versions with their years (for checking if any is already cited) */
+  allNewer: NewerVersionInfo[];
 }
 
 export interface Mandate {

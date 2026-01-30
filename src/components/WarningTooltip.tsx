@@ -133,6 +133,17 @@ export function WarningTooltip({
                   <div className="min-w-0 flex-1">
                     <p className="text-sm leading-relaxed text-gray-700">
                       {warning.message}
+                      {warning.linkedYear && (
+                        <>
+                          {" "}
+                          <span className="font-semibold">{warning.linkedYear}</span>
+                        </>
+                      )}
+                      {warning.messageSuffix ? (
+                        <> {warning.messageSuffix}</>
+                      ) : warning.linkedSymbol ? (
+                        ":"
+                      ) : null}
                       {warning.linkedSymbol && (
                         <>
                           {" "}
@@ -147,7 +158,6 @@ export function WarningTooltip({
                           </a>
                         </>
                       )}
-                      {warning.messageSuffix && <> {warning.messageSuffix}</>}
                       {onDiff &&
                         currentSymbol &&
                         currentYear &&
