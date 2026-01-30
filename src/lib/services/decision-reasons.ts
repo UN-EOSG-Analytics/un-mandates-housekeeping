@@ -26,7 +26,7 @@ export const ADD_REASONS: DecisionReason[] = [
     label:
       "**Foundational mandate** establishing or amending the entity or core function.",
   },
-  { id: "other", label: "Other." },
+  { id: "other", label: "**Other.**" },
 ];
 
 export const RETAIN_REASONS: DecisionReason[] = [
@@ -44,7 +44,7 @@ export const RETAIN_REASONS: DecisionReason[] = [
     id: "foundational",
     label: "**Foundational mandate** establishing the entity or core function.",
   },
-  { id: "other", label: "Other." },
+  { id: "other", label: "**Other.**" },
 ];
 
 export const UPDATE_REASONS: DecisionReason[] = [
@@ -58,31 +58,31 @@ export const UPDATE_REASONS: DecisionReason[] = [
     label:
       "**Superseded** by a more recent resolution with **different requests**.",
   },
-  { id: "other", label: "Other." },
+  { id: "other", label: "**Other.**" },
 ];
 
 export const REMOVE_REASONS: DecisionReason[] = [
   {
     id: "delivered",
     label:
-      "Mandated activity and service has been **delivered** and no further action is required.",
+      "**Mandated activity and service has been delivered** and no further action is required.",
   },
   {
     id: "other_entity_advantage",
     label:
-      "**Other entity** has comparative advantage in implementing the mandate.",
+      "**Other entity has comparative advantage** in implementing the mandate.",
   },
   {
     id: "subsidiary_removed",
     label:
-      "**Subsidiary body** mandate removed in favour of a principal organ resolution.",
+      "**Subsidiary body** mandate removed in favour of a **principal organ resolution**.",
   },
   {
     id: "consolidated",
     label:
       "**Duplicate citation** consolidated across multiple subprogrammes to programme level.",
   },
-  { id: "other", label: "Other." },
+  { id: "other", label: "**Other.**" },
 ];
 
 export type DecisionType = "add" | "retain" | "update" | "remove";
