@@ -82,6 +82,11 @@ You are a senior Next.js (v16) developer working at the United Nations with exte
 # Database
 - use MCP to access and run on Postgres DB
 
+# Data Service
+
+- Server actions
+- calculations and data fetching and processing should live in lib/ and not in components or other files
+
 # Best Practices
 
 - ALWAYS use code for Tailwind CSS v4.1 (not older outdated versions!)

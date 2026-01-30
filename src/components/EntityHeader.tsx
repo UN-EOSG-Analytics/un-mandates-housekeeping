@@ -1,6 +1,12 @@
-import { Eye } from "lucide-react";
+import { Eye, MoreHorizontal, Trash2 } from "lucide-react";
 import { DocxUploadButton } from "./DocxUploadButton";
 import { ExportDropdown } from "./ExportDropdown";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 interface Props {
   entity: string;
@@ -14,6 +20,8 @@ interface Props {
   canReviewAnyEntity?: boolean;
   isUnderReview?: boolean;
   onStartReview?: () => void;
+  onClearAll?: () => void;
+  isClearingAll?: boolean;
 }
 
 export function EntityHeader({
@@ -28,6 +36,8 @@ export function EntityHeader({
   canReviewAnyEntity,
   isUnderReview,
   onStartReview,
+  onClearAll,
+  isClearingAll,
 }: Props) {
   const uniqueDocs = filterEntity
     ? filteredUniqueDocuments
@@ -80,6 +90,29 @@ export function EntityHeader({
             )}
             {canReviewAnyEntity && <DocxUploadButton entity={entity} />}
             <ExportDropdown entity={entity} />
+            {canReviewAnyEntity && !isUnderReview && onClearAll && (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button
+                    disabled={isClearingAll}
+                    className="flex items-center justify-center rounded-md border border-gray-200 bg-white p-1.5 text-gray-500 transition-colors hover:bg-gray-50 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                    title="More options"
+                  >
+                    <MoreHorizontal className="h-4 w-4" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuItem
+                    onClick={onClearAll}
+                    disabled={isClearingAll}
+                    className="text-red-600/70 focus:bg-red-50 focus:text-red-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    <Trash2 className="h-4 w-4 text-red-500/70" />
+                    {isClearingAll ? "Clearing..." : "Clear All Decisions for Entity"}
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            )}
           </div>
         </div>
       </div>

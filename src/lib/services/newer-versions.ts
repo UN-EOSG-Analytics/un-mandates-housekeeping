@@ -12,6 +12,7 @@ interface NewerVersionRow {
   newer_title: string | null;
   newer_year: number;
   newer_body: string | null;
+  all_newer: { symbol: string; year: number }[];
 }
 
 /**
@@ -26,7 +27,7 @@ export async function fetchNewerVersions(
   }
 
   // Query to find the latest version for each symbol that has a newer document
-  // with the same normalized_title and issuing_body
+  // with the same normalized_title and issuing_body, plus all newer version symbols
   const rows = await query<NewerVersionRow>(
     `WITH current_docs AS (
       SELECT 
@@ -40,8 +41,8 @@ export async function fetchNewerVersions(
         AND issuing_body IS NOT NULL
         AND date_year IS NOT NULL
     ),
-    latest_versions AS (
-      SELECT DISTINCT ON (c.symbol)
+    all_newer AS (
+      SELECT
         c.symbol AS current_symbol,
         d.symbol AS newer_symbol,
         d.proper_title AS newer_title,
@@ -52,7 +53,21 @@ export async function fetchNewerVersions(
         ON c.normalized_title = d.normalized_title
         AND c.issuing_body = d.issuing_body
         AND d.date_year > c.date_year
-      ORDER BY c.symbol, d.date_year DESC
+    ),
+    latest_versions AS (
+      SELECT DISTINCT ON (current_symbol)
+        current_symbol,
+        newer_symbol,
+        newer_title,
+        newer_year,
+        newer_body,
+        ARRAY(
+          SELECT jsonb_build_object('symbol', an.newer_symbol, 'year', an.newer_year)
+          FROM all_newer an 
+          WHERE an.current_symbol = all_newer.current_symbol
+        ) AS all_newer
+      FROM all_newer
+      ORDER BY current_symbol, newer_year DESC
     )
     SELECT * FROM latest_versions`,
     [symbols],
@@ -65,6 +80,7 @@ export async function fetchNewerVersions(
       title: row.newer_title,
       year: row.newer_year,
       body: row.newer_body,
+      allNewer: row.all_newer || [],
     });
   }
 

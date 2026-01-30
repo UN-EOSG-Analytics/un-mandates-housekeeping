@@ -124,6 +124,7 @@ export async function GET(req: NextRequest) {
       year: number | null;
       body: string | null;
       docType: string | null;
+      link: string | null;
     }
   > = {};
   for (const row of rows) {
@@ -149,11 +150,23 @@ export async function GET(req: NextRequest) {
       const docType =
         row.doc_document_type || row.meta_document_type || row.ppb_type || null;
 
+      // Construct link using same logic as data-service.ts
+      let link: string | null = null;
+      if (row.doc_proper_title !== null) {
+        // Document is in public.documents - construct link
+        link = `https://docs.un.org/en/${originalSymbol.toUpperCase()}`;
+      } else if (row.meta_title !== null || row.meta_proper_title !== null) {
+        // Document is in metadata_clean - construct link
+        link = `https://docs.un.org/en/${originalSymbol.toUpperCase()}`;
+      }
+      // Note: ppb_link is not available in this query, so we can't fall back to it
+
       result[originalSymbol] = {
         title,
         year,
         body,
         docType,
+        link,
       };
     }
   }

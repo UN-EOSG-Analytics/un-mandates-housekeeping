@@ -14,6 +14,7 @@ import {
 import { getAgeIndicator } from "@/lib/services/age-indicator";
 import {
   approveDecisionAction,
+  clearAllEntityDecisionsAction,
   createCommentAction,
   createDecisionAction,
   endReviewModeAction,
@@ -53,6 +54,7 @@ import { DocumentSymbol } from "./DocumentModal";
 import { DocumentSearchInput } from "./DocumentSearchInput";
 import { EntityHeader } from "./EntityHeader";
 import type { ManualEntryData } from "./ManualDocumentForm";
+import { ClearAllDecisionsDialog } from "./ClearAllDecisionsDialog";
 import { ReviewBlockedDialog } from "./ReviewBlockedDialog";
 import {
   ReadOnlyNoticeBanner,
@@ -278,6 +280,8 @@ function MandateRowContent({
   readOnly,
   isFoundational,
   allSymbols,
+  allEntitySymbols,
+  newestWithNewerVersion,
   onOpenSidebar,
   onOpenActivityTab,
   onDecision,
@@ -296,6 +300,8 @@ function MandateRowContent({
   readOnly?: boolean; // True for background section (no interactivity)
   isFoundational?: boolean; // True if mandate is also in background mandates
   allSymbols?: Set<string>; // All symbols in current section for warning system
+  allEntitySymbols?: Set<string>; // All symbols across entire entity for newer-already-cited detection
+  newestWithNewerVersion?: Set<string>; // Symbols that are newest among those with same newer version
   onOpenSidebar?: () => void;
   onOpenActivityTab?: () => void;
   onDecision: (decision: Decision, newSymbol?: string) => void;
@@ -433,7 +439,14 @@ function MandateRowContent({
       <div className="flex items-center justify-start pr-2">
         {!isUpdateTarget &&
           (() => {
-            const warnings = getMandateWarnings(mandate, allSymbols);
+            const isNewestWithNewerVersion = newestWithNewerVersion?.has(
+              mandate.symbol,
+            );
+            const warnings = getMandateWarnings(
+              mandate,
+              allEntitySymbols || allSymbols,
+              isNewestWithNewerVersion,
+            );
             if (warnings.length === 0) return null;
 
             const actionableWarnings = warnings.filter((w) => w.action);
@@ -593,6 +606,8 @@ function MandateRow({
   isFoundational,
   updateTargetMetadata,
   allSymbols,
+  allEntitySymbols,
+  newestWithNewerVersion,
 }: {
   mandate: Mandate;
   state?: MandateState;
@@ -616,6 +631,8 @@ function MandateRow({
     body: string | null;
   } | null;
   allSymbols?: Set<string>;
+  allEntitySymbols?: Set<string>;
+  newestWithNewerVersion?: Set<string>;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarInitialTab, setSidebarInitialTab] = useState<
@@ -647,7 +664,12 @@ function MandateRow({
   };
 
   // Get suggested update symbol from warnings (for newer-available)
-  const warnings = getMandateWarnings(mandate);
+  const isNewestForNewerVersion = newestWithNewerVersion?.has(mandate.symbol);
+  const warnings = getMandateWarnings(
+    mandate,
+    allEntitySymbols || allSymbols,
+    isNewestForNewerVersion,
+  );
   const suggestedUpdateSymbol = warnings.find(
     (w) => w.suggestedUpdate,
   )?.suggestedUpdate;
@@ -706,6 +728,8 @@ function MandateRow({
         readOnly={readOnly}
         isFoundational={isFoundational}
         allSymbols={allSymbols}
+        allEntitySymbols={allEntitySymbols}
+        newestWithNewerVersion={newestWithNewerVersion}
         onOpenSidebar={() => {
           setSidebarInitialTab(undefined);
           setSidebarOpen(true);
@@ -753,6 +777,8 @@ function MandateRow({
           commentCount={0}
           isReviewer={false}
           isUpdateTarget
+          allEntitySymbols={allEntitySymbols}
+          newestWithNewerVersion={newestWithNewerVersion}
           onOpenSidebar={() => setNewDocSidebarOpen(true)}
           onDecision={() => {}}
         />
@@ -899,6 +925,7 @@ function MandateSection({
   userEntity,
   readOnly,
   foundationalSymbols,
+  allEntitySymbols,
   onDecision,
   onReasonChange,
   onApprove,
@@ -922,6 +949,7 @@ function MandateSection({
       year: number | null;
       body: string | null;
       docType: string | null;
+      link: string | null;
     } | null
   >;
   updateTargetMetadata: Record<
@@ -934,6 +962,7 @@ function MandateSection({
   userEntity: string | null;
   readOnly?: boolean;
   foundationalSymbols?: Set<string>;
+  allEntitySymbols?: Set<string>;
   onDecision: (symbol: string, decision: Decision, newSymbol?: string) => void;
   onReasonChange: (
     symbol: string,
@@ -988,7 +1017,7 @@ function MandateSection({
     return {
       symbol: s.documentSymbol,
       title: manualMeta?.title || meta?.title || "",
-      link: manualMeta?.link || null,
+      link: manualMeta?.link || meta?.link || null,
       year: manualMeta?.year || meta?.year || null,
       body: manualMeta?.body || meta?.body || null,
       docType: meta?.docType || null,
@@ -1114,6 +1143,30 @@ function MandateSection({
     [mandates, addedMandates],
   );
 
+  // Build set of symbols that are the newest citation among those sharing the same newer version
+  // Only these should show the "newer version available" warning
+  const newestWithNewerVersion = useMemo(() => {
+    const allMandates = [...mandates, ...addedMandates];
+    // Group by newer version symbol
+    const byNewerVersion = new Map<string, Mandate[]>();
+    for (const m of allMandates) {
+      if (m.newerVersion?.symbol) {
+        const existing = byNewerVersion.get(m.newerVersion.symbol) || [];
+        existing.push(m);
+        byNewerVersion.set(m.newerVersion.symbol, existing);
+      }
+    }
+    // For each group, find the one with the highest year
+    const newestSymbols = new Set<string>();
+    for (const group of byNewerVersion.values()) {
+      const newest = group.reduce((a, b) =>
+        (a.year ?? 0) >= (b.year ?? 0) ? a : b,
+      );
+      newestSymbols.add(newest.symbol);
+    }
+    return newestSymbols;
+  }, [mandates, addedMandates]);
+
   if (mandates.length === 0 && addedMandates.length === 0) return null;
 
   return (
@@ -1200,6 +1253,8 @@ function MandateSection({
               readOnly={readOnly}
               isFoundational={foundationalSymbols?.has(m.symbol)}
               allSymbols={allSymbols}
+              allEntitySymbols={allEntitySymbols}
+              newestWithNewerVersion={newestWithNewerVersion}
               onDecision={(decision, newSymbol) =>
                 onDecision(m.symbol, decision, newSymbol)
               }
@@ -1229,6 +1284,8 @@ function MandateSection({
               userEmail={userEmail}
               userEntity={userEntity}
               allSymbols={allSymbols}
+              allEntitySymbols={allEntitySymbols}
+              newestWithNewerVersion={newestWithNewerVersion}
               onDecision={(decision) => onDecision(m.symbol, decision)}
               onReasonChange={(reason, otherReason) =>
                 onReasonChange(m.symbol, reason, otherReason)
@@ -1272,6 +1329,8 @@ export function EntityDetail({
   const [reviewModeLoaded, setReviewModeLoaded] = useState(false);
   const [reviewStartedBy, setReviewStartedBy] = useState<string | null>(null);
   const [showReviewBlockedDialog, setShowReviewBlockedDialog] = useState(false);
+  const [showClearAllDialog, setShowClearAllDialog] = useState(false);
+  const [isClearingAll, setIsClearingAll] = useState(false);
   const [addedMetadata, setAddedMetadata] = useState<
     Record<
       string,
@@ -1280,6 +1339,7 @@ export function EntityDetail({
         year: number | null;
         body: string | null;
         docType: string | null;
+        link: string | null;
       } | null
     >
   >({});
@@ -1418,6 +1478,7 @@ export function EntityDetail({
               year: number | null;
               body: string | null;
               docType: string | null;
+              link: string | null;
             }
           >,
         ) => {
@@ -1429,6 +1490,7 @@ export function EntityDetail({
               year: number | null;
               body: string | null;
               docType: string | null;
+              link: string | null;
             } | null
           > = {};
           for (const sym of addedSymbols) {
@@ -1754,6 +1816,7 @@ export function EntityDetail({
           year: data.year ? parseInt(data.year) : null,
           body: data.body || null,
           docType: null,
+          link: data.link || null,
         },
       }));
 
@@ -1862,6 +1925,19 @@ export function EntityDetail({
     }
   }, [entity]);
 
+  const handleClearAll = useCallback(async () => {
+    const result = await clearAllEntityDecisionsAction(entity);
+    if (result.success && result.data) {
+      // Clear all local state
+      setStates({});
+      setTotalComments({});
+      setAddedMetadata({});
+      setUpdateTargetMetadata({});
+    } else if (!result.success) {
+      throw new Error(result.error);
+    }
+  }, [entity]);
+
   // Refresh decisions from server (used after review blocked dialog closes)
   const refreshDecisions = useCallback(async () => {
     const result = await getEntityDecisionsAction(entity);
@@ -1962,6 +2038,23 @@ export function EntityDetail({
     filteredMandatesForCounting.map((m) => m.symbol),
   ).size;
 
+  // Entity-wide set of all symbols (including added mandates) for "newer-already-cited" detection
+  const allEntitySymbols = useMemo(() => {
+    const symbols = new Set<string>();
+    // Add all existing mandates
+    for (const m of backgroundMandates) symbols.add(m.symbol);
+    for (const mandates of Object.values(legislativeMandates)) {
+      for (const m of mandates) symbols.add(m.symbol);
+    }
+    // Add symbols from "add" decisions
+    for (const s of Object.values(states)) {
+      if (s.decision?.decision === "add") {
+        symbols.add(s.documentSymbol);
+      }
+    }
+    return symbols;
+  }, [backgroundMandates, legislativeMandates, states]);
+
   // Shared props for all MandateSection instances
   const sharedSectionProps = {
     entity,
@@ -1975,6 +2068,7 @@ export function EntityDetail({
     userEmail,
     userEntity,
     onApprove: handleApprove,
+    allEntitySymbols,
   };
 
   // Create handlers for a specific subprogramme
@@ -2026,6 +2120,12 @@ export function EntityDetail({
         canReviewAnyEntity={canReviewAnyEntity}
         isUnderReview={isUnderReview}
         onStartReview={reviewModeLoaded ? handleStartReview : undefined}
+        onClearAll={
+          reviewModeLoaded && canReviewAnyEntity
+            ? () => setShowClearAllDialog(true)
+            : undefined
+        }
+        isClearingAll={isClearingAll}
       />
 
       {/* Phase Tracker */}
@@ -2158,6 +2258,15 @@ export function EntityDetail({
           setShowReviewBlockedDialog(false);
           refreshDecisions();
         }}
+      />
+
+      {/* Clear all decisions dialog - shown when reviewer clicks Clear All */}
+      <ClearAllDecisionsDialog
+        isOpen={showClearAllDialog}
+        onClose={() => setShowClearAllDialog(false)}
+        onConfirm={handleClearAll}
+        entityName={entity}
+        onClearingStateChange={setIsClearingAll}
       />
     </div>
   );

@@ -913,3 +913,67 @@ async function checkReviewModeBlock(
 
   return null;
 }
+
+/**
+ * Clear all decisions and comments for an entity (reviewers only)
+ * This is a destructive operation that removes all decision history
+ */
+export async function clearAllEntityDecisionsAction(
+  entity: string,
+): Promise<ActionResult<{ deletedDecisions: number; deletedComments: number }>> {
+  const user = await getCurrentUser();
+  if (!user) {
+    return { success: false, error: "unauthorized" };
+  }
+
+  // Only reviewers can clear entity data
+  if (!user.isReviewer) {
+    return { success: false, error: "Only reviewers can clear entity decisions" };
+  }
+
+  if (!entity) {
+    return { success: false, error: "entity required" };
+  }
+
+  try {
+    // Delete all comments for this entity
+    const commentsResult = await query<{ count: string }>(
+      `WITH deleted AS (
+        DELETE FROM mandates_housekeeping.mandate_comments
+        WHERE entity = $1
+        RETURNING 1
+      )
+      SELECT COUNT(*)::text as count FROM deleted`,
+      [entity],
+    );
+    const deletedComments = parseInt(commentsResult[0]?.count ?? "0", 10);
+
+    // Delete all decisions for this entity
+    const decisionsResult = await query<{ count: string }>(
+      `WITH deleted AS (
+        DELETE FROM mandates_housekeeping.mandate_decisions
+        WHERE entity = $1
+        RETURNING 1
+      )
+      SELECT COUNT(*)::text as count FROM deleted`,
+      [entity],
+    );
+    const deletedDecisions = parseInt(decisionsResult[0]?.count ?? "0", 10);
+
+    revalidatePath(`/entity/${encodeURIComponent(entity)}`);
+
+    return {
+      success: true,
+      data: {
+        deletedDecisions,
+        deletedComments,
+      },
+    };
+  } catch (error) {
+    console.error("Failed to clear entity decisions:", error);
+    return {
+      success: false,
+      error: error instanceof Error ? error.message : "Failed to clear data",
+    };
+  }
+}

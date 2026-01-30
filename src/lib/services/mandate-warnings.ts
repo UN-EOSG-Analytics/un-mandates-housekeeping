@@ -5,6 +5,7 @@
 
 import type { Mandate } from "@/types";
 import type { WarningIconType } from "@/components/WarningIcon";
+import { findNewestCitedVersion } from "./warnings-utils";
 
 export interface MandateWarning {
   id: string;
@@ -58,28 +59,23 @@ const WARNING_DEFINITIONS: WarningDefinition[] = [
     condition: (mandate) => mandate.metadataFromDb === false,
     getSuggestedUpdate: (mandate) => mandate.symbol,
     action: "update",
-    icon: "help",
+    icon: "file-question",
     colorScheme: "amber",
   },
   {
     id: "missing-link",
     message:
-      "This citation is missing a link to the document's fulltext – please consider updating with the correct document symbol or manually add with the correct link.",
+      "This citation is missing a link to the document's fulltext – please consider updating with the correct document symbol or manually add again with the fulltext link included.",
     severity: "warning",
     condition: (mandate) => !mandate.link,
     getSuggestedUpdate: (mandate) => mandate.symbol,
     action: "update",
-    icon: "alert",
+    icon: "file",
     colorScheme: "amber",
   },
   {
     id: "newer-available",
-    message: (mandate) => {
-      const nv = mandate.newerVersion;
-      return nv
-        ? `Newer version available from ${nv.year}:`
-        : "Newer version available";
-    },
+    message: "Newer version available from",
     severity: "info",
     condition: (mandate) => !!mandate.newerVersion,
     getSuggestedUpdate: (mandate) => mandate.newerVersion?.symbol,
@@ -95,26 +91,26 @@ const WARNING_DEFINITIONS: WarningDefinition[] = [
  * Get all active warnings for a given mandate
  * @param mandate The mandate to check
  * @param allSymbols Optional set of all symbols in current list (to check if newer version is already cited)
+ * @param isNewestWithNewerVersion Whether this is the most recent citation among those with the same newer version
  */
 export function getMandateWarnings(
   mandate: Mandate,
   allSymbols?: Set<string>,
+  isNewestWithNewerVersion?: boolean,
 ): MandateWarning[] {
-  // Check if newer version is already in the list
-  const newerAlreadyCited =
-    mandate.newerVersion?.symbol &&
-    allSymbols?.has(mandate.newerVersion.symbol);
+  // Check if any newer version is already cited (find the newest among cited)
+  const citedNewer = findNewestCitedVersion(mandate.newerVersion, allSymbols);
 
-  // If newer version is already cited, add special remove warning
-  if (newerAlreadyCited) {
+  // If a newer version is already cited, add special remove warning
+  if (citedNewer) {
     return [
       {
         id: "newer-already-cited",
-        message: "Newer version",
-        messageSuffix: "already cited.",
+        message: "Newer version from",
+        messageSuffix: "already cited:",
         severity: "warning",
-        linkedSymbol: mandate.newerVersion?.symbol,
-        linkedYear: mandate.newerVersion?.year,
+        linkedSymbol: citedNewer.symbol,
+        linkedYear: citedNewer.year,
         action: "remove",
         icon: "x",
         colorScheme: "red",
@@ -139,20 +135,26 @@ export function getMandateWarnings(
     ];
   }
 
-  return WARNING_DEFINITIONS.filter((def) => def.condition(mandate)).map(
-    (def) => ({
-      id: def.id,
-      message:
-        typeof def.message === "function" ? def.message(mandate) : def.message,
-      severity: def.severity,
-      suggestedUpdate: def.getSuggestedUpdate?.(mandate),
-      action: def.action,
-      icon: def.icon,
-      colorScheme: def.colorScheme,
-      linkedSymbol: def.getLinkedSymbol?.(mandate),
-      linkedYear: def.getLinkedYear?.(mandate),
-    }),
-  );
+  // Filter warnings: only show "newer-available" if this is the most recent citation with that newer version
+  const shouldShowNewerAvailable = isNewestWithNewerVersion !== false;
+
+  return WARNING_DEFINITIONS.filter((def) => {
+    if (!def.condition(mandate)) return false;
+    // Only show "newer-available" warning for the most recent citation
+    if (def.id === "newer-available" && !shouldShowNewerAvailable) return false;
+    return true;
+  }).map((def) => ({
+    id: def.id,
+    message:
+      typeof def.message === "function" ? def.message(mandate) : def.message,
+    severity: def.severity,
+    suggestedUpdate: def.getSuggestedUpdate?.(mandate),
+    action: def.action,
+    icon: def.icon,
+    colorScheme: def.colorScheme,
+    linkedSymbol: def.getLinkedSymbol?.(mandate),
+    linkedYear: def.getLinkedYear?.(mandate),
+  }));
 }
 
 /**

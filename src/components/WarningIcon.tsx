@@ -1,6 +1,8 @@
 import {
   AlertTriangle,
   ArrowUp,
+  FileQuestion,
+  FileText,
   HelpCircle,
   Info,
   X,
@@ -10,6 +12,8 @@ import {
 export type WarningIconType =
   | "alert"
   | "arrow-up"
+  | "file"
+  | "file-question"
   | "help"
   | "info"
   | "x"
@@ -21,6 +25,8 @@ const iconMap: Record<
 > = {
   alert: AlertTriangle,
   "arrow-up": ArrowUp,
+  file: FileText,
+  "file-question": FileQuestion,
   help: HelpCircle,
   info: Info,
   x: X,
