@@ -2232,12 +2232,12 @@ export function EntityDetail({
             />
           ))}
 
-        {/* Mandates and background (read-only reference) */}
+        {/* Mandates and background (editable by DMSPC reviewers) */}
         <MandateSection
           title="Mandates and background"
           mandates={filteredBackground}
           subprogramme={null}
-          readOnly
+          readOnly={!canReviewAnyEntity}
           foundationalSymbols={foundationalSymbols}
           searchQuery={globalSearchQuery}
           {...sharedSectionProps}
