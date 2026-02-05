@@ -136,7 +136,9 @@ export function WarningTooltip({
                       {warning.linkedYear && (
                         <>
                           {" "}
-                          <span className="font-semibold">{warning.linkedYear}</span>
+                          <span className="font-semibold">
+                            {warning.linkedYear}
+                          </span>
                         </>
                       )}
                       {warning.messageSuffix ? (

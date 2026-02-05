@@ -1,65 +1,67 @@
 "use client";
 
 import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogHeader,
-    DialogTitle,
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
 } from "@/components/ui/dialog";
 import {
-    useRealtimeDecisions,
-    type RealtimeChange,
+  useRealtimeDecisions,
+  type RealtimeChange,
 } from "@/hooks/useRealtimeDecisions";
+import { BODY_ABBREVS } from "@/lib/constants";
+import { abbreviateBody } from "@/lib/utils";
 import { getAgeIndicator } from "@/lib/services/age-indicator";
 import {
-    approveDecisionAction,
-    clearAllEntityDecisionsAction,
-    createCommentAction,
-    createDecisionAction,
-    endReviewModeAction,
-    getEntityDecisionsAction,
-    getReviewModeStatusAction,
-    getSingleMandateStateAction,
-    getUserRoleAction,
-    startReviewModeAction,
-    updateDecisionReasonAction,
+  approveDecisionAction,
+  clearAllEntityDecisionsAction,
+  createCommentAction,
+  createDecisionAction,
+  endReviewModeAction,
+  getEntityDecisionsAction,
+  getReviewModeStatusAction,
+  getSingleMandateStateAction,
+  getUserRoleAction,
+  startReviewModeAction,
+  updateDecisionReasonAction,
 } from "@/lib/services/housekeeping-actions";
 import {
-    getMandateWarnings,
-    getWarningIcon,
+  getMandateWarnings,
+  getWarningIcon,
 } from "@/lib/services/mandate-warnings";
 import type {
-    Decision,
-    Mandate,
-    MandateComment,
-    MandateDecision,
-    MandateState,
+  Decision,
+  Mandate,
+  MandateComment,
+  MandateDecision,
+  MandateState,
 } from "@/types";
 import {
-    Check,
-    ChevronDown,
-    ChevronUp,
-    MessageSquare,
-    Pencil,
-    Search,
-    Star,
-    X,
+  Check,
+  ChevronDown,
+  ChevronUp,
+  MessageSquare,
+  Pencil,
+  Search,
+  Star,
+  X,
 } from "lucide-react";
 import { orderBy } from "natural-orderby";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import {
-    ReadOnlyNoticeBanner,
-    ReviewerModeBanner,
-    ReviewInProgressBanner,
+  ReadOnlyNoticeBanner,
+  ReviewerModeBanner,
+  ReviewInProgressBanner,
 } from "./Banner";
 import { ClearAllDecisionsDialog } from "./ClearAllDecisionsDialog";
 import { DecisionDropdown } from "./DecisionDropdown";
 import { DiffModal } from "./DiffModal";
 import { DocumentSymbol } from "./DocumentModal";
-import { DocumentSearchInput } from "./DocumentSearchInput";
+import { DocumentSearchInput } from "../features/mandates/ui/DocumentSearchInput";
 import { EntityHeader } from "./EntityHeader";
-import type { ManualEntryData } from "./ManualDocumentForm";
+import type { ManualEntryData } from "../features/mandates/ui/ManualDocumentForm";
 import { ReviewBlockedDialog } from "./ReviewBlockedDialog";
 import { Tooltip } from "./Tooltip";
 import { WarningIcon } from "./WarningIcon";
@@ -71,22 +73,6 @@ interface Props {
   partName: string | null;
   backgroundMandates: Mandate[];
   legislativeMandates: Record<string, Mandate[]>;
-}
-
-// Abbreviations for common UN issuing bodies
-const BODY_ABBREVS: Record<string, string> = {
-  "General Assembly": "GA",
-  "Security Council": "SC",
-  "Economic and Social Council": "ECOSOC",
-  "Human Rights Council": "HRC",
-  "Secretary-General": "SG",
-  "International Court of Justice": "ICJ",
-  "Trusteeship Council": "TC",
-};
-
-function abbreviateBody(body: string | null): string | null {
-  if (!body) return null;
-  return BODY_ABBREVS[body] ?? body;
 }
 
 // Transform subprogramme name for display
@@ -406,7 +392,7 @@ function MandateRowContent({
         className={`text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`}
         title={mandate.body ?? undefined}
       >
-        {abbreviateBody(mandate.body) ?? "—"}
+        {abbreviateBody(mandate.body, BODY_ABBREVS) ?? "—"}
       </div>
       <div
         className={`text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`}
@@ -878,16 +864,6 @@ function MandateRow({
     </div>
   );
 }
-
-// AddBadge is no longer used - added mandates now use DecisionDropdown with locked=true
-// function AddBadge({ show }: { show: boolean }) {
-//   if (!show) return <span className="text-xs text-gray-400">—</span>;
-//   return (
-//     <span className="inline-flex h-7 w-20 items-center justify-center rounded border border-blue-200 bg-blue-50 px-2 text-xs text-blue-700">
-//       <span>Add</span>
-//     </span>
-//   );
-// }
 
 // Wrapper for the "Add" row at bottom of sections
 function AddEntryRow({

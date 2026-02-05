@@ -1,4 +1,4 @@
-import { SITE_TITLE } from "@/components/Header";
+import { SITE_TITLE } from "@/components/core/Header";
 import { getBaseUrl } from "@/lib/get-base-url";
 import nodemailer from "nodemailer";
 

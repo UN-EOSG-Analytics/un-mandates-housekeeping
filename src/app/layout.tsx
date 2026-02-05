@@ -1,5 +1,5 @@
-import Footer from "@/components/Footer";
-import { SITE_SUBTITLE, SITE_TITLE } from "@/components/Header";
+import Footer from "@/components/core/Footer";
+import { SITE_SUBTITLE, SITE_TITLE } from "@/components/core/Header";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
 import { Roboto } from "next/font/google";

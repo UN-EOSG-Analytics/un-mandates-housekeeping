@@ -1,6 +1,6 @@
 import { EntityOverview } from "@/components/EntityOverview";
-import { FooterFootnote } from "@/components/FooterFootnote";
-import { Header } from "@/components/Header";
+import { FooterFootnote } from "@/components/core/FooterFootnote";
+import { Header } from "@/components/core/Header";
 import { getCurrentUser } from "@/features/auth/auth";
 import {
   fetchPPBRecords,

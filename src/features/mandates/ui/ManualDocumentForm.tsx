@@ -3,7 +3,7 @@
 import { ArrowLeftFromLine, Info, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { MAX_YEAR, MIN_YEAR } from "@/lib/constants";
-import { Tooltip } from "./Tooltip";
+import { Tooltip } from "../../../components/Tooltip";
 
 export interface ManualEntryData {
   symbol: string;
@@ -45,7 +45,6 @@ export function ManualDocumentForm({
   });
   const [bodySuggestions, setBodySuggestions] = useState<string[]>([]);
   const [showBodySuggestions, setShowBodySuggestions] = useState(false);
-  const [linkError, setLinkError] = useState("");
   const [otherBody, setOtherBody] = useState("");
   const [symbolExists, setSymbolExists] = useState(false);
   const [checkingSymbol, setCheckingSymbol] = useState(false);
@@ -303,7 +302,9 @@ export function ManualDocumentForm({
         <div>
           <label className="mb-1.5 block text-xs font-medium text-gray-700">
             Year <span className="text-red-500">*</span>
-            <Tooltip content={`Year the document was published (${MIN_YEAR}-${MAX_YEAR})`}>
+            <Tooltip
+              content={`Year the document was published (${MIN_YEAR}-${MAX_YEAR})`}
+            >
               <Info className="ml-1 inline h-3.5 w-3.5 cursor-help text-gray-400" />
             </Tooltip>
           </label>
@@ -339,7 +340,7 @@ export function ManualDocumentForm({
         <div>
           <label className="mb-1.5 block text-xs font-medium text-gray-700">
             Fulltext Link <span className="text-red-500">*</span>
-            <Tooltip content="Direct URL to the official document on ODS, UN Digital Library, or other offical document repository.">
+            <Tooltip content="URL to the official document on ODS, UN Digital Library, or other official repository. Can be a direct PDF link or a document viewer page.">
               <Info className="ml-1 inline h-3.5 w-3.5 cursor-help text-gray-400" />
             </Tooltip>
           </label>
@@ -348,21 +349,25 @@ export function ManualDocumentForm({
             value={manualData.link}
             onChange={(e) => {
               setManualData((d) => ({ ...d, link: e.target.value }));
-              setLinkError("");
             }}
-            className={`w-full rounded-lg border px-3 py-2 text-sm transition-colors focus:ring-2 focus:outline-none ${
-              linkError ||
-              (manualData.link && !/^https?:\/\/.+/.test(manualData.link))
-                ? "border-red-300 bg-red-50/50 focus:ring-red-500/20"
-                : "border-gray-200 bg-white hover:border-gray-300 focus:ring-un-blue/20"
-            }`}
+            className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm transition-colors hover:border-gray-300 focus:ring-2 focus:ring-un-blue/20 focus:outline-none"
             placeholder="https://..."
           />
-          {(linkError ||
-            (manualData.link && !/^https?:\/\/.+/.test(manualData.link))) && (
-            <p className="mt-1 text-xs text-red-500">
-              {linkError || "Link must start with http:// or https://"}
-            </p>
+          {manualData.link.trim() && /^https?:\/\/.+/.test(manualData.link) && (
+            <div className="mt-2 flex items-center gap-2 text-xs text-gray-600">
+              <span>
+                Please verify that the link points directly to the document and
+                loads correctly
+              </span>
+              <a
+                href={manualData.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded bg-un-blue px-2.5 py-1 font-medium text-white hover:bg-un-blue/90"
+              >
+                Open link
+              </a>
+            </div>
           )}
         </div>
         <div className="flex justify-end gap-2 border-t border-gray-100 pt-4">

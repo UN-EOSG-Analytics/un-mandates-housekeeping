@@ -216,7 +216,7 @@ export function DocumentSearchInput({
 
   return (
     <div ref={containerRef} className="relative rounded-lg bg-white shadow-sm">
-      <div className="flex items-center gap-3 py-2.5 pl-3 pr-2">
+      <div className="flex items-center gap-3 py-2.5 pr-2 pl-3">
         <div
           className={`flex flex-1 items-center gap-2 rounded-lg border-2 border-dashed px-3 py-1.5 transition-colors ${
             focused
@@ -259,13 +259,13 @@ export function DocumentSearchInput({
             </button>
           )}
         </div>
-        
+
         <div className="flex items-center gap-2 text-xs font-medium text-gray-400">
           <div className="h-px w-4 bg-gray-300" />
           OR
           <div className="h-px w-4 bg-gray-300" />
         </div>
-        
+
         <button
           onClick={handleOpenManualForm}
           className="flex shrink-0 items-center gap-1.5 rounded-lg border border-gray-300 bg-white px-2.5 py-1.5 text-sm text-gray-600 transition-colors hover:border-un-blue/40 hover:bg-gray-50 hover:text-un-blue"

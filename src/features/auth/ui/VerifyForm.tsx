@@ -2,7 +2,7 @@
 
 import { useSearchParams, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import { EntityCombobox } from "@/components/EntityCombobox";
+import { EntityCombobox } from "@/features/auth/ui/EntityCombobox";
 import type { EntityOption } from "@/lib/services/data-service";
 import {
   checkEntityForTokenAction,
@@ -84,7 +84,9 @@ export function VerifyForm({ entities }: VerifyFormProps) {
         <div className="w-full max-w-sm">
           <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
             <div className="rounded-lg border border-red-200 bg-red-50 p-3">
-              <p className="text-sm text-red-700">Missing verification token.</p>
+              <p className="text-sm text-red-700">
+                Missing verification token.
+              </p>
             </div>
           </div>
         </div>
@@ -110,7 +112,9 @@ export function VerifyForm({ entities }: VerifyFormProps) {
       <div className="flex flex-1 items-center justify-center px-4">
         <div className="w-full max-w-sm">
           <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
-            <h2 className="mb-1 text-2xl font-bold text-gray-900">Complete Sign In</h2>
+            <h2 className="mb-1 text-2xl font-bold text-gray-900">
+              Complete Sign In
+            </h2>
             <p className="mb-8 text-sm text-gray-500">
               Signing in as <span className="font-medium">{userEmail}</span>
             </p>
@@ -137,7 +141,9 @@ export function VerifyForm({ entities }: VerifyFormProps) {
     <div className="flex flex-1 items-center justify-center px-4">
       <div className="w-full max-w-sm">
         <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
-          <h2 className="mb-2 text-2xl font-bold text-gray-900">Complete Sign In</h2>
+          <h2 className="mb-2 text-2xl font-bold text-gray-900">
+            Complete Sign In
+          </h2>
           {userEmail && (
             <p className="mb-6 text-sm text-gray-500">
               Signing in as <span className="font-medium">{userEmail}</span>
@@ -176,7 +182,8 @@ export function VerifyForm({ entities }: VerifyFormProps) {
               disabled={
                 loading ||
                 !selectedEntity ||
-                (selectedEntity === "Other – Please Specify" && !otherEntity.trim())
+                (selectedEntity === "Other – Please Specify" &&
+                  !otherEntity.trim())
               }
               className="w-full rounded-lg bg-un-blue px-4 py-2.5 text-sm font-semibold text-white transition-all hover:bg-un-blue/90 active:scale-95 disabled:cursor-not-allowed disabled:opacity-60"
             >
