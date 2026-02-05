@@ -16,8 +16,8 @@ import {
   Star,
   Users,
 } from "lucide-react";
-import { getCurrentUser } from "@/lib/auth/auth";
-import { Header } from "@/components/Header";
+import { getCurrentUser } from "@/features/auth/auth";
+import { Header } from "@/components/core/Header";
 
 // Feature card component
 function FeatureCard({

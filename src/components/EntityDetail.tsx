@@ -10,7 +10,9 @@ import {
 import {
   useRealtimeDecisions,
   type RealtimeChange,
-} from "@/lib/hooks/useRealtimeDecisions";
+} from "@/hooks/useRealtimeDecisions";
+import { BODY_ABBREVS } from "@/lib/constants";
+import { abbreviateBody } from "@/lib/utils";
 import { getAgeIndicator } from "@/lib/services/age-indicator";
 import {
   approveDecisionAction,
@@ -48,19 +50,19 @@ import {
 } from "lucide-react";
 import { orderBy } from "natural-orderby";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { DecisionDropdown } from "./DecisionDropdown";
-import { DiffModal } from "./DiffModal";
-import { DocumentSymbol } from "./DocumentModal";
-import { DocumentSearchInput } from "./DocumentSearchInput";
-import { EntityHeader } from "./EntityHeader";
-import type { ManualEntryData } from "./ManualDocumentForm";
-import { ClearAllDecisionsDialog } from "./ClearAllDecisionsDialog";
-import { ReviewBlockedDialog } from "./ReviewBlockedDialog";
 import {
   ReadOnlyNoticeBanner,
   ReviewerModeBanner,
   ReviewInProgressBanner,
 } from "./Banner";
+import { ClearAllDecisionsDialog } from "./ClearAllDecisionsDialog";
+import { DecisionDropdown } from "./DecisionDropdown";
+import { DiffModal } from "./DiffModal";
+import { DocumentSymbol } from "./DocumentModal";
+import { DocumentSearchInput } from "../features/mandates/ui/DocumentSearchInput";
+import { EntityHeader } from "./EntityHeader";
+import type { ManualEntryData } from "../features/mandates/ui/ManualDocumentForm";
+import { ReviewBlockedDialog } from "./ReviewBlockedDialog";
 import { Tooltip } from "./Tooltip";
 import { WarningIcon } from "./WarningIcon";
 import { WarningTooltip } from "./WarningTooltip";
@@ -71,22 +73,6 @@ interface Props {
   partName: string | null;
   backgroundMandates: Mandate[];
   legislativeMandates: Record<string, Mandate[]>;
-}
-
-// Abbreviations for common UN issuing bodies
-const BODY_ABBREVS: Record<string, string> = {
-  "General Assembly": "GA",
-  "Security Council": "SC",
-  "Economic and Social Council": "ECOSOC",
-  "Human Rights Council": "HRC",
-  "Secretary-General": "SG",
-  "International Court of Justice": "ICJ",
-  "Trusteeship Council": "TC",
-};
-
-function abbreviateBody(body: string | null): string | null {
-  if (!body) return null;
-  return BODY_ABBREVS[body] ?? body;
 }
 
 // Transform subprogramme name for display
@@ -406,7 +392,7 @@ function MandateRowContent({
         className={`text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`}
         title={mandate.body ?? undefined}
       >
-        {abbreviateBody(mandate.body) ?? "—"}
+        {abbreviateBody(mandate.body, BODY_ABBREVS) ?? "—"}
       </div>
       <div
         className={`text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`}
@@ -765,6 +751,8 @@ function MandateRow({
             formTitle="Enter replacement document manually"
             compact
             initialQuery={updatePrefillSymbol || suggestedUpdateSymbol}
+            originalTitle={mandate.title}
+            originalSymbol={mandate.symbol}
           />
         </div>
       )}
@@ -877,16 +865,6 @@ function MandateRow({
   );
 }
 
-// AddBadge is no longer used - added mandates now use DecisionDropdown with locked=true
-// function AddBadge({ show }: { show: boolean }) {
-//   if (!show) return <span className="text-xs text-gray-400">—</span>;
-//   return (
-//     <span className="inline-flex h-7 w-20 items-center justify-center rounded border border-blue-200 bg-blue-50 px-2 text-xs text-blue-700">
-//       <span>Add</span>
-//     </span>
-//   );
-// }
-
 // Wrapper for the "Add" row at bottom of sections
 function AddEntryRow({
   onAdd,
@@ -902,7 +880,7 @@ function AddEntryRow({
     <DocumentSearchInput
       onSelect={onAdd}
       onManualSubmit={onAddManual}
-      placeholder="Add mandate document — search by symbol or title..."
+      placeholder="Add mandate document — search by symbol or title and click to select."
       submitLabel="Add"
       formTitle="Add document manually"
     />
@@ -2028,7 +2006,9 @@ export function EntityDetail({
     ...backgroundMandates,
     ...Object.values(legislativeMandates).flat(),
   ];
-  const totalUniqueDocuments = new Set(allMandatesForCounting.map((m) => m.symbol)).size;
+  const totalUniqueDocuments = new Set(
+    allMandatesForCounting.map((m) => m.symbol),
+  ).size;
 
   const filteredMandatesForCounting = [
     ...filteredBackground,

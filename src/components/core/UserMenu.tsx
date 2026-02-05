@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { LogOut } from "lucide-react";
-import { EntityChangeDialog } from "./EntityChangeDialog";
+import { EntityChangeDialog } from "../../features/auth/ui/EntityChangeDialog";
 import type { EntityOption } from "@/lib/services/data-service";
-import { logoutAction } from "@/lib/auth/actions";
+import { logoutAction } from "@/features/auth/actions";
 
 export function UserMenu({
   email,

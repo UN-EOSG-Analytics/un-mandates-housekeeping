@@ -95,7 +95,7 @@ export function EntityHeader({
                 <DropdownMenuTrigger asChild>
                   <button
                     disabled={isClearingAll}
-                    className="flex items-center justify-center rounded-md border border-gray-200 bg-white p-1.5 text-gray-500 transition-colors hover:bg-gray-50 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="flex items-center justify-center rounded-md border border-gray-200 bg-white p-1.5 text-gray-500 transition-colors hover:bg-gray-50 hover:text-gray-700 disabled:cursor-not-allowed disabled:opacity-50"
                     title="More options"
                   >
                     <MoreHorizontal className="h-4 w-4" />
@@ -105,10 +105,12 @@ export function EntityHeader({
                   <DropdownMenuItem
                     onClick={onClearAll}
                     disabled={isClearingAll}
-                    className="text-red-600/70 focus:bg-red-50 focus:text-red-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="text-red-600/70 focus:bg-red-50 focus:text-red-600 disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     <Trash2 className="h-4 w-4 text-red-500/70" />
-                    {isClearingAll ? "Clearing..." : "Clear All Decisions for Entity"}
+                    {isClearingAll
+                      ? "Clearing..."
+                      : "Clear All Decisions for Entity"}
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>

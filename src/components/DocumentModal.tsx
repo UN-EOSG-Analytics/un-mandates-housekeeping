@@ -45,7 +45,7 @@ import {
   getReasonDisplayLabel,
   renderReasonIcon,
   renderLabelWithBold,
-} from "./ReasonsModal";
+} from "../features/mandates/ui/ReasonsModal";
 import type { DecisionType } from "@/lib/services/decision-reasons";
 
 interface Props {

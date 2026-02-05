@@ -21,6 +21,8 @@ interface Props {
   formTitle?: string;
   compact?: boolean;
   initialQuery?: string;
+  originalTitle?: string;
+  originalSymbol?: string;
 }
 
 export function DocumentSearchInput({
@@ -32,6 +34,8 @@ export function DocumentSearchInput({
   formTitle,
   compact,
   initialQuery,
+  originalTitle,
+  originalSymbol,
 }: Props) {
   const [query, setQuery] = useState(initialQuery || "");
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -204,15 +208,17 @@ export function DocumentSearchInput({
         submitLabel={submitLabel}
         formTitle={formTitle}
         compact={compact}
+        originalTitle={originalTitle}
+        originalSymbol={originalSymbol}
       />
     );
   }
 
   return (
-    <div ref={containerRef} className="relative">
-      <div className="flex items-center gap-2">
+    <div ref={containerRef} className="relative rounded-lg bg-white shadow-sm">
+      <div className="flex items-center gap-3 py-2.5 pr-2 pl-3">
         <div
-          className={`flex flex-1 items-center gap-2 rounded-lg border-2 border-dashed px-3 py-2 transition-colors ${
+          className={`flex flex-1 items-center gap-2 rounded-lg border-2 border-dashed px-3 py-1.5 transition-colors ${
             focused
               ? "border-un-blue/40 bg-blue-50/30"
               : "border-gray-200 bg-gray-50/50"
@@ -253,12 +259,19 @@ export function DocumentSearchInput({
             </button>
           )}
         </div>
+
+        <div className="flex items-center gap-2 text-xs font-medium text-gray-400">
+          <div className="h-px w-4 bg-gray-300" />
+          OR
+          <div className="h-px w-4 bg-gray-300" />
+        </div>
+
         <button
           onClick={handleOpenManualForm}
-          className="flex shrink-0 items-center gap-1.5 rounded-lg bg-un-blue px-3 py-2 text-sm font-medium text-white transition-all hover:bg-un-blue/90 hover:shadow-md"
+          className="flex shrink-0 items-center gap-1.5 rounded-lg border border-gray-300 bg-white px-2.5 py-1.5 text-sm text-gray-600 transition-colors hover:border-un-blue/40 hover:bg-gray-50 hover:text-un-blue"
           title="Add document manually"
         >
-          <FileText className="h-4 w-4" />
+          <FileText className="h-3.5 w-3.5" />
           Add manually
         </button>
       </div>

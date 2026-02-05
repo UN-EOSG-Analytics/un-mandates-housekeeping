@@ -7,7 +7,7 @@ import {
   getReasonLabel,
   type DecisionType,
 } from "@/lib/services/decision-reasons";
-import { DECISION_COLORS } from "./DecisionDropdown";
+import { DECISION_COLORS } from "../../../components/DecisionDropdown";
 import {
   X,
   CheckCircle2,

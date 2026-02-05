@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { query } from "@/lib/db/db";
-import { getCurrentUser } from "@/lib/auth/auth";
+import { getCurrentUser } from "@/features/auth/auth";
 import type { MandateDecision, MandateComment, MandateState } from "@/types";
 
 // Return type for actions
@@ -920,7 +920,9 @@ async function checkReviewModeBlock(
  */
 export async function clearAllEntityDecisionsAction(
   entity: string,
-): Promise<ActionResult<{ deletedDecisions: number; deletedComments: number }>> {
+): Promise<
+  ActionResult<{ deletedDecisions: number; deletedComments: number }>
+> {
   const user = await getCurrentUser();
   if (!user) {
     return { success: false, error: "unauthorized" };
@@ -928,7 +930,10 @@ export async function clearAllEntityDecisionsAction(
 
   // Only reviewers can clear entity data
   if (!user.isReviewer) {
-    return { success: false, error: "Only reviewers can clear entity decisions" };
+    return {
+      success: false,
+      error: "Only reviewers can clear entity decisions",
+    };
   }
 
   if (!entity) {

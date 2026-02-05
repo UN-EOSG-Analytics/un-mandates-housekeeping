@@ -94,3 +94,24 @@ export const BUDGET_PARTS_META: BudgetPartMeta[] = [
     label: "Staff assessment",
   },
 ];
+
+/**
+ * Document year validation constants
+ * MIN_YEAR: First UN General Assembly resolution (1946)
+ * MAX_YEAR: Current year (updated server-side at build time)
+ */
+export const MIN_YEAR = 1946;
+export const MAX_YEAR = new Date().getFullYear();
+
+/**
+ * Abbreviations for common UN issuing bodies
+ */
+export const BODY_ABBREVS: Record<string, string> = {
+  "General Assembly": "GA",
+  "Security Council": "SC",
+  "Economic and Social Council": "ECOSOC",
+  "Human Rights Council": "HRC",
+  "Secretary-General": "SG",
+  "International Court of Justice": "ICJ",
+  "Trusteeship Council": "TC",
+};

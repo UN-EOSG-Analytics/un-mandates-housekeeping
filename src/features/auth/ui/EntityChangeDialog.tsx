@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { EntityCombobox } from "./EntityCombobox";
 import type { EntityOption } from "@/lib/services/data-service";
-import { updateEntityAction } from "@/lib/auth/actions";
+import { updateEntityAction } from "@/features/auth/actions";
 
 interface EntityChangeDialogProps {
   isOpen: boolean;

@@ -9,7 +9,7 @@ import {
   getReasonDisplayLabel,
   renderReasonIcon,
   renderLabelWithBold,
-} from "./ReasonsModal";
+} from "../features/mandates/ui/ReasonsModal";
 import {
   Popover,
   PopoverContent,

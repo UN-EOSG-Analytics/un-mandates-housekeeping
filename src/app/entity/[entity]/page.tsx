@@ -1,7 +1,7 @@
 import { EntityDetail } from "@/components/EntityDetail";
-import { FooterFootnote } from "@/components/FooterFootnote";
-import { Header } from "@/components/Header";
-import { getCurrentUser } from "@/lib/auth/auth";
+import { FooterFootnote } from "@/components/core/FooterFootnote";
+import { Header } from "@/components/core/Header";
+import { getCurrentUser } from "@/features/auth/auth";
 import {
   fetchEntities,
   fetchPPBRecords,

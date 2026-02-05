@@ -1,5 +1,6 @@
 import ExcelJS from "exceljs";
 import { fetchPPBRecords } from "../data-service";
+import { getBaseUrl } from "@/lib/get-base-url";
 
 interface MandateRow {
   symbol: string;
@@ -151,9 +152,7 @@ export async function exportToXlsx(entity?: string): Promise<Buffer> {
   // Cover sheet
   const cover = workbook.addWorksheet("Cover");
   const title = entity ? `Mandates for ${entity}` : "All PPB 2027 Mandates";
-  const baseUrl = process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000";
+  const baseUrl = await getBaseUrl();
   const sourceUrl = entity ? `${baseUrl}/entity/${entity}/` : `${baseUrl}/`;
 
   cover.getCell("A1").value = title;
