@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { query } from "@/lib/db/db";
-import { getCurrentUser } from "@/lib/auth/auth";
+import { getCurrentUser } from "@/features/auth/auth";
 import type { MandateDecision, MandateComment, MandateState } from "@/types";
 
 // Return type for actions

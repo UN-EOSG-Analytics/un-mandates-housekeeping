@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { getCurrentUser } from "@/lib/auth/auth";
+import { getCurrentUser } from "@/features/auth/auth";
 
 export default async function LoginLayout({
   children,

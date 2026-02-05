@@ -11,9 +11,9 @@ import {
   clearSession,
   getCurrentUser,
   recentTokenExists,
-} from "./auth";
-import { sendMagicLink } from "./mail";
-import { query } from "../db/db";
+} from "../auth/auth";
+import { sendMagicLink } from "../auth/mail";
+import { query } from "../../lib/db/db";
 
 // Return type for auth actions
 type ActionResult<T = void> =

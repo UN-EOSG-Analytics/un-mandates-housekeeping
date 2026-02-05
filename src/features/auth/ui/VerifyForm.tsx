@@ -7,7 +7,7 @@ import type { EntityOption } from "@/lib/services/data-service";
 import {
   checkEntityForTokenAction,
   verifyMagicTokenAction,
-} from "@/lib/auth/actions";
+} from "@/features/auth/actions";
 
 interface VerifyFormProps {
   entities: EntityOption[];

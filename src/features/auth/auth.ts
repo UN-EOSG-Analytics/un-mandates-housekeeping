@@ -1,6 +1,6 @@
 import { cookies } from "next/headers";
 import { randomBytes, createHmac, timingSafeEqual } from "crypto";
-import { query } from "../db/db";
+import { query } from "../../lib/db/db";
 
 const AUTH_SECRET = process.env.AUTH_SECRET;
 if (!AUTH_SECRET && process.env.NODE_ENV === "production") {

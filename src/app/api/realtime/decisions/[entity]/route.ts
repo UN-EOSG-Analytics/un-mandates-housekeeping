@@ -5,7 +5,7 @@
  * Designed for Vercel serverless (no long-lived connections).
  */
 
-import { getCurrentUser } from "@/lib/auth/auth";
+import { getCurrentUser } from "@/features/auth/auth";
 import { query } from "@/lib/db/db";
 import { NextResponse } from "next/server";
 

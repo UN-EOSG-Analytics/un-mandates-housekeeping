@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getCurrentUser } from "@/lib/auth/auth";
+import { getCurrentUser } from "@/features/auth/auth";
 import { query } from "@/lib/db/db";
 import {
   uploadBlob,

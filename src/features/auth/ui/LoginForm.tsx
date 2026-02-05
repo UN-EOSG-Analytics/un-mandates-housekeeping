@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Banner } from "./Banner";
-import { requestMagicLinkAction } from "@/lib/auth/actions";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { requestMagicLinkAction } from "@/features/auth/actions";
 
 export function LoginForm() {
   const [email, setEmail] = useState("");
@@ -32,14 +32,14 @@ export function LoginForm() {
       </p>
 
       {status === "sent" ? (
-        <Banner variant="success" icon={false}>
-          <div>
-            <p className="font-medium">Please check your e-mail</p>
-            <p className="mt-1 text-sm">
-              We have sent a sign-in link to {email}
-            </p>
-          </div>
-        </Banner>
+        <Alert className="border-green-200 bg-green-50">
+          <AlertTitle className="text-green-900">
+            Please check your e-mail
+          </AlertTitle>
+          <AlertDescription className="text-green-800">
+            We have sent a sign-in link to {email}
+          </AlertDescription>
+        </Alert>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
