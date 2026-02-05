@@ -72,9 +72,9 @@ export function EntityCombobox({
           role="combobox"
           aria-expanded={open}
           className={cn(
-            "w-full justify-between font-normal transition-colors",
-            !value && "text-gray-500",
-            open && "border-un-blue ring-1 ring-un-blue",
+            "w-full justify-between font-normal transition-all h-auto py-2.5 px-4 text-sm rounded-lg border-gray-300 hover:bg-transparent",
+            !value && "text-gray-400",
+            open && "border-un-blue ring-2 ring-un-blue/20",
             className,
           )}
         >
