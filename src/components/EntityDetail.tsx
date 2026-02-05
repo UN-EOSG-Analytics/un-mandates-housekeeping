@@ -881,7 +881,7 @@ function AddEntryRow({
     <DocumentSearchInput
       onSelect={onAdd}
       onManualSubmit={onAddManual}
-      placeholder="Add mandate document — search by symbol or title and click to select."
+      placeholder="Add mandate document from database — search by symbol or title and click to select."
       submitLabel="Add"
       formTitle="Add document manually"
     />
