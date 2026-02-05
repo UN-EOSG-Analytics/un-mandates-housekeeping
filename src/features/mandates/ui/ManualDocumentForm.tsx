@@ -4,6 +4,7 @@ import { ArrowLeftFromLine, Info, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { MAX_YEAR, MIN_YEAR } from "@/lib/constants";
 import { Tooltip } from "../../../components/Tooltip";
+import { getIssuingBodies } from "@/lib/services/reference-data";
 
 export interface ManualEntryData {
   symbol: string;
@@ -58,8 +59,7 @@ export function ManualDocumentForm({
   } | null>(null);
 
   useEffect(() => {
-    fetch("/api/documents/bodies")
-      .then((r) => r.json())
+    getIssuingBodies()
       .then(setBodySuggestions)
       .catch(() => {});
   }, []);
