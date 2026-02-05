@@ -21,6 +21,8 @@ interface Props {
   formTitle?: string;
   compact?: boolean;
   initialQuery?: string;
+  originalTitle?: string;
+  originalSymbol?: string;
 }
 
 export function DocumentSearchInput({
@@ -32,6 +34,8 @@ export function DocumentSearchInput({
   formTitle,
   compact,
   initialQuery,
+  originalTitle,
+  originalSymbol,
 }: Props) {
   const [query, setQuery] = useState(initialQuery || "");
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -204,6 +208,8 @@ export function DocumentSearchInput({
         submitLabel={submitLabel}
         formTitle={formTitle}
         compact={compact}
+        originalTitle={originalTitle}
+        originalSymbol={originalSymbol}
       />
     );
   }

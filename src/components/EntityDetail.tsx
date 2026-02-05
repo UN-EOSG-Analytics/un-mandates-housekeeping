@@ -765,6 +765,8 @@ function MandateRow({
             formTitle="Enter replacement document manually"
             compact
             initialQuery={updatePrefillSymbol || suggestedUpdateSymbol}
+            originalTitle={mandate.title}
+            originalSymbol={mandate.symbol}
           />
         </div>
       )}
