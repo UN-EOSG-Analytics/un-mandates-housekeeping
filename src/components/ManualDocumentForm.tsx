@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { X, Info, ArrowLeftFromLine } from "lucide-react";
+import { ArrowLeftFromLine, Info, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { MAX_YEAR, MIN_YEAR } from "@/lib/constants";
 import { Tooltip } from "./Tooltip";
 
 export interface ManualEntryData {
@@ -48,6 +49,7 @@ export function ManualDocumentForm({
   const [otherBody, setOtherBody] = useState("");
   const [symbolExists, setSymbolExists] = useState(false);
   const [checkingSymbol, setCheckingSymbol] = useState(false);
+  const [yearTouched, setYearTouched] = useState(false);
   const [overrideDuplicate, setOverrideDuplicate] = useState(false);
   const [existingDoc, setExistingDoc] = useState<{
     symbol: string;
@@ -108,8 +110,8 @@ export function ManualDocumentForm({
     manualData.year.trim() &&
     manualData.link.trim() &&
     /^\d{4}$/.test(manualData.year) &&
-    parseInt(manualData.year) >= 1945 &&
-    parseInt(manualData.year) <= 2026 &&
+    parseInt(manualData.year) >= MIN_YEAR &&
+    parseInt(manualData.year) <= MAX_YEAR &&
     /^https?:\/\/.+/.test(manualData.link) &&
     (!symbolExists || overrideDuplicate);
 
@@ -301,7 +303,7 @@ export function ManualDocumentForm({
         <div>
           <label className="mb-1.5 block text-xs font-medium text-gray-700">
             Year <span className="text-red-500">*</span>
-            <Tooltip content="Year the document was published (1945-2026)">
+            <Tooltip content={`Year the document was published (${MIN_YEAR}-${MAX_YEAR})`}>
               <Info className="ml-1 inline h-3.5 w-3.5 cursor-help text-gray-400" />
             </Tooltip>
           </label>
@@ -312,21 +314,25 @@ export function ManualDocumentForm({
             onChange={(e) =>
               setManualData((d) => ({ ...d, year: e.target.value }))
             }
+            onFocus={() => setYearTouched(false)}
+            onBlur={() => setYearTouched(true)}
             className={`w-full rounded-lg border px-3 py-2 text-sm transition-colors focus:ring-2 focus:outline-none ${
+              yearTouched &&
               manualData.year &&
               (!/^\d{4}$/.test(manualData.year) ||
-                parseInt(manualData.year) < 1945 ||
-                parseInt(manualData.year) > 2026)
+                parseInt(manualData.year) < MIN_YEAR ||
+                parseInt(manualData.year) > MAX_YEAR)
                 ? "border-red-300 bg-red-50/50 focus:ring-red-500/20"
                 : "border-gray-200 bg-white hover:border-gray-300 focus:ring-un-blue/20"
             }`}
           />
-          {manualData.year &&
+          {yearTouched &&
+            manualData.year &&
             (!/^\d{4}$/.test(manualData.year) ||
-              parseInt(manualData.year) < 1945 ||
-              parseInt(manualData.year) > 2026) && (
+              parseInt(manualData.year) < MIN_YEAR ||
+              parseInt(manualData.year) > MAX_YEAR) && (
               <p className="mt-1 text-xs text-red-500">
-                Year must be between 1945-2026
+                Year must be between {MIN_YEAR}-{MAX_YEAR}
               </p>
             )}
         </div>

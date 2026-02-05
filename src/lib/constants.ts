@@ -94,3 +94,11 @@ export const BUDGET_PARTS_META: BudgetPartMeta[] = [
     label: "Staff assessment",
   },
 ];
+
+/**
+ * Document year validation constants
+ * MIN_YEAR: First UN General Assembly resolution (1946)
+ * MAX_YEAR: Current year (updated server-side at build time)
+ */
+export const MIN_YEAR = 1946;
+export const MAX_YEAR = new Date().getFullYear();
