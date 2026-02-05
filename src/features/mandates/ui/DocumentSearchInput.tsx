@@ -93,6 +93,10 @@ export function DocumentSearchInput({
         setSearchDone(true);
         setHighlighted(sortedData.length > 0 ? 0 : -1);
       })
+      .catch((error) => {
+        // Silently handle fetch errors (e.g., aborted requests when typing quickly)
+        console.log("Search request failed:", error.message);
+      })
       .finally(() => setSearching(false));
   }, []);
 

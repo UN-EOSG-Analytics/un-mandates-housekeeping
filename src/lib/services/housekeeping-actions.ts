@@ -644,7 +644,10 @@ export async function updateDecisionReasonAction(params: {
 }
 
 // Document versions
-import { fetchAllVersions, type DocumentVersion } from "./document-versions";
+import {
+  fetchAllVersions,
+  type DocumentVersion,
+} from "./documents/document-versions";
 
 export async function getDocumentVersionsAction(
   symbol: string,
@@ -655,6 +658,28 @@ export async function getDocumentVersionsAction(
   } catch (error) {
     console.error("Error fetching document versions:", error);
     return { success: false, error: "Failed to fetch document versions" };
+  }
+}
+
+// Document metadata
+import {
+  fetchDocumentMetadata,
+  type DocumentMetadata,
+} from "./documents/metadata";
+
+/**
+ * Fetch metadata for multiple document symbols
+ * Uses smart caching with 1-hour TTL
+ */
+export async function getDocumentMetadataAction(
+  symbols: string[],
+): Promise<ActionResult<Record<string, DocumentMetadata | null>>> {
+  try {
+    const result = await fetchDocumentMetadata(symbols);
+    return { success: true, data: result };
+  } catch (error) {
+    console.error("Error fetching document metadata:", error);
+    return { success: false, error: "Failed to fetch document metadata" };
   }
 }
 

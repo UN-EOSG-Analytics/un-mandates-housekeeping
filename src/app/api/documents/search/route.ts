@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { query } from "@/lib/db/db";
+import { cleanTitle } from "@/lib/services/documents/metadata-utils";
 
 interface DocumentRow {
   symbol: string;
@@ -7,10 +8,6 @@ interface DocumentRow {
   document_type: string | null;
   date_year: number | null;
   issuing_body: string | null;
-}
-
-function cleanTitle(title: string | null): string | null {
-  return title?.replace(/\s*:\s*$/, "").trim() || null;
 }
 
 export async function GET(req: NextRequest) {

@@ -6,7 +6,7 @@ import {
   getReasonsForDecision,
   getReasonLabel,
   type DecisionType,
-} from "@/lib/services/decision-reasons";
+} from "@/lib/services/mandates/decision-reasons";
 import { DECISION_COLORS } from "../../../components/DecisionDropdown";
 import {
   X,

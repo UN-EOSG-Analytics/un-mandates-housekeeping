@@ -1,18 +1,22 @@
 /**
- * Data service for PPB 2027 mandate data
- * Fetches data from PostgreSQL database
+ * Mandate data service for PPB 2026/2027
+ * Fetches PPB records and entity data from PostgreSQL database
  */
 
-import { query } from "../db/db";
+import { query } from "@/lib/db/db";
 import type { PPBRecord, CitationInfo, BudgetPartMeta } from "@/types";
 import { BUDGET_PARTS_META } from "@/lib/constants";
+import {
+  resolveMetadata,
+  type DocumentMetadataRow,
+} from "../documents/metadata-utils";
 
 export interface EntityOption {
   entity: string;
   entity_long: string | null;
 }
 
-interface DBCitationRow {
+interface DBCitationRow extends DocumentMetadataRow {
   ppb_full_document_symbol: string;
   entity: string;
   entity_long: string | null;
@@ -27,24 +31,10 @@ interface DBCitationRow {
   programme: number | null;
   programme_title: string | null;
   component: string | null;
-  // Joined from public.documents (preferred source for new/updated)
-  doc_symbol: string | null;
-  doc_proper_title: string | null;
-  doc_date_year: number | null;
-  doc_issuing_body: string | null;
-  doc_document_type: string | null;
-  // Joined from source_documents_metadata_clean (existing citations)
-  meta_title: string | null;
-  meta_proper_title: string | null;
-  meta_date_year: number | null;
-  meta_issuing_body: string | null;
-  meta_document_type: string | null;
-  // Joined from source_documents (ppb_ fallback fields)
+  // Additional field specific to PPB data
   ppb_link: string | null;
-  ppb_description: string | null;
-  ppb_year: number | null;
-  ppb_body: string | null;
-  ppb_type: string | null;
+  // Add doc_symbol for consistency with queries
+  doc_symbol: string | null;
 }
 
 /**
@@ -104,65 +94,45 @@ export async function fetchPPBRecords(): Promise<PPBRecord[]> {
     const symbol = row.ppb_full_document_symbol;
 
     if (!recordsMap.has(symbol)) {
-      // Three-tier fallback:
-      // 1. public.documents (doc_*) - for new/updated documents
-      // 2. source_documents_metadata_clean (meta_*) - for existing citations
-      // 3. source_documents (ppb_*) - final fallback
-      const hasDbMetadata =
-        row.doc_symbol !== null ||
-        row.meta_title !== null ||
-        row.meta_proper_title !== null;
-
-      // Title: doc.proper_title > meta.title > meta.proper_title > ppb_description
-      const title =
-        row.doc_proper_title ||
-        row.meta_title ||
-        row.meta_proper_title ||
-        row.ppb_description ||
-        null;
-
-      // Year: doc_date_year > meta_date_year > ppb_year
-      const year =
-        row.doc_date_year ?? row.meta_date_year ?? row.ppb_year ?? null;
-
-      // Body: doc_issuing_body > meta_issuing_body > ppb_body
-      const body =
-        row.doc_issuing_body || row.meta_issuing_body || row.ppb_body || null;
-
-      // Type: doc_document_type > meta_document_type > ppb_type
-      const docType =
-        row.doc_document_type || row.meta_document_type || row.ppb_type || null;
-
-      // Link: construct from docs.un.org if in public.documents or metadata_clean, else ppb_link
-      let link: string | null = null;
-      if (row.doc_symbol) {
-        // Document is in public.documents - construct link
-        link = `https://docs.un.org/en/${row.doc_symbol.toUpperCase()}`;
-      } else if (row.meta_title !== null || row.meta_proper_title !== null) {
-        // Document is in metadata_clean - construct link from ppb symbol
-        link = `https://docs.un.org/en/${symbol.toUpperCase()}`;
-      } else {
-        // Fall back to original ppb_link
-        link = row.ppb_link;
-      }
+      // Use shared metadata resolution utility
+      const resolved = resolveMetadata(
+        {
+          symbol: row.doc_symbol || symbol,
+          doc_proper_title: row.doc_proper_title,
+          doc_date_year: row.doc_date_year,
+          doc_issuing_body: row.doc_issuing_body,
+          doc_document_type: row.doc_document_type,
+          meta_title: row.meta_title,
+          meta_proper_title: row.meta_proper_title,
+          meta_date_year: row.meta_date_year,
+          meta_issuing_body: row.meta_issuing_body,
+          meta_document_type: row.meta_document_type,
+          ppb_description: row.ppb_description,
+          ppb_year: row.ppb_year,
+          ppb_body: row.ppb_body,
+          ppb_type: row.ppb_type,
+          ppb_link: row.ppb_link,
+        },
+        symbol,
+      );
 
       recordsMap.set(symbol, {
         full_document_symbol: symbol,
         num_citations: 0,
         num_entities: 0,
         entities: [],
-        link,
+        link: resolved.link,
         priority_area: row.priority_area,
-        year,
-        body,
+        year: resolved.year,
+        body: resolved.body,
         pillar: row.pillar,
         entity_long: row.entity_long,
-        description: title,
-        type: docType,
+        description: resolved.title,
+        type: resolved.docType,
         citation_info: [],
         document_symbol: row.doc_symbol,
         uniform_title: null,
-        metadata_from_db: hasDbMetadata,
+        metadata_from_db: resolved.hasDbMetadata,
         recurrence_actions: undefined,
         entity_relevance: undefined,
       });

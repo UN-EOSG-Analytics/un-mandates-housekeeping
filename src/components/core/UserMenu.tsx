@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { LogOut } from "lucide-react";
 import { EntityChangeDialog } from "../../features/auth/ui/EntityChangeDialog";
-import type { EntityOption } from "@/lib/services/data-service";
+import type { EntityOption } from "@/lib/services/mandates/data-service";
 import { logoutAction } from "@/features/auth/actions";
 
 export function UserMenu({

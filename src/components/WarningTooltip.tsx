@@ -6,8 +6,8 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import type { MandateWarning } from "@/lib/services/mandate-warnings";
-import { getWarningIcon } from "@/lib/services/mandate-warnings";
+import type { MandateWarning } from "@/lib/services/mandates/mandate-warnings";
+import { getWarningIcon } from "@/lib/services/mandates/mandate-warnings";
 import { ArrowLeftRight } from "lucide-react";
 import { WarningIcon } from "./WarningIcon";
 

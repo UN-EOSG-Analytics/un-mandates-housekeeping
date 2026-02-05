@@ -3,7 +3,7 @@
  * Based on normalized_title within the same issuing_body
  */
 
-import { query } from "../db/db";
+import { query } from "@/lib/db/db";
 
 export interface DocumentVersion {
   symbol: string;
@@ -62,10 +62,12 @@ export async function fetchAllVersions(
     [normalized_title, issuing_body],
   );
 
-  return rows.map((row) => ({
-    symbol: row.symbol,
-    title: row.proper_title,
-    year: row.date_year,
-    body: row.issuing_body,
-  }));
+  return rows.map(
+    (row): DocumentVersion => ({
+      symbol: row.symbol,
+      title: row.proper_title,
+      year: row.date_year,
+      body: row.issuing_body,
+    }),
+  );
 }

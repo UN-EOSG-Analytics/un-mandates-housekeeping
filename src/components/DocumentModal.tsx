@@ -2,7 +2,7 @@
 "use client";
 
 import React from "react";
-import { getAgeIndicator } from "@/lib/services/age-indicator";
+import { getAgeIndicator } from "@/lib/services/mandates/age-indicator";
 import { fetchParagraphs } from "@/lib/services/client/client-data-service";
 import {
   getDocumentDecisionsAction,
@@ -10,7 +10,7 @@ import {
   resolveCommentAction,
   updateDecisionReasonAction,
 } from "@/lib/services/housekeeping-actions";
-import type { DocumentVersion } from "@/lib/services/document-versions";
+import type { DocumentVersion } from "@/lib/services/documents/document-versions";
 import { DiffModal } from "./DiffModal";
 import type {
   Decision,
@@ -46,7 +46,7 @@ import {
   renderReasonIcon,
   renderLabelWithBold,
 } from "../features/mandates/ui/ReasonsModal";
-import type { DecisionType } from "@/lib/services/decision-reasons";
+import type { DecisionType } from "@/lib/services/mandates/decision-reasons";
 
 interface Props {
   symbol: string;

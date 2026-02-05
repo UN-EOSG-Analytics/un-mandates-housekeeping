@@ -3,6 +3,8 @@
  * Functions that can be used in client components
  */
 
+// FIXME TODO
+
 import type { Paragraph } from "@/types";
 
 /**

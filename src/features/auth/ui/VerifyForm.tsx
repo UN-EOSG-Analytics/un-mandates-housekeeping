@@ -3,7 +3,7 @@
 import { useSearchParams, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { EntityCombobox } from "@/features/auth/ui/EntityCombobox";
-import type { EntityOption } from "@/lib/services/data-service";
+import type { EntityOption } from "@/lib/services/mandates/data-service";
 import {
   checkEntityForTokenAction,
   verifyMagicTokenAction,

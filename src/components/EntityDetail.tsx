@@ -13,13 +13,14 @@ import {
 } from "@/hooks/useRealtimeDecisions";
 import { BODY_ABBREVS } from "@/lib/constants";
 import { abbreviateBody } from "@/lib/utils";
-import { getAgeIndicator } from "@/lib/services/age-indicator";
+import { getAgeIndicator } from "@/lib/services/mandates/age-indicator";
 import {
   approveDecisionAction,
   clearAllEntityDecisionsAction,
   createCommentAction,
   createDecisionAction,
   endReviewModeAction,
+  getDocumentMetadataAction,
   getEntityDecisionsAction,
   getReviewModeStatusAction,
   getSingleMandateStateAction,
@@ -30,7 +31,7 @@ import {
 import {
   getMandateWarnings,
   getWarningIcon,
-} from "@/lib/services/mandate-warnings";
+} from "@/lib/services/mandates/mandate-warnings";
 import type {
   Decision,
   Mandate,
@@ -1443,40 +1444,26 @@ export function EntityDetail({
 
     if (addedSymbols.length === 0) return;
 
-    fetch(
-      `/api/documents/metadata?symbols=${encodeURIComponent(addedSymbols.join(","))}`,
-    )
-      .then((r) => (r.ok ? r.json() : {}))
-      .then(
-        (
-          data: Record<
-            string,
-            {
-              title: string | null;
-              year: number | null;
-              body: string | null;
-              docType: string | null;
-              link: string | null;
-            }
-          >,
-        ) => {
-          // Mark all looked-up symbols, even if no data found (to prevent re-fetching)
-          const result: Record<
-            string,
-            {
-              title: string | null;
-              year: number | null;
-              body: string | null;
-              docType: string | null;
-              link: string | null;
-            } | null
-          > = {};
-          for (const sym of addedSymbols) {
-            result[sym] = data[sym] || null; // null means "looked up but not found"
-          }
-          setAddedMetadata((prev) => ({ ...prev, ...result }));
-        },
-      )
+    getDocumentMetadataAction(addedSymbols)
+      .then((result) => {
+        if (!result.success) return;
+        const data = result.data ?? {};
+        // Mark all looked-up symbols, even if no data found (to prevent re-fetching)
+        const resultMap: Record<
+          string,
+          {
+            title: string | null;
+            year: number | null;
+            body: string | null;
+            docType: string | null;
+            link: string | null;
+          } | null
+        > = {};
+        for (const sym of addedSymbols) {
+          resultMap[sym] = data[sym] || null; // null means "looked up but not found"
+        }
+        setAddedMetadata((prev) => ({ ...prev, ...resultMap }));
+      })
       .catch(() => {});
   }, [states, backgroundMandates, legislativeMandates, addedMetadata]);
 
@@ -1489,31 +1476,23 @@ export function EntityDetail({
 
     if (updateTargetSymbols.length === 0) return;
 
-    fetch(
-      `/api/documents/metadata?symbols=${encodeURIComponent(updateTargetSymbols.join(","))}`,
-    )
-      .then((r) => (r.ok ? r.json() : {}))
-      .then(
-        (
-          data: Record<
-            string,
-            { title: string | null; year: number | null; body: string | null }
-          >,
-        ) => {
-          const result: Record<
-            string,
-            {
-              title: string | null;
-              year: number | null;
-              body: string | null;
-            } | null
-          > = {};
-          for (const sym of updateTargetSymbols) {
-            result[sym] = data[sym] || null;
-          }
-          setUpdateTargetMetadata((prev) => ({ ...prev, ...result }));
-        },
-      )
+    getDocumentMetadataAction(updateTargetSymbols)
+      .then((result) => {
+        if (!result.success) return;
+        const data = result.data ?? {};
+        const resultMap: Record<
+          string,
+          {
+            title: string | null;
+            year: number | null;
+            body: string | null;
+          } | null
+        > = {};
+        for (const sym of updateTargetSymbols) {
+          resultMap[sym] = data[sym] || null;
+        }
+        setUpdateTargetMetadata((prev) => ({ ...prev, ...resultMap }));
+      })
       .catch(() => {});
   }, [states, updateTargetMetadata]);
 
