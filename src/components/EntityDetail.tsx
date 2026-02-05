@@ -1,66 +1,66 @@
 "use client";
 
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
 } from "@/components/ui/dialog";
 import {
-  useRealtimeDecisions,
-  type RealtimeChange,
-} from "@/lib/hooks/useRealtimeDecisions";
+    useRealtimeDecisions,
+    type RealtimeChange,
+} from "@/hooks/useRealtimeDecisions";
 import { getAgeIndicator } from "@/lib/services/age-indicator";
 import {
-  approveDecisionAction,
-  clearAllEntityDecisionsAction,
-  createCommentAction,
-  createDecisionAction,
-  endReviewModeAction,
-  getEntityDecisionsAction,
-  getReviewModeStatusAction,
-  getSingleMandateStateAction,
-  getUserRoleAction,
-  startReviewModeAction,
-  updateDecisionReasonAction,
+    approveDecisionAction,
+    clearAllEntityDecisionsAction,
+    createCommentAction,
+    createDecisionAction,
+    endReviewModeAction,
+    getEntityDecisionsAction,
+    getReviewModeStatusAction,
+    getSingleMandateStateAction,
+    getUserRoleAction,
+    startReviewModeAction,
+    updateDecisionReasonAction,
 } from "@/lib/services/housekeeping-actions";
 import {
-  getMandateWarnings,
-  getWarningIcon,
+    getMandateWarnings,
+    getWarningIcon,
 } from "@/lib/services/mandate-warnings";
 import type {
-  Decision,
-  Mandate,
-  MandateComment,
-  MandateDecision,
-  MandateState,
+    Decision,
+    Mandate,
+    MandateComment,
+    MandateDecision,
+    MandateState,
 } from "@/types";
 import {
-  Check,
-  ChevronDown,
-  ChevronUp,
-  MessageSquare,
-  Pencil,
-  Search,
-  Star,
-  X,
+    Check,
+    ChevronDown,
+    ChevronUp,
+    MessageSquare,
+    Pencil,
+    Search,
+    Star,
+    X,
 } from "lucide-react";
 import { orderBy } from "natural-orderby";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import {
+    ReadOnlyNoticeBanner,
+    ReviewerModeBanner,
+    ReviewInProgressBanner,
+} from "./Banner";
+import { ClearAllDecisionsDialog } from "./ClearAllDecisionsDialog";
 import { DecisionDropdown } from "./DecisionDropdown";
 import { DiffModal } from "./DiffModal";
 import { DocumentSymbol } from "./DocumentModal";
 import { DocumentSearchInput } from "./DocumentSearchInput";
 import { EntityHeader } from "./EntityHeader";
 import type { ManualEntryData } from "./ManualDocumentForm";
-import { ClearAllDecisionsDialog } from "./ClearAllDecisionsDialog";
 import { ReviewBlockedDialog } from "./ReviewBlockedDialog";
-import {
-  ReadOnlyNoticeBanner,
-  ReviewerModeBanner,
-  ReviewInProgressBanner,
-} from "./Banner";
 import { Tooltip } from "./Tooltip";
 import { WarningIcon } from "./WarningIcon";
 import { WarningTooltip } from "./WarningTooltip";
@@ -2028,7 +2028,9 @@ export function EntityDetail({
     ...backgroundMandates,
     ...Object.values(legislativeMandates).flat(),
   ];
-  const totalUniqueDocuments = new Set(allMandatesForCounting.map((m) => m.symbol)).size;
+  const totalUniqueDocuments = new Set(
+    allMandatesForCounting.map((m) => m.symbol),
+  ).size;
 
   const filteredMandatesForCounting = [
     ...filteredBackground,
