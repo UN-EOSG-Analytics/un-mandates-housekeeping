@@ -3,7 +3,7 @@
  * Based on normalized_title within the same issuing_body
  */
 
-import { query } from "../db/db";
+import { query } from "@/lib/db/db";
 import type { NewerVersion } from "@/types";
 
 interface NewerVersionRow {

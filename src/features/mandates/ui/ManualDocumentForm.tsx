@@ -4,6 +4,8 @@ import { ArrowLeftFromLine, Info, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { MAX_YEAR, MIN_YEAR } from "@/lib/constants";
 import { Tooltip } from "../../../components/Tooltip";
+import { getIssuingBodies } from "@/features/mandates/services/reference-data";
+import { searchDocumentsAction } from "@/features/mandates/services/documents/document-fetching";
 
 export interface ManualEntryData {
   symbol: string;
@@ -18,11 +20,16 @@ interface Props {
   onSelect?: (symbol: string) => void;
   onCancel: () => void;
   initialSymbol?: string;
+  initialTitle?: string;
+  initialBody?: string;
+  initialYear?: string;
+  initialLink?: string;
   submitLabel?: string;
   formTitle?: string;
   compact?: boolean;
   originalTitle?: string;
   originalSymbol?: string;
+  hideDescription?: boolean;
 }
 
 export function ManualDocumentForm({
@@ -30,18 +37,23 @@ export function ManualDocumentForm({
   onSelect,
   onCancel,
   initialSymbol = "",
+  initialTitle = "",
+  initialBody = "",
+  initialYear = "",
+  initialLink = "",
   submitLabel = "Add",
   formTitle = "Add document manually",
   compact = false,
   originalTitle,
   originalSymbol,
+  hideDescription = false,
 }: Props) {
   const [manualData, setManualData] = useState<ManualEntryData>({
     symbol: initialSymbol,
-    title: "",
-    body: "",
-    year: "",
-    link: "",
+    title: initialTitle,
+    body: initialBody,
+    year: initialYear,
+    link: initialLink,
   });
   const [bodySuggestions, setBodySuggestions] = useState<string[]>([]);
   const [showBodySuggestions, setShowBodySuggestions] = useState(false);
@@ -52,14 +64,13 @@ export function ManualDocumentForm({
   const [overrideDuplicate, setOverrideDuplicate] = useState(false);
   const [existingDoc, setExistingDoc] = useState<{
     symbol: string;
-    title: string;
-    body: string;
-    year: number;
+    title: string | null;
+    body: string | null;
+    year: number | null;
   } | null>(null);
 
   useEffect(() => {
-    fetch("/api/documents/bodies")
-      .then((r) => r.json())
+    getIssuingBodies()
       .then(setBodySuggestions)
       .catch(() => {});
   }, []);
@@ -77,11 +88,10 @@ export function ManualDocumentForm({
 
     const timer = setTimeout(() => {
       setCheckingSymbol(true);
-      fetch(`/api/documents/search?q=${encodeURIComponent(manualData.symbol)}`)
-        .then((r) => r.json())
+      searchDocumentsAction(manualData.symbol)
         .then((results) => {
           const exactMatch = results.find(
-            (doc: { symbol: string }) => doc.symbol === manualData.symbol,
+            (doc) => doc.symbol === manualData.symbol,
           );
           if (exactMatch) {
             setSymbolExists(true);
@@ -101,6 +111,14 @@ export function ManualDocumentForm({
     return () => clearTimeout(timer);
   }, [manualData.symbol]);
 
+  const hasChanges =
+    manualData.symbol !== initialSymbol ||
+    manualData.title !== initialTitle ||
+    (manualData.body === "Other" ? otherBody : manualData.body) !==
+      initialBody ||
+    manualData.year !== initialYear ||
+    manualData.link !== initialLink;
+
   const isFormValid =
     manualData.symbol.trim() &&
     manualData.title.trim() &&
@@ -112,7 +130,8 @@ export function ManualDocumentForm({
     parseInt(manualData.year) >= MIN_YEAR &&
     parseInt(manualData.year) <= MAX_YEAR &&
     /^https?:\/\/.+/.test(manualData.link) &&
-    (!symbolExists || overrideDuplicate);
+    (!symbolExists || overrideDuplicate) &&
+    hasChanges;
 
   const handleSubmit = () => {
     if (!isFormValid) return;
@@ -129,23 +148,33 @@ export function ManualDocumentForm({
     <div
       className={`rounded-lg border border-gray-200 bg-white shadow-sm ${compact ? "p-3" : "p-6"}`}
     >
-      <div className="mb-4 border-b border-gray-100 pb-4">
-        <div className="flex items-start justify-between">
-          <div className="flex-1">
-            <h3 className="text-base font-medium text-gray-900">{formTitle}</h3>
-            <p className="mt-1.5 text-sm text-gray-500">
-              Use this form to add a mandate document that is not in our
-              database yet or that has missing or incorrect metadata.
-            </p>
+      {(formTitle || !hideDescription) && (
+        <div className="mb-4 border-b border-gray-100 pb-4">
+          <div className="flex items-start justify-between">
+            <div className="flex-1">
+              {formTitle && (
+                <h3 className="text-base font-medium text-gray-900">
+                  {formTitle}
+                </h3>
+              )}
+              {!hideDescription && (
+                <p
+                  className={`text-sm text-gray-500 ${formTitle ? "mt-1.5" : ""}`}
+                >
+                  Use this form to add a mandate document that is not in our
+                  database yet or that has missing or incorrect metadata.
+                </p>
+              )}
+            </div>
+            <button
+              onClick={onCancel}
+              className="shrink-0 text-gray-400 hover:text-gray-600"
+            >
+              <X className="h-4 w-4" />
+            </button>
           </div>
-          <button
-            onClick={onCancel}
-            className="shrink-0 text-gray-400 hover:text-gray-600"
-          >
-            <X className="h-4 w-4" />
-          </button>
         </div>
-      </div>
+      )}
       <div className="space-y-4">
         <div>
           <label className="mb-1.5 block text-xs font-medium text-gray-700">

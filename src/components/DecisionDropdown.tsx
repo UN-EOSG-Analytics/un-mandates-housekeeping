@@ -15,7 +15,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import type { DecisionType } from "@/lib/services/decision-reasons";
+import type { DecisionType } from "@/features/mandates/services/decision-reasons";
 
 interface DecisionDropdownProps {
   decision: Decision | null;
@@ -24,6 +24,7 @@ interface DecisionDropdownProps {
   disabled?: boolean;
   locked?: boolean; // Prevents changing decision but keeps full styling (used for 'add' decisions)
   userEmail?: string | null;
+  userEntity?: string | null;
   createdAt?: string | null;
   className?: string;
   size?: "sm" | "md";
@@ -142,6 +143,7 @@ export function DecisionDropdown({
   disabled,
   locked,
   userEmail,
+  userEntity,
   createdAt,
   className,
   size = "md",
@@ -313,12 +315,23 @@ export function DecisionDropdown({
             onClick={(e) => e.stopPropagation()}
           >
             <div className="px-3 py-2">
-              <p className="text-sm text-gray-700">
+              <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-sm text-gray-700">
                 <span className={`font-medium ${colors.text}`}>
                   {displayLabel}
-                </span>{" "}
-                by {userEmail} · {new Date(createdAt).toLocaleDateString()}
-              </p>
+                </span>
+                <span>by {userEmail}</span>
+                {userEntity && (
+                  <span className="rounded bg-gray-100 px-1.5 py-0.5 text-[10px] font-medium text-gray-500">
+                    {userEntity}
+                  </span>
+                )}
+                {userEntity?.toUpperCase() === "DMSPC" && (
+                  <span className="rounded-full bg-amber-100 px-1.5 py-0.5 text-[10px] font-medium text-amber-700">
+                    Reviewer
+                  </span>
+                )}
+                <span>· {new Date(createdAt).toLocaleDateString()}</span>
+              </div>
             </div>
           </PopoverContent>
         </Popover>

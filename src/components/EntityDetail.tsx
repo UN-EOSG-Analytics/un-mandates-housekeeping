@@ -13,24 +13,27 @@ import {
 } from "@/hooks/useRealtimeDecisions";
 import { BODY_ABBREVS } from "@/lib/constants";
 import { abbreviateBody } from "@/lib/utils";
-import { getAgeIndicator } from "@/lib/services/age-indicator";
+import { getAgeIndicator } from "@/features/mandates/services/age-indicator";
 import {
   approveDecisionAction,
   clearAllEntityDecisionsAction,
-  createCommentAction,
   createDecisionAction,
-  endReviewModeAction,
   getEntityDecisionsAction,
-  getReviewModeStatusAction,
   getSingleMandateStateAction,
-  getUserRoleAction,
-  startReviewModeAction,
   updateDecisionReasonAction,
-} from "@/lib/services/housekeeping-actions";
+} from "@/features/mandates/actions/decisions";
+import { createCommentAction } from "@/features/mandates/actions/comments";
+import {
+  endReviewModeAction,
+  getReviewModeStatusAction,
+  startReviewModeAction,
+} from "@/features/mandates/actions/review-mode";
+import { getDocumentMetadataAction } from "@/features/mandates/services/documents/document-fetching";
+import { getUserRoleAction } from "@/features/auth/user";
 import {
   getMandateWarnings,
   getWarningIcon,
-} from "@/lib/services/mandate-warnings";
+} from "@/features/mandates/services/mandate-warnings";
 import type {
   Decision,
   Mandate,
@@ -42,6 +45,7 @@ import {
   Check,
   ChevronDown,
   ChevronUp,
+  FileText,
   MessageSquare,
   Pencil,
   Search,
@@ -60,6 +64,7 @@ import { DecisionDropdown } from "./DecisionDropdown";
 import { DiffModal } from "./DiffModal";
 import { DocumentSymbol } from "./DocumentModal";
 import { DocumentSearchInput } from "../features/mandates/ui/DocumentSearchInput";
+import { ManualDocumentForm } from "../features/mandates/ui/ManualDocumentForm";
 import { EntityHeader } from "./EntityHeader";
 import type { ManualEntryData } from "../features/mandates/ui/ManualDocumentForm";
 import { ReviewBlockedDialog } from "./ReviewBlockedDialog";
@@ -277,6 +282,7 @@ function MandateRowContent({
   showReasonPopup,
   onReasonPopupClose,
   onDiff,
+  onEdit,
 }: {
   mandate: Mandate;
   state?: MandateState;
@@ -302,6 +308,7 @@ function MandateRowContent({
     compareSymbol: string,
     compareYear: number,
   ) => void;
+  onEdit?: () => void;
 }) {
   const ageInfo = getAgeIndicator(mandate.year);
   const currentDecision = state?.decision;
@@ -497,13 +504,31 @@ function MandateRowContent({
             );
           })()}
       </div>
-      <div onClick={(e) => e.stopPropagation()}>
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="relative flex items-center"
+      >
+        {!isUpdateTarget &&
+          !readOnly &&
+          currentDecision?.decision === "add" &&
+          currentDecision?.manualMetadata &&
+          onEdit && (
+            <Tooltip content="Edit manual entry">
+              <button
+                onClick={onEdit}
+                className="absolute top-1/2 -left-7 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded border border-emerald-200 bg-emerald-50 text-emerald-700 transition-colors hover:border-emerald-300 hover:bg-emerald-100"
+              >
+                <FileText className="h-3.5 w-3.5" />
+              </button>
+            </Tooltip>
+          )}
         {isUpdateTarget || readOnly ? (
           <span className="text-xs text-gray-400">—</span>
         ) : (
           <DecisionDropdown
             decision={currentDecision?.decision ?? null}
             userEmail={currentDecision?.userEmail ?? null}
+            userEntity={currentDecision?.userEntity ?? null}
             createdAt={currentDecision?.createdAt ?? null}
             onChange={onDecision}
             onUpdateClick={onUpdateClick}
@@ -587,6 +612,7 @@ function MandateRow({
   onReasonChange,
   onApprove,
   onUpdateWithManual,
+  onEditManual,
   onComment,
   readOnly,
   isFoundational,
@@ -606,6 +632,7 @@ function MandateRow({
   onReasonChange: (reason: string | null, otherReason: string | null) => void;
   onApprove: (decisionId: string, approved: boolean) => void;
   onUpdateWithManual: (newSymbol: string, manualData: ManualEntryData) => void;
+  onEditManual?: (data: ManualEntryData) => void;
   onComment: (comment: string) => void;
   onOpenActivityTab?: () => void;
   isAdded?: boolean;
@@ -626,6 +653,7 @@ function MandateRow({
   >(undefined);
   const [newDocSidebarOpen, setNewDocSidebarOpen] = useState(false);
   const [showUpdateSearch, setShowUpdateSearch] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
   // Reason popup should only open when user actively makes a decision, not on mount
   const [showReasonPopup, setShowReasonPopup] = useState(false);
   const [updatePrefillSymbol, setUpdatePrefillSymbol] = useState<
@@ -703,6 +731,21 @@ function MandateRow({
     setUpdatePrefillSymbol(undefined);
   };
 
+  const handleEdit = () => {
+    setShowEditModal(true);
+  };
+
+  const handleEditSubmit = (data: ManualEntryData) => {
+    if (onEditManual) {
+      onEditManual(data);
+    }
+    setShowEditModal(false);
+  };
+
+  const handleEditCancel = () => {
+    setShowEditModal(false);
+  };
+
   return (
     <div className="rounded-lg bg-white shadow-sm">
       {/* Original row */}
@@ -734,6 +777,7 @@ function MandateRow({
         showReasonPopup={showReasonPopup}
         onReasonPopupClose={() => setShowReasonPopup(false)}
         onDiff={handleDiff}
+        onEdit={handleEdit}
       />
 
       {/* Update search input (shown when user selects "update" from dropdown) */}
@@ -756,6 +800,30 @@ function MandateRow({
           />
         </div>
       )}
+
+      {/* Edit manual entry form (shown when user clicks edit button) */}
+      {!readOnly &&
+        showEditModal &&
+        state?.decision?.decision === "add" &&
+        state?.decision?.manualMetadata && (
+          <div className="border-t border-gray-100 bg-emerald-50/30 px-4 py-3">
+            <div className="mb-3 text-xs font-medium text-emerald-600">
+              Edit manual entry:
+            </div>
+            <ManualDocumentForm
+              onSubmit={handleEditSubmit}
+              onCancel={handleEditCancel}
+              initialSymbol={mandate.symbol}
+              initialTitle={state.decision.manualMetadata.title || ""}
+              initialBody={state.decision.manualMetadata.body || ""}
+              initialYear={state.decision.manualMetadata.year?.toString() || ""}
+              initialLink={state.decision.manualMetadata.link || ""}
+              submitLabel="Save Changes"
+              formTitle=""
+              hideDescription
+            />
+          </div>
+        )}
 
       {/* New document row (shown when update is complete) */}
       {hasCompletedUpdate && newMandate && (
@@ -880,7 +948,7 @@ function AddEntryRow({
     <DocumentSearchInput
       onSelect={onAdd}
       onManualSubmit={onAddManual}
-      placeholder="Add mandate document — search by symbol or title and click to select."
+      placeholder="Add mandate document from database — search by symbol or title and click to select."
       submitLabel="Add"
       formTitle="Add document manually"
     />
@@ -908,6 +976,7 @@ function MandateSection({
   onReasonChange,
   onApprove,
   onUpdateWithManual,
+  onEditManual,
   onComment,
   onAdd,
   onAddManual,
@@ -953,6 +1022,7 @@ function MandateSection({
     newSymbol: string,
     manualData: ManualEntryData,
   ) => void;
+  onEditManual?: (symbol: string, data: ManualEntryData) => void;
   onComment: (symbol: string, comment: string) => void;
   onAdd: (symbol: string) => void;
   onAddManual: (data: ManualEntryData) => void;
@@ -1243,6 +1313,11 @@ function MandateSection({
               onUpdateWithManual={(newSymbol, manualData) =>
                 onUpdateWithManual(m.symbol, newSymbol, manualData)
               }
+              onEditManual={
+                onEditManual
+                  ? (data) => onEditManual(m.symbol, data)
+                  : undefined
+              }
               onComment={(comment) => onComment(m.symbol, comment)}
               updateTargetMetadata={
                 targetSymbol ? updateTargetMetadata[targetSymbol] : undefined
@@ -1270,6 +1345,11 @@ function MandateSection({
               }
               onApprove={onApprove}
               onUpdateWithManual={() => {}}
+              onEditManual={
+                onEditManual
+                  ? (data) => onEditManual(m.symbol, data)
+                  : undefined
+              }
               onComment={(comment) => onComment(m.symbol, comment)}
               isAdded
             />
@@ -1443,40 +1523,26 @@ export function EntityDetail({
 
     if (addedSymbols.length === 0) return;
 
-    fetch(
-      `/api/documents/metadata?symbols=${encodeURIComponent(addedSymbols.join(","))}`,
-    )
-      .then((r) => (r.ok ? r.json() : {}))
-      .then(
-        (
-          data: Record<
-            string,
-            {
-              title: string | null;
-              year: number | null;
-              body: string | null;
-              docType: string | null;
-              link: string | null;
-            }
-          >,
-        ) => {
-          // Mark all looked-up symbols, even if no data found (to prevent re-fetching)
-          const result: Record<
-            string,
-            {
-              title: string | null;
-              year: number | null;
-              body: string | null;
-              docType: string | null;
-              link: string | null;
-            } | null
-          > = {};
-          for (const sym of addedSymbols) {
-            result[sym] = data[sym] || null; // null means "looked up but not found"
-          }
-          setAddedMetadata((prev) => ({ ...prev, ...result }));
-        },
-      )
+    getDocumentMetadataAction(addedSymbols)
+      .then((result) => {
+        if (!result.success) return;
+        const data = result.data ?? {};
+        // Mark all looked-up symbols, even if no data found (to prevent re-fetching)
+        const resultMap: Record<
+          string,
+          {
+            title: string | null;
+            year: number | null;
+            body: string | null;
+            docType: string | null;
+            link: string | null;
+          } | null
+        > = {};
+        for (const sym of addedSymbols) {
+          resultMap[sym] = data[sym] || null; // null means "looked up but not found"
+        }
+        setAddedMetadata((prev) => ({ ...prev, ...resultMap }));
+      })
       .catch(() => {});
   }, [states, backgroundMandates, legislativeMandates, addedMetadata]);
 
@@ -1489,31 +1555,23 @@ export function EntityDetail({
 
     if (updateTargetSymbols.length === 0) return;
 
-    fetch(
-      `/api/documents/metadata?symbols=${encodeURIComponent(updateTargetSymbols.join(","))}`,
-    )
-      .then((r) => (r.ok ? r.json() : {}))
-      .then(
-        (
-          data: Record<
-            string,
-            { title: string | null; year: number | null; body: string | null }
-          >,
-        ) => {
-          const result: Record<
-            string,
-            {
-              title: string | null;
-              year: number | null;
-              body: string | null;
-            } | null
-          > = {};
-          for (const sym of updateTargetSymbols) {
-            result[sym] = data[sym] || null;
-          }
-          setUpdateTargetMetadata((prev) => ({ ...prev, ...result }));
-        },
-      )
+    getDocumentMetadataAction(updateTargetSymbols)
+      .then((result) => {
+        if (!result.success) return;
+        const data = result.data ?? {};
+        const resultMap: Record<
+          string,
+          {
+            title: string | null;
+            year: number | null;
+            body: string | null;
+          } | null
+        > = {};
+        for (const sym of updateTargetSymbols) {
+          resultMap[sym] = data[sym] || null;
+        }
+        setUpdateTargetMetadata((prev) => ({ ...prev, ...resultMap }));
+      })
       .catch(() => {});
   }, [states, updateTargetMetadata]);
 
@@ -1827,6 +1885,103 @@ export function EntityDetail({
     [entity, userEmail, userEntity],
   );
 
+  const handleEditManual = useCallback(
+    async (
+      symbol: string,
+      subprogramme: string | null,
+      data: ManualEntryData,
+    ) => {
+      if (!userEmail) return;
+      const key = `${symbol}:${subprogramme || ""}`;
+      const currentState = states[key];
+      const currentDecision = currentState?.decision;
+
+      if (!currentDecision) return;
+
+      const manualMetadata = {
+        title: data.title || undefined,
+        body: data.body || undefined,
+        year: data.year ? parseInt(data.year) : undefined,
+        link: data.link || undefined,
+      };
+
+      // Optimistic update
+      const updatedDecision = {
+        ...currentDecision,
+        manualMetadata,
+      };
+
+      setStates((prev) => ({
+        ...prev,
+        [key]: {
+          ...prev[key],
+          decision: updatedDecision,
+          decisions:
+            prev[key]?.decisions?.map((d) =>
+              d.id === currentDecision.id ? updatedDecision : d,
+            ) || [],
+        },
+      }));
+
+      // Update addedMetadata if this is an "add" decision
+      if (currentDecision.decision === "add") {
+        setAddedMetadata((prev) => ({
+          ...prev,
+          [symbol]: {
+            title: data.title || null,
+            year: data.year ? parseInt(data.year) : null,
+            body: data.body || null,
+            docType: null,
+            link: data.link || null,
+          },
+        }));
+      }
+
+      // Update updateTargetMetadata if this is an "update" decision
+      if (currentDecision.decision === "update" && currentDecision.newSymbol) {
+        setUpdateTargetMetadata((prev) => ({
+          ...prev,
+          [currentDecision.newSymbol!]: {
+            title: data.title || null,
+            year: data.year ? parseInt(data.year) : null,
+            body: data.body || null,
+          },
+        }));
+      }
+
+      // Save to server
+      const result = await createDecisionAction({
+        documentSymbol: symbol,
+        entity,
+        subprogramme,
+        decision: currentDecision.decision,
+        newSymbol: currentDecision.newSymbol || undefined,
+        manualMetadata,
+      });
+
+      if (result.success && result.data) {
+        const updated = result.data;
+        setStates((prev) => ({
+          ...prev,
+          [key]: {
+            ...prev[key],
+            decision: updated,
+            decisions: [
+              ...(prev[key]?.decisions?.filter((d) => d.id !== updated.id) ||
+                []),
+              updated,
+            ],
+          },
+        }));
+      } else if (!result.success && result.error === "review_mode_blocked") {
+        setTimeout(() => {
+          setShowReviewBlockedDialog(true);
+        }, 2000);
+      }
+    },
+    [entity, userEmail, states],
+  );
+
   const handleComment = useCallback(
     async (symbol: string, subprogramme: string | null, comment: string) => {
       if (!userEmail) return;
@@ -2065,6 +2220,8 @@ export function EntityDetail({
       newSymbol: string,
       manualData: ManualEntryData,
     ) => handleUpdateWithManual(symbol, subprog, newSymbol, manualData),
+    onEditManual: (symbol: string, data: ManualEntryData) =>
+      handleEditManual(symbol, subprog, data),
     onComment: (symbol: string, comment: string) =>
       handleComment(symbol, subprog, comment),
     onAdd: (symbol: string) => handleDecision(symbol, subprog, "add"),

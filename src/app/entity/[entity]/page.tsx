@@ -6,9 +6,9 @@ import {
   fetchEntities,
   fetchPPBRecords,
   getBudgetPartsMeta,
-} from "@/lib/services/data-service";
-import { fetchNewerVersions } from "@/lib/services/newer-versions";
-import { transformPPBData } from "@/lib/services/transformData";
+  transformPPBData,
+} from "@/features/mandates/services/data-service";
+import { fetchNewerVersions } from "@/features/mandates/services/documents/newer-versions";
 import type { EntityData } from "@/types";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";

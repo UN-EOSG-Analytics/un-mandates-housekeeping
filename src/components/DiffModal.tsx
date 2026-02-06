@@ -2,7 +2,7 @@
 
 import { X, Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
-import { computeDocumentDiffAction } from "@/lib/services/housekeeping-actions";
+import { computeDocumentDiffAction } from "@/features/mandates/services/documents/document-fetching";
 import { DiffViewer } from "undifferent/react";
 import type { DiffResult } from "undifferent/core";
 

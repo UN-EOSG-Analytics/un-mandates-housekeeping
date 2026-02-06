@@ -1,19 +1,14 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  getRealtimeChangesAction,
+  type RealtimeChange,
+  type ReviewModeStatus,
+} from "@/features/mandates/actions/realtime";
 
-export interface RealtimeChange {
-  id: string;
-  table: "mandate_decisions" | "mandate_comments";
-  document_symbol: string;
-  subprogramme: string | null;
-  created_at: string;
-}
-
-export interface ReviewModeStatus {
-  isUnderReview: boolean;
-  reviewStartedBy: string | null;
-}
+// Re-export types for convenience
+export type { RealtimeChange, ReviewModeStatus };
 
 interface UseRealtimeDecisionsOptions {
   /** Entity to subscribe to */
@@ -82,15 +77,19 @@ export function useRealtimeDecisions({
     if (!enabled || !entity) return;
 
     try {
-      const response = await fetch(
-        `/api/realtime/decisions/${encodeURIComponent(entity)}?since=${encodeURIComponent(lastPollTimeRef.current)}`,
+      const result = await getRealtimeChangesAction(
+        entity,
+        lastPollTimeRef.current,
       );
 
-      if (!response.ok) {
-        throw new Error(`Poll failed: ${response.status}`);
+      if (!result.success) {
+        throw new Error(result.error);
       }
 
-      const data = await response.json();
+      const data = result.data;
+      if (!data) {
+        throw new Error("No data returned");
+      }
 
       // Update last poll time from server
       if (data.serverTime) {
@@ -112,7 +111,7 @@ export function useRealtimeDecisions({
 
       // Process changes
       if (data.hasChanges && data.changes?.length > 0) {
-        for (const change of data.changes as RealtimeChange[]) {
+        for (const change of data.changes) {
           // Skip if already processed
           if (processedIdsRef.current.has(change.id)) continue;
 

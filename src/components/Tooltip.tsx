@@ -61,16 +61,16 @@ export function Tooltip({ content, children }: Props) {
       {show && (
         <span
           ref={tooltipRef}
-          className={`absolute z-50 w-max max-w-xs rounded bg-gray-800 px-2 py-1.5 text-left text-xs text-white ${alignClasses[align]} ${
-            position === "top" ? "bottom-full mb-1" : "top-full mt-1"
+          className={`absolute z-50 w-max max-w-xs rounded-md border border-gray-200 bg-white px-2.5 py-1.5 text-left text-xs text-gray-700 shadow-lg ${alignClasses[align]} ${
+            position === "top" ? "bottom-full mb-1.5" : "top-full mt-1.5"
           }`}
         >
           {content}
           <span
-            className={`absolute ${arrowAlignClasses[align]} border-4 border-transparent ${
+            className={`absolute ${arrowAlignClasses[align]} h-2 w-2 rotate-45 border border-gray-200 bg-white ${
               position === "top"
-                ? "top-full border-t-gray-800"
-                : "bottom-full border-b-gray-800"
+                ? "top-full -mt-1 border-t-0 border-r border-b border-l-0"
+                : "bottom-full -mb-1 border-t border-r-0 border-b-0 border-l"
             }`}
           />
         </span>

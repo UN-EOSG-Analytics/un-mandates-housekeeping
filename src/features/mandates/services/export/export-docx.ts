@@ -1,7 +1,7 @@
 import JSZip from "jszip";
 import { readFile } from "fs/promises";
 import { join } from "path";
-import { fetchPPBRecords } from "../data-service";
+import { fetchPPBRecords } from "@/features/mandates/services/data-service";
 
 interface Mandate {
   symbol: string;

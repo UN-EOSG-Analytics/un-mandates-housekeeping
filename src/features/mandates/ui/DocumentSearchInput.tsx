@@ -3,14 +3,12 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { Plus, Loader2, X, FileText } from "lucide-react";
 import { ManualDocumentForm, type ManualEntryData } from "./ManualDocumentForm";
+import {
+  searchDocumentsAction,
+  type DocumentSearchResult,
+} from "@/features/mandates/services/documents/document-fetching";
 
-interface SearchResult {
-  symbol: string;
-  title: string | null;
-  type: string | null;
-  year: number | null;
-  body: string | null;
-}
+type SearchResult = DocumentSearchResult;
 
 interface Props {
   onSelect: (symbol: string) => void;
@@ -58,8 +56,7 @@ export function DocumentSearchInput({
     }
     setSearching(true);
     setSearchDone(false);
-    fetch(`/api/documents/search?q=${encodeURIComponent(q)}`)
-      .then((r) => r.json())
+    searchDocumentsAction(q)
       .then((data: SearchResult[]) => {
         // Sort results to prioritize exact matches and shorter symbols
         const sortedData = [...data].sort((a, b) => {
@@ -92,6 +89,10 @@ export function DocumentSearchInput({
         setOpen(true);
         setSearchDone(true);
         setHighlighted(sortedData.length > 0 ? 0 : -1);
+      })
+      .catch((error) => {
+        // Silently handle fetch errors (e.g., aborted requests when typing quickly)
+        console.log("Search request failed:", error.message);
       })
       .finally(() => setSearching(false));
   }, []);

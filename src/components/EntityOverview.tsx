@@ -71,13 +71,17 @@ function EntityCard({
 
 export function EntityOverview({ parts, userEntity }: Props) {
   const [searchQuery, setSearchQuery] = useState("");
-  const [showSections, setShowSections] = useState(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("showSections") === "true";
-    }
-    return false;
-  });
+  const [showSections, setShowSections] = useState(false);
 
+  // Read from localStorage after hydration
+  useEffect(() => {
+    const saved = localStorage.getItem("showSections");
+    if (saved === "true") {
+      setShowSections(true);
+    }
+  }, []);
+
+  // Save to localStorage when value changes
   useEffect(() => {
     localStorage.setItem("showSections", String(showSections));
   }, [showSections]);
