@@ -528,6 +528,7 @@ function MandateRowContent({
           <DecisionDropdown
             decision={currentDecision?.decision ?? null}
             userEmail={currentDecision?.userEmail ?? null}
+            userEntity={currentDecision?.userEntity ?? null}
             createdAt={currentDecision?.createdAt ?? null}
             onChange={onDecision}
             onUpdateClick={onUpdateClick}

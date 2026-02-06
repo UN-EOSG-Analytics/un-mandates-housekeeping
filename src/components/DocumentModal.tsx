@@ -134,12 +134,18 @@ function ActivityMeta({
     showSubprogramme && subprogramme
       ? ` / ${subprogramme.replace(/^Subprogramme \d+[.:]\s*/i, "Sub ")}`
       : "";
+  const isReviewer = userEntity?.toUpperCase() === "DMSPC";
   return (
     <div className="mt-1.5 flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[11px] text-gray-400">
       <span className="font-medium text-gray-500">{userEmail}</span>
       {userEntity && (
         <span className="rounded bg-gray-100 px-1.5 py-0.5 text-[10px] font-medium text-gray-500">
           {userEntity}
+        </span>
+      )}
+      {isReviewer && (
+        <span className="rounded-full bg-amber-100 px-1.5 py-0.5 text-[10px] font-medium text-amber-700">
+          Reviewer
         </span>
       )}
       <span className="text-gray-300">·</span>
@@ -1269,6 +1275,7 @@ export function DocumentSymbol({
                                       }
                                       disabled={!canEdit}
                                       userEmail={currentDecision?.userEmail}
+                                      userEntity={currentDecision?.userEntity}
                                       createdAt={currentDecision?.createdAt}
                                       reason={currentDecision?.decisionReason}
                                       otherReason={currentDecision?.otherReason}
@@ -1409,43 +1416,45 @@ export function DocumentSymbol({
                           >
                             All entities
                           </button>
-                          {[...allEntities].sort((a, b) => {
-                            // Current entity first
-                            if (a === entity) return -1;
-                            if (b === entity) return 1;
-                            return 0;
-                          }).map((ent) => {
-                            const isCurrentEntity = ent === entity;
-                            const count =
-                              allDecisions.filter((d) => d.entity === ent)
-                                .length +
-                              allComments.filter((c) => c.entity === ent)
-                                .length;
-                            return (
-                              <button
-                                key={ent}
-                                onClick={() => setActivityFilterEntity(ent)}
-                                className={`rounded-full px-2 py-0.5 text-xs font-medium transition-colors ${
-                                  activityFilterEntity === ent
-                                    ? "bg-un-blue text-white"
-                                    : isCurrentEntity
-                                      ? "bg-un-blue/20 text-un-blue hover:bg-un-blue/30"
-                                      : "bg-gray-100 text-gray-500 hover:bg-gray-200"
-                                }`}
-                              >
-                                {ent}{" "}
-                                <span
-                                  className={
+                          {[...allEntities]
+                            .sort((a, b) => {
+                              // Current entity first
+                              if (a === entity) return -1;
+                              if (b === entity) return 1;
+                              return 0;
+                            })
+                            .map((ent) => {
+                              const isCurrentEntity = ent === entity;
+                              const count =
+                                allDecisions.filter((d) => d.entity === ent)
+                                  .length +
+                                allComments.filter((c) => c.entity === ent)
+                                  .length;
+                              return (
+                                <button
+                                  key={ent}
+                                  onClick={() => setActivityFilterEntity(ent)}
+                                  className={`rounded-full px-2 py-0.5 text-xs font-medium transition-colors ${
                                     activityFilterEntity === ent
-                                      ? "text-white/60"
-                                      : "text-gray-400"
-                                  }
+                                      ? "bg-un-blue text-white"
+                                      : isCurrentEntity
+                                        ? "bg-un-blue/20 text-un-blue hover:bg-un-blue/30"
+                                        : "bg-gray-100 text-gray-500 hover:bg-gray-200"
+                                  }`}
                                 >
-                                  ({count})
-                                </span>
-                              </button>
-                            );
-                          })}
+                                  {ent}{" "}
+                                  <span
+                                    className={
+                                      activityFilterEntity === ent
+                                        ? "text-white/60"
+                                        : "text-gray-400"
+                                    }
+                                  >
+                                    ({count})
+                                  </span>
+                                </button>
+                              );
+                            })}
                         </div>
                       </div>
                     )}
