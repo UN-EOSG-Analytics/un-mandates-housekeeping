@@ -2,15 +2,15 @@
 "use client";
 
 import React from "react";
-import { getAgeIndicator } from "@/lib/services/mandates/age-indicator";
-import { fetchParagraphs } from "@/lib/services/client/client-data-service";
+import { getAgeIndicator } from "@/features/mandates/services/age-indicator";
+import { fetchParagraphs } from "@/features/mandates/services/documents/client-data-service";
 import {
   getDocumentDecisionsAction,
-  getDocumentVersionsAction,
-  resolveCommentAction,
   updateDecisionReasonAction,
-} from "@/lib/services/housekeeping-actions";
-import type { DocumentVersion } from "@/lib/services/documents/document-versions";
+} from "@/features/mandates/actions/decisions";
+import { getDocumentVersionsAction } from "@/features/mandates/services/documents/document-fetching";
+import { resolveCommentAction } from "@/features/mandates/actions/comments";
+import type { DocumentVersion } from "@/features/mandates/services/documents/document-versions";
 import { DiffModal } from "./DiffModal";
 import type {
   Decision,
@@ -46,7 +46,7 @@ import {
   renderReasonIcon,
   renderLabelWithBold,
 } from "../features/mandates/ui/ReasonsModal";
-import type { DecisionType } from "@/lib/services/mandates/decision-reasons";
+import type { DecisionType } from "@/features/mandates/services/decision-reasons";
 
 interface Props {
   symbol: string;

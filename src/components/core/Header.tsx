@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { UserMenu } from "./UserMenu";
-import type { EntityOption } from "@/lib/services/mandates/data-service";
+import type { EntityOption } from "@/features/mandates/services/data-service";
 
 interface Props {
   user?: { email: string; entity?: string | null; isReviewer?: boolean } | null;

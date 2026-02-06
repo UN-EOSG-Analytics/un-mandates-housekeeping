@@ -542,7 +542,7 @@ mv src/lib/services/client/client-data-service.ts \
 import { computeDocumentDiffAction } from "@/lib/services/housekeeping-actions"
 
 // After - all actions now in mandates feature
-import { computeDocumentDiffAction } from "@/features/mandates/actions/documents"
+import { computeDocumentDiffAction } from "@/features/mandates/actions/document-fetching"
 import { createDecisionAction } from "@/features/mandates/actions/decisions"
 import { createCommentAction } from "@/features/mandates/actions/comments"
 ```

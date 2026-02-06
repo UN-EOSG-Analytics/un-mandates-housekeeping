@@ -13,25 +13,27 @@ import {
 } from "@/hooks/useRealtimeDecisions";
 import { BODY_ABBREVS } from "@/lib/constants";
 import { abbreviateBody } from "@/lib/utils";
-import { getAgeIndicator } from "@/lib/services/mandates/age-indicator";
+import { getAgeIndicator } from "@/features/mandates/services/age-indicator";
 import {
   approveDecisionAction,
   clearAllEntityDecisionsAction,
-  createCommentAction,
   createDecisionAction,
-  endReviewModeAction,
-  getDocumentMetadataAction,
   getEntityDecisionsAction,
-  getReviewModeStatusAction,
   getSingleMandateStateAction,
-  getUserRoleAction,
-  startReviewModeAction,
   updateDecisionReasonAction,
-} from "@/lib/services/housekeeping-actions";
+} from "@/features/mandates/actions/decisions";
+import { createCommentAction } from "@/features/mandates/actions/comments";
+import {
+  endReviewModeAction,
+  getReviewModeStatusAction,
+  startReviewModeAction,
+} from "@/features/mandates/actions/review-mode";
+import { getDocumentMetadataAction } from "@/features/mandates/services/documents/document-fetching";
+import { getUserRoleAction } from "@/features/auth/user";
 import {
   getMandateWarnings,
   getWarningIcon,
-} from "@/lib/services/mandates/mandate-warnings";
+} from "@/features/mandates/services/mandate-warnings";
 import type {
   Decision,
   Mandate,
@@ -502,7 +504,10 @@ function MandateRowContent({
             );
           })()}
       </div>
-      <div onClick={(e) => e.stopPropagation()} className="relative flex items-center">
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="relative flex items-center"
+      >
         {!isUpdateTarget &&
           !readOnly &&
           currentDecision?.decision === "add" &&
@@ -511,7 +516,7 @@ function MandateRowContent({
             <Tooltip content="Edit manual entry">
               <button
                 onClick={onEdit}
-                className="absolute -left-7 top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded border border-emerald-200 bg-emerald-50 text-emerald-700 transition-colors hover:border-emerald-300 hover:bg-emerald-100"
+                className="absolute top-1/2 -left-7 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded border border-emerald-200 bg-emerald-50 text-emerald-700 transition-colors hover:border-emerald-300 hover:bg-emerald-100"
               >
                 <FileText className="h-3.5 w-3.5" />
               </button>
@@ -923,7 +928,6 @@ function MandateRow({
           compareYear={diffParams.compareYear}
         />
       )}
-
     </div>
   );
 }
@@ -1309,7 +1313,9 @@ function MandateSection({
                 onUpdateWithManual(m.symbol, newSymbol, manualData)
               }
               onEditManual={
-                onEditManual ? (data) => onEditManual(m.symbol, data) : undefined
+                onEditManual
+                  ? (data) => onEditManual(m.symbol, data)
+                  : undefined
               }
               onComment={(comment) => onComment(m.symbol, comment)}
               updateTargetMetadata={
@@ -1339,7 +1345,9 @@ function MandateSection({
               onApprove={onApprove}
               onUpdateWithManual={() => {}}
               onEditManual={
-                onEditManual ? (data) => onEditManual(m.symbol, data) : undefined
+                onEditManual
+                  ? (data) => onEditManual(m.symbol, data)
+                  : undefined
               }
               onComment={(comment) => onComment(m.symbol, comment)}
               isAdded
@@ -1907,9 +1915,10 @@ export function EntityDetail({
         [key]: {
           ...prev[key],
           decision: updatedDecision,
-          decisions: prev[key]?.decisions?.map((d) =>
-            d.id === currentDecision.id ? updatedDecision : d,
-          ) || [],
+          decisions:
+            prev[key]?.decisions?.map((d) =>
+              d.id === currentDecision.id ? updatedDecision : d,
+            ) || [],
         },
       }));
 

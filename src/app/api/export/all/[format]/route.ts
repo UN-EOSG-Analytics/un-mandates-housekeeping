@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
-import { exportToCsv, exportToXlsx } from "@/lib/services/export/export-excel";
-import { exportAllToDocx } from "@/lib/services/export/export-docx";
+import {
+  exportToCsv,
+  exportToXlsx,
+} from "@/features/mandates/services/export/export-excel";
+import { exportAllToDocx } from "@/features/mandates/services/export/export-docx";
 import { getISOTimestamp } from "@/lib/utils";
 
 const CONTENT_TYPES = {

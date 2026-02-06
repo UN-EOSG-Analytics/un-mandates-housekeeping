@@ -15,7 +15,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import type { DecisionType } from "@/lib/services/mandates/decision-reasons";
+import type { DecisionType } from "@/features/mandates/services/decision-reasons";
 
 interface DecisionDropdownProps {
   decision: Decision | null;

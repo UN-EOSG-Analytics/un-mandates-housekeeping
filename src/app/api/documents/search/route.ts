@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { query } from "@/lib/db/db";
-import { cleanTitle } from "@/lib/services/documents/metadata-utils";
+import { cleanTitle } from "@/features/mandates/services/documents/metadata";
 
 interface DocumentRow {
   symbol: string;

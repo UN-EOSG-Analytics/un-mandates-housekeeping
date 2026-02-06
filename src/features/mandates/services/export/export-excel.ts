@@ -1,5 +1,5 @@
 import ExcelJS from "exceljs";
-import { fetchPPBRecords } from "../mandates/data-service";
+import { fetchPPBRecords } from "@/features/mandates/services/data-service";
 import { getBaseUrl } from "@/lib/get-base-url";
 
 interface MandateRow {

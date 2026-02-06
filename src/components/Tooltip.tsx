@@ -69,8 +69,8 @@ export function Tooltip({ content, children }: Props) {
           <span
             className={`absolute ${arrowAlignClasses[align]} h-2 w-2 rotate-45 border border-gray-200 bg-white ${
               position === "top"
-                ? "top-full -mt-1 border-b border-r border-t-0 border-l-0"
-                : "bottom-full -mb-1 border-t border-l border-b-0 border-r-0"
+                ? "top-full -mt-1 border-t-0 border-r border-b border-l-0"
+                : "bottom-full -mb-1 border-t border-r-0 border-b-0 border-l"
             }`}
           />
         </span>

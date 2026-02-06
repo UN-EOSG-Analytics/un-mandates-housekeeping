@@ -6,9 +6,9 @@ import {
   fetchPPBRecords,
   getBudgetPartsMeta,
   fetchEntities,
-} from "@/lib/services/mandates/data-service";
-import { fetchNewerVersions } from "@/lib/services/documents/newer-versions";
-import { transformPPBData } from "@/lib/services/mandates/transformData";
+  transformPPBData,
+} from "@/features/mandates/services/data-service";
+import { fetchNewerVersions } from "@/features/mandates/services/documents/newer-versions";
 
 async function getData() {
   const records = await fetchPPBRecords();

@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { VerifyForm } from "@/features/auth/ui/VerifyForm";
-import { fetchEntities } from "@/lib/services/mandates/data-service";
+import { fetchEntities } from "@/features/mandates/services/data-service";
 import { Header } from "@/components/core/Header";
 
 export default async function VerifyPage() {

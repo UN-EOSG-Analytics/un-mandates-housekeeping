@@ -17,7 +17,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import type { EntityOption } from "@/lib/services/mandates/data-service";
+import type { EntityOption } from "@/features/mandates/services/data-service";
 
 interface EntityComboboxProps {
   value: string;
