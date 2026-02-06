@@ -524,7 +524,7 @@ export function DocumentSymbol({
   const [selectedEntity, setSelectedEntity] = useState<string | null>(null);
   const [activityFilterEntity, setActivityFilterEntity] = useState<
     string | null
-  >(null);
+  >(entity || null);
   const [activityFilterType, setActivityFilterType] = useState<
     "all" | "comments"
   >("all");
@@ -571,6 +571,14 @@ export function DocumentSymbol({
       setActiveTab(initialTab);
     }
   }, [open, initialTab]);
+
+  // Reset activity filter to current entity when modal opens or entity changes
+  useEffect(() => {
+    if (open) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- Reset filter when entity changes
+      setActivityFilterEntity(entity || null);
+    }
+  }, [open, entity]);
 
   // Track last fetched symbol to detect changes
   const lastFetchedSymbolRef = useRef<string | null>(null);
@@ -1401,7 +1409,12 @@ export function DocumentSymbol({
                           >
                             All entities
                           </button>
-                          {allEntities.map((ent) => {
+                          {[...allEntities].sort((a, b) => {
+                            // Current entity first
+                            if (a === entity) return -1;
+                            if (b === entity) return 1;
+                            return 0;
+                          }).map((ent) => {
                             const isCurrentEntity = ent === entity;
                             const count =
                               allDecisions.filter((d) => d.entity === ent)
