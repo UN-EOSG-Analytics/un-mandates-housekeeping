@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { MAX_YEAR, MIN_YEAR } from "@/lib/constants";
 import { Tooltip } from "../../../components/Tooltip";
 import { getIssuingBodies } from "@/features/mandates/services/reference-data";
+import { searchDocumentsAction } from "@/features/mandates/services/documents/document-fetching";
 
 export interface ManualEntryData {
   symbol: string;
@@ -63,9 +64,9 @@ export function ManualDocumentForm({
   const [overrideDuplicate, setOverrideDuplicate] = useState(false);
   const [existingDoc, setExistingDoc] = useState<{
     symbol: string;
-    title: string;
-    body: string;
-    year: number;
+    title: string | null;
+    body: string | null;
+    year: number | null;
   } | null>(null);
 
   useEffect(() => {
@@ -87,11 +88,10 @@ export function ManualDocumentForm({
 
     const timer = setTimeout(() => {
       setCheckingSymbol(true);
-      fetch(`/api/documents/search?q=${encodeURIComponent(manualData.symbol)}`)
-        .then((r) => r.json())
+      searchDocumentsAction(manualData.symbol)
         .then((results) => {
           const exactMatch = results.find(
-            (doc: { symbol: string }) => doc.symbol === manualData.symbol,
+            (doc) => doc.symbol === manualData.symbol,
           );
           if (exactMatch) {
             setSymbolExists(true);

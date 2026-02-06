@@ -1,20 +1,22 @@
+"use server";
+
 /**
- * Polling endpoint for real-time decision/comment updates and review mode status
+ * Realtime change polling for multi-user collaboration
  *
- * Returns changes since `since` timestamp and current review mode status.
- * Designed for Vercel serverless (no long-lived connections).
+ * Tracks new decisions and comments to show updates from other users.
+ * Designed for polling pattern (hooks call this every few seconds).
+ * Future: Can extend to track approvals, metadata updates, etc.
  */
 
 import { getCurrentUser } from "@/features/auth/auth";
 import { query } from "@/lib/db/db";
-import { NextResponse } from "next/server";
 
-// Vercel serverless config
-export const dynamic = "force-dynamic";
-export const runtime = "nodejs"; // Required for pg database driver
-export const maxDuration = 10; // 10 second timeout (default is 10s on Hobby, 60s on Pro)
+// Return type for actions
+type ActionResult<T = void> =
+  | { success: true; data?: T }
+  | { success: false; error: string };
 
-interface ChangeRecord {
+export interface RealtimeChange {
   id: string;
   table: "mandate_decisions" | "mandate_comments";
   document_symbol: string;
@@ -22,35 +24,54 @@ interface ChangeRecord {
   created_at: string;
 }
 
-export async function GET(
-  request: Request,
-  { params }: { params: Promise<{ entity: string }> },
-) {
-  const { entity } = await params;
+export interface ReviewModeStatus {
+  isUnderReview: boolean;
+  reviewStartedBy: string | null;
+}
 
-  // Auth check
+export interface RealtimeChangesData {
+  changes: RealtimeChange[];
+  serverTime: string;
+  hasChanges: boolean;
+  reviewMode: ReviewModeStatus;
+}
+
+/**
+ * Get realtime changes for an entity since a specific timestamp
+ * Returns new decisions, comments, and review mode status
+ *
+ * @param entity Entity to query
+ * @param since ISO timestamp or epoch ms to query changes after
+ * @returns Recent changes and current review mode status
+ */
+export async function getRealtimeChangesAction(
+  entity: string,
+  since?: string,
+): Promise<ActionResult<RealtimeChangesData>> {
   const user = await getCurrentUser();
   if (!user) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    return { success: false, error: "Unauthorized" };
   }
 
-  // Validate entity parameter
-  if (!entity || typeof entity !== "string") {
-    return NextResponse.json({ error: "Entity required" }, { status: 400 });
+  if (!entity) {
+    return { success: false, error: "Entity required" };
   }
 
-  // Get `since` timestamp from query params (ISO string or epoch ms)
-  const url = new URL(request.url);
-  const sinceParam = url.searchParams.get("since");
-
-  // Default to 30 seconds ago if no timestamp provided
-  const since = sinceParam
-    ? new Date(isNaN(Number(sinceParam)) ? sinceParam : Number(sinceParam))
+  // Parse since timestamp - default to 30 seconds ago if not provided
+  const sinceDate = since
+    ? new Date(isNaN(Number(since)) ? since : Number(since))
     : new Date(Date.now() - 30000);
 
   try {
+    interface ChangeRecord {
+      id: string;
+      table: "mandate_decisions" | "mandate_comments";
+      document_symbol: string;
+      subprogramme: string | null;
+      created_at: string;
+    }
+
     // Query for recent decisions, comments, and review mode status in parallel
-    // Uses indexed created_at column with TIMESTAMPTZ comparison
     const [decisions, comments, reviewModeResult] = await Promise.all([
       query<ChangeRecord>(
         `SELECT 
@@ -63,7 +84,7 @@ export async function GET(
         WHERE entity = $1 AND created_at > $2::timestamptz
         ORDER BY created_at DESC
         LIMIT 50`,
-        [entity, since.toISOString()],
+        [entity, sinceDate.toISOString()],
       ),
       query<ChangeRecord>(
         `SELECT 
@@ -76,7 +97,7 @@ export async function GET(
         WHERE entity = $1 AND created_at > $2::timestamptz
         ORDER BY created_at DESC
         LIMIT 50`,
-        [entity, since.toISOString()],
+        [entity, sinceDate.toISOString()],
       ),
       query<{ started_by: string | null; ended_at: string | null }>(
         `SELECT started_by, ended_at
@@ -106,33 +127,25 @@ export async function GET(
     const serverTime = new Date().toISOString();
 
     // Extract review mode status
-    // If there's a row with ended_at IS NULL, review is active
-    const reviewMode = {
+    const reviewMode: ReviewModeStatus = {
       isUnderReview: reviewModeResult.length > 0,
       reviewStartedBy: reviewModeResult[0]?.started_by ?? null,
     };
 
-    return NextResponse.json(
-      {
+    return {
+      success: true,
+      data: {
         changes,
         serverTime,
         hasChanges: changes.length > 0,
         reviewMode,
       },
-      {
-        headers: {
-          // Prevent any caching for real-time data
-          "Cache-Control": "private, no-store, no-cache, must-revalidate",
-          Pragma: "no-cache",
-          Expires: "0",
-        },
-      },
-    );
+    };
   } catch (error) {
     console.error("[Realtime] Poll error:", error);
-    return NextResponse.json(
-      { error: "Failed to fetch changes" },
-      { status: 500 },
-    );
+    return {
+      success: false,
+      error: "Failed to fetch changes",
+    };
   }
 }

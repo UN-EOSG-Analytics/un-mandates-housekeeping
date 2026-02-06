@@ -1,15 +1,14 @@
 "use server";
 
-import {
-  fetchAllVersions,
-  type DocumentVersion,
-} from "./document-versions";
+import { fetchAllVersions, type DocumentVersion } from "./document-versions";
 import {
   fetchDocumentMetadata,
   type DocumentMetadata,
+  cleanTitle,
 } from "./metadata";
 import { fetchUNDocument } from "undifferent/un-fetcher";
 import { diff, type DiffResult } from "undifferent/core";
+import { query } from "@/lib/db/db";
 
 // Return type for actions
 type ActionResult<T = void> =
@@ -114,4 +113,62 @@ export async function computeDocumentDiffAction(
     }
     return { success: false, error: errorMsg };
   }
+}
+
+// ============================================================================
+// Document Search
+// ============================================================================
+
+export interface DocumentSearchResult {
+  symbol: string;
+  title: string | null;
+  type: string | null;
+  year: number | null;
+  body: string | null;
+}
+
+/**
+ * Search for documents by symbol or title
+ * Used for autocomplete in document search inputs
+ * @param searchQuery Search term (min 2 characters)
+ * @returns Array of matching documents (max 20)
+ */
+export async function searchDocumentsAction(
+  searchQuery: string,
+): Promise<DocumentSearchResult[]> {
+  const q = searchQuery.trim();
+  if (q.length < 2) {
+    return [];
+  }
+
+  interface DocumentRow {
+    symbol: string;
+    proper_title: string | null;
+    document_type: string | null;
+    date_year: number | null;
+    issuing_body: string | null;
+  }
+
+  // Search by symbol first (exact prefix match), then by title
+  const rows = await query<DocumentRow>(
+    `SELECT symbol, proper_title, document_type, date_year, issuing_body
+     FROM public.documents
+     WHERE symbol ILIKE $1 || '%'
+        OR proper_title ILIKE '%' || $1 || '%'
+     ORDER BY 
+       CASE WHEN UPPER(symbol) = UPPER($1) THEN 0 ELSE 1 END,
+       CASE WHEN symbol ILIKE $1 || '%' THEN 0 ELSE 1 END,
+       LENGTH(symbol),
+       date_year DESC NULLS LAST
+     LIMIT 20`,
+    [q],
+  );
+
+  return rows.map((r) => ({
+    symbol: r.symbol,
+    title: cleanTitle(r.proper_title),
+    type: r.document_type,
+    year: r.date_year,
+    body: r.issuing_body,
+  }));
 }
