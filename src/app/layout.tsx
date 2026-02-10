@@ -1,6 +1,6 @@
 import Footer from "@/components/core/Footer";
 import { SITE_SUBTITLE, SITE_TITLE } from "@/components/core/Header";
-import { FeedbackButton } from "@/components/FeedbackButton";
+import { AuthenticatedFeedbackButton } from "@/components/AuthenticatedFeedbackButton";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
 import { Roboto } from "next/font/google";
@@ -48,7 +48,7 @@ export default function RootLayout({
           {children}
         </div>
         <Footer />
-        <FeedbackButton />
+        <AuthenticatedFeedbackButton />
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         )}
