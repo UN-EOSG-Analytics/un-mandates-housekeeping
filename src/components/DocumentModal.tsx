@@ -34,6 +34,7 @@ import {
   Info,
   Loader2,
   MessageSquare,
+  Search,
   Sparkles,
   Star,
   X,
@@ -113,6 +114,58 @@ function highlightEntity(
   });
 }
 
+function highlightSearchAndEntity(
+  text: string,
+  searchQuery?: string,
+  entity?: string,
+  entityLong?: string | null,
+): React.ReactNode {
+  if (!searchQuery && !entity && !entityLong) return text;
+
+  const terms: { term: string; type: 'search' | 'entity' }[] = [];
+  
+  if (searchQuery && searchQuery.trim()) {
+    terms.push({ term: searchQuery.trim(), type: 'search' });
+  }
+  
+  if (entity) terms.push({ term: entity, type: 'entity' });
+  if (entityLong) terms.push({ term: entityLong, type: 'entity' });
+
+  if (terms.length === 0) return text;
+
+  // Create pattern that matches any of the terms
+  const pattern = new RegExp(
+    `(${terms.map(({ term }) => term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
+    "gi",
+  );
+
+  const parts = text.split(pattern);
+  if (parts.length === 1) return text;
+
+  return parts.map((part, i) => {
+    const matchingTerm = terms.find(
+      ({ term }) => term.toLowerCase() === part.toLowerCase()
+    );
+    
+    if (matchingTerm) {
+      if (matchingTerm.type === 'search') {
+        return (
+          <mark key={i} className="bg-yellow-200 text-foreground rounded px-0.5">
+            {part}
+          </mark>
+        );
+      } else {
+        return (
+          <strong key={i} className="text-foreground">
+            {part}
+          </strong>
+        );
+      }
+    }
+    return part;
+  });
+}
+
 function ActivityMeta({
   userEmail,
   userEntity,
@@ -168,12 +221,14 @@ function ParaBox({
   entity,
   entityLong,
   aiComment,
+  searchQuery,
 }: {
   p: Paragraph;
   indent: number;
   entity?: string;
   entityLong?: string | null;
   aiComment?: string | null;
+  searchQuery?: string;
 }) {
   const label = p.prefix ? cleanPrefix(p.prefix) : null;
 
@@ -187,7 +242,7 @@ function ParaBox({
             </span>
           )}
           <p className="flex-1 text-sm leading-relaxed text-gray-700">
-            {highlightEntity(p.text, entity, entityLong)}
+            {highlightSearchAndEntity(p.text, searchQuery, entity, entityLong)}
           </p>
           {aiComment && (
             <Tooltip content={aiComment}>
@@ -232,18 +287,25 @@ function CollapsedGap({
   );
 }
 
+function matchesSearch(text: string, searchQuery?: string): boolean {
+  if (!searchQuery || !searchQuery.trim()) return true;
+  return text.toLowerCase().includes(searchQuery.trim().toLowerCase());
+}
+
 function FilteredParagraphTree({
   paragraphs,
   relevantIndices,
   aiComments,
   entity,
   entityLong,
+  searchQuery,
 }: {
   paragraphs: Paragraph[];
   relevantIndices: Set<number>;
   aiComments: Record<number, string>;
   entity: string;
   entityLong?: string | null;
+  searchQuery?: string;
 }) {
   const [expandedGaps, setExpandedGaps] = useState<Set<number>>(new Set());
   const [showPreamble, setShowPreamble] = useState(false);
@@ -255,7 +317,7 @@ function FilteredParagraphTree({
   const isRelevant = (origIdx: number) => relevantIndices.has(origIdx);
 
   const preamble = contentIndices.filter(
-    ({ p }) => p.paragraph_type === "preambular",
+    ({ p }) => p.paragraph_type === "preambular" && matchesSearch(p.text, searchQuery),
   );
   const operative = contentIndices.filter(
     ({ p }) => p.paragraph_type !== "preambular",
@@ -272,10 +334,16 @@ function FilteredParagraphTree({
 
   for (const item of operative) {
     const relevant = isRelevant(item.origIdx);
+    const matches = matchesSearch(item.p.text, searchQuery);
+
+    // Skip items that don't match search (unless they're headings that might be needed)
+    if (!matches && item.p.type !== "heading") {
+      continue;
+    }
 
     if (item.p.type === "heading" && !relevant) {
       pendingHeadings.push(item);
-    } else if (relevant) {
+    } else if (relevant && matches) {
       const lastSeg = segments[segments.length - 1];
       if (lastSeg?.type === "relevant") {
         lastSeg.items.push(...pendingHeadings, item);
@@ -283,7 +351,7 @@ function FilteredParagraphTree({
         segments.push({ type: "relevant", items: [...pendingHeadings, item] });
       }
       pendingHeadings = [];
-    } else {
+    } else if (matches) {
       const lastSeg = segments[segments.length - 1];
       if (lastSeg?.type === "gap") {
         lastSeg.items.push(...pendingHeadings, item);
@@ -326,8 +394,25 @@ function FilteredParagraphTree({
     isRelevant(origIdx),
   );
 
+  const hasResults = preamble.length > 0 || segments.length > 0;
+  const hasSearchQuery = searchQuery && searchQuery.trim();
+
   return (
     <div className="space-y-2">
+      {hasSearchQuery && !hasResults && (
+        <div className="py-8 text-center">
+          <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-gray-100">
+            <Search className="h-5 w-5 text-gray-400" />
+          </div>
+          <p className="text-sm font-medium text-gray-600">
+            No results found
+          </p>
+          <p className="mt-1 text-xs text-gray-400">
+            Try a different search term
+          </p>
+        </div>
+      )}
+      
       {preamble.length > 0 && (
         <>
           <button
@@ -339,7 +424,12 @@ function FilteredParagraphTree({
             />
             {showPreamble ? "Hide" : "Show"} {preamble.length} preambular
             paragraph{preamble.length !== 1 && "s"}
-            {preambleRelevant.length > 0 && (
+            {hasSearchQuery && preamble.length > 0 && (
+              <span className="text-un-blue">
+                (matching search)
+              </span>
+            )}
+            {!hasSearchQuery && preambleRelevant.length > 0 && (
               <span className="text-un-blue">
                 ({preambleRelevant.length} mentioning {entity})
               </span>
@@ -355,6 +445,7 @@ function FilteredParagraphTree({
                   entity={entity}
                   entityLong={entityLong}
                   aiComment={aiComments[origIdx]}
+                  searchQuery={searchQuery}
                 />
               ))}
             </div>
@@ -388,6 +479,7 @@ function FilteredParagraphTree({
                 entity={entity}
                 entityLong={entityLong}
                 aiComment={aiComments[origIdx]}
+                searchQuery={searchQuery}
               />
             );
           });
@@ -427,6 +519,7 @@ function FilteredParagraphTree({
                       indent={getIndent(p)}
                       entity={entity}
                       entityLong={entityLong}
+                      searchQuery={searchQuery}
                     />
                   );
                 })}
@@ -439,17 +532,37 @@ function FilteredParagraphTree({
   );
 }
 
-function FullParagraphTree({ paragraphs }: { paragraphs: Paragraph[] }) {
+function FullParagraphTree({ paragraphs, searchQuery }: { paragraphs: Paragraph[]; searchQuery?: string }) {
   const [showPreamble, setShowPreamble] = useState(false);
 
   const content = paragraphs.filter(
     (p) => p.type !== "frontmatter" && p.text?.trim(),
   );
-  const preamble = content.filter((p) => p.paragraph_type === "preambular");
+  const preamble = content.filter(
+    (p) => p.paragraph_type === "preambular" && matchesSearch(p.text, searchQuery)
+  );
   const operative = content.filter((p) => p.paragraph_type !== "preambular");
+  const filteredOperative = operative.filter((p) => p.type === "heading" || matchesSearch(p.text, searchQuery));
+  
+  const hasResults = preamble.length > 0 || filteredOperative.some(p => p.type === "paragraph");
+  const hasSearchQuery = searchQuery && searchQuery.trim();
 
   return (
     <div className="space-y-2">
+      {hasSearchQuery && !hasResults && (
+        <div className="py-8 text-center">
+          <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-gray-100">
+            <Search className="h-5 w-5 text-gray-400" />
+          </div>
+          <p className="text-sm font-medium text-gray-600">
+            No results found
+          </p>
+          <p className="mt-1 text-xs text-gray-400">
+            Try a different search term
+          </p>
+        </div>
+      )}
+      
       {preamble.length > 0 && (
         <>
           <button
@@ -461,38 +574,43 @@ function FullParagraphTree({ paragraphs }: { paragraphs: Paragraph[] }) {
             />
             {showPreamble ? "Hide" : "Show"} {preamble.length} preambular
             paragraph{preamble.length !== 1 && "s"}
+            {hasSearchQuery && (
+              <span className="text-un-blue">
+                (matching search)
+              </span>
+            )}
           </button>
           {showPreamble && (
             <div className="space-y-2">
               {preamble.map((p, i) => (
-                <ParaBox key={`pp-${i}`} p={p} indent={getIndent(p)} />
+                <ParaBox key={`pp-${i}`} p={p} indent={getIndent(p)} searchQuery={searchQuery} />
               ))}
             </div>
           )}
         </>
       )}
 
-      {operative.map((p, i) => {
-        if (p.type === "heading") {
-          const indent =
-            p.heading_level && p.heading_level > 1
-              ? (p.heading_level - 1) * 12
-              : 0;
-          return (
-            <div
-              key={`op-${i}`}
-              style={{ marginLeft: indent }}
-              className={`font-semibold text-foreground ${p.heading_level === 1 ? "mt-3 text-sm" : "mt-1.5 text-xs"}`}
-            >
-              {p.text}
-            </div>
-          );
-        }
-        if (p.type === "paragraph") {
-          return <ParaBox key={`op-${i}`} p={p} indent={getIndent(p)} />;
-        }
-        return null;
-      })}
+      {filteredOperative.map((p, i) => {
+          if (p.type === "heading") {
+            const indent =
+              p.heading_level && p.heading_level > 1
+                ? (p.heading_level - 1) * 12
+                : 0;
+            return (
+              <div
+                key={`op-${i}`}
+                style={{ marginLeft: indent }}
+                className={`font-semibold text-foreground ${p.heading_level === 1 ? "mt-3 text-sm" : "mt-1.5 text-xs"}`}
+              >
+                {p.text}
+              </div>
+            );
+          }
+          if (p.type === "paragraph") {
+            return <ParaBox key={`op-${i}`} p={p} indent={getIndent(p)} searchQuery={searchQuery} />;
+          }
+          return null;
+        })}
     </div>
   );
 }
@@ -535,6 +653,7 @@ export function DocumentSymbol({
     "all" | "comments"
   >("all");
   const [paragraphs, setParagraphs] = useState<Paragraph[] | null>(null);
+  const [searchQuery, setSearchQuery] = useState<string>("");
   const [loading, setLoading] = useState(false);
   const [commentText, setCommentText] = useState("");
   const [activeTab, setActiveTab] = useState<
@@ -1926,6 +2045,31 @@ export function DocumentSymbol({
               {/* Paragraphs Tab */}
               {activeTab === "paragraphs" && (
                 <div className="space-y-4">
+                  {/* Search Box */}
+                  <div className="rounded-xl bg-white p-4 shadow-sm">
+                    <div className="mb-2 text-xs font-semibold tracking-wider text-gray-400 uppercase">
+                      Search in document
+                    </div>
+                    <div className="relative">
+                      <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+                      <input
+                        type="text"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        placeholder="Search for keywords in paragraphs..."
+                        className="w-full rounded-lg border border-gray-200 bg-white py-2 pl-10 pr-4 text-sm placeholder:text-gray-400 focus:border-un-blue focus:outline-none focus:ring-2 focus:ring-un-blue/20"
+                      />
+                      {searchQuery && (
+                        <button
+                          onClick={() => setSearchQuery("")}
+                          className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                        >
+                          <X className="h-4 w-4" />
+                        </button>
+                      )}
+                    </div>
+                  </div>
+
                   {allEntities && allEntities.length > 0 && (
                     <div className="rounded-xl bg-white p-4 shadow-sm">
                       <div className="mb-2 text-xs font-semibold tracking-wider text-gray-400 uppercase">
@@ -1983,9 +2127,10 @@ export function DocumentSymbol({
                           aiComments={selectedRelevance.aiComments}
                           entity={selectedEntity}
                           entityLong={selectedEntityLong || null}
+                          searchQuery={searchQuery}
                         />
                       ) : (
-                        <FullParagraphTree paragraphs={paragraphs} />
+                        <FullParagraphTree paragraphs={paragraphs} searchQuery={searchQuery} />
                       )
                     ) : (
                       <div className="py-12 text-center">
