@@ -1,10 +1,17 @@
 "use client";
 
-import { X, Loader2, Search, ChevronUp, ChevronDown } from "lucide-react";
-import { useEffect, useState, useRef, useCallback } from "react";
 import { computeDocumentDiffAction } from "@/features/mandates/services/documents/document-fetching";
-import { DiffViewer } from "undifferent/react";
+import {
+  ChevronDown,
+  ChevronUp,
+  ExternalLink,
+  Loader2,
+  Search,
+  X,
+} from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { DiffResult } from "undifferent/core";
+import { DiffViewer } from "undifferent/react";
 
 interface Props {
   isOpen: boolean;
@@ -76,13 +83,20 @@ export function DiffModal({
   useEffect(() => {
     if (!diffContainerRef.current || !searchQuery.trim()) {
       // Remove existing highlights
-      diffContainerRef.current?.querySelectorAll('mark.search-highlight, mark.search-highlight-current').forEach(mark => {
-        const parent = mark.parentNode;
-        if (parent) {
-          parent.replaceChild(document.createTextNode(mark.textContent || ''), mark);
-          parent.normalize();
-        }
-      });
+      diffContainerRef.current
+        ?.querySelectorAll(
+          "mark.search-highlight, mark.search-highlight-current",
+        )
+        .forEach((mark) => {
+          const parent = mark.parentNode;
+          if (parent) {
+            parent.replaceChild(
+              document.createTextNode(mark.textContent || ""),
+              mark,
+            );
+            parent.normalize();
+          }
+        });
       setTotalMatches(0);
       setCurrentMatchIndex(0);
       return;
@@ -92,20 +106,25 @@ export function DiffModal({
     const query = searchQuery.trim().toLowerCase();
 
     // Remove existing highlights
-    container.querySelectorAll('mark.search-highlight, mark.search-highlight-current').forEach(mark => {
-      const parent = mark.parentNode;
-      if (parent) {
-        parent.replaceChild(document.createTextNode(mark.textContent || ''), mark);
-        parent.normalize();
-      }
-    });
+    container
+      .querySelectorAll("mark.search-highlight, mark.search-highlight-current")
+      .forEach((mark) => {
+        const parent = mark.parentNode;
+        if (parent) {
+          parent.replaceChild(
+            document.createTextNode(mark.textContent || ""),
+            mark,
+          );
+          parent.normalize();
+        }
+      });
 
     // Function to highlight text in a text node
     const highlightTextNode = (node: Text) => {
-      const text = node.textContent || '';
+      const text = node.textContent || "";
       const lowerText = text.toLowerCase();
       let index = lowerText.indexOf(query);
-      
+
       if (index === -1) return;
 
       const parent = node.parentNode;
@@ -117,12 +136,14 @@ export function DiffModal({
       while (index !== -1) {
         // Add text before match
         if (index > lastIndex) {
-          fragments.push(document.createTextNode(text.substring(lastIndex, index)));
+          fragments.push(
+            document.createTextNode(text.substring(lastIndex, index)),
+          );
         }
 
         // Add highlighted match
-        const mark = document.createElement('mark');
-        mark.className = 'search-highlight bg-yellow-200 rounded px-0.5';
+        const mark = document.createElement("mark");
+        mark.className = "search-highlight bg-yellow-200 rounded px-0.5";
         mark.textContent = text.substring(index, index + query.length);
         fragments.push(mark);
 
@@ -136,34 +157,33 @@ export function DiffModal({
       }
 
       // Replace the text node with fragments
-      fragments.forEach(fragment => parent.insertBefore(fragment, node));
+      fragments.forEach((fragment) => parent.insertBefore(fragment, node));
       parent.removeChild(node);
     };
 
     // Walk through all text nodes and highlight matches
-    const walker = document.createTreeWalker(
-      container,
-      NodeFilter.SHOW_TEXT,
-      {
-        acceptNode: (node) => {
-          // Skip script and style elements
-          const parent = node.parentElement;
-          if (parent && (parent.tagName === 'SCRIPT' || parent.tagName === 'STYLE')) {
-            return NodeFilter.FILTER_REJECT;
-          }
-          // Skip if already highlighted
-          if (parent?.tagName === 'MARK') {
-            return NodeFilter.FILTER_REJECT;
-          }
-          // Only include if contains search query
-          const text = node.textContent || '';
-          if (text.toLowerCase().includes(query)) {
-            return NodeFilter.FILTER_ACCEPT;
-          }
+    const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, {
+      acceptNode: (node) => {
+        // Skip script and style elements
+        const parent = node.parentElement;
+        if (
+          parent &&
+          (parent.tagName === "SCRIPT" || parent.tagName === "STYLE")
+        ) {
           return NodeFilter.FILTER_REJECT;
         }
-      }
-    );
+        // Skip if already highlighted
+        if (parent?.tagName === "MARK") {
+          return NodeFilter.FILTER_REJECT;
+        }
+        // Only include if contains search query
+        const text = node.textContent || "";
+        if (text.toLowerCase().includes(query)) {
+          return NodeFilter.FILTER_ACCEPT;
+        }
+        return NodeFilter.FILTER_REJECT;
+      },
+    });
 
     const textNodes: Text[] = [];
     let currentNode = walker.nextNode();
@@ -174,34 +194,47 @@ export function DiffModal({
 
     // Highlight all matching text nodes
     textNodes.forEach(highlightTextNode);
-    
+
     // Count total matches and reset current index
-    const matches = container.querySelectorAll('mark.search-highlight');
+    const matches = container.querySelectorAll("mark.search-highlight");
     setTotalMatches(matches.length);
     setCurrentMatchIndex(matches.length > 0 ? 0 : -1);
   }, [searchQuery, state.diffResult]);
 
   // Update current match highlighting and scroll
   useEffect(() => {
-    if (!diffContainerRef.current || totalMatches === 0 || currentMatchIndex < 0) return;
+    if (
+      !diffContainerRef.current ||
+      totalMatches === 0 ||
+      currentMatchIndex < 0
+    )
+      return;
 
     const container = diffContainerRef.current;
-    const matches = container.querySelectorAll('mark.search-highlight');
-    
+    const matches = container.querySelectorAll("mark.search-highlight");
+
     // Remove current highlight from all matches
-    matches.forEach(mark => {
-      mark.classList.remove('search-highlight-current', 'bg-un-blue', 'text-white');
-      mark.classList.add('bg-yellow-200');
+    matches.forEach((mark) => {
+      mark.classList.remove(
+        "search-highlight-current",
+        "bg-un-blue",
+        "text-white",
+      );
+      mark.classList.add("bg-yellow-200");
     });
 
     // Highlight current match
     const currentMatch = matches[currentMatchIndex];
     if (currentMatch) {
-      currentMatch.classList.remove('bg-yellow-200');
-      currentMatch.classList.add('search-highlight-current', 'bg-un-blue', 'text-white');
-      
+      currentMatch.classList.remove("bg-yellow-200");
+      currentMatch.classList.add(
+        "search-highlight-current",
+        "bg-un-blue",
+        "text-white",
+      );
+
       // Scroll to current match
-      currentMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      currentMatch.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   }, [currentMatchIndex, totalMatches]);
 
@@ -222,7 +255,7 @@ export function DiffModal({
 
     const handleKeyDown = (e: KeyboardEvent) => {
       // Enter or F3 for next
-      if (e.key === 'Enter' || e.key === 'F3') {
+      if (e.key === "Enter" || e.key === "F3") {
         e.preventDefault();
         if (e.shiftKey) {
           goToPreviousMatch();
@@ -232,11 +265,14 @@ export function DiffModal({
       }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, totalMatches, goToNextMatch, goToPreviousMatch]);
 
   const { loading, error, diffResult } = state;
+
+  // Construct external diff tool URL
+  const externalDiffUrl = `https://diff.un-two-zero.dev/?symbol1=${encodeURIComponent(originalSymbol)}&symbol2=${encodeURIComponent(compareSymbol)}`;
 
   if (!isOpen) return null;
 
@@ -255,8 +291,8 @@ export function DiffModal({
                 Compare Document Versions
               </h2>
               <p className="mt-1 truncate text-sm text-gray-500">
-                {originalSymbol} ({originalYear}) → {compareSymbol} ({compareYear}
-                )
+                {originalSymbol} ({originalYear}) → {compareSymbol} (
+                {compareYear})
               </p>
               {(originalTitle || compareTitle) && (
                 <p className="truncate text-xs text-gray-400">
@@ -264,30 +300,41 @@ export function DiffModal({
                 </p>
               )}
             </div>
-            <button
-              onClick={onClose}
-              className="rounded-lg p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-600"
-            >
-              <X className="h-5 w-5" />
-            </button>
+            <div className="flex items-center gap-2">
+              <a
+                href={externalDiffUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-lg bg-un-blue px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-un-blue/90"
+                title="Open in full diff tool"
+              >
+                Open <ExternalLink className="h-4 w-4" />
+              </a>
+              <button
+                onClick={onClose}
+                className="rounded-lg p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-600"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
           </div>
           {/* Search Bar */}
           {!loading && !error && diffResult && (
             <div className="border-t border-gray-100 px-6 py-3">
               <div className="flex items-center gap-2">
                 <div className="relative flex-1">
-                  <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+                  <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-gray-400" />
                   <input
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search in differences..."
-                    className="w-full rounded-lg border border-gray-200 bg-white py-2 pl-10 pr-4 text-sm placeholder:text-gray-400 focus:border-un-blue focus:outline-none focus:ring-2 focus:ring-un-blue/20"
+                    className="w-full rounded-lg border border-gray-200 bg-white py-2 pr-4 pl-10 text-sm placeholder:text-gray-400 focus:border-un-blue focus:ring-2 focus:ring-un-blue/20 focus:outline-none"
                   />
                   {searchQuery && (
                     <button
                       onClick={() => setSearchQuery("")}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                      className="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400 hover:text-gray-600"
                     >
                       <X className="h-4 w-4" />
                     </button>
@@ -295,7 +342,7 @@ export function DiffModal({
                 </div>
                 {totalMatches > 0 && (
                   <>
-                    <div className="text-xs text-gray-500 whitespace-nowrap">
+                    <div className="text-xs whitespace-nowrap text-gray-500">
                       {currentMatchIndex + 1} of {totalMatches}
                     </div>
                     <div className="flex gap-1">
