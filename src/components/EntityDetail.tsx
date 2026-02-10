@@ -319,7 +319,7 @@ function MandateRowContent({
   const contentGreyed = (hasUpdate || hasRemove) && !isUpdateTarget;
 
   // Approval state - only reviewers can approve, and only if there's a decision
-  const hasDecision = !!currentDecision;
+  const hasDecision = !!currentDecision && currentDecision.decision !== "cancel";
   const isApproved = !!currentDecision?.approvedBy;
   const canApprove =
     isReviewer && onApprove && hasDecision && currentDecision?.id;

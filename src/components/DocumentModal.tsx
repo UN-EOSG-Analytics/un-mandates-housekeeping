@@ -1358,7 +1358,8 @@ export function DocumentSymbol({
                                 (isUserEntity || canReviewAnyEntity) &&
                                 isReviewer &&
                                 onApprove &&
-                                currentDecision;
+                                currentDecision &&
+                                currentDecision.decision !== "cancel";
                               const isApproved = !!currentDecision?.approvedBy;
                               const decisionId = currentDecision?.id;
 
