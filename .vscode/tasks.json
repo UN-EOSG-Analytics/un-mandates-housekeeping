@@ -2,50 +2,60 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "pnpm install",
+			"label": "install [pnpm]",
 			"type": "shell",
 			"command": "pnpm install",
 			"group": "build"
 		},
 		{
-			"label": "pnpm dev",
+			"label": "outdated [pnpm]",
+			"type": "shell",
+			"command": "pnpm outdated"
+		},
+		{
+			"label": "update [pnpm]",
+			"type": "shell",
+			"command": "pnpm update"
+		},
+		{
+			"label": "dev [pnpm]",
 			"type": "shell",
 			"command": "pnpm dev",
 			"isBackground": true,
 			"problemMatcher": ["$nextjs"]
 		},
 		{
-			"label": "pnpm build",
+			"label": "build [pnpm]",
 			"type": "shell",
 			"command": "pnpm build",
 			"group": "build",
 			"problemMatcher": ["$nextjs"]
 		},
 		{
-			"label": "pnpm start",
+			"label": "start [pnpm]",
 			"type": "shell",
 			"command": "pnpm start",
 			"isBackground": true
 		},
 		{
-			"label": "pnpm lint",
+			"label": "lint [pnpm]",
 			"type": "shell",
 			"command": "pnpm lint",
 			"problemMatcher": ["$eslint-stylish"]
 		},
 		{
-			"label": "pnpm typecheck",
+			"label": "typecheck [pnpm]",
 			"type": "shell",
 			"command": "pnpm typecheck",
 			"problemMatcher": ["$tsc"]
 		},
 		{
-			"label": "pnpm format",
+			"label": "format [pnpm]",
 			"type": "shell",
 			"command": "pnpm format"
 		},
 		{
-			"label": "pnpm format:check",
+			"label": "format:check [pnpm]",
 			"type": "shell",
 			"command": "pnpm format:check"
 		}
