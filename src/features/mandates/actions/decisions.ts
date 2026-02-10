@@ -497,22 +497,34 @@ export async function updateDecisionReasonAction(params: {
     return { success: false, error: reviewBlock };
   }
 
-  // Update the decision reason
+  // Create a new decision record to preserve reason history (append-only)
+  // This creates a new entry with the same decision type but updated reason
   const rows = await query<DecisionRow>(
-    `WITH updated AS (
-      UPDATE mandates_housekeeping.mandate_decisions 
-      SET decision_reason = $2, other_reason = $3
+    `WITH inserted AS (
+      INSERT INTO mandates_housekeeping.mandate_decisions 
+        (document_symbol, entity, subprogramme, decision, new_symbol, manual_metadata, decision_reason, other_reason, user_email)
+      SELECT 
+        document_symbol, 
+        entity, 
+        subprogramme, 
+        decision, 
+        new_symbol, 
+        manual_metadata,
+        $2,  -- new decision_reason
+        $3,  -- new other_reason
+        $4   -- current user (who is updating the reason)
+      FROM mandates_housekeeping.mandate_decisions
       WHERE id = $1
       RETURNING *
     )
-    SELECT u.*, users.entity as user_entity, approver.entity as approved_by_entity
-    FROM updated u
-    LEFT JOIN mandates_housekeeping.users users ON u.user_email = users.email
-    LEFT JOIN mandates_housekeeping.users approver ON u.approved_by = approver.email`,
+    SELECT i.*, users.entity as user_entity, NULL::text as approved_by_entity
+    FROM inserted i
+    LEFT JOIN mandates_housekeeping.users users ON i.user_email = users.email`,
     [
       decisionId,
       decisionReason,
       decisionReason === "other" ? otherReason : null,
+      user.email,
     ],
   );
 

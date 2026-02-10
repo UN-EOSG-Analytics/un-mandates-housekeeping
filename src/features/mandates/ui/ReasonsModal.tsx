@@ -109,6 +109,7 @@ export function ReasonPopup({
   const [localOtherReason, setLocalOtherReason] = React.useState(
     otherReason ?? "",
   );
+  const [localReason, setLocalReason] = React.useState<string | null>(reason);
   const [mounted, setMounted] = React.useState(false);
   const containerRef = React.useRef<HTMLDivElement>(null);
 
@@ -167,14 +168,17 @@ export function ReasonPopup({
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, onClose]);
 
-  // Sync local other reason with prop
+  // Sync local state with props
   React.useEffect(() => {
     setLocalOtherReason(otherReason ?? "");
-  }, [otherReason]);
+    setLocalReason(reason);
+  }, [otherReason, reason]);
 
   const handleReasonSelect = (reasonId: string) => {
     if (reasonId === "other") {
-      onChange("other", localOtherReason || null);
+      // Set local state to show textarea, but don't persist yet
+      // The onChange will be called in handleOtherSubmit when user clicks Done or presses Enter
+      setLocalReason("other");
     } else {
       onChange(reasonId, null);
       onClose();
@@ -236,13 +240,13 @@ export function ReasonPopup({
               className={`flex w-full items-start gap-3 px-4 py-3.5 text-left transition-colors ${
                 index !== reasons.length - 1 ? "border-b border-gray-50" : ""
               } ${
-                reason === r.id
+                localReason === r.id
                   ? `${colors.bg} ${colors.text}`
                   : `text-gray-600 ${colors.hoverBg}`
               }`}
             >
               <span
-                className={`mt-[3px] shrink-0 opacity-60 ${reason === r.id ? colors.text : "text-gray-400"}`}
+                className={`mt-[3px] shrink-0 opacity-60 ${localReason === r.id ? colors.text : "text-gray-400"}`}
               >
                 {getIconForReason(r.id)}
               </span>
@@ -254,7 +258,7 @@ export function ReasonPopup({
         </div>
 
         {/* Other reason freetext input */}
-        {reason === "other" && (
+        {localReason === "other" && (
           <div className="border-t border-gray-100 p-4">
             <textarea
               value={localOtherReason}

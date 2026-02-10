@@ -5,6 +5,8 @@
 CREATE SCHEMA IF NOT EXISTS mandates_housekeeping;
 
 -- Decision event log (append-only)
+-- Note: Changing a decision's reason creates a NEW record (not an UPDATE)
+-- This preserves full history including "other_reason" freetext
 CREATE TABLE IF NOT EXISTS mandates_housekeeping.mandate_decisions (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   document_symbol TEXT NOT NULL,
