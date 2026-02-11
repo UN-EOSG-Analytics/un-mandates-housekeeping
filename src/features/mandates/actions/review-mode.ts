@@ -11,6 +11,8 @@ type ActionResult<T = void> =
 
 export interface ReviewModeStatus {
   isUnderReview: boolean;
+  /** ID of the current/last review session (for tracking changes) */
+  reviewSessionId: string | null;
   startedBy: string | null;
   startedByEntity: string | null;
   startedAt: string | null;
@@ -27,11 +29,12 @@ export async function getReviewModeStatusAction(
   }
 
   const rows = await query<{
+    id: string;
     started_by: string;
     started_at: string;
     user_entity: string | null;
   }>(
-    `SELECT r.started_by, r.started_at, u.entity as user_entity
+    `SELECT r.id, r.started_by, r.started_at, u.entity as user_entity
      FROM mandates_housekeeping.entity_review_mode r
      LEFT JOIN mandates_housekeeping.users u ON r.started_by = u.email
      WHERE r.entity = $1 AND r.ended_at IS NULL`,
@@ -39,10 +42,19 @@ export async function getReviewModeStatusAction(
   );
 
   if (rows.length === 0) {
+    // Check if there's a recently completed review (for showing change indicators post-review)
+    const recentReviewRows = await query<{ id: string }>(
+      `SELECT id FROM mandates_housekeeping.entity_review_mode 
+       WHERE entity = $1 AND ended_at IS NOT NULL
+       ORDER BY ended_at DESC LIMIT 1`,
+      [entity],
+    );
+
     return {
       success: true,
       data: {
         isUnderReview: false,
+        reviewSessionId: recentReviewRows[0]?.id || null,
         startedBy: null,
         startedByEntity: null,
         startedAt: null,
@@ -54,6 +66,7 @@ export async function getReviewModeStatusAction(
     success: true,
     data: {
       isUnderReview: true,
+      reviewSessionId: rows[0].id,
       startedBy: rows[0].started_by,
       startedByEntity: rows[0].user_entity,
       startedAt: rows[0].started_at,
@@ -94,15 +107,20 @@ export async function startReviewModeAction(
     };
   }
 
-  // Start review mode (upsert - end any previous review and start new)
+  // Start review mode - always insert new row with new ID (for proper session tracking)
+  // First, ensure any previous review is ended
   await query(
+    `UPDATE mandates_housekeeping.entity_review_mode 
+     SET ended_at = COALESCE(ended_at, NOW()), ended_by = COALESCE(ended_by, $2)
+     WHERE entity = $1 AND ended_at IS NULL`,
+    [entity, user.email],
+  );
+
+  // Insert new review session with fresh ID
+  const insertedRows = await query<{ id: string; started_at: string }>(
     `INSERT INTO mandates_housekeeping.entity_review_mode (entity, started_by)
      VALUES ($1, $2)
-     ON CONFLICT (entity) DO UPDATE SET 
-       started_by = EXCLUDED.started_by,
-       started_at = NOW(),
-       ended_at = NULL,
-       ended_by = NULL`,
+     RETURNING id, started_at`,
     [entity, user.email],
   );
 
@@ -112,9 +130,10 @@ export async function startReviewModeAction(
     success: true,
     data: {
       isUnderReview: true,
+      reviewSessionId: insertedRows[0].id,
       startedBy: user.email,
       startedByEntity: user.entity,
-      startedAt: new Date().toISOString(),
+      startedAt: insertedRows[0].started_at,
     },
   };
 }
@@ -138,10 +157,12 @@ export async function endReviewModeAction(
     return { success: false, error: "entity required" };
   }
 
-  await query(
+  // End the review and return the session ID (for continued change tracking)
+  const endedRows = await query<{ id: string }>(
     `UPDATE mandates_housekeeping.entity_review_mode 
      SET ended_at = NOW(), ended_by = $2
-     WHERE entity = $1 AND ended_at IS NULL`,
+     WHERE entity = $1 AND ended_at IS NULL
+     RETURNING id`,
     [entity, user.email],
   );
 
@@ -151,6 +172,8 @@ export async function endReviewModeAction(
     success: true,
     data: {
       isUnderReview: false,
+      // Keep the session ID so change indicators persist
+      reviewSessionId: endedRows[0]?.id || null,
       startedBy: null,
       startedByEntity: null,
       startedAt: null,

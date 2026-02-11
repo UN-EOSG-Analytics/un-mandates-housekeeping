@@ -103,6 +103,7 @@ export function useRealtimeDecisions({
       if (data.reviewMode) {
         const newStatus: ReviewModeStatus = {
           isUnderReview: data.reviewMode.isUnderReview,
+          reviewSessionId: data.reviewMode.reviewSessionId,
           reviewStartedBy: data.reviewMode.reviewStartedBy,
         };
         setReviewModeStatus(newStatus);

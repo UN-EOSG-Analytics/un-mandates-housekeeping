@@ -31,6 +31,11 @@ import {
   getSingleMandateStateAction,
   updateDecisionReasonAction,
 } from "@/features/mandates/actions/decisions";
+import {
+  getEntityReviewChangesAction,
+  acceptReviewChangeAction,
+  revertReviewChangeAction,
+} from "@/features/mandates/actions/review-baselines";
 import { createCommentAction } from "@/features/mandates/actions/comments";
 import {
   endReviewModeAction,
@@ -49,6 +54,7 @@ import type {
   MandateComment,
   MandateDecision,
   MandateState,
+  ReviewChangeInfo,
 } from "@/types";
 import {
   ArrowRightLeft,
@@ -445,7 +451,7 @@ function MandateRowContent({
   allSymbols,
   allEntitySymbols,
   newestWithNewerVersion,
-  baselineDecision,
+  reviewChangeInfo,
   isUnderReview,
   onOpenSidebar,
   onOpenActivityTab,
@@ -457,6 +463,8 @@ function MandateRowContent({
   onReasonPopupClose,
   onDiff,
   onEdit,
+  onAcceptChange,
+  onRevertChange,
 }: {
   mandate: Mandate;
   state?: MandateState;
@@ -468,7 +476,7 @@ function MandateRowContent({
   allSymbols?: Set<string>; // All symbols in current section for warning system
   allEntitySymbols?: Set<string>; // All symbols across entire entity for newer-already-cited detection
   newestWithNewerVersion?: Set<string>; // Symbols that are newest among those with same newer version
-  baselineDecision?: MandateDecision | null; // Baseline decision before review started
+  reviewChangeInfo?: ReviewChangeInfo | null; // Review change info from server
   isUnderReview?: boolean; // Whether entity is currently under review
   onOpenSidebar?: () => void;
   onOpenActivityTab?: () => void;
@@ -485,6 +493,8 @@ function MandateRowContent({
     compareYear: number,
   ) => void;
   onEdit?: () => void;
+  onAcceptChange?: () => void;
+  onRevertChange?: () => void;
 }) {
   const ageInfo = getAgeIndicator(mandate.year);
   const currentDecision = state?.decision;
@@ -501,11 +511,15 @@ function MandateRowContent({
   const canApprove =
     isReviewer && onApprove && hasDecision && currentDecision?.id;
 
-  // Check for decision changes during review (for reviewers only)
+  // Check for decision changes during review (for reviewers or when showing persisted changes)
+  // Use server-side reviewChangeInfo if available, otherwise fall back to local comparison
   const decisionChange =
-    isUnderReview && isReviewer
-      ? getDecisionChange(baselineDecision, currentDecision)
+    reviewChangeInfo?.hasChange
+      ? getDecisionChange(reviewChangeInfo.baseline, currentDecision)
       : null;
+  
+  // Check if change has been responded to (accepted/reverted)
+  const changeResponse = reviewChangeInfo?.response;
 
   // Determine background color based on decision
   let bgColorClass = "";
@@ -808,8 +822,10 @@ function MandateRow({
   allSymbols,
   allEntitySymbols,
   newestWithNewerVersion,
-  baselineDecision,
+  reviewChangeInfo,
   isUnderReview,
+  onAcceptChange,
+  onRevertChange,
 }: {
   mandate: Mandate;
   state?: MandateState;
@@ -836,8 +852,10 @@ function MandateRow({
   allSymbols?: Set<string>;
   allEntitySymbols?: Set<string>;
   newestWithNewerVersion?: Set<string>;
-  baselineDecision?: MandateDecision | null;
+  reviewChangeInfo?: ReviewChangeInfo | null;
   isUnderReview?: boolean;
+  onAcceptChange?: () => void;
+  onRevertChange?: () => void;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarInitialTab, setSidebarInitialTab] = useState<
@@ -939,10 +957,13 @@ function MandateRow({
   };
 
   // Check for decision changes during review (for badge display)
-  const decisionChange =
-    isUnderReview && isReviewer
-      ? getDecisionChange(baselineDecision, state?.decision)
-      : null;
+  // Use server-side reviewChangeInfo if available
+  const decisionChange = reviewChangeInfo?.hasChange
+    ? getDecisionChange(reviewChangeInfo.baseline, state?.decision)
+    : null;
+  
+  // Check if change has been responded to (accepted/reverted)
+  const changeResponse = reviewChangeInfo?.response;
 
   return (
     <div className="relative">
@@ -958,7 +979,7 @@ function MandateRow({
           allSymbols={allSymbols}
           allEntitySymbols={allEntitySymbols}
           newestWithNewerVersion={newestWithNewerVersion}
-          baselineDecision={baselineDecision}
+          reviewChangeInfo={reviewChangeInfo}
           isUnderReview={isUnderReview}
           onOpenSidebar={() => {
             setSidebarInitialTab(undefined);
@@ -979,6 +1000,8 @@ function MandateRow({
           onReasonPopupClose={() => setShowReasonPopup(false)}
           onDiff={handleDiff}
           onEdit={handleEdit}
+          onAcceptChange={onAcceptChange}
+          onRevertChange={onRevertChange}
         />
 
         {/* Update search input (shown when user selects "update" from dropdown) */}
@@ -1246,6 +1269,56 @@ function MandateRow({
                       </div>
                     </div>
                   </div>
+                  
+                  {/* Response status or action buttons */}
+                  {changeResponse ? (
+                    <div className="border-t border-gray-200 pt-2.5">
+                      <div className={`flex items-center gap-1.5 text-xs ${
+                        changeResponse.responseType === 'accept' 
+                          ? 'text-green-600' 
+                          : 'text-amber-600'
+                      }`}>
+                        {changeResponse.responseType === 'accept' ? (
+                          <>
+                            <Check className="h-3.5 w-3.5" />
+                            <span>Change accepted</span>
+                          </>
+                        ) : (
+                          <>
+                            <RefreshCw className="h-3.5 w-3.5" />
+                            <span>Reverted to baseline</span>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  ) : (onAcceptChange || onRevertChange) && (
+                    <div className="flex gap-2 border-t border-gray-200 pt-2.5">
+                      {onAcceptChange && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            onAcceptChange();
+                          }}
+                          className="flex items-center gap-1 rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 transition-colors hover:bg-green-100"
+                        >
+                          <Check className="h-3 w-3" />
+                          Accept
+                        </button>
+                      )}
+                      {onRevertChange && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            onRevertChange();
+                          }}
+                          className="flex items-center gap-1 rounded-md bg-amber-50 px-2 py-1 text-xs font-medium text-amber-700 transition-colors hover:bg-amber-100"
+                        >
+                          <RefreshCw className="h-3 w-3" />
+                          Revert
+                        </button>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -1305,8 +1378,9 @@ function MandateSection({
   readOnly,
   foundationalSymbols,
   allEntitySymbols,
-  baselineDecisions,
+  reviewChanges,
   isUnderReview,
+  reviewSessionId,
   onDecision,
   onReasonChange,
   onApprove,
@@ -1315,6 +1389,8 @@ function MandateSection({
   onComment,
   onAdd,
   onAddManual,
+  onAcceptChange,
+  onRevertChange,
   searchQuery = "",
 }: {
   title: string;
@@ -1345,8 +1421,9 @@ function MandateSection({
   readOnly?: boolean;
   foundationalSymbols?: Set<string>;
   allEntitySymbols?: Set<string>;
-  baselineDecisions?: Record<string, MandateDecision | null>;
+  reviewChanges?: Record<string, ReviewChangeInfo>;
   isUnderReview?: boolean;
+  reviewSessionId?: string | null;
   onDecision: (symbol: string, decision: Decision, newSymbol?: string) => void;
   onReasonChange: (
     symbol: string,
@@ -1363,6 +1440,8 @@ function MandateSection({
   onComment: (symbol: string, comment: string) => void;
   onAdd: (symbol: string) => void;
   onAddManual: (data: ManualEntryData) => void;
+  onAcceptChange?: (symbol: string) => void;
+  onRevertChange?: (symbol: string) => void;
   searchQuery?: string;
 }) {
   const [sortColumn, setSortColumn] = useState<SortColumn | null>("title");
@@ -1640,7 +1719,7 @@ function MandateSection({
               allSymbols={allSymbols}
               allEntitySymbols={allEntitySymbols}
               newestWithNewerVersion={newestWithNewerVersion}
-              baselineDecision={baselineDecisions?.[stateKey(m.symbol)]}
+              reviewChangeInfo={reviewChanges?.[stateKey(m.symbol)]}
               isUnderReview={isUnderReview}
               onDecision={(decision, newSymbol) =>
                 onDecision(m.symbol, decision, newSymbol)
@@ -1661,6 +1740,12 @@ function MandateSection({
               updateTargetMetadata={
                 targetSymbol ? updateTargetMetadata[targetSymbol] : undefined
               }
+              onAcceptChange={
+                onAcceptChange ? () => onAcceptChange(m.symbol) : undefined
+              }
+              onRevertChange={
+                onRevertChange ? () => onRevertChange(m.symbol) : undefined
+              }
             />
           );
         })}
@@ -1678,7 +1763,7 @@ function MandateSection({
               allSymbols={allSymbols}
               allEntitySymbols={allEntitySymbols}
               newestWithNewerVersion={newestWithNewerVersion}
-              baselineDecision={baselineDecisions?.[stateKey(m.symbol)]}
+              reviewChangeInfo={reviewChanges?.[stateKey(m.symbol)]}
               isUnderReview={isUnderReview}
               onDecision={(decision) => onDecision(m.symbol, decision)}
               onReasonChange={(reason, otherReason) =>
@@ -1693,6 +1778,12 @@ function MandateSection({
               }
               onComment={(comment) => onComment(m.symbol, comment)}
               isAdded
+              onAcceptChange={
+                onAcceptChange ? () => onAcceptChange(m.symbol) : undefined
+              }
+              onRevertChange={
+                onRevertChange ? () => onRevertChange(m.symbol) : undefined
+              }
             />
           ))}
         {!readOnly && (
@@ -1727,11 +1818,13 @@ export function EntityDetail({
   const [isUnderReview, setIsUnderReview] = useState(false);
   const [reviewModeLoaded, setReviewModeLoaded] = useState(false);
   const [reviewStartedBy, setReviewStartedBy] = useState<string | null>(null);
+  const [reviewSessionId, setReviewSessionId] = useState<string | null>(null);
   const [showReviewBlockedDialog, setShowReviewBlockedDialog] = useState(false);
   const [showClearAllDialog, setShowClearAllDialog] = useState(false);
   const [isClearingAll, setIsClearingAll] = useState(false);
-  const [baselineDecisions, setBaselineDecisions] = useState<
-    Record<string, MandateDecision | null>
+  // Review change info from server (persisted baselines)
+  const [reviewChanges, setReviewChanges] = useState<
+    Record<string, ReviewChangeInfo>
   >({});
   const [addedMetadata, setAddedMetadata] = useState<
     Record<
@@ -1790,10 +1883,22 @@ export function EntityDetail({
       .catch(() => {});
 
     getReviewModeStatusAction(entity)
-      .then((result) => {
+      .then(async (result) => {
         if (result.success && result.data) {
           setIsUnderReview(result.data.isUnderReview);
           setReviewStartedBy(result.data.startedBy);
+          setReviewSessionId(result.data.reviewSessionId);
+          
+          // Fetch review changes if we have a review session
+          if (result.data.reviewSessionId) {
+            const changesResult = await getEntityReviewChangesAction(
+              entity,
+              result.data.reviewSessionId,
+            );
+            if (changesResult.success && changesResult.data) {
+              setReviewChanges(changesResult.data);
+            }
+          }
         }
       })
       .catch(() => {})
@@ -1840,9 +1945,23 @@ export function EntityDetail({
   useRealtimeDecisions({
     entity,
     onRemoteChange: handleRemoteChange,
-    onReviewModeChange: (status) => {
+    onReviewModeChange: async (status) => {
       setIsUnderReview(status.isUnderReview);
       setReviewStartedBy(status.reviewStartedBy);
+      
+      // Update session ID and fetch changes if session changed
+      if (status.reviewSessionId !== reviewSessionId) {
+        setReviewSessionId(status.reviewSessionId);
+        if (status.reviewSessionId) {
+          const changesResult = await getEntityReviewChangesAction(
+            entity,
+            status.reviewSessionId,
+          );
+          if (changesResult.success && changesResult.data) {
+            setReviewChanges(changesResult.data);
+          }
+        }
+      }
     },
     enabled: true,
     pollIntervalMs: 3000, // Poll every 3 seconds
@@ -1944,6 +2063,7 @@ export function EntityDetail({
         approvedBy: null,
         approvedByEntity: null,
         approvedAt: null,
+        reviewSessionId: reviewSessionId || null,
       };
       // Optimistic update
       setStates((prev) => ({
@@ -2095,6 +2215,7 @@ export function EntityDetail({
         approvedBy: null,
         approvedByEntity: null,
         approvedAt: null,
+        reviewSessionId: reviewSessionId || null,
       };
       // Optimistic update
       setStates((prev) => ({
@@ -2175,6 +2296,7 @@ export function EntityDetail({
         approvedBy: null,
         approvedByEntity: null,
         approvedAt: null,
+        reviewSessionId: reviewSessionId || null,
       };
       // Optimistic update
       setStates((prev) => ({
@@ -2383,31 +2505,25 @@ export function EntityDetail({
   );
 
   const handleStartReview = useCallback(async () => {
-    // Capture baseline decisions before review starts
-    const baseline: Record<string, MandateDecision | null> = {};
-    Object.entries(states).forEach(([key, state]) => {
-      baseline[key] = state.decision;
-    });
-    setBaselineDecisions(baseline);
-
     const result = await startReviewModeAction(entity);
     if (result.success && result.data) {
       setIsUnderReview(result.data.isUnderReview);
       setReviewStartedBy(result.data.startedBy);
+      setReviewSessionId(result.data.reviewSessionId);
+      // Clear old review changes - new session starts fresh
+      setReviewChanges({});
     } else if (!result.success) {
       alert(`Failed to start review: ${result.error}`);
-      // Revert baseline on failure
-      setBaselineDecisions({});
     }
-  }, [entity, states]);
+  }, [entity]);
 
   const handleEndReview = useCallback(async () => {
     const result = await endReviewModeAction(entity);
     if (result.success && result.data) {
       setIsUnderReview(result.data.isUnderReview);
       setReviewStartedBy(null);
-      // Clear baseline when review ends
-      setBaselineDecisions({});
+      // Keep reviewSessionId and reviewChanges - they persist after review ends
+      // to show change indicators to all users
     } else if (!result.success) {
       alert(`Failed to end review: ${result.error}`);
     }
@@ -2464,6 +2580,60 @@ export function EntityDetail({
       await approveDecisionAction(decisionId, approved);
     },
     [userEmail],
+  );
+
+  // Handle accepting a review change
+  const handleAcceptChange = useCallback(
+    async (symbol: string, subprogramme: string | null) => {
+      if (!reviewSessionId) return;
+
+      const result = await acceptReviewChangeAction({
+        entity,
+        documentSymbol: symbol,
+        subprogramme,
+        reviewSessionId,
+      });
+
+      if (result.success && result.data) {
+        const key = `${symbol}:${subprogramme || ""}`;
+        setReviewChanges((prev) => ({
+          ...prev,
+          [key]: {
+            ...prev[key],
+            response: result.data!,
+          },
+        }));
+      }
+    },
+    [entity, reviewSessionId],
+  );
+
+  // Handle reverting a review change
+  const handleRevertChange = useCallback(
+    async (symbol: string, subprogramme: string | null) => {
+      if (!reviewSessionId) return;
+
+      const result = await revertReviewChangeAction({
+        entity,
+        documentSymbol: symbol,
+        subprogramme,
+        reviewSessionId,
+      });
+
+      if (result.success && result.data) {
+        const key = `${symbol}:${subprogramme || ""}`;
+        setReviewChanges((prev) => ({
+          ...prev,
+          [key]: {
+            ...prev[key],
+            response: result.data!,
+          },
+        }));
+        // Refresh decisions to show the reverted state
+        refreshDecisions();
+      }
+    },
+    [entity, reviewSessionId, refreshDecisions],
   );
 
   // Combine all mandates for co-citing calculation
@@ -2559,8 +2729,9 @@ export function EntityDetail({
     userEntity,
     onApprove: handleApprove,
     allEntitySymbols,
-    baselineDecisions,
+    reviewChanges,
     isUnderReview,
+    reviewSessionId,
   };
 
   // Create handlers for a specific subprogramme
@@ -2583,6 +2754,8 @@ export function EntityDetail({
       handleComment(symbol, subprog, comment),
     onAdd: (symbol: string) => handleDecision(symbol, subprog, "add"),
     onAddManual: (data: ManualEntryData) => handleAddManual(subprog, data),
+    onAcceptChange: (symbol: string) => handleAcceptChange(symbol, subprog),
+    onRevertChange: (symbol: string) => handleRevertChange(symbol, subprog),
   });
 
   return (

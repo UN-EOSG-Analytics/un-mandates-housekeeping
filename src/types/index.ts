@@ -147,6 +147,34 @@ export interface MandateDecision {
   approvedBy: string | null;
   approvedByEntity: string | null;
   approvedAt: string | null;
+  /** ID of the review session during which this decision was made (null = outside review) */
+  reviewSessionId: string | null;
+}
+
+/** Response to a review change (accept/revert) */
+export interface ReviewChangeResponse {
+  id: string;
+  entity: string;
+  documentSymbol: string;
+  subprogramme: string | null;
+  reviewSessionId: string;
+  responseType: "accept" | "revert";
+  respondedBy: string;
+  respondedAt: string;
+  revertDecisionId: string | null;
+  comment: string | null;
+}
+
+/** Review change info for a mandate - compares baseline vs in-review decision */
+export interface ReviewChangeInfo {
+  /** The decision at the time review started (null if no decision existed) */
+  baseline: MandateDecision | null;
+  /** The latest decision made during the review */
+  inReviewDecision: MandateDecision | null;
+  /** Whether there was a change during review */
+  hasChange: boolean;
+  /** User's response to this change (if any) */
+  response: ReviewChangeResponse | null;
 }
 
 export interface MandateComment {

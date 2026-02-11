@@ -26,6 +26,7 @@ export interface RealtimeChange {
 
 export interface ReviewModeStatus {
   isUnderReview: boolean;
+  reviewSessionId: string | null;
   reviewStartedBy: string | null;
 }
 
@@ -99,8 +100,8 @@ export async function getRealtimeChangesAction(
         LIMIT 50`,
         [entity, sinceDate.toISOString()],
       ),
-      query<{ started_by: string | null; ended_at: string | null }>(
-        `SELECT started_by, ended_at
+      query<{ id: string; started_by: string | null; ended_at: string | null }>(
+        `SELECT id::text, started_by, ended_at
         FROM mandates_housekeeping.entity_review_mode
         WHERE entity = $1 AND ended_at IS NULL`,
         [entity],
@@ -129,6 +130,7 @@ export async function getRealtimeChangesAction(
     // Extract review mode status
     const reviewMode: ReviewModeStatus = {
       isUnderReview: reviewModeResult.length > 0,
+      reviewSessionId: reviewModeResult[0]?.id ?? null,
       reviewStartedBy: reviewModeResult[0]?.started_by ?? null,
     };
 

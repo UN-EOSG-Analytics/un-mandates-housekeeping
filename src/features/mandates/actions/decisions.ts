@@ -46,6 +46,7 @@ interface DecisionRow {
   approved_by: string | null;
   approved_by_entity: string | null;
   approved_at: string | null;
+  review_session_id: string | null;
 }
 
 interface CommentRow {
@@ -77,6 +78,7 @@ const toDecision = (row: DecisionRow): MandateDecision => ({
   approvedBy: row.approved_by,
   approvedByEntity: row.approved_by_entity,
   approvedAt: row.approved_at,
+  reviewSessionId: row.review_session_id,
 });
 
 const toComment = (row: CommentRow): MandateComment => ({
@@ -355,12 +357,20 @@ export async function createDecisionAction(params: {
     return { success: false, error: reviewBlock };
   }
 
+  // Get the active review session ID (if any) to link this decision to it
+  const reviewSessionRows = await query<{ id: string }>(
+    `SELECT id FROM mandates_housekeeping.entity_review_mode 
+     WHERE entity = $1 AND ended_at IS NULL`,
+    [entity],
+  );
+  const reviewSessionId = reviewSessionRows[0]?.id || null;
+
   // Insert new decision event
   const rows = await query<DecisionRow>(
     `WITH inserted AS (
       INSERT INTO mandates_housekeeping.mandate_decisions 
-        (document_symbol, entity, subprogramme, decision, new_symbol, manual_metadata, decision_reason, other_reason, user_email)
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+        (document_symbol, entity, subprogramme, decision, new_symbol, manual_metadata, decision_reason, other_reason, user_email, review_session_id)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
       RETURNING *
     )
     SELECT i.*, u.entity as user_entity, NULL::text as approved_by_entity
@@ -376,6 +386,7 @@ export async function createDecisionAction(params: {
       null, // decision_reason - set later via updateDecisionReasonAction
       null, // other_reason - set later via updateDecisionReasonAction
       user.email,
+      reviewSessionId,
     ],
   );
 
