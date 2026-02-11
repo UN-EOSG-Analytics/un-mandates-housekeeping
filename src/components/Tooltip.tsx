@@ -3,7 +3,7 @@
 import { useState, useRef, useCallback } from "react";
 
 interface Props {
-  content: string;
+  content: string | React.ReactNode;
   children: React.ReactNode;
 }
 
@@ -23,8 +23,11 @@ export function Tooltip({ content, children }: Props) {
       // Vertical position
       setPosition(rect.top < 80 ? "bottom" : "top");
 
-      // Horizontal alignment - estimate tooltip width (max 320px)
-      const tooltipWidth = Math.min(320, content.length * 6 + 16);
+      // Horizontal alignment - estimate tooltip width (max 384px for max-w-sm)
+      const tooltipWidth =
+        typeof content === "string"
+          ? Math.min(320, content.length * 6 + 16)
+          : 384;
       const centerX = rect.left + rect.width / 2;
 
       if (centerX - tooltipWidth / 2 < 8) {
@@ -61,7 +64,7 @@ export function Tooltip({ content, children }: Props) {
       {show && (
         <span
           ref={tooltipRef}
-          className={`absolute z-50 w-max max-w-xs rounded-md border border-gray-200 bg-white px-2.5 py-1.5 text-left text-xs text-gray-700 shadow-lg ${alignClasses[align]} ${
+          className={`absolute z-50 w-max max-w-sm rounded-md border border-gray-200 bg-white px-2.5 py-1.5 text-left text-xs text-gray-700 shadow-lg ${alignClasses[align]} ${
             position === "top" ? "bottom-full mb-1.5" : "top-full mt-1.5"
           }`}
         >

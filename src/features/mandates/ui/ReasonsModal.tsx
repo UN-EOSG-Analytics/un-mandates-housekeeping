@@ -8,6 +8,7 @@ import {
   type DecisionType,
 } from "@/features/mandates/services/decision-reasons";
 import { DECISION_COLORS } from "../../../components/DecisionDropdown";
+import { POPUP_STYLES } from "@/lib/theme";
 import {
   X,
   CheckCircle2,
@@ -206,13 +207,13 @@ export function ReasonPopup({
 
   const modal = (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-[1px]"
+      className={`fixed inset-0 z-50 flex items-center justify-center ${POPUP_STYLES.overlay}`}
       style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0 }}
       onClick={handleBackdropClick}
     >
       <div
         ref={containerRef}
-        className="mx-4 max-w-lg animate-in rounded-lg border border-gray-200 bg-white shadow-xl duration-150 zoom-in-95 fade-in"
+        className={`mx-4 max-w-lg animate-in ${POPUP_STYLES.popup} shadow-xl duration-150 zoom-in-95 fade-in`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}

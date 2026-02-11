@@ -62,6 +62,7 @@ You are a senior Next.js (v16) developer working at the United Nations with exte
 
 # UI
 
+- use theme defined in `src/lib/theme.ts`
 - Use Tailwind CSS for quick utility-based styling.
 - Maintain consistent theming with ShadCN’s design tokens.
 - Test for accessibility; ensure correct aria labels and roles.

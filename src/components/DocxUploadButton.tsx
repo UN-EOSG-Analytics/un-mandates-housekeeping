@@ -5,6 +5,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { STATUS_THEME } from "@/lib/theme";
 import { Check, Clock, FileText, Loader2, Upload, User } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -151,7 +152,7 @@ export function DocxUploadButton({ entity, subprogramme }: Props) {
           <button
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className="inline-flex cursor-default items-center gap-1.5 rounded-md border border-green-300 bg-green-50 px-2.5 py-1.5 text-xs font-medium text-green-700"
+            className={`inline-flex cursor-default items-center gap-1.5 rounded-md ${STATUS_THEME.success.border} ${STATUS_THEME.success.bg} px-2.5 py-1.5 text-xs font-medium ${STATUS_THEME.success.text}`}
           >
             <Check className="h-3.5 w-3.5" />
             DOCX Submission Uploaded
@@ -172,7 +173,9 @@ export function DocxUploadButton({ entity, subprogramme }: Props) {
           <div className="divide-y divide-gray-100">
             <div className="px-3 py-2.5">
               <div className="flex gap-2.5">
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">
+                <span
+                  className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${STATUS_THEME.success.icon}`}
+                >
                   <FileText className="h-3.5 w-3.5" />
                 </span>
                 <div className="min-w-0 flex-1">
@@ -235,7 +238,7 @@ export function DocxUploadButton({ entity, subprogramme }: Props) {
         disabled={state === "uploading" || state === "loading"}
         className={`inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1.5 text-xs font-medium transition-all ${
           state === "success"
-            ? "border-green-300 bg-green-50 text-green-700"
+            ? `${STATUS_THEME.success.border} ${STATUS_THEME.success.bg} ${STATUS_THEME.success.text}`
             : state === "uploading" || state === "loading"
               ? "border-gray-200 bg-gray-50 text-gray-500"
               : "border-gray-200 bg-white text-gray-700 hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm"

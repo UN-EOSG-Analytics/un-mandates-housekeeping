@@ -13,6 +13,15 @@ import {
 } from "@/hooks/useRealtimeDecisions";
 import { BODY_ABBREVS } from "@/lib/constants";
 import { abbreviateBody } from "@/lib/utils";
+import {
+  DECISION_THEME,
+  DECISION_BADGE_STYLES,
+  POPUP_STYLES,
+  CHANGE_INDICATOR,
+  UN_BLUE,
+  getDecisionTheme,
+  getDecisionBadgeStyle,
+} from "@/lib/theme";
 import { getAgeIndicator } from "@/features/mandates/services/age-indicator";
 import {
   approveDecisionAction,
@@ -42,14 +51,27 @@ import type {
   MandateState,
 } from "@/types";
 import {
+  ArrowRightLeft,
+  ArrowUpCircle,
+  Building,
   Check,
+  CheckCircle,
   ChevronDown,
   ChevronUp,
   FileText,
+  GitBranch,
+  Layers,
+  Lightbulb,
   MessageSquare,
+  MoreHorizontal,
   Pencil,
+  Plus,
+  RefreshCw,
   Search,
   Star,
+  Target,
+  Trash2,
+  Users,
   X,
 } from "lucide-react";
 import { orderBy } from "natural-orderby";
@@ -71,6 +93,10 @@ import { ReviewBlockedDialog } from "./ReviewBlockedDialog";
 import { Tooltip } from "./Tooltip";
 import { WarningIcon } from "./WarningIcon";
 import { WarningTooltip } from "./WarningTooltip";
+import {
+  getReasonLabel,
+  getReasonIcon,
+} from "@/features/mandates/services/decision-reasons";
 
 interface Props {
   entity: string;
@@ -86,6 +112,152 @@ function formatSubprogrammeName(subprog: string): string {
     return "PROGRAMME LEVEL";
   }
   return subprog;
+}
+
+// Helper to get decision display info (color, label - no icon)
+function getDecisionDisplayInfo(decision: string, newSymbol?: string) {
+  const decisionLower = decision.toLowerCase();
+
+  const decisionMap: Record<string, { label: string; color: string }> = {
+    add: { label: "Add", color: DECISION_BADGE_STYLES.add },
+    retain: { label: "Retain", color: DECISION_BADGE_STYLES.retain },
+    update: { label: "Update", color: DECISION_BADGE_STYLES.update },
+    remove: { label: "Remove", color: DECISION_BADGE_STYLES.remove },
+    "no decision": {
+      label: "No Decision",
+      color: DECISION_BADGE_STYLES["no decision"],
+    },
+  };
+
+  const info = decisionMap[decisionLower] || {
+    label: decision,
+    color: DECISION_BADGE_STYLES["no decision"],
+  };
+
+  // For updates, append target symbol to label
+  if (decisionLower === "update" && newSymbol) {
+    return { ...info, displayLabel: `${info.label} → ${newSymbol}` };
+  }
+
+  return { ...info, displayLabel: info.label };
+}
+
+// Map icon names from decision-reasons.ts to lucide-react components
+function getIconComponent(iconName: string | null) {
+  const iconMap: Record<string, any> = {
+    Target,
+    Lightbulb,
+    Building,
+    MoreHorizontal,
+    ArrowRightLeft,
+    GitBranch,
+    CheckCircle,
+    Users,
+    ArrowUpCircle,
+    Layers,
+  };
+  return iconName ? iconMap[iconName] : null;
+}
+
+// Helper to format reason label from ID
+function formatReasonLabel(
+  reasonId: string,
+  reasonLabel: string | null,
+): string {
+  if (reasonLabel) {
+    // Remove markdown formatting and clean up
+    return reasonLabel.replace(/\*\*/g, "").replace(/\.$/, "").trim();
+  }
+  // Fallback: format the ID nicely
+  return reasonId
+    .split("_")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+// Detect if decision changed during review and format change description
+function getDecisionChange(
+  baseline: MandateDecision | null | undefined,
+  current: MandateDecision | null | undefined,
+): {
+  hasChange: boolean;
+  before: {
+    decision: string;
+    reason: string | null;
+    newSymbol?: string;
+  };
+  after: {
+    decision: string;
+    reason: string | null;
+    newSymbol?: string;
+  };
+} | null {
+  // No baseline means review not started or this wasn't tracked
+  if (!baseline) return null;
+
+  // Both null/undefined - no change
+  if (!baseline && !current) return null;
+
+  const baselineReason =
+    baseline?.decisionReason || baseline?.otherReason || null;
+  const currentReason = current?.decisionReason || current?.otherReason || null;
+
+  // Added during review
+  if (!baseline && current) {
+    return {
+      hasChange: true,
+      before: {
+        decision: "No decision",
+        reason: null,
+      },
+      after: {
+        decision: current.decision,
+        reason: currentReason,
+        newSymbol: current.newSymbol || undefined,
+      },
+    };
+  }
+
+  // Removed during review
+  if (baseline && !current) {
+    return {
+      hasChange: true,
+      before: {
+        decision: baseline.decision,
+        reason: baselineReason,
+        newSymbol: baseline.newSymbol || undefined,
+      },
+      after: {
+        decision: "No decision",
+        reason: null,
+      },
+    };
+  }
+
+  if (!current) return null;
+
+  // Check if anything changed
+  const decisionChanged = baseline.decision !== current.decision;
+  const symbolChanged = baseline.newSymbol !== current.newSymbol;
+  const reasonChanged = baselineReason !== currentReason;
+
+  if (decisionChanged || symbolChanged || reasonChanged) {
+    return {
+      hasChange: true,
+      before: {
+        decision: baseline.decision,
+        reason: baselineReason,
+        newSymbol: baseline.newSymbol || undefined,
+      },
+      after: {
+        decision: current.decision,
+        reason: currentReason,
+        newSymbol: current.newSymbol || undefined,
+      },
+    };
+  }
+
+  return null;
 }
 
 // PhaseTracker component commented out - for future use
@@ -273,6 +445,8 @@ function MandateRowContent({
   allSymbols,
   allEntitySymbols,
   newestWithNewerVersion,
+  baselineDecision,
+  isUnderReview,
   onOpenSidebar,
   onOpenActivityTab,
   onDecision,
@@ -294,6 +468,8 @@ function MandateRowContent({
   allSymbols?: Set<string>; // All symbols in current section for warning system
   allEntitySymbols?: Set<string>; // All symbols across entire entity for newer-already-cited detection
   newestWithNewerVersion?: Set<string>; // Symbols that are newest among those with same newer version
+  baselineDecision?: MandateDecision | null; // Baseline decision before review started
+  isUnderReview?: boolean; // Whether entity is currently under review
   onOpenSidebar?: () => void;
   onOpenActivityTab?: () => void;
   onDecision: (decision: Decision, newSymbol?: string) => void;
@@ -319,282 +495,294 @@ function MandateRowContent({
   const contentGreyed = (hasUpdate || hasRemove) && !isUpdateTarget;
 
   // Approval state - only reviewers can approve, and only if there's a decision
-  const hasDecision = !!currentDecision && currentDecision.decision !== "cancel";
+  const hasDecision =
+    !!currentDecision && currentDecision.decision !== "cancel";
   const isApproved = !!currentDecision?.approvedBy;
   const canApprove =
     isReviewer && onApprove && hasDecision && currentDecision?.id;
+
+  // Check for decision changes during review (for reviewers only)
+  const decisionChange =
+    isUnderReview && isReviewer
+      ? getDecisionChange(baselineDecision, currentDecision)
+      : null;
 
   // Determine background color based on decision
   let bgColorClass = "";
   if (isUpdateTarget) {
     bgColorClass = "bg-amber-50/50";
   } else if (currentDecision?.decision === "remove") {
-    bgColorClass = "bg-red-50/30";
+    bgColorClass = DECISION_THEME.remove.bgSubtle;
   } else if (currentDecision?.decision === "update") {
     bgColorClass = "bg-amber-50/40";
   } else if (currentDecision?.decision === "add") {
-    bgColorClass = "bg-emerald-50/30";
+    bgColorClass = DECISION_THEME.add.bgSubtle;
   } else if (currentDecision?.decision === "retain") {
-    bgColorClass = "bg-blue-50/20";
+    bgColorClass = DECISION_THEME.retain.bgSubtle;
   }
 
   return (
-    <div
-      className={`grid ${GRID_COLS} cursor-pointer items-center gap-x-2 gap-y-1.5 py-2.5 text-sm transition-colors ${
-        bgColorClass || "hover:bg-gray-50"
-      } ${readOnly ? "opacity-60" : ""} ${!isUpdateTarget && !bgColorClass ? "hover:bg-gray-50" : ""}`}
-      onClick={onOpenSidebar}
-    >
+    <div className="relative">
       <div
-        onClick={(e) => e.stopPropagation()}
-        className="flex items-center gap-1 pl-3"
+        className={`grid ${GRID_COLS} cursor-pointer items-center gap-x-2 gap-y-1.5 py-2.5 text-sm transition-colors ${
+          bgColorClass || "hover:bg-gray-50"
+        } ${readOnly ? "opacity-60" : ""} ${!isUpdateTarget && !bgColorClass ? "hover:bg-gray-50" : ""}`}
+        onClick={onOpenSidebar}
       >
-        {isUpdateTarget && (
-          <span className="mr-1 text-xs text-amber-500">↳</span>
-        )}
-        <a
-          href={mandate.link || "#"}
-          target="_blank"
-          rel="noopener noreferrer"
-          title={mandate.symbol.length > 18 ? mandate.symbol : undefined}
-          className={`inline-block rounded px-2 py-0.5 text-xs font-medium whitespace-nowrap transition-colors ${
-            contentGreyed
-              ? "bg-gray-100 text-gray-400"
-              : "bg-blue-50 text-un-blue hover:bg-blue-100"
-          }`}
-          onClick={(e) => !mandate.link && e.preventDefault()}
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className="flex items-center gap-1 pl-3"
         >
-          {mandate.symbol.length > 18
-            ? `${mandate.symbol.slice(0, 18)}…`
-            : mandate.symbol}
-        </a>
-      </div>
-      <div
-        className={`flex min-w-0 cursor-help items-center gap-1.5 ${contentGreyed ? "text-gray-400" : "text-gray-600"}`}
-        title={mandate.title || undefined}
-      >
-        <span className="inline-flex w-4 shrink-0 items-center justify-center">
-          {isFoundational && (
-            <Tooltip
-              content={
-                readOnly
-                  ? "Foundational mandate"
-                  : "Foundational mandate — also cited in Mandates and Background"
-              }
-            >
-              <Star
-                className="h-4 w-4 fill-un-blue text-un-blue"
-                strokeWidth={0.5}
-              />
-            </Tooltip>
+          {isUpdateTarget && (
+            <span className="mr-1 text-xs text-amber-500">↳</span>
           )}
-        </span>
-        <span className="min-w-0 flex-1 truncate">
-          {mandate.title || (
-            <span className="text-gray-400 italic">No title</span>
-          )}
-        </span>
-      </div>
-      <div
-        className={`text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`}
-        title={mandate.body ?? undefined}
-      >
-        {abbreviateBody(mandate.body, BODY_ABBREVS) ?? "—"}
-      </div>
-      <div
-        className={`text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`}
-      >
-        {mandate.year ?? "—"}
-      </div>
-      <Tooltip content={ageInfo.tooltip}>
-        <span
-          className={`cursor-help rounded px-1.5 py-0.5 text-xs font-medium ${contentGreyed ? "opacity-50" : ""} ${ageInfo.color} ${ageInfo.bgColor}`}
-        >
-          {ageInfo.label}
-        </span>
-      </Tooltip>
-      <Tooltip
-        content={
-          mandate.otherEntitiesCount > 0
-            ? `${mandate.otherEntitiesCount} other entit${mandate.otherEntitiesCount !== 1 ? "ies" : "y"} also cite${mandate.otherEntitiesCount === 1 ? "s" : ""} ${mandate.symbol}`
-            : `No other entities cite ${mandate.symbol}`
-        }
-      >
-        <span
-          className={`cursor-help text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`}
-        >
-          {mandate.otherEntitiesCount > 0
-            ? `+${mandate.otherEntitiesCount}`
-            : "—"}
-        </span>
-      </Tooltip>
-      <div></div>
-      <div className="flex items-center justify-start pr-2">
-        {!isUpdateTarget &&
-          (() => {
-            const isNewestWithNewerVersion = newestWithNewerVersion?.has(
-              mandate.symbol,
-            );
-            const warnings = getMandateWarnings(
-              mandate,
-              allEntitySymbols || allSymbols,
-              isNewestWithNewerVersion,
-            );
-            if (warnings.length === 0) return null;
-
-            const actionableWarnings = warnings.filter((w) => w.action);
-            const isAddressed =
-              currentDecision?.decision != null &&
-              currentDecision.decision !== "cancel";
-
-            const primaryWarning = actionableWarnings[0] || warnings[0];
-            const icon =
-              primaryWarning.icon || getWarningIcon(primaryWarning.severity);
-            const colorScheme = primaryWarning.colorScheme || "amber";
-
-            const colorClasses = {
-              blue: "bg-un-blue/10 text-un-blue hover:bg-un-blue/20",
-              red: "bg-red-50 text-red-600 hover:bg-red-100",
-              amber: "bg-amber-50 text-amber-600 hover:bg-amber-100",
-            };
-
-            const handleAction = (warning: typeof primaryWarning) => {
-              if (warning.action === "remove") {
-                onDecision("remove");
-              } else if (warning.action === "update" && onUpdateClick) {
-                onUpdateClick();
-              }
-            };
-
-            const handlePrimaryClick = () => {
-              if (primaryWarning.action === "remove") {
-                onDecision("remove");
-              } else if (primaryWarning.action === "update" && onUpdateClick) {
-                onUpdateClick();
-              }
-            };
-
-            return (
-              <WarningTooltip
-                warnings={warnings}
-                onAction={handleAction}
-                onPrimaryClick={handlePrimaryClick}
-                disabled={isAddressed}
-                currentSymbol={mandate.symbol}
-                currentYear={mandate.year ?? undefined}
-                onDiff={onDiff}
-              >
-                <button
-                  className={`group relative inline-flex h-6 min-w-6 items-center justify-center rounded-full transition-all ${
-                    isAddressed
-                      ? "cursor-default bg-gray-100 text-gray-400"
-                      : colorClasses[colorScheme]
-                  }`}
-                >
-                  <span className="px-1">
-                    <WarningIcon icon={icon} />
-                  </span>
-                  {warnings.length > 1 && (
-                    <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-amber-500 text-[10px] font-medium text-white shadow-sm">
-                      {warnings.length}
-                    </span>
-                  )}
-                </button>
-              </WarningTooltip>
-            );
-          })()}
-      </div>
-      <div
-        onClick={(e) => e.stopPropagation()}
-        className="relative flex items-center"
-      >
-        {!isUpdateTarget &&
-          !readOnly &&
-          currentDecision?.decision === "add" &&
-          currentDecision?.manualMetadata &&
-          onEdit && (
-            <Tooltip content="Edit manual entry">
-              <button
-                onClick={onEdit}
-                className="absolute top-1/2 -left-7 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded border border-emerald-200 bg-emerald-50 text-emerald-700 transition-colors hover:border-emerald-300 hover:bg-emerald-100"
-              >
-                <FileText className="h-3.5 w-3.5" />
-              </button>
-            </Tooltip>
-          )}
-        {isUpdateTarget || readOnly ? (
-          <span className="text-xs text-gray-400">—</span>
-        ) : (
-          <DecisionDropdown
-            decision={currentDecision?.decision ?? null}
-            userEmail={currentDecision?.userEmail ?? null}
-            userEntity={currentDecision?.userEntity ?? null}
-            createdAt={currentDecision?.createdAt ?? null}
-            onChange={onDecision}
-            onUpdateClick={onUpdateClick}
-            disabled={false}
-            reason={currentDecision?.decisionReason}
-            otherReason={currentDecision?.otherReason}
-            onReasonChange={onReasonChange}
-            symbol={mandate.symbol}
-            showReasonPopup={showReasonPopup}
-            onReasonPopupClose={onReasonPopupClose}
-          />
-        )}
-      </div>
-      <Tooltip
-        content={
-          commentCount > 0 ? "Click to view comments" : "Click to add a comment"
-        }
-      >
-        <span
-          onClick={(e) => {
-            e.stopPropagation();
-            onOpenActivityTab?.();
-          }}
-          className={`cursor-pointer text-xs ${commentCount > 0 ? "font-medium text-un-blue" : "text-gray-400"} ${contentGreyed ? "opacity-50" : ""}`}
-        >
-          {commentCount > 0 ? commentCount : "—"}
-        </span>
-      </Tooltip>
-      <div
-        onClick={(e) => e.stopPropagation()}
-        className="flex items-center justify-center"
-      >
-        {isUpdateTarget || readOnly ? (
-          <span className="inline-flex h-6 w-6 items-center justify-center text-xs text-gray-400">
-            —
-          </span>
-        ) : hasDecision ? (
-          <button
-            onClick={() =>
-              canApprove &&
-              currentDecision?.id &&
-              onApprove(currentDecision.id, !isApproved)
-            }
-            disabled={!canApprove}
-            title={
-              isApproved
-                ? `Approved by ${currentDecision?.approvedBy}`
-                : canApprove
-                  ? "Click to approve"
-                  : "No decision to approve"
-            }
-            className={`inline-flex h-6 w-6 items-center justify-center rounded border transition-colors ${
-              isApproved
-                ? "border-emerald-600 bg-emerald-600 text-white"
-                : canApprove
-                  ? "border-gray-300 bg-white hover:border-emerald-400 hover:bg-emerald-50"
-                  : "border-gray-200 bg-gray-50"
-            } ${!canApprove ? "cursor-default" : "cursor-pointer"}`}
+          <a
+            href={mandate.link || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={mandate.symbol.length > 18 ? mandate.symbol : undefined}
+            className={`inline-block rounded px-2 py-0.5 text-xs font-medium whitespace-nowrap transition-colors ${
+              contentGreyed ? "bg-gray-100 text-gray-400" : UN_BLUE.badge
+            }`}
+            onClick={(e) => !mandate.link && e.preventDefault()}
           >
-            <Check className={`h-4 w-4 ${isApproved ? "" : "invisible"}`} />
-          </button>
-        ) : (
-          <span className="inline-flex h-6 w-6 items-center justify-center text-xs text-gray-300">
-            —
+            {mandate.symbol.length > 18
+              ? `${mandate.symbol.slice(0, 18)}…`
+              : mandate.symbol}
+          </a>
+        </div>
+        <div
+          className={`flex min-w-0 cursor-help items-center gap-1.5 ${contentGreyed ? "text-gray-400" : "text-gray-600"}`}
+          title={mandate.title || undefined}
+        >
+          <span className="inline-flex w-4 shrink-0 items-center justify-center">
+            {isFoundational && (
+              <Tooltip
+                content={
+                  readOnly
+                    ? "Foundational mandate"
+                    : "Foundational mandate — also cited in Mandates and Background"
+                }
+              >
+                <Star
+                  className="h-4 w-4 fill-un-blue text-un-blue"
+                  strokeWidth={0.5}
+                />
+              </Tooltip>
+            )}
           </span>
-        )}
+          <span className="min-w-0 flex-1 truncate">
+            {mandate.title || (
+              <span className="text-gray-400 italic">No title</span>
+            )}
+          </span>
+        </div>
+        <div
+          className={`text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`}
+          title={mandate.body ?? undefined}
+        >
+          {abbreviateBody(mandate.body, BODY_ABBREVS) ?? "—"}
+        </div>
+        <div
+          className={`text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`}
+        >
+          {mandate.year ?? "—"}
+        </div>
+        <Tooltip content={ageInfo.tooltip}>
+          <span
+            className={`cursor-help rounded px-1.5 py-0.5 text-xs font-medium ${contentGreyed ? "opacity-50" : ""} ${ageInfo.color} ${ageInfo.bgColor}`}
+          >
+            {ageInfo.label}
+          </span>
+        </Tooltip>
+        <Tooltip
+          content={
+            mandate.otherEntitiesCount > 0
+              ? `${mandate.otherEntitiesCount} other entit${mandate.otherEntitiesCount !== 1 ? "ies" : "y"} also cite${mandate.otherEntitiesCount === 1 ? "s" : ""} ${mandate.symbol}`
+              : `No other entities cite ${mandate.symbol}`
+          }
+        >
+          <span
+            className={`cursor-help text-xs ${contentGreyed ? "text-gray-300" : "text-gray-400"}`}
+          >
+            {mandate.otherEntitiesCount > 0
+              ? `+${mandate.otherEntitiesCount}`
+              : "—"}
+          </span>
+        </Tooltip>
+        <div></div>
+        <div className="flex items-center justify-start pr-2">
+          {!isUpdateTarget &&
+            (() => {
+              const isNewestWithNewerVersion = newestWithNewerVersion?.has(
+                mandate.symbol,
+              );
+              const warnings = getMandateWarnings(
+                mandate,
+                allEntitySymbols || allSymbols,
+                isNewestWithNewerVersion,
+              );
+              if (warnings.length === 0) return null;
+
+              const actionableWarnings = warnings.filter((w) => w.action);
+              const isAddressed =
+                currentDecision?.decision != null &&
+                currentDecision.decision !== "cancel";
+
+              const primaryWarning = actionableWarnings[0] || warnings[0];
+              const icon =
+                primaryWarning.icon || getWarningIcon(primaryWarning.severity);
+              const colorScheme = primaryWarning.colorScheme || "amber";
+
+              const colorClasses = {
+                blue: UN_BLUE.badgeSubtle,
+                red: `${DECISION_THEME.remove.bg} ${DECISION_THEME.remove.iconText} ${DECISION_THEME.remove.hoverBg}`,
+                amber: `${DECISION_THEME.update.bg} ${DECISION_THEME.update.iconText} ${DECISION_THEME.update.hoverBg}`,
+              };
+
+              const handleAction = (warning: typeof primaryWarning) => {
+                if (warning.action === "remove") {
+                  onDecision("remove");
+                } else if (warning.action === "update" && onUpdateClick) {
+                  onUpdateClick();
+                }
+              };
+
+              const handlePrimaryClick = () => {
+                if (primaryWarning.action === "remove") {
+                  onDecision("remove");
+                } else if (
+                  primaryWarning.action === "update" &&
+                  onUpdateClick
+                ) {
+                  onUpdateClick();
+                }
+              };
+
+              return (
+                <WarningTooltip
+                  warnings={warnings}
+                  onAction={handleAction}
+                  onPrimaryClick={handlePrimaryClick}
+                  disabled={isAddressed}
+                  currentSymbol={mandate.symbol}
+                  currentYear={mandate.year ?? undefined}
+                  onDiff={onDiff}
+                >
+                  <button
+                    className={`group relative inline-flex h-6 min-w-6 items-center justify-center rounded-full transition-all ${
+                      isAddressed
+                        ? "cursor-default bg-gray-100 text-gray-400"
+                        : colorClasses[colorScheme]
+                    }`}
+                  >
+                    <span className="px-1">
+                      <WarningIcon icon={icon} />
+                    </span>
+                    {warnings.length > 1 && (
+                      <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-amber-500 text-[10px] font-medium text-white shadow-sm">
+                        {warnings.length}
+                      </span>
+                    )}
+                  </button>
+                </WarningTooltip>
+              );
+            })()}
+        </div>
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className="relative flex items-center"
+        >
+          {!isUpdateTarget &&
+            !readOnly &&
+            currentDecision?.decision === "add" &&
+            currentDecision?.manualMetadata &&
+            onEdit && (
+              <Tooltip content="Edit manual entry">
+                <button
+                  onClick={onEdit}
+                  className="absolute top-1/2 -left-7 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded border border-emerald-200 bg-emerald-50 text-emerald-700 transition-colors hover:border-emerald-300 hover:bg-emerald-100"
+                >
+                  <FileText className="h-3.5 w-3.5" />
+                </button>
+              </Tooltip>
+            )}
+          {isUpdateTarget || readOnly ? (
+            <span className="text-xs text-gray-400">—</span>
+          ) : (
+            <DecisionDropdown
+              decision={currentDecision?.decision ?? null}
+              userEmail={currentDecision?.userEmail ?? null}
+              userEntity={currentDecision?.userEntity ?? null}
+              createdAt={currentDecision?.createdAt ?? null}
+              onChange={onDecision}
+              onUpdateClick={onUpdateClick}
+              disabled={false}
+              reason={currentDecision?.decisionReason}
+              otherReason={currentDecision?.otherReason}
+              onReasonChange={onReasonChange}
+              symbol={mandate.symbol}
+              showReasonPopup={showReasonPopup}
+              onReasonPopupClose={onReasonPopupClose}
+            />
+          )}
+        </div>
+        <Tooltip
+          content={
+            commentCount > 0
+              ? "Click to view comments"
+              : "Click to add a comment"
+          }
+        >
+          <span
+            onClick={(e) => {
+              e.stopPropagation();
+              onOpenActivityTab?.();
+            }}
+            className={`cursor-pointer text-xs ${commentCount > 0 ? "font-medium text-un-blue" : "text-gray-400"} ${contentGreyed ? "opacity-50" : ""}`}
+          >
+            {commentCount > 0 ? commentCount : "—"}
+          </span>
+        </Tooltip>
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className="flex items-center justify-center gap-1"
+        >
+          {isUpdateTarget || readOnly ? (
+            <span className="inline-flex h-6 w-6 items-center justify-center text-xs text-gray-400">
+              —
+            </span>
+          ) : hasDecision ? (
+            <button
+              onClick={() =>
+                canApprove &&
+                currentDecision?.id &&
+                onApprove(currentDecision.id, !isApproved)
+              }
+              disabled={!canApprove}
+              title={
+                isApproved
+                  ? `Approved by ${currentDecision?.approvedBy}`
+                  : canApprove
+                    ? "Click to approve"
+                    : "No decision to approve"
+              }
+              className={`inline-flex h-6 w-6 items-center justify-center rounded border transition-colors ${
+                isApproved
+                  ? "border-emerald-600 bg-emerald-600 text-white"
+                  : canApprove
+                    ? "border-gray-300 bg-white hover:border-emerald-400 hover:bg-emerald-50"
+                    : "border-gray-200 bg-gray-50"
+              } ${!canApprove ? "cursor-default" : "cursor-pointer"}`}
+            >
+              <Check className={`h-4 w-4 ${isApproved ? "" : "invisible"}`} />
+            </button>
+          ) : (
+            <span className="inline-flex h-6 w-6 items-center justify-center text-xs text-gray-300">
+              —
+            </span>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -620,6 +808,8 @@ function MandateRow({
   allSymbols,
   allEntitySymbols,
   newestWithNewerVersion,
+  baselineDecision,
+  isUnderReview,
 }: {
   mandate: Mandate;
   state?: MandateState;
@@ -646,6 +836,8 @@ function MandateRow({
   allSymbols?: Set<string>;
   allEntitySymbols?: Set<string>;
   newestWithNewerVersion?: Set<string>;
+  baselineDecision?: MandateDecision | null;
+  isUnderReview?: boolean;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarInitialTab, setSidebarInitialTab] = useState<
@@ -746,189 +938,330 @@ function MandateRow({
     setShowEditModal(false);
   };
 
+  // Check for decision changes during review (for badge display)
+  const decisionChange =
+    isUnderReview && isReviewer
+      ? getDecisionChange(baselineDecision, state?.decision)
+      : null;
+
   return (
-    <div className="rounded-lg bg-white shadow-sm">
-      {/* Original row */}
-      <MandateRowContent
-        mandate={mandate}
-        state={state}
-        commentCount={commentCount}
-        isReviewer={isReviewer}
-        readOnly={readOnly}
-        isFoundational={isFoundational}
-        allSymbols={allSymbols}
-        allEntitySymbols={allEntitySymbols}
-        newestWithNewerVersion={newestWithNewerVersion}
-        onOpenSidebar={() => {
-          setSidebarInitialTab(undefined);
-          setSidebarOpen(true);
-        }}
-        onOpenActivityTab={() => {
-          setSidebarInitialTab("activity");
-          setSidebarOpen(true);
-        }}
-        onDecision={onDecision}
-        onReasonChange={onReasonChange}
-        onApprove={onApprove}
-        onUpdateClick={(prefillSymbol) => {
-          setUpdatePrefillSymbol(prefillSymbol);
-          setShowUpdateSearch(true);
-        }}
-        showReasonPopup={showReasonPopup}
-        onReasonPopupClose={() => setShowReasonPopup(false)}
-        onDiff={handleDiff}
-        onEdit={handleEdit}
-      />
+    <div className="relative">
+      <div className="overflow-visible rounded-lg bg-white shadow-sm">
+        {/* Original row */}
+        <MandateRowContent
+          mandate={mandate}
+          state={state}
+          commentCount={commentCount}
+          isReviewer={isReviewer}
+          readOnly={readOnly}
+          isFoundational={isFoundational}
+          allSymbols={allSymbols}
+          allEntitySymbols={allEntitySymbols}
+          newestWithNewerVersion={newestWithNewerVersion}
+          baselineDecision={baselineDecision}
+          isUnderReview={isUnderReview}
+          onOpenSidebar={() => {
+            setSidebarInitialTab(undefined);
+            setSidebarOpen(true);
+          }}
+          onOpenActivityTab={() => {
+            setSidebarInitialTab("activity");
+            setSidebarOpen(true);
+          }}
+          onDecision={onDecision}
+          onReasonChange={onReasonChange}
+          onApprove={onApprove}
+          onUpdateClick={(prefillSymbol) => {
+            setUpdatePrefillSymbol(prefillSymbol);
+            setShowUpdateSearch(true);
+          }}
+          showReasonPopup={showReasonPopup}
+          onReasonPopupClose={() => setShowReasonPopup(false)}
+          onDiff={handleDiff}
+          onEdit={handleEdit}
+        />
 
-      {/* Update search input (shown when user selects "update" from dropdown) */}
-      {!readOnly && showUpdateSearch && !hasCompletedUpdate && (
-        <div className="border-t border-gray-100 bg-amber-50/30 px-4 py-3">
-          <div className="mb-3 text-xs font-medium text-amber-600">
-            Select replacement document:
-          </div>
-          <DocumentSearchInput
-            onSelect={handleUpdateSelect}
-            onManualSubmit={handleUpdateManual}
-            onCancel={handleCancelUpdate}
-            placeholder="Search for replacement document..."
-            submitLabel="Update"
-            formTitle="Enter replacement document manually"
-            compact
-            initialQuery={updatePrefillSymbol || suggestedUpdateSymbol}
-            originalTitle={mandate.title}
-            originalSymbol={mandate.symbol}
-          />
-        </div>
-      )}
-
-      {/* Edit manual entry form (shown when user clicks edit button) */}
-      {!readOnly &&
-        showEditModal &&
-        state?.decision?.decision === "add" &&
-        state?.decision?.manualMetadata && (
-          <div className="border-t border-gray-100 bg-emerald-50/30 px-4 py-3">
-            <div className="mb-3 text-xs font-medium text-emerald-600">
-              Edit manual entry:
+        {/* Update search input (shown when user selects "update" from dropdown) */}
+        {!readOnly && showUpdateSearch && !hasCompletedUpdate && (
+          <div className="border-t border-gray-100 bg-amber-50/30 px-4 py-3">
+            <div className="mb-3 text-xs font-medium text-amber-600">
+              Select replacement document:
             </div>
-            <ManualDocumentForm
-              onSubmit={handleEditSubmit}
-              onCancel={handleEditCancel}
-              initialSymbol={mandate.symbol}
-              initialTitle={state.decision.manualMetadata.title || ""}
-              initialBody={state.decision.manualMetadata.body || ""}
-              initialYear={state.decision.manualMetadata.year?.toString() || ""}
-              initialLink={state.decision.manualMetadata.link || ""}
-              submitLabel="Save Changes"
-              formTitle=""
-              hideDescription
+            <DocumentSearchInput
+              onSelect={handleUpdateSelect}
+              onManualSubmit={handleUpdateManual}
+              onCancel={handleCancelUpdate}
+              placeholder="Search for replacement document..."
+              submitLabel="Update"
+              formTitle="Enter replacement document manually"
+              compact
+              initialQuery={updatePrefillSymbol || suggestedUpdateSymbol}
+              originalTitle={mandate.title}
+              originalSymbol={mandate.symbol}
             />
           </div>
         )}
 
-      {/* New document row (shown when update is complete) */}
-      {hasCompletedUpdate && newMandate && (
-        <MandateRowContent
-          mandate={newMandate}
-          state={undefined}
-          commentCount={0}
-          isReviewer={false}
-          isUpdateTarget
-          allEntitySymbols={allEntitySymbols}
-          newestWithNewerVersion={newestWithNewerVersion}
-          onOpenSidebar={() => setNewDocSidebarOpen(true)}
-          onDecision={() => {}}
-        />
-      )}
+        {/* Edit manual entry form (shown when user clicks edit button) */}
+        {!readOnly &&
+          showEditModal &&
+          state?.decision?.decision === "add" &&
+          state?.decision?.manualMetadata && (
+            <div className="border-t border-gray-100 bg-emerald-50/30 px-4 py-3">
+              <div className="mb-3 text-xs font-medium text-emerald-600">
+                Edit manual entry:
+              </div>
+              <ManualDocumentForm
+                onSubmit={handleEditSubmit}
+                onCancel={handleEditCancel}
+                initialSymbol={mandate.symbol}
+                initialTitle={state.decision.manualMetadata.title || ""}
+                initialBody={state.decision.manualMetadata.body || ""}
+                initialYear={
+                  state.decision.manualMetadata.year?.toString() || ""
+                }
+                initialLink={state.decision.manualMetadata.link || ""}
+                submitLabel="Save Changes"
+                formTitle=""
+                hideDescription
+              />
+            </div>
+          )}
 
-      {/* Sidebar (reuse DocumentSymbol for full sidebar) */}
-      <div onClick={(e) => e.stopPropagation()}>
-        <DocumentSymbol
-          symbol={mandate.symbol}
-          link={mandate.link}
-          title={mandate.title}
-          year={mandate.year}
-          body={mandate.body}
-          otherEntitiesCount={mandate.otherEntitiesCount}
-          relevanceCount={mandate.relevanceCount}
-          relevanceIndices={mandate.relevanceIndices}
-          aiComments={mandate.aiComments}
-          entity={mandate.entity}
-          entityLong={mandate.entityLong}
-          allEntities={mandate.allEntities}
-          entitySubprogrammes={mandate.entitySubprogrammes}
-          entityLongMap={mandate.entityLongMap}
-          allEntityRelevance={mandate.allEntityRelevance}
-          isOpen={sidebarOpen}
-          onOpenChange={(open) => {
-            setSidebarOpen(open);
-            if (!open) setSidebarInitialTab(undefined);
-          }}
-          state={state}
-          isReviewer={isReviewer}
-          canReviewAnyEntity={canReviewAnyEntity}
-          userEmail={userEmail}
-          userEntity={userEntity}
-          isFoundational={isFoundational}
-          onDecision={onDecision}
-          onApprove={onApprove}
-          onComment={onComment}
-          onUpdateClick={(prefillSymbol) => {
-            setSidebarOpen(false);
-            setUpdatePrefillSymbol(prefillSymbol);
-            setShowUpdateSearch(true);
-          }}
-          metadataFromDb={mandate.metadataFromDb}
-          docType={mandate.docType}
-          initialTab={sidebarInitialTab}
-        />
-        {/* Sidebar for replacement document */}
+        {/* New document row (shown when update is complete) */}
         {hasCompletedUpdate && newMandate && (
+          <MandateRowContent
+            mandate={newMandate}
+            state={undefined}
+            commentCount={0}
+            isReviewer={false}
+            isUpdateTarget
+            allEntitySymbols={allEntitySymbols}
+            newestWithNewerVersion={newestWithNewerVersion}
+            onOpenSidebar={() => setNewDocSidebarOpen(true)}
+            onDecision={() => {}}
+          />
+        )}
+
+        {/* Sidebar (reuse DocumentSymbol for full sidebar) */}
+        <div onClick={(e) => e.stopPropagation()}>
           <DocumentSymbol
-            symbol={newMandate.symbol}
-            link={newMandate.link}
-            title={newMandate.title}
-            year={newMandate.year}
-            body={newMandate.body}
-            otherEntitiesCount={newMandate.otherEntitiesCount}
-            relevanceCount={newMandate.relevanceCount}
-            relevanceIndices={newMandate.relevanceIndices}
-            aiComments={newMandate.aiComments}
-            entity={newMandate.entity}
-            entityLong={newMandate.entityLong}
-            allEntities={newMandate.allEntities}
-            entitySubprogrammes={newMandate.entitySubprogrammes}
-            entityLongMap={newMandate.entityLongMap}
-            allEntityRelevance={newMandate.allEntityRelevance}
-            isOpen={newDocSidebarOpen}
-            onOpenChange={setNewDocSidebarOpen}
+            symbol={mandate.symbol}
+            link={mandate.link}
+            title={mandate.title}
+            year={mandate.year}
+            body={mandate.body}
+            otherEntitiesCount={mandate.otherEntitiesCount}
+            relevanceCount={mandate.relevanceCount}
+            relevanceIndices={mandate.relevanceIndices}
+            aiComments={mandate.aiComments}
+            entity={mandate.entity}
+            entityLong={mandate.entityLong}
+            allEntities={mandate.allEntities}
+            entitySubprogrammes={mandate.entitySubprogrammes}
+            entityLongMap={mandate.entityLongMap}
+            allEntityRelevance={mandate.allEntityRelevance}
+            isOpen={sidebarOpen}
+            onOpenChange={(open) => {
+              setSidebarOpen(open);
+              if (!open) setSidebarInitialTab(undefined);
+            }}
             state={state}
             isReviewer={isReviewer}
             canReviewAnyEntity={canReviewAnyEntity}
             userEmail={userEmail}
             userEntity={userEntity}
+            isFoundational={isFoundational}
             onDecision={onDecision}
             onApprove={onApprove}
             onComment={onComment}
-            metadataFromDb={newMandate.metadataFromDb}
-            docType={newMandate.docType}
+            onUpdateClick={(prefillSymbol) => {
+              setSidebarOpen(false);
+              setUpdatePrefillSymbol(prefillSymbol);
+              setShowUpdateSearch(true);
+            }}
+            metadataFromDb={mandate.metadataFromDb}
+            docType={mandate.docType}
+            initialTab={sidebarInitialTab}
+          />
+          {/* Sidebar for replacement document */}
+          {hasCompletedUpdate && newMandate && (
+            <DocumentSymbol
+              symbol={newMandate.symbol}
+              link={newMandate.link}
+              title={newMandate.title}
+              year={newMandate.year}
+              body={newMandate.body}
+              otherEntitiesCount={newMandate.otherEntitiesCount}
+              relevanceCount={newMandate.relevanceCount}
+              relevanceIndices={newMandate.relevanceIndices}
+              aiComments={newMandate.aiComments}
+              entity={newMandate.entity}
+              entityLong={newMandate.entityLong}
+              allEntities={newMandate.allEntities}
+              entitySubprogrammes={newMandate.entitySubprogrammes}
+              entityLongMap={newMandate.entityLongMap}
+              allEntityRelevance={newMandate.allEntityRelevance}
+              isOpen={newDocSidebarOpen}
+              onOpenChange={setNewDocSidebarOpen}
+              state={state}
+              isReviewer={isReviewer}
+              canReviewAnyEntity={canReviewAnyEntity}
+              userEmail={userEmail}
+              userEntity={userEntity}
+              onDecision={onDecision}
+              onApprove={onApprove}
+              onComment={onComment}
+              metadataFromDb={newMandate.metadataFromDb}
+              docType={newMandate.docType}
+            />
+          )}
+        </div>
+
+        {/* Diff Modal */}
+        {diffParams && (
+          <DiffModal
+            isOpen={diffModalOpen}
+            onClose={() => {
+              setDiffModalOpen(false);
+              setDiffParams(null);
+            }}
+            originalSymbol={diffParams.originalSymbol}
+            originalYear={diffParams.originalYear}
+            compareSymbol={diffParams.compareSymbol}
+            compareYear={diffParams.compareYear}
           />
         )}
       </div>
 
-      {/* Diff Modal */}
-      {diffParams && (
-        <DiffModal
-          isOpen={diffModalOpen}
-          onClose={() => {
-            setDiffModalOpen(false);
-            setDiffParams(null);
-          }}
-          originalSymbol={diffParams.originalSymbol}
-          originalYear={diffParams.originalYear}
-          compareSymbol={diffParams.compareSymbol}
-          compareYear={diffParams.compareYear}
-        />
-      )}
+      {/* Review change indicator - positioned outside the card as a speech bubble */}
+      {decisionChange?.hasChange &&
+        (() => {
+          const beforeInfo = getDecisionDisplayInfo(
+            decisionChange.before.decision,
+            decisionChange.before.newSymbol,
+          );
+          const afterInfo = getDecisionDisplayInfo(
+            decisionChange.after.decision,
+            decisionChange.after.newSymbol,
+          );
+
+          // Get reason labels and icons
+          const beforeReasonLabel = decisionChange.before.reason
+            ? getReasonLabel(
+                decisionChange.before.decision.toLowerCase() as any,
+                decisionChange.before.reason,
+              )
+            : null;
+          const afterReasonLabel = decisionChange.after.reason
+            ? getReasonLabel(
+                decisionChange.after.decision.toLowerCase() as any,
+                decisionChange.after.reason,
+              )
+            : null;
+
+          const beforeReasonIconName = decisionChange.before.reason
+            ? getReasonIcon(
+                decisionChange.before.decision.toLowerCase() as any,
+                decisionChange.before.reason,
+              )
+            : null;
+          const afterReasonIconName = decisionChange.after.reason
+            ? getReasonIcon(
+                decisionChange.after.decision.toLowerCase() as any,
+                decisionChange.after.reason,
+              )
+            : null;
+
+          const BeforeReasonIcon = getIconComponent(beforeReasonIconName);
+          const AfterReasonIcon = getIconComponent(afterReasonIconName);
+
+          const formattedBeforeReason = decisionChange.before.reason
+            ? formatReasonLabel(decisionChange.before.reason, beforeReasonLabel)
+            : null;
+          const formattedAfterReason = decisionChange.after.reason
+            ? formatReasonLabel(decisionChange.after.reason, afterReasonLabel)
+            : null;
+
+          return (
+            <div className="group/change absolute top-1/2 left-full z-10 ml-3 -translate-y-1/2">
+              {/* Tooltip content - flows out of the circle with corner covered by circle */}
+              <div className="pointer-events-none absolute right-0 bottom-0 mr-3.5 mb-3.5 opacity-0 transition-opacity duration-200 group-hover/change:pointer-events-auto group-hover/change:opacity-100">
+                <div
+                  className={`${POPUP_STYLES.tooltip} max-w-sm space-y-2.5 p-3`}
+                >
+                  <div className="text-xs font-semibold tracking-wide text-gray-700 uppercase">
+                    Decision Changed
+                  </div>
+                  <div className="space-y-2.5">
+                    {/* Before Review */}
+                    <div className="space-y-1.5">
+                      <div className="text-[10px] font-medium tracking-wide text-gray-500 uppercase">
+                        Before Review
+                      </div>
+                      <div className="space-y-1.5">
+                        <div
+                          className={`inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-semibold ${beforeInfo.color}`}
+                        >
+                          {beforeInfo.displayLabel}
+                        </div>
+                        {formattedBeforeReason && (
+                          <div className="flex items-start gap-2">
+                            {BeforeReasonIcon && (
+                              <div className="mt-0.5 shrink-0">
+                                <BeforeReasonIcon className="h-3.5 w-3.5 text-gray-400" />
+                              </div>
+                            )}
+                            <div className="line-clamp-2 text-xs leading-relaxed text-gray-600">
+                              {formattedBeforeReason}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* After Review */}
+                    <div className="space-y-1.5">
+                      <div className="text-[10px] font-medium tracking-wide text-gray-500 uppercase">
+                        After Review
+                      </div>
+                      <div className="space-y-1.5">
+                        <div
+                          className={`inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-semibold ${afterInfo.color}`}
+                        >
+                          {afterInfo.displayLabel}
+                        </div>
+                        {formattedAfterReason && (
+                          <div className="flex items-start gap-2">
+                            {AfterReasonIcon && (
+                              <div className="mt-0.5 shrink-0">
+                                <AfterReasonIcon className="h-3.5 w-3.5 text-gray-400" />
+                              </div>
+                            )}
+                            <div className="line-clamp-2 text-xs leading-relaxed text-gray-600">
+                              {formattedAfterReason}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Circle badge with spike - overlaps tooltip corner */}
+              <div
+                className={`relative flex h-7 w-7 items-center justify-center rounded-full ${CHANGE_INDICATOR.badge} text-white shadow-sm transition-all ${CHANGE_INDICATOR.badgeHover} cursor-pointer`}
+              >
+                <Pencil className="h-3.5 w-3.5" />
+                {/* Speech bubble tail pointing left */}
+                <div
+                  className={`absolute top-1/2 left-0 h-0 w-0 -translate-x-1 -translate-y-1/2 border-t-[6px] border-r-[6px] border-b-[6px] border-t-transparent border-b-transparent ${CHANGE_INDICATOR.tail}`}
+                />
+              </div>
+            </div>
+          );
+        })()}
     </div>
   );
 }
@@ -972,6 +1305,8 @@ function MandateSection({
   readOnly,
   foundationalSymbols,
   allEntitySymbols,
+  baselineDecisions,
+  isUnderReview,
   onDecision,
   onReasonChange,
   onApprove,
@@ -1010,6 +1345,8 @@ function MandateSection({
   readOnly?: boolean;
   foundationalSymbols?: Set<string>;
   allEntitySymbols?: Set<string>;
+  baselineDecisions?: Record<string, MandateDecision | null>;
+  isUnderReview?: boolean;
   onDecision: (symbol: string, decision: Decision, newSymbol?: string) => void;
   onReasonChange: (
     symbol: string,
@@ -1303,6 +1640,8 @@ function MandateSection({
               allSymbols={allSymbols}
               allEntitySymbols={allEntitySymbols}
               newestWithNewerVersion={newestWithNewerVersion}
+              baselineDecision={baselineDecisions?.[stateKey(m.symbol)]}
+              isUnderReview={isUnderReview}
               onDecision={(decision, newSymbol) =>
                 onDecision(m.symbol, decision, newSymbol)
               }
@@ -1339,6 +1678,8 @@ function MandateSection({
               allSymbols={allSymbols}
               allEntitySymbols={allEntitySymbols}
               newestWithNewerVersion={newestWithNewerVersion}
+              baselineDecision={baselineDecisions?.[stateKey(m.symbol)]}
+              isUnderReview={isUnderReview}
               onDecision={(decision) => onDecision(m.symbol, decision)}
               onReasonChange={(reason, otherReason) =>
                 onReasonChange(m.symbol, reason, otherReason)
@@ -1389,6 +1730,9 @@ export function EntityDetail({
   const [showReviewBlockedDialog, setShowReviewBlockedDialog] = useState(false);
   const [showClearAllDialog, setShowClearAllDialog] = useState(false);
   const [isClearingAll, setIsClearingAll] = useState(false);
+  const [baselineDecisions, setBaselineDecisions] = useState<
+    Record<string, MandateDecision | null>
+  >({});
   const [addedMetadata, setAddedMetadata] = useState<
     Record<
       string,
@@ -2039,20 +2383,31 @@ export function EntityDetail({
   );
 
   const handleStartReview = useCallback(async () => {
+    // Capture baseline decisions before review starts
+    const baseline: Record<string, MandateDecision | null> = {};
+    Object.entries(states).forEach(([key, state]) => {
+      baseline[key] = state.decision;
+    });
+    setBaselineDecisions(baseline);
+
     const result = await startReviewModeAction(entity);
     if (result.success && result.data) {
       setIsUnderReview(result.data.isUnderReview);
       setReviewStartedBy(result.data.startedBy);
     } else if (!result.success) {
       alert(`Failed to start review: ${result.error}`);
+      // Revert baseline on failure
+      setBaselineDecisions({});
     }
-  }, [entity]);
+  }, [entity, states]);
 
   const handleEndReview = useCallback(async () => {
     const result = await endReviewModeAction(entity);
     if (result.success && result.data) {
       setIsUnderReview(result.data.isUnderReview);
       setReviewStartedBy(null);
+      // Clear baseline when review ends
+      setBaselineDecisions({});
     } else if (!result.success) {
       alert(`Failed to end review: ${result.error}`);
     }
@@ -2204,6 +2559,8 @@ export function EntityDetail({
     userEntity,
     onApprove: handleApprove,
     allEntitySymbols,
+    baselineDecisions,
+    isUnderReview,
   };
 
   // Create handlers for a specific subprogramme

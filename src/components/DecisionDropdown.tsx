@@ -4,6 +4,7 @@ import * as React from "react";
 import { createPortal } from "react-dom";
 import type { Decision } from "@/types";
 import { ChevronDown, MessageCircle, Pencil } from "lucide-react";
+import { DECISION_THEME, POPUP_STYLES } from "@/lib/theme";
 import {
   ReasonPopup,
   getReasonDisplayLabel,
@@ -38,7 +39,10 @@ interface DecisionDropdownProps {
   onReasonPopupClose?: () => void;
 }
 
-// Shared color scheme for decisions - exported for use in ReasonDropdown
+// Shared color scheme for decisions - re-export from theme
+export const DECISION_COLORS = DECISION_THEME;
+
+// Dropdown menu component
 function DropdownMenu({
   containerRef,
   menuRef,
@@ -64,7 +68,7 @@ function DropdownMenu({
   return (
     <div
       ref={menuRef}
-      className="fixed z-9999 w-21 rounded border border-gray-200 bg-white py-0.5 shadow-lg"
+      className={`fixed z-9999 w-21 py-0.5 ${POPUP_STYLES.popup}`}
       style={{ top: pos.top, left: pos.left }}
     >
       {options.map((opt) => {
@@ -92,44 +96,6 @@ function DropdownMenu({
     </div>
   );
 }
-
-export const DECISION_COLORS = {
-  retain: {
-    bg: "bg-blue-50",
-    border: "border-blue-200",
-    text: "text-blue-700",
-    hover: "hover:border-blue-300",
-    hoverBg: "hover:bg-blue-50/50",
-  },
-  remove: {
-    bg: "bg-red-50",
-    border: "border-red-200",
-    text: "text-red-700",
-    hover: "hover:border-red-300",
-    hoverBg: "hover:bg-red-50/50",
-  },
-  update: {
-    bg: "bg-amber-50",
-    border: "border-amber-200",
-    text: "text-amber-700",
-    hover: "hover:border-amber-300",
-    hoverBg: "hover:bg-amber-50/50",
-  },
-  add: {
-    bg: "bg-emerald-50",
-    border: "border-emerald-200",
-    text: "text-emerald-700",
-    hover: "hover:border-emerald-300",
-    hoverBg: "hover:bg-emerald-50/50",
-  },
-  default: {
-    bg: "bg-white",
-    border: "border-gray-200",
-    text: "text-gray-500",
-    hover: "hover:border-gray-300",
-    hoverBg: "hover:bg-gray-50",
-  },
-};
 
 /**
  * Shared decision dropdown component used across the app.

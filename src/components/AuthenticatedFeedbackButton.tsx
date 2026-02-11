@@ -6,7 +6,7 @@ import { FeedbackButton } from "./FeedbackButton";
  */
 export async function AuthenticatedFeedbackButton() {
   const user = await getCurrentUser();
-  
+
   if (!user) {
     return null;
   }

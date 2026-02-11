@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/popover";
 import type { MandateWarning } from "@/features/mandates/services/mandate-warnings";
 import { getWarningIcon } from "@/features/mandates/services/mandate-warnings";
+import { WARNING_THEME, DECISION_THEME, UN_BLUE } from "@/lib/theme";
 import { ArrowLeftRight } from "lucide-react";
 import { WarningIcon } from "./WarningIcon";
 
@@ -32,26 +33,26 @@ interface WarningTooltipProps {
 
 const severityStyles = {
   error: {
-    icon: "bg-red-100 text-red-600",
-    border: "border-red-200",
-    text: "text-red-800",
+    icon: WARNING_THEME.error.icon,
+    border: WARNING_THEME.error.border,
+    text: WARNING_THEME.error.text,
   },
   warning: {
-    icon: "bg-amber-100 text-amber-600",
-    border: "border-amber-200",
-    text: "text-amber-800",
+    icon: WARNING_THEME.warning.icon,
+    border: WARNING_THEME.warning.border,
+    text: WARNING_THEME.warning.text,
   },
   info: {
-    icon: "bg-un-blue/10 text-un-blue",
-    border: "border-un-blue/20",
-    text: "text-gray-700",
+    icon: WARNING_THEME.info.icon,
+    border: WARNING_THEME.info.border,
+    text: WARNING_THEME.info.text,
   },
 };
 
 const colorSchemeStyles = {
-  red: "bg-red-100 text-red-600",
-  amber: "bg-amber-100 text-amber-600",
-  blue: "bg-un-blue/10 text-un-blue",
+  red: WARNING_THEME.error.icon,
+  amber: WARNING_THEME.warning.icon,
+  blue: WARNING_THEME.info.icon,
 };
 
 export function WarningTooltip({
@@ -176,7 +177,7 @@ export function WarningTooltip({
                               );
                               setOpen(false);
                             }}
-                            className="ml-2 inline-flex items-center gap-1 rounded bg-blue-50 px-2 py-0.5 text-xs font-medium text-un-blue transition-colors hover:bg-blue-100"
+                            className={`ml-2 inline-flex items-center gap-1 rounded px-2 py-0.5 text-xs font-medium transition-colors ${UN_BLUE.badge}`}
                           >
                             <ArrowLeftRight className="h-3 w-3" />
                             Compare
@@ -192,8 +193,8 @@ export function WarningTooltip({
                         }}
                         className={`mt-2 rounded-md px-2.5 py-1 text-xs font-medium transition-colors ${
                           warning.action === "remove"
-                            ? "bg-red-100 text-red-700 hover:bg-red-200"
-                            : "bg-amber-100 text-amber-700 hover:bg-amber-200"
+                            ? `${DECISION_THEME.remove.bgStrong} ${DECISION_THEME.remove.text} hover:bg-red-200`
+                            : `${DECISION_THEME.update.bgStrong} ${DECISION_THEME.update.text} hover:bg-amber-200`
                         }`}
                       >
                         {warning.action === "remove"
