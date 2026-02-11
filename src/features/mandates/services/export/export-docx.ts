@@ -1,7 +1,10 @@
 import JSZip from "jszip";
 import { readFile } from "fs/promises";
 import { join } from "path";
-import { fetchPPBRecords } from "@/features/mandates/services/data-service";
+import {
+  getAppliedExportData,
+  type AppliedMandateRow,
+} from "@/features/mandates/services/export/applied-state";
 
 interface Mandate {
   symbol: string;
@@ -124,41 +127,29 @@ export async function exportEntityToDocx(
   const templateBuffer = await readFile(templatePath);
   const zip = await JSZip.loadAsync(templateBuffer);
 
-  // Load PPB data from database (same source as frontend)
-  const ppbData = await fetchPPBRecords();
+  const { rows } = await getAppliedExportData(entityAbbrev);
 
   // Build structure: subprog -> body -> mandates
   const bySubprog: Map<string, Map<string, Mandate[]>> = new Map();
   const seen = new Set<string>();
 
-  for (const rec of ppbData) {
-    if (!rec.entities?.includes(entityAbbrev)) continue;
+  for (const row of rows) {
+    const subprog = row.subprogramme || "All Subprogrammes";
+    const key = `${subprog}:${row.symbol}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
 
-    for (const ci of rec.citation_info) {
-      if (ci.entity !== entityAbbrev) continue;
+    const body = row.body || "Other";
+    if (!bySubprog.has(subprog)) bySubprog.set(subprog, new Map());
+    const bodyMap = bySubprog.get(subprog)!;
+    if (!bodyMap.has(body)) bodyMap.set(body, []);
 
-      const part = ci.part_in_document || "Legislative mandates";
-      if (part !== "Legislative mandates") continue;
-
-      const subprog =
-        ci["sub-programme"] || ci.component || "All Subprogrammes";
-      const key = `${subprog}:${rec.full_document_symbol}`;
-      if (seen.has(key)) continue;
-      seen.add(key);
-
-      const body = rec.body || "Other";
-      if (!bySubprog.has(subprog)) bySubprog.set(subprog, new Map());
-      const bodyMap = bySubprog.get(subprog)!;
-      if (!bodyMap.has(body)) bodyMap.set(body, []);
-
-      const title = rec.description || rec.uniform_title || "";
-      bodyMap.get(body)!.push({
-        symbol: rec.full_document_symbol,
-        title: cleanTitle(title),
-        link: rec.link,
-        body,
-      });
-    }
+    bodyMap.get(body)!.push({
+      symbol: row.symbol,
+      title: cleanTitle(row.title),
+      link: row.link,
+      body,
+    });
   }
 
   // Check if we found any data
@@ -260,38 +251,32 @@ export async function exportEntityToDocx(
 
 // Build content for a single entity (reusable)
 function buildEntityContent(
-  ppbData: Awaited<ReturnType<typeof fetchPPBRecords>>,
+  rows: AppliedMandateRow[],
   entityAbbrev: string,
   hyperlinks: Map<string, string>,
 ): string {
   const bySubprog: Map<string, Map<string, Mandate[]>> = new Map();
   const seen = new Set<string>();
 
-  for (const rec of ppbData) {
-    if (!rec.entities?.includes(entityAbbrev)) continue;
-    for (const ci of rec.citation_info) {
-      if (ci.entity !== entityAbbrev) continue;
-      const part = ci.part_in_document || "Legislative mandates";
-      if (part !== "Legislative mandates") continue;
+  for (const row of rows) {
+    if (row.entity !== entityAbbrev) continue;
 
-      const subprog =
-        ci["sub-programme"] || ci.component || "All Subprogrammes";
-      const key = `${subprog}:${rec.full_document_symbol}`;
-      if (seen.has(key)) continue;
-      seen.add(key);
+    const subprog = row.subprogramme || "All Subprogrammes";
+    const key = `${subprog}:${row.symbol}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
 
-      const body = rec.body || "Other";
-      if (!bySubprog.has(subprog)) bySubprog.set(subprog, new Map());
-      const bodyMap = bySubprog.get(subprog)!;
-      if (!bodyMap.has(body)) bodyMap.set(body, []);
+    const body = row.body || "Other";
+    if (!bySubprog.has(subprog)) bySubprog.set(subprog, new Map());
+    const bodyMap = bySubprog.get(subprog)!;
+    if (!bodyMap.has(body)) bodyMap.set(body, []);
 
-      bodyMap.get(body)!.push({
-        symbol: rec.full_document_symbol,
-        title: cleanTitle(rec.description || rec.uniform_title || ""),
-        link: rec.link,
-        body,
-      });
-    }
+    bodyMap.get(body)!.push({
+      symbol: row.symbol,
+      title: cleanTitle(row.title),
+      link: row.link,
+      body,
+    });
   }
 
   if (bySubprog.size === 0) return "";
@@ -345,17 +330,13 @@ export async function exportAllToDocx(): Promise<Buffer> {
   );
   const templateBuffer = await readFile(templatePath);
   const zip = await JSZip.loadAsync(templateBuffer);
-  const ppbData = await fetchPPBRecords();
+  const { rows } = await getAppliedExportData();
 
   // Get all unique entities with their long names
   const entityNames = new Map<string, string>(); // abbrev -> long name
-  for (const rec of ppbData) {
-    for (const ci of rec.citation_info) {
-      if (ci.entity && ci.part_in_document === "Legislative mandates") {
-        if (!entityNames.has(ci.entity) && ci.entity_long) {
-          entityNames.set(ci.entity, ci.entity_long);
-        }
-      }
+  for (const row of rows) {
+    if (!entityNames.has(row.entity)) {
+      entityNames.set(row.entity, row.entityLong || row.entity);
     }
   }
 
@@ -368,7 +349,7 @@ export async function exportAllToDocx(): Promise<Buffer> {
   );
 
   for (const [entity, entityLong] of sortedEntities) {
-    const entityContent = buildEntityContent(ppbData, entity, hyperlinks);
+    const entityContent = buildEntityContent(rows, entity, hyperlinks);
     if (!entityContent) continue;
 
     // Entity header (bold, larger) - use long name

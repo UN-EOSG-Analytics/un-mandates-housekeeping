@@ -1,55 +1,28 @@
 import ExcelJS from "exceljs";
-import { fetchPPBRecords } from "@/features/mandates/services/data-service";
+import {
+  getAppliedExportData,
+  type AppliedMandateRow,
+  type LatestDecisionRow,
+} from "@/features/mandates/services/export/applied-state";
 import { getBaseUrl } from "@/lib/get-base-url";
+import {
+  fetchDocumentMetadata,
+  cleanTitle as cleanMetadataTitle,
+} from "@/features/mandates/services/documents/metadata";
 
-interface MandateRow {
-  symbol: string;
-  title: string;
-  body: string;
-  year: number | null;
-  link: string | null;
-  entity: string;
-  entityLong: string | null;
-  subprogramme: string | null;
-  part: string | null;
-}
-
-async function getMandateRows(entityFilter?: string): Promise<MandateRow[]> {
-  const records = await fetchPPBRecords();
-  const rows: MandateRow[] = [];
-  const seen = new Set<string>();
-
-  for (const rec of records) {
-    for (const ci of rec.citation_info) {
-      if (entityFilter && ci.entity !== entityFilter) continue;
-
-      const key = `${ci.entity}:${rec.full_document_symbol}:${ci["sub-programme"] || ""}`;
-      if (seen.has(key)) continue;
-      seen.add(key);
-
-      rows.push({
-        symbol: rec.full_document_symbol,
-        title: rec.description || rec.uniform_title || "",
-        body: rec.body || "",
-        year: rec.year,
-        link: rec.link,
-        entity: ci.entity || "",
-        entityLong: ci.entity_long,
-        subprogramme: ci["sub-programme"] || ci.component || null,
-        part: ci.part_in_document,
-      });
-    }
-  }
-
-  if (entityFilter && rows.length === 0) {
+async function getAppliedRows(entityFilter?: string): Promise<{
+  rows: AppliedMandateRow[];
+  decisions: LatestDecisionRow[];
+}> {
+  const data = await getAppliedExportData(entityFilter);
+  if (entityFilter && data.rows.length === 0) {
     throw new Error(`No mandates found for entity: ${entityFilter}`);
   }
-
-  return rows.sort((a, b) => a.symbol.localeCompare(b.symbol));
+  return data;
 }
 
 export async function exportToCsv(entity?: string): Promise<string> {
-  const rows = await getMandateRows(entity);
+  const { rows } = await getAppliedRows(entity);
 
   const headers = [
     "Symbol",
@@ -142,8 +115,58 @@ const COLUMN_INFO = [
   },
 ] as const;
 
+function buildEntityLongMap(rows: AppliedMandateRow[]): Map<string, string | null> {
+  const map = new Map<string, string | null>();
+  for (const row of rows) {
+    if (!map.has(row.entity)) {
+      map.set(row.entity, row.entityLong || null);
+    }
+  }
+  return map;
+}
+
+function cleanTitle(title: string | null | undefined): string {
+  if (!title) return "";
+  return cleanMetadataTitle(title) || "";
+}
+
+function resolveDecisionMetadata(
+  symbol: string,
+  manualMetadata: LatestDecisionRow["manualMetadata"],
+  metadataLookup: Record<string, { title: string; body: string; year: number | null; link: string | null } | null>,
+) {
+  const base = metadataLookup[symbol] || {
+    title: "",
+    body: "",
+    year: null,
+    link: null,
+  };
+  return {
+    title: manualMetadata?.title ?? base.title,
+    body: manualMetadata?.body ?? base.body,
+    year: manualMetadata?.year ?? base.year,
+    link: manualMetadata?.link ?? base.link,
+  };
+}
+
+function addSheetHeaders(
+  sheet: ExcelJS.Worksheet,
+  headers: string[],
+  columnWidths: number[],
+) {
+  const headerRow = sheet.getRow(1);
+  headers.forEach((header, i) => {
+    const cell = headerRow.getCell(i + 1);
+    cell.value = header;
+    cell.font = { bold: true };
+  });
+  columnWidths.forEach((width, i) => {
+    sheet.getColumn(i + 1).width = width;
+  });
+}
+
 export async function exportToXlsx(entity?: string): Promise<Buffer> {
-  const rows = await getMandateRows(entity);
+  const { rows, decisions } = await getAppliedRows(entity);
 
   const workbook = new ExcelJS.Workbook();
   workbook.creator = "UN Mandates Housekeeping";
@@ -151,7 +174,7 @@ export async function exportToXlsx(entity?: string): Promise<Buffer> {
 
   // Cover sheet
   const cover = workbook.addWorksheet("Cover");
-  const title = entity ? `Mandates for ${entity}` : "All PPB 2027 Mandates";
+  const title = entity ? `Mandates for ${entity}` : "Legislative mandates";
   const baseUrl = await getBaseUrl();
   const sourceUrl = entity ? `${baseUrl}/entity/${entity}/` : `${baseUrl}/`;
 
@@ -162,7 +185,7 @@ export async function exportToXlsx(entity?: string): Promise<Buffer> {
   cover.getCell("A3").value = `Total records: ${rows.length}`;
   cover.getCell("A4").value = "Source:";
   cover.getCell("B4").value = { text: sourceUrl, hyperlink: sourceUrl };
-  cover.getCell("B4").font = { color: { argb: "FF0000FF" }, underline: true };
+  cover.getCell("B4").font = { underline: true };
 
   cover.getCell("A6").value = "Column Descriptions";
   cover.getCell("A6").font = { bold: true, size: 12 };
@@ -179,44 +202,123 @@ export async function exportToXlsx(entity?: string): Promise<Buffer> {
   // Data sheet
   const data = workbook.addWorksheet("Mandates");
 
-  // Headers
-  const headerRow = data.getRow(1);
-  COLUMN_INFO.forEach((col, i) => {
-    const cell = headerRow.getCell(i + 1);
-    cell.value = col.header;
-    cell.font = { bold: true };
-    cell.fill = {
-      type: "pattern",
-      pattern: "solid",
-      fgColor: { argb: "FFE0E0E0" },
-    };
-    cell.border = { bottom: { style: "thin" } };
-  });
+  const dataRows = rows.map((r) => [
+    r.symbol,
+    r.title,
+    r.body,
+    r.year,
+    r.link || "",
+    r.entity,
+    r.entityLong || "",
+    r.subprogramme || "",
+    r.part || "",
+  ]);
+  addSheetHeaders(
+    data,
+    COLUMN_INFO.map((col) => col.header),
+    COLUMN_INFO.map((col) => col.width),
+  );
+  dataRows.forEach((row) => data.addRow(row));
 
-  // Freeze header row
-  data.views = [{ state: "frozen", ySplit: 1 }];
+  // Freeze header row + first column
+  data.views = [{ state: "frozen", ySplit: 1, xSplit: 1 }];
+  data.autoFilter = {
+    from: "A1",
+    to: "I1",
+  };
 
-  // Data rows
   rows.forEach((r, rowIdx) => {
     const row = data.getRow(rowIdx + 2);
-    row.getCell(1).value = r.symbol;
-    row.getCell(2).value = r.title;
-    row.getCell(3).value = r.body;
-    row.getCell(4).value = r.year;
     if (r.link) {
-      row.getCell(5).value = { text: r.link, hyperlink: r.link };
-      row.getCell(5).font = { color: { argb: "FF0000FF" }, underline: true };
+      const linkCell = row.getCell(5);
+      linkCell.value = { text: r.link, hyperlink: r.link };
+      linkCell.font = { underline: true };
     }
-    row.getCell(6).value = r.entity;
-    row.getCell(7).value = r.entityLong;
-    row.getCell(8).value = r.subprogramme;
-    row.getCell(9).value = r.part;
     row.alignment = { wrapText: true, vertical: "top" };
   });
 
-  // Set column widths
-  COLUMN_INFO.forEach((col, i) => {
-    data.getColumn(i + 1).width = col.width;
+  // Decisions sheet (latest decision only)
+  const decisionsSheet = workbook.addWorksheet("Decisions");
+  const decisionsColumns = [
+    { header: "Symbol", width: 22 },
+    { header: "Decision", width: 12 },
+    { header: "Old Symbol", width: 22 },
+    { header: "Title", width: 60 },
+    { header: "Body", width: 12 },
+    { header: "Year", width: 8 },
+    { header: "Link", width: 40 },
+    { header: "Entity", width: 15 },
+    { header: "Entity Long", width: 40 },
+    { header: "Subprogramme", width: 30 },
+    { header: "Part", width: 20 },
+  ];
+
+  const symbolsToResolve = new Set<string>();
+  decisions.forEach((d) => {
+    const targetSymbol = d.decision === "update" ? d.newSymbol : d.documentSymbol;
+    if (targetSymbol) symbolsToResolve.add(targetSymbol);
+  });
+  const metadata = await fetchDocumentMetadata([...symbolsToResolve]);
+  const metadataLookup: Record<
+    string,
+    { title: string; body: string; year: number | null; link: string | null } | null
+  > = {};
+  for (const [symbol, meta] of Object.entries(metadata)) {
+    metadataLookup[symbol] = meta
+      ? {
+          title: cleanTitle(meta.title),
+          body: meta.body || "",
+          year: meta.year ?? null,
+          link: meta.link || null,
+        }
+      : null;
+  }
+  const entityLongMap = buildEntityLongMap(rows);
+
+  const decisionRows = decisions.map((d) => {
+    const targetSymbol = d.decision === "update" ? d.newSymbol : d.documentSymbol;
+    const resolved = resolveDecisionMetadata(
+      targetSymbol || d.documentSymbol,
+      d.manualMetadata || null,
+      metadataLookup,
+    );
+    return [
+      targetSymbol || d.documentSymbol,
+      d.decision.toUpperCase(),
+      d.decision === "update" ? d.documentSymbol : "",
+      resolved.title,
+      resolved.body,
+      resolved.year,
+      resolved.link || "",
+      d.entity,
+      entityLongMap.get(d.entity) || "",
+      d.subprogramme || "",
+      "Legislative mandates",
+    ];
+  });
+
+  addSheetHeaders(
+    decisionsSheet,
+    decisionsColumns.map((col) => col.header),
+    decisionsColumns.map((col) => col.width || 12),
+  );
+  decisionRows.forEach((row) => decisionsSheet.addRow(row));
+
+  decisionsSheet.views = [{ state: "frozen", ySplit: 1, xSplit: 1 }];
+  decisionsSheet.autoFilter = {
+    from: "A1",
+    to: "K1",
+  };
+
+  decisionRows.forEach((row, rowIdx) => {
+    const link = row[6] as string;
+    const sheetRow = decisionsSheet.getRow(rowIdx + 2);
+    if (link) {
+      const linkCell = sheetRow.getCell(7);
+      linkCell.value = { text: link, hyperlink: link };
+      linkCell.font = { underline: true };
+    }
+    sheetRow.alignment = { wrapText: true, vertical: "top" };
   });
 
   return Buffer.from(await workbook.xlsx.writeBuffer());
