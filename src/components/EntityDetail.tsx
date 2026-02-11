@@ -11,7 +11,7 @@ import {
   useRealtimeDecisions,
   type RealtimeChange,
 } from "@/hooks/useRealtimeDecisions";
-import { BODY_ABBREVS } from "@/lib/constants";
+import { BODY_ABBREVS, FEATURE_FLAGS } from "@/lib/constants";
 import { abbreviateBody } from "@/lib/utils";
 import {
   DECISION_THEME,
@@ -519,7 +519,13 @@ function MandateRowContent({
       : null;
   
   // Check if change has been responded to (accepted/reverted)
-  const changeResponse = reviewChangeInfo?.response;
+  // If the decision was modified after the response, treat it as no response (pending again)
+  const rawResponse = reviewChangeInfo?.response;
+  const changeResponse = rawResponse && currentDecision?.createdAt && rawResponse.respondedAt
+    ? new Date(currentDecision.createdAt) <= new Date(rawResponse.respondedAt)
+      ? rawResponse
+      : null // Decision was modified after response, show as pending
+    : rawResponse;
 
   // Determine background color based on decision
   let bgColorClass = "";
@@ -963,7 +969,13 @@ function MandateRow({
     : null;
   
   // Check if change has been responded to (accepted/reverted)
-  const changeResponse = reviewChangeInfo?.response;
+  // If the decision was modified after the response, treat it as no response (pending again)
+  const rawResponse = reviewChangeInfo?.response;
+  const changeResponse = rawResponse && state?.decision?.createdAt && rawResponse.respondedAt
+    ? new Date(state.decision.createdAt) <= new Date(rawResponse.respondedAt)
+      ? rawResponse
+      : null // Decision was modified after response, show as pending
+    : rawResponse;
 
   return (
     <div className="relative">
@@ -1158,7 +1170,7 @@ function MandateRow({
       </div>
 
       {/* Review change indicator - positioned outside the card as a speech bubble */}
-      {decisionChange?.hasChange &&
+      {FEATURE_FLAGS.reviewChangeIndicator && decisionChange?.hasChange &&
         (() => {
           const beforeInfo = getDecisionDisplayInfo(
             decisionChange.before.decision,
@@ -1211,15 +1223,25 @@ function MandateRow({
               {/* Tooltip content - flows out of the circle with corner covered by circle */}
               <div className="pointer-events-none absolute right-0 bottom-0 mr-3.5 mb-3.5 opacity-0 transition-opacity duration-200 group-hover/change:pointer-events-auto group-hover/change:opacity-100">
                 <div
-                  className={`${POPUP_STYLES.tooltip} max-w-sm space-y-2.5 p-3`}
+                  className={`${POPUP_STYLES.tooltip} min-w-70 max-w-md space-y-2.5 p-3`}
                 >
-                  <div className="text-xs font-semibold tracking-wide text-gray-700 uppercase">
-                    Decision Changed
+                  <div className={`whitespace-nowrap text-xs font-semibold tracking-wide uppercase ${
+                    changeResponse?.responseType === 'accept' 
+                      ? 'text-emerald-700' 
+                      : changeResponse?.responseType === 'revert'
+                        ? 'text-gray-600'
+                        : 'text-gray-700'
+                  }`}>
+                    {changeResponse?.responseType === 'accept' 
+                      ? 'Change Accepted' 
+                      : changeResponse?.responseType === 'revert'
+                        ? 'Change Reverted'
+                        : 'Decision Changed'}
                   </div>
                   <div className="space-y-2.5">
                     {/* Before Review */}
                     <div className="space-y-1.5">
-                      <div className="text-[10px] font-medium tracking-wide text-gray-500 uppercase">
+                      <div className="whitespace-nowrap text-[10px] font-medium tracking-wide text-gray-500 uppercase">
                         Before Review
                       </div>
                       <div className="space-y-1.5">
@@ -1245,7 +1267,7 @@ function MandateRow({
 
                     {/* After Review */}
                     <div className="space-y-1.5">
-                      <div className="text-[10px] font-medium tracking-wide text-gray-500 uppercase">
+                      <div className="whitespace-nowrap text-[10px] font-medium tracking-wide text-gray-500 uppercase">
                         After Review
                       </div>
                       <div className="space-y-1.5">
@@ -1323,15 +1345,37 @@ function MandateRow({
               </div>
 
               {/* Circle badge with spike - overlaps tooltip corner */}
-              <div
-                className={`relative flex h-7 w-7 items-center justify-center rounded-full ${CHANGE_INDICATOR.badge} text-white shadow-sm transition-all ${CHANGE_INDICATOR.badgeHover} cursor-pointer`}
-              >
-                <Pencil className="h-3.5 w-3.5" />
-                {/* Speech bubble tail pointing left */}
-                <div
-                  className={`absolute top-1/2 left-0 h-0 w-0 -translate-x-1 -translate-y-1/2 border-t-[6px] border-r-[6px] border-b-[6px] border-t-transparent border-b-transparent ${CHANGE_INDICATOR.tail}`}
-                />
-              </div>
+              {(() => {
+                // Determine badge style based on response status
+                const badgeStyle = changeResponse?.responseType === 'accept'
+                  ? 'bg-emerald-500 border-r-emerald-500'
+                  : changeResponse?.responseType === 'revert'
+                    ? 'bg-gray-400 border-r-gray-400'
+                    : `${CHANGE_INDICATOR.badge} ${CHANGE_INDICATOR.tail.replace('border-r-', '')}`;
+                const tailColor = changeResponse?.responseType === 'accept'
+                  ? 'border-r-emerald-500'
+                  : changeResponse?.responseType === 'revert'
+                    ? 'border-r-gray-400'
+                    : CHANGE_INDICATOR.tail;
+                
+                return (
+                  <div
+                    className={`relative flex h-7 w-7 items-center justify-center rounded-full ${changeResponse?.responseType === 'accept' ? 'bg-emerald-500' : changeResponse?.responseType === 'revert' ? 'bg-gray-400' : CHANGE_INDICATOR.badge} text-white shadow-sm transition-all ${CHANGE_INDICATOR.badgeHover} cursor-pointer`}
+                  >
+                    {changeResponse?.responseType === 'accept' ? (
+                      <Check className="h-3.5 w-3.5" />
+                    ) : changeResponse?.responseType === 'revert' ? (
+                      <RefreshCw className="h-3.5 w-3.5" />
+                    ) : (
+                      <Pencil className="h-3.5 w-3.5" />
+                    )}
+                    {/* Speech bubble tail pointing left */}
+                    <div
+                      className={`absolute top-1/2 left-0 h-0 w-0 -translate-x-1 -translate-y-1/2 border-t-[6px] border-r-[6px] border-b-[6px] border-t-transparent border-b-transparent ${tailColor}`}
+                    />
+                  </div>
+                );
+              })()}
             </div>
           );
         })()}
@@ -1856,6 +1900,19 @@ export function EntityDetail({
     [backgroundMandates],
   );
 
+  // Helper to refetch review changes after a decision is made during review
+  const refreshReviewChanges = useCallback(async () => {
+    if (!FEATURE_FLAGS.reviewChangeIndicator) return; // Skip if feature disabled
+    if (!reviewSessionId) return;
+    const changesResult = await getEntityReviewChangesAction(
+      entity,
+      reviewSessionId,
+    );
+    if (changesResult.success && changesResult.data) {
+      setReviewChanges(changesResult.data);
+    }
+  }, [entity, reviewSessionId]);
+
   // Fetch user role and decisions on mount
   useEffect(() => {
     getUserRoleAction()
@@ -1889,8 +1946,8 @@ export function EntityDetail({
           setReviewStartedBy(result.data.startedBy);
           setReviewSessionId(result.data.reviewSessionId);
           
-          // Fetch review changes if we have a review session
-          if (result.data.reviewSessionId) {
+          // Fetch review changes if we have a review session (only if feature enabled)
+          if (FEATURE_FLAGS.reviewChangeIndicator && result.data.reviewSessionId) {
             const changesResult = await getEntityReviewChangesAction(
               entity,
               result.data.reviewSessionId,
@@ -2098,6 +2155,10 @@ export function EntityDetail({
             ],
           },
         }));
+        // Refresh review changes to update change indicators
+        if (reviewSessionId) {
+          refreshReviewChanges();
+        }
       } else if (!result.success) {
         // Handle review mode blocked - let user explore, show dialog after delay
         if (result.error === "review_mode_blocked") {
@@ -2124,7 +2185,7 @@ export function EntityDetail({
         });
       }
     },
-    [entity, userEmail, userEntity],
+    [entity, userEmail, userEntity, reviewSessionId, refreshReviewChanges],
   );
 
   const handleReasonChange = useCallback(
@@ -2174,13 +2235,17 @@ export function EntityDetail({
               ) || [],
           },
         }));
+        // Refresh review changes to update change indicators
+        if (reviewSessionId) {
+          refreshReviewChanges();
+        }
       } else if (!result.success && result.error === "review_mode_blocked") {
         setTimeout(() => {
           setShowReviewBlockedDialog(true);
         }, 2000);
       }
     },
-    [states],
+    [states, reviewSessionId, refreshReviewChanges],
   );
 
   const handleUpdateWithManual = useCallback(
@@ -2260,13 +2325,17 @@ export function EntityDetail({
             ],
           },
         }));
+        // Refresh review changes to update change indicators
+        if (reviewSessionId) {
+          refreshReviewChanges();
+        }
       } else if (!result.success && result.error === "review_mode_blocked") {
         setTimeout(() => {
           setShowReviewBlockedDialog(true);
         }, 2000);
       }
     },
-    [entity, userEmail, userEntity],
+    [entity, userEmail, userEntity, reviewSessionId, refreshReviewChanges],
   );
 
   const handleAddManual = useCallback(
@@ -2342,13 +2411,17 @@ export function EntityDetail({
             ],
           },
         }));
+        // Refresh review changes to update change indicators
+        if (reviewSessionId) {
+          refreshReviewChanges();
+        }
       } else if (!result.success && result.error === "review_mode_blocked") {
         setTimeout(() => {
           setShowReviewBlockedDialog(true);
         }, 2000);
       }
     },
-    [entity, userEmail, userEntity],
+    [entity, userEmail, userEntity, reviewSessionId, refreshReviewChanges],
   );
 
   const handleEditManual = useCallback(
@@ -2439,13 +2512,17 @@ export function EntityDetail({
             ],
           },
         }));
+        // Refresh review changes to update change indicators
+        if (reviewSessionId) {
+          refreshReviewChanges();
+        }
       } else if (!result.success && result.error === "review_mode_blocked") {
         setTimeout(() => {
           setShowReviewBlockedDialog(true);
         }, 2000);
       }
     },
-    [entity, userEmail, states],
+    [entity, userEmail, states, reviewSessionId, refreshReviewChanges],
   );
 
   const handleComment = useCallback(
@@ -2585,6 +2662,7 @@ export function EntityDetail({
   // Handle accepting a review change
   const handleAcceptChange = useCallback(
     async (symbol: string, subprogramme: string | null) => {
+      if (!FEATURE_FLAGS.reviewChangeIndicator) return; // Feature disabled
       if (!reviewSessionId) return;
 
       const result = await acceptReviewChangeAction({
@@ -2603,14 +2681,17 @@ export function EntityDetail({
             response: result.data!,
           },
         }));
+        // Also refresh to get any server-side updates
+        refreshReviewChanges();
       }
     },
-    [entity, reviewSessionId],
+    [entity, reviewSessionId, refreshReviewChanges],
   );
 
   // Handle reverting a review change
   const handleRevertChange = useCallback(
     async (symbol: string, subprogramme: string | null) => {
+      if (!FEATURE_FLAGS.reviewChangeIndicator) return; // Feature disabled
       if (!reviewSessionId) return;
 
       const result = await revertReviewChangeAction({
@@ -2631,9 +2712,11 @@ export function EntityDetail({
         }));
         // Refresh decisions to show the reverted state
         refreshDecisions();
+        // Also refresh review changes to get server-side updates
+        refreshReviewChanges();
       }
     },
-    [entity, reviewSessionId, refreshDecisions],
+    [entity, reviewSessionId, refreshDecisions, refreshReviewChanges],
   );
 
   // Combine all mandates for co-citing calculation
@@ -2729,7 +2812,8 @@ export function EntityDetail({
     userEntity,
     onApprove: handleApprove,
     allEntitySymbols,
-    reviewChanges,
+    // Only pass review changes if feature is enabled
+    ...(FEATURE_FLAGS.reviewChangeIndicator ? { reviewChanges } : {}),
     isUnderReview,
     reviewSessionId,
   };
@@ -2754,8 +2838,11 @@ export function EntityDetail({
       handleComment(symbol, subprog, comment),
     onAdd: (symbol: string) => handleDecision(symbol, subprog, "add"),
     onAddManual: (data: ManualEntryData) => handleAddManual(subprog, data),
-    onAcceptChange: (symbol: string) => handleAcceptChange(symbol, subprog),
-    onRevertChange: (symbol: string) => handleRevertChange(symbol, subprog),
+    // Only include accept/revert handlers if feature is enabled
+    ...(FEATURE_FLAGS.reviewChangeIndicator ? {
+      onAcceptChange: (symbol: string) => handleAcceptChange(symbol, subprog),
+      onRevertChange: (symbol: string) => handleRevertChange(symbol, subprog),
+    } : {}),
   });
 
   return (

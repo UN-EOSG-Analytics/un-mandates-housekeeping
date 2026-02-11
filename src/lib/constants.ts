@@ -115,3 +115,39 @@ export const BODY_ABBREVS: Record<string, string> = {
   "International Court of Justice": "ICJ",
   "Trusteeship Council": "TC",
 };
+
+/**
+ * Feature Flags
+ * 
+ * Centralized feature toggles for controlling application functionality.
+ * 
+ * Best Practices:
+ * - Set flags here for simple on/off toggles
+ * - Can be enhanced with env variables: `process.env.NEXT_PUBLIC_FEATURE_X === 'true'`
+ * - For production: use database-backed flags or a service like LaunchDarkly
+ * 
+ * Usage:
+ * ```ts
+ * import { FEATURE_FLAGS } from '@/lib/constants';
+ * 
+ * if (FEATURE_FLAGS.reviewChangeIndicator) {
+ *   // Show feature
+ * }
+ * ```
+ */
+export const FEATURE_FLAGS = {
+  /**
+   * Review Change Indicator
+   * Shows visual indicator when decisions are modified during review phase
+   * with accept/revert functionality for reviewers
+   * 
+   * Status: In Development
+   * @default false
+   */
+  reviewChangeIndicator: false,
+} as const;
+
+/**
+ * Type helper for feature flag keys
+ */
+export type FeatureFlag = keyof typeof FEATURE_FLAGS;

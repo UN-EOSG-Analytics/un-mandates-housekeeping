@@ -177,6 +177,10 @@ export async function getReviewSessionAction(
 /**
  * Get review change info for all documents in an entity
  * Returns baseline and in-review decisions for comparison
+ * 
+ * Baseline = state before ANY review started (persistent)
+ * Current = latest decision (may be from any review session)
+ * Changes persist across sessions until responded to.
  */
 export async function getEntityReviewChangesAction(
   entity: string,
@@ -186,20 +190,22 @@ export async function getEntityReviewChangesAction(
     return { success: false, error: "entity and reviewSessionId required" };
   }
 
-  // Get the review session start time
-  const sessionRows = await query<{ started_at: string }>(
-    `SELECT started_at FROM mandates_housekeeping.entity_review_mode WHERE id = $1`,
-    [reviewSessionId],
+  // Get the FIRST review session start time (establishes true baseline)
+  const firstReviewRows = await query<{ started_at: string }>(
+    `SELECT started_at FROM mandates_housekeeping.entity_review_mode 
+     WHERE entity = $1 
+     ORDER BY started_at ASC LIMIT 1`,
+    [entity],
   );
 
-  if (sessionRows.length === 0) {
-    return { success: false, error: "review session not found" };
+  if (firstReviewRows.length === 0) {
+    return { success: false, error: "no review sessions found" };
   }
 
-  const reviewStartedAt = sessionRows[0].started_at;
+  const firstReviewStartedAt = firstReviewRows[0].started_at;
 
-  // Get all baseline decisions (last decision before review started for each document)
-  // Using DISTINCT ON to get the latest decision per document/subprogramme before review
+  // Get baseline decisions (last decision BEFORE first review for each document)
+  // Only get decisions that were NOT made during any review
   const baselineRows = await query<DecisionRow>(
     `SELECT DISTINCT ON (d.document_symbol, COALESCE(d.subprogramme, ''))
        d.*, u.entity as user_entity, approver.entity as approved_by_entity
@@ -208,28 +214,31 @@ export async function getEntityReviewChangesAction(
      LEFT JOIN mandates_housekeeping.users approver ON d.approved_by = approver.email
      WHERE d.entity = $1 
        AND d.created_at < $2
-       AND (d.review_session_id IS NULL OR d.review_session_id != $3)
+       AND d.review_session_id IS NULL
      ORDER BY d.document_symbol, COALESCE(d.subprogramme, ''), d.created_at DESC`,
-    [entity, reviewStartedAt, reviewSessionId],
+    [entity, firstReviewStartedAt],
   );
 
-  // Get all in-review decisions (decisions made during this review session)
-  const inReviewRows = await query<DecisionRow>(
+  // Get current decisions (latest decision for each document)
+  const currentRows = await query<DecisionRow>(
     `SELECT DISTINCT ON (d.document_symbol, COALESCE(d.subprogramme, ''))
        d.*, u.entity as user_entity, approver.entity as approved_by_entity
      FROM mandates_housekeeping.mandate_decisions d
      LEFT JOIN mandates_housekeeping.users u ON d.user_email = u.email
      LEFT JOIN mandates_housekeeping.users approver ON d.approved_by = approver.email
-     WHERE d.entity = $1 AND d.review_session_id = $2
+     WHERE d.entity = $1
      ORDER BY d.document_symbol, COALESCE(d.subprogramme, ''), d.created_at DESC`,
-    [entity, reviewSessionId],
+    [entity],
   );
 
-  // Get all responses for this review session
+  // Get all responses from ALL review sessions (changes persist until responded to)
   const responseRows = await query<ResponseRow>(
-    `SELECT * FROM mandates_housekeeping.review_change_responses 
-     WHERE entity = $1 AND review_session_id = $2`,
-    [entity, reviewSessionId],
+    `SELECT DISTINCT ON (r.entity, r.document_symbol, COALESCE(r.subprogramme, ''))
+       r.*
+     FROM mandates_housekeeping.review_change_responses r
+     WHERE r.entity = $1
+     ORDER BY r.entity, r.document_symbol, COALESCE(r.subprogramme, ''), r.responded_at DESC`,
+    [entity],
   );
 
   // Build maps
@@ -239,10 +248,10 @@ export async function getEntityReviewChangesAction(
     baselineMap[key] = toDecision(row);
   }
 
-  const inReviewMap: Record<string, MandateDecision> = {};
-  for (const row of inReviewRows) {
+  const currentMap: Record<string, MandateDecision> = {};
+  for (const row of currentRows) {
     const key = `${row.document_symbol}:${row.subprogramme || ""}`;
-    inReviewMap[key] = toDecision(row);
+    currentMap[key] = toDecision(row);
   }
 
   const responseMap: Record<string, ReviewChangeResponse> = {};
@@ -251,23 +260,26 @@ export async function getEntityReviewChangesAction(
     responseMap[key] = toResponse(row);
   }
 
-  // Build result - only include documents that have either baseline or in-review decision
+  // Build result - include all documents that have decisions
   const allKeys = new Set([
     ...Object.keys(baselineMap),
-    ...Object.keys(inReviewMap),
+    ...Object.keys(currentMap),
   ]);
 
   const result: Record<string, ReviewChangeInfo> = {};
   for (const key of allKeys) {
     const baseline = baselineMap[key] || null;
-    const inReviewDecision = inReviewMap[key] || null;
+    const current = currentMap[key] || null;
 
-    // Determine if there was a change
-    const hasChange = detectChange(baseline, inReviewDecision);
+    // Always check for changes between baseline and current
+    // This works correctly because:
+    // - If decision was made during ANY review, it will differ from baseline
+    // - If decision was made outside review, baseline and current will match (no change)
+    const hasChange = detectChange(baseline, current);
 
     result[key] = {
       baseline,
-      inReviewDecision,
+      inReviewDecision: current,
       hasChange,
       response: responseMap[key] || null,
     };
