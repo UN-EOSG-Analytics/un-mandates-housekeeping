@@ -20,7 +20,7 @@ export function FeedbackButton() {
   return (
     <button
       onClick={handleClick}
-      className="fixed right-6 bottom-6 z-50 flex items-center gap-2 rounded-full bg-un-blue px-4 py-3 text-sm font-medium text-white shadow-lg transition-all hover:scale-105 hover:bg-un-blue/90 hover:shadow-xl focus:ring-2 focus:ring-un-blue focus:ring-offset-2 focus:outline-none"
+      className="fixed right-6 bottom-6 z-40 flex items-center gap-2 rounded-full bg-un-blue px-4 py-3 text-sm font-medium text-white shadow-lg transition-all hover:scale-105 hover:bg-un-blue/90 hover:shadow-xl focus:ring-2 focus:ring-un-blue focus:ring-offset-2 focus:outline-none"
       aria-label="Provide feedback"
     >
       <MessageSquare className="h-5 w-5" />
