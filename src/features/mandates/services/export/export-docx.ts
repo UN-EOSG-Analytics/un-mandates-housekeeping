@@ -5,6 +5,7 @@ import {
   getAppliedExportData,
   type AppliedMandateRow,
 } from "@/features/mandates/services/export/applied-state";
+import { query } from "@/lib/db/db";
 
 interface Mandate {
   symbol: string;
@@ -13,20 +14,78 @@ interface Mandate {
   body: string | null;
 }
 
-const BODY_ORDER = ["GA", "SC", "ECOSOC", "HRC", "UNEA"];
+// Master hierarchy order for intergovernmental bodies (UN standard)
+// Maps both abbreviations AND full names to the same sort index so sorting
+// works regardless of whether the body field contains "GA" or "General Assembly".
+const BODY_ORDER_LIST: [string, string | null][] = [
+  ["Charter", null],
+  ["UNCLOS", null],
+  ["Other", null],
+  ["GA", "General Assembly"],
+  ["ECOSOC", "Economic and Social Council"],
+  ["TC", "Trusteeship Council"],
+  ["SC", "Security Council"],
+  ["HRC", "Human Rights Council"],
+  ["UNEA", "United Nations Environment Assembly"],
+  ["UNHA and Other", "United Nations Habitat Assembly and other"],
+];
 
-function getBodyLabel(body: string, hasRes: boolean, hasDec: boolean): string {
-  const bodyNames: Record<string, string> = {
-    GA: "General Assembly",
-    SC: "Security Council",
-    ECOSOC: "Economic and Social Council",
-    HRC: "Human Rights Council",
-    UNEA: "United Nations Environment Assembly",
-  };
-  const name = bodyNames[body] || body;
+// Build sort-index lookup accepting both abbreviation and full name
+const BODY_SORT_INDEX: Record<string, number> = {};
+BODY_ORDER_LIST.forEach(([abbr, full], i) => {
+  BODY_SORT_INDEX[abbr] = i;
+  if (full) BODY_SORT_INDEX[full] = i;
+});
+
+// Well-known body abbreviation → full name (fallback before DB lookup)
+const BODY_NAMES: Record<string, string> = {};
+for (const [abbr, full] of BODY_ORDER_LIST) {
+  if (full) BODY_NAMES[abbr] = full;
+}
+
+// Bodies that get a fixed label (no "resolutions and decisions" suffix)
+const FIXED_LABELS: Record<string, string> = {
+  Charter: "Charter of the United Nations",
+  UNCLOS: "Conventions",
+  Other: "Conventions and protocols",
+};
+
+async function fetchBodyFullNames(): Promise<Record<string, string>> {
+  const rows = await query<{ entity: string; entity_long: string }>(
+    "SELECT entity, entity_long FROM systemchart.entities",
+  );
+  const map: Record<string, string> = {};
+  for (const row of rows) {
+    map[row.entity] = row.entity_long;
+  }
+  return map;
+}
+
+function getBodyLabel(
+  body: string,
+  hasRes: boolean,
+  hasDec: boolean,
+  bodyFullNames: Record<string, string>,
+): string {
+  if (FIXED_LABELS[body]) return FIXED_LABELS[body];
+  // If body is already a full name (e.g. "General Assembly"), use it directly.
+  // Otherwise look up abbreviation → full name via BODY_NAMES, then DB, then raw value.
+  const isAlreadyFullName = Object.values(BODY_NAMES).includes(body);
+  const name = isAlreadyFullName ? body : (BODY_NAMES[body] || bodyFullNames[body] || body);
   if (hasRes && hasDec) return `${name} resolutions and decisions`;
   if (hasDec) return `${name} decisions`;
   return `${name} resolutions`;
+}
+
+function sortBodies(bodies: string[]): string[] {
+  return [...bodies].sort((a, b) => {
+    const ai = BODY_SORT_INDEX[a] ?? -1;
+    const bi = BODY_SORT_INDEX[b] ?? -1;
+    if (ai === -1 && bi === -1) return a.localeCompare(b);
+    if (ai === -1) return 1;
+    if (bi === -1) return -1;
+    return ai - bi;
+  });
 }
 
 function stripPrefix(symbol: string): string {
@@ -57,13 +116,52 @@ function cleanTitle(title: string): string {
 
 // Style IDs from UN template: H1 = "_ H_1", H23 = "_ H_2/3", H4 = "_ H_4"
 
-// Generate paragraph XML with UN style
-function para(styleId: string, text: string, tabs = ""): string {
-  const escapedText = escapeXml(tabs + text);
-  return `<w:p><w:pPr><w:pStyle w:val="${styleId}"/></w:pPr><w:r><w:t>${escapedText}</w:t></w:r></w:p>`;
+const H23_TABS = `<w:tabs><w:tab w:val="right" w:pos="1022"/><w:tab w:val="left" w:pos="1267"/><w:tab w:val="left" w:pos="1742"/><w:tab w:val="left" w:pos="2218"/><w:tab w:val="left" w:pos="2693"/><w:tab w:val="left" w:pos="3182"/><w:tab w:val="left" w:pos="3658"/><w:tab w:val="left" w:pos="4133"/><w:tab w:val="left" w:pos="4622"/><w:tab w:val="left" w:pos="5098"/><w:tab w:val="left" w:pos="5573"/><w:tab w:val="left" w:pos="6048"/></w:tabs>`;
+
+// Cell paragraph properties matching UN SingleTxt style with cleared inherited tabs
+const CELL_PPR_SYMBOL = `<w:pPr><w:pStyle w:val="SingleTxt"/><w:tabs><w:tab w:val="clear" w:pos="1267"/><w:tab w:val="clear" w:pos="1742"/><w:tab w:val="clear" w:pos="2218"/><w:tab w:val="clear" w:pos="2693"/><w:tab w:val="clear" w:pos="3182"/><w:tab w:val="clear" w:pos="3658"/><w:tab w:val="clear" w:pos="4133"/><w:tab w:val="clear" w:pos="4622"/><w:tab w:val="clear" w:pos="5098"/><w:tab w:val="clear" w:pos="5573"/><w:tab w:val="clear" w:pos="6048"/><w:tab w:val="left" w:pos="288"/><w:tab w:val="left" w:pos="576"/><w:tab w:val="left" w:pos="864"/><w:tab w:val="left" w:pos="1152"/></w:tabs><w:spacing w:before="40" w:after="40" w:line="200" w:lineRule="exact"/><w:ind w:left="0" w:right="43"/><w:jc w:val="left"/><w:rPr><w:sz w:val="17"/></w:rPr></w:pPr>`;
+
+const CELL_PPR_TITLE = `<w:pPr><w:pStyle w:val="SingleTxt"/><w:tabs><w:tab w:val="clear" w:pos="1267"/><w:tab w:val="clear" w:pos="1742"/><w:tab w:val="clear" w:pos="2218"/><w:tab w:val="clear" w:pos="2693"/><w:tab w:val="clear" w:pos="3182"/><w:tab w:val="clear" w:pos="3658"/><w:tab w:val="clear" w:pos="4133"/><w:tab w:val="clear" w:pos="4622"/><w:tab w:val="clear" w:pos="5098"/><w:tab w:val="clear" w:pos="5573"/><w:tab w:val="clear" w:pos="6048"/><w:tab w:val="left" w:pos="288"/><w:tab w:val="left" w:pos="576"/><w:tab w:val="left" w:pos="864"/><w:tab w:val="left" w:pos="1152"/></w:tabs><w:spacing w:before="40" w:after="40" w:line="200" w:lineRule="exact"/><w:ind w:left="86" w:right="43"/><w:jc w:val="left"/><w:rPr><w:sz w:val="17"/></w:rPr></w:pPr>`;
+
+// Generate paragraph XML matching exact UN reference formatting
+function paraH1(text: string): string {
+  const t = escapeXml(text);
+  return `<w:p><w:pPr><w:pStyle w:val="H1"/><w:ind w:right="1260"/></w:pPr><w:r><w:tab/></w:r><w:r><w:tab/><w:t>${t}</w:t></w:r></w:p>`;
 }
 
-// Generate table XML for citations
+function paraH23(text: string): string {
+  const t = escapeXml(text);
+  return `<w:p><w:pPr><w:pStyle w:val="H23"/>${H23_TABS}<w:ind w:left="1267" w:right="1260" w:hanging="1267"/></w:pPr><w:r><w:tab/></w:r><w:r><w:tab/><w:t>${t}</w:t></w:r></w:p>`;
+}
+
+function paraH4(text: string): string {
+  const t = escapeXml(text);
+  return `<w:p><w:pPr><w:pStyle w:val="H4"/><w:ind w:right="1260"/></w:pPr><w:r><w:t>${t}</w:t></w:r></w:p>`;
+}
+
+// Build a single cell (symbol or title) for citation table
+function buildSymbolCell(m: Mandate, hyperlinks: Map<string, string>): string {
+  const displaySymbol = escapeXml(stripPrefix(m.symbol));
+  let symbolContent: string;
+  if (m.link) {
+    const rId = `rId${hyperlinks.size + 10}`;
+    hyperlinks.set(rId, m.link);
+    symbolContent = `<w:hyperlink r:id="${rId}" w:history="1"><w:r><w:rPr><w:rStyle w:val="Hyperlink"/><w:sz w:val="17"/></w:rPr><w:t>${displaySymbol}</w:t></w:r></w:hyperlink>`;
+  } else {
+    symbolContent = `<w:r><w:rPr><w:sz w:val="17"/></w:rPr><w:t>${displaySymbol}</w:t></w:r>`;
+  }
+  return `<w:tc><w:tcPr><w:tcW w:w="733" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_SYMBOL}${symbolContent}</w:p></w:tc>`;
+}
+
+function buildTitleCell(m: Mandate): string {
+  const title = escapeXml(m.title);
+  return `<w:tc><w:tcPr><w:tcW w:w="1767" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_TITLE}<w:r><w:rPr><w:sz w:val="17"/></w:rPr><w:t>${title}</w:t></w:r></w:p></w:tc>`;
+}
+
+const EMPTY_SYMBOL_CELL = `<w:tc><w:tcPr><w:tcW w:w="733" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_SYMBOL}</w:p></w:tc>`;
+const EMPTY_TITLE_CELL = `<w:tc><w:tcPr><w:tcW w:w="1767" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_TITLE}</w:p></w:tc>`;
+
+// Generate table XML for citations (4-column: 2 mandates per row, each as symbol + title)
 function citationTable(
   mandates: Mandate[],
   hyperlinks: Map<string, string>,
@@ -72,48 +170,13 @@ function citationTable(
 
   let rows = "";
   for (let i = 0; i < sorted.length; i += 2) {
-    let cells = "";
-    for (let j = 0; j < 2; j++) {
-      const m = sorted[i + j];
-      if (m) {
-        const displaySymbol = escapeXml(stripPrefix(m.symbol));
-        const title = escapeXml(m.title);
+    const m1 = sorted[i];
+    const m2 = i + 1 < sorted.length ? sorted[i + 1] : null;
 
-        // Symbol cell - with or without hyperlink
-        let symbolContent: string;
-        if (m.link) {
-          const rId = `rId${hyperlinks.size + 10}`;
-          hyperlinks.set(rId, m.link);
-          symbolContent = `<w:hyperlink r:id="${rId}"><w:r><w:rPr><w:rStyle w:val="Hyperlink"/><w:sz w:val="17"/></w:rPr><w:t>${displaySymbol}</w:t></w:r></w:hyperlink>`;
-        } else {
-          symbolContent = `<w:r><w:rPr><w:sz w:val="17"/></w:rPr><w:t>${displaySymbol}</w:t></w:r>`;
-        }
-
-        cells += `<w:tc><w:tcPr><w:tcW w:w="1408" w:type="dxa"/><w:tcBorders><w:top w:val="none"/><w:left w:val="none"/><w:bottom w:val="none"/><w:right w:val="none"/></w:tcBorders></w:tcPr><w:p><w:pPr><w:spacing w:before="40" w:after="40" w:line="200" w:lineRule="exact"/></w:pPr>${symbolContent}</w:p></w:tc>`;
-
-        // Title cell
-        cells += `<w:tc><w:tcPr><w:tcW w:w="1699" w:type="dxa"/><w:tcBorders><w:top w:val="none"/><w:left w:val="none"/><w:bottom w:val="none"/><w:right w:val="none"/></w:tcBorders></w:tcPr><w:p><w:pPr><w:spacing w:before="40" w:after="40" w:line="200" w:lineRule="exact"/><w:ind w:left="86"/></w:pPr><w:r><w:rPr><w:sz w:val="17"/></w:rPr><w:t>${title}</w:t></w:r></w:p></w:tc>`;
-      } else {
-        // Empty cells for odd count
-        cells += `<w:tc><w:tcPr><w:tcW w:w="1408" w:type="dxa"/><w:tcBorders><w:top w:val="none"/><w:left w:val="none"/><w:bottom w:val="none"/><w:right w:val="none"/></w:tcBorders></w:tcPr><w:p/></w:tc>`;
-        cells += `<w:tc><w:tcPr><w:tcW w:w="1699" w:type="dxa"/><w:tcBorders><w:top w:val="none"/><w:left w:val="none"/><w:bottom w:val="none"/><w:right w:val="none"/></w:tcBorders></w:tcPr><w:p/></w:tc>`;
-      }
-    }
-    rows += `<w:tr>${cells}</w:tr>`;
+    rows += `<w:tr>${buildSymbolCell(m1, hyperlinks)}${buildTitleCell(m1)}${m2 ? buildSymbolCell(m2, hyperlinks) + buildTitleCell(m2) : EMPTY_SYMBOL_CELL + EMPTY_TITLE_CELL}</w:tr>`;
   }
 
-  return `<w:tbl>
-    <w:tblPr>
-      <w:tblW w:w="5000" w:type="pct"/>
-      <w:tblBorders>
-        <w:top w:val="none"/><w:left w:val="none"/><w:bottom w:val="none"/><w:right w:val="none"/>
-        <w:insideH w:val="none"/><w:insideV w:val="none"/>
-      </w:tblBorders>
-      <w:tblCellMar><w:left w:w="0" w:type="dxa"/><w:right w:w="0" w:type="dxa"/></w:tblCellMar>
-    </w:tblPr>
-    <w:tblGrid><w:gridCol w:w="1408"/><w:gridCol w:w="1699"/><w:gridCol w:w="1408"/><w:gridCol w:w="1699"/></w:tblGrid>
-    ${rows}
-  </w:tbl>`;
+  return `<w:tbl><w:tblPr><w:tblStyle w:val="TableGrid"/><w:tblW w:w="5000" w:type="pct"/><w:tblBorders><w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/></w:tblBorders><w:tblCellMar><w:left w:w="0" w:type="dxa"/><w:right w:w="0" w:type="dxa"/></w:tblCellMar><w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/></w:tblPr><w:tblGrid><w:gridCol w:w="1408"/><w:gridCol w:w="3397"/><w:gridCol w:w="1408"/><w:gridCol w:w="3397"/></w:tblGrid>${rows}</w:tbl>`;
 }
 
 export async function exportEntityToDocx(
@@ -127,7 +190,10 @@ export async function exportEntityToDocx(
   const templateBuffer = await readFile(templatePath);
   const zip = await JSZip.loadAsync(templateBuffer);
 
-  const { rows } = await getAppliedExportData(entityAbbrev);
+  const [{ rows }, bodyFullNames] = await Promise.all([
+    getAppliedExportData(entityAbbrev),
+    fetchBodyFullNames(),
+  ]);
 
   // Build structure: subprog -> body -> mandates
   const bySubprog: Map<string, Map<string, Mandate[]>> = new Map();
@@ -171,7 +237,7 @@ export async function exportEntityToDocx(
   let content = "";
 
   // Main header
-  content += para("H1", "Legislative mandates", "\t\t");
+  content += paraH1("Legislative mandates");
 
   for (const subprog of sortedSubprogs) {
     const bodyMap = bySubprog.get(subprog)!;
@@ -180,29 +246,19 @@ export async function exportEntityToDocx(
     if (!subprog.toLowerCase().includes("all subprogrammes")) {
       const match = subprog.match(/^(Subprogramme \d+)[.:]\s*(.+)$/i);
       if (match) {
-        content += para("H23", match[1], "\t\t");
-        content += para("H23", match[2], "\t\t");
+        content += paraH23(match[1]);
+        content += paraH23(match[2]);
       } else {
-        content += para("H23", subprog, "\t\t");
+        content += paraH23(subprog);
       }
     }
 
-    // Sort bodies
-    const sortedBodies = [...bodyMap.keys()].sort((a, b) => {
-      const ai = BODY_ORDER.indexOf(a);
-      const bi = BODY_ORDER.indexOf(b);
-      if (ai === -1 && bi === -1) return a.localeCompare(b);
-      if (ai === -1) return 1;
-      if (bi === -1) return -1;
-      return ai - bi;
-    });
-
-    for (const body of sortedBodies) {
+    for (const body of sortBodies([...bodyMap.keys()])) {
       const mandates = bodyMap.get(body)!;
       const hasRes = mandates.some((m) => !isDecision(m.symbol));
       const hasDec = mandates.some((m) => isDecision(m.symbol));
 
-      content += para("H4", getBodyLabel(body, hasRes, hasDec));
+      content += paraH4(getBodyLabel(body, hasRes, hasDec, bodyFullNames));
       content += citationTable(mandates, hyperlinks);
     }
   }
@@ -254,6 +310,7 @@ function buildEntityContent(
   rows: AppliedMandateRow[],
   entityAbbrev: string,
   hyperlinks: Map<string, string>,
+  bodyFullNames: Record<string, string>,
 ): string {
   const bySubprog: Map<string, Map<string, Mandate[]>> = new Map();
   const seen = new Set<string>();
@@ -288,34 +345,25 @@ function buildEntityContent(
   });
 
   let content = "";
-  content += para("H1", "Legislative mandates", "\t\t");
+  content += paraH1("Legislative mandates");
 
   for (const subprog of sortedSubprogs) {
     const bodyMap = bySubprog.get(subprog)!;
     if (!subprog.toLowerCase().includes("all subprogrammes")) {
       const match = subprog.match(/^(Subprogramme \d+)[.:]\s*(.+)$/i);
       if (match) {
-        content += para("H23", match[1], "\t\t");
-        content += para("H23", match[2], "\t\t");
+        content += paraH23(match[1]);
+        content += paraH23(match[2]);
       } else {
-        content += para("H23", subprog, "\t\t");
+        content += paraH23(subprog);
       }
     }
 
-    const sortedBodies = [...bodyMap.keys()].sort((a, b) => {
-      const ai = BODY_ORDER.indexOf(a);
-      const bi = BODY_ORDER.indexOf(b);
-      if (ai === -1 && bi === -1) return a.localeCompare(b);
-      if (ai === -1) return 1;
-      if (bi === -1) return -1;
-      return ai - bi;
-    });
-
-    for (const body of sortedBodies) {
+    for (const body of sortBodies([...bodyMap.keys()])) {
       const mandates = bodyMap.get(body)!;
       const hasRes = mandates.some((m) => !isDecision(m.symbol));
       const hasDec = mandates.some((m) => isDecision(m.symbol));
-      content += para("H4", getBodyLabel(body, hasRes, hasDec));
+      content += paraH4(getBodyLabel(body, hasRes, hasDec, bodyFullNames));
       content += citationTable(mandates, hyperlinks);
     }
   }
@@ -330,7 +378,10 @@ export async function exportAllToDocx(): Promise<Buffer> {
   );
   const templateBuffer = await readFile(templatePath);
   const zip = await JSZip.loadAsync(templateBuffer);
-  const { rows } = await getAppliedExportData();
+  const [{ rows }, bodyFullNames] = await Promise.all([
+    getAppliedExportData(),
+    fetchBodyFullNames(),
+  ]);
 
   // Get all unique entities with their long names
   const entityNames = new Map<string, string>(); // abbrev -> long name
@@ -349,7 +400,7 @@ export async function exportAllToDocx(): Promise<Buffer> {
   );
 
   for (const [entity, entityLong] of sortedEntities) {
-    const entityContent = buildEntityContent(rows, entity, hyperlinks);
+    const entityContent = buildEntityContent(rows, entity, hyperlinks, bodyFullNames);
     if (!entityContent) continue;
 
     // Entity header (bold, larger) - use long name
