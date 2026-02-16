@@ -89,11 +89,17 @@ function sortBodies(bodies: string[]): string[] {
 }
 
 function stripPrefix(symbol: string): string {
-  return symbol
+  // Standard UN organs: A/RES/70/1, S/RES/2250, E/DEC/2015/1, etc.
+  const standard = symbol
     .replace(/^[AES]\/RES\//, "")
     .replace(/^[AES]\/DEC\//, "")
-    .replace(/^S\/RES\//, "")
-    .trim();
+    .replace(/^S\/RES\//, "");
+  if (standard !== symbol) return standard.trim();
+  // Governing bodies: "E/CEPAL Resolution 769 (XL)" → "769 (XL)"
+  // Also handles "UNEP/EA.RES/1/7" style or "X/Y Decision 3 (Z)"
+  const bodyRes = symbol.match(/\b(?:Resolution|Decision)\s+(.+)$/i);
+  if (bodyRes) return bodyRes[1].trim();
+  return symbol.trim();
 }
 
 function isDecision(symbol: string): boolean {
@@ -123,20 +129,32 @@ const CELL_PPR_SYMBOL = `<w:pPr><w:pStyle w:val="SingleTxt"/><w:tabs><w:tab w:va
 
 const CELL_PPR_TITLE = `<w:pPr><w:pStyle w:val="SingleTxt"/><w:tabs><w:tab w:val="clear" w:pos="1267"/><w:tab w:val="clear" w:pos="1742"/><w:tab w:val="clear" w:pos="2218"/><w:tab w:val="clear" w:pos="2693"/><w:tab w:val="clear" w:pos="3182"/><w:tab w:val="clear" w:pos="3658"/><w:tab w:val="clear" w:pos="4133"/><w:tab w:val="clear" w:pos="4622"/><w:tab w:val="clear" w:pos="5098"/><w:tab w:val="clear" w:pos="5573"/><w:tab w:val="clear" w:pos="6048"/><w:tab w:val="left" w:pos="288"/><w:tab w:val="left" w:pos="576"/><w:tab w:val="left" w:pos="864"/><w:tab w:val="left" w:pos="1152"/></w:tabs><w:spacing w:before="40" w:after="40" w:line="200" w:lineRule="exact"/><w:ind w:left="86" w:right="43"/><w:jc w:val="left"/><w:rPr><w:sz w:val="17"/></w:rPr></w:pPr>`;
 
+// Empty spacer paragraphs matching the reference document pattern
+const EMPTY_SINGLETXT = `<w:p><w:pPr><w:pStyle w:val="SingleTxt"/></w:pPr></w:p>`;
+const EMPTY_PARA = `<w:p/>`;
+
 // Generate paragraph XML matching exact UN reference formatting
 function paraH1(text: string): string {
   const t = escapeXml(text);
   return `<w:p><w:pPr><w:pStyle w:val="H1"/><w:ind w:right="1260"/></w:pPr><w:r><w:tab/></w:r><w:r><w:tab/><w:t>${t}</w:t></w:r></w:p>`;
 }
 
+// H23 pair: emits spacer before, both lines with keepNext, spacer after
+function paraH23Pair(line1: string, line2: string): string {
+  const t1 = escapeXml(line1);
+  const t2 = escapeXml(line2);
+  return `${EMPTY_SINGLETXT}<w:p><w:pPr><w:pStyle w:val="H23"/>${H23_TABS}<w:keepNext/><w:ind w:left="1267" w:right="1260" w:hanging="1267"/></w:pPr><w:r><w:tab/></w:r><w:r><w:tab/><w:t>${t1}</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="H23"/>${H23_TABS}<w:ind w:left="1267" w:right="1260" w:hanging="1267"/></w:pPr><w:r><w:tab/></w:r><w:r><w:tab/><w:t>${t2}</w:t></w:r></w:p>${EMPTY_SINGLETXT}`;
+}
+
+// Single H23 line (when subprogramme name doesn't split into label+title)
 function paraH23(text: string): string {
   const t = escapeXml(text);
-  return `<w:p><w:pPr><w:pStyle w:val="H23"/>${H23_TABS}<w:ind w:left="1267" w:right="1260" w:hanging="1267"/></w:pPr><w:r><w:tab/></w:r><w:r><w:tab/><w:t>${t}</w:t></w:r></w:p>`;
+  return `${EMPTY_SINGLETXT}<w:p><w:pPr><w:pStyle w:val="H23"/>${H23_TABS}<w:ind w:left="1267" w:right="1260" w:hanging="1267"/></w:pPr><w:r><w:tab/></w:r><w:r><w:tab/><w:t>${t}</w:t></w:r></w:p>${EMPTY_SINGLETXT}`;
 }
 
 function paraH4(text: string): string {
   const t = escapeXml(text);
-  return `<w:p><w:pPr><w:pStyle w:val="H4"/><w:ind w:right="1260"/></w:pPr><w:r><w:t>${t}</w:t></w:r></w:p>`;
+  return `${EMPTY_PARA}<w:p><w:pPr><w:pStyle w:val="H4"/><w:ind w:right="1260"/></w:pPr><w:r><w:t>${t}</w:t></w:r></w:p>${EMPTY_PARA}`;
 }
 
 // Build a single cell (symbol or title) for citation table
@@ -246,8 +264,7 @@ export async function exportEntityToDocx(
     if (!subprog.toLowerCase().includes("all subprogrammes")) {
       const match = subprog.match(/^(Subprogramme \d+)[.:]\s*(.+)$/i);
       if (match) {
-        content += paraH23(match[1]);
-        content += paraH23(match[2]);
+        content += paraH23Pair(match[1], match[2]);
       } else {
         content += paraH23(subprog);
       }
@@ -352,8 +369,7 @@ function buildEntityContent(
     if (!subprog.toLowerCase().includes("all subprogrammes")) {
       const match = subprog.match(/^(Subprogramme \d+)[.:]\s*(.+)$/i);
       if (match) {
-        content += paraH23(match[1]);
-        content += paraH23(match[2]);
+        content += paraH23Pair(match[1], match[2]);
       } else {
         content += paraH23(subprog);
       }
