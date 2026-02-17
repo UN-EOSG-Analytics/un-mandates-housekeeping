@@ -513,19 +513,19 @@ function MandateRowContent({
 
   // Check for decision changes during review (for reviewers or when showing persisted changes)
   // Use server-side reviewChangeInfo if available, otherwise fall back to local comparison
-  const decisionChange =
-    reviewChangeInfo?.hasChange
-      ? getDecisionChange(reviewChangeInfo.baseline, currentDecision)
-      : null;
-  
+  const decisionChange = reviewChangeInfo?.hasChange
+    ? getDecisionChange(reviewChangeInfo.baseline, currentDecision)
+    : null;
+
   // Check if change has been responded to (accepted/reverted)
   // If the decision was modified after the response, treat it as no response (pending again)
   const rawResponse = reviewChangeInfo?.response;
-  const changeResponse = rawResponse && currentDecision?.createdAt && rawResponse.respondedAt
-    ? new Date(currentDecision.createdAt) <= new Date(rawResponse.respondedAt)
-      ? rawResponse
-      : null // Decision was modified after response, show as pending
-    : rawResponse;
+  const changeResponse =
+    rawResponse && currentDecision?.createdAt && rawResponse.respondedAt
+      ? new Date(currentDecision.createdAt) <= new Date(rawResponse.respondedAt)
+        ? rawResponse
+        : null // Decision was modified after response, show as pending
+      : rawResponse;
 
   // Determine background color based on decision
   let bgColorClass = "";
@@ -967,15 +967,16 @@ function MandateRow({
   const decisionChange = reviewChangeInfo?.hasChange
     ? getDecisionChange(reviewChangeInfo.baseline, state?.decision)
     : null;
-  
+
   // Check if change has been responded to (accepted/reverted)
   // If the decision was modified after the response, treat it as no response (pending again)
   const rawResponse = reviewChangeInfo?.response;
-  const changeResponse = rawResponse && state?.decision?.createdAt && rawResponse.respondedAt
-    ? new Date(state.decision.createdAt) <= new Date(rawResponse.respondedAt)
-      ? rawResponse
-      : null // Decision was modified after response, show as pending
-    : rawResponse;
+  const changeResponse =
+    rawResponse && state?.decision?.createdAt && rawResponse.respondedAt
+      ? new Date(state.decision.createdAt) <= new Date(rawResponse.respondedAt)
+        ? rawResponse
+        : null // Decision was modified after response, show as pending
+      : rawResponse;
 
   return (
     <div className="relative">
@@ -1170,7 +1171,8 @@ function MandateRow({
       </div>
 
       {/* Review change indicator - positioned outside the card as a speech bubble */}
-      {FEATURE_FLAGS.reviewChangeIndicator && decisionChange?.hasChange &&
+      {FEATURE_FLAGS.reviewChangeIndicator &&
+        decisionChange?.hasChange &&
         (() => {
           const beforeInfo = getDecisionDisplayInfo(
             decisionChange.before.decision,
@@ -1223,25 +1225,27 @@ function MandateRow({
               {/* Tooltip content - flows out of the circle with corner covered by circle */}
               <div className="pointer-events-none absolute right-0 bottom-0 mr-3.5 mb-3.5 opacity-0 transition-opacity duration-200 group-hover/change:pointer-events-auto group-hover/change:opacity-100">
                 <div
-                  className={`${POPUP_STYLES.tooltip} min-w-70 max-w-md space-y-2.5 p-3`}
+                  className={`${POPUP_STYLES.tooltip} max-w-md min-w-70 space-y-2.5 p-3`}
                 >
-                  <div className={`whitespace-nowrap text-xs font-semibold tracking-wide uppercase ${
-                    changeResponse?.responseType === 'accept' 
-                      ? 'text-emerald-700' 
-                      : changeResponse?.responseType === 'revert'
-                        ? 'text-gray-600'
-                        : 'text-gray-700'
-                  }`}>
-                    {changeResponse?.responseType === 'accept' 
-                      ? 'Change Accepted' 
-                      : changeResponse?.responseType === 'revert'
-                        ? 'Change Reverted'
-                        : 'Decision Changed'}
+                  <div
+                    className={`text-xs font-semibold tracking-wide whitespace-nowrap uppercase ${
+                      changeResponse?.responseType === "accept"
+                        ? "text-emerald-700"
+                        : changeResponse?.responseType === "revert"
+                          ? "text-gray-600"
+                          : "text-gray-700"
+                    }`}
+                  >
+                    {changeResponse?.responseType === "accept"
+                      ? "Change Accepted"
+                      : changeResponse?.responseType === "revert"
+                        ? "Change Reverted"
+                        : "Decision Changed"}
                   </div>
                   <div className="space-y-2.5">
                     {/* Before Review */}
                     <div className="space-y-1.5">
-                      <div className="whitespace-nowrap text-[10px] font-medium tracking-wide text-gray-500 uppercase">
+                      <div className="text-[10px] font-medium tracking-wide whitespace-nowrap text-gray-500 uppercase">
                         Before Review
                       </div>
                       <div className="space-y-1.5">
@@ -1267,7 +1271,7 @@ function MandateRow({
 
                     {/* After Review */}
                     <div className="space-y-1.5">
-                      <div className="whitespace-nowrap text-[10px] font-medium tracking-wide text-gray-500 uppercase">
+                      <div className="text-[10px] font-medium tracking-wide whitespace-nowrap text-gray-500 uppercase">
                         After Review
                       </div>
                       <div className="space-y-1.5">
@@ -1291,16 +1295,18 @@ function MandateRow({
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Response status or action buttons */}
                   {changeResponse ? (
                     <div className="border-t border-gray-200 pt-2.5">
-                      <div className={`flex items-center gap-1.5 text-xs ${
-                        changeResponse.responseType === 'accept' 
-                          ? 'text-green-600' 
-                          : 'text-amber-600'
-                      }`}>
-                        {changeResponse.responseType === 'accept' ? (
+                      <div
+                        className={`flex items-center gap-1.5 text-xs ${
+                          changeResponse.responseType === "accept"
+                            ? "text-green-600"
+                            : "text-amber-600"
+                        }`}
+                      >
+                        {changeResponse.responseType === "accept" ? (
                           <>
                             <Check className="h-3.5 w-3.5" />
                             <span>Change accepted</span>
@@ -1313,33 +1319,35 @@ function MandateRow({
                         )}
                       </div>
                     </div>
-                  ) : (onAcceptChange || onRevertChange) && (
-                    <div className="flex gap-2 border-t border-gray-200 pt-2.5">
-                      {onAcceptChange && (
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            onAcceptChange();
-                          }}
-                          className="flex items-center gap-1 rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 transition-colors hover:bg-green-100"
-                        >
-                          <Check className="h-3 w-3" />
-                          Accept
-                        </button>
-                      )}
-                      {onRevertChange && (
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            onRevertChange();
-                          }}
-                          className="flex items-center gap-1 rounded-md bg-amber-50 px-2 py-1 text-xs font-medium text-amber-700 transition-colors hover:bg-amber-100"
-                        >
-                          <RefreshCw className="h-3 w-3" />
-                          Revert
-                        </button>
-                      )}
-                    </div>
+                  ) : (
+                    (onAcceptChange || onRevertChange) && (
+                      <div className="flex gap-2 border-t border-gray-200 pt-2.5">
+                        {onAcceptChange && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onAcceptChange();
+                            }}
+                            className="flex items-center gap-1 rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 transition-colors hover:bg-green-100"
+                          >
+                            <Check className="h-3 w-3" />
+                            Accept
+                          </button>
+                        )}
+                        {onRevertChange && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onRevertChange();
+                            }}
+                            className="flex items-center gap-1 rounded-md bg-amber-50 px-2 py-1 text-xs font-medium text-amber-700 transition-colors hover:bg-amber-100"
+                          >
+                            <RefreshCw className="h-3 w-3" />
+                            Revert
+                          </button>
+                        )}
+                      </div>
+                    )
                   )}
                 </div>
               </div>
@@ -1347,24 +1355,26 @@ function MandateRow({
               {/* Circle badge with spike - overlaps tooltip corner */}
               {(() => {
                 // Determine badge style based on response status
-                const badgeStyle = changeResponse?.responseType === 'accept'
-                  ? 'bg-emerald-500 border-r-emerald-500'
-                  : changeResponse?.responseType === 'revert'
-                    ? 'bg-gray-400 border-r-gray-400'
-                    : `${CHANGE_INDICATOR.badge} ${CHANGE_INDICATOR.tail.replace('border-r-', '')}`;
-                const tailColor = changeResponse?.responseType === 'accept'
-                  ? 'border-r-emerald-500'
-                  : changeResponse?.responseType === 'revert'
-                    ? 'border-r-gray-400'
-                    : CHANGE_INDICATOR.tail;
-                
+                const badgeStyle =
+                  changeResponse?.responseType === "accept"
+                    ? "bg-emerald-500 border-r-emerald-500"
+                    : changeResponse?.responseType === "revert"
+                      ? "bg-gray-400 border-r-gray-400"
+                      : `${CHANGE_INDICATOR.badge} ${CHANGE_INDICATOR.tail.replace("border-r-", "")}`;
+                const tailColor =
+                  changeResponse?.responseType === "accept"
+                    ? "border-r-emerald-500"
+                    : changeResponse?.responseType === "revert"
+                      ? "border-r-gray-400"
+                      : CHANGE_INDICATOR.tail;
+
                 return (
                   <div
-                    className={`relative flex h-7 w-7 items-center justify-center rounded-full ${changeResponse?.responseType === 'accept' ? 'bg-emerald-500' : changeResponse?.responseType === 'revert' ? 'bg-gray-400' : CHANGE_INDICATOR.badge} text-white shadow-sm transition-all ${CHANGE_INDICATOR.badgeHover} cursor-pointer`}
+                    className={`relative flex h-7 w-7 items-center justify-center rounded-full ${changeResponse?.responseType === "accept" ? "bg-emerald-500" : changeResponse?.responseType === "revert" ? "bg-gray-400" : CHANGE_INDICATOR.badge} text-white shadow-sm transition-all ${CHANGE_INDICATOR.badgeHover} cursor-pointer`}
                   >
-                    {changeResponse?.responseType === 'accept' ? (
+                    {changeResponse?.responseType === "accept" ? (
                       <Check className="h-3.5 w-3.5" />
-                    ) : changeResponse?.responseType === 'revert' ? (
+                    ) : changeResponse?.responseType === "revert" ? (
                       <RefreshCw className="h-3.5 w-3.5" />
                     ) : (
                       <Pencil className="h-3.5 w-3.5" />
@@ -1945,9 +1955,12 @@ export function EntityDetail({
           setIsUnderReview(result.data.isUnderReview);
           setReviewStartedBy(result.data.startedBy);
           setReviewSessionId(result.data.reviewSessionId);
-          
+
           // Fetch review changes if we have a review session (only if feature enabled)
-          if (FEATURE_FLAGS.reviewChangeIndicator && result.data.reviewSessionId) {
+          if (
+            FEATURE_FLAGS.reviewChangeIndicator &&
+            result.data.reviewSessionId
+          ) {
             const changesResult = await getEntityReviewChangesAction(
               entity,
               result.data.reviewSessionId,
@@ -2005,7 +2018,7 @@ export function EntityDetail({
     onReviewModeChange: async (status) => {
       setIsUnderReview(status.isUnderReview);
       setReviewStartedBy(status.reviewStartedBy);
-      
+
       // Update session ID and fetch changes if session changed
       if (status.reviewSessionId !== reviewSessionId) {
         setReviewSessionId(status.reviewSessionId);
@@ -2839,10 +2852,14 @@ export function EntityDetail({
     onAdd: (symbol: string) => handleDecision(symbol, subprog, "add"),
     onAddManual: (data: ManualEntryData) => handleAddManual(subprog, data),
     // Only include accept/revert handlers if feature is enabled
-    ...(FEATURE_FLAGS.reviewChangeIndicator ? {
-      onAcceptChange: (symbol: string) => handleAcceptChange(symbol, subprog),
-      onRevertChange: (symbol: string) => handleRevertChange(symbol, subprog),
-    } : {}),
+    ...(FEATURE_FLAGS.reviewChangeIndicator
+      ? {
+          onAcceptChange: (symbol: string) =>
+            handleAcceptChange(symbol, subprog),
+          onRevertChange: (symbol: string) =>
+            handleRevertChange(symbol, subprog),
+        }
+      : {}),
   });
 
   return (

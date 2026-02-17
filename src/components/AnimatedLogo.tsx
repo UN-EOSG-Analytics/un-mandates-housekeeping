@@ -1,19 +1,21 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import Image from 'next/image'
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export function AnimatedLogo() {
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     // Trigger animation on mount
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{__html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         @keyframes corner-slide-in {
           0% {
             opacity: 0;
@@ -63,14 +65,18 @@ export function AnimatedLogo() {
           opacity: 0;
           transform: translateX(-60px) rotate(-360deg) scale(0.3);
         }
-      `}} />
+      `,
+        }}
+      />
       <div suppressHydrationWarning>
         <a
           href="https://un-two-zero.network/"
           target="_blank"
           rel="noopener noreferrer"
           className={`fixed bottom-0 left-0 z-30 cursor-pointer transition-opacity hover:opacity-80 ${
-            mounted ? 'animated-logo-corner-entrance' : 'animated-logo-corner-hidden'
+            mounted
+              ? "animated-logo-corner-entrance"
+              : "animated-logo-corner-hidden"
           }`}
           aria-label="Visit UN 2.0 Network"
         >
@@ -89,11 +95,11 @@ export function AnimatedLogo() {
               alt="UN20 Animation"
               width={30}
               height={30}
-              className={`block ${mounted ? 'animated-logo-sprite-entrance' : 'animated-logo-sprite-hidden'}`}
+              className={`block ${mounted ? "animated-logo-sprite-entrance" : "animated-logo-sprite-hidden"}`}
             />
           </div>
         </a>
       </div>
     </>
-  )
+  );
 }

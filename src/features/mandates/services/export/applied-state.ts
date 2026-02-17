@@ -103,7 +103,10 @@ function compareSymbolsNatural(a: string, b: string): number {
   return a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" });
 }
 
-function compareAppliedRows(a: AppliedMandateRow, b: AppliedMandateRow): number {
+function compareAppliedRows(
+  a: AppliedMandateRow,
+  b: AppliedMandateRow,
+): number {
   const aSub = getSubprogrammeSortKey(a.subprogramme).toLowerCase();
   const bSub = getSubprogrammeSortKey(b.subprogramme).toLowerCase();
   const aIsAll = aSub.includes("all subprogramme");
@@ -202,7 +205,11 @@ export async function getAppliedExportData(entity?: string): Promise<{
 
   for (const decision of decisions) {
     decisionsMap.set(
-      decisionKey(decision.entity, decision.documentSymbol, decision.subprogramme),
+      decisionKey(
+        decision.entity,
+        decision.documentSymbol,
+        decision.subprogramme,
+      ),
       decision,
     );
     if (decision.decision === "update" && decision.newSymbol) {
@@ -237,7 +244,11 @@ export async function getAppliedExportData(entity?: string): Promise<{
       if (!isLegislative(ci.part_in_document)) continue;
 
       const subprogramme = getSubprogramme(ci);
-      const key = decisionKey(ci.entity, rec.full_document_symbol, subprogramme);
+      const key = decisionKey(
+        ci.entity,
+        rec.full_document_symbol,
+        subprogramme,
+      );
       const decision = decisionsMap.get(key);
 
       if (decision?.decision === "remove") continue;
@@ -270,7 +281,11 @@ export async function getAppliedExportData(entity?: string): Promise<{
         continue;
       }
 
-      const appliedKey = decisionKey(ci.entity, rec.full_document_symbol, subprogramme);
+      const appliedKey = decisionKey(
+        ci.entity,
+        rec.full_document_symbol,
+        subprogramme,
+      );
       if (seen.has(appliedKey)) continue;
       seen.add(appliedKey);
 

@@ -186,7 +186,7 @@ export default async function AboutPage() {
 
         {/* Feature grid */}
         <section id="features" className="mx-auto max-w-6xl px-4 pb-20">
-          <h3 className="mb-8 text-center text-sm font-semibold tracking-wider text-gray-400 uppercase">
+          <h3 className="mb-8 text-center text-base font-semibold tracking-wider text-gray-400 uppercase">
             Platform Features
           </h3>
 
