@@ -333,6 +333,9 @@ export function AnalysisDashboard({ data }: Props) {
         <Card>
           <CardHeader>
             <CardTitle>Decision Breakdown</CardTitle>
+            <p className="text-sm text-gray-500">
+              Of all decisions made so far
+            </p>
           </CardHeader>
           <CardContent>
             <DecisionBreakdownChart decisions={overall.decisionsBreakdown} />
