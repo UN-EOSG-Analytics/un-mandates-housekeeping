@@ -151,10 +151,10 @@ function EntityImpactChart({
     percentageDecrease: number;
   }[];
 }) {
-  // Sort by percentage decrease and take top 15
+  // Sort by largest percentage decrease (relative reduction) and take top 8
   const chartData = [...entities]
     .sort((a, b) => b.percentageDecrease - a.percentageDecrease)
-    .slice(0, 15)
+    .slice(0, 8)
     .map((e) => ({
       entity: e.entity,
       current: e.totalCitations,
@@ -164,7 +164,7 @@ function EntityImpactChart({
 
   if (chartData.length === 0) {
     return (
-      <div className="flex h-80 items-center justify-center text-gray-400">
+      <div className="flex h-64 items-center justify-center text-gray-400">
         No data available
       </div>
     );
@@ -176,11 +176,13 @@ function EntityImpactChart({
   };
 
   return (
-    <ChartContainer config={impactChartConfig} className="h-80 w-full">
+    <ChartContainer config={impactChartConfig} className="h-64 w-full">
       <BarChart
         data={chartData}
         layout="vertical"
-        margin={{ left: 0, right: 20 }}
+        margin={{ left: 0, right: 20, top: 5, bottom: 5 }}
+        barCategoryGap="8%"
+        barGap={1}
       >
         <CartesianGrid strokeDasharray="3 3" horizontal={false} />
         <XAxis type="number" />
@@ -189,22 +191,44 @@ function EntityImpactChart({
           dataKey="entity"
           width={80}
           tick={{ fontSize: 11 }}
+          interval={0}
         />
         <ChartTooltip
-          content={
-            <ChartTooltipContent
-              formatter={(value, name, item) => {
-                const decrease = item.payload.decrease;
-                if (name === "projected") {
-                  return [
-                    `${value} (${decrease > 0 ? "-" : ""}${Math.abs(decrease).toFixed(1)}%)`,
-                    "Projected",
-                  ];
-                }
-                return [value, name === "current" ? "Current" : name];
-              }}
-            />
-          }
+          content={({ active, payload }) => {
+            if (!active || !payload || !payload.length) return null;
+            const data = payload[0].payload;
+            return (
+              <div className="rounded-lg border bg-white p-3 shadow-lg">
+                <p className="mb-2 font-semibold text-gray-900">{data.entity}</p>
+                <div className="space-y-1 text-sm">
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="flex items-center gap-1.5 text-gray-600">
+                      <span className="h-2.5 w-2.5 rounded-full bg-[#94a3b8]" />
+                      Current:
+                    </span>
+                    <span className="font-medium tabular-nums">
+                      {data.current.toLocaleString()}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="flex items-center gap-1.5 text-gray-600">
+                      <span className="h-2.5 w-2.5 rounded-full bg-[#3b82f6]" />
+                      Projected:
+                    </span>
+                    <span className="font-medium tabular-nums">
+                      {data.projected.toLocaleString()}
+                    </span>
+                  </div>
+                  <div className="mt-2 flex items-center justify-between gap-4 border-t pt-1.5">
+                    <span className="text-gray-600">Reduction:</span>
+                    <span className="font-semibold text-emerald-600 tabular-nums">
+                      -{data.decrease.toFixed(1)}%
+                    </span>
+                  </div>
+                </div>
+              </div>
+            );
+          }}
         />
         <Legend />
         <Bar
@@ -212,12 +236,14 @@ function EntityImpactChart({
           fill="#94a3b8"
           name="Current"
           radius={[0, 4, 4, 0]}
+          barSize={18}
         />
         <Bar
           dataKey="projected"
           fill="#3b82f6"
           name="Projected"
           radius={[0, 4, 4, 0]}
+          barSize={18}
         />
       </BarChart>
     </ChartContainer>
@@ -320,7 +346,7 @@ export function AnalysisDashboard({ data }: Props) {
           <CardHeader>
             <CardTitle>Projected Impact by Entity</CardTitle>
             <p className="text-sm text-gray-500">
-              Top entities by citation reduction
+              Top entities by largest relative citation reduction
             </p>
           </CardHeader>
           <CardContent>
