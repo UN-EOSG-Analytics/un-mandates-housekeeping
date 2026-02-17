@@ -172,18 +172,29 @@ function extractPrstTopic(title: string): string {
 // Enhance mandate titles: replace redundant "Resolution NNNN (YYYY)" titles
 // with bracket descriptions where available, or empty string if none.
 // Also clean up PRST titles to just the topic name.
+//
+// NOTE: DGACM guidelines currently require SC documents to have NO titles.
+// The title enhancement logic for SC resolutions and PRST statements is kept
+// here but disabled — hopefully we can re-enable it in the future.
 function enhanceTitles(
   mandates: Mandate[],
   bracketDescs: Record<string, string>,
 ): void {
   for (const m of mandates) {
+    // SC documents: clear title per DGACM guidelines (no titles allowed)
+    if (m.body === "Security Council" || m.body === "SC") {
+      m.title = "";
+      continue;
+    }
+    // --- SC title enhancement (disabled, kept for future use) ---
+    // if (REDUNDANT_TITLE_RE.test(m.title)) {
+    //   m.title = capitalize(bracketDescs[m.symbol] || "");
+    // } else if (isPresidentialStatement(m.symbol)) {
+    //   const bracketText = bracketDescs[m.symbol];
+    //   m.title = bracketText ? extractPrstTopic(bracketText) : "";
+    // }
     if (REDUNDANT_TITLE_RE.test(m.title)) {
       m.title = capitalize(bracketDescs[m.symbol] || "");
-    } else if (isPresidentialStatement(m.symbol)) {
-      // The PPB description is just "Statement /" — the full bracket text
-      // with the topic is only in the metadata table (bracketDescs)
-      const bracketText = bracketDescs[m.symbol];
-      m.title = bracketText ? extractPrstTopic(bracketText) : "";
     }
   }
 }
