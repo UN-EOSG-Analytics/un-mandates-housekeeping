@@ -258,6 +258,55 @@ function textRun(text: string): string {
   return `<w:r><w:rPr><w:sz w:val="17"/></w:rPr><w:t xml:space="preserve">${escapeXml(text)}</w:t></w:r>`;
 }
 
+const CHARTER_URL = "https://www.un.org/en/about-us/un-charter/full-text";
+
+// Render Charter section as a single paragraph: "Articles 1, 7, 12 (2) and 50"
+// Non-article symbols (e.g. "ICJ Statute") rendered separately after
+function charterContent(
+  mandates: Mandate[],
+  hyperlinks: Map<string, string>,
+): string {
+  const articles: string[] = [];
+  const other: Mandate[] = [];
+
+  for (const m of mandates) {
+    const artMatch = m.symbol.match(/^UN Charter Article\s+(.+)$/i);
+    if (artMatch) {
+      articles.push(artMatch[1].trim());
+    } else {
+      other.push(m);
+    }
+  }
+
+  let xml = "";
+
+  if (articles.length > 0) {
+    // Natural sort: "1", "7", "12 (2)", "102"
+    articles.sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+    const label = articles.length === 1 ? "Article" : "Articles";
+    // Join: "1, 7, 12 (2) and 50"
+    let joined: string;
+    if (articles.length === 1) {
+      joined = articles[0];
+    } else {
+      joined = articles.slice(0, -1).join(", ") + " and " + articles[articles.length - 1];
+    }
+    const text = `${label} ${joined}`;
+
+    const rId = `rId${hyperlinks.size + 10}`;
+    hyperlinks.set(rId, CHARTER_URL);
+    // SingleTxt paragraph with the whole text as one hyperlink
+    xml += `<w:p><w:pPr><w:pStyle w:val="SingleTxt"/><w:spacing w:before="40" w:after="40" w:line="200" w:lineRule="exact"/><w:ind w:left="1267" w:right="1260"/></w:pPr><w:hyperlink r:id="${rId}" w:history="1"><w:r><w:rPr><w:rStyle w:val="Hyperlink"/><w:sz w:val="17"/></w:rPr><w:t>${escapeXml(text)}</w:t></w:r></w:hyperlink></w:p>`;
+  }
+
+  // Render non-article charter items (e.g. ICJ Statute) as a normal table
+  if (other.length > 0) {
+    xml += citationTable(other, hyperlinks);
+  }
+
+  return xml;
+}
+
 const EMPTY_SYMBOL_CELL = `<w:tc><w:tcPr><w:tcW w:w="733" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_SYMBOL}</w:p></w:tc>`;
 const EMPTY_TITLE_CELL = `<w:tc><w:tcPr><w:tcW w:w="1767" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_TITLE}</w:p></w:tc>`;
 
@@ -358,7 +407,9 @@ export async function exportEntityToDocx(
       const hasDec = mandates.some((m) => isDecision(m.symbol));
 
       content += paraH4(getBodyLabel(body, hasRes, hasDec, bodyFullNames));
-      content += citationTable(mandates, hyperlinks);
+      content += body === "Charter"
+        ? charterContent(mandates, hyperlinks)
+        : citationTable(mandates, hyperlinks);
     }
   }
 
@@ -462,7 +513,9 @@ function buildEntityContent(
       const hasRes = mandates.some((m) => !isDecision(m.symbol));
       const hasDec = mandates.some((m) => isDecision(m.symbol));
       content += paraH4(getBodyLabel(body, hasRes, hasDec, bodyFullNames));
-      content += citationTable(mandates, hyperlinks);
+      content += body === "Charter"
+        ? charterContent(mandates, hyperlinks)
+        : citationTable(mandates, hyperlinks);
     }
   }
 
