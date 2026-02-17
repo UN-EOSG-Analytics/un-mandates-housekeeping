@@ -94,9 +94,7 @@ const toResponse = (row: ResponseRow): ReviewChangeResponse => ({
  * Get the review session info for an entity
  * Returns the current active review or the most recent completed review
  */
-export async function getReviewSessionAction(
-  entity: string,
-): Promise<
+export async function getReviewSessionAction(entity: string): Promise<
   ActionResult<{
     reviewSessionId: string | null;
     isActive: boolean;
@@ -177,7 +175,7 @@ export async function getReviewSessionAction(
 /**
  * Get review change info for all documents in an entity
  * Returns baseline and in-review decisions for comparison
- * 
+ *
  * Baseline = state before ANY review started (persistent)
  * Current = latest decision (may be from any review session)
  * Changes persist across sessions until responded to.
@@ -433,7 +431,9 @@ export async function revertReviewChangeAction(params: {
         subprogramme || null,
         baseline.decision,
         baseline.new_symbol,
-        baseline.manual_metadata ? JSON.stringify(baseline.manual_metadata) : null,
+        baseline.manual_metadata
+          ? JSON.stringify(baseline.manual_metadata)
+          : null,
         baseline.decision_reason,
         baseline.other_reason,
         user.email,

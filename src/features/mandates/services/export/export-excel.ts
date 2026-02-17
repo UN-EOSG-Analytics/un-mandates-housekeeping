@@ -115,7 +115,9 @@ const COLUMN_INFO = [
   },
 ] as const;
 
-function buildEntityLongMap(rows: AppliedMandateRow[]): Map<string, string | null> {
+function buildEntityLongMap(
+  rows: AppliedMandateRow[],
+): Map<string, string | null> {
   const map = new Map<string, string | null>();
   for (const row of rows) {
     if (!map.has(row.entity)) {
@@ -133,7 +135,15 @@ function cleanTitle(title: string | null | undefined): string {
 function resolveDecisionMetadata(
   symbol: string,
   manualMetadata: LatestDecisionRow["manualMetadata"],
-  metadataLookup: Record<string, { title: string; body: string; year: number | null; link: string | null } | null>,
+  metadataLookup: Record<
+    string,
+    {
+      title: string;
+      body: string;
+      year: number | null;
+      link: string | null;
+    } | null
+  >,
 ) {
   const base = metadataLookup[symbol] || {
     title: "",
@@ -255,13 +265,19 @@ export async function exportToXlsx(entity?: string): Promise<Buffer> {
 
   const symbolsToResolve = new Set<string>();
   decisions.forEach((d) => {
-    const targetSymbol = d.decision === "update" ? d.newSymbol : d.documentSymbol;
+    const targetSymbol =
+      d.decision === "update" ? d.newSymbol : d.documentSymbol;
     if (targetSymbol) symbolsToResolve.add(targetSymbol);
   });
   const metadata = await fetchDocumentMetadata([...symbolsToResolve]);
   const metadataLookup: Record<
     string,
-    { title: string; body: string; year: number | null; link: string | null } | null
+    {
+      title: string;
+      body: string;
+      year: number | null;
+      link: string | null;
+    } | null
   > = {};
   for (const [symbol, meta] of Object.entries(metadata)) {
     metadataLookup[symbol] = meta
@@ -276,7 +292,8 @@ export async function exportToXlsx(entity?: string): Promise<Buffer> {
   const entityLongMap = buildEntityLongMap(rows);
 
   const decisionRows = decisions.map((d) => {
-    const targetSymbol = d.decision === "update" ? d.newSymbol : d.documentSymbol;
+    const targetSymbol =
+      d.decision === "update" ? d.newSymbol : d.documentSymbol;
     const resolved = resolveDecisionMetadata(
       targetSymbol || d.documentSymbol,
       d.manualMetadata || null,
