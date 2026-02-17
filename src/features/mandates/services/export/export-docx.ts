@@ -113,16 +113,25 @@ function stripPrefix(symbol: string): string {
     .replace(/^[AES]\/RES\//, "")
     .replace(/^[AES]\/DEC\//, "")
     .replace(/^S\/RES\//, "");
-  if (standard !== symbol) return standard.trim();
+  if (standard !== symbol) return normalizeSymbolSpacing(standard.trim());
   // Governing bodies: "E/CEPAL Resolution 769 (XL)" → "769 (XL)"
   // Also handles "UNEP/EA.RES/1/7" style or "X/Y Decision 3 (Z)"
   const bodyRes = symbol.match(/\b(?:Resolution|Decision)\s+(.+)$/i);
-  if (bodyRes) return bodyRes[1].trim();
-  return symbol.trim();
+  if (bodyRes) return normalizeSymbolSpacing(bodyRes[1].trim());
+  return normalizeSymbolSpacing(symbol.trim());
+}
+
+// Ensure space before parenthetical year/session: "1904(2009)" → "1904 (2009)"
+function normalizeSymbolSpacing(s: string): string {
+  return s.replace(/(\d)\(/, "$1 (");
 }
 
 function isDecision(symbol: string): boolean {
   return /^[AES]\/DEC\//.test(symbol);
+}
+
+function isPresidentialStatement(symbol: string): boolean {
+  return /^S\/PRST\//.test(symbol);
 }
 
 function escapeXml(text: string | null | undefined): string {
@@ -139,19 +148,42 @@ function cleanTitle(title: string): string {
   return title.replace(/[\s:]+$/, "");
 }
 
+function capitalize(s: string): string {
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
 // Detect titles that are just the resolution label (e.g. "Resolution 1325 (2000)")
 // and thus redundant with the symbol column
 const REDUNDANT_TITLE_RE = /^(Security Council )?resolution\s+\d+(?:\s*\(\d{4}\))?\s*\/?$/i;
 
+// Extract topic from PRST bracket titles like:
+// "Statement [made on behalf of … the item entitled "Central African region"]"
+// → "Central African region"
+function extractPrstTopic(title: string): string {
+  // Try "item entitled "TOPIC"" pattern (with various quote styles)
+  const entitled = title.match(/item entitled\s+["\u201c](.+?)["\u201d]/i);
+  if (entitled) return entitled[1].replace(/[\s"]+$/, "");
+  // Fallback: extract entire bracket content for manual inspection
+  const bracket = title.match(/\[(.+?)\]\s*$/);
+  if (bracket) return bracket[1];
+  return title;
+}
+
 // Enhance mandate titles: replace redundant "Resolution NNNN (YYYY)" titles
-// with bracket descriptions where available, or empty string if none
+// with bracket descriptions where available, or empty string if none.
+// Also clean up PRST titles to just the topic name.
 function enhanceTitles(
   mandates: Mandate[],
   bracketDescs: Record<string, string>,
 ): void {
   for (const m of mandates) {
     if (REDUNDANT_TITLE_RE.test(m.title)) {
-      m.title = bracketDescs[m.symbol] || "";
+      m.title = capitalize(bracketDescs[m.symbol] || "");
+    } else if (isPresidentialStatement(m.symbol)) {
+      // The PPB description is just "Statement /" — the full bracket text
+      // with the topic is only in the metadata table (bracketDescs)
+      const bracketText = bracketDescs[m.symbol];
+      m.title = bracketText ? extractPrstTopic(bracketText) : "";
     }
   }
 }
@@ -331,8 +363,8 @@ function charterContent(
 
     const rId = `rId${hyperlinks.size + 10}`;
     hyperlinks.set(rId, CHARTER_URL);
-    // SingleTxt paragraph with the whole text as one hyperlink
-    xml += `<w:p><w:pPr><w:pStyle w:val="SingleTxt"/><w:spacing w:before="40" w:after="40" w:line="200" w:lineRule="exact"/><w:ind w:left="1267" w:right="1260"/></w:pPr><w:hyperlink r:id="${rId}" w:history="1"><w:r><w:rPr><w:rStyle w:val="Hyperlink"/><w:sz w:val="17"/></w:rPr><w:t>${escapeXml(text)}</w:t></w:r></w:hyperlink></w:p>`;
+    // Left-aligned paragraph matching H4/table indent level
+    xml += `<w:p><w:pPr><w:pStyle w:val="SingleTxt"/><w:ind w:left="0" w:right="1260"/></w:pPr><w:hyperlink r:id="${rId}" w:history="1"><w:r><w:rPr><w:rStyle w:val="Hyperlink"/></w:rPr><w:t>${escapeXml(text)}</w:t></w:r></w:hyperlink></w:p>`;
   }
 
   // Render non-article charter items (e.g. ICJ Statute) as a normal table
@@ -345,6 +377,43 @@ function charterContent(
 
 const EMPTY_SYMBOL_CELL = `<w:tc><w:tcPr><w:tcW w:w="733" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_SYMBOL}</w:p></w:tc>`;
 const EMPTY_TITLE_CELL = `<w:tc><w:tcPr><w:tcW w:w="1767" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_TITLE}</w:p></w:tc>`;
+
+// Render a body section, splitting SC into resolutions and presidential statements
+function renderBodySection(
+  body: string,
+  mandates: Mandate[],
+  hyperlinks: Map<string, string>,
+  bodyFullNames: Record<string, string>,
+  bracketDescs: Record<string, string>,
+): string {
+  enhanceTitles(mandates, bracketDescs);
+
+  if (body === "Charter") {
+    return paraH4(getBodyLabel(body, true, false, bodyFullNames)) +
+      charterContent(mandates, hyperlinks);
+  }
+
+  // For SC: split presidential statements from resolutions/decisions
+  const isSC = body === "Security Council" || body === "SC";
+  const statements = isSC ? mandates.filter((m) => isPresidentialStatement(m.symbol)) : [];
+  const rest = isSC ? mandates.filter((m) => !isPresidentialStatement(m.symbol)) : mandates;
+
+  let content = "";
+
+  if (rest.length > 0) {
+    const hasRes = rest.some((m) => !isDecision(m.symbol));
+    const hasDec = rest.some((m) => isDecision(m.symbol));
+    content += paraH4(getBodyLabel(body, hasRes, hasDec, bodyFullNames));
+    content += citationTable(rest, hyperlinks);
+  }
+
+  if (statements.length > 0) {
+    content += paraH4("Statements by the President of the Security Council");
+    content += citationTable(statements, hyperlinks);
+  }
+
+  return content;
+}
 
 // Generate table XML for citations (4-column: 2 entries per row, each as symbol(s) + title)
 function citationTable(
@@ -443,14 +512,7 @@ export async function exportEntityToDocx(
 
     for (const body of sortBodies([...bodyMap.keys()])) {
       const mandates = bodyMap.get(body)!;
-      enhanceTitles(mandates, bracketDescs);
-      const hasRes = mandates.some((m) => !isDecision(m.symbol));
-      const hasDec = mandates.some((m) => isDecision(m.symbol));
-
-      content += paraH4(getBodyLabel(body, hasRes, hasDec, bodyFullNames));
-      content += body === "Charter"
-        ? charterContent(mandates, hyperlinks)
-        : citationTable(mandates, hyperlinks);
+      content += renderBodySection(body, mandates, hyperlinks, bodyFullNames, bracketDescs);
     }
   }
 
@@ -552,13 +614,7 @@ function buildEntityContent(
 
     for (const body of sortBodies([...bodyMap.keys()])) {
       const mandates = bodyMap.get(body)!;
-      enhanceTitles(mandates, bracketDescs);
-      const hasRes = mandates.some((m) => !isDecision(m.symbol));
-      const hasDec = mandates.some((m) => isDecision(m.symbol));
-      content += paraH4(getBodyLabel(body, hasRes, hasDec, bodyFullNames));
-      content += body === "Charter"
-        ? charterContent(mandates, hyperlinks)
-        : citationTable(mandates, hyperlinks);
+      content += renderBodySection(body, mandates, hyperlinks, bodyFullNames, bracketDescs);
     }
   }
 
