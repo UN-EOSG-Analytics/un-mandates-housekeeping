@@ -329,7 +329,7 @@ export async function exportEntityToDocx(
   const sortedSubprogs = [...bySubprog.keys()].sort((a, b) => {
     if (a.toLowerCase().includes("all subprogrammes")) return -1;
     if (b.toLowerCase().includes("all subprogrammes")) return 1;
-    return a.localeCompare(b);
+    return a.localeCompare(b, undefined, { numeric: true });
   });
 
   // Generate document content
@@ -440,7 +440,7 @@ function buildEntityContent(
   const sortedSubprogs = [...bySubprog.keys()].sort((a, b) => {
     if (a.toLowerCase().includes("all subprogrammes")) return -1;
     if (b.toLowerCase().includes("all subprogrammes")) return 1;
-    return a.localeCompare(b);
+    return a.localeCompare(b, undefined, { numeric: true });
   });
 
   let content = "";
