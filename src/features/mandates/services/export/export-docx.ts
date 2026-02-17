@@ -157,41 +157,69 @@ function paraH4(text: string): string {
   return `${EMPTY_PARA}<w:p><w:pPr><w:pStyle w:val="H4"/><w:ind w:right="1260"/></w:pPr><w:r><w:t>${t}</w:t></w:r></w:p>${EMPTY_PARA}`;
 }
 
-// Build a single cell (symbol or title) for citation table
-function buildSymbolCell(m: Mandate, hyperlinks: Map<string, string>): string {
-  const displaySymbol = escapeXml(stripPrefix(m.symbol));
-  let symbolContent: string;
-  if (m.link) {
-    const rId = `rId${hyperlinks.size + 10}`;
-    hyperlinks.set(rId, m.link);
-    symbolContent = `<w:hyperlink r:id="${rId}" w:history="1"><w:r><w:rPr><w:rStyle w:val="Hyperlink"/><w:sz w:val="17"/></w:rPr><w:t>${displaySymbol}</w:t></w:r></w:hyperlink>`;
-  } else {
-    symbolContent = `<w:r><w:rPr><w:sz w:val="17"/></w:rPr><w:t>${displaySymbol}</w:t></w:r>`;
+// A grouped citation entry: one or more mandates sharing the same title
+interface CitationEntry {
+  mandates: Mandate[];
+  title: string;
+}
+
+// Group mandates with identical titles, preserving symbol sort order
+function groupByTitle(mandates: Mandate[]): CitationEntry[] {
+  const sorted = [...mandates].sort((a, b) => a.symbol.localeCompare(b.symbol));
+  const titleMap = new Map<string, Mandate[]>();
+  const titleOrder: string[] = [];
+  for (const m of sorted) {
+    const key = m.title.trim();
+    if (!titleMap.has(key)) {
+      titleMap.set(key, []);
+      titleOrder.push(key);
+    }
+    titleMap.get(key)!.push(m);
   }
+  // Sort groups by first symbol in each group
+  return titleOrder.map((t) => ({ mandates: titleMap.get(t)!, title: t }));
+}
+
+// Build symbol cell with potentially multiple symbols joined by "; "
+function buildSymbolCell(entry: CitationEntry, hyperlinks: Map<string, string>): string {
+  const parts: string[] = [];
+  for (const m of entry.mandates) {
+    const displaySymbol = escapeXml(stripPrefix(m.symbol));
+    if (m.link) {
+      const rId = `rId${hyperlinks.size + 10}`;
+      hyperlinks.set(rId, m.link);
+      parts.push(`<w:hyperlink r:id="${rId}" w:history="1"><w:r><w:rPr><w:rStyle w:val="Hyperlink"/><w:sz w:val="17"/></w:rPr><w:t>${displaySymbol}</w:t></w:r></w:hyperlink>`);
+    } else {
+      parts.push(`<w:r><w:rPr><w:sz w:val="17"/></w:rPr><w:t>${displaySymbol}</w:t></w:r>`);
+    }
+  }
+  // Join with "; " runs between each symbol
+  const separator = `<w:r><w:rPr><w:sz w:val="17"/></w:rPr><w:t xml:space="preserve">; </w:t></w:r>`;
+  const symbolContent = parts.join(separator);
   return `<w:tc><w:tcPr><w:tcW w:w="733" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_SYMBOL}${symbolContent}</w:p></w:tc>`;
 }
 
-function buildTitleCell(m: Mandate): string {
-  const title = escapeXml(m.title);
+function buildTitleCell(entry: CitationEntry): string {
+  const title = escapeXml(entry.title);
   return `<w:tc><w:tcPr><w:tcW w:w="1767" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_TITLE}<w:r><w:rPr><w:sz w:val="17"/></w:rPr><w:t>${title}</w:t></w:r></w:p></w:tc>`;
 }
 
 const EMPTY_SYMBOL_CELL = `<w:tc><w:tcPr><w:tcW w:w="733" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_SYMBOL}</w:p></w:tc>`;
 const EMPTY_TITLE_CELL = `<w:tc><w:tcPr><w:tcW w:w="1767" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_TITLE}</w:p></w:tc>`;
 
-// Generate table XML for citations (4-column: 2 mandates per row, each as symbol + title)
+// Generate table XML for citations (4-column: 2 entries per row, each as symbol(s) + title)
 function citationTable(
   mandates: Mandate[],
   hyperlinks: Map<string, string>,
 ): string {
-  const sorted = [...mandates].sort((a, b) => a.symbol.localeCompare(b.symbol));
+  const entries = groupByTitle(mandates);
 
   let rows = "";
-  for (let i = 0; i < sorted.length; i += 2) {
-    const m1 = sorted[i];
-    const m2 = i + 1 < sorted.length ? sorted[i + 1] : null;
+  for (let i = 0; i < entries.length; i += 2) {
+    const e1 = entries[i];
+    const e2 = i + 1 < entries.length ? entries[i + 1] : null;
 
-    rows += `<w:tr>${buildSymbolCell(m1, hyperlinks)}${buildTitleCell(m1)}${m2 ? buildSymbolCell(m2, hyperlinks) + buildTitleCell(m2) : EMPTY_SYMBOL_CELL + EMPTY_TITLE_CELL}</w:tr>`;
+    rows += `<w:tr>${buildSymbolCell(e1, hyperlinks)}${buildTitleCell(e1)}${e2 ? buildSymbolCell(e2, hyperlinks) + buildTitleCell(e2) : EMPTY_SYMBOL_CELL + EMPTY_TITLE_CELL}</w:tr>`;
   }
 
   return `<w:tbl><w:tblPr><w:tblStyle w:val="TableGrid"/><w:tblW w:w="5000" w:type="pct"/><w:tblBorders><w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/></w:tblBorders><w:tblCellMar><w:left w:w="0" w:type="dxa"/><w:right w:w="0" w:type="dxa"/></w:tblCellMar><w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/></w:tblPr><w:tblGrid><w:gridCol w:w="1408"/><w:gridCol w:w="3397"/><w:gridCol w:w="1408"/><w:gridCol w:w="3397"/></w:tblGrid>${rows}</w:tbl>`;
