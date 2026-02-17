@@ -61,6 +61,25 @@ async function fetchBodyFullNames(): Promise<Record<string, string>> {
   return map;
 }
 
+// Fetch bracket descriptions from meta_title for symbols where the resolved
+// title is just "Resolution NNNN (YYYY)" (mainly SC resolutions).
+// Returns symbol → bracket text, e.g. "S/RES/1325(2000)" → "[on women and peace and security]"
+async function fetchBracketDescriptions(): Promise<Record<string, string>> {
+  const rows = await query<{ symbol: string; title: string }>(
+    `SELECT ppb_full_document_symbol AS symbol, title
+     FROM ppb2026.source_documents_metadata_clean
+     WHERE title LIKE '%[%]%'`,
+  );
+  const map: Record<string, string> = {};
+  for (const row of rows) {
+    const match = row.title.match(/\[(.+?)\]\s*$/);
+    if (match) {
+      map[row.symbol] = match[1];
+    }
+  }
+  return map;
+}
+
 function getBodyLabel(
   body: string,
   hasRes: boolean,
@@ -118,6 +137,23 @@ function escapeXml(text: string | null | undefined): string {
 
 function cleanTitle(title: string): string {
   return title.replace(/[\s:]+$/, "");
+}
+
+// Detect titles that are just the resolution label (e.g. "Resolution 1325 (2000)")
+// and thus redundant with the symbol column
+const REDUNDANT_TITLE_RE = /^(Security Council )?resolution\s+\d+(?:\s*\(\d{4}\))?\s*\/?$/i;
+
+// Enhance mandate titles: replace redundant "Resolution NNNN (YYYY)" titles
+// with bracket descriptions where available, or empty string if none
+function enhanceTitles(
+  mandates: Mandate[],
+  bracketDescs: Record<string, string>,
+): void {
+  for (const m of mandates) {
+    if (REDUNDANT_TITLE_RE.test(m.title)) {
+      m.title = bracketDescs[m.symbol] || "";
+    }
+  }
 }
 
 // Style IDs from UN template: H1 = "_ H_1", H23 = "_ H_2/3", H4 = "_ H_4"
@@ -317,10 +353,13 @@ function citationTable(
 ): string {
   const entries = groupByTitle(mandates);
 
+  // Column-first layout: left column gets first half, right column gets second half
+  // so reading order is sequential down the left, then down the right
+  const half = Math.ceil(entries.length / 2);
   let rows = "";
-  for (let i = 0; i < entries.length; i += 2) {
+  for (let i = 0; i < half; i++) {
     const e1 = entries[i];
-    const e2 = i + 1 < entries.length ? entries[i + 1] : null;
+    const e2 = i + half < entries.length ? entries[i + half] : null;
 
     rows += `<w:tr>${buildSymbolCell(e1, hyperlinks)}${buildTitleCell(e1, hyperlinks)}${e2 ? buildSymbolCell(e2, hyperlinks) + buildTitleCell(e2, hyperlinks) : EMPTY_SYMBOL_CELL + EMPTY_TITLE_CELL}</w:tr>`;
   }
@@ -339,9 +378,10 @@ export async function exportEntityToDocx(
   const templateBuffer = await readFile(templatePath);
   const zip = await JSZip.loadAsync(templateBuffer);
 
-  const [{ rows }, bodyFullNames] = await Promise.all([
+  const [{ rows }, bodyFullNames, bracketDescs] = await Promise.all([
     getAppliedExportData(entityAbbrev),
     fetchBodyFullNames(),
+    fetchBracketDescriptions(),
   ]);
 
   // Build structure: subprog -> body -> mandates
@@ -403,6 +443,7 @@ export async function exportEntityToDocx(
 
     for (const body of sortBodies([...bodyMap.keys()])) {
       const mandates = bodyMap.get(body)!;
+      enhanceTitles(mandates, bracketDescs);
       const hasRes = mandates.some((m) => !isDecision(m.symbol));
       const hasDec = mandates.some((m) => isDecision(m.symbol));
 
@@ -461,6 +502,7 @@ function buildEntityContent(
   entityAbbrev: string,
   hyperlinks: Map<string, string>,
   bodyFullNames: Record<string, string>,
+  bracketDescs: Record<string, string>,
 ): string {
   const bySubprog: Map<string, Map<string, Mandate[]>> = new Map();
   const seen = new Set<string>();
@@ -510,6 +552,7 @@ function buildEntityContent(
 
     for (const body of sortBodies([...bodyMap.keys()])) {
       const mandates = bodyMap.get(body)!;
+      enhanceTitles(mandates, bracketDescs);
       const hasRes = mandates.some((m) => !isDecision(m.symbol));
       const hasDec = mandates.some((m) => isDecision(m.symbol));
       content += paraH4(getBodyLabel(body, hasRes, hasDec, bodyFullNames));
@@ -529,9 +572,10 @@ export async function exportAllToDocx(): Promise<Buffer> {
   );
   const templateBuffer = await readFile(templatePath);
   const zip = await JSZip.loadAsync(templateBuffer);
-  const [{ rows }, bodyFullNames] = await Promise.all([
+  const [{ rows }, bodyFullNames, bracketDescs] = await Promise.all([
     getAppliedExportData(),
     fetchBodyFullNames(),
+    fetchBracketDescriptions(),
   ]);
 
   // Get all unique entities with their long names
@@ -551,7 +595,7 @@ export async function exportAllToDocx(): Promise<Buffer> {
   );
 
   for (const [entity, entityLong] of sortedEntities) {
-    const entityContent = buildEntityContent(rows, entity, hyperlinks, bodyFullNames);
+    const entityContent = buildEntityContent(rows, entity, hyperlinks, bodyFullNames, bracketDescs);
     if (!entityContent) continue;
 
     // Entity header (bold, larger) - use long name
