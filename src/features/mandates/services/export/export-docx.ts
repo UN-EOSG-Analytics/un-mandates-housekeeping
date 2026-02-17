@@ -199,9 +199,63 @@ function buildSymbolCell(entry: CitationEntry, hyperlinks: Map<string, string>):
   return `<w:tc><w:tcPr><w:tcW w:w="733" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_SYMBOL}${symbolContent}</w:p></w:tc>`;
 }
 
-function buildTitleCell(entry: CitationEntry): string {
-  const title = escapeXml(entry.title);
-  return `<w:tc><w:tcPr><w:tcW w:w="1767" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_TITLE}<w:r><w:rPr><w:sz w:val="17"/></w:rPr><w:t>${title}</w:t></w:r></w:p></w:tc>`;
+// Map body names found in titles to UN document symbol prefixes
+const TITLE_BODY_TO_PREFIX: Record<string, string> = {
+  "General Assembly": "A/RES/",
+  "Security Council": "S/RES/",
+  "Economic and Social Council": "E/RES/",
+  "Human Rights Council": "A/HRC/RES/",
+};
+
+// Pattern: "Body resolution(s) 71/243" — captures body name and number
+const TITLE_RES_RE = new RegExp(
+  `(${Object.keys(TITLE_BODY_TO_PREFIX).join("|")})\\s+resolutions?\\s+(\\d+(?:/\\d+)*)`,
+  "gi",
+);
+
+// Build title cell with inline hyperlinks for resolution references
+function buildTitleCell(entry: CitationEntry, hyperlinks: Map<string, string>): string {
+  const raw = entry.title;
+  const segments: string[] = [];
+  let lastIndex = 0;
+
+  for (const match of raw.matchAll(TITLE_RES_RE)) {
+    const bodyName = match[1];
+    const num = match[2];
+    const prefix = TITLE_BODY_TO_PREFIX[bodyName];
+    if (!prefix) continue;
+
+    // Text before the match
+    if (match.index > lastIndex) {
+      segments.push(textRun(raw.slice(lastIndex, match.index)));
+    }
+    // "General Assembly resolution " as plain text
+    const labelEnd = match.index + match[0].length - num.length;
+    segments.push(textRun(raw.slice(match.index, labelEnd)));
+    // The number as a hyperlink
+    const url = `https://documents.un.org/en/${prefix}${num}`;
+    const rId = `rId${hyperlinks.size + 10}`;
+    hyperlinks.set(rId, url);
+    segments.push(
+      `<w:hyperlink r:id="${rId}" w:history="1"><w:r><w:rPr><w:rStyle w:val="Hyperlink"/><w:sz w:val="17"/></w:rPr><w:t>${escapeXml(num)}</w:t></w:r></w:hyperlink>`,
+    );
+    lastIndex = match.index + match[0].length;
+  }
+
+  // Remaining text (or entire title if no matches)
+  if (lastIndex < raw.length) {
+    segments.push(textRun(raw.slice(lastIndex)));
+  }
+
+  const content = segments.length > 0
+    ? segments.join("")
+    : textRun(raw);
+
+  return `<w:tc><w:tcPr><w:tcW w:w="1767" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_TITLE}${content}</w:p></w:tc>`;
+}
+
+function textRun(text: string): string {
+  return `<w:r><w:rPr><w:sz w:val="17"/></w:rPr><w:t xml:space="preserve">${escapeXml(text)}</w:t></w:r>`;
 }
 
 const EMPTY_SYMBOL_CELL = `<w:tc><w:tcPr><w:tcW w:w="733" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_SYMBOL}</w:p></w:tc>`;
@@ -219,7 +273,7 @@ function citationTable(
     const e1 = entries[i];
     const e2 = i + 1 < entries.length ? entries[i + 1] : null;
 
-    rows += `<w:tr>${buildSymbolCell(e1, hyperlinks)}${buildTitleCell(e1)}${e2 ? buildSymbolCell(e2, hyperlinks) + buildTitleCell(e2) : EMPTY_SYMBOL_CELL + EMPTY_TITLE_CELL}</w:tr>`;
+    rows += `<w:tr>${buildSymbolCell(e1, hyperlinks)}${buildTitleCell(e1, hyperlinks)}${e2 ? buildSymbolCell(e2, hyperlinks) + buildTitleCell(e2, hyperlinks) : EMPTY_SYMBOL_CELL + EMPTY_TITLE_CELL}</w:tr>`;
   }
 
   return `<w:tbl><w:tblPr><w:tblStyle w:val="TableGrid"/><w:tblW w:w="5000" w:type="pct"/><w:tblBorders><w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/></w:tblBorders><w:tblCellMar><w:left w:w="0" w:type="dxa"/><w:right w:w="0" w:type="dxa"/></w:tblCellMar><w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/></w:tblPr><w:tblGrid><w:gridCol w:w="1408"/><w:gridCol w:w="3397"/><w:gridCol w:w="1408"/><w:gridCol w:w="3397"/></w:tblGrid>${rows}</w:tbl>`;
