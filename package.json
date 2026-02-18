@@ -51,7 +51,7 @@
     "recharts": "2.15.4",
     "remotion": "^4.0.421",
     "tailwind-merge": "^3.4.0",
-    "undifferent": "github:un-eosg-analytics/undifferent#b5689037d755f194db6777b38f02750bf45e1a90"
+    "undifferent": "github:un-eosg-analytics/undifferent"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
