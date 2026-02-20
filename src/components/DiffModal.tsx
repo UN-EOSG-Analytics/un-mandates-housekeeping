@@ -272,7 +272,7 @@ export function DiffModal({
   const { loading, error, diffResult } = state;
 
   // Construct external diff tool URL
-  const externalDiffUrl = `https://diff.un-two-zero.dev/?symbol1=${encodeURIComponent(originalSymbol)}&symbol2=${encodeURIComponent(compareSymbol)}`;
+  const externalDiffUrl = `https://diff.un-two-zero.dev/?symbol1=${originalSymbol}&symbol2=${compareSymbol}`;
 
   if (!isOpen) return null;
 
