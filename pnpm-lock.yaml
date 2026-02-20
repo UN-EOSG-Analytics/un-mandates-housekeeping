@@ -114,8 +114,8 @@ importers:
         specifier: ^3.4.0
         version: 3.4.0
       undifferent:
-        specifier: github:un-eosg-analytics/undifferent
-        version: https://codeload.github.com/un-eosg-analytics/undifferent/tar.gz/fc6b52efd0c116a05f12cdc2075414f59d89822f(react@19.2.4)
+        specifier: github:un-eosg-analytics/undifferent#release
+        version: https://codeload.github.com/un-eosg-analytics/undifferent/tar.gz/06df351ed69daebbb84f483ca4ed0e72e89117db(next@16.1.6(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)
     devDependencies:
       '@svgr/webpack':
         specifier: ^8.1.0
@@ -4805,8 +4805,8 @@ packages:
   undici-types@7.16.0:
     resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
-  undifferent@https://codeload.github.com/un-eosg-analytics/undifferent/tar.gz/fc6b52efd0c116a05f12cdc2075414f59d89822f:
-    resolution: {tarball: https://codeload.github.com/un-eosg-analytics/undifferent/tar.gz/fc6b52efd0c116a05f12cdc2075414f59d89822f}
+  undifferent@https://codeload.github.com/un-eosg-analytics/undifferent/tar.gz/06df351ed69daebbb84f483ca4ed0e72e89117db:
+    resolution: {tarball: https://codeload.github.com/un-eosg-analytics/undifferent/tar.gz/06df351ed69daebbb84f483ca4ed0e72e89117db}
     version: 0.1.0
     peerDependencies:
       react: '>=18'
@@ -10013,8 +10013,9 @@ snapshots:
 
   undici-types@7.16.0: {}
 
-  undifferent@https://codeload.github.com/un-eosg-analytics/undifferent/tar.gz/fc6b52efd0c116a05f12cdc2075414f59d89822f(react@19.2.4):
+  undifferent@https://codeload.github.com/un-eosg-analytics/undifferent/tar.gz/06df351ed69daebbb84f483ca4ed0e72e89117db(next@16.1.6(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4):
     dependencies:
+      '@next/third-parties': 16.1.6(next@16.1.6(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)
       diff: 8.0.3
       fast-levenshtein: 3.0.0
       server-only: 0.0.1
@@ -10024,6 +10025,7 @@ snapshots:
       react: 19.2.4
     transitivePeerDependencies:
       - '@napi-rs/canvas'
+      - next
 
   unicode-canonical-property-names-ecmascript@2.0.1: {}
 
