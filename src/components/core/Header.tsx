@@ -55,6 +55,14 @@ export function Header({
         <div className="flex items-center gap-4">
           {!hideAbout && (
             <>
+              {user?.isReviewer && (
+                <Link
+                  href="/analysis"
+                  className="text-sm font-medium text-gray-700 transition-colors hover:text-un-blue"
+                >
+                  Analysis
+                </Link>
+              )}
               <Link
                 href="/about"
                 className="text-sm font-medium text-gray-700 transition-colors hover:text-un-blue"
