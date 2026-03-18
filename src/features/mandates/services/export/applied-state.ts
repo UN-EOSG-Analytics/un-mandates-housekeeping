@@ -10,6 +10,7 @@ export interface AppliedMandateRow {
   symbol: string;
   title: string;
   body: string;
+  docType: string | null;
   year: number | null;
   link: string | null;
   entity: string;
@@ -57,6 +58,7 @@ interface DecisionRow {
 interface ResolvedDecisionMetadata {
   title: string;
   body: string;
+  docType: string | null;
   year: number | null;
   link: string | null;
 }
@@ -85,6 +87,7 @@ function applyManualOverrides(
   return {
     title: manual.title ?? base.title,
     body: manual.body ?? base.body,
+    docType: base.docType,
     year: manual.year ?? base.year,
     link: manual.link ?? base.link,
   };
@@ -176,6 +179,7 @@ function resolveDecisionMetadata(
   const base = metadataLookup[symbol] || {
     title: "",
     body: "",
+    docType: null,
     year: null,
     link: null,
   };
@@ -227,6 +231,7 @@ export async function getAppliedExportData(entity?: string): Promise<{
       ? {
           title: cleanTitle(meta.title),
           body: meta.body || "",
+          docType: meta.docType || null,
           year: meta.year ?? null,
           link: meta.link || null,
         }
@@ -270,6 +275,7 @@ export async function getAppliedExportData(entity?: string): Promise<{
             symbol: decision.newSymbol,
             title: cleanTitle(resolved.title),
             body: resolved.body || "",
+            docType: resolved.docType || null,
             year: resolved.year ?? null,
             link: resolved.link || null,
             entity: decision.entity,
@@ -293,6 +299,7 @@ export async function getAppliedExportData(entity?: string): Promise<{
         symbol: rec.full_document_symbol,
         title: cleanTitle(rec.description || rec.uniform_title || ""),
         body: rec.body || "",
+        docType: rec.type || null,
         year: rec.year,
         link: rec.link,
         entity: ci.entity,
@@ -323,6 +330,7 @@ export async function getAppliedExportData(entity?: string): Promise<{
       symbol: decision.documentSymbol,
       title: cleanTitle(resolved.title),
       body: resolved.body || "",
+      docType: resolved.docType || null,
       year: resolved.year ?? null,
       link: resolved.link || null,
       entity: decision.entity,

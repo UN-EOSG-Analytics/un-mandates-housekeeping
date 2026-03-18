@@ -12,15 +12,15 @@ interface Mandate {
   title: string;
   link: string | null;
   body: string | null;
+  docType: string | null;
 }
 
-// Master hierarchy order for intergovernmental bodies (UN standard)
-// Maps both abbreviations AND full names to the same sort index so sorting
-// works regardless of whether the body field contains "GA" or "General Assembly".
-const BODY_ORDER_LIST: [string, string | null][] = [
+// Master hierarchy order for intergovernmental bodies (UN standard).
+// Principal organs have fixed positions; governing bodies come after
+// and are sorted alphabetically by full name.
+const PRINCIPAL_BODY_ORDER: [string, string | null][] = [
   ["Charter", null],
   ["UNCLOS", null],
-  ["Other", null],
   ["GA", "General Assembly"],
   ["ECOSOC", "Economic and Social Council"],
   ["TC", "Trusteeship Council"],
@@ -30,24 +30,47 @@ const BODY_ORDER_LIST: [string, string | null][] = [
   ["UNHA and Other", "United Nations Habitat Assembly and other"],
 ];
 
-// Build sort-index lookup accepting both abbreviation and full name
-const BODY_SORT_INDEX: Record<string, number> = {};
-BODY_ORDER_LIST.forEach(([abbr, full], i) => {
-  BODY_SORT_INDEX[abbr] = i;
-  if (full) BODY_SORT_INDEX[full] = i;
-});
+// Well-known body abbreviation → full name
+const BODY_NAMES: Record<string, string> = {
+  // Principal organs (from PRINCIPAL_BODY_ORDER)
+  GA: "General Assembly",
+  ECOSOC: "Economic and Social Council",
+  TC: "Trusteeship Council",
+  SC: "Security Council",
+  HRC: "Human Rights Council",
+  UNEA: "United Nations Environment Assembly",
+  "UNHA and Other": "United Nations Habitat Assembly and other",
+  // Regional commissions
+  ECA: "Economic Commission for Africa",
+  ECE: "Economic Commission for Europe",
+  ECLAC: "Economic Commission for Latin America and the Caribbean",
+  ESCAP: "Economic and Social Commission for Asia and the Pacific",
+  ESCWA: "Economic and Social Commission for Western Asia",
+  // Functional commissions and subsidiary bodies
+  CCPCJ: "Commission on Crime Prevention and Criminal Justice",
+  CND: "Commission on Narcotic Drugs",
+  CPD: "Commission on Population and Development",
+  CSD: "Commission for Social Development",
+  CSW: "Commission on the Status of Women",
+  // Treaty bodies and other governing bodies
+  "CAC/COSP": "Conference of the States Parties to the United Nations Convention against Corruption",
+  INCB: "International Narcotics Control Board",
+  UNCTAD: "United Nations Conference on Trade and Development",
+  "UNTOC COP": "Conference of the Parties to the United Nations Convention against Transnational Organized Crime",
+  WTO: "World Trade Organization",
+};
 
-// Well-known body abbreviation → full name (fallback before DB lookup)
-const BODY_NAMES: Record<string, string> = {};
-for (const [abbr, full] of BODY_ORDER_LIST) {
-  if (full) BODY_NAMES[abbr] = full;
-}
+// Build sort-index for principal organs (fixed positions)
+const PRINCIPAL_SORT_INDEX: Record<string, number> = {};
+PRINCIPAL_BODY_ORDER.forEach(([abbr, full], i) => {
+  PRINCIPAL_SORT_INDEX[abbr] = i;
+  if (full) PRINCIPAL_SORT_INDEX[full] = i;
+});
 
 // Bodies that get a fixed label (no "resolutions and decisions" suffix)
 const FIXED_LABELS: Record<string, string> = {
   Charter: "Charter of the United Nations",
   UNCLOS: "Conventions",
-  Other: "Conventions and protocols",
 };
 
 async function fetchBodyFullNames(): Promise<Record<string, string>> {
@@ -80,42 +103,78 @@ async function fetchBracketDescriptions(): Promise<Record<string, string>> {
   return map;
 }
 
-function getBodyLabel(
+// Build a section header like "General Assembly resolutions" or "Conventions"
+function getBodyTypeLabel(
   body: string,
-  hasRes: boolean,
-  hasDec: boolean,
+  typeSuffix: string,
   bodyFullNames: Record<string, string>,
 ): string {
   if (FIXED_LABELS[body]) return FIXED_LABELS[body];
-  // If body is already a full name (e.g. "General Assembly"), use it directly.
-  // Otherwise look up abbreviation → full name via BODY_NAMES, then DB, then raw value.
-  const isAlreadyFullName = Object.values(BODY_NAMES).includes(body);
-  const name = isAlreadyFullName ? body : (BODY_NAMES[body] || bodyFullNames[body] || body);
-  if (hasRes && hasDec) return `${name} resolutions and decisions`;
-  if (hasDec) return `${name} decisions`;
-  return `${name} resolutions`;
+  const name = getBodyFullName(body, bodyFullNames);
+  return `${name} ${typeSuffix}`;
 }
 
-function sortBodies(bodies: string[]): string[] {
+function getBodyFullName(body: string, bodyFullNames: Record<string, string>): string {
+  const isAlreadyFullName = Object.values(BODY_NAMES).includes(body);
+  return isAlreadyFullName ? body : (BODY_NAMES[body] || bodyFullNames[body] || body);
+}
+
+function sortBodies(bodies: string[], bodyFullNames: Record<string, string>): string[] {
   return [...bodies].sort((a, b) => {
-    const ai = BODY_SORT_INDEX[a] ?? -1;
-    const bi = BODY_SORT_INDEX[b] ?? -1;
-    if (ai === -1 && bi === -1) return a.localeCompare(b);
-    if (ai === -1) return 1;
-    if (bi === -1) return -1;
-    return ai - bi;
+    const ai = PRINCIPAL_SORT_INDEX[a] ?? -1;
+    const bi = PRINCIPAL_SORT_INDEX[b] ?? -1;
+    // Both are principal organs: sort by fixed order
+    if (ai !== -1 && bi !== -1) return ai - bi;
+    // One is principal, one isn't: principal first
+    if (ai !== -1) return -1;
+    if (bi !== -1) return 1;
+    // Neither is principal (governing bodies): sort alphabetically by full name
+    const aName = getBodyFullName(a, bodyFullNames);
+    const bName = getBodyFullName(b, bodyFullNames);
+    return aName.localeCompare(bName);
   });
 }
 
 function stripPrefix(symbol: string): string {
-  // Standard UN organs: A/RES/70/1, S/RES/2250, E/DEC/2015/1, etc.
+  // HRC: A/HRC/RES/12/10, A/HRC/DEC/18/117, A/HRC/PRST/15/2, A/HRC/PRST/OS/12/1
+  const hrc = symbol
+    .replace(/^A\/HRC\/RES\//, "")
+    .replace(/^A\/HRC\/DEC\//, "")
+    .replace(/^A\/HRC\/PRST\/OS\//, "")
+    .replace(/^A\/HRC\/PRST\//, "");
+  if (hrc !== symbol) return normalizeSymbolSpacing(hrc.trim());
+  // Standard UN organs: A/RES/70/1, S/RES/2250, S/PRST/2004/36, E/DEC/2015/1, etc.
   const standard = symbol
     .replace(/^[AES]\/RES\//, "")
     .replace(/^[AES]\/DEC\//, "")
-    .replace(/^S\/RES\//, "");
+    .replace(/^S\/RES\//, "")
+    .replace(/^S\/PRST\//, "");
   if (standard !== symbol) return normalizeSymbolSpacing(standard.trim());
-  // Governing bodies: "E/CEPAL Resolution 769 (XL)" → "769 (XL)"
-  // Also handles "UNEP/EA.RES/1/7" style or "X/Y Decision 3 (Z)"
+  // Regional commissions with /RES/ prefix: E/ESCWA/RES/214(XIX)
+  const regionalRes = symbol.replace(/^E\/\w+\/RES\//, "");
+  if (regionalRes !== symbol) return normalizeSymbolSpacing(regionalRes.trim());
+  // UNEP Environment Assembly: UNEP/EA.1/RES.1 → 1/1, UNEP/EA.1/L.13 → 1/L.13
+  const unepEA = symbol.match(/^UNEP\/EA\.(\d+)\/(?:RES\.|L\.)(.+)$/);
+  if (unepEA) return normalizeSymbolSpacing(`${unepEA[1]}/${unepEA[2]}`.trim());
+  // UNEP Governing Council: UNEP/GC 27/10 → 27/10, UNEP/GC SS.XI/5 → SS.XI/5
+  const unepGC = symbol.match(/^UNEP\/GC\s+(.+)$/);
+  if (unepGC) return normalizeSymbolSpacing(unepGC[1].trim());
+  // UN-Habitat Governing Council: HSP/GC/24/7 → 24/7
+  const hspGC = symbol.match(/^HSP\/GC\/(.+)$/);
+  if (hspGC) return normalizeSymbolSpacing(hspGC[1].trim());
+  // UN-Habitat Executive Board: HSP/EB 2024/5 → 2024/5
+  const hspEB = symbol.match(/^HSP\/EB\s+(.+)$/);
+  if (hspEB) return normalizeSymbolSpacing(hspEB[1].trim());
+  // UN-Habitat Committee of Permanent Representatives: HSP/CPR 1/1 → 1/1
+  const hspCPR = symbol.match(/^HSP\/CPR\s+(.+)$/);
+  if (hspCPR) return normalizeSymbolSpacing(hspCPR[1].trim());
+  // CTOC/COP: CTOC/COP 12/3 → 12/3
+  const ctoc = symbol.match(/^CTOC\/COP\s+(.+)$/);
+  if (ctoc) return normalizeSymbolSpacing(ctoc[1].trim());
+  // CAC/COSP: CAC/COSP 10/5 → 10/5
+  const cac = symbol.match(/^CAC\/COSP\s+(.+)$/);
+  if (cac) return normalizeSymbolSpacing(cac[1].trim());
+  // Governing bodies with "Resolution NNN" or "Decision NNN" in symbol text
   const bodyRes = symbol.match(/\b(?:Resolution|Decision)\s+(.+)$/i);
   if (bodyRes) return normalizeSymbolSpacing(bodyRes[1].trim());
   return normalizeSymbolSpacing(symbol.trim());
@@ -126,12 +185,19 @@ function normalizeSymbolSpacing(s: string): string {
   return s.replace(/(\d)\(/, "$1 (");
 }
 
+// Reclassify body based on symbol prefix when the source data uses a generic body like "Other"
+function classifyBody(body: string, symbol: string): string {
+  if (symbol.startsWith("CAC/COSP")) return "CAC/COSP";
+  if (symbol.startsWith("CTOC/COP")) return "UNTOC COP";
+  return body;
+}
+
 function isDecision(symbol: string): boolean {
-  return /^[AES]\/DEC\//.test(symbol);
+  return /^[AES]\/DEC\//.test(symbol) || /^A\/HRC\/DEC\//.test(symbol);
 }
 
 function isPresidentialStatement(symbol: string): boolean {
-  return /^S\/PRST\//.test(symbol);
+  return /^S\/PRST\//.test(symbol) || /^A\/HRC\/PRST\//.test(symbol);
 }
 
 function escapeXml(text: string | null | undefined): string {
@@ -387,7 +453,45 @@ function charterContent(
 }
 
 
-// Render a body section, splitting SC into resolutions and presidential statements
+// Classify a mandate's document type using symbol-based regex first, then docType fallback
+function classifyDocType(m: Mandate): string {
+  if (isPresidentialStatement(m.symbol)) return "statements";
+  if (isDecision(m.symbol)) return "decisions";
+  // Symbol contains /RES/ or "Resolution" keyword
+  if (/\/RES[./]/.test(m.symbol) || /\bResolution\b/i.test(m.symbol)) return "resolutions";
+  if (/\/DEC[./]/.test(m.symbol) || /\bDecision\b/i.test(m.symbol)) return "decisions";
+  // Fall back to docType field from data
+  const dt = (m.docType || "").toLowerCase();
+  if (dt.includes("resolution")) return "resolutions";
+  if (dt.includes("decision")) return "decisions";
+  if (dt.includes("statement")) return "statements";
+  if (dt.includes("conclusion")) return "conclusions";
+  if (dt.includes("declaration")) return "declarations";
+  if (dt.includes("recommendation")) return "recommendations";
+  // Default: resolutions (most common)
+  return "resolutions";
+}
+
+// Document type display order within each body section
+const DOC_TYPE_ORDER = [
+  "resolutions",
+  "decisions",
+  "conclusions",
+  "declarations",
+  "recommendations",
+  "statements",
+];
+
+// Statement headers use a special format
+function getStatementLabel(body: string): string {
+  const isSC = body === "Security Council" || body === "SC";
+  const isHRC = body === "Human Rights Council" || body === "HRC";
+  if (isSC) return "Statements by the President of the Security Council";
+  if (isHRC) return "Statements by the President of the Human Rights Council";
+  return `${body} statements`;
+}
+
+// Render a body section, splitting into separate sub-sections per document type
 function renderBodySection(
   body: string,
   mandates: Mandate[],
@@ -398,27 +502,34 @@ function renderBodySection(
   enhanceTitles(mandates, bracketDescs);
 
   if (body === "Charter") {
-    return paraH4(getBodyLabel(body, true, false, bodyFullNames)) +
+    return paraH4(getBodyTypeLabel(body, "resolutions", bodyFullNames)) +
       charterContent(mandates, hyperlinks);
   }
 
-  // For SC: split presidential statements from resolutions/decisions
-  const isSC = body === "Security Council" || body === "SC";
-  const statements = isSC ? mandates.filter((m) => isPresidentialStatement(m.symbol)) : [];
-  const rest = isSC ? mandates.filter((m) => !isPresidentialStatement(m.symbol)) : mandates;
-
-  let content = "";
-
-  if (rest.length > 0) {
-    const hasRes = rest.some((m) => !isDecision(m.symbol));
-    const hasDec = rest.some((m) => isDecision(m.symbol));
-    content += paraH4(getBodyLabel(body, hasRes, hasDec, bodyFullNames));
-    content += citationTable(rest, hyperlinks);
+  // Group mandates by classified document type
+  const byType = new Map<string, Mandate[]>();
+  for (const m of mandates) {
+    const dt = classifyDocType(m);
+    if (!byType.has(dt)) byType.set(dt, []);
+    byType.get(dt)!.push(m);
   }
 
-  if (statements.length > 0) {
-    content += paraH4("Statements by the President of the Security Council");
-    content += citationTable(statements, hyperlinks);
+  // Sort types by defined order; unknown types go at the end
+  const sortedTypes = [...byType.keys()].sort((a, b) => {
+    const ai = DOC_TYPE_ORDER.indexOf(a);
+    const bi = DOC_TYPE_ORDER.indexOf(b);
+    return (ai === -1 ? 999 : ai) - (bi === -1 ? 999 : bi);
+  });
+
+  let content = "";
+  for (const dt of sortedTypes) {
+    const items = byType.get(dt)!;
+    if (dt === "statements") {
+      content += paraH4(getStatementLabel(body));
+    } else {
+      content += paraH4(getBodyTypeLabel(body, dt, bodyFullNames));
+    }
+    content += citationTable(items, hyperlinks);
   }
 
   return content;
@@ -477,7 +588,7 @@ export async function exportEntityToDocx(
     if (seen.has(key)) continue;
     seen.add(key);
 
-    const body = row.body || "Other";
+    const body = classifyBody(row.body || "Other", row.symbol);
     if (!bySubprog.has(subprog)) bySubprog.set(subprog, new Map());
     const bodyMap = bySubprog.get(subprog)!;
     if (!bodyMap.has(body)) bodyMap.set(body, []);
@@ -487,6 +598,7 @@ export async function exportEntityToDocx(
       title: cleanTitle(row.title),
       link: row.link,
       body,
+      docType: row.docType,
     });
   }
 
@@ -524,7 +636,7 @@ export async function exportEntityToDocx(
       }
     }
 
-    for (const body of sortBodies([...bodyMap.keys()])) {
+    for (const body of sortBodies([...bodyMap.keys()], bodyFullNames)) {
       const mandates = bodyMap.get(body)!;
       content += renderBodySection(body, mandates, hyperlinks, bodyFullNames, bracketDescs);
     }
@@ -591,7 +703,7 @@ function buildEntityContent(
     if (seen.has(key)) continue;
     seen.add(key);
 
-    const body = row.body || "Other";
+    const body = classifyBody(row.body || "Other", row.symbol);
     if (!bySubprog.has(subprog)) bySubprog.set(subprog, new Map());
     const bodyMap = bySubprog.get(subprog)!;
     if (!bodyMap.has(body)) bodyMap.set(body, []);
@@ -601,6 +713,7 @@ function buildEntityContent(
       title: cleanTitle(row.title),
       link: row.link,
       body,
+      docType: row.docType,
     });
   }
 
@@ -626,7 +739,7 @@ function buildEntityContent(
       }
     }
 
-    for (const body of sortBodies([...bodyMap.keys()])) {
+    for (const body of sortBodies([...bodyMap.keys()], bodyFullNames)) {
       const mandates = bodyMap.get(body)!;
       content += renderBodySection(body, mandates, hyperlinks, bodyFullNames, bracketDescs);
     }
