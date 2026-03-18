@@ -275,7 +275,7 @@ function buildSymbolCell(entry: CitationEntry, hyperlinks: Map<string, string>):
   // Join with "; " runs between each symbol
   const separator = `<w:r><w:rPr><w:sz w:val="17"/></w:rPr><w:t xml:space="preserve">; </w:t></w:r>`;
   const symbolContent = parts.join(separator);
-  return `<w:tc><w:tcPr><w:tcW w:w="733" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_SYMBOL}${symbolContent}</w:p></w:tc>`;
+  return `<w:tc><w:tcPr><w:tcW w:w="1465" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_SYMBOL}${symbolContent}</w:p></w:tc>`;
 }
 
 // Map body names found in titles to UN document symbol prefixes
@@ -330,7 +330,7 @@ function buildTitleCell(entry: CitationEntry, hyperlinks: Map<string, string>): 
     ? segments.join("")
     : textRun(raw);
 
-  return `<w:tc><w:tcPr><w:tcW w:w="1767" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_TITLE}${content}</w:p></w:tc>`;
+  return `<w:tc><w:tcPr><w:tcW w:w="3535" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_TITLE}${content}</w:p></w:tc>`;
 }
 
 function textRun(text: string): string {
@@ -386,8 +386,6 @@ function charterContent(
   return xml;
 }
 
-const EMPTY_SYMBOL_CELL = `<w:tc><w:tcPr><w:tcW w:w="733" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_SYMBOL}</w:p></w:tc>`;
-const EMPTY_TITLE_CELL = `<w:tc><w:tcPr><w:tcW w:w="1767" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_TITLE}</w:p></w:tc>`;
 
 // Render a body section, splitting SC into resolutions and presidential statements
 function renderBodySection(
@@ -426,25 +424,30 @@ function renderBodySection(
   return content;
 }
 
-// Generate table XML for citations (4-column: 2 entries per row, each as symbol(s) + title)
+// Continuous section break switching to 2-column layout
+const SECT_BREAK_2COL = `<w:p><w:pPr><w:sectPr><w:type w:val="continuous"/><w:pgSz w:w="12240" w:h="15840"/><w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440"/><w:cols w:space="720"/></w:sectPr></w:pPr></w:p>`;
+
+// Continuous section break switching back to 1-column layout
+const SECT_BREAK_1COL = `<w:p><w:pPr><w:sectPr><w:type w:val="continuous"/><w:pgSz w:w="12240" w:h="15840"/><w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440"/><w:cols w:num="2" w:space="240"/></w:sectPr></w:pPr></w:p>`;
+
+// Generate table XML for citations (2-column table: symbol + title)
+// Wrapped in continuous section breaks that enable Word's native 2-column flow,
+// so content fills left column then right column per page automatically.
 function citationTable(
   mandates: Mandate[],
   hyperlinks: Map<string, string>,
 ): string {
   const entries = groupByTitle(mandates);
 
-  // Column-first layout: left column gets first half, right column gets second half
-  // so reading order is sequential down the left, then down the right
-  const half = Math.ceil(entries.length / 2);
   let rows = "";
-  for (let i = 0; i < half; i++) {
-    const e1 = entries[i];
-    const e2 = i + half < entries.length ? entries[i + half] : null;
-
-    rows += `<w:tr>${buildSymbolCell(e1, hyperlinks)}${buildTitleCell(e1, hyperlinks)}${e2 ? buildSymbolCell(e2, hyperlinks) + buildTitleCell(e2, hyperlinks) : EMPTY_SYMBOL_CELL + EMPTY_TITLE_CELL}</w:tr>`;
+  for (const entry of entries) {
+    rows += `<w:tr>${buildSymbolCell(entry, hyperlinks)}${buildTitleCell(entry, hyperlinks)}</w:tr>`;
   }
 
-  return `<w:tbl><w:tblPr><w:tblStyle w:val="TableGrid"/><w:tblW w:w="5000" w:type="pct"/><w:tblBorders><w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/></w:tblBorders><w:tblCellMar><w:left w:w="0" w:type="dxa"/><w:right w:w="0" w:type="dxa"/></w:tblCellMar><w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/></w:tblPr><w:tblGrid><w:gridCol w:w="1408"/><w:gridCol w:w="3397"/><w:gridCol w:w="1408"/><w:gridCol w:w="3397"/></w:tblGrid>${rows}</w:tbl>`;
+  const table = `<w:tbl><w:tblPr><w:tblStyle w:val="TableGrid"/><w:tblW w:w="5000" w:type="pct"/><w:tblBorders><w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/></w:tblBorders><w:tblCellMar><w:left w:w="0" w:type="dxa"/><w:right w:w="0" w:type="dxa"/></w:tblCellMar><w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/></w:tblPr><w:tblGrid><w:gridCol w:w="1408"/><w:gridCol w:w="3397"/></w:tblGrid>${rows}</w:tbl>`;
+
+  // Wrap: switch to 2-col before table, switch back to 1-col after
+  return SECT_BREAK_2COL + table + SECT_BREAK_1COL;
 }
 
 export async function exportEntityToDocx(
