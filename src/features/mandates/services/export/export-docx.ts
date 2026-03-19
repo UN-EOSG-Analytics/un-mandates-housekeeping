@@ -396,8 +396,11 @@ function buildTitleCell(entry: CitationEntry, hyperlinks: Map<string, string>): 
     // "General Assembly resolution " as plain text
     const labelEnd = match.index + match[0].length - num.length;
     segments.push(textRun(raw.slice(match.index, labelEnd)));
-    // The number as a hyperlink
-    const url = `https://documents.un.org/en/${prefix}${num}`;
+    // The number as a hyperlink — HRC resolutions use OHCHR links
+    const fullSymbol = `${prefix}${num}`;
+    const url = prefix === "A/HRC/RES/"
+      ? `https://ap.ohchr.org/documents/dpage_e.aspx?si=${fullSymbol.toLowerCase()}`
+      : `https://documents.un.org/en/${fullSymbol}`;
     const rId = `rId${hyperlinks.size + 10}`;
     hyperlinks.set(rId, url);
     segments.push(
