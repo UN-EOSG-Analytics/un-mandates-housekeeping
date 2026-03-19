@@ -51,6 +51,7 @@ const BODY_NAMES: Record<string, string> = {
   CND: "Commission on Narcotic Drugs",
   CPD: "Commission on Population and Development",
   CSD: "Commission for Social Development",
+  CHR: "Commission on Human Rights",
   CSW: "Commission on the Status of Women",
   // Treaty bodies and other governing bodies
   "CAC/COSP": "Conference of the States Parties to the United Nations Convention against Corruption",
@@ -150,6 +151,9 @@ function stripPrefix(symbol: string): string {
     .replace(/^S\/RES\//, "")
     .replace(/^S\/PRST\//, "");
   if (standard !== symbol) return normalizeSymbolSpacing(standard.trim());
+  // Commission on Human Rights: E/CN.4/RES/ 1993/2A → 1993/2A
+  const chr = symbol.replace(/^E\/CN\.4\/RES\/\s*/, "");
+  if (chr !== symbol) return normalizeSymbolSpacing(chr.trim());
   // Regional commissions with /RES/ prefix: E/ESCWA/RES/214(XIX)
   const regionalRes = symbol.replace(/^E\/\w+\/RES\//, "");
   if (regionalRes !== symbol) return normalizeSymbolSpacing(regionalRes.trim());
@@ -196,6 +200,7 @@ for (const [abbr, full] of Object.entries(BODY_NAMES)) {
 function classifyBody(body: string, symbol: string): string {
   if (symbol.startsWith("CAC/COSP")) return "CAC/COSP";
   if (symbol.startsWith("CTOC/COP")) return "UNTOC COP";
+  if (symbol.startsWith("E/CN.4/")) return "CHR";
   // Normalize full names back to abbreviations for consistent map keys
   return BODY_ABBREV[body] || body;
 }
