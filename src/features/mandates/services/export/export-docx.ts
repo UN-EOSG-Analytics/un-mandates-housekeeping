@@ -321,21 +321,27 @@ interface CitationEntry {
   title: string;
 }
 
-// Group mandates with identical titles, preserving symbol sort order
+// Group mandates with identical titles, preserving symbol sort order.
+// Mandates with empty titles are never grouped — each gets its own row.
 function groupByTitle(mandates: Mandate[]): CitationEntry[] {
   const sorted = [...mandates].sort((a, b) => a.symbol.localeCompare(b.symbol));
   const titleMap = new Map<string, Mandate[]>();
   const titleOrder: string[] = [];
+  const ungrouped: CitationEntry[] = [];
   for (const m of sorted) {
     const key = m.title.trim();
+    if (!key) {
+      ungrouped.push({ mandates: [m], title: "" });
+      continue;
+    }
     if (!titleMap.has(key)) {
       titleMap.set(key, []);
       titleOrder.push(key);
     }
     titleMap.get(key)!.push(m);
   }
-  // Sort groups by first symbol in each group
-  return titleOrder.map((t) => ({ mandates: titleMap.get(t)!, title: t }));
+  const grouped = titleOrder.map((t) => ({ mandates: titleMap.get(t)!, title: t }));
+  return [...grouped, ...ungrouped];
 }
 
 // Build symbol cell with potentially multiple symbols joined by "; "
