@@ -185,11 +185,19 @@ function normalizeSymbolSpacing(s: string): string {
   return s.replace(/(\d)\(/, "$1 (");
 }
 
-// Reclassify body based on symbol prefix when the source data uses a generic body like "Other"
+// Reverse lookup: full name → abbreviation (e.g. "Human Rights Council" → "HRC")
+const BODY_ABBREV: Record<string, string> = {};
+for (const [abbr, full] of Object.entries(BODY_NAMES)) {
+  BODY_ABBREV[full] = abbr;
+}
+
+// Normalize and reclassify body values so that e.g. "Human Rights Council" and "HRC"
+// both map to the same key, and symbol-based overrides are applied.
 function classifyBody(body: string, symbol: string): string {
   if (symbol.startsWith("CAC/COSP")) return "CAC/COSP";
   if (symbol.startsWith("CTOC/COP")) return "UNTOC COP";
-  return body;
+  // Normalize full names back to abbreviations for consistent map keys
+  return BODY_ABBREV[body] || body;
 }
 
 function isDecision(symbol: string): boolean {
