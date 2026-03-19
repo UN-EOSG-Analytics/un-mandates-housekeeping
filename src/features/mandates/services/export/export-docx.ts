@@ -500,7 +500,7 @@ function getStatementLabel(body: string): string {
   const isSC = body === "Security Council" || body === "SC";
   const isHRC = body === "Human Rights Council" || body === "HRC";
   if (isSC) return "Statements by the President of the Security Council";
-  if (isHRC) return "Statements by the President of the Human Rights Council";
+  if (isHRC) return "President\u2019s statements agreed upon by the Human Rights Council";
   return `${body} statements`;
 }
 
