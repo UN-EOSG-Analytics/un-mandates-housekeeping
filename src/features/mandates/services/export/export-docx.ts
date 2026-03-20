@@ -341,7 +341,10 @@ function groupByTitle(mandates: Mandate[]): CitationEntry[] {
     titleMap.get(key)!.push(m);
   }
   const grouped = titleOrder.map((t) => ({ mandates: titleMap.get(t)!, title: t }));
-  return [...grouped, ...ungrouped];
+  // Merge grouped and ungrouped, then sort all entries by first symbol
+  const all = [...grouped, ...ungrouped];
+  all.sort((a, b) => a.mandates[0].symbol.localeCompare(b.mandates[0].symbol, undefined, { numeric: true }));
+  return all;
 }
 
 // Build symbol cell with potentially multiple symbols joined by "; "
