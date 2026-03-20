@@ -324,7 +324,7 @@ interface CitationEntry {
 // Group mandates with identical titles, preserving symbol sort order.
 // Mandates with empty titles are never grouped — each gets its own row.
 function groupByTitle(mandates: Mandate[]): CitationEntry[] {
-  const sorted = [...mandates].sort((a, b) => a.symbol.localeCompare(b.symbol));
+  const sorted = [...mandates].sort((a, b) => a.symbol.localeCompare(b.symbol, undefined, { numeric: true }));
   const titleMap = new Map<string, Mandate[]>();
   const titleOrder: string[] = [];
   const ungrouped: CitationEntry[] = [];
