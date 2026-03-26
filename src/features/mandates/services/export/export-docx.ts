@@ -321,10 +321,16 @@ interface CitationEntry {
   title: string;
 }
 
+// Natural-sort comparator on the display (stripped) symbol so that
+// e.g. "8/8" sorts before "31/31" regardless of full-symbol prefix.
+function compareByDisplaySymbol(a: Mandate, b: Mandate): number {
+  return stripPrefix(a.symbol).localeCompare(stripPrefix(b.symbol), undefined, { numeric: true });
+}
+
 // Group mandates with identical titles, preserving symbol sort order.
 // Mandates with empty titles are never grouped — each gets its own row.
 function groupByTitle(mandates: Mandate[]): CitationEntry[] {
-  const sorted = [...mandates].sort((a, b) => a.symbol.localeCompare(b.symbol, undefined, { numeric: true }));
+  const sorted = [...mandates].sort(compareByDisplaySymbol);
   const titleMap = new Map<string, Mandate[]>();
   const titleOrder: string[] = [];
   const ungrouped: CitationEntry[] = [];
@@ -341,9 +347,9 @@ function groupByTitle(mandates: Mandate[]): CitationEntry[] {
     titleMap.get(key)!.push(m);
   }
   const grouped = titleOrder.map((t) => ({ mandates: titleMap.get(t)!, title: t }));
-  // Merge grouped and ungrouped, then sort all entries by first symbol
+  // Merge grouped and ungrouped, then sort all entries by first display symbol
   const all = [...grouped, ...ungrouped];
-  all.sort((a, b) => a.mandates[0].symbol.localeCompare(b.mandates[0].symbol, undefined, { numeric: true }));
+  all.sort((a, b) => compareByDisplaySymbol(a.mandates[0], b.mandates[0]));
   return all;
 }
 
