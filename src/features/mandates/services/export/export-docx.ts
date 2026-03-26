@@ -321,10 +321,31 @@ interface CitationEntry {
   title: string;
 }
 
-// Natural-sort comparator on the display (stripped) symbol so that
-// e.g. "8/8" sorts before "31/31" regardless of full-symbol prefix.
+// UN document symbol formats changed over time:
+//
+// - GA sessions I–XXX (1946–1975): sequential resolution number + session in
+//   Roman numerals, e.g. A/RES/2106(XX) → stripped "2106(XX)".
+// - GA sessions 31+ (1976–present): session/number,
+//   e.g. A/RES/54/12 → stripped "54/12".
+// - ECOSOC had a similar transition from NUMBER(SESSION) to YEAR/NUMBER.
+// - SC always uses NUMBER(YEAR), e.g. S/RES/1244(1999) → "1244(1999)".
+//   Since all SC symbols share this format, no old/new reordering is needed.
+// - HRC (est. 2006) always uses SESSION/NUMBER.
+//
+// Within a body section, old-format symbols should sort before new-format
+// ones because they represent chronologically earlier resolutions. We detect
+// old-format by checking for "NUMBER(…)" with no "/" in the stripped symbol.
+// Within each format group, localeCompare with { numeric: true } gives
+// natural ordering (e.g. "8/8" before "31/31", not lexicographic).
+const OLD_SYMBOL_FORMAT_RE = /^\d+\s*\(.+\)$/;
+
 function compareByDisplaySymbol(a: Mandate, b: Mandate): number {
-  return stripPrefix(a.symbol).localeCompare(stripPrefix(b.symbol), undefined, { numeric: true });
+  const sa = stripPrefix(a.symbol);
+  const sb = stripPrefix(b.symbol);
+  const aOld = OLD_SYMBOL_FORMAT_RE.test(sa);
+  const bOld = OLD_SYMBOL_FORMAT_RE.test(sb);
+  if (aOld !== bOld) return aOld ? -1 : 1;
+  return sa.localeCompare(sb, undefined, { numeric: true });
 }
 
 // Group mandates with identical titles, preserving symbol sort order.
