@@ -66,7 +66,7 @@ export async function fetchAnalysisData(): Promise<AnalysisData> {
       COUNT(*) as total_citations,
       COUNT(DISTINCT c.ppb_full_document_symbol) as unique_documents
     FROM ppb2026.source_document_citations c
-    LEFT JOIN mandates_housekeeping.entities e ON c.entity = e.entity
+    LEFT JOIN systemchart.entities e ON c.entity = e.entity
     WHERE c.entity IS NOT NULL AND c.entity != 'NA'
     GROUP BY c.entity, e.entity_long
     ORDER BY COUNT(*) DESC

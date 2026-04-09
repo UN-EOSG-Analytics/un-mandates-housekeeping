@@ -3,26 +3,14 @@
 -- All timestamps use UTC (application handles timezone display)
 CREATE SCHEMA IF NOT EXISTS mandates_housekeeping;
 
--- Entities reference table (local copy to avoid cross-schema coupling)
--- Synced from systemchart.entities but independent for data integrity
-CREATE TABLE IF NOT EXISTS mandates_housekeeping.entities (
-    entity TEXT PRIMARY KEY,
-    entity_long TEXT,
-    created_at TIMESTAMPTZ DEFAULT NOW(),
-    updated_at TIMESTAMPTZ DEFAULT NOW()
-);
-
-COMMENT ON TABLE mandates_housekeeping.entities IS 'Local copy of UN entities. Sync from systemchart.entities';
-
-CREATE INDEX IF NOT EXISTS idx_entities_entity_long ON mandates_housekeeping.entities (entity_long);
-
 -- Users table: stores authenticated users
 -- Note: Role/reviewer status is determined dynamically by checking allowed_reviewers table
+-- Entity references systemchart.entities (the shared canonical entity list)
 CREATE TABLE IF NOT EXISTS
     mandates_housekeeping.users (
         id UUID PRIMARY KEY DEFAULT gen_random_uuid (),
         email TEXT UNIQUE NOT NULL,
-        entity TEXT REFERENCES mandates_housekeeping.entities(entity) ON DELETE SET NULL,
+        entity TEXT REFERENCES systemchart.entities(entity) ON DELETE SET NULL ON UPDATE CASCADE,
         created_at TIMESTAMPTZ DEFAULT NOW(),
         updated_at TIMESTAMPTZ DEFAULT NOW(),
         last_login_at TIMESTAMPTZ
@@ -72,16 +60,6 @@ VALUES
     ('UNCTAD', 'unctad.org'),
     ('UNHCR', 'unhcr.org'),
     ('UNRWA', 'unrwa.org'),
-    ('UN-Women', 'unwomen.org') ON CONFLICT
+    ('UN Women', 'unwomen.org') ON CONFLICT
 DO NOTHING;
 
--- ============================================================================
--- Sync entities from systemchart (run after initial setup or periodically)
--- This upserts entities from the shared systemchart.entities table
--- ============================================================================
-INSERT INTO mandates_housekeeping.entities (entity, entity_long)
-SELECT entity, entity_long 
-FROM systemchart.entities
-ON CONFLICT (entity) DO UPDATE SET 
-    entity_long = EXCLUDED.entity_long,
-    updated_at = NOW();

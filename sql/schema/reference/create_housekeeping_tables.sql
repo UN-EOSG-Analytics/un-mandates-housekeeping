@@ -10,7 +10,7 @@ CREATE SCHEMA IF NOT EXISTS mandates_housekeeping;
 CREATE TABLE IF NOT EXISTS mandates_housekeeping.mandate_decisions (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   document_symbol TEXT NOT NULL,
-  entity TEXT NOT NULL REFERENCES mandates_housekeeping.entities(entity) ON DELETE RESTRICT,
+  entity TEXT NOT NULL REFERENCES systemchart.entities(entity) ON DELETE RESTRICT ON UPDATE CASCADE,
   subprogramme TEXT,
   
   decision TEXT NOT NULL CHECK (decision IN ('retain', 'remove', 'add', 'update', 'cancel')),
@@ -49,7 +49,7 @@ COMMENT ON COLUMN mandates_housekeeping.mandate_decisions.other_reason IS
 CREATE TABLE IF NOT EXISTS mandates_housekeeping.mandate_comments (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   document_symbol TEXT NOT NULL,
-  entity TEXT NOT NULL REFERENCES mandates_housekeeping.entities(entity) ON DELETE RESTRICT,
+  entity TEXT NOT NULL REFERENCES systemchart.entities(entity) ON DELETE RESTRICT ON UPDATE CASCADE,
   subprogramme TEXT,
   
   comment TEXT NOT NULL,
@@ -86,7 +86,7 @@ CREATE TABLE IF NOT EXISTS mandates_housekeeping.docx_uploads (
     size_bytes BIGINT,
     
     -- Context: which entity page was this uploaded from
-    entity TEXT NOT NULL REFERENCES mandates_housekeeping.entities(entity) ON DELETE RESTRICT,
+    entity TEXT NOT NULL REFERENCES systemchart.entities(entity) ON DELETE RESTRICT ON UPDATE CASCADE,
     subprogramme TEXT,
 
     -- User info
@@ -113,7 +113,7 @@ COMMENT ON COLUMN mandates_housekeeping.docx_uploads.blob_name IS
 
 -- Entity review mode (locks entity for review)
 CREATE TABLE IF NOT EXISTS mandates_housekeeping.entity_review_mode (
-  entity TEXT PRIMARY KEY REFERENCES mandates_housekeeping.entities(entity) ON DELETE RESTRICT,
+  entity TEXT PRIMARY KEY REFERENCES systemchart.entities(entity) ON DELETE RESTRICT ON UPDATE CASCADE,
   started_by TEXT NOT NULL REFERENCES mandates_housekeeping.users(email) ON DELETE RESTRICT,
   started_at TIMESTAMPTZ DEFAULT NOW(),
   updated_at TIMESTAMPTZ DEFAULT NOW(),

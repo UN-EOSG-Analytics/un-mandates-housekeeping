@@ -1,16 +1,8 @@
-create table mandates_housekeeping.entities (
-    entity text not null primary key,
-    entity_long text,
-    created_at timestamp with time zone default now(),
-    updated_at timestamp with time zone default now()
-);
-comment on table mandates_housekeeping.entities is 'Local copy of UN entities. Sync from systemchart.entities';
-create index idx_entities_entity_long on mandates_housekeeping.entities (entity_long);
+-- Entity references use systemchart.entities (shared canonical entity list)
 create table mandates_housekeeping.users (
     id uuid default gen_random_uuid() not null primary key,
     email text not null unique,
-    entity text references mandates_housekeeping.entities on delete
-    set null,
+    entity text references systemchart.entities on delete set null on update cascade,
         created_at timestamp with time zone default now(),
         updated_at timestamp with time zone default now(),
         last_login_at timestamp with time zone
@@ -35,7 +27,7 @@ comment on table mandates_housekeeping.allowed_domains is 'Allowed email domains
 create table mandates_housekeeping.mandate_comments (
     id uuid default gen_random_uuid() not null primary key,
     document_symbol text not null,
-    entity text not null references mandates_housekeeping.entities on delete restrict,
+    entity text not null references systemchart.entities on delete restrict on update cascade,
     subprogramme text,
     comment text not null,
     user_email text not null references mandates_housekeeping.users (email) on delete restrict,
@@ -60,7 +52,7 @@ create table mandates_housekeeping.docx_uploads (
     blob_name text not null,
     content_type text default 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'::text,
     size_bytes bigint,
-    entity text not null references mandates_housekeeping.entities on delete restrict,
+    entity text not null references systemchart.entities on delete restrict on update cascade,
     subprogramme text,
     user_email text not null references mandates_housekeeping.users (email) on delete restrict,
     created_at timestamp with time zone default now(),
@@ -72,7 +64,7 @@ comment on column mandates_housekeeping.docx_uploads.blob_name is 'Azure blob pa
 create index idx_docx_uploads_entity on mandates_housekeeping.docx_uploads (entity asc, created_at desc);
 create index idx_docx_uploads_user on mandates_housekeeping.docx_uploads (user_email asc, created_at desc);
 create table mandates_housekeeping.entity_review_mode (
-    entity text not null references mandates_housekeeping.entities on delete restrict,
+    entity text not null references systemchart.entities on delete restrict on update cascade,
     started_by text not null references mandates_housekeeping.users (email) on delete restrict,
     started_at timestamp with time zone default now(),
     updated_at timestamp with time zone default now(),
@@ -84,7 +76,7 @@ comment on table mandates_housekeeping.entity_review_mode is 'Tracks when entiti
 create table mandates_housekeeping.mandate_decisions (
     id uuid default gen_random_uuid() not null primary key,
     document_symbol text not null,
-    entity text not null references mandates_housekeeping.entities on delete restrict,
+    entity text not null references systemchart.entities on delete restrict on update cascade,
     subprogramme text,
     decision text not null constraint mandate_decisions_decision_check check (
         decision = ANY (
@@ -122,7 +114,7 @@ create index idx_entity_review_mode_recent on mandates_housekeeping.entity_revie
 where (ended_at IS NOT NULL);
 create table mandates_housekeeping.review_change_responses (
     id uuid default gen_random_uuid() not null primary key,
-    entity text not null references mandates_housekeeping.entities on delete restrict,
+    entity text not null references systemchart.entities on delete restrict on update cascade,
     document_symbol text not null,
     subprogramme text,
     review_session_id uuid not null references mandates_housekeeping.entity_review_mode on delete cascade,
