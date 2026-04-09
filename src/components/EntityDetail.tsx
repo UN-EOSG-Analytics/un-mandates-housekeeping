@@ -57,6 +57,7 @@ import type {
   ReviewChangeInfo,
 } from "@/types";
 import {
+  AlertTriangle,
   ArrowRightLeft,
   ArrowUpCircle,
   Building,
@@ -1880,6 +1881,20 @@ export function EntityDetail({
   const [reviewChanges, setReviewChanges] = useState<
     Record<string, ReviewChangeInfo>
   >({});
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  // Auto-dismiss error after 8 seconds
+  useEffect(() => {
+    if (!errorMessage) return;
+    const timer = setTimeout(() => setErrorMessage(null), 8000);
+    return () => clearTimeout(timer);
+  }, [errorMessage]);
+
+  const showError = useCallback((msg: string) => {
+    setErrorMessage(msg);
+    console.error("Action failed:", msg);
+  }, []);
+
   const [addedMetadata, setAddedMetadata] = useState<
     Record<
       string,
@@ -2182,7 +2197,7 @@ export function EntityDetail({
           return;
         }
         // Revert optimistic update on other failures
-        console.error("Failed to save decision:", result.error);
+        showError(`Failed to save decision: ${result.error}`);
         setStates((prev) => {
           const prevDecisions = prev[key]?.decisions?.filter((d) => d.id) || [];
           const lastValidDecision =
@@ -2198,7 +2213,7 @@ export function EntityDetail({
         });
       }
     },
-    [entity, userEmail, userEntity, reviewSessionId, refreshReviewChanges],
+    [entity, userEmail, userEntity, reviewSessionId, refreshReviewChanges, showError],
   );
 
   const handleReasonChange = useCallback(
@@ -2252,13 +2267,17 @@ export function EntityDetail({
         if (reviewSessionId) {
           refreshReviewChanges();
         }
-      } else if (!result.success && result.error === "review_mode_blocked") {
-        setTimeout(() => {
-          setShowReviewBlockedDialog(true);
-        }, 2000);
+      } else if (!result.success) {
+        if (result.error === "review_mode_blocked") {
+          setTimeout(() => {
+            setShowReviewBlockedDialog(true);
+          }, 2000);
+        } else {
+          showError(`Failed to save: ${result.error}`);
+        }
       }
     },
-    [states, reviewSessionId, refreshReviewChanges],
+    [states, reviewSessionId, refreshReviewChanges, showError],
   );
 
   const handleUpdateWithManual = useCallback(
@@ -2342,13 +2361,17 @@ export function EntityDetail({
         if (reviewSessionId) {
           refreshReviewChanges();
         }
-      } else if (!result.success && result.error === "review_mode_blocked") {
-        setTimeout(() => {
-          setShowReviewBlockedDialog(true);
-        }, 2000);
+      } else if (!result.success) {
+        if (result.error === "review_mode_blocked") {
+          setTimeout(() => {
+            setShowReviewBlockedDialog(true);
+          }, 2000);
+        } else {
+          showError(`Failed to save: ${result.error}`);
+        }
       }
     },
-    [entity, userEmail, userEntity, reviewSessionId, refreshReviewChanges],
+    [entity, userEmail, userEntity, reviewSessionId, refreshReviewChanges, showError],
   );
 
   const handleAddManual = useCallback(
@@ -2428,13 +2451,17 @@ export function EntityDetail({
         if (reviewSessionId) {
           refreshReviewChanges();
         }
-      } else if (!result.success && result.error === "review_mode_blocked") {
-        setTimeout(() => {
-          setShowReviewBlockedDialog(true);
-        }, 2000);
+      } else if (!result.success) {
+        if (result.error === "review_mode_blocked") {
+          setTimeout(() => {
+            setShowReviewBlockedDialog(true);
+          }, 2000);
+        } else {
+          showError(`Failed to save: ${result.error}`);
+        }
       }
     },
-    [entity, userEmail, userEntity, reviewSessionId, refreshReviewChanges],
+    [entity, userEmail, userEntity, reviewSessionId, refreshReviewChanges, showError],
   );
 
   const handleEditManual = useCallback(
@@ -2529,13 +2556,17 @@ export function EntityDetail({
         if (reviewSessionId) {
           refreshReviewChanges();
         }
-      } else if (!result.success && result.error === "review_mode_blocked") {
-        setTimeout(() => {
-          setShowReviewBlockedDialog(true);
-        }, 2000);
+      } else if (!result.success) {
+        if (result.error === "review_mode_blocked") {
+          setTimeout(() => {
+            setShowReviewBlockedDialog(true);
+          }, 2000);
+        } else {
+          showError(`Failed to save: ${result.error}`);
+        }
       }
     },
-    [entity, userEmail, states, reviewSessionId, refreshReviewChanges],
+    [entity, userEmail, states, reviewSessionId, refreshReviewChanges, showError],
   );
 
   const handleComment = useCallback(
@@ -2589,9 +2620,11 @@ export function EntityDetail({
             ],
           },
         }));
+      } else if (!result.success) {
+        showError(`Failed to save comment: ${result.error}`);
       }
     },
-    [entity, userEmail, userEntity],
+    [entity, userEmail, userEntity, showError],
   );
 
   const handleStartReview = useCallback(async () => {
@@ -2603,9 +2636,9 @@ export function EntityDetail({
       // Clear old review changes - new session starts fresh
       setReviewChanges({});
     } else if (!result.success) {
-      alert(`Failed to start review: ${result.error}`);
+      showError(`Failed to start review: ${result.error}`);
     }
-  }, [entity]);
+  }, [entity, showError]);
 
   const handleEndReview = useCallback(async () => {
     const result = await endReviewModeAction(entity);
@@ -2615,9 +2648,9 @@ export function EntityDetail({
       // Keep reviewSessionId and reviewChanges - they persist after review ends
       // to show change indicators to all users
     } else if (!result.success) {
-      alert(`Failed to end review: ${result.error}`);
+      showError(`Failed to end review: ${result.error}`);
     }
-  }, [entity]);
+  }, [entity, showError]);
 
   const handleClearAll = useCallback(async () => {
     const result = await clearAllEntityDecisionsAction(entity);
@@ -2864,6 +2897,20 @@ export function EntityDetail({
 
   return (
     <div className="space-y-5">
+      {/* Error toast */}
+      {errorMessage && (
+        <div className="fixed bottom-4 right-4 z-50 flex max-w-md items-start gap-3 rounded-lg border border-red-200 bg-red-50 px-4 py-3 shadow-lg">
+          <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-red-600" />
+          <p className="text-sm text-red-800">{errorMessage}</p>
+          <button
+            onClick={() => setErrorMessage(null)}
+            className="ml-auto shrink-0 text-red-400 hover:text-red-600"
+          >
+            <X className="h-4 w-4" />
+          </button>
+        </div>
+      )}
+
       {/* Read-only notice */}
       {!isOwnEntity && userEntity && !canReviewAnyEntity && (
         <ReadOnlyNoticeBanner viewingEntity={entity} userEntity={userEntity} />
