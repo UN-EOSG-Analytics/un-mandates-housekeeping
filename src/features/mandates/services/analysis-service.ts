@@ -4,6 +4,7 @@
  */
 
 import { query } from "@/lib/db/db";
+import { versionPredicateSql } from "@/lib/db/budget-version";
 
 export interface DecisionStats {
   decision: string;
@@ -68,6 +69,7 @@ export async function fetchAnalysisData(): Promise<AnalysisData> {
     FROM ppb2026.source_document_citations c
     LEFT JOIN systemchart.entities e ON c.entity = e.entity
     WHERE c.entity IS NOT NULL AND c.entity != 'NA'
+      AND ${versionPredicateSql("c")}
     GROUP BY c.entity, e.entity_long
     ORDER BY COUNT(*) DESC
   `);
@@ -191,9 +193,10 @@ export async function fetchAnalysisData(): Promise<AnalysisData> {
 
   // Count unique documents across all entities (excluding NULL and 'NA' entities)
   const uniqueDocsResult = await query<{ count: string }>(`
-    SELECT COUNT(DISTINCT ppb_full_document_symbol) as count
-    FROM ppb2026.source_document_citations
-    WHERE entity IS NOT NULL AND entity != 'NA'
+    SELECT COUNT(DISTINCT c.ppb_full_document_symbol) as count
+    FROM ppb2026.source_document_citations c
+    WHERE c.entity IS NOT NULL AND c.entity != 'NA'
+      AND ${versionPredicateSql("c")}
   `);
 
   // Calculate projected unique documents
@@ -214,6 +217,7 @@ export async function fetchAnalysisData(): Promise<AnalysisData> {
       SELECT DISTINCT c.ppb_full_document_symbol
       FROM ppb2026.source_document_citations c
       WHERE c.entity IS NOT NULL AND c.entity != 'NA'
+        AND ${versionPredicateSql("c")}
         AND NOT EXISTS (
           SELECT 1 FROM latest_decisions d
           WHERE d.document_symbol = c.ppb_full_document_symbol

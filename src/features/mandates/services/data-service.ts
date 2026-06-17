@@ -4,6 +4,7 @@
  */
 
 import { query } from "@/lib/db/db";
+import { versionPredicateSql } from "@/lib/db/budget-version";
 import type {
   PPBRecord,
   CitationInfo,
@@ -89,8 +90,9 @@ export async function fetchPPBRecords(): Promise<PPBRecord[]> {
       ON REGEXP_REPLACE(c.ppb_full_document_symbol, '(\\d) ([A-Z])$', '\\1\\2') = doc.symbol
     LEFT JOIN ppb2026.source_documents_metadata_clean m
       ON c.ppb_full_document_symbol = m.ppb_full_document_symbol
-    LEFT JOIN ppb2026.source_documents d 
+    LEFT JOIN ppb2026.source_documents d
       ON c.ppb_full_document_symbol = d.ppb_full_document_symbol
+    WHERE ${versionPredicateSql("c")}
     ORDER BY c.ppb_full_document_symbol, c.entity
   `);
 
@@ -192,6 +194,7 @@ export async function fetchEntities(): Promise<EntityOption[]> {
     `SELECT DISTINCT e.entity, e.entity_long
      FROM systemchart.entities e
      INNER JOIN ppb2026.source_document_citations c ON e.entity = c.entity
+     WHERE ${versionPredicateSql("c")}
      ORDER BY e.entity`,
   );
   return rows;
