@@ -9,7 +9,8 @@
  * twice in the budget-part tree under "Other").
  *
  * Membership: a citation belongs to version V iff its origin_document
- * matches the regex of any budget_documents row tagged with version_slug V.
+ * matches the regex of any budget_documents row that has a
+ * budget_document_versions row for version V.
  */
 
 export const CURRENT_BUDGET_VERSION = "ppb2026";
@@ -21,7 +22,8 @@ export const CURRENT_BUDGET_VERSION = "ppb2026";
 export function versionPredicateSql(citationAlias: string): string {
   return `EXISTS (
     SELECT 1 FROM ppb2026.budget_documents bd
-    WHERE bd.version_slug = '${CURRENT_BUDGET_VERSION}'
+    JOIN ppb2026.budget_document_versions bdv ON bdv.doc_slug = bd.slug
+    WHERE bdv.version_slug = '${CURRENT_BUDGET_VERSION}'
       AND ${citationAlias}.origin_document ~ bd.match_pattern
   )`;
 }
