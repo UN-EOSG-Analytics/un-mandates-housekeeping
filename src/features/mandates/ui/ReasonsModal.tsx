@@ -249,7 +249,7 @@ export function ReasonPopup({
               }`}
             >
               <span
-                className={`mt-[3px] shrink-0 opacity-60 ${localReason === r.id ? colors.text : "text-gray-400"}`}
+                className={`mt-0.75 shrink-0 opacity-60 ${localReason === r.id ? colors.text : "text-gray-400"}`}
               >
                 {getIconForReason(r.id)}
               </span>
