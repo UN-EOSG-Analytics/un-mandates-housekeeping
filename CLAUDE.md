@@ -1,0 +1,88 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## What this app does
+
+Internal UN tool for reviewing **mandates** in the Programme Budget. Entity reviewers log in, inspect the document citations ("mandates") backing each budget part of their entity, and record housekeeping decisions (keep / remove / etc.) plus comments. Decisions feed the next budget cycle. The current review cycle is **ppb2026** (producing input for PPB 2027).
+
+## Commands
+
+Package manager is **pnpm** (Node app) and **uv** (Python). Do not use npm/pip.
+
+```bash
+pnpm dev            # Next.js dev server
+pnpm build          # production build (also runs as a pre-commit hook on `main`)
+pnpm typecheck      # tsc --noEmit
+pnpm lint           # eslint
+pnpm format         # prettier --write on src/**
+uv sync             # install Python deps (root project + worker workspace)
+```
+
+There is **no test suite**. Verify changes with `pnpm typecheck` and `pnpm build`. A Husky pre-commit hook runs `pnpm build` only when committing on the `main` branch, so builds must be green before committing to main.
+
+## Architecture
+
+Four cooperating pieces (see [docs/DOCX_UPLOAD.md](docs/DOCX_UPLOAD.md)):
+
+- **Next.js** (`src/`) — control plane: auth, UI, orchestration, exports. Next.js 16 App Router + React 19.
+- **Postgres** (Azure Flexible Server) — single source of truth.
+- **Azure Blob** — storage for uploaded DOCX files.
+- **Python** — ingestion engine for DOCX parsing/normalization (`python/`, `worker/`).
+
+### Database access — raw `pg`
+
+All DB access goes through the raw `pg` pool in [src/lib/db/db.ts](src/lib/db/db.ts): use `query()` and `transaction()`. The pool connects via Azure's built-in PgBouncer on port 6432 (transaction pooling mode); max 10 connections per Vercel function instance. Write parameterized SQL — no named prepared statements, which is also required for PgBouncer transaction pooling compatibility.
+
+Two Postgres schemas:
+- `mandates_housekeeping.*` — this app's own state: `users`, `magic_tokens`, `allowed_domains`, `allowed_reviewers`, `mandate_decisions`, `mandate_comments`, `entity_review_mode`, `review_change_responses`, `docx_uploads`.
+- `ppb2026.*` — shared upstream budget data this app reads: `source_document_citations`, `source_documents`, `source_documents_metadata_clean`, `budget_documents`, `budget_document_versions`.
+
+SQL schema and migrations live in [sql/](sql/) (`sql/schema/`, `sql/migrations/`). They are applied manually/externally — there is no migration runner in the app.
+
+### Budget version scoping (critical gotcha)
+
+`ppb2026.source_document_citations` holds citations for **multiple budget cycles**. Every citation query **must** be scoped to the current version or rows from other cycles leak into the UI (e.g. entities appear twice). Always inline the predicate from [src/lib/db/budget-version.ts](src/lib/db/budget-version.ts) (`versionPredicateSql(alias)`, `CURRENT_BUDGET_VERSION`) into citation `WHERE` clauses.
+
+### Code organization — feature-first under `src/features/`
+
+The app is organized by feature, each holding `actions/` (`"use server"` server actions), `services/` (pure data/business logic, called from server components and actions), and `ui/` (client components).
+
+- `src/features/auth/` — magic-link auth, session, mail.
+- `src/features/mandates/` — the core domain. Subfolders: `services/` (`data-service.ts`, `reference-data.ts`, `mandate-warnings.ts`, `age-indicator.ts`, `decision-reasons.ts`), `services/documents/` (metadata, versions, newer-version detection), `services/export/` (DOCX/Excel/applied-state export), `actions/` (decisions, comments, review-mode, review-baselines, realtime).
+
+`src/components/` holds shared/page components; `src/components/ui/` is shadcn/ui primitives (never edit these directly — compose around them). `src/app/` is App Router routes. `src/lib/` holds db, storage, theme, constants, utils.
+
+> ⚠️ [docs/STRUCTURE.md](docs/STRUCTURE.md) and [docs/DATA.md](docs/DATA.md) describe an older `src/lib/services/` layout and a `housekeeping-actions.ts` monolith. That refactor is **done** — code now lives under `src/features/mandates/`. Trust the actual tree over those docs.
+
+### Auth
+
+Custom magic-link auth — no third-party auth library.
+- Login is restricted to allowed domains/emails (`allowed_domains`, `allowed_reviewers` tables); `isValidUnEmail` enforces `@un.org`.
+- A magic token is emailed (SMTP via nodemailer), exchanged for an HMAC-signed session cookie (`auth_session`).
+- Route protection is in [src/proxy.ts](src/proxy.ts) — this is Next.js 16's renamed middleware (`proxy`, not `middleware`). It verifies the cookie via Web Crypto and redirects unauthenticated users to `/about`. Public paths: `/login`, `/verify`, `/about`.
+
+### Realtime
+
+No websockets. Collaboration is **polling-based**: [src/hooks/useRealtimeDecisions.ts](src/hooks/useRealtimeDecisions.ts) polls the `realtime` server action (~3s) to sync other reviewers' decisions and review-mode status.
+
+### API routes
+
+Used only where App Router needs a real HTTP endpoint (see [src/app/api/README.md](src/app/api/README.md)): `/api/export/...` (file downloads) and `/api/upload/docx` (file uploads). Everything else uses server actions/server components, not API routes.
+
+### Python
+
+Two distinct contexts (uv workspace, members declared in `pyproject.toml`):
+- `python/` — analysis & ingestion scripts run locally (`llm_relevance.py` uses Azure OpenAI, `analysis.py`, `ppb_extraction/` parses PPB DOCX into per-entity data). Run with `uv run`.
+- `worker/ppb-docx-worker/` — Azure Function worker for async DOCX ingestion (currently scaffolding/TODO). Regenerate its pinned deps with `bash worker.sh` after editing `worker/pyproject.toml`. Deployed via `.github/workflows/deploy-docx-worker.yml`.
+
+## Conventions
+
+- TypeScript strict mode; avoid `any`. Define explicit prop/action/API types (`src/types/`).
+- Prefer Server Components; add `"use client"` only for interactive parts.
+- Data fetching, calculations, and processing belong in `services/` (and server `actions/`), **not** in components.
+- shadcn/ui: add components with `npx shadcn@latest add <component>`; compose around `components/ui/` primitives rather than editing them.
+- Styling: Tailwind CSS **v4.1** (use current v4 syntax, not v3). Theme tokens and the UN color palette (esp. `un-blue`) live in [src/lib/theme.ts](src/lib/theme.ts); prefer them.
+- Design: left-align, minimal, clear visual hierarchy.
+- Secrets via `.env` / `process.env` only (see `.env.example`: `DATABASE_URL`, `AUTH_SECRET`, SMTP, Azure Storage, Azure OpenAI).
+- Don't create parallel infrastructure or hardcode where a global/shared solution exists.

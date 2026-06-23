@@ -3,5 +3,5 @@ export PATH="/opt/homebrew/bin:$PATH"
 branch=$(git rev-parse --abbrev-ref HEAD)
 
 if [ "$branch" = "main" ]; then
-  pnpm build
+  pnpm typecheck
 fi
