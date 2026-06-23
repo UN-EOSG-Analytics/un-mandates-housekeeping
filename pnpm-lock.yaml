@@ -108,8 +108,8 @@ importers:
         specifier: ^3.6.0
         version: 3.6.0
       undifferent:
-        specifier: github:un-eosg-analytics/undifferent#release
-        version: git+ssh://git@github.com/un-eosg-analytics/undifferent.git#e6c57a7ee8536b2d7798e58cb1f6d605c09a1c54(next@16.2.9(@babel/core@7.29.7)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)
+        specifier: github:united-nations/diff#release
+        version: https://codeload.github.com/united-nations/diff/tar.gz/e6c57a7ee8536b2d7798e58cb1f6d605c09a1c54(next@16.2.9(@babel/core@7.29.7)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)
     devDependencies:
       '@svgr/webpack':
         specifier: ^8.1.0
@@ -4868,8 +4868,8 @@ packages:
   undici-types@8.3.0:
     resolution: {integrity: sha512-j375ScV60dom+YkPFIfTLcOiPxkN/buHz5GobjLhixFuANaNs3C9l4GmrWqejgXWJ7BbJcFYpTEUkS1Ge8bpZQ==}
 
-  undifferent@git+ssh://git@github.com/un-eosg-analytics/undifferent.git#e6c57a7ee8536b2d7798e58cb1f6d605c09a1c54:
-    resolution: {commit: e6c57a7ee8536b2d7798e58cb1f6d605c09a1c54, repo: git@github.com:un-eosg-analytics/undifferent.git, type: git}
+  undifferent@https://codeload.github.com/united-nations/diff/tar.gz/e6c57a7ee8536b2d7798e58cb1f6d605c09a1c54:
+    resolution: {gitHosted: true, integrity: sha512-11lNufbd7uvn7NO/0HP2H+nGCUmbwlTs4lD6Vo46JzV0CGB7pGL+vs95Bhhb2fcL91+3rDxCRkUS4GTAh1eU/Q==, tarball: https://codeload.github.com/united-nations/diff/tar.gz/e6c57a7ee8536b2d7798e58cb1f6d605c09a1c54}
     version: 0.1.0
     peerDependencies:
       react: '>=18'
@@ -10214,7 +10214,7 @@ snapshots:
 
   undici-types@8.3.0: {}
 
-  undifferent@git+ssh://git@github.com/un-eosg-analytics/undifferent.git#e6c57a7ee8536b2d7798e58cb1f6d605c09a1c54(next@16.2.9(@babel/core@7.29.7)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7):
+  undifferent@https://codeload.github.com/united-nations/diff/tar.gz/e6c57a7ee8536b2d7798e58cb1f6d605c09a1c54(next@16.2.9(@babel/core@7.29.7)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7):
     dependencies:
       '@next/third-parties': 16.2.9(next@16.2.9(@babel/core@7.29.7)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)
       diff: 8.0.4
