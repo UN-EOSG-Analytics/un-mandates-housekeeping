@@ -1,0 +1,222 @@
+/**
+ * Clean Excel data dump for analysis (pivots / plots) from the /analysis page.
+ *
+ * A single tidy "2026 vs 2027" sheet: one row per (entity, mandate symbol,
+ * subprogramme) drawn from the UNION of 2026 source citations, 2027 source
+ * citations, AND housekeeping decisions — so it answers "which housekeeping
+ * decision was taken on 2026, and what happened in 2027?". Crucially, `add`
+ * decisions appear even when the mandate is in neither source fascicle.
+ *
+ * Plan Outline citations are excluded (not entity-attributed; outside the
+ * official two-document version definitions), matching the heatmap.
+ */
+
+import ExcelJS from "exceljs";
+import { query } from "@/lib/db/db";
+import { fetchDocumentMetadata } from "@/features/mandates/services/documents/metadata";
+import {
+  getReasonLabel,
+  type DecisionType,
+} from "@/features/mandates/services/decision-reasons";
+import {
+  getCuratedEntity,
+  SECTION_META,
+} from "@/features/mandates/heatmap/entity-sections";
+
+const DECISION_TYPES: DecisionType[] = ["add", "retain", "update", "remove"];
+
+function reasonLabel(decision: string | null, reasonId: string | null): string {
+  if (!decision || !reasonId) return "";
+  if (!DECISION_TYPES.includes(decision as DecisionType)) return reasonId;
+  return (getReasonLabel(decision as DecisionType, reasonId) ?? reasonId).replace(
+    /\*\*/g,
+    "",
+  );
+}
+
+function sectionGroup(entity: string): string {
+  const cur = getCuratedEntity(entity);
+  return cur ? SECTION_META[cur.section].label : "";
+}
+
+function iso(d: Date | string | null): string {
+  if (!d) return "";
+  return (d instanceof Date ? d : new Date(d)).toISOString();
+}
+
+interface ReconRow {
+  entity: string;
+  entity_long: string | null;
+  symbol: string;
+  subprogramme: string;
+  in26: boolean;
+  in27: boolean;
+  c26: number;
+  c27: number;
+  decision: string | null;
+  decision_reason: string | null;
+  other_reason: string | null;
+  new_symbol: string | null;
+  decided_by: string | null;
+  decided_at: Date | null;
+  approved_by: string | null;
+  approved_at: Date | null;
+}
+
+export async function exportAnalysisXlsx(): Promise<Buffer> {
+  const rows = await query<ReconRow>(
+    `WITH src AS (
+       SELECT c.entity,
+         REGEXP_REPLACE(c.ppb_full_document_symbol, '(\\d) ([A-Z])$', '\\1\\2') AS symbol,
+         COALESCE(c.sub_programme, '') AS subprogramme,
+         bdv.version_slug AS ver
+       FROM ppb2026.source_document_citations c
+       JOIN ppb2026.budget_documents bd ON c.origin_document ~ bd.match_pattern
+       JOIN ppb2026.budget_document_versions bdv ON bdv.doc_slug = bd.slug
+       WHERE c.entity IS NOT NULL AND c.entity != 'NA'
+         AND bdv.version_slug IN ('ppb2026', 'ppb2027')
+         AND NOT EXISTS (
+           SELECT 1 FROM ppb2026.budget_documents po
+           WHERE po.slug = 'plan-outline-a80-6' AND c.origin_document ~ po.match_pattern
+         )
+     ),
+     agg AS (
+       SELECT entity, symbol, subprogramme,
+         bool_or(ver = 'ppb2026') AS in26,
+         bool_or(ver = 'ppb2027') AS in27,
+         COUNT(*) FILTER (WHERE ver = 'ppb2026')::int AS c26,
+         COUNT(*) FILTER (WHERE ver = 'ppb2027')::int AS c27
+       FROM src GROUP BY entity, symbol, subprogramme
+     ),
+     latest AS (
+       SELECT entity,
+         REGEXP_REPLACE(document_symbol, '(\\d) ([A-Z])$', '\\1\\2') AS symbol,
+         COALESCE(subprogramme, '') AS subprogramme,
+         decision, decision_reason, other_reason, new_symbol,
+         user_email, created_at, approved_by, approved_at
+       FROM (
+         SELECT *, ROW_NUMBER() OVER (
+           PARTITION BY document_symbol, entity, COALESCE(subprogramme, '')
+           ORDER BY created_at DESC) AS rn
+         FROM mandates_housekeeping.mandate_decisions
+         WHERE entity IS NOT NULL AND entity != 'NA'
+       ) t WHERE rn = 1
+     ),
+     keys AS (
+       SELECT entity, symbol, subprogramme FROM agg
+       UNION
+       SELECT entity, symbol, subprogramme FROM latest
+     )
+     SELECT k.entity, e.entity_long, k.symbol, k.subprogramme,
+       COALESCE(a.in26, false) AS in26, COALESCE(a.in27, false) AS in27,
+       COALESCE(a.c26, 0) AS c26, COALESCE(a.c27, 0) AS c27,
+       d.decision, d.decision_reason, d.other_reason, d.new_symbol,
+       d.user_email AS decided_by, d.created_at AS decided_at,
+       d.approved_by, d.approved_at
+     FROM keys k
+     LEFT JOIN agg a USING (entity, symbol, subprogramme)
+     LEFT JOIN latest d USING (entity, symbol, subprogramme)
+     LEFT JOIN systemchart.entities e ON e.entity = k.entity
+     ORDER BY k.entity, k.symbol, k.subprogramme`,
+  );
+
+  const meta = await fetchDocumentMetadata([
+    ...new Set(rows.map((r) => r.symbol)),
+  ]);
+
+  const workbook = new ExcelJS.Workbook();
+  workbook.creator = "UN Mandates Housekeeping";
+  workbook.created = new Date();
+
+  // Cover
+  const cover = workbook.addWorksheet("Cover");
+  cover.getCell("A1").value = "Mandate housekeeping — 2026 vs 2027 analysis data";
+  cover.getCell("A1").font = { bold: true, size: 16 };
+  cover.getCell("A3").value = `Generated: ${new Date().toISOString()}`;
+  cover.getCell("A5").value =
+    "One row per (entity, mandate symbol, subprogramme) across the 2026 and 2027 source citations plus housekeeping decisions. in_2026 / in_2027 = present in that fascicle (PPB + PKM; Plan Outline excluded). decision_2026 = latest active housekeeping decision (cancelled = none); add decisions appear even when the mandate is in neither fascicle.";
+  cover.getCell("A6").value =
+    "Pivot decision_2026 against presence to see outcomes: e.g. remove + only_2026 = removal realized; remove + both = still cited in 2027; add + only_2027 = addition realized; add + neither = added but not (yet) in the 2027 fascicle.";
+  cover.getColumn(1).width = 130;
+
+  // 2026 vs 2027 reconciliation
+  const sheet = workbook.addWorksheet("2026 vs 2027");
+  const headers = [
+    "entity",
+    "entity_long",
+    "section_group",
+    "symbol",
+    "title",
+    "year",
+    "body",
+    "doc_type",
+    "link",
+    "subprogramme",
+    "in_2026",
+    "in_2027",
+    "presence",
+    "count_2026",
+    "count_2027",
+    "decision_2026",
+    "decision_reason",
+    "decision_reason_label",
+    "other_reason",
+    "new_symbol",
+    "decided_by",
+    "decided_at",
+    "approved_by",
+    "approved_at",
+  ];
+  const widths = [
+    12, 32, 18, 18, 40, 7, 8, 14, 30, 16, 9, 9, 12, 11, 11, 13, 18, 40, 30, 16,
+    24, 22, 24, 22,
+  ];
+  const headerRow = sheet.addRow(headers);
+  headerRow.font = { bold: true };
+  widths.forEach((w, i) => (sheet.getColumn(i + 1).width = w));
+  sheet.views = [{ state: "frozen", ySplit: 1, xSplit: 1 }];
+  sheet.autoFilter = { from: "A1", to: `${sheet.getColumn(headers.length).letter}1` };
+
+  for (const r of rows) {
+    const decision = r.decision === "cancel" ? null : r.decision;
+    // Skip orphans: no presence in either fascicle and no active decision.
+    if (!r.in26 && !r.in27 && !decision) continue;
+    const presence =
+      r.in26 && r.in27
+        ? "both"
+        : r.in26
+          ? "only_2026"
+          : r.in27
+            ? "only_2027"
+            : "neither";
+    const m = meta[r.symbol];
+    sheet.addRow([
+      r.entity,
+      r.entity_long ?? "",
+      sectionGroup(r.entity),
+      r.symbol,
+      m?.title ?? "",
+      m?.year ?? "",
+      m?.body ?? "",
+      m?.docType ?? "",
+      m?.link ?? "",
+      r.subprogramme,
+      r.in26 ? "yes" : "no",
+      r.in27 ? "yes" : "no",
+      presence,
+      r.c26,
+      r.c27,
+      decision ?? "",
+      decision ? r.decision_reason ?? "" : "",
+      decision ? reasonLabel(decision, r.decision_reason) : "",
+      decision ? r.other_reason ?? "" : "",
+      r.new_symbol ?? "",
+      decision ? r.decided_by ?? "" : "",
+      decision ? iso(r.decided_at) : "",
+      decision ? r.approved_by ?? "" : "",
+      decision ? iso(r.approved_at) : "",
+    ]);
+  }
+
+  return Buffer.from(await workbook.xlsx.writeBuffer());
+}
