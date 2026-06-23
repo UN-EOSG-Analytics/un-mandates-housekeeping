@@ -1,8 +1,18 @@
+allowBuilds:
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+
 ignoredBuiltDependencies:
   - canvas
   - esbuild
   - sharp
   - unrs-resolver
+
+minimumReleaseAgeExclude:
+  - postcss@8.5.10
+  - uuid@11.1.1
+  - nodemailer@9.0.1
 
 onlyBuiltDependencies:
   - undifferent
