@@ -17,6 +17,7 @@ import {
 import {
   sequentialColor,
   divergingColor,
+  tint,
 } from "@/features/mandates/heatmap/color-scale";
 
 export type LayerId =
@@ -80,8 +81,8 @@ interface OrderedEntity {
 }
 
 const CELL = 18;
-const LABEL_W = 96;
-const COLHEAD_H = 88;
+const COLHEAD_H = 62; // top label gutter height
+const LABEL_W = COLHEAD_H; // left label gutter width — kept equal to the header height
 
 export function HeatmapMatrix({ layers }: HeatmapPayload) {
   const [layerId, setLayerId] = useState<LayerId>("v2026");
@@ -248,20 +249,35 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
       {/* Matrix */}
       <div className="overflow-x-auto pb-4">
         <div className="inline-block select-none">
-          {/* Section bands */}
-          <div className="flex" style={{ marginLeft: LABEL_W }}>
+          {/* Section bands — coloured underline spans the section's columns;
+              the centred label is allowed to overflow (never truncated), like
+              the PDF, without pushing neighbouring bands. */}
+          <div
+            className="relative flex items-end"
+            style={{ marginLeft: LABEL_W, height: 30 }}
+          >
             {bands.map((b, i) => (
               <div
                 key={i}
-                className="truncate border-b-2 px-1 text-center text-[11px] font-semibold leading-tight"
-                style={{
-                  width: b.count * CELL,
-                  color: SECTION_META[b.section].baseColor,
-                  borderColor: SECTION_META[b.section].baseColor,
-                }}
-                title={SECTION_META[b.section].label}
+                className="relative h-full"
+                style={{ width: b.count * CELL }}
               >
-                {SECTION_META[b.section].label}
+                {/* Label constrained to the band width: multi-word labels wrap
+                    (e.g. Humanitarian → two lines); short un-wrappable ones
+                    (H/R, Legal) overflow centred into empty space. */}
+                <span
+                  className="absolute bottom-1 left-0 w-full text-center text-[11px] font-semibold leading-[1.05]"
+                  style={{
+                    color: SECTION_META[b.section].baseColor,
+                    hyphens: "manual",
+                  }}
+                >
+                  {SECTION_META[b.section].label}
+                </span>
+                <div
+                  className="absolute bottom-0 left-0 w-full border-b-2"
+                  style={{ borderColor: SECTION_META[b.section].baseColor }}
+                />
               </div>
             ))}
           </div>
@@ -278,10 +294,15 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
               <div
                 key={e.code}
                 className="flex items-end justify-center"
-                style={{ width: CELL, height: COLHEAD_H }}
+                style={{
+                  width: CELL,
+                  height: COLHEAD_H,
+                  backgroundColor: tint(SECTION_META[e.section].baseColor),
+                  borderRight: "1px solid rgba(255,255,255,0.7)",
+                }}
               >
                 <span
-                  className="text-[10px] text-gray-700"
+                  className="py-1 text-[10px] text-gray-700"
                   style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
                 >
                   {e.label}
@@ -294,8 +315,13 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
           {entities.map((rowE) => (
             <div key={rowE.code} className="flex items-center">
               <div
-                className="truncate pr-1 text-right text-[10px] text-gray-700"
-                style={{ width: LABEL_W }}
+                className="truncate px-1 text-right text-[10px] leading-4.5 text-gray-700"
+                style={{
+                  width: LABEL_W,
+                  height: CELL,
+                  backgroundColor: tint(SECTION_META[rowE.section].baseColor),
+                  borderBottom: "1px solid rgba(255,255,255,0.7)",
+                }}
                 title={rowE.code}
               >
                 {rowE.label}

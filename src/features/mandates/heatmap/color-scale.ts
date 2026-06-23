@@ -20,6 +20,11 @@ function blendFromWhite(target: [number, number, number], t: number): string {
   return `rgb(${c(target[0])}, ${c(target[1])}, ${c(target[2])})`;
 }
 
+/** Pale tint of a hue (white → hue by a small t), for header backgrounds. */
+export function tint(hex: string, t = 0.16): string {
+  return blendFromWhite(hexToRgb(hex), t);
+}
+
 /**
  * Sequential color for a non-negative `value` against `max`, blending white
  * toward `baseHex`. Returns null for zero/empty so the cell stays blank.

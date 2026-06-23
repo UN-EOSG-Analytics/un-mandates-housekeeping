@@ -42,8 +42,10 @@ export const SECTION_META: Record<Section, SectionMeta> = {
     baseColor: "#a0665c",
   },
   humanitarian: {
+    // Soft hyphen lets the label break as "Humani-/tarian" (like the PDF) when
+    // constrained to its narrow 3-column band; renders as "Humanitarian" otherwise.
     id: "humanitarian",
-    label: "Humanitarian",
+    label: "Humani­tarian",
     baseColor: "#9b8b7a",
   },
   legal: { id: "legal", label: "Legal", baseColor: "#4a7c7e" },

@@ -48,7 +48,7 @@ export default async function HeatmapPage() {
             className="mb-3 inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700"
           >
             <ArrowLeft className="h-3.5 w-3.5" />
-            Back to analysis
+            Back to overview
           </Link>
           <p className="text-sm font-medium text-un-blue">Analytics</p>
           <h1 className="mt-1 text-3xl font-bold tracking-tight text-gray-900">
@@ -56,8 +56,8 @@ export default async function HeatmapPage() {
           </h1>
           <p className="mt-2 max-w-3xl text-base text-gray-500">
             Number of mandates cross-cited between each pair of entities in the
-            UN Secretariat Programme Budget. Compare the 2026 source data with
-            the 2027 fascicle, or view the effect of housekeeping decisions.
+            UN Secretariat Programme Budget. Compare the PPB 2026 source data with
+            the PPB 2027 draft.
           </p>
         </div>
         <HeatmapMatrix layers={layers} />
