@@ -9,7 +9,11 @@ analysis dashboard.
 ## Files
 
 - `page.tsx` — server component, fetches all layers and passes them to the client.
-- `HeatmapMatrix.tsx` — `"use client"` matrix grid + controls (layer selector, "show all", export link).
+- `HeatmapMatrix.tsx` — `"use client"` matrix grid + controls (layer selector, "show all", export link)
+  and the click-to-inspect detail panel.
+- `src/features/mandates/actions/heatmap.ts` — `"use server"` `fetchPairMandates(a, b)`: the symbols
+  cross-cited by a clicked pair, with per-version (2026/2027) presence + resolved title/year/link.
+  Lazy-loaded on cell click (one small query per click) rather than shipping every pair's list upfront.
 - `src/features/mandates/heatmap/entity-sections.ts` — curated 41-entity config (order, sections, colours).
 - `src/features/mandates/heatmap/matrix-utils.ts` — client-safe `MatrixData` type + `pairKey` (kept free of the `pg` import so the client bundle stays clean).
 - `src/features/mandates/heatmap/color-scale.ts` — sqrt sequential + diverging colour scales.

@@ -1,11 +1,15 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { Download } from "lucide-react";
+import { useMemo, useState, useTransition } from "react";
+import { Download, X, ExternalLink } from "lucide-react";
 import {
   pairKey,
   type MatrixData,
 } from "@/features/mandates/heatmap/matrix-utils";
+import {
+  fetchPairMandates,
+  type SharedMandate,
+} from "@/features/mandates/actions/heatmap";
 import {
   CURATED_ENTITIES,
   SECTION_META,
@@ -92,6 +96,19 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
     b: OrderedEntity;
     value: number;
   } | null>(null);
+  const [selected, setSelected] = useState<{
+    a: OrderedEntity;
+    b: OrderedEntity;
+  } | null>(null);
+  const [mandates, setMandates] = useState<SharedMandate[]>([]);
+  const [isPending, startTransition] = useTransition();
+
+  function selectPair(a: OrderedEntity, b: OrderedEntity) {
+    setSelected({ a, b });
+    startTransition(async () => {
+      setMandates(await fetchPairMandates(a.code, b.code));
+    });
+  }
 
   const layer = LAYERS.find((l) => l.id === layerId)!;
   const matrix = layers[layerId];
@@ -246,8 +263,9 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
         )}
       </div>
 
+      <div className="flex items-start gap-4">
       {/* Matrix */}
-      <div className="overflow-x-auto pb-4">
+      <div className="min-w-0 flex-1 overflow-x-auto pb-4">
         <div className="inline-block select-none">
           {/* Section bands — coloured underline spans the section's columns;
               the centred label is allowed to overflow (never truncated), like
@@ -332,12 +350,20 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
                   ? 0
                   : matrix.pairs[pairKey(rowE.code, colE.code)] ?? 0;
                 const bg = isDiagonal ? null : cellColor(rowE, colE, value);
+                const isSelected =
+                  !!selected &&
+                  !isDiagonal &&
+                  ((selected.a.code === rowE.code &&
+                    selected.b.code === colE.code) ||
+                    (selected.a.code === colE.code &&
+                      selected.b.code === rowE.code));
                 return (
                   <div
                     key={colE.code}
                     onMouseEnter={() =>
                       !isDiagonal && setHover({ a: rowE, b: colE, value })
                     }
+                    onClick={() => !isDiagonal && selectPair(rowE, colE)}
                     title={
                       isDiagonal
                         ? rowE.label
@@ -347,7 +373,11 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
                       width: CELL,
                       height: CELL,
                       backgroundColor: bg ?? (isDiagonal ? "#f9fafb" : "#fff"),
-                      outline: "0.5px solid rgba(0,0,0,0.04)",
+                      outline: isSelected
+                        ? "2px solid #111827"
+                        : "0.5px solid rgba(0,0,0,0.04)",
+                      outlineOffset: isSelected ? "-1px" : undefined,
+                      cursor: isDiagonal ? "default" : "pointer",
                     }}
                   />
                 );
@@ -355,6 +385,15 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Detail panel — cross-cited mandates for the clicked cell */}
+      <DetailPanel
+        selected={selected}
+        mandates={mandates}
+        loading={isPending}
+        onClose={() => setSelected(null)}
+      />
       </div>
 
       {/* Legend */}
@@ -384,6 +423,111 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
         )}
       </div>
     </div>
+  );
+}
+
+function DetailPanel({
+  selected,
+  mandates,
+  loading,
+  onClose,
+}: {
+  selected: { a: OrderedEntity; b: OrderedEntity } | null;
+  mandates: SharedMandate[];
+  loading: boolean;
+  onClose: () => void;
+}) {
+  const n2026 = mandates.filter((m) => m.in2026).length;
+  const n2027 = mandates.filter((m) => m.in2027).length;
+
+  return (
+    <aside className="sticky top-4 w-96 shrink-0 self-start rounded-lg border border-gray-200 bg-white">
+      {!selected ? (
+        <div className="p-4 text-sm text-gray-400">
+          Click any cell to list the mandates cross-cited by the two entities.
+        </div>
+      ) : (
+        <>
+          <div className="flex items-start justify-between gap-2 border-b border-gray-100 p-3">
+            <div>
+              <p className="text-sm font-semibold text-gray-900">
+                {selected.a.label} <span className="text-gray-400">↔</span>{" "}
+                {selected.b.label}
+              </p>
+              {!loading && (
+                <p className="mt-0.5 text-xs text-gray-500">
+                  {mandates.length} cross-cited · {n2026} in 2026 · {n2027} in
+                  2027
+                </p>
+              )}
+            </div>
+            <button
+              onClick={onClose}
+              aria-label="Close"
+              className="rounded p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-700"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          </div>
+          <div className="scrollbar-thin max-h-[70vh] overflow-y-auto p-2">
+            {loading ? (
+              <p className="p-2 text-sm text-gray-400">Loading…</p>
+            ) : mandates.length === 0 ? (
+              <p className="p-2 text-sm text-gray-400">No shared mandates.</p>
+            ) : (
+              <ul className="space-y-0.5">
+                {mandates.map((m) => (
+                  <MandateItem key={m.symbol} m={m} />
+                ))}
+              </ul>
+            )}
+          </div>
+        </>
+      )}
+    </aside>
+  );
+}
+
+function MandateItem({ m }: { m: SharedMandate }) {
+  return (
+    <li className="rounded px-2 py-1.5 hover:bg-gray-50">
+      <div className="flex items-center gap-1.5">
+        {m.link ? (
+          <a
+            href={m.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-xs font-medium text-un-blue hover:underline"
+          >
+            {m.symbol}
+            <ExternalLink className="h-3 w-3" />
+          </a>
+        ) : (
+          <span className="text-xs font-medium text-gray-900">{m.symbol}</span>
+        )}
+        {m.year && <span className="text-[10px] text-gray-400">{m.year}</span>}
+        <span className="ml-auto flex gap-1">
+          {m.in2026 && <VersionPill label="26" color="#009edb" />}
+          {m.in2027 && <VersionPill label="27" color="#6c5b7b" />}
+        </span>
+      </div>
+      {m.title && (
+        <p className="mt-0.5 line-clamp-2 text-[11px] leading-snug text-gray-500">
+          {m.title}
+        </p>
+      )}
+    </li>
+  );
+}
+
+function VersionPill({ label, color }: { label: string; color: string }) {
+  return (
+    <span
+      className="rounded px-1 text-[10px] font-semibold leading-4 text-white"
+      style={{ backgroundColor: color }}
+    >
+      {label}
+    </span>
   );
 }
 
