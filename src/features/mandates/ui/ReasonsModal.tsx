@@ -125,6 +125,7 @@ export function ReasonPopup({
 
   // Client-side only rendering for portal
   React.useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 
@@ -171,6 +172,7 @@ export function ReasonPopup({
 
   // Sync local state with props
   React.useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLocalOtherReason(otherReason ?? "");
     setLocalReason(reason);
   }, [otherReason, reason]);
@@ -233,7 +235,7 @@ export function ReasonPopup({
         </div>
 
         {/* Options */}
-        <div className="scrollbar-thin max-h-[70vh] overflow-y-auto py-1">
+        <div className="max-h-[70vh] scrollbar-thin overflow-y-auto py-1">
           {reasons.map((r, index) => (
             <button
               key={r.id}

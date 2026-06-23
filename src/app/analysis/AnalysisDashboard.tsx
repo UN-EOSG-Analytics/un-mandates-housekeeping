@@ -6,10 +6,8 @@ import {
   Cell,
   Pie,
   PieChart,
-  ResponsiveContainer,
   XAxis,
   YAxis,
-  Tooltip,
   Legend,
   CartesianGrid,
 } from "recharts";
@@ -27,7 +25,6 @@ import {
   FileText,
   Building2,
   CheckCircle,
-  XCircle,
 } from "lucide-react";
 
 interface Props {
@@ -127,7 +124,7 @@ function DecisionBreakdownChart({
           dataKey="value"
           nameKey="name"
           label={({ name, percent }) =>
-            `${name} (${(percent * 100).toFixed(0)}%)`
+            `${name} (${((percent ?? 0) * 100).toFixed(0)}%)`
           }
           labelLine={false}
         >
@@ -199,7 +196,9 @@ function EntityImpactChart({
             const data = payload[0].payload;
             return (
               <div className="rounded-lg border bg-white p-3 shadow-lg">
-                <p className="mb-2 font-semibold text-gray-900">{data.entity}</p>
+                <p className="mb-2 font-semibold text-gray-900">
+                  {data.entity}
+                </p>
                 <div className="space-y-1 text-sm">
                   <div className="flex items-center justify-between gap-4">
                     <span className="flex items-center gap-1.5 text-gray-600">

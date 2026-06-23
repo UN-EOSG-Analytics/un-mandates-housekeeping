@@ -54,10 +54,12 @@ const BODY_NAMES: Record<string, string> = {
   CHR: "Commission on Human Rights",
   CSW: "Commission on the Status of Women",
   // Treaty bodies and other governing bodies
-  "CAC/COSP": "Conference of the States Parties to the United Nations Convention against Corruption",
+  "CAC/COSP":
+    "Conference of the States Parties to the United Nations Convention against Corruption",
   INCB: "International Narcotics Control Board",
   UNCTAD: "United Nations Conference on Trade and Development",
-  "UNTOC COP": "Conference of the Parties to the United Nations Convention against Transnational Organized Crime",
+  "UNTOC COP":
+    "Conference of the Parties to the United Nations Convention against Transnational Organized Crime",
   WTO: "World Trade Organization",
 };
 
@@ -115,12 +117,20 @@ function getBodyTypeLabel(
   return `${name} ${typeSuffix}`;
 }
 
-function getBodyFullName(body: string, bodyFullNames: Record<string, string>): string {
+function getBodyFullName(
+  body: string,
+  bodyFullNames: Record<string, string>,
+): string {
   const isAlreadyFullName = Object.values(BODY_NAMES).includes(body);
-  return isAlreadyFullName ? body : (BODY_NAMES[body] || bodyFullNames[body] || body);
+  return isAlreadyFullName
+    ? body
+    : BODY_NAMES[body] || bodyFullNames[body] || body;
 }
 
-function sortBodies(bodies: string[], bodyFullNames: Record<string, string>): string[] {
+function sortBodies(
+  bodies: string[],
+  bodyFullNames: Record<string, string>,
+): string[] {
   return [...bodies].sort((a, b) => {
     const ai = PRINCIPAL_SORT_INDEX[a] ?? -1;
     const bi = PRINCIPAL_SORT_INDEX[b] ?? -1;
@@ -233,20 +243,8 @@ function capitalize(s: string): string {
 
 // Detect titles that are just the resolution label (e.g. "Resolution 1325 (2000)")
 // and thus redundant with the symbol column
-const REDUNDANT_TITLE_RE = /^(Security Council )?resolution\s+\d+(?:\s*\(\d{4}\))?\s*\/?$/i;
-
-// Extract topic from PRST bracket titles like:
-// "Statement [made on behalf of … the item entitled "Central African region"]"
-// → "Central African region"
-function extractPrstTopic(title: string): string {
-  // Try "item entitled "TOPIC"" pattern (with various quote styles)
-  const entitled = title.match(/item entitled\s+["\u201c](.+?)["\u201d]/i);
-  if (entitled) return entitled[1].replace(/[\s"]+$/, "");
-  // Fallback: extract entire bracket content for manual inspection
-  const bracket = title.match(/\[(.+?)\]\s*$/);
-  if (bracket) return bracket[1];
-  return title;
-}
+const REDUNDANT_TITLE_RE =
+  /^(Security Council )?resolution\s+\d+(?:\s*\(\d{4}\))?\s*\/?$/i;
 
 // Enhance mandate titles: replace redundant "Resolution NNNN (YYYY)" titles
 // with bracket descriptions where available, or empty string if none.
@@ -367,7 +365,10 @@ function groupByTitle(mandates: Mandate[]): CitationEntry[] {
     }
     titleMap.get(key)!.push(m);
   }
-  const grouped = titleOrder.map((t) => ({ mandates: titleMap.get(t)!, title: t }));
+  const grouped = titleOrder.map((t) => ({
+    mandates: titleMap.get(t)!,
+    title: t,
+  }));
   // Merge grouped and ungrouped, then sort all entries by first display symbol
   const all = [...grouped, ...ungrouped];
   all.sort((a, b) => compareByDisplaySymbol(a.mandates[0], b.mandates[0]));
@@ -375,16 +376,23 @@ function groupByTitle(mandates: Mandate[]): CitationEntry[] {
 }
 
 // Build symbol cell with potentially multiple symbols joined by "; "
-function buildSymbolCell(entry: CitationEntry, hyperlinks: Map<string, string>): string {
+function buildSymbolCell(
+  entry: CitationEntry,
+  hyperlinks: Map<string, string>,
+): string {
   const parts: string[] = [];
   for (const m of entry.mandates) {
     const displaySymbol = escapeXml(stripPrefix(m.symbol));
     if (m.link) {
       const rId = `rId${hyperlinks.size + 10}`;
       hyperlinks.set(rId, m.link);
-      parts.push(`<w:hyperlink r:id="${rId}" w:history="1"><w:r><w:rPr><w:rStyle w:val="Hyperlink"/><w:sz w:val="17"/></w:rPr><w:t>${displaySymbol}</w:t></w:r></w:hyperlink>`);
+      parts.push(
+        `<w:hyperlink r:id="${rId}" w:history="1"><w:r><w:rPr><w:rStyle w:val="Hyperlink"/><w:sz w:val="17"/></w:rPr><w:t>${displaySymbol}</w:t></w:r></w:hyperlink>`,
+      );
     } else {
-      parts.push(`<w:r><w:rPr><w:sz w:val="17"/></w:rPr><w:t>${displaySymbol}</w:t></w:r>`);
+      parts.push(
+        `<w:r><w:rPr><w:sz w:val="17"/></w:rPr><w:t>${displaySymbol}</w:t></w:r>`,
+      );
     }
   }
   // Join with "; " runs between each symbol
@@ -408,7 +416,10 @@ const TITLE_RES_RE = new RegExp(
 );
 
 // Build title cell with inline hyperlinks for resolution references
-function buildTitleCell(entry: CitationEntry, hyperlinks: Map<string, string>): string {
+function buildTitleCell(
+  entry: CitationEntry,
+  hyperlinks: Map<string, string>,
+): string {
   const raw = entry.title;
   const segments: string[] = [];
   let lastIndex = 0;
@@ -428,9 +439,10 @@ function buildTitleCell(entry: CitationEntry, hyperlinks: Map<string, string>): 
     segments.push(textRun(raw.slice(match.index, labelEnd)));
     // The number as a hyperlink — HRC resolutions use OHCHR links
     const fullSymbol = `${prefix}${num}`;
-    const url = prefix === "A/HRC/RES/"
-      ? `https://ap.ohchr.org/documents/dpage_e.aspx?si=${fullSymbol.toLowerCase()}`
-      : `https://documents.un.org/en/${fullSymbol}`;
+    const url =
+      prefix === "A/HRC/RES/"
+        ? `https://ap.ohchr.org/documents/dpage_e.aspx?si=${fullSymbol.toLowerCase()}`
+        : `https://documents.un.org/en/${fullSymbol}`;
     const rId = `rId${hyperlinks.size + 10}`;
     hyperlinks.set(rId, url);
     segments.push(
@@ -444,9 +456,7 @@ function buildTitleCell(entry: CitationEntry, hyperlinks: Map<string, string>): 
     segments.push(textRun(raw.slice(lastIndex)));
   }
 
-  const content = segments.length > 0
-    ? segments.join("")
-    : textRun(raw);
+  const content = segments.length > 0 ? segments.join("") : textRun(raw);
 
   return `<w:tc><w:tcPr><w:tcW w:w="3535" w:type="pct"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/></w:tcPr><w:p>${CELL_PPR_TITLE}${content}</w:p></w:tc>`;
 }
@@ -486,7 +496,10 @@ function charterContent(
     if (articles.length === 1) {
       joined = articles[0];
     } else {
-      joined = articles.slice(0, -1).join(", ") + " and " + articles[articles.length - 1];
+      joined =
+        articles.slice(0, -1).join(", ") +
+        " and " +
+        articles[articles.length - 1];
     }
     const text = `${label} ${joined}`;
 
@@ -504,14 +517,15 @@ function charterContent(
   return xml;
 }
 
-
 // Classify a mandate's document type using symbol-based regex first, then docType fallback
 function classifyDocType(m: Mandate): string {
   if (isPresidentialStatement(m.symbol)) return "statements";
   if (isDecision(m.symbol)) return "decisions";
   // Symbol contains /RES/ or "Resolution" keyword
-  if (/\/RES[./]/.test(m.symbol) || /\bResolution\b/i.test(m.symbol)) return "resolutions";
-  if (/\/DEC[./]/.test(m.symbol) || /\bDecision\b/i.test(m.symbol)) return "decisions";
+  if (/\/RES[./]/.test(m.symbol) || /\bResolution\b/i.test(m.symbol))
+    return "resolutions";
+  if (/\/DEC[./]/.test(m.symbol) || /\bDecision\b/i.test(m.symbol))
+    return "decisions";
   // Fall back to docType field from data
   const dt = (m.docType || "").toLowerCase();
   if (dt.includes("resolution")) return "resolutions";
@@ -539,7 +553,8 @@ function getStatementLabel(body: string): string {
   const isSC = body === "Security Council" || body === "SC";
   const isHRC = body === "Human Rights Council" || body === "HRC";
   if (isSC) return "Statements by the President of the Security Council";
-  if (isHRC) return "President\u2019s statements agreed upon by the Human Rights Council";
+  if (isHRC)
+    return "President\u2019s statements agreed upon by the Human Rights Council";
   return `${body} statements`;
 }
 
@@ -554,8 +569,10 @@ function renderBodySection(
   enhanceTitles(mandates, bracketDescs);
 
   if (body === "Charter") {
-    return paraH4(getBodyTypeLabel(body, "resolutions", bodyFullNames)) +
-      charterContent(mandates, hyperlinks);
+    return (
+      paraH4(getBodyTypeLabel(body, "resolutions", bodyFullNames)) +
+      charterContent(mandates, hyperlinks)
+    );
   }
 
   // Group mandates by classified document type
@@ -690,7 +707,13 @@ export async function exportEntityToDocx(
 
     for (const body of sortBodies([...bodyMap.keys()], bodyFullNames)) {
       const mandates = bodyMap.get(body)!;
-      content += renderBodySection(body, mandates, hyperlinks, bodyFullNames, bracketDescs);
+      content += renderBodySection(
+        body,
+        mandates,
+        hyperlinks,
+        bodyFullNames,
+        bracketDescs,
+      );
     }
   }
 
@@ -793,7 +816,13 @@ function buildEntityContent(
 
     for (const body of sortBodies([...bodyMap.keys()], bodyFullNames)) {
       const mandates = bodyMap.get(body)!;
-      content += renderBodySection(body, mandates, hyperlinks, bodyFullNames, bracketDescs);
+      content += renderBodySection(
+        body,
+        mandates,
+        hyperlinks,
+        bodyFullNames,
+        bracketDescs,
+      );
     }
   }
 
@@ -830,7 +859,13 @@ export async function exportAllToDocx(): Promise<Buffer> {
   );
 
   for (const [entity, entityLong] of sortedEntities) {
-    const entityContent = buildEntityContent(rows, entity, hyperlinks, bodyFullNames, bracketDescs);
+    const entityContent = buildEntityContent(
+      rows,
+      entity,
+      hyperlinks,
+      bodyFullNames,
+      bracketDescs,
+    );
     if (!entityContent) continue;
 
     // Entity header (bold, larger) - use long name

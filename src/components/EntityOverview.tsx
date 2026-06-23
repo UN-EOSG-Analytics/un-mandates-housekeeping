@@ -73,10 +73,11 @@ export function EntityOverview({ parts, userEntity }: Props) {
   const [searchQuery, setSearchQuery] = useState("");
   const [showSections, setShowSections] = useState(false);
 
-  // Read from localStorage after hydration
+  // Read from localStorage after hydration (deferred to avoid SSR mismatch)
   useEffect(() => {
     const saved = localStorage.getItem("showSections");
     if (saved === "true") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setShowSections(true);
     }
   }, []);

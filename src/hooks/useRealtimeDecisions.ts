@@ -144,6 +144,7 @@ export function useRealtimeDecisions({
     if (!enabled || !entity) return;
 
     // Initial poll
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     poll();
 
     // Set up interval

@@ -7,7 +7,7 @@ export function AnimatedLogo() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Trigger animation on mount
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 

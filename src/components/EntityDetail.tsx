@@ -19,8 +19,6 @@ import {
   POPUP_STYLES,
   CHANGE_INDICATOR,
   UN_BLUE,
-  getDecisionTheme,
-  getDecisionBadgeStyle,
 } from "@/lib/theme";
 import { getAgeIndicator } from "@/features/mandates/services/age-indicator";
 import {
@@ -56,6 +54,7 @@ import type {
   MandateState,
   ReviewChangeInfo,
 } from "@/types";
+import type { LucideIcon } from "lucide-react";
 import {
   AlertTriangle,
   ArrowRightLeft,
@@ -72,12 +71,10 @@ import {
   MessageSquare,
   MoreHorizontal,
   Pencil,
-  Plus,
   RefreshCw,
   Search,
   Star,
   Target,
-  Trash2,
   Users,
   X,
 } from "lucide-react";
@@ -103,6 +100,7 @@ import { WarningTooltip } from "./WarningTooltip";
 import {
   getReasonLabel,
   getReasonIcon,
+  type DecisionType,
 } from "@/features/mandates/services/decision-reasons";
 
 interface Props {
@@ -151,7 +149,7 @@ function getDecisionDisplayInfo(decision: string, newSymbol?: string) {
 
 // Map icon names from decision-reasons.ts to lucide-react components
 function getIconComponent(iconName: string | null) {
-  const iconMap: Record<string, any> = {
+  const iconMap: Record<string, LucideIcon> = {
     Target,
     Lightbulb,
     Building,
@@ -452,8 +450,6 @@ function MandateRowContent({
   allSymbols,
   allEntitySymbols,
   newestWithNewerVersion,
-  reviewChangeInfo,
-  isUnderReview,
   onOpenSidebar,
   onOpenActivityTab,
   onDecision,
@@ -464,8 +460,6 @@ function MandateRowContent({
   onReasonPopupClose,
   onDiff,
   onEdit,
-  onAcceptChange,
-  onRevertChange,
 }: {
   mandate: Mandate;
   state?: MandateState;
@@ -511,22 +505,6 @@ function MandateRowContent({
   const isApproved = !!currentDecision?.approvedBy;
   const canApprove =
     isReviewer && onApprove && hasDecision && currentDecision?.id;
-
-  // Check for decision changes during review (for reviewers or when showing persisted changes)
-  // Use server-side reviewChangeInfo if available, otherwise fall back to local comparison
-  const decisionChange = reviewChangeInfo?.hasChange
-    ? getDecisionChange(reviewChangeInfo.baseline, currentDecision)
-    : null;
-
-  // Check if change has been responded to (accepted/reverted)
-  // If the decision was modified after the response, treat it as no response (pending again)
-  const rawResponse = reviewChangeInfo?.response;
-  const changeResponse =
-    rawResponse && currentDecision?.createdAt && rawResponse.respondedAt
-      ? new Date(currentDecision.createdAt) <= new Date(rawResponse.respondedAt)
-        ? rawResponse
-        : null // Decision was modified after response, show as pending
-      : rawResponse;
 
   // Determine background color based on decision
   let bgColorClass = "";
@@ -1187,26 +1165,26 @@ function MandateRow({
           // Get reason labels and icons
           const beforeReasonLabel = decisionChange.before.reason
             ? getReasonLabel(
-                decisionChange.before.decision.toLowerCase() as any,
+                decisionChange.before.decision.toLowerCase() as DecisionType,
                 decisionChange.before.reason,
               )
             : null;
           const afterReasonLabel = decisionChange.after.reason
             ? getReasonLabel(
-                decisionChange.after.decision.toLowerCase() as any,
+                decisionChange.after.decision.toLowerCase() as DecisionType,
                 decisionChange.after.reason,
               )
             : null;
 
           const beforeReasonIconName = decisionChange.before.reason
             ? getReasonIcon(
-                decisionChange.before.decision.toLowerCase() as any,
+                decisionChange.before.decision.toLowerCase() as DecisionType,
                 decisionChange.before.reason,
               )
             : null;
           const afterReasonIconName = decisionChange.after.reason
             ? getReasonIcon(
-                decisionChange.after.decision.toLowerCase() as any,
+                decisionChange.after.decision.toLowerCase() as DecisionType,
                 decisionChange.after.reason,
               )
             : null;
@@ -1355,13 +1333,6 @@ function MandateRow({
 
               {/* Circle badge with spike - overlaps tooltip corner */}
               {(() => {
-                // Determine badge style based on response status
-                const badgeStyle =
-                  changeResponse?.responseType === "accept"
-                    ? "bg-emerald-500 border-r-emerald-500"
-                    : changeResponse?.responseType === "revert"
-                      ? "bg-gray-400 border-r-gray-400"
-                      : `${CHANGE_INDICATOR.badge} ${CHANGE_INDICATOR.tail.replace("border-r-", "")}`;
                 const tailColor =
                   changeResponse?.responseType === "accept"
                     ? "border-r-emerald-500"
@@ -1435,7 +1406,6 @@ function MandateSection({
   allEntitySymbols,
   reviewChanges,
   isUnderReview,
-  reviewSessionId,
   onDecision,
   onReasonChange,
   onApprove,
@@ -2213,7 +2183,14 @@ export function EntityDetail({
         });
       }
     },
-    [entity, userEmail, userEntity, reviewSessionId, refreshReviewChanges, showError],
+    [
+      entity,
+      userEmail,
+      userEntity,
+      reviewSessionId,
+      refreshReviewChanges,
+      showError,
+    ],
   );
 
   const handleReasonChange = useCallback(
@@ -2371,7 +2348,14 @@ export function EntityDetail({
         }
       }
     },
-    [entity, userEmail, userEntity, reviewSessionId, refreshReviewChanges, showError],
+    [
+      entity,
+      userEmail,
+      userEntity,
+      reviewSessionId,
+      refreshReviewChanges,
+      showError,
+    ],
   );
 
   const handleAddManual = useCallback(
@@ -2461,7 +2445,14 @@ export function EntityDetail({
         }
       }
     },
-    [entity, userEmail, userEntity, reviewSessionId, refreshReviewChanges, showError],
+    [
+      entity,
+      userEmail,
+      userEntity,
+      reviewSessionId,
+      refreshReviewChanges,
+      showError,
+    ],
   );
 
   const handleEditManual = useCallback(
@@ -2566,7 +2557,14 @@ export function EntityDetail({
         }
       }
     },
-    [entity, userEmail, states, reviewSessionId, refreshReviewChanges, showError],
+    [
+      entity,
+      userEmail,
+      states,
+      reviewSessionId,
+      refreshReviewChanges,
+      showError,
+    ],
   );
 
   const handleComment = useCallback(
@@ -2899,7 +2897,7 @@ export function EntityDetail({
     <div className="space-y-5">
       {/* Error toast */}
       {errorMessage && (
-        <div className="fixed bottom-4 right-4 z-50 flex max-w-md items-start gap-3 rounded-lg border border-red-200 bg-red-50 px-4 py-3 shadow-lg">
+        <div className="fixed right-4 bottom-4 z-50 flex max-w-md items-start gap-3 rounded-lg border border-red-200 bg-red-50 px-4 py-3 shadow-lg">
           <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-red-600" />
           <p className="text-sm text-red-800">{errorMessage}</p>
           <button

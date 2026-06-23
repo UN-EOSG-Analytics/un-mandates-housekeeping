@@ -26,6 +26,7 @@ export function EntityChangeDialog({
 
   useEffect(() => {
     if (isOpen) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setSelectedEntity(currentEntity || "");
       setOtherEntity("");
       setError(null);

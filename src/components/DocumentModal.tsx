@@ -87,34 +87,6 @@ function cleanPrefix(prefix: string) {
   return prefix.replace(/[.\(\)\[\]]/g, "").trim();
 }
 
-function highlightEntity(
-  text: string,
-  entity?: string,
-  entityLong?: string | null,
-): React.ReactNode {
-  if (!entity && !entityLong) return text;
-
-  const terms = [entity, entityLong].filter(Boolean) as string[];
-  const pattern = new RegExp(
-    `\\b(${terms.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})\\b`,
-    "gi",
-  );
-
-  const parts = text.split(pattern);
-  if (parts.length === 1) return text;
-
-  return parts.map((part, i) => {
-    const isMatch = terms.some((t) => t.toLowerCase() === part.toLowerCase());
-    return isMatch ? (
-      <strong key={i} className="text-foreground">
-        {part}
-      </strong>
-    ) : (
-      part
-    );
-  });
-}
-
 function highlightSearchAndEntity(
   text: string,
   searchQuery?: string,
@@ -732,7 +704,7 @@ export function DocumentSymbol({
   useEffect(() => {
     if (!open || lastFetchedSymbolRef.current === symbol) return;
     lastFetchedSymbolRef.current = symbol;
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- Legitimate async data fetching
+
     setLoading(true);
 
     Promise.all([

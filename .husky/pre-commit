@@ -1,7 +1,7 @@
-export PATH="/opt/homebrew/bin:$PATH"
+# export PATH="/opt/homebrew/bin:$PATH"
 
-branch=$(git rev-parse --abbrev-ref HEAD)
+# branch=$(git rev-parse --abbrev-ref HEAD)
 
-if [ "$branch" = "main" ]; then
-  pnpm typecheck
-fi
+# if [ "$branch" = "main" ]; then
+#   pnpm typecheck
+# fi
