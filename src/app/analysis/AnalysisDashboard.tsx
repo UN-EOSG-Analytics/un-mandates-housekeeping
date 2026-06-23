@@ -19,12 +19,15 @@ import {
 } from "@/components/ui/chart";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { AnalysisData } from "@/features/mandates/services/analysis-service";
+import Link from "next/link";
 import {
   ArrowDown,
   ArrowUp,
+  ArrowRight,
   FileText,
   Building2,
   CheckCircle,
+  Grid3x3,
 } from "lucide-react";
 
 interface Props {
@@ -275,6 +278,25 @@ export function AnalysisDashboard({ data }: Props) {
 
   return (
     <div className="space-y-8">
+      {/* Co-citation heatmap link */}
+      <Link
+        href="/analysis/heatmap"
+        className="group flex items-center justify-between gap-4 rounded-lg border border-gray-200 bg-white p-4 transition-colors hover:border-un-blue/40 hover:bg-gray-50"
+      >
+        <div className="flex items-center gap-3">
+          <Grid3x3 className="h-5 w-5 text-un-blue" />
+          <div>
+            <p className="text-sm font-semibold text-gray-900">
+              Overlapping mandate citations
+            </p>
+            <p className="text-xs text-gray-500">
+              Entity × entity co-citation heatmap — compare 2026 vs 2027
+            </p>
+          </div>
+        </div>
+        <ArrowRight className="h-4 w-4 text-gray-400 transition-transform group-hover:translate-x-0.5" />
+      </Link>
+
       {/* Overall Stats */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         <StatCard

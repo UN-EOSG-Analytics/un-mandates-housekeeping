@@ -15,15 +15,60 @@
 
 export const CURRENT_BUDGET_VERSION = "ppb2026";
 
+/** The next/comparison cycle whose fascicle is loaded into the same tables. */
+export const COMPARISON_BUDGET_VERSION = "ppb2027";
+
+/** All budget versions known to live in ppb2026.source_document_citations. */
+export const KNOWN_BUDGET_VERSIONS = ["ppb2026", "ppb2027"] as const;
+export type BudgetVersion = (typeof KNOWN_BUDGET_VERSIONS)[number];
+
 /**
- * EXISTS predicate restricting a citation row (`alias.origin_document`) to
- * the current budget version. Inline this with `AND` in WHERE clauses.
+ * EXISTS predicate restricting a citation row (`alias.origin_document`) to a
+ * specific budget version. Inline this with `AND` in WHERE clauses.
+ *
+ * `version` MUST come from {@link KNOWN_BUDGET_VERSIONS} — it is interpolated
+ * directly into SQL, so it must never be derived from user input. The
+ * allowlist check enforces this.
  */
-export function versionPredicateSql(citationAlias: string): string {
+export function versionPredicateSqlFor(
+  citationAlias: string,
+  version: BudgetVersion,
+): string {
+  if (!KNOWN_BUDGET_VERSIONS.includes(version)) {
+    throw new Error(`Unknown budget version: ${version}`);
+  }
   return `EXISTS (
     SELECT 1 FROM ppb2026.budget_documents bd
     JOIN ppb2026.budget_document_versions bdv ON bdv.doc_slug = bd.slug
-    WHERE bdv.version_slug = '${CURRENT_BUDGET_VERSION}'
+    WHERE bdv.version_slug = '${version}'
       AND ${citationAlias}.origin_document ~ bd.match_pattern
+  )`;
+}
+
+/**
+ * EXISTS predicate restricting a citation row to the current budget version.
+ * Inline this with `AND` in WHERE clauses.
+ */
+export function versionPredicateSql(citationAlias: string): string {
+  return versionPredicateSqlFor(citationAlias, CURRENT_BUDGET_VERSION);
+}
+
+/**
+ * The Plan Outline 2026-2028 strategic framework. It is tagged to both version
+ * groups but its citations are not attributed to specific entities, so it must
+ * be excluded from entity-level analysis (e.g. the co-citation heatmap) and
+ * sits outside the official "active mandates" definition (PPB + PKM only).
+ */
+export const PLAN_OUTLINE_DOC_SLUG = "plan-outline-a80-6";
+
+/**
+ * Predicate excluding Plan Outline citations. Data-driven via the
+ * budget_documents match_pattern (no hardcoded regex). Inline with `AND`.
+ */
+export function excludePlanOutlineSql(citationAlias: string): string {
+  return `NOT EXISTS (
+    SELECT 1 FROM ppb2026.budget_documents po
+    WHERE po.slug = '${PLAN_OUTLINE_DOC_SLUG}'
+      AND ${citationAlias}.origin_document ~ po.match_pattern
   )`;
 }

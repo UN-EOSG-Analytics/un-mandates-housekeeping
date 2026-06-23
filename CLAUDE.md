@@ -40,6 +40,16 @@ Two Postgres schemas:
 
 SQL schema and migrations live in [sql/](sql/) (`sql/schema/`, `sql/migrations/`). They are applied manually/externally — there is no migration runner in the app.
 
+#### Querying the DB from the shell
+
+To run ad-hoc queries, use the **`DATABASE_URL_CLAUDE`** env var (not `DATABASE_URL`):
+
+```bash
+set -a; . ./.env; set +a
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"   # psql is from brew libpq, not on default PATH
+psql "$DATABASE_URL_CLAUDE" -c "..."
+```
+
 ### Budget version scoping (critical gotcha)
 
 `ppb2026.source_document_citations` holds citations for **multiple budget cycles**. Every citation query **must** be scoped to the current version or rows from other cycles leak into the UI (e.g. entities appear twice). Always inline the predicate from [src/lib/db/budget-version.ts](src/lib/db/budget-version.ts) (`versionPredicateSql(alias)`, `CURRENT_BUDGET_VERSION`) into citation `WHERE` clauses.
