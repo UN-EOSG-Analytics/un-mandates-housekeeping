@@ -27,26 +27,35 @@ export function tint(hex: string, t = 0.16): string {
 
 /**
  * Sequential color for a non-negative `value` against `max`, blending white
- * toward `baseHex`. Returns null for zero/empty so the cell stays blank.
+ * toward `baseHex`. `gamma` shapes the transfer curve (lower = more saturated,
+ * boosts small values; 0.5 = sqrt; 1 = linear). Returns null for zero/empty.
  */
 export function sequentialColor(
   value: number,
   max: number,
   baseHex: string,
+  gamma = 0.5,
 ): string | null {
   if (value <= 0 || max <= 0) return null;
-  return blendFromWhite(hexToRgb(baseHex), Math.sqrt(value / max));
+  return blendFromWhite(hexToRgb(baseHex), Math.pow(value / max, gamma));
 }
 
-const GREEN: [number, number, number] = [22, 163, 74]; // reduced overlap (better)
-const RED: [number, number, number] = [220, 38, 38]; // increased overlap
+export const DEFAULT_REDUCED_COLOR = "#16a34a"; // overlap shrank (better)
+export const DEFAULT_GREW_COLOR = "#dc2626"; // overlap grew
 
 /**
- * Diverging color for a signed delta. Negative (overlap shrank) → green,
- * positive (overlap grew) → red. Returns null at zero.
+ * Diverging color for a signed delta. Negative (overlap shrank) uses
+ * `negHex`, positive (overlap grew) uses `posHex`. `gamma` as in
+ * {@link sequentialColor}. Returns null at zero.
  */
-export function divergingColor(value: number, maxAbs: number): string | null {
+export function divergingColor(
+  value: number,
+  maxAbs: number,
+  gamma = 0.5,
+  negHex: string = DEFAULT_REDUCED_COLOR,
+  posHex: string = DEFAULT_GREW_COLOR,
+): string | null {
   if (value === 0 || maxAbs <= 0) return null;
-  const t = Math.sqrt(Math.min(Math.abs(value) / maxAbs, 1));
-  return blendFromWhite(value < 0 ? GREEN : RED, t);
+  const t = Math.pow(Math.min(Math.abs(value) / maxAbs, 1), gamma);
+  return blendFromWhite(hexToRgb(value < 0 ? negHex : posHex), t);
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState, useTransition } from "react";
-import { Download, X, ExternalLink } from "lucide-react";
+import { Download, X, ExternalLink, ImageDown, RotateCcw } from "lucide-react";
 import {
   pairKey,
   type MatrixData,
@@ -22,7 +22,17 @@ import {
   sequentialColor,
   divergingColor,
   tint,
+  DEFAULT_REDUCED_COLOR,
+  DEFAULT_GREW_COLOR,
 } from "@/features/mandates/heatmap/color-scale";
+import { buildHeatmapSvg } from "@/features/mandates/heatmap/heatmap-svg";
+
+const DEFAULT_COLORS: Record<string, string> = {
+  cross: CROSS_SECTION_COLOR,
+  reduced: DEFAULT_REDUCED_COLOR,
+  grew: DEFAULT_GREW_COLOR,
+  ...Object.fromEntries(SECTION_ORDER.map((s) => [s, SECTION_META[s].baseColor])),
+};
 
 export type LayerId =
   | "v2026"
@@ -103,6 +113,16 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
   const [mandates, setMandates] = useState<SharedMandate[]>([]);
   const [isPending, startTransition] = useTransition();
 
+  // Appearance: editable section colours, scale gamma, and normalization mode.
+  const [colors, setColors] = useState<Record<string, string>>(DEFAULT_COLORS);
+  const [gamma, setGamma] = useState(0.5);
+  const [scaleMode, setScaleMode] = useState<"section" | "global">("section");
+
+  const colorFor = (s: Section) => colors[s] ?? SECTION_META[s].baseColor;
+  const crossColor = colors.cross ?? CROSS_SECTION_COLOR;
+  const tintFor = (s: Section) =>
+    s === "other" ? tint(crossColor) : tint(colorFor(s));
+
   function selectPair(a: OrderedEntity, b: OrderedEntity) {
     setSelected({ a, b });
     startTransition(async () => {
@@ -164,15 +184,17 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
           maxAbs = Math.max(maxAbs, Math.abs(v));
         }
       }
-      return { maxAbs, perSection: {} as Record<string, number>, cross: 0 };
+      return { maxAbs, perSection: {} as Record<string, number>, cross: 0, global: 0 };
     }
     const perSection: Record<string, number> = {};
     let cross = 0;
+    let global = 0;
     for (let i = 0; i < entities.length; i++) {
       for (let j = i + 1; j < entities.length; j++) {
         const a = entities[i];
         const b = entities[j];
         const v = matrix.pairs[pairKey(a.code, b.code)] ?? 0;
+        global = Math.max(global, v);
         if (a.section === b.section && a.section !== "other") {
           perSection[a.section] = Math.max(perSection[a.section] ?? 0, v);
         } else {
@@ -180,7 +202,7 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
         }
       }
     }
-    return { maxAbs: 0, perSection, cross };
+    return { maxAbs: 0, perSection, cross, global };
   }, [entities, matrix, isDiff]);
 
   // Contiguous section runs for the band header.
@@ -194,17 +216,59 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
     return runs;
   }, [entities]);
 
+  const reducedColor = colors.reduced ?? DEFAULT_REDUCED_COLOR;
+  const grewColor = colors.grew ?? DEFAULT_GREW_COLOR;
+
   function cellColor(a: OrderedEntity, b: OrderedEntity, value: number) {
-    if (isDiff) return divergingColor(value, scaleRef.maxAbs);
+    if (isDiff)
+      return divergingColor(value, scaleRef.maxAbs, gamma, reducedColor, grewColor);
     const sameSection = a.section === b.section && a.section !== "other";
-    return sameSection
-      ? sequentialColor(
-          value,
-          scaleRef.perSection[a.section] ?? 0,
-          SECTION_META[a.section].baseColor,
-        )
-      : sequentialColor(value, scaleRef.cross, CROSS_SECTION_COLOR);
+    const base = sameSection ? colorFor(a.section) : crossColor;
+    const max =
+      scaleMode === "global"
+        ? scaleRef.global
+        : sameSection
+          ? scaleRef.perSection[a.section] ?? 0
+          : scaleRef.cross;
+    return sequentialColor(value, max, base, gamma);
   }
+
+  function exportSvg() {
+    const svg = buildHeatmapSvg({
+      entities,
+      bands,
+      matrix,
+      cellColor,
+      tintFor,
+      bandColor: (s) => (s === "other" ? crossColor : colorFor(s)),
+      bandLabel: (s) => SECTION_META[s].label,
+      legend: legendItems,
+      title: `Overlapping mandate citations — ${layer.label}`,
+    });
+    const url = URL.createObjectURL(
+      new Blob([svg], { type: "image/svg+xml" }),
+    );
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `cocitation_${layerId}.svg`;
+    link.click();
+    URL.revokeObjectURL(url);
+  }
+
+  const legendItems = isDiff
+    ? [
+        { color: reducedColor, label: "Overlap reduced" },
+        { color: grewColor, label: "Overlap grew" },
+      ]
+    : [
+        ...SECTION_ORDER.filter((s) => bands.some((b) => b.section === s)).map(
+          (s) => ({
+            color: s === "other" ? crossColor : colorFor(s),
+            label: SECTION_META[s].label,
+          }),
+        ),
+        { color: crossColor, label: "Cross-section" },
+      ];
 
   return (
     <div>
@@ -234,10 +298,17 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
           />
           Show all entities ({entities.length})
         </label>
+        <button
+          onClick={exportSvg}
+          className="ml-auto inline-flex items-center gap-1.5 rounded-md border border-gray-200 bg-white px-2.5 py-1.5 text-xs font-medium text-gray-700 transition-all hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm"
+        >
+          <ImageDown className="h-3.5 w-3.5" />
+          Export SVG
+        </button>
         <a
           href="/api/export/heatmap"
           download
-          className="ml-auto inline-flex items-center gap-1.5 rounded-md border border-gray-200 bg-white px-2.5 py-1.5 text-xs font-medium text-gray-700 transition-all hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm"
+          className="inline-flex items-center gap-1.5 rounded-md border border-gray-200 bg-white px-2.5 py-1.5 text-xs font-medium text-gray-700 transition-all hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm"
         >
           <Download className="h-3.5 w-3.5" />
           Export Excel
@@ -274,30 +345,30 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
             className="relative flex items-end"
             style={{ marginLeft: LABEL_W, height: 30 }}
           >
-            {bands.map((b, i) => (
-              <div
-                key={i}
-                className="relative h-full"
-                style={{ width: b.count * CELL }}
-              >
-                {/* Label constrained to the band width: multi-word labels wrap
-                    (e.g. Humanitarian → two lines); short un-wrappable ones
-                    (H/R, Legal) overflow centred into empty space. */}
-                <span
-                  className="absolute bottom-1 left-0 w-full text-center text-[11px] font-semibold leading-[1.05]"
-                  style={{
-                    color: SECTION_META[b.section].baseColor,
-                    hyphens: "manual",
-                  }}
-                >
-                  {SECTION_META[b.section].label}
-                </span>
+            {bands.map((b, i) => {
+              const bc = b.section === "other" ? crossColor : colorFor(b.section);
+              return (
                 <div
-                  className="absolute bottom-0 left-0 w-full border-b-2"
-                  style={{ borderColor: SECTION_META[b.section].baseColor }}
-                />
-              </div>
-            ))}
+                  key={i}
+                  className="relative h-full"
+                  style={{ width: b.count * CELL }}
+                >
+                  {/* Label constrained to the band width: multi-word labels wrap
+                      (e.g. Humanitarian → two lines); short un-wrappable ones
+                      (H/R, Legal) overflow centred into empty space. */}
+                  <span
+                    className="absolute bottom-1 left-0 w-full text-center text-[11px] font-semibold leading-[1.05]"
+                    style={{ color: bc, hyphens: "manual" }}
+                  >
+                    {SECTION_META[b.section].label}
+                  </span>
+                  <div
+                    className="absolute bottom-0 left-0 w-full border-b-2"
+                    style={{ borderColor: bc }}
+                  />
+                </div>
+              );
+            })}
           </div>
 
           {/* Column labels */}
@@ -315,7 +386,7 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
                 style={{
                   width: CELL,
                   height: COLHEAD_H,
-                  backgroundColor: tint(SECTION_META[e.section].baseColor),
+                  backgroundColor: tintFor(e.section),
                   borderRight: "1px solid rgba(255,255,255,0.7)",
                 }}
               >
@@ -337,7 +408,7 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
                 style={{
                   width: LABEL_W,
                   height: CELL,
-                  backgroundColor: tint(SECTION_META[rowE.section].baseColor),
+                  backgroundColor: tintFor(rowE.section),
                   borderBottom: "1px solid rgba(255,255,255,0.7)",
                 }}
                 title={rowE.code}
@@ -398,30 +469,106 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
 
       {/* Legend */}
       <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-[11px] text-gray-600">
-        {isDiff ? (
-          <>
-            <LegendSwatch color="rgb(22,163,74)" label="Overlap reduced" />
-            <LegendSwatch color="rgb(220,38,38)" label="Overlap grew" />
-            <span className="text-gray-400">Intensity = magnitude of change</span>
-          </>
-        ) : (
-          <>
-            {SECTION_ORDER.filter((s) =>
-              bands.some((b) => b.section === s),
-            ).map((s) => (
-              <LegendSwatch
-                key={s}
-                color={SECTION_META[s].baseColor}
-                label={SECTION_META[s].label}
-              />
-            ))}
-            <LegendSwatch color={CROSS_SECTION_COLOR} label="Cross-section" />
-            <span className="text-gray-400">
-              Intensity = number of shared mandates
-            </span>
-          </>
-        )}
+        {legendItems.map((it) => (
+          <LegendSwatch key={it.label} color={it.color} label={it.label} />
+        ))}
+        <span className="text-gray-400">
+          Intensity = {isDiff ? "magnitude of change" : "number of shared mandates"}
+        </span>
       </div>
+
+      {/* Appearance controls */}
+      <details className="mt-4 rounded-lg border border-gray-200 bg-white">
+        <summary className="cursor-pointer px-4 py-2.5 text-xs font-medium text-gray-700">
+          Appearance — colours &amp; scaling
+        </summary>
+        <div className="space-y-4 border-t border-gray-100 p-4">
+          <div>
+            <p className="mb-2 text-xs font-semibold text-gray-500">
+              Section colours
+            </p>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-2 sm:grid-cols-3">
+              {[...SECTION_ORDER, "cross" as const].map((key) => (
+                <ColorField
+                  key={key}
+                  label={
+                    key === "cross"
+                      ? "Cross-section"
+                      : SECTION_META[key as Section].label
+                  }
+                  value={colors[key] ?? "#000000"}
+                  onChange={(v) => setColors((c) => ({ ...c, [key]: v }))}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <p className="mb-2 text-xs font-semibold text-gray-500">
+              Difference layers (Δ)
+            </p>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-2 sm:grid-cols-3">
+              <ColorField
+                label="Overlap reduced"
+                value={reducedColor}
+                onChange={(v) => setColors((c) => ({ ...c, reduced: v }))}
+              />
+              <ColorField
+                label="Overlap grew"
+                value={grewColor}
+                onChange={(v) => setColors((c) => ({ ...c, grew: v }))}
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
+            <label className="flex items-center gap-2 text-xs text-gray-600">
+              <span className="font-semibold text-gray-500">
+                Intensity (gamma)
+              </span>
+              <input
+                type="range"
+                min={0.2}
+                max={1}
+                step={0.05}
+                value={gamma}
+                onChange={(e) => setGamma(parseFloat(e.target.value))}
+              />
+              <span className="w-8 font-mono text-[11px]">
+                {gamma.toFixed(2)}
+              </span>
+              <span className="text-gray-400">lower = more saturated</span>
+            </label>
+
+            <div className="flex items-center gap-2 text-xs text-gray-600">
+              <span className="font-semibold text-gray-500">Scale</span>
+              {(["section", "global"] as const).map((m) => (
+                <label key={m} className="flex cursor-pointer items-center gap-1">
+                  <input
+                    type="radio"
+                    name="scaleMode"
+                    checked={scaleMode === m}
+                    onChange={() => setScaleMode(m)}
+                  />
+                  {m === "section" ? "Per section" : "Global"}
+                </label>
+              ))}
+            </div>
+
+            <button
+              onClick={() => {
+                setColors(DEFAULT_COLORS);
+                setGamma(0.5);
+                setScaleMode("section");
+              }}
+              className="inline-flex items-center gap-1.5 rounded-md border border-gray-200 px-2.5 py-1.5 text-xs font-medium text-gray-600 hover:bg-gray-50"
+            >
+              <RotateCcw className="h-3.5 w-3.5" />
+              Reset
+            </button>
+          </div>
+        </div>
+      </details>
     </div>
   );
 }
@@ -528,6 +675,37 @@ function VersionPill({ label, color }: { label: string; color: string }) {
     >
       {label}
     </span>
+  );
+}
+
+function ColorField({
+  label,
+  value,
+  onChange,
+}: {
+  label: string;
+  value: string;
+  onChange: (v: string) => void;
+}) {
+  return (
+    <div className="flex items-center gap-2">
+      <input
+        type="color"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        className="h-6 w-6 shrink-0 cursor-pointer rounded border border-gray-200"
+        aria-label={label}
+      />
+      <span className="w-24 truncate text-xs text-gray-600">{label}</span>
+      <input
+        type="text"
+        value={value}
+        onChange={(e) => {
+          if (/^#[0-9a-fA-F]{6}$/.test(e.target.value)) onChange(e.target.value);
+        }}
+        className="w-20 rounded border border-gray-200 px-1.5 py-0.5 font-mono text-[11px] text-gray-700"
+      />
+    </div>
   );
 }
 

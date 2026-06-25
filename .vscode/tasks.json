@@ -1,63 +1,69 @@
 {
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"label": "install [pnpm]",
-			"type": "shell",
-			"command": "pnpm install",
-			"group": "build"
-		},
-		{
-			"label": "outdated [pnpm]",
-			"type": "shell",
-			"command": "pnpm outdated"
-		},
-		{
-			"label": "update [pnpm]",
-			"type": "shell",
-			"command": "pnpm update"
-		},
-		{
-			"label": "dev [pnpm]",
-			"type": "shell",
-			"command": "pnpm dev",
-			"isBackground": true,
-			"problemMatcher": ["$nextjs"]
-		},
-		{
-			"label": "build [pnpm]",
-			"type": "shell",
-			"command": "pnpm build",
-			"group": "build",
-			"problemMatcher": ["$nextjs"]
-		},
-		{
-			"label": "start [pnpm]",
-			"type": "shell",
-			"command": "pnpm start",
-			"isBackground": true
-		},
-		{
-			"label": "lint [pnpm]",
-			"type": "shell",
-			"command": "pnpm lint",
-			"problemMatcher": ["$eslint-stylish"]
-		},
-		{
-			"label": "typecheck [pnpm]",
-			"type": "shell",
-			"command": "pnpm typecheck",
-			"problemMatcher": ["$tsc"]
-		},
-		{
-			"label": "format [pnpm]",
-			"type": "shell",
-			"command": "pnpm format"
-		},
-		{
-			"label": "format:check [pnpm]",
-			"type": "shell",
-			"command": "pnpm format:check"
-		}
-	]
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "install [pnpm]",
+            "type": "shell",
+            "command": "pnpm install",
+            "group": "build"
+        },
+        {
+            "label": "outdated [pnpm]",
+            "type": "shell",
+            "command": "pnpm outdated"
+        },
+        {
+            "label": "update [pnpm]",
+            "type": "shell",
+            "command": "pnpm update"
+        },
+        {
+            "label": "dev [pnpm]",
+            "type": "shell",
+            "command": "pnpm dev",
+            "isBackground": true,
+            "problemMatcher": [ "$nextjs" ]
+        },
+        {
+            "label": "build [pnpm]",
+            "type": "shell",
+            "command": "pnpm build",
+            "group": "build",
+            "problemMatcher": [ "$nextjs" ]
+        },
+        {
+            "label": "start [pnpm]",
+            "type": "shell",
+            "command": "pnpm start",
+            "isBackground": true
+        },
+        {
+            "label": "lint [pnpm]",
+            "type": "shell",
+            "command": "pnpm lint",
+            "problemMatcher": [ "$eslint-stylish" ]
+        },
+        {
+            "label": "typecheck [pnpm]",
+            "type": "shell",
+            "command": "pnpm typecheck",
+            "problemMatcher": [ "$tsc" ]
+        },
+        {
+            "label": "format [pnpm]",
+            "type": "shell",
+            "command": "pnpm format"
+        },
+        {
+            "label": "format:check [pnpm]",
+            "type": "shell",
+            "command": "pnpm format:check"
+        },
+        {
+            "label": "kill dev processes",
+            "type": "shell",
+            "command": "lsof -ti:3000,3001 | xargs kill -9 2>/dev/null || true",
+            "problemMatcher": [ ]
+        }
+    ]
 }
