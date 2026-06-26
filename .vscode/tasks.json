@@ -62,7 +62,7 @@
         {
             "label": "kill dev processes",
             "type": "shell",
-            "command": "lsof -ti:3000,3001 | xargs kill -9 2>/dev/null || true",
+            "command": "lsof -ti:3000,3001,3002 | xargs kill -9 2>/dev/null || true",
             "problemMatcher": [ ]
         }
     ]

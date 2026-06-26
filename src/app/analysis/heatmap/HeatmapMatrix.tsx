@@ -12,6 +12,7 @@ import {
 } from "@/features/mandates/actions/heatmap";
 import {
   CURATED_ENTITIES,
+  CURATED_CODES,
   SECTION_META,
   SECTION_ORDER,
   CROSS_SECTION_COLOR,
@@ -100,7 +101,6 @@ const LABEL_W = COLHEAD_H; // left label gutter width — kept equal to the head
 
 export function HeatmapMatrix({ layers }: HeatmapPayload) {
   const [layerId, setLayerId] = useState<LayerId>("v2026");
-  const [showAll, setShowAll] = useState(false);
   const [hover, setHover] = useState<{
     a: OrderedEntity;
     b: OrderedEntity;
@@ -134,17 +134,10 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
   const matrix = layers[layerId];
   const isDiff = layer.kind === "diverging";
 
-  // Ordered entity list for the current mode.
-  const entities = useMemo<OrderedEntity[]>(() => {
-    if (!showAll) {
-      return CURATED_ENTITIES.map((e) => ({
-        code: e.code,
-        label: e.label,
-        section: e.section,
-      }));
-    }
-    // "All" mode: union of every entity code across all layers.
-    const codes = new Set<string>();
+  // Full ordered universe: every entity cited in any layer, plus the curated
+  // 41, ordered by section then curated order then alpha.
+  const universe = useMemo<OrderedEntity[]>(() => {
+    const codes = new Set<string>(CURATED_CODES);
     for (const id of Object.keys(layers) as LayerId[]) {
       for (const c of layers[id].entities) codes.add(c);
     }
@@ -167,7 +160,34 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
         if (cx !== cy) return cx - cy;
         return x.code.localeCompare(y.code);
       });
-  }, [showAll, layers]);
+  }, [layers]);
+
+  // Entities with at least one citation in the 2027 draft.
+  const present2027 = useMemo(
+    () => new Set(layers.v2027.entities),
+    [layers],
+  );
+
+  // Selected entity codes (default = the curated figure). Presets set this;
+  // the entity list toggles individual members.
+  const [selectedEntities, setSelectedEntities] = useState<Set<string>>(
+    () => new Set(CURATED_CODES),
+  );
+
+  const entities = useMemo(
+    () => universe.filter((e) => selectedEntities.has(e.code)),
+    [universe, selectedEntities],
+  );
+
+  const entityPresets = [
+    { id: "figure", label: `Figure (${CURATED_CODES.length})`, codes: CURATED_CODES },
+    {
+      id: "in2027",
+      label: `In 2027 draft (${present2027.size})`,
+      codes: [...present2027],
+    },
+    { id: "all", label: `All (${universe.length})`, codes: universe.map((e) => e.code) },
+  ];
 
   // Scale reference. Diverging layers use a single max-abs (cross-block
   // comparable). Sequential layers normalize PER colour group — each section
@@ -289,15 +309,18 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
             </button>
           ))}
         </div>
-        <label className="inline-flex cursor-pointer items-center gap-1.5 text-xs font-medium text-gray-700">
-          <input
-            type="checkbox"
-            checked={showAll}
-            onChange={(e) => setShowAll(e.target.checked)}
-            className="h-3.5 w-3.5"
-          />
-          Show all entities ({entities.length})
-        </label>
+        <div className="flex items-center gap-1.5">
+          <span className="text-xs text-gray-500">Entities:</span>
+          {entityPresets.map((p) => (
+            <button
+              key={p.id}
+              onClick={() => setSelectedEntities(new Set(p.codes))}
+              className="rounded-md border border-gray-200 bg-white px-2.5 py-1.5 text-xs font-medium text-gray-700 transition-colors hover:border-gray-300 hover:bg-gray-50"
+            >
+              {p.label}
+            </button>
+          ))}
+        </div>
         <button
           onClick={exportSvg}
           className="ml-auto inline-flex items-center gap-1.5 rounded-md border border-gray-200 bg-white px-2.5 py-1.5 text-xs font-medium text-gray-700 transition-all hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm"
@@ -316,6 +339,87 @@ export function HeatmapMatrix({ layers }: HeatmapPayload) {
       </div>
 
       <p className="mb-3 max-w-3xl text-sm text-gray-500">{layer.description}</p>
+
+      {/* Entity selector */}
+      <details className="mb-3 rounded-lg border border-gray-200 bg-white">
+        <summary className="cursor-pointer px-4 py-2.5 text-xs font-medium text-gray-700">
+          Select entities — {entities.length} shown
+        </summary>
+        <div className="border-t border-gray-100 p-4">
+          <div className="mb-3 flex flex-wrap gap-3 text-xs text-un-blue">
+            <button
+              onClick={() =>
+                setSelectedEntities(new Set(universe.map((e) => e.code)))
+              }
+            >
+              Select all
+            </button>
+            <button onClick={() => setSelectedEntities(new Set())}>Clear</button>
+            <button
+              onClick={() =>
+                setSelectedEntities(
+                  (prev) =>
+                    new Set([...prev].filter((c) => present2027.has(c))),
+                )
+              }
+            >
+              Keep only entities with 2027 data
+            </button>
+          </div>
+          <div className="space-y-3">
+            {SECTION_ORDER.filter((s) =>
+              universe.some((e) => e.section === s),
+            ).map((s) => (
+              <div key={s}>
+                <p
+                  className="mb-1 text-[11px] font-semibold"
+                  style={{ color: s === "other" ? crossColor : colorFor(s) }}
+                >
+                  {SECTION_META[s].label}
+                </p>
+                <div className="grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-3 md:grid-cols-4">
+                  {universe
+                    .filter((e) => e.section === s)
+                    .map((e) => {
+                      const has2027 = present2027.has(e.code);
+                      return (
+                        <label
+                          key={e.code}
+                          className={`flex cursor-pointer items-center gap-1.5 text-xs ${
+                            has2027 ? "text-gray-700" : "text-gray-400"
+                          }`}
+                          title={
+                            has2027 ? e.code : `${e.code} — no 2027 data yet`
+                          }
+                        >
+                          <input
+                            type="checkbox"
+                            checked={selectedEntities.has(e.code)}
+                            onChange={() =>
+                              setSelectedEntities((prev) => {
+                                const next = new Set(prev);
+                                if (next.has(e.code)) next.delete(e.code);
+                                else next.add(e.code);
+                                return next;
+                              })
+                            }
+                            className="h-3.5 w-3.5 shrink-0"
+                          />
+                          <span className="truncate">{e.label}</span>
+                          {!has2027 && (
+                            <span className="shrink-0 text-[9px] text-gray-300">
+                              no 27
+                            </span>
+                          )}
+                        </label>
+                      );
+                    })}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </details>
 
       {/* Hover status bar */}
       <div className="mb-2 h-5 text-xs text-gray-600">
